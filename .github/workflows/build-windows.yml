@@ -18,17 +18,22 @@ jobs:
       RUSTUP_TOOLCHAIN: stable
       CARGO_TERM_COLOR: never
     steps:
-      - name: Check out only the Windows build kit
-        uses: actions/checkout@v6
-        with:
-          sparse-checkout: /Integrated-Macro-Windows-v0.5.11-Build-Kit.zip
-          sparse-checkout-cone-mode: false
-          persist-credentials: false
-      - name: Verify and extract the fixed 0.5.11 build kit
+      - name: Download, verify and extract the fixed 0.5.11 build kit
         shell: pwsh
+        env:
+          BUILD_KIT_TOKEN: ${{ github.token }}
         run: |
           $ErrorActionPreference = 'Stop'
-          $zip = Join-Path $env:GITHUB_WORKSPACE 'Integrated-Macro-Windows-v0.5.11-Build-Kit.zip'
+          $filename = 'Integrated-Macro-Windows-v0.5.11-Build-Kit.zip'
+          $zip = Join-Path $env:RUNNER_TEMP $filename
+          $uri = '{0}/repos/{1}/contents/{2}?ref={3}' -f $env:GITHUB_API_URL, $env:GITHUB_REPOSITORY, [Uri]::EscapeDataString($filename), [Uri]::EscapeDataString($env:GITHUB_SHA)
+          $headers = @{
+            Accept = 'application/vnd.github.raw+json'
+            Authorization = "Bearer $env:BUILD_KIT_TOKEN"
+            'X-GitHub-Api-Version' = '2026-03-10'
+          }
+          Write-Host ('Downloading the build kit from commit ' + $env:GITHUB_SHA)
+          Invoke-WebRequest -Uri $uri -Headers $headers -UserAgent 'Integrated-Macro-Windows-Build' -OutFile $zip -TimeoutSec 120
           $expected = 'd0e5ed8616f2bdb1e49fd86497d3e2cd557cd460d2cca7c1c10b5777bf36357e'
           if (-not (Test-Path -LiteralPath $zip -PathType Leaf)) { throw 'The build-kit ZIP is missing.' }
           $actual = (Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash.ToLowerInvariant()
