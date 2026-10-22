@@ -15,13 +15,13 @@ Windows x64에서 다음 도구를 준비합니다. 개발 도구는 빌드할 P
 
 설치 조건은 [Tauri Windows 개발 준비](https://v2.tauri.app/start/prerequisites/#windows)를 참고하세요. 압축을 푼 뒤 `Build-Windows.cmd`를 실행합니다. 스크립트는 시스템 정책을 변경하거나 개발 도구를 자동 설치하지 않습니다. PowerShell 실행 정책 때문에 거부되면 허용된 실행 환경에서 스크립트를 실행하세요.
 
-빌드 스크립트는 원본·시험 입력 해시를 확인하고 작업용 복사본에서 고정된 의존성 설치, JavaScript·Rust 검사, x64 NSIS 설치 파일 생성을 순서대로 수행합니다. 실패한 검사는 건너뛰지 않습니다. 각 실행 결과는 `output/<실행 번호>/`의 `report.json`, `build.log`, 성공 시 `artifacts/`에 기록됩니다. 생성된 설치 파일에 대한 Windows 실행 검증은 별도로 필요합니다.
+빌드 스크립트는 먼저 PowerShell 기본 모듈과 알려진 SHA-256 계산을 확인한 뒤 원본·시험 입력 해시를 확인하고 작업용 복사본에서 고정된 의존성 설치, JavaScript·Rust 검사, x64 NSIS 설치 파일 생성을 순서대로 수행합니다. 실패한 검사는 건너뛰지 않습니다. 각 실행 결과는 `output/<실행 번호>/`의 `report.json`, `build.log`, 성공 시 `artifacts/`에 기록됩니다. 생성된 설치 파일에 대한 Windows 실행 검증은 별도로 필요합니다.
 
 앱 실행에는 WebView2 Runtime이 필요하며 기본 NSIS 설치 프로그램은 없으면 온라인 설치를 시도합니다. 현재 구성에는 Windows 서명 인증서가 없으며 생성 파일의 실제 서명 상태는 빌드 보고서에 기록됩니다. ([Tauri 설치 파일 안내](https://v2.tauri.app/distribute/windows-installer/))
 
 ## GitHub Actions에서 빌드
 
-이 키트의 내용과 숨김 파일 `.gitattributes`, `.github/`를 사용할 저장소 루트에 넣으면 `.github/workflows/build-windows-0.5.11.yml`의 수동 실행 작업으로 Windows 빌드를 요청할 수 있습니다. `.gitattributes`는 Windows 체크아웃에서도 원본 해시에 맞는 줄바꿈을 보존합니다. 작업은 설치 파일을 artifact로 보관하며 GitHub Release에 자동 게시하지 않습니다. 초기 GitHub Actions 실행에서 PowerShell 경로 매개변수 초기화 오류가 확인되어 빌드 지원 스크립트를 수정했습니다. 수정본의 Windows 빌드 성공 여부는 다음 실행에서 확인해야 합니다.
+이 키트의 내용과 숨김 파일 `.gitattributes`, `.github/`를 사용할 저장소 루트에 넣으면 `.github/workflows/build-windows-0.5.11.yml`의 수동 실행 작업으로 Windows 빌드를 요청할 수 있습니다. `.gitattributes`는 Windows 체크아웃에서도 원본 해시에 맞는 줄바꿈을 보존합니다. 작업은 설치 파일을 artifact로 보관하며 GitHub Release에 자동 게시하지 않습니다. GitHub Actions에서 확인된 경로 매개변수 초기화 오류를 수정했습니다. 이어서 PowerShell 7에서 CMD를 거쳐 Windows PowerShell 5.1을 시작할 때 모듈 경로가 섞이는 문제에 맞춰, CMD의 `setlocal` 안에서 자식 모듈 경로만 초기화하도록 교정했습니다. 이 교정본의 Windows 빌드 성공 여부는 다음 실행에서 확인해야 합니다.
 
 ## 구성과 검증 범위
 
@@ -29,4 +29,4 @@ Windows x64에서 다음 도구를 준비합니다. 개발 도구는 빌드할 P
 - `fixture-manifest.json`: 기존 합성 시험 입력 417개 해시
 - `verification/`: 이 준비 작업의 검사·리뷰 기록
 
-동일 소스·시험 입력의 무결성과 Windows 실행 성공은 별개입니다. GitHub Actions의 초기 실행은 빌드 시작 전 경로 초기화에서 실패했습니다. 이번 교정본은 해당 기본 경로 계산을 본문으로 옮겼으며, Windows 재실행 성공은 아직 확인하지 않았습니다. 동봉된 기존 리뷰는 최초 스크립트의 과거 기록이며, 교정 내역은 `verification/windows-param-default-fix.json`에 구분해 기록했습니다. Windows 설치·브라우저 연결·F8 채집·예약 클릭·F9·좌석 선택의 실기기 검증은 남아 있습니다.
+동일 소스·시험 입력의 무결성과 Windows 실행 성공은 별개입니다. 최근 GitHub Actions 실행은 경로 초기화를 통과한 뒤 `Get-FileHash`를 찾지 못해 실패했습니다. 최신 교정본은 부모 프로세스의 설정을 유지하며 자식 Windows PowerShell이 자기 모듈 경로를 구성하게 합니다. 기본 모듈·해시 계산과 서명 조회 명령의 존재를 빌드 전에 검사하며, 실제 설치 파일의 서명 조회는 생성 후 별도로 수행합니다. 동봉된 기존 리뷰와 이전 경로 교정 기록은 과거 체크포인트입니다. 최신 교정 범위와 아직 실행하지 못한 항목은 `verification/windows-module-path-fix.json`에 기록했습니다. Windows 설치·브라우저 연결·F8 채집·예약 클릭·F9·좌석 선택의 실기기 검증은 남아 있습니다.

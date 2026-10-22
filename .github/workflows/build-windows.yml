@@ -34,7 +34,7 @@ jobs:
           }
           Write-Host ('Downloading the build kit from commit ' + $env:GITHUB_SHA)
           Invoke-WebRequest -Uri $uri -Headers $headers -UserAgent 'Integrated-Macro-Windows-Build' -OutFile $zip -TimeoutSec 120
-          $expected = '641e085f8c571c3a43bb65238b24f741443058ea870038f35cdd17c825348bfd'
+          $expected = '980929a93914cdc68d20219400f61bbce24c89c1c27a2ccf87c09359b3b1d3ee'
           if (-not (Test-Path -LiteralPath $zip -PathType Leaf)) { throw 'The build-kit ZIP is missing.' }
           $actual = (Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash.ToLowerInvariant()
           if ($actual -ne $expected) { throw 'Build-kit ZIP SHA-256 mismatch. No build was started.' }

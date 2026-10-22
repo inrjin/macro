@@ -3,10 +3,10 @@
   "files": {
     ".gitattributes": "e5d1a47f1ba9849d4f424648836e0a6574a6beed7521d088177e69b0b5f04d73",
     ".github/workflows/build-windows-0.5.11.yml": "e069a8de892ef3863bdecefc9ede3390d749da8c87a34fa4b07f282fcc2b8920",
-    "BUILD-STATUS.json": "71b5606a4fa20cbb73c14393e85af3bb442cacd8c2f00c71370a3cd83571f0cf",
-    "Build-Windows.cmd": "4a21b07aa7c310b6c2e9fe3a7107355a6b0d02af8f1394b68b41caa4b8008796",
-    "README-Windows.md": "ae5c03b8fe699d0953083cfa6081e708f00b90072b20053566dcfae8fdfd4123",
-    "build/Build-Windows.ps1": "f275a5ea4d6f0c8dff98bdb04750b587375fc5005e8172777213d975191637c5",
+    "BUILD-STATUS.json": "1eb8072ed0d78508769545f324e68033f4ea2849c83ee8309bead238ed5ce154",
+    "Build-Windows.cmd": "1e71ba7a4f4fa14874cadf067194d50156c1ec52291fd3884901e250f8f6a047",
+    "README-Windows.md": "013c1f1f06a323221eef6578fcc95a19a800e6ad9e1b88cd2e71e6913c547c01",
+    "build/Build-Windows.ps1": "0ad73cadbdecaf2d00e69198cea04d5c05b62e452a3f32a9b83da851c8972706",
     "fixture-manifest.json": "04621be0e312b6a6e0f686da8c4657c1b18d47d5759ba7b99dd501493fe6e7c1",
     "source/.github/workflows/desktop.yml": "407e0c3f02c1afcccb5b404473227cd30ceea945f121d7d5a0109b900f91fc89",
     "source/AGENTS.md": "afef8f4c6854c485ead4b4ecf2389c5271d690ef1360ff0fbfa14e19bf305707",
@@ -577,6 +577,7 @@
     "verification/source-restoration.json": "caa4732218edb4f0ac6f51c3fcd467d624d982a08de8b4c78e04048f32acf214",
     "verification/windows-check-attempt.json": "e62e64eb0ff844d968a04b7640af4c7365a7c170fc80f9b1504e24a8db799d4c",
     "verification/windows-check-attempt.log": "1c325d634c04d95326f9b722c4c9568299b2141966be6c96c41b7ee35475736d",
+    "verification/windows-module-path-fix.json": "6b7510ed868b0a40d221f226dcb82f0462b423fc5664ce8158a1f9041dab99b9",
     "verification/windows-param-default-fix.json": "975af91fa121e01e6cd64e6091bfd3f64cb898cfd502e078e496387374d4ee57"
   }
 }

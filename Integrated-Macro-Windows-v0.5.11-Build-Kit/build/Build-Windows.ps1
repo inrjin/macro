@@ -151,6 +151,31 @@ try {
     $Report.sourceRoot = $SourceRoot
     Write-BuildLog "Build attempt: $RunRoot"
 
+    $Stage = 'PowerShell preflight'
+    $Report.tools.powerShellVersion = $PSVersionTable.PSVersion.ToString()
+    $Report.tools.powerShellEdition = $PSVersionTable.PSEdition
+    Write-BuildLog ("PowerShell: {0} ({1})" -f $Report.tools.powerShellVersion, $Report.tools.powerShellEdition)
+    foreach ($moduleName in @('Microsoft.PowerShell.Utility', 'Microsoft.PowerShell.Management', 'Microsoft.PowerShell.Security')) {
+        $module = Import-Module -Name $moduleName -PassThru -ErrorAction Stop
+        Write-BuildLog ("Module: {0} {1}" -f $module.Name, $module.Version)
+    }
+    foreach ($commandName in @('Get-FileHash', 'Get-AuthenticodeSignature')) {
+        $command = Get-Command -Name $commandName -CommandType Cmdlet, Function -ErrorAction Stop
+        Write-BuildLog ("Available command: {0} ({1})" -f $command.Name, $command.CommandType)
+    }
+    $hashStream = New-Object IO.MemoryStream
+    try {
+        $bytes = [Text.Encoding]::UTF8.GetBytes('abc')
+        $hashStream.Write($bytes, 0, $bytes.Length)
+        $hashStream.Position = 0
+        $knownHash = (Get-FileHash -InputStream $hashStream -Algorithm SHA256).Hash.ToLowerInvariant()
+        if ($knownHash -ne 'ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad') {
+            throw 'The PowerShell SHA-256 preflight returned an unexpected result.'
+        }
+    } finally { $hashStream.Dispose() }
+    Write-BuildLog 'PowerShell standard-module and SHA-256 preflight passed.'
+
+    $Stage = 'verify input manifests'
     $source = Read-Manifest $SourceManifest 138
     $fixtures = Read-Manifest $FixtureManifest 417
     $all = @{}

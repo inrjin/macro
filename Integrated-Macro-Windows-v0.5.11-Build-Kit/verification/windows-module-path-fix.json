@@ -1,0 +1,32 @@
+{
+  "buildSupportRevision": 3,
+  "evidence": "User-provided GitHub Actions log: RunRoot created; preflight failed because Get-FileHash was not recognized.",
+  "diagnosis": "The observed PowerShell 7 -> CMD -> Windows PowerShell 5.1 chain matches the documented inherited-PSModulePath command-autoload failure. The failing process module-path value was not collected.",
+  "officialReference": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_psmodulepath#starting-windows-powershell-from-powershell-7",
+  "cmdSha256": "1e71ba7a4f4fa14874cadf067194d50156c1ec52291fd3884901e250f8f6a047",
+  "powerShellSha256": "0ad73cadbdecaf2d00e69198cea04d5c05b62e452a3f32a9b83da851c8972706",
+  "correction": "Reset PSModulePath only in the existing CMD setlocal before powershell.exe. Preserve the original host, arguments, MSVC setup and native exit handling.",
+  "addedPreflight": [
+    "Import Utility, Management and Security standard modules",
+    "Record PowerShell and module versions",
+    "Check Get-FileHash and Get-AuthenticodeSignature command availability",
+    "Compute the known SHA-256 of UTF-8 abc using actual Get-FileHash and dispose the input stream"
+  ],
+  "preflightKnownSha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+  "nativeBuildChecksSkipped": false,
+  "sourceFiles": 138,
+  "fixtureFiles": 417,
+  "sourceAndFixtureChanges": 0,
+  "applicationVersion": "0.5.11",
+  "applicationBehaviorChanged": false,
+  "reviewRoles": {
+    "implementation": "seat_shortcut",
+    "independent": "fix_cancellation_start",
+    "adversarial": "input_adversarial_review"
+  },
+  "reviewOutcome": "Actual CMD/PowerShell code independently reviewed; mandatory PowerShell 7 migration rejected to preserve the existing Windows PowerShell 5.1 prerequisite.",
+  "correctedWindowsPreflightExecuted": false,
+  "correctedWindowsBuildExecuted": false,
+  "windowsInstallerProduced": false,
+  "previousWindowsRun": "The previous parameter-default correction reached RunRoot successfully; the latest module-path correction is not yet executed on Windows."
+}

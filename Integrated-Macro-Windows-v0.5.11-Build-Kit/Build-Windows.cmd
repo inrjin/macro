@@ -17,6 +17,8 @@ call "%VS_INSTALL%\Common7\Tools\VsDevCmd.bat" -no_logo -arch=x64 -host_arch=x64
 if errorlevel 1 goto environment_failed
 if /i not "%VSCMD_ARG_TGT_ARCH%"=="x64" goto environment_failed
 :build
+rem Let Windows PowerShell rebuild its module paths instead of inheriting PowerShell 7 paths.
+set "PSModulePath="
 powershell.exe -NoLogo -NoProfile -File "%~dp0build\Build-Windows.ps1" %*
 set "BUILD_EXIT=%ERRORLEVEL%"
 if not "%BUILD_EXIT%"=="0" echo Build failed. No successful Windows package is claimed. See the output log if one was created.

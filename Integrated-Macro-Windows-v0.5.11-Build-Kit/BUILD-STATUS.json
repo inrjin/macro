@@ -21,12 +21,14 @@
   "liveBookingVerified": false,
   "macReleaseChanged": false,
   "buildEnvironmentStillRequired": true,
-  "buildSupportRevision": 2,
+  "buildSupportRevision": 3,
   "reportedWindowsBuildSucceeded": false,
-  "reportedWindowsFailureStage": "PowerShell parameter binding, before creating the build output directory",
-  "reportedWindowsFailure": "Split-Path rejected an empty PSScriptRoot while evaluating SourceRoot default.",
+  "reportedWindowsFailureStage": "preflight: Windows PowerShell standard-module command resolution",
+  "reportedWindowsFailure": "Get-FileHash was not recognized in the PowerShell 7 -> cmd.exe -> Windows PowerShell 5.1 build process.",
   "windowsExecutionEvidence": "User-provided GitHub Actions log; no Windows app or installer has been produced.",
-  "buildSupportFix": "SourceRoot and OutputRoot defaults are resolved in the script body after KitRoot initialization.",
+  "buildSupportFix": "Clear inherited PSModulePath inside the CMD setlocal scope before starting Windows PowerShell; import standard modules and run a known-SHA-256 preflight before source verification. Earlier path-default fix retained.",
   "correctedBuildSupportExecutedOnWindows": false,
-  "historicalReviewScope": "Existing review reports describe the original build-support script; the parameter-default correction is documented in verification/windows-param-default-fix.json."
+  "historicalReviewScope": "Original review reports and the earlier path-default fix are historical checkpoints. Latest module-path correction is documented in verification/windows-module-path-fix.json.",
+  "previousParameterDefaultFixPassedOnWindows": true,
+  "previousParameterDefaultFixEvidence": "The user-provided Actions log reached Build attempt and created RunRoot before failing at Get-FileHash."
 }
