@@ -18,7 +18,12 @@ jobs:
       RUSTUP_TOOLCHAIN: stable
       CARGO_TERM_COLOR: never
     steps:
-      - uses: actions/checkout@v4
+      - name: Check out only the Windows build kit
+        uses: actions/checkout@v6
+        with:
+          sparse-checkout: /Integrated-Macro-Windows-v0.5.11-Build-Kit.zip
+          sparse-checkout-cone-mode: false
+          persist-credentials: false
       - name: Verify and extract the fixed 0.5.11 build kit
         shell: pwsh
         run: |
@@ -35,24 +40,26 @@ jobs:
           if (-not (Test-Path -LiteralPath (Join-Path $kit 'Build-Windows.cmd') -PathType Leaf)) {
             throw 'The expected build-kit root is missing.'
           }
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: '24'
+          package-manager-cache: false
       - name: Prepare Rust MSVC target
         shell: pwsh
         run: |
           rustup toolchain install stable --profile minimal --target x86_64-pc-windows-msvc
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Test and build the Windows installer
+        id: build_windows
         shell: cmd
         working-directory: ${{ runner.temp }}/integrated-macro-0.5.11/Integrated-Macro-Windows-v0.5.11-Build-Kit
         run: call .\Build-Windows.cmd
       - name: Upload completed artifacts and build evidence
-        if: always()
-        uses: actions/upload-artifact@v4
+        if: ${{ always() && (steps.build_windows.outcome == 'success' || steps.build_windows.outcome == 'failure') }}
+        uses: actions/upload-artifact@v6
         with:
           name: windows-0.5.11-${{ github.run_number }}-${{ github.run_attempt }}
-          if-no-files-found: error
+          if-no-files-found: ${{ steps.build_windows.outcome == 'success' && 'error' || 'warn' }}
           path: |
             ${{ runner.temp }}/integrated-macro-0.5.11/Integrated-Macro-Windows-v0.5.11-Build-Kit/output/*/artifacts/*
             ${{ runner.temp }}/integrated-macro-0.5.11/Integrated-Macro-Windows-v0.5.11-Build-Kit/output/*/report.json
