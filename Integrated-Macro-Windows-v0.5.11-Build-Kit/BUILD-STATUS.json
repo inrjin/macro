@@ -15,10 +15,18 @@
   "windowsCheckFailure": "E0463: missing x86_64-pc-windows-msvc standard library. Target/SDK/build tools cannot be downloaded in this execution environment (DNS failure).",
   "windowsExecutableProduced": false,
   "windowsInstallerProduced": false,
-  "powershellOrCmdExecuted": false,
-  "githubWorkflowRun": false,
+  "powershellOrCmdExecuted": true,
+  "githubWorkflowRun": true,
   "windowsApplicationRun": false,
   "liveBookingVerified": false,
   "macReleaseChanged": false,
-  "buildEnvironmentStillRequired": true
+  "buildEnvironmentStillRequired": true,
+  "buildSupportRevision": 2,
+  "reportedWindowsBuildSucceeded": false,
+  "reportedWindowsFailureStage": "PowerShell parameter binding, before creating the build output directory",
+  "reportedWindowsFailure": "Split-Path rejected an empty PSScriptRoot while evaluating SourceRoot default.",
+  "windowsExecutionEvidence": "User-provided GitHub Actions log; no Windows app or installer has been produced.",
+  "buildSupportFix": "SourceRoot and OutputRoot defaults are resolved in the script body after KitRoot initialization.",
+  "correctedBuildSupportExecutedOnWindows": false,
+  "historicalReviewScope": "Existing review reports describe the original build-support script; the parameter-default correction is documented in verification/windows-param-default-fix.json."
 }

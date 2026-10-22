@@ -3,12 +3,11 @@
   "files": {
     ".gitattributes": "e5d1a47f1ba9849d4f424648836e0a6574a6beed7521d088177e69b0b5f04d73",
     ".github/workflows/build-windows-0.5.11.yml": "e069a8de892ef3863bdecefc9ede3390d749da8c87a34fa4b07f282fcc2b8920",
-    "BUILD-STATUS.json": "7ce35c2ed864a38d4c55bc9b624d08c4c6b591ec037c31cff530e2e8826374ed",
+    "BUILD-STATUS.json": "71b5606a4fa20cbb73c14393e85af3bb442cacd8c2f00c71370a3cd83571f0cf",
     "Build-Windows.cmd": "4a21b07aa7c310b6c2e9fe3a7107355a6b0d02af8f1394b68b41caa4b8008796",
-    "README-Windows.md": "4de5345de002923d68411cc0c425d1b0bd2137e45345e24e562ba7717016e9c3",
-    "build/Build-Windows.ps1": "ca41273d1569e148ee0212b41d366f2891e765ccd6f5cd27f9b509773f39ec08",
+    "README-Windows.md": "ae5c03b8fe699d0953083cfa6081e708f00b90072b20053566dcfae8fdfd4123",
+    "build/Build-Windows.ps1": "f275a5ea4d6f0c8dff98bdb04750b587375fc5005e8172777213d975191637c5",
     "fixture-manifest.json": "04621be0e312b6a6e0f686da8c4657c1b18d47d5759ba7b99dd501493fe6e7c1",
-    "source-manifest.json": "65f9ab47828be205c5f7cee7c255af364e3e5872007861cc53034c75e9ad9258",
     "source/.github/workflows/desktop.yml": "407e0c3f02c1afcccb5b404473227cd30ceea945f121d7d5a0109b900f91fc89",
     "source/AGENTS.md": "afef8f4c6854c485ead4b4ecf2389c5271d690ef1360ff0fbfa14e19bf305707",
     "source/Cargo.lock": "317f44d411366e06daa178f78c6b71210f2e5c9dcf3374990cba701edf6cfb5b",
@@ -564,6 +563,7 @@
     "source/verification/selection-count-audit/implementation/fixtures/small_suffix_5.rgba": "4550c81b099dfbca652378260be8fec7935df26f7dff5f48752164d80dbadf5a",
     "source/verification/selection-count-audit/implementation/fixtures/unknown_digit.rgba": "366b10bb299e06f823f7836693705a66706368482d7e3b0d1a88d57d73ac68b5",
     "source/verification/selection-count-audit/implementation/manifest.json": "503d6db5f1d94965bf3a7998d455af1fa6b9a01eb1e67046a42325d652836db0",
+    "source-manifest.json": "65f9ab47828be205c5f7cee7c255af364e3e5872007861cc53034c75e9ad9258",
     "verification/adversarial-buildkit-review.json": "9041e52dfde8978696be5e95e6565ef18bc44c6a4d3c4f2d4f6c7b350dd6fcfc",
     "verification/adversarial-buildkit-review.md": "399bee53d3b90b415d8223329c0931688ad44ecc7750893ac44681deab9fad28",
     "verification/adversarial-line-ending-probe.json": "a9ba17ae7de10d6c2055a6a4234f3d171fa6c8a92db57488c422409ff77c4193",
@@ -576,6 +576,7 @@
     "verification/preservation-check.json": "bdf82ca6d0775c8844650ebe4f2970837faf19db09476f64e212ffb509c7e144",
     "verification/source-restoration.json": "caa4732218edb4f0ac6f51c3fcd467d624d982a08de8b4c78e04048f32acf214",
     "verification/windows-check-attempt.json": "e62e64eb0ff844d968a04b7640af4c7365a7c170fc80f9b1504e24a8db799d4c",
-    "verification/windows-check-attempt.log": "1c325d634c04d95326f9b722c4c9568299b2141966be6c96c41b7ee35475736d"
+    "verification/windows-check-attempt.log": "1c325d634c04d95326f9b722c4c9568299b2141966be6c96c41b7ee35475736d",
+    "verification/windows-param-default-fix.json": "975af91fa121e01e6cd64e6091bfd3f64cb898cfd502e078e496387374d4ee57"
   }
 }

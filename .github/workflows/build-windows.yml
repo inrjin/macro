@@ -34,7 +34,7 @@ jobs:
           }
           Write-Host ('Downloading the build kit from commit ' + $env:GITHUB_SHA)
           Invoke-WebRequest -Uri $uri -Headers $headers -UserAgent 'Integrated-Macro-Windows-Build' -OutFile $zip -TimeoutSec 120
-          $expected = 'd0e5ed8616f2bdb1e49fd86497d3e2cd557cd460d2cca7c1c10b5777bf36357e'
+          $expected = '641e085f8c571c3a43bb65238b24f741443058ea870038f35cdd17c825348bfd'
           if (-not (Test-Path -LiteralPath $zip -PathType Leaf)) { throw 'The build-kit ZIP is missing.' }
           $actual = (Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash.ToLowerInvariant()
           if ($actual -ne $expected) { throw 'Build-kit ZIP SHA-256 mismatch. No build was started.' }
@@ -56,9 +56,38 @@ jobs:
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Test and build the Windows installer
         id: build_windows
-        shell: cmd
+        shell: pwsh
         working-directory: ${{ runner.temp }}/integrated-macro-0.5.11/Integrated-Macro-Windows-v0.5.11-Build-Kit
-        run: call .\Build-Windows.cmd
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $PSNativeCommandUseErrorActionPreference = $false
+          $bootstrapLog = Join-Path $env:RUNNER_TEMP 'windows-build-bootstrap.log'
+          'Starting Build-Windows.cmd' | Set-Content -LiteralPath $bootstrapLog -Encoding utf8
+          $buildExitCode = 1
+          try {
+            & $env:ComSpec /d /c 'call ".\Build-Windows.cmd"' 2>&1 | Tee-Object -FilePath $bootstrapLog -Append
+            if ($null -eq $LASTEXITCODE) { throw 'The build process did not return an exit code.' }
+            $buildExitCode = [int]$LASTEXITCODE
+          } catch {
+            ($_ | Out-String) | Tee-Object -FilePath $bootstrapLog -Append | Write-Host
+          }
+          ('Build-Windows.cmd exit code: ' + $buildExitCode) | Tee-Object -FilePath $bootstrapLog -Append
+          exit $buildExitCode
+      - name: Check installer and success report
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $outputRoot = Join-Path $env:RUNNER_TEMP 'integrated-macro-0.5.11/Integrated-Macro-Windows-v0.5.11-Build-Kit/output'
+          $reports = @(Get-ChildItem -Path (Join-Path $outputRoot '*/report.json') -File)
+          if ($reports.Count -ne 1) { throw 'Expected one build report.' }
+          $report = Get-Content -LiteralPath $reports[0].FullName -Raw | ConvertFrom-Json
+          if ($report.success -ne $true) { throw 'The build report does not confirm success.' }
+          $artifacts = Join-Path $reports[0].DirectoryName 'artifacts'
+          if (-not (Test-Path -LiteralPath (Join-Path $artifacts 'integrated-macro.exe') -PathType Leaf)) {
+            throw 'The application executable is missing.'
+          }
+          $installers = @(Get-ChildItem -LiteralPath $artifacts -File -Filter '*-setup.exe')
+          if ($installers.Count -lt 1) { throw 'The Windows installer is missing.' }
       - name: Upload completed artifacts and build evidence
         if: ${{ always() && (steps.build_windows.outcome == 'success' || steps.build_windows.outcome == 'failure') }}
         uses: actions/upload-artifact@v6
@@ -66,6 +95,7 @@ jobs:
           name: windows-0.5.11-${{ github.run_number }}-${{ github.run_attempt }}
           if-no-files-found: ${{ steps.build_windows.outcome == 'success' && 'error' || 'warn' }}
           path: |
+            ${{ runner.temp }}/windows-build-bootstrap.log
             ${{ runner.temp }}/integrated-macro-0.5.11/Integrated-Macro-Windows-v0.5.11-Build-Kit/output/*/artifacts/*
             ${{ runner.temp }}/integrated-macro-0.5.11/Integrated-Macro-Windows-v0.5.11-Build-Kit/output/*/report.json
             ${{ runner.temp }}/integrated-macro-0.5.11/Integrated-Macro-Windows-v0.5.11-Build-Kit/output/*/build.log

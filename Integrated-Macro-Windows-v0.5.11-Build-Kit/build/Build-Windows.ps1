@@ -2,8 +2,8 @@
 # This script has been source-reviewed on macOS, not executed on Windows.
 [CmdletBinding()]
 param(
-    [string]$SourceRoot = (Join-Path (Split-Path -Parent $PSScriptRoot) 'source'),
-    [string]$OutputRoot = (Join-Path (Split-Path -Parent $PSScriptRoot) 'output')
+    [string]$SourceRoot = '',
+    [string]$OutputRoot = ''
 )
 
 Set-StrictMode -Version Latest
@@ -134,6 +134,8 @@ try {
         throw 'Run this script in a 64-bit PowerShell session on Windows x64.'
     }
     if ($env:PROCESSOR_ARCHITECTURE -ne 'AMD64') { throw 'This kit targets Windows x64, not an ARM64 build host.' }
+    if ([string]::IsNullOrEmpty($SourceRoot)) { $SourceRoot = Join-Path $KitRoot 'source' }
+    if ([string]::IsNullOrEmpty($OutputRoot)) { $OutputRoot = Join-Path $KitRoot 'output' }
     $SourceRoot = (Resolve-Path -LiteralPath $SourceRoot).Path.TrimEnd('\', '/')
     if (((Get-Item -LiteralPath $SourceRoot).Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0) {
         throw 'SourceRoot must not be a reparse point.'

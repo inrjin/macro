@@ -1,0 +1,22 @@
+{
+  "confirmedFailure": "User-provided Windows Actions log: Split-Path received empty PSScriptRoot in SourceRoot parameter default.",
+  "oldScriptSha256": "ca41273d1569e148ee0212b41d366f2891e765ccd6f5cd27f9b509773f39ec08",
+  "newScriptSha256": "f275a5ea4d6f0c8dff98bdb04750b587375fc5005e8172777213d975191637c5",
+  "correction": "Two path defaults are empty literals; missing defaults are resolved inside main try after KitRoot is initialized. Nonempty explicit arguments are preserved.",
+  "encoding": "UTF-8 BOM and CRLF retained",
+  "applicationSourceAndFixtureManifestsVerified": {
+    "source-manifest.json": 138,
+    "fixture-manifest.json": 417
+  },
+  "sourceAndFixtureBytesIdenticalToOriginalZip": true,
+  "cmdLauncherUnchanged": true,
+  "reviewRoles": {
+    "implementation": "seat_shortcut",
+    "independent": "fix_cancellation_start",
+    "adversarial": "input_adversarial_review"
+  },
+  "reviewScope": "Actual script and callers inspected; original embedded reports remain historical and are not approvals of this corrected script.",
+  "windowsExecutionOfCorrectedScript": false,
+  "windowsBuildSucceeded": false,
+  "installerProduced": false
+}

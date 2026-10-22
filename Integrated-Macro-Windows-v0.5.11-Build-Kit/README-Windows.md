@@ -21,7 +21,7 @@ Windows x64에서 다음 도구를 준비합니다. 개발 도구는 빌드할 P
 
 ## GitHub Actions에서 빌드
 
-이 키트의 내용과 숨김 파일 `.gitattributes`, `.github/`를 사용할 저장소 루트에 넣으면 `.github/workflows/build-windows-0.5.11.yml`의 수동 실행 작업으로 Windows 빌드를 요청할 수 있습니다. `.gitattributes`는 Windows 체크아웃에서도 원본 해시에 맞는 줄바꿈을 보존합니다. 작업은 설치 파일을 artifact로 보관하며 GitHub Release에 자동 게시하지 않습니다. 이 키트에서는 실제 작업을 업로드하거나 실행하지 않았습니다.
+이 키트의 내용과 숨김 파일 `.gitattributes`, `.github/`를 사용할 저장소 루트에 넣으면 `.github/workflows/build-windows-0.5.11.yml`의 수동 실행 작업으로 Windows 빌드를 요청할 수 있습니다. `.gitattributes`는 Windows 체크아웃에서도 원본 해시에 맞는 줄바꿈을 보존합니다. 작업은 설치 파일을 artifact로 보관하며 GitHub Release에 자동 게시하지 않습니다. 초기 GitHub Actions 실행에서 PowerShell 경로 매개변수 초기화 오류가 확인되어 빌드 지원 스크립트를 수정했습니다. 수정본의 Windows 빌드 성공 여부는 다음 실행에서 확인해야 합니다.
 
 ## 구성과 검증 범위
 
@@ -29,4 +29,4 @@ Windows x64에서 다음 도구를 준비합니다. 개발 도구는 빌드할 P
 - `fixture-manifest.json`: 기존 합성 시험 입력 417개 해시
 - `verification/`: 이 준비 작업의 검사·리뷰 기록
 
-동일 소스·시험 입력의 무결성과 Windows 실행 성공은 별개입니다. 현재 준비 키트의 PowerShell/CMD도 Windows에서 아직 실행하지 않았습니다. Windows 설치·브라우저 연결·F8 채집·예약 클릭·F9·좌석 선택의 실기기 검증은 남아 있습니다.
+동일 소스·시험 입력의 무결성과 Windows 실행 성공은 별개입니다. GitHub Actions의 초기 실행은 빌드 시작 전 경로 초기화에서 실패했습니다. 이번 교정본은 해당 기본 경로 계산을 본문으로 옮겼으며, Windows 재실행 성공은 아직 확인하지 않았습니다. 동봉된 기존 리뷰는 최초 스크립트의 과거 기록이며, 교정 내역은 `verification/windows-param-default-fix.json`에 구분해 기록했습니다. Windows 설치·브라우저 연결·F8 채집·예약 클릭·F9·좌석 선택의 실기기 검증은 남아 있습니다.
