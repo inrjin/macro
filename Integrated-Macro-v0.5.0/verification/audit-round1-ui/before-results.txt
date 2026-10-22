@@ -1,0 +1,11 @@
+Captured before the source fixes on 2026-10-21. Both probes exited 0.
+
+node --experimental-vm-modules /tmp/macro-ui-audit.mjs
+REPRODUCED UI: F8 reading leaves Save enabled; actual Save IPC sends old ROI=null and no seat_end; later point event leaves UI showing captured endpoint despite raw stale Save response.
+REPRODUCED UI: Start click -> pending Save -> native stopped snapshot -> Save resolves -> UI still sends start_run and displays running.
+Limit: actual unchanged app.js/model.js + VM DOM + controllable IPC transport; no native worker, live WebView, OS input, or user settings touched.
+
+cargo run --offline --manifest-path /tmp/macro-runtime-save-audit/Cargo.toml
+REPRODUCED native save body: paused=false, F8 ROI saved then UI stale payload removes endpoint and ROI from raw/profile/engine/disk
+REPRODUCED native save body: paused=true, F8 ROI saved then UI stale payload removes endpoint and ROI from raw/profile/engine/disk
+Limit: apply_capture, save, editable, geometry and storage copied verbatim from current production source; real macro-core Engine; only overlay/logging stubbed, no actual Worker/Tauri/OS

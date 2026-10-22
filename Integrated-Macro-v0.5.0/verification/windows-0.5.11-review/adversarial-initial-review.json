@@ -1,0 +1,66 @@
+{
+  "scope": "Read-only adversarial Windows release preparation review; source and apps unchanged",
+  "recordedAt": "2026-10-22T06:17:27.269157+00:00",
+  "releaseVersion": "0.5.11",
+  "releaseManifestFiles": 138,
+  "releaseManifestSHA256": "65f9ab47828be205c5f7cee7c255af364e3e5872007861cc53034c75e9ad9258",
+  "currentFilesDifferingFromRelease": [
+    {
+      "path": "README.md",
+      "releaseSha256": "0905305586dd533d28f6614589578a6bf8d53f0181113702c3ee7a169a161a4e",
+      "currentSha256": "73689ced907d67ac726395d101f107b0500c3a65a211816e8a219c9f0d623348"
+    },
+    {
+      "path": "crates/macro-core/src/engine.rs",
+      "releaseSha256": "43fb91575b907f8816bc07f4ec6080d75072b6026bbbe95c4377f55e65422013",
+      "currentSha256": "8444a110ed702236b0e094f13a3af95300fb70f747bdf9b6e7c032433467777d"
+    },
+    {
+      "path": "src-tauri/src/reentrant_runtime_tests.rs",
+      "releaseSha256": "ac6f8a8b65a77099781196033c115c1d2e0f40d46de4dc940f66083b8d610d00",
+      "currentSha256": "3c8045c1659817a843ae214c22c1a8a2aa60ffda104bf12bdc46c84dea966f0d"
+    },
+    {
+      "path": "src-tauri/src/runtime.rs",
+      "releaseSha256": "2d4213c49584b930e2bdc5ed78fb2aaa2700479c7db7bb97cdf0d06377561939",
+      "currentSha256": "6cd1a72e60d7658eb091cfdf73ca9789f78037139f012c900c2b76c64b02f2ae"
+    }
+  ],
+  "releaseRuntimeSHA256": "2d4213c49584b930e2bdc5ed78fb2aaa2700479c7db7bb97cdf0d06377561939",
+  "WindowsArtifactExists": false,
+  "WindowsExecutionVerified": false,
+  "remoteWindowsToolAvailable": false,
+  "remoteToolsNote": "Tool metadata exposes GitHub repository/workflow queries and reruns, but no Windows shell/SSH or identified authorized workflow runner. This does not prove that the user has no Windows host.",
+  "reviewStatus": "Pending isolated source and build-script inspection",
+  "findings": [
+    {
+      "id": "source-lineage",
+      "severity": "required",
+      "text": "Restore released manifest bytes, not current working directory; exclude new calibration source files."
+    },
+    {
+      "id": "fixture-dependencies",
+      "severity": "blocker-until-packaged",
+      "text": "cargo test --workspace reads external verification manifests and RGBA fixtures; 138 source files alone are not a self-contained test kit. Current minimal manifest-linked set is 410 RGBA and 7 JSON manifests, 215288919 bytes."
+    },
+    {
+      "id": "artifact-honesty",
+      "severity": "required",
+      "text": "A source/build kit is not a Windows executable or installer. No successful Windows build/run claim before actual artifact evidence."
+    },
+    {
+      "id": "dependencies",
+      "severity": "required",
+      "text": "Tauri defaults to WebView2 DownloadBootstrapper; installer needs network when runtime absent. MSVC compiler/SDK are developer dependencies. VC runtime distribution requirements must be checked against final PE imports; current tauri-build uses static_vcruntime in release."
+    },
+    {
+      "id": "platform-scope",
+      "severity": "required",
+      "text": "Shared Rust/macOS checks do not establish Windows input, GDI capture, DPI, focus, hotkey or WebView2 execution. Unsigned status must be stated unless an actual Windows signature is supplied."
+    }
+  ],
+  "primaryReferences": [
+    "https://v2.tauri.app/distribute/windows-installer/",
+    "https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution"
+  ]
+}

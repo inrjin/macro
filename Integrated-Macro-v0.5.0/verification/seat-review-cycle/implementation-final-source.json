@@ -1,0 +1,33 @@
+{
+  "status": "implementation_owned_source_frozen_after_rejecting_mask_prototype",
+  "release_build": false,
+  "production_changes": [
+    "crates/macro-core/src/seat_selection.rs: row search only"
+  ],
+  "files": {
+    "crates/macro-core/src/model.rs": {
+      "sha256": "9aff51550b8ea36c52ed811bc1959074e2c317512a846690edb74d5e9b275857",
+      "identicalToBefore": true
+    },
+    "crates/macro-core/src/vision.rs": {
+      "sha256": "25f24856ab8d66f93a3e276d54e7ccb5d871df290d6325e81f77ba4b044aa396",
+      "identicalToBefore": true
+    },
+    "crates/macro-core/src/seat_selection.rs": {
+      "sha256": "7248517b7f3065ccb78d9a640d15ce62f19730ecbc5013e7fe5cf85d641aec1a",
+      "identicalToBefore": false
+    },
+    "crates/macro-core/src/engine.rs": {
+      "sha256": "f9edcd0da55a92a86b188186252053c00f976fd2a370afff11bca801cdef86df",
+      "identicalToBefore": true
+    },
+    "crates/macro-core/tests/seat_candidate_geometry.rs": {
+      "sha256": "1085fcc560d39f4bd7a458884e2d9dac0e8caed50c63bf2ce6051d397152f413",
+      "identicalToBefore": true
+    },
+    "crates/macro-core/tests/seat_selection.rs": {
+      "sha256": "a88c052490f44a3efb43d92289b291e067f5ce4bf7dd3cc0b63dcf2652452b93",
+      "identicalToBefore": true
+    }
+  }
+}

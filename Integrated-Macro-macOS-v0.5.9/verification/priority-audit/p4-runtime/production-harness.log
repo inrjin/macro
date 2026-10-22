@@ -1,0 +1,15 @@
+   Compiling integrated-macro v0.5.8 (/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/src-tauri)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.57s
+     Running unittests src/main.rs (target/debug/deps/integrated_macro-b7da2ffd8ed18f1e)
+
+running 4 tests
+{"case":"refresh_response_identity_unobservable","eligibleSeatCount":1,"refreshCompletionClaimed":false,"truthOnlyInTestOracle":"latest_refresh_response"}
+test runtime::priority_p4_tests::p4_delayed_pre_latest_refresh_image_is_blocked_then_new_seat_resumes ... ok
+{"case":"refresh_response_identity_unobservable","eligibleSeatCount":1,"refreshCompletionClaimed":false,"truthOnlyInTestOracle":"older_response_rendered_after_latest_post"}
+test runtime::priority_p4_tests::p4_same_pixels_new_capture_releases_fence_but_response_identity_remains_unknown ... ok
+{"buttonDeliveriesSimulated":[1000,2000,3000,4000,5000,6000,7000,8000,9000,10000],"case":"no_refresh_response","generation":0,"nativeInputSent":false,"scans":11}
+test runtime::priority_p4_tests::p4_refresh_no_response_retries_only_the_registered_button_at_the_interval ... ok
+test runtime::priority_p4_tests::p4_static_refresh_off_keeps_scanning_and_unchanged_on_keeps_refreshing ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 82 filtered out; finished in 0.00s
+

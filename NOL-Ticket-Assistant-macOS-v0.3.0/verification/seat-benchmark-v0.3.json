@@ -1,0 +1,25 @@
+{
+  "createdAt": "2026-10-19T00:59:45.399Z",
+  "environment": "macOS / headless Chrome for Testing / fully local NOL URL fixture / one target tab",
+  "metric": "same-page performance.now(): rejection exposed to next trusted seat click; includes dismissal; excludes preceding simulated server wait",
+  "notMeasured": "NOL server seat acquisition; actual live site compatibility; Windows latency",
+  "scenariosPassed": 8,
+  "stats": {
+    "dom": {
+      "count": 108,
+      "p50Ms": 3.4000000953674316,
+      "p95Ms": 4.700000047683716,
+      "minMs": 2.5999999046325684,
+      "maxMs": 5.400000095367432,
+      "under10ms": 108
+    },
+    "alert": {
+      "count": 108,
+      "p50Ms": 10,
+      "p95Ms": 13,
+      "minMs": 7.099999904632568,
+      "maxMs": 18.700000047683716,
+      "under10ms": 54
+    }
+  }
+}

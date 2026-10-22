@@ -1,0 +1,692 @@
+{
+  "version": "0.5.9",
+  "files": [
+    {
+      "path": "package.json",
+      "bytes": 387,
+      "sha256": "1386a0121ec4065492ccce31b392a4dd34c3bf9a30823577567bf579a9980a99"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 7439,
+      "sha256": "a624ce2332bda9d50268ee92e8b411253d044e3f864e25c0ef1337666633fbe4"
+    },
+    {
+      "path": "Cargo.toml",
+      "bytes": 381,
+      "sha256": "f785ffe27833cb4323babe47772a0f3eefec2d677f1f664b9c7f905680c1b938"
+    },
+    {
+      "path": "Cargo.lock",
+      "bytes": 116972,
+      "sha256": "666514fce0abac2e81a41ba2cba96b297c762b94f6d06dfe6c26048885cde5ea"
+    },
+    {
+      "path": "crates/macro-core/Cargo.toml",
+      "bytes": 225,
+      "sha256": "59b81024edb0a2470e21a778f803859dd9fdcbe5a5f8ef37d5cf1cf1c9b6faef"
+    },
+    {
+      "path": "crates/macro-platform/Cargo.toml",
+      "bytes": 170,
+      "sha256": "8e9b3d21668a889287e0eab36e85565014766f78e89994c9bb4044563f6193c5"
+    },
+    {
+      "path": "src-tauri/tauri.conf.json",
+      "bytes": 1457,
+      "sha256": "5cb3949d2733f53f319d6992f02bdff12c289b2c8916cdfbfe47e3776b46ee7c"
+    },
+    {
+      "path": "ui/package.json",
+      "bytes": 167,
+      "sha256": "5d8efd7220b248e83d141ddc32d54a89be76450d7361b0fd95b26952b795d405"
+    },
+    {
+      "path": "ui/index.html",
+      "bytes": 27473,
+      "sha256": "39e349c070f39de9efee006eb7d484f0e8d7620dda9d3e080aff908c999f08e3"
+    },
+    {
+      "path": "README.md",
+      "bytes": 37219,
+      "sha256": "fd79ac13fa53ef323f6923e153b92c52fcd9bb483d60779719f71bbd03d99ad0"
+    }
+  ],
+  "sourceInventory": [
+    {
+      "path": "crates/macro-core/Cargo.toml",
+      "bytes": 225,
+      "sha256": "59b81024edb0a2470e21a778f803859dd9fdcbe5a5f8ef37d5cf1cf1c9b6faef"
+    },
+    {
+      "path": "crates/macro-core/README.md",
+      "bytes": 6892,
+      "sha256": "ca22e56d47d71f0169ff72069ff723360d7ce2c421d2cab0ec737d9b6f89dcdd"
+    },
+    {
+      "path": "crates/macro-core/examples/count_probe.rs",
+      "bytes": 426,
+      "sha256": "bfe7c72e4f248a556be5abc7e48a2d0302bfeb79fe5fa748ea335c7ff0e379e8"
+    },
+    {
+      "path": "crates/macro-core/examples/replay.rs",
+      "bytes": 1452,
+      "sha256": "ba992422108e66c7b6c39c32adf6c81ed18c0668c6ebf1e96a67869bf155348f"
+    },
+    {
+      "path": "crates/macro-core/src/assets/README.md",
+      "bytes": 818,
+      "sha256": "ea676a5043c279ef5f0b75ec358b93d3dfb2b29b2490c84cc026cd658fbca8e6"
+    },
+    {
+      "path": "crates/macro-core/src/assets/nol-captcha-title.mask",
+      "bytes": 2306,
+      "sha256": "b0ccceb2292514757984166464fe8c328cef130de470597965c5828f49fbe53a"
+    },
+    {
+      "path": "crates/macro-core/src/clock.rs",
+      "bytes": 3349,
+      "sha256": "ee16850ea2a5eae244dfd4ccba96ea211b8daa453043559ab0539bc793474d7c"
+    },
+    {
+      "path": "crates/macro-core/src/engine.rs",
+      "bytes": 78211,
+      "sha256": "d893b89bd3f221bade56108df22f1a02eff5e3bfa963e46bc19d38e67367a0bf"
+    },
+    {
+      "path": "crates/macro-core/src/lib.rs",
+      "bytes": 335,
+      "sha256": "998c7fcbf432b52c93c096098c2060430abe31b2d012d12a5e031ba6ce1db451"
+    },
+    {
+      "path": "crates/macro-core/src/model.rs",
+      "bytes": 20343,
+      "sha256": "3869b494fa627ecff5a202c26b21d8c4aa1cc99f32c18b2e5ed349d037b284e0"
+    },
+    {
+      "path": "crates/macro-core/src/nol_captcha.rs",
+      "bytes": 13255,
+      "sha256": "af0a56333c4d0787e7aa4cefe1e10674fffe1178450a617880291f46db30b27a"
+    },
+    {
+      "path": "crates/macro-core/src/seat_object_shapes.rs",
+      "bytes": 30704,
+      "sha256": "33bad8d441317c4a4c6886c3e9b50efab96d9ea340f551b250d36ce6acb88023"
+    },
+    {
+      "path": "crates/macro-core/src/seat_objects.rs",
+      "bytes": 4035,
+      "sha256": "95d696aa1deab1987491352cbfcfc4cbc2f508f6b71ec1ff32f26f645f19982d"
+    },
+    {
+      "path": "crates/macro-core/src/seat_selection.rs",
+      "bytes": 7251,
+      "sha256": "37118aff1832c00db7188fc81766fc5f957ee95f80cbb52d0c2a3c0f5e2c2ac9"
+    },
+    {
+      "path": "crates/macro-core/src/selection_count.rs",
+      "bytes": 28820,
+      "sha256": "0fceaa4eda7e797ef72ed8fed6b5d0273e08c0942444ccd8254cf3ab31cc259d"
+    },
+    {
+      "path": "crates/macro-core/src/selection_count_assets/empty-negative.json",
+      "bytes": 594710,
+      "sha256": "eff7d4668bed09ccd7e8fba82b8fc052000ac3ed30e0d729f91e5cef79486a4c"
+    },
+    {
+      "path": "crates/macro-core/src/selection_count_assets/templates.json",
+      "bytes": 304910,
+      "sha256": "52ce816c2e10dadeb681ac796da6af1689f4aacd00e6d2fc6e11484d51989cee"
+    },
+    {
+      "path": "crates/macro-core/src/selection_count_layout.rs",
+      "bytes": 15732,
+      "sha256": "386de039c740adc1c29de32b717783ac08f3bb02fd076235990850fb4976810d"
+    },
+    {
+      "path": "crates/macro-core/src/vision.rs",
+      "bytes": 13675,
+      "sha256": "f375df436d66d57ea6ff2b1032f14345ae310127681b7660701cda3179bd5639"
+    },
+    {
+      "path": "crates/macro-core/src/visual_dialog.rs",
+      "bytes": 9596,
+      "sha256": "f81ed79014d3c77e38fc3fc93434f5aaa1ad26f5f12db270a9a0d2a6513be2a1"
+    },
+    {
+      "path": "crates/macro-core/tests/engine.rs",
+      "bytes": 128114,
+      "sha256": "513a29cb387526e2d6f6f91af7325268bc3564ff452b993f5a20a48a905d61d2"
+    },
+    {
+      "path": "crates/macro-core/tests/nol_captcha.rs",
+      "bytes": 24387,
+      "sha256": "e5dd3f504f7b3c5239825a788d25ce1059c5aeecaa85c53e2d25352a6986ad1b"
+    },
+    {
+      "path": "crates/macro-core/tests/priority_audit.rs",
+      "bytes": 5451,
+      "sha256": "e2d2d4777b3a733ae0f10521520c4292bd7dcad28d5951d3480b3f4726c1d2f3"
+    },
+    {
+      "path": "crates/macro-core/tests/priority_selection_oracle.rs",
+      "bytes": 5021,
+      "sha256": "a2017de764148249e999dfdf95eee5f95bac35555d9273be5c09d468b5d9b4d7"
+    },
+    {
+      "path": "crates/macro-core/tests/priority_vision_audit.rs",
+      "bytes": 8245,
+      "sha256": "1baa55ca22acf658aa5793ac5561d8d7432713f957ae20f14e51747b6748a261"
+    },
+    {
+      "path": "crates/macro-core/tests/seat_accuracy_pipeline.rs",
+      "bytes": 6174,
+      "sha256": "36b1eaab54063b3889916c0864445f775c738149c8c313f977c00877f9270da7"
+    },
+    {
+      "path": "crates/macro-core/tests/seat_candidate_geometry.rs",
+      "bytes": 8234,
+      "sha256": "3230af8013bbcd98fa85dd8361662198e295f80796ebf8c71ed6bf39b785fe51"
+    },
+    {
+      "path": "crates/macro-core/tests/seat_object_nonround_integration.rs",
+      "bytes": 17596,
+      "sha256": "0d91daa69684f242af312a87f939ce61d3a2d77678935336442af238562d1963"
+    },
+    {
+      "path": "crates/macro-core/tests/seat_object_nonround_review.rs",
+      "bytes": 27743,
+      "sha256": "f71812774dfaf5a8ac67bdf503b5aa7c09fd96dbf78c8b842af0f4603bec68e1"
+    },
+    {
+      "path": "crates/macro-core/tests/seat_object_shape_evidence.rs",
+      "bytes": 4144,
+      "sha256": "6f861fbde435be3211c1b3d8618afdd63d7a00997fd50f135d3c93140b682866"
+    },
+    {
+      "path": "crates/macro-core/tests/seat_objects.rs",
+      "bytes": 13278,
+      "sha256": "19b7e4b19f51be9cf118c6dab5b3832b00850be199c158041a0e09545a93f2fa"
+    },
+    {
+      "path": "crates/macro-core/tests/seat_review_regressions.rs",
+      "bytes": 7320,
+      "sha256": "14782d4415fd96e4ab0c06961cdf8b4b5b1059714f68eb1f6123710162d2402f"
+    },
+    {
+      "path": "crates/macro-core/tests/seat_selection.rs",
+      "bytes": 10813,
+      "sha256": "19259870ae732a4e3ced1e28b13e9b391745fc612f9dcb3515c2b8668411f185"
+    },
+    {
+      "path": "crates/macro-core/tests/seat_shape_regressions.rs",
+      "bytes": 8974,
+      "sha256": "90cb4d8bc8bfb58e20d78cf5a480504a84d1e8fc0e8a1c4c62ca07ea0a519c05"
+    },
+    {
+      "path": "crates/macro-core/tests/selection_count.rs",
+      "bytes": 16304,
+      "sha256": "20030595097937627f977cf8034e81f4fd9a5476555839b09b10af31f76f5165"
+    },
+    {
+      "path": "crates/macro-core/tests/selection_count_audit_engine.rs",
+      "bytes": 16708,
+      "sha256": "da68e78fafbedb9e54c416451e8f18158d897e988a1eaba274e29628b63d701d"
+    },
+    {
+      "path": "crates/macro-core/tests/selection_count_audit_reader.rs",
+      "bytes": 8852,
+      "sha256": "0f1a021fba85ebe9ac8814c507de662d66b6328e5c1d288b0c0132135518571f"
+    },
+    {
+      "path": "crates/macro-core/tests/selection_count_completeness.rs",
+      "bytes": 3947,
+      "sha256": "42bab58c1e142acd528890fae21d9fcf2443b63ec3baf5cfb5ae4d08b9a1a2d5"
+    },
+    {
+      "path": "crates/macro-core/tests/selection_count_reader_review.rs",
+      "bytes": 6942,
+      "sha256": "ddcd9edacc9358b2338a56f81a655aaf572b48c788228c747b783a6a75df63f5"
+    },
+    {
+      "path": "crates/macro-core/tests/support/seat_object_shapes.rs",
+      "bytes": 9551,
+      "sha256": "b2451715beb9083e822104757672f6bfe5f2c5de652ec4206ab84067ea8f4efc"
+    },
+    {
+      "path": "crates/macro-core/tests/vision_clock.rs",
+      "bytes": 11156,
+      "sha256": "ad613a9efc500e0665ae2cdacd8c4864d9d42bf77f97580b035e8be0781fc2ae"
+    },
+    {
+      "path": "crates/macro-core/tests/visual_dialog.rs",
+      "bytes": 9787,
+      "sha256": "8f5be2e0c9b8412589a35426eae433ecd1326cfcd9a4cb8f4b8cb05218160ba4"
+    },
+    {
+      "path": "crates/macro-platform/Cargo.toml",
+      "bytes": 170,
+      "sha256": "8e9b3d21668a889287e0eab36e85565014766f78e89994c9bb4044563f6193c5"
+    },
+    {
+      "path": "crates/macro-platform/README.md",
+      "bytes": 4776,
+      "sha256": "8d4a00fdaadffde15262f1c7fe709099c4e1a361622b597d8ed7def5de2b56fb"
+    },
+    {
+      "path": "crates/macro-platform/build.rs",
+      "bytes": 2519,
+      "sha256": "258beae4fd5a9f7b19e4c5b5faa48acc8cd962698ae707ab79e8b17f98a4f565"
+    },
+    {
+      "path": "crates/macro-platform/native/MacPlatform.swift",
+      "bytes": 115685,
+      "sha256": "c865ccd7059f4e8c604e353c9909e8e563d91684f9e5510c69ffd8e5d4023ce7"
+    },
+    {
+      "path": "crates/macro-platform/native/VERIFICATION.md",
+      "bytes": 9646,
+      "sha256": "f33fd08c2ef07167ffea2e534dfc44d1b986d5df5b5eb816e1fc22e36204e27b"
+    },
+    {
+      "path": "crates/macro-platform/native/verify-macos.sh",
+      "bytes": 8249,
+      "sha256": "101d1bc99ef2d83c80976b689f8ea6a272f4d4d9484bb4f872ad5373180a45ad"
+    },
+    {
+      "path": "crates/macro-platform/src/lib.rs",
+      "bytes": 25041,
+      "sha256": "fad64b68fd3ab41d8f8c06a6b1634f5012b74b59491b81bcaf9e59ebee63e4e0"
+    },
+    {
+      "path": "crates/macro-platform/src/macos.rs",
+      "bytes": 18241,
+      "sha256": "c4dff6a75912d57948a5cba5713b30fbdd70911e67401e974396bf612f546a98"
+    },
+    {
+      "path": "crates/macro-platform/src/unsupported.rs",
+      "bytes": 2785,
+      "sha256": "0a835b7f1c4aeaab46bf3d053671577316874428c36aeae7c1b95c655fea8967"
+    },
+    {
+      "path": "crates/macro-platform/src/windows.rs",
+      "bytes": 53591,
+      "sha256": "30980d0285a8e90a10c12f8f880728034ba419524d95781bfeae7d844c413104"
+    },
+    {
+      "path": "src-tauri/Cargo.toml",
+      "bytes": 596,
+      "sha256": "e202fc400597470bbdbbd42bdd12ad5d6e55d7dda3ef85061acface7fb0688c0"
+    },
+    {
+      "path": "src-tauri/Info.plist",
+      "bytes": 388,
+      "sha256": "b37a04eb49c7f12cf6463313a301a6d13502ee8ed7f4c3d8c0a7550be6186fbc"
+    },
+    {
+      "path": "src-tauri/build.rs",
+      "bytes": 40,
+      "sha256": "62343b39726897a2c190d7ffe52bfd5ef85236f1f08a9f7d4595ee5993e02c74"
+    },
+    {
+      "path": "src-tauri/capabilities/desktop.json",
+      "bytes": 225,
+      "sha256": "f53ef39e877e4b8ef5e0c2cff216507a3a6313e6b532c5d329c0e4406be06615"
+    },
+    {
+      "path": "src-tauri/icons/README.md",
+      "bytes": 297,
+      "sha256": "89431922e209a00a9cb0cedfb8440456ff8678196e17352cde68040a5dfd8df9"
+    },
+    {
+      "path": "src-tauri/icons/icon.icns",
+      "bytes": 586867,
+      "sha256": "be80f1eb77b66015d3119b9d8483fae0c3684f3169793b93a5372d505b827a7c"
+    },
+    {
+      "path": "src-tauri/icons/icon.ico",
+      "bytes": 50764,
+      "sha256": "75570003f1695a25005e9580d2e5cfd636c18fdbcbb2283d131124f153d2a483"
+    },
+    {
+      "path": "src-tauri/icons/icon.png",
+      "bytes": 116274,
+      "sha256": "1ceb0accd7cb31532bea9d02c682d7af8b90d6d2a91cacbbee57aae0b3035000"
+    },
+    {
+      "path": "src-tauri/src/clock.rs",
+      "bytes": 5749,
+      "sha256": "77229b68e7342b6c9b734e6fa91ed3f8b31d5e2b3b024debfb864695bbbf8ebc"
+    },
+    {
+      "path": "src-tauri/src/keyboard_check.rs",
+      "bytes": 8705,
+      "sha256": "2f08b9787b7d230d9be2f05436c1bbe0d143454ec9240e71452bdb684138f153"
+    },
+    {
+      "path": "src-tauri/src/main.rs",
+      "bytes": 13729,
+      "sha256": "5e0a5b19272003d6b2a880c6b8062210f93c05d1004aca1bd13f7110019a3b44"
+    },
+    {
+      "path": "src-tauri/src/runtime.rs",
+      "bytes": 294902,
+      "sha256": "c59fe1d370a2210cdfdc337c6a8ffde6cc83eecc588707194ea63f202c2b3ff4"
+    },
+    {
+      "path": "src-tauri/src/selection_count_runtime_tests.rs",
+      "bytes": 37627,
+      "sha256": "7e829648aa99a89ee8d45d76fc78de29a9d0a856b7fac8a507690150f7eba857"
+    },
+    {
+      "path": "src-tauri/src/storage.rs",
+      "bytes": 2704,
+      "sha256": "598937d2af9a7258d723895049f38ce7b701f5c1c417c376ddcf00b407c88828"
+    },
+    {
+      "path": "src-tauri/src/visual_recovery.rs",
+      "bytes": 14788,
+      "sha256": "29d930de78e5e4a32268244cb1c019ca4646444225c9f98dda7ad7fd421bb102"
+    },
+    {
+      "path": "src-tauri/tauri.conf.json",
+      "bytes": 1457,
+      "sha256": "5cb3949d2733f53f319d6992f02bdff12c289b2c8916cdfbfe47e3776b46ee7c"
+    },
+    {
+      "path": "ui/app.js",
+      "bytes": 51814,
+      "sha256": "6967ab904094f0133d88f94ba5cd50287a8534fafabde7ddb24a97364ca63d0c"
+    },
+    {
+      "path": "ui/capture-state.js",
+      "bytes": 3272,
+      "sha256": "8fabf974f9998c60d723d4e052eecaabd0456c30570e0a5bc755c6f769d4323a"
+    },
+    {
+      "path": "ui/index.html",
+      "bytes": 27473,
+      "sha256": "39e349c070f39de9efee006eb7d484f0e8d7620dda9d3e080aff908c999f08e3"
+    },
+    {
+      "path": "ui/model.js",
+      "bytes": 39659,
+      "sha256": "96b92eb157fae250a3db4c47f07b35e23916fe982ae2ced01e23039f063e301f"
+    },
+    {
+      "path": "ui/overlay.html",
+      "bytes": 663,
+      "sha256": "64b73cb64a7aeb75891aad02f47ac2f1156512d37ef943beb768ddd48b660e56"
+    },
+    {
+      "path": "ui/overlay.js",
+      "bytes": 2970,
+      "sha256": "23fefb02bb9e7a2e8e5e6e0d49693a3625123948460936982a24c4554e112aaa"
+    },
+    {
+      "path": "ui/package.json",
+      "bytes": 167,
+      "sha256": "5d8efd7220b248e83d141ddc32d54a89be76450d7361b0fd95b26952b795d405"
+    },
+    {
+      "path": "ui/profile-sync.js",
+      "bytes": 3316,
+      "sha256": "bca854080e15b95ef3974d93a7a6cce7a1f0edad817f580625a9661ec3bbb45e"
+    },
+    {
+      "path": "ui/styles.css",
+      "bytes": 16440,
+      "sha256": "a121ebc675b191f32474b493a3a10c603dcffa447e5d15a0497fda701235e3e1"
+    },
+    {
+      "path": "ui/tests/cancellation-audit.test.js",
+      "bytes": 4234,
+      "sha256": "d0ae8c0881f255f196a778d6cc3186cca775156791c895a89eaceba8b10123a9"
+    },
+    {
+      "path": "ui/tests/capture-integration.test.js",
+      "bytes": 623,
+      "sha256": "4ffa2489eba7de33dde2280e3e32a05e78337b893a7aa83b3818d0a5c37d5e5f"
+    },
+    {
+      "path": "ui/tests/capture-state.test.js",
+      "bytes": 6115,
+      "sha256": "fc3e03058e9f11c7bd354af55a41635646fbe4463870674330640ce97719f881"
+    },
+    {
+      "path": "ui/tests/continuous-flow.test.js",
+      "bytes": 5847,
+      "sha256": "a6d17784786eaf19c01e9bad4797aef2694ae5b0fa35d8d62e9f82699c2875f2"
+    },
+    {
+      "path": "ui/tests/direct-seats.test.js",
+      "bytes": 4528,
+      "sha256": "2a1c99767a67938d6f629ce3de11d7880825f9152c474e108e6265644a96db69"
+    },
+    {
+      "path": "ui/tests/dom-fixture.mjs",
+      "bytes": 7082,
+      "sha256": "367897b00187fdf517d55fcd7ae75435fe3c9d0a8a2c8b115e723cc64f40d34e"
+    },
+    {
+      "path": "ui/tests/keyboard-check-ui.test.js",
+      "bytes": 3554,
+      "sha256": "72f6a67ecaa80432d23e06977a1b20316fa9dc3ec70b460f9932d90b0c967e0d"
+    },
+    {
+      "path": "ui/tests/keyboard-check.test.js",
+      "bytes": 5444,
+      "sha256": "a2923d4c8d33715479bf476c0b576dffb96db54b69efe9f2d334eb123b18a611"
+    },
+    {
+      "path": "ui/tests/model.test.js",
+      "bytes": 20330,
+      "sha256": "d1b47b794a929d4f9861b6cca0f3bf527b6778696be494eee9a3ec54c5aaea7c"
+    },
+    {
+      "path": "ui/tests/optimistic-selection.test.js",
+      "bytes": 3252,
+      "sha256": "368515fcdc844d8be5463e94c49e15ec9fc090f441895e46c39ed64080430c34"
+    },
+    {
+      "path": "ui/tests/profile-sync.test.js",
+      "bytes": 3501,
+      "sha256": "2661a2bbb23aa8389b41fcb6cde007dbf6d5d93994fb82aa5da070f32e592d2b"
+    },
+    {
+      "path": "ui/tests/run-cancellation-audit-dom.mjs",
+      "bytes": 8851,
+      "sha256": "0eb6070e9786aa61d96fd0428d821e90aa3118636d0592566b1ef3b12967e93d"
+    },
+    {
+      "path": "ui/tests/run-capture-browser.mjs",
+      "bytes": 10915,
+      "sha256": "149e3a551fe7b723d060118f25b28fe184731f5fdb6ffe2c1695654525a7e15f"
+    },
+    {
+      "path": "ui/tests/run-capture-dom.mjs",
+      "bytes": 6503,
+      "sha256": "fa1fa0f31efa7dbe6d8c3616b70df036ed52ce740a7827cd86dc727923de4c00"
+    },
+    {
+      "path": "ui/tests/run-continuous-flow-dom.mjs",
+      "bytes": 9902,
+      "sha256": "76062c3fd8cae9cd8fc425bd8c63802401c2eb4373f33893ad644c42ef311573"
+    },
+    {
+      "path": "ui/tests/run-keyboard-check-ui-dom.mjs",
+      "bytes": 8454,
+      "sha256": "e14503ed3a069ae258449d7f63000f3579744cc30f26b8f1ef4b7401625abc11"
+    },
+    {
+      "path": "ui/tests/run-optimistic-selection-dom.mjs",
+      "bytes": 5242,
+      "sha256": "deb9dff19ef24c61ae99a97cf93f25aab6723fc47342e1285514c43c80f834bb"
+    },
+    {
+      "path": "ui/tests/run-profile-race-dom.mjs",
+      "bytes": 16639,
+      "sha256": "9d90ddcffc29ffa39903522915ca9c9b4387da6c496a8b913ed819aa761a40ab"
+    },
+    {
+      "path": "ui/tests/run-recovery-dom.mjs",
+      "bytes": 2440,
+      "sha256": "f1d0e65004bdacdc70666b9cb45f149f7d9ab9a5d3052c9a5243f5f058275af3"
+    },
+    {
+      "path": "ui/tests/run-seat-evidence-dom.mjs",
+      "bytes": 5844,
+      "sha256": "fd50d35dc3816ba2396176a1e374baad4d6ad27a4baac04b868ff0962caa9e08"
+    },
+    {
+      "path": "ui/tests/run-start-dom.mjs",
+      "bytes": 7262,
+      "sha256": "8ac6fdded9986479542ee93e3b0b7f6026864715097016fea48b213f224398d0"
+    },
+    {
+      "path": "ui/tests/run-start-shortcut-dom.mjs",
+      "bytes": 9432,
+      "sha256": "24b95a39a7bfa2b8892f43257b9edc345d1075442dc4c4061b036c0910761657"
+    },
+    {
+      "path": "ui/tests/run-vision-dom.mjs",
+      "bytes": 4499,
+      "sha256": "62e1ca0dbe9ea2c460f93d8d5c9bcd6d41fea811a4dc8923459210b65c71da3c"
+    },
+    {
+      "path": "ui/tests/run-visual-dialog-dom.mjs",
+      "bytes": 7241,
+      "sha256": "f9ce49857cb0d64e31f5337fd0144f7e2e512c800248584755bff72e994d3a1f"
+    },
+    {
+      "path": "ui/tests/seat-evidence.test.js",
+      "bytes": 4573,
+      "sha256": "b84edf9883ed5b61c12418bb3a73cd906ee04b59182b33cc9b32be1350c22201"
+    },
+    {
+      "path": "ui/tests/start-integration.test.js",
+      "bytes": 1911,
+      "sha256": "86acdcbffc25fda4b35e62dd70a4e904107084c07fa5d985c69d6992c1f9259a"
+    },
+    {
+      "path": "ui/tests/start-shortcut.test.js",
+      "bytes": 1204,
+      "sha256": "cbe3e44e634c49307b72c719ffba9dfc0f32aa0632adc4eb6f592c4eface23f5"
+    },
+    {
+      "path": "ui/tests/vision-diagnostics.test.js",
+      "bytes": 5292,
+      "sha256": "3c1bf60f09c91714d59ffd2f9f2a3540aa8ce87c998efcdf384e93b63502a94b"
+    },
+    {
+      "path": "ui/tests/visual-dialog.test.js",
+      "bytes": 3225,
+      "sha256": "06aea4bd4fb61693cda9dc2fb5e5aeb982c089066f9324b04ae76950c142bb60"
+    },
+    {
+      "path": "scripts/bootstrap-macos.sh",
+      "bytes": 3439,
+      "sha256": "ddef796cbb3747dfb70cf07d8c3317770c15afb345ae6e2a857382dd0fbe0267"
+    },
+    {
+      "path": "scripts/build-gate.mjs",
+      "bytes": 700,
+      "sha256": "cd5b4b527a7183a3a49ece9a0cd4de56f9264a92d913a4bcb05ba97e4823c7f1"
+    },
+    {
+      "path": "scripts/build-macos.sh",
+      "bytes": 881,
+      "sha256": "644b1daa17a4077a8a392e727340d04177ea2b49d0f1b38d2c2b3f12dc6458b6"
+    },
+    {
+      "path": "scripts/build-windows.ps1",
+      "bytes": 608,
+      "sha256": "650e50a31bc131f0bea708ae24d1c5f449c605dba68e25d7679a1d60121d642c"
+    },
+    {
+      "path": "scripts/check.mjs",
+      "bytes": 5660,
+      "sha256": "1da0f66c2a9d2e6dd76940b07915446a64de44f6f3148966dbc12596d77496b9"
+    },
+    {
+      "path": "scripts/diagnose-macos-windows.swift",
+      "bytes": 3066,
+      "sha256": "3cea68a9c214a5ba4dae21241311c27fd69cc07f0772d5a68dc8243b48161a1d"
+    },
+    {
+      "path": "scripts/keyboard-probe-native.swift",
+      "bytes": 12118,
+      "sha256": "5218fdd8d45ebbceec69efce8c8412403632550c23654e506978d1d60eb97396"
+    },
+    {
+      "path": "tests/browser-observer.test.js",
+      "bytes": 7489,
+      "sha256": "12cf4cc1a9326e100cddfbcfc7fdb08312d189aac143f5ce1cfbb48be62baf69"
+    },
+    {
+      "path": "tests/build-gate.test.js",
+      "bytes": 2783,
+      "sha256": "82fe665309105fb11ea6d0fdafdf617537591f253bb0cd47210fe3af7539efb4"
+    },
+    {
+      "path": "adapters/browser/README.md",
+      "bytes": 2953,
+      "sha256": "3853648e79574ba930b4bf347801acf6724cf79b6901a6154fd4b1e3bb447537"
+    },
+    {
+      "path": "adapters/browser/observer.js",
+      "bytes": 13798,
+      "sha256": "fb19b2022af8a03108664f34fa994d0f6e95e8418fec17ad96a530cc5c3464eb"
+    },
+    {
+      "path": "fixtures/input-check.html",
+      "bytes": 8476,
+      "sha256": "518d0d95b8a1eacb8941f4dadeb77ce5a480079f37e7ebd3e563cf5363d804e1"
+    },
+    {
+      "path": "fixtures/keyboard-check.html",
+      "bytes": 7080,
+      "sha256": "40854f9fe41f46d76f5fc54a65afd2502f0bc90db605451b6521188bc85b884b"
+    },
+    {
+      "path": "fixtures/keyboard-monitor-routing.json",
+      "bytes": 1884,
+      "sha256": "0e2c2a3a25507aa269179ba2afeb50f8988d9bd8bdb3f25304f4ed4fc5e39e9c"
+    },
+    {
+      "path": "docs/implementation-status.md",
+      "bytes": 43778,
+      "sha256": "98fc661448bb6624e1c3e684757f392b2e07fd919c528785c9bcb65b18cfbdd7"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 3130,
+      "sha256": "afef8f4c6854c485ead4b4ecf2389c5271d690ef1360ff0fbfa14e19bf305707"
+    },
+    {
+      "path": "Cargo.toml",
+      "bytes": 381,
+      "sha256": "f785ffe27833cb4323babe47772a0f3eefec2d677f1f664b9c7f905680c1b938"
+    },
+    {
+      "path": "Cargo.lock",
+      "bytes": 116972,
+      "sha256": "666514fce0abac2e81a41ba2cba96b297c762b94f6d06dfe6c26048885cde5ea"
+    },
+    {
+      "path": "package.json",
+      "bytes": 387,
+      "sha256": "1386a0121ec4065492ccce31b392a4dd34c3bf9a30823577567bf579a9980a99"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 7439,
+      "sha256": "a624ce2332bda9d50268ee92e8b411253d044e3f864e25c0ef1337666633fbe4"
+    },
+    {
+      "path": "README.md",
+      "bytes": 37219,
+      "sha256": "fd79ac13fa53ef323f6923e153b92c52fcd9bb483d60779719f71bbd03d99ad0"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "compile": [
+    "/Users/inrjin/Documents/\u6a5f\u68b0\u4eba\u9593/Integrated-Macro-v0.5.0/.build-tools/cargo/bin/rustc",
+    "--edition=2021",
+    "/Users/inrjin/Documents/\u6a5f\u68b0\u4eba\u9593/Integrated-Macro-v0.5.0/verification/seat-object-system/engine/manual-routing-repro/probe.rs",
+    "--extern",
+    "macro_core=/Users/inrjin/Documents/\u6a5f\u68b0\u4eba\u9593/Integrated-Macro-v0.5.0/target/debug/deps/libmacro_core-1bc8151207dc4ba3.rlib",
+    "-L",
+    "dependency=/Users/inrjin/Documents/\u6a5f\u68b0\u4eba\u9593/Integrated-Macro-v0.5.0/target/debug/deps",
+    "-o",
+    "/Users/inrjin/Documents/\u6a5f\u68b0\u4eba\u9593/Integrated-Macro-v0.5.0/verification/seat-object-system/engine/manual-routing-repro/probe"
+  ],
+  "rlibSHA256": "985e47c3981f4c0eabca4ccdc893d32a5ab398a35aae74bd4ff926f895b4f61f",
+  "compileExit": 0
+}

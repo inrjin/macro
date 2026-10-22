@@ -1,0 +1,12 @@
+{
+  "command": "env CARGO_HOME=\"$PWD/.build-tools/cargo\" RUSTUP_HOME=\"$PWD/.build-tools/rustup\" PATH=\"$PWD/.build-tools/cargo/bin:$PATH\" cargo test -p integrated-macro --offline --locked",
+  "passed": 73,
+  "failed": 0,
+  "scope": "desktop helper/channel/engine tests; no live OS input or release build",
+  "sourceSha256": {
+    "src-tauri/src/runtime.rs": "5f7329117b3aa8e42c1bda3de1341223a1f0f356aaf5bba50a9a41aec58972df",
+    "src-tauri/src/main.rs": "5e0a5b19272003d6b2a880c6b8062210f93c05d1004aca1bd13f7110019a3b44",
+    "src-tauri/src/visual_recovery.rs": "3dd16f6fb7a1531edaff7f92b1a31b0fad570fbf76801f682625ae1c263b4e29"
+  },
+  "outputLog": "desktop-tests.log"
+}

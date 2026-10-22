@@ -1,0 +1,8 @@
+{
+  "files": {
+    "crates/macro-core/src/engine.rs": "1d061271e3029f109251d6a09f5e456d4942d0df22782c85e10c7beb0bb2cf9c",
+    "crates/macro-core/src/model.rs": "c0596021075c8401055eaeb52a86ddc613c33997070676ce69254371e8825ef0",
+    "crates/macro-core/tests/f9_any_state_review.rs": "a95ded1a93b0b5f426b035606673843df63371d14718b3e1e9b22a7c5c32c0d4",
+    "crates/macro-core/tests/reentrant_commands_review.rs": "e4c176917de8ebfd76f2ed398ba516692636adb888d2edf6809e6759c70d968d"
+  }
+}

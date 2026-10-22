@@ -1,0 +1,81 @@
+{
+  "action_timeout_ms": 2000,
+  "color": {
+    "b": 210,
+    "g": 70,
+    "r": 130
+  },
+  "color_tolerance": 12,
+  "desired_date": null,
+  "desired_session": null,
+  "desktop": {
+    "cancellation_mode": "legacyRegions",
+    "capture_points": {
+      "seat_start": {
+        "x": 100,
+        "y": 120
+      }
+    },
+    "capture_reference": {
+      "height": 800,
+      "scale_x": 1,
+      "scale_y": 1,
+      "width": 1200
+    },
+    "refresh_mode": "none",
+    "region_color": {
+      "b": 210,
+      "g": 70,
+      "r": 130
+    },
+    "region_roi": null,
+    "sale_time": null,
+    "scheduled_start": false,
+    "stage_center": null
+  },
+  "entry_target": null,
+  "features": {
+    "auto_captcha_resume": false,
+    "auto_entry": false,
+    "automatic_refresh": false,
+    "conflict_recovery": false,
+    "nol_captcha_detection": false,
+    "region_priority": false,
+    "seat_priority": false,
+    "server_clock": false,
+    "status_overlay": false
+  },
+  "legacy": {
+    "blind_click_sequence": true,
+    "cancellation_click_delay_ms": 60,
+    "cancellation_navigation": {
+      "type": "none"
+    },
+    "complete": null,
+    "date": null,
+    "next": null,
+    "normal_click_delay_ms": 60,
+    "region_delay_ms": 200,
+    "regions": [],
+    "session": null
+  },
+  "name": "기본 설정",
+  "observation_timeout_ms": 5000,
+  "refresh_interval_ms": 1000,
+  "refresh_target": null,
+  "region_color": {
+    "b": 210,
+    "g": 70,
+    "r": 130
+  },
+  "sale_deadline_ms": null,
+  "schema_version": 1,
+  "server_url": null,
+  "target_seats": 2,
+  "vision": {
+    "exclusions": [],
+    "max_component_pixels": 100000,
+    "min_component_pixels": 3,
+    "roi": null
+  }
+}

@@ -1,0 +1,1438 @@
+{
+  "fixtures" : [
+    {
+      "expectation" : "unreadable",
+      "file" : "extras\/zero_tiny_6_x386.rgba",
+      "group" : "zero_extra",
+      "height" : 340,
+      "name" : "zero_tiny_6_x386",
+      "note" : "Visible small nonzero numeral beside heading contradicts the empty statement; unsupported numeral is not zero.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 300,
+          "y" : 30
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 145
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 421.49299999999999,
+          "y" : 270.19997811317444
+        },
+        {
+          "advance" : 3.3369140625,
+          "ascent" : 5.431640625,
+          "descent" : 1.271484375,
+          "fontSize" : 6,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "1",
+          "x" : 386,
+          "y" : 36
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "extras\/zero_tiny_6_x387.rgba",
+      "group" : "zero_extra",
+      "height" : 340,
+      "name" : "zero_tiny_6_x387",
+      "note" : "Visible small nonzero numeral beside heading contradicts the empty statement; unsupported numeral is not zero.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 300,
+          "y" : 30
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 145
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 421.49299999999999,
+          "y" : 270.19997811317444
+        },
+        {
+          "advance" : 3.3369140625,
+          "ascent" : 5.431640625,
+          "descent" : 1.271484375,
+          "fontSize" : 6,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "1",
+          "x" : 387,
+          "y" : 36
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "extras\/zero_tiny_6_x388.rgba",
+      "group" : "zero_extra",
+      "height" : 340,
+      "name" : "zero_tiny_6_x388",
+      "note" : "Visible small nonzero numeral beside heading contradicts the empty statement; unsupported numeral is not zero.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 300,
+          "y" : 30
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 145
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 421.49299999999999,
+          "y" : 270.19997811317444
+        },
+        {
+          "advance" : 3.3369140625,
+          "ascent" : 5.431640625,
+          "descent" : 1.271484375,
+          "fontSize" : 6,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "1",
+          "x" : 388,
+          "y" : 36
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "extras\/zero_tiny_7_x386.rgba",
+      "group" : "zero_extra",
+      "height" : 340,
+      "name" : "zero_tiny_7_x386",
+      "note" : "Visible small nonzero numeral beside heading contradicts the empty statement; unsupported numeral is not zero.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 300,
+          "y" : 30
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 145
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 421.49299999999999,
+          "y" : 270.19997811317444
+        },
+        {
+          "advance" : 3.89306640625,
+          "ascent" : 6.3369140625,
+          "descent" : 1.4833984375,
+          "fontSize" : 7,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "1",
+          "x" : 386,
+          "y" : 36
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "extras\/zero_tiny_7_x387.rgba",
+      "group" : "zero_extra",
+      "height" : 340,
+      "name" : "zero_tiny_7_x387",
+      "note" : "Visible small nonzero numeral beside heading contradicts the empty statement; unsupported numeral is not zero.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 300,
+          "y" : 30
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 145
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 421.49299999999999,
+          "y" : 270.19997811317444
+        },
+        {
+          "advance" : 3.89306640625,
+          "ascent" : 6.3369140625,
+          "descent" : 1.4833984375,
+          "fontSize" : 7,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "1",
+          "x" : 387,
+          "y" : 36
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "extras\/zero_tiny_7_x388.rgba",
+      "group" : "zero_extra",
+      "height" : 340,
+      "name" : "zero_tiny_7_x388",
+      "note" : "Visible small nonzero numeral beside heading contradicts the empty statement; unsupported numeral is not zero.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 300,
+          "y" : 30
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 145
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 421.49299999999999,
+          "y" : 270.19997811317444
+        },
+        {
+          "advance" : 3.89306640625,
+          "ascent" : 6.3369140625,
+          "descent" : 1.4833984375,
+          "fontSize" : 7,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "1",
+          "x" : 388,
+          "y" : 36
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "extras\/zero_tiny_8_x386.rgba",
+      "group" : "zero_extra",
+      "height" : 340,
+      "name" : "zero_tiny_8_x386",
+      "note" : "Visible small nonzero numeral beside heading contradicts the empty statement; unsupported numeral is not zero.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 300,
+          "y" : 30
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 145
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 421.49299999999999,
+          "y" : 270.19997811317444
+        },
+        {
+          "advance" : 4.44921875,
+          "ascent" : 7.2421875,
+          "descent" : 1.6953125,
+          "fontSize" : 8,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "1",
+          "x" : 386,
+          "y" : 36
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "extras\/zero_tiny_8_x387.rgba",
+      "group" : "zero_extra",
+      "height" : 340,
+      "name" : "zero_tiny_8_x387",
+      "note" : "Visible small nonzero numeral beside heading contradicts the empty statement; unsupported numeral is not zero.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 300,
+          "y" : 30
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 145
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 421.49299999999999,
+          "y" : 270.19997811317444
+        },
+        {
+          "advance" : 4.44921875,
+          "ascent" : 7.2421875,
+          "descent" : 1.6953125,
+          "fontSize" : 8,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "1",
+          "x" : 387,
+          "y" : 36
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "extras\/zero_tiny_8_x388.rgba",
+      "group" : "zero_extra",
+      "height" : 340,
+      "name" : "zero_tiny_8_x388",
+      "note" : "Visible small nonzero numeral beside heading contradicts the empty statement; unsupported numeral is not zero.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 300,
+          "y" : 30
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 145
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 421.49299999999999,
+          "y" : 270.19997811317444
+        },
+        {
+          "advance" : 4.44921875,
+          "ascent" : 7.2421875,
+          "descent" : 1.6953125,
+          "fontSize" : 8,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "1",
+          "x" : 388,
+          "y" : 36
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "extras\/zero_tiny_9_x386.rgba",
+      "group" : "zero_extra",
+      "height" : 340,
+      "name" : "zero_tiny_9_x386",
+      "note" : "Visible small nonzero numeral beside heading contradicts the empty statement; unsupported numeral is not zero.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 300,
+          "y" : 30
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 145
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 421.49299999999999,
+          "y" : 270.19997811317444
+        },
+        {
+          "advance" : 5.00537109375,
+          "ascent" : 8.1474609375,
+          "descent" : 1.9072265625,
+          "fontSize" : 9,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "1",
+          "x" : 386,
+          "y" : 36
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "extras\/zero_tiny_9_x387.rgba",
+      "group" : "zero_extra",
+      "height" : 340,
+      "name" : "zero_tiny_9_x387",
+      "note" : "Visible small nonzero numeral beside heading contradicts the empty statement; unsupported numeral is not zero.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 300,
+          "y" : 30
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 145
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 421.49299999999999,
+          "y" : 270.19997811317444
+        },
+        {
+          "advance" : 5.00537109375,
+          "ascent" : 8.1474609375,
+          "descent" : 1.9072265625,
+          "fontSize" : 9,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "1",
+          "x" : 387,
+          "y" : 36
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "extras\/zero_tiny_9_x388.rgba",
+      "group" : "zero_extra",
+      "height" : 340,
+      "name" : "zero_tiny_9_x388",
+      "note" : "Visible small nonzero numeral beside heading contradicts the empty statement; unsupported numeral is not zero.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 300,
+          "y" : 30
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 145
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 421.49299999999999,
+          "y" : 270.19997811317444
+        },
+        {
+          "advance" : 5.00537109375,
+          "ascent" : 8.1474609375,
+          "descent" : 1.9072265625,
+          "fontSize" : 9,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "1",
+          "x" : 388,
+          "y" : 36
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "extras\/zero_extra_nearwhite_heading.rgba",
+      "group" : "zero_extra",
+      "height" : 340,
+      "name" : "zero_extra_nearwhite_heading",
+      "note" : "A tiny additional nonzero numeral is placed next to\/overlapping the label; visible rendering may be unsupported, never establish absence of count.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 300,
+          "y" : 30
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 145
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 421.49299999999999,
+          "y" : 270.19997811317444
+        },
+        {
+          "advance" : 3.89306640625,
+          "ascent" : 6.3369140625,
+          "descent" : 1.4833984375,
+          "fontSize" : 7,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "1",
+          "x" : 387,
+          "y" : 36
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "extras\/zero_extra_nearwhite_overlap_heading.rgba",
+      "group" : "zero_extra",
+      "height" : 340,
+      "name" : "zero_extra_nearwhite_overlap_heading",
+      "note" : "A tiny additional nonzero numeral is placed next to\/overlapping the label; visible rendering may be unsupported, never establish absence of count.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 300,
+          "y" : 30
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 145
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 421.49299999999999,
+          "y" : 270.19997811317444
+        },
+        {
+          "advance" : 3.89306640625,
+          "ascent" : 6.3369140625,
+          "descent" : 1.4833984375,
+          "fontSize" : 7,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "1",
+          "x" : 386,
+          "y" : 36
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "extras\/zero_extra_nearwhite_empty_edge.rgba",
+      "group" : "zero_extra",
+      "height" : 340,
+      "name" : "zero_extra_nearwhite_empty_edge",
+      "note" : "A tiny additional nonzero numeral is placed next to\/overlapping the label; visible rendering may be unsupported, never establish absence of count.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 300,
+          "y" : 30
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 145
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 421.49299999999999,
+          "y" : 270.19997811317444
+        },
+        {
+          "advance" : 3.3369140625,
+          "ascent" : 5.431640625,
+          "descent" : 1.271484375,
+          "fontSize" : 6,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "1",
+          "x" : 515,
+          "y" : 150
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "extras\/zero_extra_light_heading.rgba",
+      "group" : "zero_extra",
+      "height" : 340,
+      "name" : "zero_extra_light_heading",
+      "note" : "A tiny additional nonzero numeral is placed next to\/overlapping the label; visible rendering may be unsupported, never establish absence of count.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 300,
+          "y" : 30
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 145
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 421.49299999999999,
+          "y" : 270.19997811317444
+        },
+        {
+          "advance" : 3.89306640625,
+          "ascent" : 6.3369140625,
+          "descent" : 1.4833984375,
+          "fontSize" : 7,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "1",
+          "x" : 387,
+          "y" : 36
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "extras\/zero_extra_light_overlap_heading.rgba",
+      "group" : "zero_extra",
+      "height" : 340,
+      "name" : "zero_extra_light_overlap_heading",
+      "note" : "A tiny additional nonzero numeral is placed next to\/overlapping the label; visible rendering may be unsupported, never establish absence of count.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 300,
+          "y" : 30
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 145
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 421.49299999999999,
+          "y" : 270.19997811317444
+        },
+        {
+          "advance" : 3.89306640625,
+          "ascent" : 6.3369140625,
+          "descent" : 1.4833984375,
+          "fontSize" : 7,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "1",
+          "x" : 386,
+          "y" : 36
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "extras\/zero_extra_light_empty_edge.rgba",
+      "group" : "zero_extra",
+      "height" : 340,
+      "name" : "zero_extra_light_empty_edge",
+      "note" : "A tiny additional nonzero numeral is placed next to\/overlapping the label; visible rendering may be unsupported, never establish absence of count.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 300,
+          "y" : 30
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 145
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 421.49299999999999,
+          "y" : 270.19997811317444
+        },
+        {
+          "advance" : 3.3369140625,
+          "ascent" : 5.431640625,
+          "descent" : 1.271484375,
+          "fontSize" : 6,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "1",
+          "x" : 515,
+          "y" : 150
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "extras\/zero_extra_black_heading.rgba",
+      "group" : "zero_extra",
+      "height" : 340,
+      "name" : "zero_extra_black_heading",
+      "note" : "A tiny additional nonzero numeral is placed next to\/overlapping the label; visible rendering may be unsupported, never establish absence of count.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 300,
+          "y" : 30
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 145
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 421.49299999999999,
+          "y" : 270.19997811317444
+        },
+        {
+          "advance" : 3.89306640625,
+          "ascent" : 6.3369140625,
+          "descent" : 1.4833984375,
+          "fontSize" : 7,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "1",
+          "x" : 387,
+          "y" : 36
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "extras\/zero_extra_black_overlap_heading.rgba",
+      "group" : "zero_extra",
+      "height" : 340,
+      "name" : "zero_extra_black_overlap_heading",
+      "note" : "A tiny additional nonzero numeral is placed next to\/overlapping the label; visible rendering may be unsupported, never establish absence of count.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 300,
+          "y" : 30
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 145
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 421.49299999999999,
+          "y" : 270.19997811317444
+        },
+        {
+          "advance" : 3.89306640625,
+          "ascent" : 6.3369140625,
+          "descent" : 1.4833984375,
+          "fontSize" : 7,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "1",
+          "x" : 386,
+          "y" : 36
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "extras\/zero_extra_black_empty_edge.rgba",
+      "group" : "zero_extra",
+      "height" : 340,
+      "name" : "zero_extra_black_empty_edge",
+      "note" : "A tiny additional nonzero numeral is placed next to\/overlapping the label; visible rendering may be unsupported, never establish absence of count.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 300,
+          "y" : 30
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 145
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 421.49299999999999,
+          "y" : 270.19997811317444
+        },
+        {
+          "advance" : 3.3369140625,
+          "ascent" : 5.431640625,
+          "descent" : 1.271484375,
+          "fontSize" : 6,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "1",
+          "x" : 515,
+          "y" : 150
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "extras\/zero_no_boundary.rgba",
+      "group" : "zero_extra",
+      "height" : 340,
+      "name" : "zero_no_boundary",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 300,
+          "y" : 30
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 145
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 421.49299999999999,
+          "y" : 270.19997811317444
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "extras\/zero_faint_wrapped_two_249.rgba",
+      "group" : "zero_extra",
+      "height" : 340,
+      "name" : "zero_faint_wrapped_two_249",
+      "note" : "Nonzero wrapped numeral conflicts with empty-state text; very low contrast must not silently become zero.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 300,
+          "y" : 30
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 145
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 421.49299999999999,
+          "y" : 270.19997811317444
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 320,
+          "y" : 80
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "extras\/zero_faint_wrapped_two_245.rgba",
+      "group" : "zero_extra",
+      "height" : 340,
+      "name" : "zero_faint_wrapped_two_245",
+      "note" : "Nonzero wrapped numeral conflicts with empty-state text; very low contrast must not silently become zero.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 300,
+          "y" : 30
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 145
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 421.49299999999999,
+          "y" : 270.19997811317444
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 320,
+          "y" : 80
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "extras\/zero_faint_wrapped_two_240.rgba",
+      "group" : "zero_extra",
+      "height" : 340,
+      "name" : "zero_faint_wrapped_two_240",
+      "note" : "Nonzero wrapped numeral conflicts with empty-state text; very low contrast must not silently become zero.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 300,
+          "y" : 30
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 145
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 421.49299999999999,
+          "y" : 270.19997811317444
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 320,
+          "y" : 80
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "extras\/zero_separator.rgba",
+      "group" : "zero_extra",
+      "height" : 340,
+      "name" : "zero_separator",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 300,
+          "y" : 30
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 145
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 421.49299999999999,
+          "y" : 270.19997811317444
+        }
+      ],
+      "width" : 640
+    }
+  ]
+}

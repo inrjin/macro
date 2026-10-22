@@ -1,0 +1,305 @@
+{
+  "app_version": "0.5.7",
+  "source": "Local runtime events, read only; selected numeric metadata only. No URLs, images, challenge text or entered characters.",
+  "finding": "Later runs never recognized an initial CAPTCHA panel. No baseline existed; color change was observed but dismissal comparison was not armed.",
+  "limitation": "No pre-dismissal image of the other layout; exact panel recognition rejection is unknown.",
+  "runs": [
+    {
+      "run_id": 1,
+      "observation_count": 13,
+      "transitions": [
+        {
+          "local_time": "2026-10-21T04:43:33.630000+09:00",
+          "values": {
+            "gate_reason": "searching_for_panel",
+            "baseline_samples": 0,
+            "sample_count": 25,
+            "opaque_samples": 25,
+            "frame_opaque_basis_points": 10000,
+            "mean_rgb": [
+              255,
+              255,
+              255
+            ],
+            "status": "searching",
+            "panel_found": false
+          }
+        },
+        {
+          "local_time": "2026-10-21T04:43:39.263000+09:00",
+          "values": {
+            "gate_reason": "background_unchanged",
+            "baseline_samples": 25,
+            "sample_count": 25,
+            "opaque_samples": 25,
+            "frame_opaque_basis_points": 10000,
+            "mean_rgb": [
+              112,
+              112,
+              114
+            ],
+            "status": "visible",
+            "panel_found": true
+          }
+        },
+        {
+          "local_time": "2026-10-21T04:43:44.055000+09:00",
+          "values": {
+            "gate_reason": "background_changed",
+            "baseline_samples": 25,
+            "sample_count": 25,
+            "opaque_samples": 25,
+            "frame_opaque_basis_points": 10000,
+            "mean_rgb": [
+              236,
+              237,
+              243
+            ],
+            "status": "closing",
+            "panel_found": true
+          }
+        },
+        {
+          "local_time": "2026-10-21T04:43:44.180000+09:00",
+          "values": {
+            "gate_reason": "background_changed",
+            "baseline_samples": 25,
+            "sample_count": 25,
+            "opaque_samples": 25,
+            "frame_opaque_basis_points": 10000,
+            "mean_rgb": [
+              236,
+              237,
+              243
+            ],
+            "status": "dismissed",
+            "panel_found": true
+          }
+        }
+      ],
+      "dismissal_count": 1
+    },
+    {
+      "run_id": 2,
+      "observation_count": 12,
+      "transitions": [
+        {
+          "local_time": "2026-10-21T04:44:30.646000+09:00",
+          "values": {
+            "gate_reason": "searching_for_panel",
+            "baseline_samples": 0,
+            "sample_count": 25,
+            "opaque_samples": 25,
+            "frame_opaque_basis_points": 10000,
+            "mean_rgb": [
+              255,
+              255,
+              255
+            ],
+            "status": "searching",
+            "panel_found": false
+          }
+        },
+        {
+          "local_time": "2026-10-21T04:44:36.132000+09:00",
+          "values": {
+            "gate_reason": "background_unchanged",
+            "baseline_samples": 25,
+            "sample_count": 25,
+            "opaque_samples": 25,
+            "frame_opaque_basis_points": 10000,
+            "mean_rgb": [
+              112,
+              112,
+              114
+            ],
+            "status": "visible",
+            "panel_found": true
+          }
+        },
+        {
+          "local_time": "2026-10-21T04:44:40.182000+09:00",
+          "values": {
+            "gate_reason": "background_changed",
+            "baseline_samples": 25,
+            "sample_count": 25,
+            "opaque_samples": 25,
+            "frame_opaque_basis_points": 10000,
+            "mean_rgb": [
+              236,
+              237,
+              243
+            ],
+            "status": "closing",
+            "panel_found": true
+          }
+        },
+        {
+          "local_time": "2026-10-21T04:44:40.311000+09:00",
+          "values": {
+            "gate_reason": "background_changed",
+            "baseline_samples": 25,
+            "sample_count": 25,
+            "opaque_samples": 25,
+            "frame_opaque_basis_points": 10000,
+            "mean_rgb": [
+              236,
+              237,
+              243
+            ],
+            "status": "dismissed",
+            "panel_found": true
+          }
+        }
+      ],
+      "dismissal_count": 1
+    },
+    {
+      "run_id": 3,
+      "observation_count": 4,
+      "transitions": [
+        {
+          "local_time": "2026-10-21T05:06:08.425000+09:00",
+          "values": {
+            "gate_reason": "searching_for_panel",
+            "baseline_samples": 0,
+            "sample_count": 25,
+            "opaque_samples": 25,
+            "frame_opaque_basis_points": 10000,
+            "mean_rgb": [
+              255,
+              255,
+              255
+            ],
+            "status": "searching",
+            "panel_found": false
+          }
+        }
+      ],
+      "dismissal_count": 0
+    },
+    {
+      "run_id": 4,
+      "observation_count": 21,
+      "transitions": [
+        {
+          "local_time": "2026-10-21T05:07:10.039000+09:00",
+          "values": {
+            "gate_reason": "searching_for_panel",
+            "baseline_samples": 0,
+            "sample_count": 25,
+            "opaque_samples": 25,
+            "frame_opaque_basis_points": 10000,
+            "mean_rgb": [
+              255,
+              255,
+              255
+            ],
+            "status": "searching",
+            "panel_found": false
+          }
+        },
+        {
+          "local_time": "2026-10-21T05:07:22.290000+09:00",
+          "values": {
+            "gate_reason": "searching_for_panel",
+            "baseline_samples": 0,
+            "sample_count": 25,
+            "opaque_samples": 25,
+            "frame_opaque_basis_points": 10000,
+            "mean_rgb": [
+              137,
+              137,
+              137
+            ],
+            "status": "searching",
+            "panel_found": false
+          }
+        }
+      ],
+      "dismissal_count": 0
+    },
+    {
+      "run_id": 5,
+      "observation_count": 16,
+      "transitions": [
+        {
+          "local_time": "2026-10-21T05:09:15.947000+09:00",
+          "values": {
+            "gate_reason": "searching_for_panel",
+            "baseline_samples": 0,
+            "sample_count": 25,
+            "opaque_samples": 25,
+            "frame_opaque_basis_points": 10000,
+            "mean_rgb": [
+              255,
+              255,
+              255
+            ],
+            "status": "searching",
+            "panel_found": false
+          }
+        },
+        {
+          "local_time": "2026-10-21T05:09:27.087000+09:00",
+          "values": {
+            "gate_reason": "searching_for_panel",
+            "baseline_samples": 0,
+            "sample_count": 25,
+            "opaque_samples": 25,
+            "frame_opaque_basis_points": 10000,
+            "mean_rgb": [
+              137,
+              137,
+              137
+            ],
+            "status": "searching",
+            "panel_found": false
+          }
+        }
+      ],
+      "dismissal_count": 0
+    },
+    {
+      "run_id": 6,
+      "observation_count": 20,
+      "transitions": [
+        {
+          "local_time": "2026-10-21T05:11:20.758000+09:00",
+          "values": {
+            "gate_reason": "searching_for_panel",
+            "baseline_samples": 0,
+            "sample_count": 25,
+            "opaque_samples": 25,
+            "frame_opaque_basis_points": 10000,
+            "mean_rgb": [
+              255,
+              255,
+              255
+            ],
+            "status": "searching",
+            "panel_found": false
+          }
+        },
+        {
+          "local_time": "2026-10-21T05:11:30.934000+09:00",
+          "values": {
+            "gate_reason": "searching_for_panel",
+            "baseline_samples": 0,
+            "sample_count": 25,
+            "opaque_samples": 25,
+            "frame_opaque_basis_points": 10000,
+            "mean_rgb": [
+              137,
+              137,
+              137
+            ],
+            "status": "searching",
+            "panel_found": false
+          }
+        }
+      ],
+      "dismissal_count": 0
+    }
+  ]
+}

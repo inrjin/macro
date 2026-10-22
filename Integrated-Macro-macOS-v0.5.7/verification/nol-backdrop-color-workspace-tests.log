@@ -1,0 +1,247 @@
+   Compiling macro-core v0.5.6 (/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/crates/macro-core)
+   Compiling integrated-macro v0.5.6 (/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/src-tauri)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3.17s
+     Running unittests src/main.rs (target/debug/deps/integrated_macro-9e2111db844ef58a)
+
+running 40 tests
+test runtime::runtime_tests::idle_capture_metadata_advances_observation_without_inventing_pixels_or_sequence ... ok
+test clock::tests::deadline_uses_monotonic_sample_and_rejects_stale_clock ... ok
+test runtime::runtime_tests::capture_labels_reject_unknown_fields_before_arming ... ok
+test clock::tests::timezone_is_explicit_and_equivalent ... ok
+test runtime::runtime_tests::controls_invalidate_start_shortcut_before_the_worker_receives_them ... ok
+test runtime::runtime_tests::nol_gate_allows_unspecified_manual_entry_but_never_skips_a_scheduled_button ... ok
+test runtime::runtime_tests::direct_seat_setup_ignores_unused_entry_and_schedule_but_requires_seat_area ... ok
+test runtime::runtime_tests::color_capture_on_new_scale_invalidates_old_coordinates ... ok
+test runtime::runtime_tests::saved_refresh_button_spellings_work_only_for_opted_in_cancellation ... ok
+test runtime::runtime_tests::scheduled_entry_requires_an_actual_button_but_f2_keeps_original_navigation ... ok
+test runtime::runtime_tests::region_capture_updates_region_color_without_changing_seat_color ... ok
+test runtime::runtime_tests::start_shortcut_accepts_one_current_response_and_preserves_requested_mode ... ok
+test runtime::runtime_tests::region_capture_does_not_replace_arrow_key_navigation ... ok
+test runtime::runtime_tests::start_shortcut_expiry_is_final_and_reports_the_timed_out_mode_once ... ok
+test runtime::runtime_tests::stop_after_accepting_ui_response_invalidates_in_progress_start_epoch ... ok
+test runtime::runtime_tests::stored_entry_coordinates_do_not_enable_a_disabled_feature ... ok
+test runtime::runtime_tests::per_region_roi_capture_preserves_global_settings ... ok
+test runtime::seat_poll_tests::captcha_enter_rejects_old_runs_other_apps_and_known_other_windows ... ok
+test runtime::seat_poll_tests::cached_rescan_requires_idle_seat_observation_not_result_or_refresh ... ok
+test runtime::seat_poll_tests::continuous_routes_do_not_require_manual_entry_region_refresh_or_completion ... ok
+test runtime::runtime_tests::entry_button_capture_survives_save_and_geometry_change_clears_it ... ok
+test runtime::seat_poll_tests::f6_remains_available_after_context_loss_on_an_already_open_seat_map ... ok
+test runtime::seat_poll_tests::manual_failure_remains_available_during_context_hold_not_manual_pause ... ok
+test runtime::runtime_tests::unseen_map_can_be_calibrated_later_without_future_coordinates ... ok
+test runtime::seat_poll_tests::empty_static_map_is_polled_then_new_pixels_produce_one_click ... ok
+test runtime::seat_poll_tests::post_refresh_old_pixels_cannot_trigger_a_seat_but_polling_continues ... ok
+test shortcut_tests::f1_requests_current_normal_settings_and_does_not_dispatch_seats ... ok
+test runtime::seat_poll_tests::recovery_never_retries_unknown_delivery_or_identity_changes ... ok
+test shortcut_tests::f2_requests_current_cancellation_options_before_starting ... ok
+test runtime::seat_poll_tests::optimistic_conflict_uses_delivered_attempt_not_queued_next_seat ... ok
+test shortcut_tests::f5_requests_current_seat_settings_without_dispatching_browser_refresh ... ok
+test visual_recovery::tests::an_incident_cannot_replace_its_baseline_or_attribute_failure_to_another_seat ... ok
+test visual_recovery::tests::visual_failure_cancels_queued_completion_preserves_other_seat_and_fills_deficit ... ok
+test visual_recovery::tests::no_signal_without_a_delivered_attempt_and_normal_images_keep_watch_armed ... ok
+test visual_recovery::tests::geometry_errors_preserve_incident_and_do_not_fake_restoration ... ok
+test visual_recovery::tests::interrupted_unsent_escape_retries_after_resume_without_second_rollback_or_sent_escape ... ok
+test visual_recovery::tests::manual_reset_clears_incident_and_accepts_a_new_run_sequence ... ok
+test visual_recovery::tests::next_delivered_seat_replaces_armed_attempt_but_small_changes_do_not_end_watch ... ok
+test visual_recovery::tests::one_incident_emits_one_failure_and_only_a_new_restored_image_ends_it ... ok
+test storage::tests::profile_replacement_preserves_unknown_desktop_fields ... ok
+
+test result: ok. 40 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+
+     Running unittests src/lib.rs (target/debug/deps/macro_core-0204e5164fc31354)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/engine.rs (target/debug/deps/engine-09f639099ebaf81d)
+
+running 97 tests
+test calibration_cannot_change_color_while_click_outcome_is_pending ... ok
+test acknowledged_seat_cannot_be_rolled_back_as_undelivered ... ok
+test cancelled_captcha_entry_click_resumes_remaining_coordinates_without_replaying_delivered_ones ... ok
+test captcha_enter_does_not_restart_after_handing_off_manual_completion ... ok
+test acknowledged_initial_entry_is_not_repeated_after_pause_or_late_cancel ... ok
+test additions_default_off_and_old_coordinate_flow_needs_no_hidden_coordinates ... ok
+test captcha_completion_after_initial_entry_does_not_imply_ready_seat_screen ... ok
+test cancellation_internal_refresh_repeats_without_manual_phase_confirmation ... ok
+test cancellation_refresh_delivery_is_not_refresh_evidence_and_retry_has_its_own_interval ... ok
+test cancellation_retries_failed_seat_after_interval_preserving_other_attempt_without_refresh ... ok
+test captcha_enter_does_not_restart_paused_stopped_or_other_modes ... ok
+test captcha_enter_waits_for_sale_initial_entry_and_registered_sequence_without_replaying_them ... ok
+test captcha_option_preserves_original_entry_clicks_then_gates_region_and_empty_seat_search ... ok
+test captcha_requires_positive_completion_and_obeys_optional_auto_resume ... ok
+test clearing_scheduled_entry_before_delivery_does_not_fall_through_to_old_coordinates ... ok
+test completion_bound_while_paused_submits_once_on_resume ... ok
+test completion_target_can_be_discovered_after_booking_opens ... ok
+test duplicate_entry_observation_does_not_repeat_the_same_click ... ok
+test empty_live_frames_do_not_postpone_refresh_forever ... ok
+test completion_delivery_ends_every_mode_without_claiming_selected_seats_or_handling_late_errors ... ok
+test enhanced_cancellation_navigation_requires_confirmed_updates ... ok
+test empty_search_poll_never_retries_a_click_with_an_unknown_result ... ok
+test entry_target_cannot_change_while_delivery_is_ambiguous ... ok
+test entry_target_works_with_or_without_semantic_auto_entry_flag ... ok
+test empty_seat_map_keeps_polling_without_a_conflict_or_page_refresh ... ok
+test explicit_region_map_confirmation_handles_already_open_and_paused_seat_maps ... ok
+test explicit_region_map_confirmation_invalidates_queued_region_input_and_late_ack ... ok
+test failed_candidates_return_only_after_confirmed_new_refresh_generation ... ok
+test fresh_seat_observation_does_not_wait_for_the_periodic_poll ... ok
+test geometry_invalidation_discards_cancelled_and_queued_legacy_coordinates ... ok
+test geometry_invalidation_preserves_selected_seats_and_requires_new_candidates ... ok
+test geometry_invalidation_after_entry_clears_old_coordinates_without_replaying_them ... ok
+test independent_seats_action_correlated_results_reject_stale_retry_and_previous_run ... ok
+test independent_seats_does_not_refresh_retained_or_provisional_selections ... ok
+test geometry_invalidation_rejects_ambiguous_initial_delivery_without_mutation ... ok
+test independent_seats_late_conflict_cancels_queued_next_seat_without_counting_it ... ok
+test independent_seats_counts_delivered_clicks_without_selection_markers ... ok
+test independent_seats_mode_serialization_preserves_existing_mode_values ... ok
+test independent_seats_empty_maps_never_enter_legacy_region_navigation ... ok
+test independent_seats_never_counts_failed_or_cancelled_input_delivery ... ok
+test independent_seats_new_run_discards_prior_cancellation_navigation_and_late_ack ... ok
+test independent_seats_late_conflict_keeps_other_attempt_and_cancels_queued_completion ... ok
+test independent_seats_multiple_late_failures_share_one_escape_and_allow_cancelled_retry ... ok
+test independent_seats_optional_conflict_recovery_off_still_excludes_only_failed_attempt ... ok
+test independent_seats_resumes_after_calibration_without_reentering_booking_or_regions ... ok
+test independent_seats_returns_to_seats_after_positive_captcha_confirmation ... ok
+test independent_seats_repeat_start_and_resume_preserve_delivered_attempts ... ok
+test independent_seats_starts_directly_with_all_entry_and_region_features_enabled ... ok
+test input_ack_is_not_selection_evidence_in_recovery_mode ... ok
+test invalid_counts_and_schema_versions_are_rejected ... ok
+test late_conflict_at_selection_complete_reopens_only_missing_seat ... ok
+test legacy_auto_refresh_hint_does_not_refresh_normal_mode_or_advance_generation ... ok
+test legacy_click_sequence_stops_on_completion_delivery_without_confirming_attempts ... ok
+test manually_closed_known_conflict_can_continue_after_undelivered_escape ... ok
+test new_single_region_priority_does_not_alternate_original_f2_regions ... ok
+test nol_captcha_handoff_recheck_cancels_region_without_replaying_entry ... ok
+test nol_captcha_gate_preserves_sale_and_registered_entry_then_starts_continuous_region_search ... ok
+test nol_captcha_handoff_recheck_cancels_seat_without_counting_stale_ack ... ok
+test nol_captcha_signal_cannot_resume_paused_or_stopped_runs ... ok
+test nol_captcha_feature_defaults_off_for_existing_profiles ... ok
+test normal_and_single_region_cancellation_ignore_legacy_region_overrides ... ok
+test nol_captcha_without_registered_entry_waits_then_searches_seats_once ... ok
+test original_f2_ignores_the_normal_booking_entry_target ... ok
+test original_f2_uses_each_regions_color_roi_and_completion_target ... ok
+test nol_captcha_option_does_not_change_seats_or_cancellation_modes ... ok
+test original_cancellation_blank_maps_keep_alternating_without_manual_confirmation ... ok
+test original_optional_date_session_next_sequence_and_delays_remain ... ok
+test original_timed_region_wait_does_not_request_manual_confirmation ... ok
+test nol_captcha_signal_is_ignored_when_option_is_off ... ok
+test pause_drops_stale_candidate_frame_and_resume_waits_for_current_click_result ... ok
+test partial_failure_retains_one_and_fills_exactly_one_shortfall ... ok
+test pausing_before_sale_keeps_entry_pending_until_resume ... ok
+test paused_calibration_preserves_partial_selection_and_rejected_candidates ... ok
+test periodic_poll_preserves_partial_selection_and_rejected_candidates ... ok
+test proven_undelivered_initial_entry_retries_once_after_pause ... ok
+test periodic_search_preserves_confirmed_and_attempted_seats_without_refreshing_them ... ok
+test proven_undelivered_seat_cancellation_allows_fresh_retry_after_pause ... ok
+test region_click_waits_for_identified_seat_map_before_any_seat_click ... ok
+test refresh_button_requires_cancellation_mode_explicit_option_and_point_target ... ok
+test region_settings_validate_limits_and_can_change_during_pause ... ok
+test repeated_empty_polls_do_not_hide_an_input_delivery_timeout ... ok
+test scheduled_entry_clicks_at_deadline_once_then_waits_for_confirmed_seat_map ... ok
+test selection_reconciliation_handles_server_clearing_all_seats ... ok
+test repeated_captcha_enter_discards_old_attempts_conflicts_and_queued_completion ... ok
+test single_zone_cancellation_without_common_completion_hands_off_after_seat_attempt ... ok
+test stopping_independent_seats_preserves_normal_scheduled_entry_behavior ... ok
+test single_zone_cancellation_ignores_normal_entry_flags_and_keeps_scanning_without_refresh ... ok
+test unacknowledged_input_faults_without_retrying_the_click ... ok
+test timed_multi_stage_entry_uses_enabled_controls_and_exact_date_session ... ok
+test undelivered_completion_can_resume_without_losing_selected_seat ... ok
+test undelivered_entry_can_be_recalibrated_before_retry ... ok
+test undelivered_f2_navigation_restores_zone_and_does_not_scan_before_retry ... ok
+test unexpected_ack_and_late_selection_events_do_not_affect_new_runs ... ok
+test undelivered_legacy_date_is_requeued_instead_of_skipped ... ok
+test updating_or_clearing_entry_after_delivery_never_reclicks_or_skips_manual_wait ... ok
+test region_map_confirmation_does_not_advance_unrelated_or_paused_phases ... ok
+test visible_entry_target_validation_rejects_invalid_coordinates ... ok
+
+test result: ok. 97 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/nol_captcha.rs (target/debug/deps/nol_captcha-dfceaf2c0f47b9d7)
+
+running 24 tests
+test modal_moving_or_growing_after_an_error_is_still_visible ... ok
+test input_changes_and_an_enlarged_clipped_panel_do_not_replace_patch_reference ... ok
+test missing_title_with_unchanged_surround_or_small_color_noise_cannot_complete ... ok
+test colored_dark_and_bright_opaque_patch_references_are_all_recorded_once ... ok
+test initially_closed_screen_never_reports_a_dismissal ... ok
+test nineteen_changed_points_wait_and_twenty_changed_points_start_stability ... ok
+test dismissal_requires_new_pixels_and_a_successful_stable_native_poll_interval ... ok
+test overlapping_patch_waits_without_arming_a_reference ... ok
+test brighter_darker_and_equal_luminance_color_changes_use_the_same_close_and_recheck_rule ... ok
+test patch_policy_checks_background_color_without_requiring_heading_removal ... ok
+test opaque_white_and_black_replacements_remain_indistinguishable_by_this_local_patch_policy ... ok
+test neither_small_negative_noise_nor_pixels_with_the_original_sequence_can_close ... ok
+test stored_baseline_does_not_drift_while_typing_and_difference_must_be_at_least_45 ... ok
+test fixed_heading_arms_at_multiple_scales_and_positions ... ok
+test plain_rectangle_and_unrelated_title_never_arm ... ok
+test interruption_retracts_pending_or_undelivered_dismissal_but_keeps_presence ... ok
+test typing_wrong_answer_challenge_change_and_button_color_are_ignored ... ok
+test returning_panel_cancels_pending_close_and_restarts_stability ... ok
+test stale_capture_during_closing_breaks_the_stability_interval ... ok
+test resize_invalid_capture_and_reset_discard_old_presence ... ok
+test visual_dismissal_drives_the_engine_once_then_empty_seat_search_continues ... ok
+test transparent_frames_cannot_arm_or_complete_and_break_the_stability_interval ... ok
+test stale_sequences_timestamps_or_repeated_poll_time_cannot_complete ... ok
+test first_click_recheck_has_no_extra_delay_but_revokes_an_unchanged_or_transparent_frame ... ok
+
+test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.38s
+
+     Running tests/vision_clock.rs (target/debug/deps/vision_clock-ba70d1daa83980a5)
+
+running 14 tests
+test capture_pixels_map_to_bound_content_with_os_scale ... ok
+test extraction_diagnostics_distinguish_color_mismatch_from_component_size_rejection ... ok
+test borrowed_padded_native_capture_matches_packed_capture_without_copying ... ok
+test extraction_diagnostics_count_only_visible_matching_pixels_in_effective_roi ... ok
+test central_region_always_beats_a_closer_side_region ... ok
+test concave_component_click_is_on_color_not_empty_centroid ... ok
+test http_date_second_precision_is_explicit_not_millisecond_accuracy ... ok
+test inconsistent_server_samples_expand_uncertainty ... ok
+test excludes_legend_and_outside_roi_before_extracting_components ... ok
+test invalid_clock_samples_and_corrupt_pixel_buffers_are_rejected ... ok
+test extraction_diagnostics_recognize_separate_small_round_seat_components ... ok
+test monotonic_sale_deadline_is_armed_once_without_wall_clock_polling ... ok
+test three_fastest_samples_exclude_one_slow_outlier ... ok
+test top_first_seat_priority_is_distinct_from_stage_region_priority ... ok
+
+test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/visual_dialog.rs (target/debug/deps/visual_dialog-7f93e32d5474defd)
+
+running 7 tests
+test thresholds_use_region_relative_fraction_and_material_delta ... ok
+test center_popup_change_alone_triggers_without_surrounding_darkening ... ok
+test stale_sequence_changed_geometry_invalid_config_and_corrupt_images_are_rejected ... ok
+test sampling_stays_bounded_and_ignores_native_row_padding ... ok
+test minor_seat_colors_and_large_bright_outer_changes_do_not_trigger ... ok
+test surrounding_darkening_alone_triggers_and_both_signals_are_optional ... ok
+test no_longer_large_is_not_equivalent_to_baseline_restoration ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/macro_platform-9f7328191e64a5a1)
+
+running 8 tests
+test tests::enter_signals_require_current_token_and_recent_monotonic_time ... ok
+test tests::retina_frame_uses_actual_scale_and_stride ... ok
+test tests::native_error_keeps_its_code_when_runtime_converts_it_to_text ... ok
+test tests::invalid_frame_coordinates_never_read_another_row ... ok
+test macos::tests::focused_window_error_keeps_actionable_native_code ... ok
+test tests::negative_monitor_origin_is_preserved_and_outside_points_rejected ... ok
+test macos::tests::window_title_pipe_is_not_mistaken_for_native_error ... ok
+test tests::enter_diagnostic_json_supports_callback_and_expired_queue_metadata_without_text ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests macro_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests macro_platform
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

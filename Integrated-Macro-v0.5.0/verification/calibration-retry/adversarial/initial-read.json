@@ -1,0 +1,11 @@
+{
+  "recordedAt": "2026-10-22T01:10:01.682551+00:00",
+  "scope": "Read-only source/caller review. Original user settings, logs, previous releases and earlier audit reports are not modified. Implementation may have started; authoritative baseline is ../source-baseline.json.",
+  "files": {
+    "src-tauri/src/runtime.rs": "51afdc3d48876205a9b91e3e837a20167f9d05ac6cbbc68aa57cdc70169ee633",
+    "crates/macro-core/src/engine.rs": "43fb91575b907f8816bc07f4ec6080d75072b6026bbbe95c4377f55e65422013",
+    "crates/macro-core/src/seat_selection.rs": "37118aff1832c00db7188fc81766fc5f957ee95f80cbb52d0c2a3c0f5e2c2ac9",
+    "ui/app.js": "baea51b1dbd2c172c65bde970d2e3eff42640e53d75ee62ab44d8bd6b7f60486",
+    "ui/model.js": "2351e89ce198302b34f13358c980734b26747dd43594a16b2f442480ee8d101e"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "implementation": {
+    "manifest": "implementation/source-final.json",
+    "files": 6,
+    "mismatches": []
+  },
+  "independent": {
+    "manifest": "independent/source-reviewed.json",
+    "files": 12,
+    "mismatches": []
+  },
+  "adversarial": {
+    "manifest": "adversarial/source-final.json",
+    "files": 14,
+    "mismatches": []
+  }
+}

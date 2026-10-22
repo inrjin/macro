@@ -1,0 +1,33 @@
+{
+  "baselineVersion": "0.5.11 released source",
+  "baselineFiles": 138,
+  "finalFiles": 139,
+  "changed": [
+    "README.md",
+    "crates/macro-core/src/engine.rs",
+    "src-tauri/src/reentrant_runtime_tests.rs",
+    "src-tauri/src/runtime.rs"
+  ],
+  "added": [
+    "src-tauri/src/calibration_restart_review.rs"
+  ],
+  "removed": [],
+  "finalSourceUnchangedDuringChecks": true,
+  "reviewSources": {
+    "implementation/source-final.json": {
+      "sha256": "8b0f503f8a5d7d2b59852a7dd2faa315e935e3ad62714fbdabb747cff2bb2a0c",
+      "files": 11,
+      "finalSourceMatches": true
+    },
+    "independent/source-reviewed.json": {
+      "sha256": "4bec1bfd3e79c49e70001005cb2b866e672ebd759c388cb16e0e499cf2cb5f1a",
+      "files": 8,
+      "finalSourceMatches": true
+    },
+    "adversarial/source-reviewed.json": {
+      "sha256": "5c31176a1c17d768ad730a21facc007f60e9ea493ff53f7504f60d651a1a5330",
+      "files": 13,
+      "finalSourceMatches": true
+    }
+  }
+}

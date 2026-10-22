@@ -1,0 +1,45 @@
+{
+  "tests": 5,
+  "passed": 5,
+  "productionSourcesUnchanged": true,
+  "sourceSha256": {
+    "crates/macro-core/src/vision.rs": "51f79259d9c89481c44a831d2a1095584bdb33f40ba5961a783cb68c98f3ec1d",
+    "crates/macro-core/src/engine.rs": "16150aa81efbcab50b8c55dcdf65836845efad8fa6ff41e131b66f16bcfda7a0",
+    "crates/macro-core/src/model.rs": "eab5347942a383af416f837bb02681a541259fba2e429c6f338518956e92fa49",
+    "crates/macro-platform/src/lib.rs": "fad64b68fd3ab41d8f8c06a6b1634f5012b74b59491b81bcaf9e59ebee63e4e0",
+    "src-tauri/src/runtime.rs": "46aeb00d10e3603b03b15f0f8a74e0a46246dc1652a9f7ef9aea3dce67eaf42c"
+  },
+  "actualComponents": [
+    "macro_core::vision::extract_candidates_view",
+    "macro_platform::OwnedFrame::pixel_to_local",
+    "macro_platform::OwnedFrame::color_at",
+    "macro_core::vision::color_matches"
+  ],
+  "runtimeWorkerExecuted": false,
+  "nativeAdapterConstructed": false,
+  "realScreenshotAvailable": false,
+  "nativeInputSent": false,
+  "fixtureParameters": {
+    "rgb": [
+      185,
+      224,
+      180
+    ],
+    "tolerance": 12,
+    "scale": 2,
+    "minimumComponentPixels": 3,
+    "syntheticFrame": [
+      200,
+      1150
+    ]
+  },
+  "matchedLogGeometry": {
+    "candidateId": "pixel:122:919",
+    "point": [
+      122,
+      920
+    ],
+    "syntheticShape": "one column of three matching pixels",
+    "actualShapeClaimed": false
+  }
+}

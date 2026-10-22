@@ -1,0 +1,6 @@
+{
+  "status": "superseded-checkpoint-not-for-distribution",
+  "reason": "Review found Stop -> F9 discards unresolved known-dialog provenance. Final correction, review and a new full build gate are required.",
+  "sourceManifest": "source-before-build.json",
+  "packagedAppNotApprovedForDistribution": true
+}

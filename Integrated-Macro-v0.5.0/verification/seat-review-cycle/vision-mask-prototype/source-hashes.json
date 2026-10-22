@@ -1,0 +1,13 @@
+{
+  "core/Cargo.toml": "59b81024edb0a2470e21a778f803859dd9fdcbe5a5f8ef37d5cf1cf1c9b6faef",
+  "core/src/assets/README.md": "ea676a5043c279ef5f0b75ec358b93d3dfb2b29b2490c84cc026cd658fbca8e6",
+  "core/src/assets/nol-captcha-title.mask": "b0ccceb2292514757984166464fe8c328cef130de470597965c5828f49fbe53a",
+  "core/src/clock.rs": "ee16850ea2a5eae244dfd4ccba96ea211b8daa453043559ab0539bc793474d7c",
+  "core/src/engine.rs": "f9edcd0da55a92a86b188186252053c00f976fd2a370afff11bca801cdef86df",
+  "core/src/lib.rs": "0190eb0503c667d6285f4b0e85e0d709825d042a9ae86397e9a5307c611f1baf",
+  "core/src/model.rs": "494f95cfa11ee8626b2416cd529686299418331c0d2ee6e3c89c8a485cd7c9eb",
+  "core/src/nol_captcha.rs": "af0a56333c4d0787e7aa4cefe1e10674fffe1178450a617880291f46db30b27a",
+  "core/src/seat_selection.rs": "47c2e7634e6a415dc45710afaa3e55a01d5d1280c5f3bf72a1ea773c7072c4bf",
+  "core/src/vision.rs": "a361f1fb21f1643021b7818ae2a51d78d09a78114e6db8cdc57e9eaf710e9979",
+  "core/src/visual_dialog.rs": "f81ed79014d3c77e38fc3fc93434f5aaa1ad26f5f12db270a9a0d2a6513be2a1"
+}

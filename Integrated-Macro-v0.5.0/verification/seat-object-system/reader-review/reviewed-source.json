@@ -1,0 +1,19 @@
+{
+  "scope": "Final independent review snapshot matched to final Rust367/0/2 and JavaScript150/0 executions; all current files equal the corresponding test manifest hashes.",
+  "sha256": {
+    "crates/macro-core/src/model.rs": "b597ce7ba48a3c87697ecdd8ceab235a484e170853da25fe6df14b54a08a74e5",
+    "crates/macro-core/src/engine.rs": "820884a1547abc9ab6c35e5db743e3e80482d3e69caf9a82afd99b68306c8cb6",
+    "crates/macro-core/src/selection_count.rs": "8c7e0a9b0cec2eb025c75e1283bf626daec1e265c824cc9be714c3410623e626",
+    "crates/macro-core/src/selection_count_layout.rs": "c22545cd11afda2c69a4a2b1beaee1b56c1bc80ba2eb690cfc49998e8108065c",
+    "crates/macro-core/src/selection_count_assets/templates.json": "1bbd1c695ff42ab060bd88a05e5a493cf0cede8dd332f3fc1559f0d4a62d87f7",
+    "crates/macro-core/tests/selection_count_reader_review.rs": "ddcd9edacc9358b2338a56f81a655aaf572b48c788228c747b783a6a75df63f5",
+    "src-tauri/src/runtime.rs": "9ecf8161836b668a3bf41717f64629552bc30415a60b53c3b3c56d2ee0650f1b",
+    "src-tauri/src/selection_count_runtime_tests.rs": "5010b5ac51cd58859f42796a352c25f46734296771b11828586743f317c4f483",
+    "ui/app.js": "6967ab904094f0133d88f94ba5cd50287a8534fafabde7ddb24a97364ca63d0c",
+    "ui/model.js": "98bff5a33a1fadfce953f76437be938f07978dbfbe6f1ca1475e0bd0be4312e3",
+    "ui/overlay.js": "23fefb02bb9e7a2e8e5e6e0d49693a3625123948460936982a24c4554e112aaa",
+    "ui/index.html": "39e349c070f39de9efee006eb7d484f0e8d7620dda9d3e080aff908c999f08e3",
+    "ui/tests/run-seat-evidence-dom.mjs": "fd50d35dc3816ba2396176a1e374baad4d6ad27a4baac04b868ff0962caa9e08",
+    "ui/tests/seat-evidence.test.js": "b23f1d877bea2e41b6cddc6767c80a04a27f248e28a4a6d122986dfca22075a7"
+  }
+}

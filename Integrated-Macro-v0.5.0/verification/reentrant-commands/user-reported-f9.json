@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-22",
+  "report": "캡챠가 끝나고 F9를 눌렀으나 거절됨",
+  "message": "캡챠 이후 진행(F9): 일반 예매의 캡챠 대기 중에만 사용할 수 있습니다.",
+  "runtimePhase": "unknown; no live log provided",
+  "distribution": "current user build not inspected; new code has not been distributed",
+  "reproductionScope": [
+    "old phase/mode restriction in manual_captcha_resume_required",
+    "post-CAPTCHA Region/Seats/Conflict/Completing/Completed retry",
+    "F2/F5 to F9 transition"
+  ],
+  "liveVerified": false
+}

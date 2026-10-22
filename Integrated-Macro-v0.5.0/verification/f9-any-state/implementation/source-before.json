@@ -1,0 +1,7 @@
+{
+  "crates/macro-core/src/model.rs": "c2b8a8fe64a29eb01150fcbf874617a76b0d03065efd467d50743d962cfdf07a",
+  "crates/macro-core/src/engine.rs": "12d0c25ff1c45653c510c6ddfc51362d59137a13c7ea3ca4bf8a95c28901a41b",
+  "crates/macro-core/tests/engine.rs": "958652d3173062e2f6c23f8f3f37cbfab4795d127708955191b7e52fbd1a7897",
+  "src-tauri/src/runtime.rs": "72a2671ece056caf1b9b8289db5b967336db2a493377dd851457ec2d118fbdd1",
+  "src-tauri/src/reentrant_runtime_tests.rs": "ac6f8a8b65a77099781196033c115c1d2e0f40d46de4dc940f66083b8d610d00"
+}

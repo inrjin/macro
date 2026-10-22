@@ -1,0 +1,90 @@
+{
+  "scope": "Actual UI listeners; stubbed IPC; no native input",
+  "cases": 12,
+  "rows": [
+    {
+      "mode": "normal",
+      "trigger": "button",
+      "visibleChoice": "2석",
+      "sentTargetSeats": 2,
+      "selectionPolicy": "No adjacency setting is present in the emitted default-profile contract"
+    },
+    {
+      "mode": "normal",
+      "trigger": "button",
+      "visibleChoice": "3석",
+      "sentTargetSeats": 3,
+      "selectionPolicy": "No adjacency setting is present in the emitted default-profile contract"
+    },
+    {
+      "mode": "normal",
+      "trigger": "shortcut",
+      "visibleChoice": "2석",
+      "sentTargetSeats": 2,
+      "selectionPolicy": "No adjacency setting is present in the emitted default-profile contract"
+    },
+    {
+      "mode": "normal",
+      "trigger": "shortcut",
+      "visibleChoice": "3석",
+      "sentTargetSeats": 3,
+      "selectionPolicy": "No adjacency setting is present in the emitted default-profile contract"
+    },
+    {
+      "mode": "cancellation",
+      "trigger": "button",
+      "visibleChoice": "2석",
+      "sentTargetSeats": 2,
+      "selectionPolicy": "No adjacency setting is present in the emitted default-profile contract"
+    },
+    {
+      "mode": "cancellation",
+      "trigger": "button",
+      "visibleChoice": "3석",
+      "sentTargetSeats": 3,
+      "selectionPolicy": "No adjacency setting is present in the emitted default-profile contract"
+    },
+    {
+      "mode": "cancellation",
+      "trigger": "shortcut",
+      "visibleChoice": "2석",
+      "sentTargetSeats": 2,
+      "selectionPolicy": "No adjacency setting is present in the emitted default-profile contract"
+    },
+    {
+      "mode": "cancellation",
+      "trigger": "shortcut",
+      "visibleChoice": "3석",
+      "sentTargetSeats": 3,
+      "selectionPolicy": "No adjacency setting is present in the emitted default-profile contract"
+    },
+    {
+      "mode": "seats",
+      "trigger": "button",
+      "visibleChoice": "2석",
+      "sentTargetSeats": 2,
+      "selectionPolicy": "No adjacency setting is present in the emitted default-profile contract"
+    },
+    {
+      "mode": "seats",
+      "trigger": "button",
+      "visibleChoice": "3석",
+      "sentTargetSeats": 3,
+      "selectionPolicy": "No adjacency setting is present in the emitted default-profile contract"
+    },
+    {
+      "mode": "seats",
+      "trigger": "shortcut",
+      "visibleChoice": "2석",
+      "sentTargetSeats": 2,
+      "selectionPolicy": "No adjacency setting is present in the emitted default-profile contract"
+    },
+    {
+      "mode": "seats",
+      "trigger": "shortcut",
+      "visibleChoice": "3석",
+      "sentTargetSeats": 3,
+      "selectionPolicy": "No adjacency setting is present in the emitted default-profile contract"
+    }
+  ]
+}

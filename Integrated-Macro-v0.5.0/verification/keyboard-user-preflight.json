@@ -1,0 +1,18 @@
+{
+  "recordedAt": "2026-10-21T01:10:27.269921+00:00",
+  "source": "user-pasted standalone Terminal probe output",
+  "kind": "preflight_not_started",
+  "environment": {
+    "accessibilityTrusted": false,
+    "listenEventAccess": false,
+    "postEventAccess": false,
+    "secureEventInput": false,
+    "nowNs": 1259836527817958,
+    "pid": 72923
+  },
+  "reason": "accessibility_not_trusted_no_permission_requested",
+  "physicalKeyDeliveryTested": false,
+  "appliesToMacroAppPermissions": false,
+  "followup": "User declines Terminal permission changes because the CLI session would reset. Continue with in-app diagnostic, without changing Terminal permissions.",
+  "probeSHA256": "4d9bb4b24c76ab930182ac436e5747093036194c39b95778d0bdc1c0759f3208"
+}

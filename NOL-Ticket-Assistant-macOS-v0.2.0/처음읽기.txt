@@ -1,0 +1,6 @@
+Mac 전용 배포본 · NOL Ticket Assistant 0.2.0
+
+NOL Ticket Assistant.app을 응용 프로그램 등 계속 사용할 위치로 옮긴 뒤 실행하세요.
+앱 → 연결 · 기록 → 확장 프로그램 폴더 열기 → Chrome/Edge에서 확장 로드 → 확장 ID를 앱에 등록.
+자세한 절차는 README.md / Mac-설치안내.md를 확인하세요.
+먼저 연습 프로필로 오프라인 연습하세요. 실제 NOL 좌석 프로필과 10ms 확보는 보장되지 않습니다.

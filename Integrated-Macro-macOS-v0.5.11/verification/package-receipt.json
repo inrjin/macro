@@ -1,0 +1,46 @@
+{
+  "version": "0.5.11",
+  "recordedAt": "2026-10-21T15:43:50.630307+00:00",
+  "architecture": "arm64",
+  "minimumMacOS": "13.0",
+  "appIdentifier": "dev.integrated-macro.desktop",
+  "buildApp": "/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/target/release/bundle/macos/Integrated Macro.app",
+  "distributionApp": "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.11/Integrated Macro.app",
+  "buildAppFiles": {
+    "Contents/Info.plist": {
+      "type": "file",
+      "sha256": "56ebf564ad3e3792dcca445eead26633b1e3b8a477145d1d1d64d843005a0d02",
+      "mode": "0o644",
+      "bytes": 1138
+    },
+    "Contents/MacOS/integrated-macro": {
+      "type": "file",
+      "sha256": "41c02ab87a70e12613de5386363087ea23f030b81723b87010d894fc240ada93",
+      "mode": "0o755",
+      "bytes": 13258416
+    },
+    "Contents/Resources/icon.icns": {
+      "type": "file",
+      "sha256": "be80f1eb77b66015d3119b9d8483fae0c3684f3169793b93a5372d505b827a7c",
+      "mode": "0o644",
+      "bytes": 586867
+    },
+    "Contents/_CodeSignature/CodeResources": {
+      "type": "file",
+      "sha256": "8b2a4458d8753f7d50800825612316fdb422f2d68b7ce3f7a1728de045d089ac",
+      "mode": "0o644",
+      "bytes": 2440
+    }
+  },
+  "appMatchesBuild": true,
+  "sourceManifestSHA256": "65f9ab47828be205c5f7cee7c255af364e3e5872007861cc53034c75e9ad9258",
+  "checkReportSHA256": "9c79612835cf18ddf4dc58a36bdcf8a668343d154727d9040f6edeb218789f79",
+  "sourceCount": 138,
+  "unverified": [
+    "Actual macOS input/capture/overlay",
+    "Actual Windows input/capture/overlay",
+    "Authenticated NOL booking flow",
+    "Browser transport and site contracts",
+    "End-to-end latency"
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "count": 32,
+  "bothRejected": [
+    "contradiction_neo_23_25",
+    "contradiction_neo_23_50",
+    "contradiction_neo_26_50",
+    "contradiction_neo_26_75",
+    "contradiction_neo_32_0",
+    "contradiction_neo_32_25",
+    "contradiction_neo_32_50",
+    "contradiction_neo_32_75"
+  ],
+  "existingFalseConfirmations": [
+    "contradiction_neo_20_0",
+    "contradiction_neo_20_25",
+    "contradiction_neo_20_50",
+    "contradiction_neo_20_75",
+    "contradiction_neo_23_0",
+    "contradiction_neo_23_75",
+    "contradiction_neo_26_0",
+    "contradiction_neo_26_25",
+    "contradiction_gothic_20_0",
+    "contradiction_gothic_20_25",
+    "contradiction_gothic_20_50",
+    "contradiction_gothic_20_75",
+    "contradiction_gothic_23_0",
+    "contradiction_gothic_23_25",
+    "contradiction_gothic_23_50",
+    "contradiction_gothic_23_75",
+    "contradiction_gothic_26_0",
+    "contradiction_gothic_26_25",
+    "contradiction_gothic_26_50",
+    "contradiction_gothic_26_75",
+    "contradiction_gothic_32_0",
+    "contradiction_gothic_32_25",
+    "contradiction_gothic_32_50",
+    "contradiction_gothic_32_75"
+  ],
+  "newFalseConfirmations": [],
+  "resolved": [],
+  "current-radiusTiming": [
+    {
+      "scenario": "blank",
+      "microseconds": [
+        54368,
+        28305,
+        24644
+      ],
+      "medianUs": 28305,
+      "counts": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "scenario": "many_components",
+      "microseconds": [
+        159801,
+        168809,
+        158201
+      ],
+      "medianUs": 159801,
+      "counts": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "scenario": "count3_with_map",
+      "microseconds": [
+        301620,
+        295581,
+        287976
+      ],
+      "medianUs": 295581,
+      "counts": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "scenario": "zero_panel_with_map",
+      "microseconds": [
+        300984,
+        311171,
+        305156
+      ],
+      "medianUs": 305156,
+      "counts": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "heading-onlyTiming": [
+    {
+      "scenario": "blank",
+      "microseconds": [
+        26038,
+        23177,
+        23003
+      ],
+      "medianUs": 23177,
+      "counts": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "scenario": "many_components",
+      "microseconds": [
+        154958,
+        155327,
+        153639
+      ],
+      "medianUs": 154958,
+      "counts": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "scenario": "count3_with_map",
+      "microseconds": [
+        240362,
+        233602,
+        259687
+      ],
+      "medianUs": 240362,
+      "counts": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "scenario": "zero_panel_with_map",
+      "microseconds": [
+        256357,
+        249668,
+        249545
+      ],
+      "medianUs": 249668,
+      "counts": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

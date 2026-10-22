@@ -1,0 +1,18 @@
+{
+  "recordedAt": "2026-10-21T15:02:37.343351+00:00",
+  "stage": "Independent initial source observation; implementation may subsequently change",
+  "sha256": {
+    "crates/macro-core/src/engine.rs": "d893b89bd3f221bade56108df22f1a02eff5e3bfa963e46bc19d38e67367a0bf",
+    "crates/macro-core/src/model.rs": "3869b494fa627ecff5a202c26b21d8c4aa1cc99f32c18b2e5ed349d037b284e0",
+    "src-tauri/src/runtime.rs": "c59fe1d370a2210cdfdc337c6a8ffde6cc83eecc588707194ea63f202c2b3ff4",
+    "src-tauri/src/main.rs": "5e0a5b19272003d6b2a880c6b8062210f93c05d1004aca1bd13f7110019a3b44",
+    "ui/app.js": "6967ab904094f0133d88f94ba5cd50287a8534fafabde7ddb24a97364ca63d0c",
+    "ui/model.js": "96b92eb157fae250a3db4c47f07b35e23916fe982ae2ced01e23039f063e301f"
+  },
+  "observations": [
+    "Engine::Start rejects active phases; Worker Prepare/UI Start/start_guarded also require editable state.",
+    "F9 currently requires Normal/Captcha after entry completion, no broad retry in Seats/Region.",
+    "Current begin_post_captcha_search clears attempted/selected/delivered/marks, so widening F9 without a separate retained-history contract would permit a selected-seat alias to be clicked again.",
+    "Engine::new resets action IDs; preserving old delivered_attempts requires avoiding ID collision in new run."
+  ]
+}

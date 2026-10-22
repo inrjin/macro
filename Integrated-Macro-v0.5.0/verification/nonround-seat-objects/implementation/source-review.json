@@ -1,0 +1,8 @@
+{
+  "crates/macro-core/src/model.rs": "53e07d9055e1145cf045783fdcd7725cc83da5ed0976721658359edde6892d73",
+  "crates/macro-core/src/seat_objects.rs": "95d696aa1deab1987491352cbfcfc4cbc2f508f6b71ec1ff32f26f645f19982d",
+  "crates/macro-core/src/seat_object_shapes.rs": "ffbe19f82bcb263df7ebe3dbba35a278dd42b9b52f05a7dfe8ac15be6a9e1f50",
+  "crates/macro-core/src/vision.rs": "c450800972d96adcefe6677376a1c1632c7ad5fd4c376fffe74202bf4348fd08",
+  "crates/macro-core/tests/seat_selection.rs": "7ae56ed0a0c477e95e9c4468565b57ab316d380a70595e5542d647acc0180b28",
+  "crates/macro-core/tests/seat_object_shape_evidence.rs": "853df0c5a1cbb60b8b139f76b5176e5617bdefeb2f8abfbd6f543ca5039a32f7"
+}

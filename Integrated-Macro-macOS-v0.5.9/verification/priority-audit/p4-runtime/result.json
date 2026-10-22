@@ -1,0 +1,12 @@
+{
+  "tests": 4,
+  "passed": 4,
+  "sourceSha256": "1c243eac12eb809fe5837f16b94bccea509fb1571002371608f8782e92ba2d05",
+  "productionBehaviorChanged": false,
+  "osInputSent": false,
+  "clock": "simulated engine milliseconds",
+  "intervalMs": 1000,
+  "noResponseRefreshCount": 10,
+  "noResponseScans": 11,
+  "refreshGeneration": 0
+}

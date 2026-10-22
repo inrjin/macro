@@ -1,0 +1,7 @@
+
+running 2 tests
+test strict_new_pixel_fence_alone_deadlocks_a_valid_static_original_map ... ok
+test legacy_timed_navigation_reuses_a_pre_input_frame_as_next_zone ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

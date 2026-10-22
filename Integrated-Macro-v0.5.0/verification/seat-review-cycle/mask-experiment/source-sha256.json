@@ -1,0 +1,12 @@
+{
+  "crates/macro-core/src/model.rs": "494f95cfa11ee8626b2416cd529686299418331c0d2ee6e3c89c8a485cd7c9eb",
+  "crates/macro-core/src/vision.rs": "a361f1fb21f1643021b7818ae2a51d78d09a78114e6db8cdc57e9eaf710e9979",
+  "crates/macro-core/src/seat_selection.rs": "47c2e7634e6a415dc45710afaa3e55a01d5d1280c5f3bf72a1ea773c7072c4bf",
+  "crates/macro-core/src/engine.rs": "f9edcd0da55a92a86b188186252053c00f976fd2a370afff11bca801cdef86df",
+  "crates/macro-core/tests/seat_mask_identity.rs": "379fbcd6ff839b168247e46a90187bfee8dd6e8ddcb07940ef457919f3ba2149",
+  "crates/macro-core/tests/seat_candidate_geometry.rs": "299a7ef5c5d650671134d438897ea444dfae6e0b8b131f1ed27796336c736be3",
+  "crates/macro-core/tests/seat_selection.rs": "2e95cd9ee9e27962d202c0d1dd27bf2ac2a9f92f6d7175e8dd7c681652378e2e",
+  "crates/macro-core/tests/seat_shape_regressions.rs": "0a38aa96808fd044f73f3293ec5482bcbf39d5ee876229501aafbf60577c4aec",
+  "crates/macro-core/tests/seat_review_regressions.rs": "6bfd3991e9118675ba8332c23a05c6aa611e10c3d002aef1f4e9fb6d47cb8903",
+  "src-tauri/src/runtime.rs": "5613c421f42528ded39b464f572691c63014fbc791bd5c25d120c966b3b6ba06"
+}

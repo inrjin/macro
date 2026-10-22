@@ -1,0 +1,123 @@
+{
+  "productionFrozen": true,
+  "focusedPasses": 17,
+  "focusedFailures": 0,
+  "timingIgnored": 1,
+  "sourceManifest": "source-final.json",
+  "priorCheckpoint": "implementation-final-manifest.json.fringe-stage",
+  "reviewers": [
+    "/root/fix_cancellation_start",
+    "/root/input_adversarial_review"
+  ],
+  "reviewOutcome": "Both independent reviewers inspected the final production source and report no additional blocker in the tested scope.",
+  "independentFinalCorrectness": "9 passed, 0 failed; separate manual timing 1 passed, excluded from correctness count",
+  "independentFinalTiming": {
+    "count3WithMapMsRange": [
+      242.5,
+      253.2
+    ],
+    "zeroWithMapMsRange": [
+      248.5,
+      260.5
+    ],
+    "scope": "Optimized synthetic reader only; initial count3 baseline around 190ms remains faster"
+  },
+  "parentOwnedValidation": "Final full workspace/runtime/UI checks and supplied screenshot recheck are recorded by parent, not claimed here.",
+  "artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 12588,
+      "sha256": "8c5e0247d33c6ceab025ecc899f24979dc5365117cee060d99c6615844a7039c"
+    },
+    {
+      "path": "source-final.json",
+      "bytes": 1597,
+      "sha256": "bd07d81007cc339d6bbbf79f813443003d953925cbf74cac0d2db1743cf85d6f"
+    },
+    {
+      "path": "focused-result.json",
+      "bytes": 789,
+      "sha256": "15707b94a634e3c8b417beaf2545867339129811f56fe651d1d3568cc99c174b"
+    },
+    {
+      "path": "reproduction-check.json",
+      "bytes": 506,
+      "sha256": "ad09725c4b90d491dc1dd54dbdea0a5c83c6f04cf487f1cc2e7bedeb5e53dc7f"
+    },
+    {
+      "path": "negative-reproduction-check.json",
+      "bytes": 419,
+      "sha256": "7912f6b81afdc6bf65dea686828e1099f6749d14baff8a38279a35be1a1ec1cd"
+    },
+    {
+      "path": "final-source-integrity.json",
+      "bytes": 1938,
+      "sha256": "05dca21135e87989b965b408fece018a7058d5be87ee98538984d8470bec28fe"
+    },
+    {
+      "path": "after-final-negative-radius.log",
+      "bytes": 67137,
+      "sha256": "4df33277a6d40dacadce4796e2aa13730eb654ef8897486f37cf78fb8875ba58"
+    },
+    {
+      "path": "before.log",
+      "bytes": 7787,
+      "sha256": "c105a78ffa143743c4383b96cd46b6c47c07990d4e29df3d33ec1a473d2c146a"
+    },
+    {
+      "path": "after-subruns-before-pattern-cache.log",
+      "bytes": 29373,
+      "sha256": "0690bbced6f3e7a7f69a6e9fe17cde3c5b1d5bf343ea4384d7ad4bfd402ecd77"
+    },
+    {
+      "path": "after-negative-pattern-cache.log",
+      "bytes": 67151,
+      "sha256": "92e3a3cccff257781f57cf883eda29753306e8a798fa497d6ee24030c66bd6ae"
+    },
+    {
+      "path": "selection_count.rs-final.diff",
+      "bytes": 20495,
+      "sha256": "a19ea7a1d0901675dfb9e4a9e8aa83de87cc3abd08241f36a2671fb032c6289b"
+    },
+    {
+      "path": "selection_count_layout.rs-final.diff",
+      "bytes": 4247,
+      "sha256": "28f2049ffa7054ce485d7b9f1cc39a6a35ab1294f577f95a447c91880e74ebf1"
+    },
+    {
+      "path": "zero-heading-probe2.jsonl",
+      "bytes": 6117,
+      "sha256": "eded01a5c195fae19e5d17d0dd09d5273f45e66f56756b416156451c2f622131"
+    },
+    {
+      "path": "label-radius-subruns-experiment/README.md",
+      "bytes": 1743,
+      "sha256": "9cb13a0aab1c9be8cd75730d806f9031cb158381e18abedc6f3b5386ee1bc4c4"
+    },
+    {
+      "path": "label-radius-subruns-experiment/comparison.json",
+      "bytes": 1781,
+      "sha256": "7455f537417eae6fc9fbb41beba92c2f3dd7e4b18c1d000193f36d20b29589b8"
+    },
+    {
+      "path": "label-radius-subruns-experiment/source.json",
+      "bytes": 979,
+      "sha256": "7e5b4680d1240d1db65e4b7fe3198eabdb873ce2b3f8c1e4c8aa8b04d3f6a704"
+    },
+    {
+      "path": "label-radius-subruns-experiment/heading-only-tests.log",
+      "bytes": 68549,
+      "sha256": "59095086b3c28c6f9bb55831938fe6547b28ce02fe8e41c1179600f409a264ff"
+    },
+    {
+      "path": "label-radius-subruns-experiment/current-radius-timing.log",
+      "bytes": 1394,
+      "sha256": "c123ae7ed31df6a9a6a8278006f1cc4679a1e3f451d7ce683fd753f7f4eabd22"
+    },
+    {
+      "path": "label-radius-subruns-experiment/heading-only-timing.log",
+      "bytes": 1206,
+      "sha256": "1490b980ed88ca2c614f4c7fc0e6bb915b41d79c16e215b8ddfc756c83e847b1"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "productionFrozen": true,
+  "focusedPasses": 14,
+  "focusedFailures": 0,
+  "timingIgnored": 1,
+  "sourceManifest": "source-final.json",
+  "reviewers": [
+    "/root/fix_cancellation_start",
+    "/root/input_adversarial_review"
+  ],
+  "independentFinalTiming": "reported by adversarial reviewer separately; not included in focused pass count",
+  "artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 8705,
+      "sha256": "92a3ea4713d472b28eda239a575ea8c12f4f0c03140226b9a0f40ab5dc755345"
+    },
+    {
+      "path": "source-final.json",
+      "bytes": 1182,
+      "sha256": "272bedaac2cf0222b89a2262bc3686ee883188a12d743490b7a56696bf1d21a8"
+    },
+    {
+      "path": "focused-result.json",
+      "bytes": 1677,
+      "sha256": "25d78f57d7c8c539b90274cfa0f220773b0130bb82c6212a457a7234af709281"
+    },
+    {
+      "path": "reproduction-check.json",
+      "bytes": 506,
+      "sha256": "ad09725c4b90d491dc1dd54dbdea0a5c83c6f04cf487f1cc2e7bedeb5e53dc7f"
+    },
+    {
+      "path": "after-zero-monotonic-fringe.log",
+      "bytes": 61680,
+      "sha256": "a7483e9af17f5d17a226048e3d6afd800860b290143653b1aff176762feba9e0"
+    },
+    {
+      "path": "before.log",
+      "bytes": 7787,
+      "sha256": "c105a78ffa143743c4383b96cd46b6c47c07990d4e29df3d33ec1a473d2c146a"
+    },
+    {
+      "path": "selection_count.rs-final.diff",
+      "bytes": 14132,
+      "sha256": "8c0fc28a434ab11c2e7f3f4abd9439d3c3dfdafc646cb180afe8ffe94a86ee5c"
+    },
+    {
+      "path": "selection_count_layout.rs-final.diff",
+      "bytes": 4247,
+      "sha256": "28f2049ffa7054ce485d7b9f1cc39a6a35ab1294f577f95a447c91880e74ebf1"
+    },
+    {
+      "path": "zero-heading-probe2.jsonl",
+      "bytes": 6117,
+      "sha256": "eded01a5c195fae19e5d17d0dd09d5273f45e66f56756b416156451c2f622131"
+    }
+  ]
+}

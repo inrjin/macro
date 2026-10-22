@@ -1,0 +1,30 @@
+{
+  "version": "0.4.0",
+  "mac_architectures": [
+    "x86_64",
+    "arm64"
+  ],
+  "mac_native_tests": "PASS: 12 test groups: KST/invalid date, JSON/invalid/ISO clock, monotonic deadline, pixel search/exclusion/bounds, profile/follow gate, region requires a new frame, conflict dismissal and different-seat retry, fresh confirmation and selection rollback, cancellation modes and timeout, price gate and ordered follow-up clicks, manual-CAPTCHA readiness and stop, scheduled single opening and changed-API guard",
+  "mac_signature": "ad-hoc; codesign --verify --deep --strict passed; not notarized",
+  "mac_gui_test": "not completed: computer-use native pipe startup failed",
+  "windows_tests": "not executed: no Windows/AutoHotkey runtime environment on this Mac",
+  "windows_static_checks": "includes/BOM/removed bridge/runtime-and-source checksums passed",
+  "live_booking_test": "not performed for this coordinate-only version",
+  "clock_api_live_test": "not performed; no verified user API was provided",
+  "sources_sha256": {
+    "macos/Info.plist": "f3d751668fe819ba8e00b661be714c0f83a1aea5e770201c04d31bf40e266960",
+    "macos/Sources/App.swift": "13a2c31304200d979bab1f4642245ea55737f076e6b0bb14a7d89d23e70137ac",
+    "macos/Sources/Core.swift": "a1a181a905c887c2683acc4edf36f7b73aff340e6c399a5414dfd0b9e172cd68",
+    "macos/Sources/Runtime.swift": "f5f4165dd470fb736edcb57475a9f9f54304c548cf365199d4e44d5719c5a9de",
+    "macos/Sources/Tests.swift": "3117e5cf3baee5dd1ebaf18d2debdab942346390c16b08cd2738f5d574bff58a",
+    "macos/build.sh": "d6b7eff21174cb4aec85595e3ad519d3d00b2be351ba75bd8d144c56b7ed8016",
+    "windows/ClockSync.ps1": "7ab8f2dc4c797237f92752a8fc713140d8cefdae49e199df4aca83cd15121886",
+    "windows/CoordinateFlow.ahk": "3436d8cc39b8af50a83ce1a183b7f26ca18bbd8e47e6ebd10b43be3961e24e52",
+    "windows/EnhancedMacro.ahk": "6cb405de8e4759fb76f4ea689e143cd79721b2cf9bf6f8ab7be01ad76cdc9b37",
+    "windows/MacroEngine.ahk": "04f8fe84d42259107c72b247f5df5ac876520d7c9799d648c7b59cc165c7fb89",
+    "windows/MacroGui.ahk": "ac7b156338dcf4e8fc5a95d3bee7ebf7d0d20ad80b746617ec7174be8841dcf5",
+    "windows/MacroSelfTest.ahk": "5a2e8f559c273d69d302c29c3cd3e61efbbd3eacd8c6e389e775e2a0f0780710",
+    "windows/Self-Test.cmd": "8f39b9d05906bc502f0f72643d782f5ece6bed76ec995cad1c4b7a287a64c5e7",
+    "windows/Start-Macro.cmd": "e491e05e3b4dccc4e9bfdaab593e61ea3f171c46543b5d1081315af7c92cefac"
+  }
+}

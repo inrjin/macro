@@ -1,0 +1,9 @@
+{
+  "release": "https://github.com/AutoHotkey/AutoHotkey/releases/tag/v1.1.37.02",
+  "archiveUrl": "https://github.com/AutoHotkey/AutoHotkey/releases/download/v1.1.37.02/AutoHotkey_1.1.37.02.zip",
+  "archiveSha256": "6f3663f7cdd25063c8c8728f5d9b07813ced8780522fd1f124ba539e2854215f",
+  "verifiedAgainstOfficialRelease": true,
+  "runtimeSha256": "effdea83c6b7a1dc2ce9e9d40e91dfd59bed9fcbd580903423648b7ca97d9696",
+  "sourceUrl": "https://github.com/AutoHotkey/AutoHotkey/archive/refs/tags/v1.1.37.02.zip",
+  "sourceSha256": "2b1d94e5d9b94b6a6dc3a2565bc65e74fef93ac2c34bb57fe182ffb4ab20fe92"
+}

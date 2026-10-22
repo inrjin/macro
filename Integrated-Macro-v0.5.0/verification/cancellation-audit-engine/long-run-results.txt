@@ -1,0 +1,5 @@
+PASS retained+failed x1000 refresh=false: count/attempt bound, generation0, cancelled Esc resume x200, stale completion/Esc ACK inert
+PASS retained+failed x1000 refresh=true: count/attempt bound, generation0, cancelled Esc resume x200, stale completion/Esc ACK inert
+PASS empty-map x1000 refresh=false: continuous poll/button cadence, no generation invention, arriving seat selected
+PASS empty-map x1000 refresh=true: continuous poll/button cadence, no generation invention, arriving seat selected
+PASS alternating zones x1000: generation increments once, color/ROI/complete override and fallback remain consistent

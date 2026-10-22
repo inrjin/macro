@@ -1,0 +1,17 @@
+{
+  "sourceFrozen": true,
+  "scope": "Version metadata and approved README only; build artifacts reviewed separately",
+  "implementationReview": {
+    "agent": "/root/fix_cancellation_start",
+    "approved": true,
+    "evidence": "../independent-review-source.json",
+    "basis": "Compared 131-file audit baseline; exactly 10 changed files. Replayed all 13 allowed substitutions in the 9 version files and matched exact current bytes."
+  },
+  "adversarialReview": {
+    "agent": "/root/input_adversarial_review",
+    "approved": true,
+    "basis": "Compared independent 119-file set and latest 131-file audit set; exactly 9 version files plus approved README. Identifier/CSP/permissions/defaults unchanged."
+  },
+  "buildTestsByImplementer": false,
+  "sourceFilesChangedAfterFreeze": false
+}

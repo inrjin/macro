@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/Users/inrjin/Documents/\u6a5f\u68b0\u4eba\u9593/Integrated-Macro-v0.5.0/.build-tools/cargo/bin/rustc",
+    "--test",
+    "--edition=2021",
+    "/Users/inrjin/Documents/\u6a5f\u68b0\u4eba\u9593/Integrated-Macro-v0.5.0/verification/calibration-retry/independent/before.rs",
+    "-L",
+    "dependency=/Users/inrjin/Documents/\u6a5f\u68b0\u4eba\u9593/Integrated-Macro-v0.5.0/target/debug/deps",
+    "--extern",
+    "macro_core=/Users/inrjin/Documents/\u6a5f\u68b0\u4eba\u9593/Integrated-Macro-v0.5.0/target/debug/deps/libmacro_core-d25e7913a10fa3b9.rlib",
+    "--extern",
+    "serde_json=/Users/inrjin/Documents/\u6a5f\u68b0\u4eba\u9593/Integrated-Macro-v0.5.0/target/debug/deps/libserde_json-7599b8f05f41bd97.rlib",
+    "-o",
+    "/Users/inrjin/Documents/\u6a5f\u68b0\u4eba\u9593/Integrated-Macro-v0.5.0/verification/calibration-retry/independent/before-tests"
+  ],
+  "run": [
+    "/Users/inrjin/Documents/\u6a5f\u68b0\u4eba\u9593/Integrated-Macro-v0.5.0/verification/calibration-retry/independent/before-tests",
+    "calibration_restart_review",
+    "--nocapture"
+  ],
+  "exitCode": 101,
+  "expected": "2 demonstrated old-policy failures",
+  "linkedCoreSHA256": "29ff73c26f37c893eff6ed5c88ad7914d7d45b8fec7ff9fd7e3b6212e8057f4a",
+  "toolNote": "Initial wrapper path used JSON ASCII Unicode escapes; corrected to literal UTF-8 for Rust before running tests.",
+  "limitations": "Actual unchanged extracted runtime helpers and actual Engine/VisualRecovery; no live Worker, Save IO, Bind OS, or user profile."
+}

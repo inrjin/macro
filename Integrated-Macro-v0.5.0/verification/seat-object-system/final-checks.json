@@ -1,0 +1,138 @@
+{
+  "date": "2026-10-21",
+  "status": "Source review and static regression checks passed; no distribution build or live-site readiness claim.",
+  "checks": [
+    {
+      "command": "cargo test --workspace --offline --locked",
+      "toolchain": "repository-local Cargo/Rustup, stable, macOS arm64",
+      "exit_code": 0,
+      "passed": 367,
+      "failed": 0,
+      "ignored": 2,
+      "ignored_scope": [
+        "manual real-image round-object check",
+        "manual full-frame digest timing benchmark"
+      ],
+      "log": {
+        "path": "verification/seat-object-system/workspace-final.log",
+        "sha256": "61e1e6896e95a6e127cc0337ea7599ba1a74a45cf319323f013f786c1ca48d03"
+      }
+    },
+    {
+      "command": "npm test",
+      "exit_code": 0,
+      "passed": 150,
+      "failed": 0,
+      "skipped": 0,
+      "log": {
+        "path": "verification/seat-object-system/javascript-final.log",
+        "sha256": "b2bc64585dd1551c0e4ffc0397f3528a3c1117c6550fcd9b3eae03e668b71d60"
+      }
+    }
+  ],
+  "final_source": {
+    "files": 122,
+    "before_after_match": true,
+    "manifest": {
+      "path": "verification/seat-object-system/source-final.json",
+      "sha256": "22aa55fc3d5bf164e944c7a1c17b27f762c9a83fa1375fd867123c006c0127a8"
+    },
+    "pretest_manifest": {
+      "path": "verification/seat-object-system/source-before-final-test.json",
+      "sha256": "22aa55fc3d5bf164e944c7a1c17b27f762c9a83fa1375fd867123c006c0127a8"
+    }
+  },
+  "javascript_source": {
+    "files": 54,
+    "after_test_match": true,
+    "manifest": {
+      "path": "verification/seat-object-system/javascript-tested-source.json",
+      "sha256": "6635de956723c8957616c314b7c8e7ce0afb3976b55172a4d191f0773ba4a11c"
+    }
+  },
+  "independent_reader_fixtures": {
+    "scenes": 108,
+    "required_correct": 41,
+    "required_unreadable": 30,
+    "optional_correct_or_unreadable": 37,
+    "all_hashes_match": true,
+    "manifest": {
+      "path": "verification/seat-object-system/reader-review/fixture-freeze.json",
+      "sha256": "19e3b2ce7b8e6a7617d1d8bb3369db86e2745a3eb64fc9297e5766cffac04e37"
+    }
+  },
+  "preserved_artifacts": {
+    "path": "verification/seat-object-system/preservation-final.json",
+    "sha256": "a6d9e7bf7bb9014a87d3eb29925c2028cda676199e4d84c42c45e2334b7990e2"
+  },
+  "reviews": {
+    "README.md": {
+      "path": "verification/seat-object-system/README.md",
+      "sha256": "e4074afced0242224e6c13782936483f00317a699514eb26ab813a42730e016e"
+    },
+    "runtime-review.md": {
+      "path": "verification/seat-object-system/runtime-review.md",
+      "sha256": "68d80e5ae4df97aca9fc88aac320f502755ab7c9de3ecf88a06246cd1ea196e1"
+    },
+    "runtime-source-final.json": {
+      "path": "verification/seat-object-system/runtime-source-final.json",
+      "sha256": "0d1e63391fe0e1657a2b727003b20336f17cc4fa416d82152f87df63aa8fc02e"
+    },
+    "engine/review.md": {
+      "path": "verification/seat-object-system/engine/review.md",
+      "sha256": "1d837d83f9b1c99208229847316bba3b79494933eef45401d90a8ea16e8e8c2f"
+    },
+    "engine/source-final.json": {
+      "path": "verification/seat-object-system/engine/source-final.json",
+      "sha256": "4dee1801b2ab57a795d4575b2fdbd4842a52e0aff99723177dad10f5d9996891"
+    },
+    "engine/context-recovery-review.md": {
+      "path": "verification/seat-object-system/engine/context-recovery-review.md",
+      "sha256": "46b1b943c45b5e2613077f3bfb1eb88a719ba54fab98663e45d62bc51fa08dcd"
+    },
+    "engine/context-recovery-source.json": {
+      "path": "verification/seat-object-system/engine/context-recovery-source.json",
+      "sha256": "30e84e904ab48c337d0b3d4d839077623ad75de92c03eb77ed79dc3a675a86bc"
+    },
+    "reader-review/README.md": {
+      "path": "verification/seat-object-system/reader-review/README.md",
+      "sha256": "de509ef2b90fef919ed36621957dabcda7f4f90c0668bdf220541d51015a0da9"
+    },
+    "reader-review/caller-review.md": {
+      "path": "verification/seat-object-system/reader-review/caller-review.md",
+      "sha256": "84f215670dfb1a9a43f4ad2cffdfcf70cdcea61b23845f2b24b53034b5729c8c"
+    },
+    "reader-review/final-summary.json": {
+      "path": "verification/seat-object-system/reader-review/final-summary.json",
+      "sha256": "ad9f24eec180226d48644a6976d616e988ebc2aa488a91f63c8cad52373ea43a"
+    },
+    "reader-review/reviewed-source.json": {
+      "path": "verification/seat-object-system/reader-review/reviewed-source.json",
+      "sha256": "b9f75bb58840becfe4dbd096c4dc9266b8f28767a11cda447857c9a5f0bf136b"
+    },
+    "vision/README.md": {
+      "path": "verification/seat-object-system/vision/README.md",
+      "sha256": "9dcc7d088ee97fb095952c99965e9f45dd7535a962787dfdb149ff3b9b8fa572"
+    }
+  },
+  "measurements": [
+    {
+      "path": "verification/seat-object-system/reader-optimized-final.json",
+      "sha256": "c394b3a6183a1f3857613caccb3b4aad3b1486be266b687613ae4b4134f26fda"
+    },
+    {
+      "path": "verification/seat-object-system/runtime-proof-hash-optimized.json",
+      "sha256": "a199da9d2657f3330acf0fe33e17f1bca205df9c2eabefd3043bd32d51d12616"
+    }
+  ],
+  "limitations": [
+    "Optional object extractor is round-only; nonround merge/split remains unresolved. Generic color path is preserved with the option OFF.",
+    "Count reader is position-independent but has a narrow supported glyph/background/layout contract. No unobscured real zero-seat screen was verified.",
+    "Unknown or inconsistent count can leave the engine observing indefinitely without additional seat/completion input.",
+    "Selected total does not prove server ownership or attribute concurrent manual/server changes.",
+    "Helper plus real Engine and rendered UI tests do not exercise a complete Worker, native capture/input or a live site.",
+    "No Windows runtime validation or distribution build. Old 0.5.9 package remains unchanged.",
+    "Latest-acquired-frame validation does not remove the interval between image acquisition/recognition and OS input.",
+    "The 148–170 ms reader measurement covers one provided static image only, not complete click latency."
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "previousReentrantFinalEqualsBaseline": true,
+  "baselineFileCount": 136,
+  "finalFileCount": 138,
+  "changedSinceBaseline": [
+    "Cargo.lock",
+    "Cargo.toml",
+    "README.md",
+    "crates/macro-core/Cargo.toml",
+    "crates/macro-core/src/engine.rs",
+    "crates/macro-core/src/model.rs",
+    "crates/macro-core/tests/engine.rs",
+    "crates/macro-core/tests/reentrant_commands_review.rs",
+    "crates/macro-platform/Cargo.toml",
+    "package-lock.json",
+    "package.json",
+    "src-tauri/src/runtime.rs",
+    "src-tauri/src/visual_recovery.rs",
+    "src-tauri/tauri.conf.json",
+    "ui/index.html",
+    "ui/package.json"
+  ],
+  "addedSinceBaseline": [
+    "crates/macro-core/tests/f9_any_state_review.rs",
+    "src-tauri/src/f9_any_state_tests.rs"
+  ],
+  "removedSinceBaseline": [],
+  "versionOnlyChangeEvidence": "version-only.diff",
+  "note": "Baseline is the previously reviewed, unbuilt reentrant-command source. Final build source includes all-state F9 and Stop/conflict corrections. Source before/after build equality is checked after the final gate.",
+  "finalSourceUnchangedDuringBuild": true,
+  "sourceManifestSHA256": "65f9ab47828be205c5f7cee7c255af364e3e5872007861cc53034c75e9ad9258",
+  "reviewSourceContinuitySHA256": "0c6b3d29de3b5d570bfc2c49a42586ef6b9133d9a191be7bc3614d815f53e2ce",
+  "previousAuditEvidenceUnchanged": true
+}

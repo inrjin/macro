@@ -1,0 +1,5 @@
+running 3 tests
+P1 old-frame reproduction: ACK+delay+generation accepts old pixels at Point { x: 11.0, y: 21.0 }; new-zone pixel control selects Point { x: 41.0, y: 21.0 }
+P1 new-image counterexample: fresh sequence/timestamp may belong to a loading frame that still contains old-zone candidates
+P1 indistinguishable contexts: accepting identical evidence permits old-map input; requiring a changed image can indefinitely block a completed static map
+test result: ok. 3 passed; 0 failed

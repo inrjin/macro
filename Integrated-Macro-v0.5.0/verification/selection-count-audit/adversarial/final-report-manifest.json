@@ -1,0 +1,24 @@
+{
+  "status": "frozen",
+  "sourceUnchangedFromFinalRun": true,
+  "files": {
+    "README.md": "ad3c0e9964376713db9a6ebc023b1da6f792cfce7bd5faaa013ad8602d2286fa",
+    "final-summary.json": "75140a449ab468e55284905bee2eec6a3c7538f891a24195a793d8c1254354eb",
+    "source-final-reviewed.json": "0e62c82222265d5c7f57b235bfae53363b2635e6283cf554230aca46f5fc4ef9",
+    "source-final-adopted-before.json": "85c3ffbdd9ad3e15c7275674b6a78e353499a2c381d4e8c6b83946bc31cc75f6",
+    "all-fixtures-final.json": "758b0375ce0112083ca486839c916c1189320ce8ccce2245cf635f1434598236",
+    "final-adopted-corpus.log": "bc31aa61ab00ce7b7115ef042fd3d46bec3798d1d73f0c680212db38897cbdc6",
+    "final-adopted-performance.log": "9592643ef26987c7dad58765bb2365dc62d087efa0280cf3b2eac4850c4e02d1",
+    "before.log": "642c6683a92f74f2d103f1c2eb56cdc8daa84068ea44d92d8f102a5fb747286a",
+    "annotation-pixel-differences.json": "0b105258adc47805c050dd2be4c5b2a89513fec26167e52cca09e650c5ec998a",
+    "edge-template-diagnostic.jsonl": "8b4fa34bef7ba65b5032dff83c4ba79f29e2c7cbceea3cc8e1127dd69b619500",
+    "zero-extra-before.log": "a40119fb278280b45136c8aa72c4e07d74eb5b8dd9f8d5b1f998d796d59d162b",
+    "zero-extra-followup.log": "6fbc4717b93219c22f2d1ca3fed4d052447e5412df65770640a05a05c3e8f4ec",
+    "zero-support-after-strict.log": "14b924cb05406c9a0ecb178ab8ac15a1a6d5c10886816c814fd1c68b9a616ae6",
+    "radius-negative/before-production.log": "d5d3257154ced60bed22a2099f6cd22073c86d4156aea451f3efd21efeea2303",
+    "radius-negative/diagnostic.jsonl": "d862d8742dc94e6af4ef20736b0687130ebf3e47878fdaa6ab26e63c04241859",
+    "empty-neighbor/before.log": "afe9099e66e791d01b82fd4ebe5602f11ce66823c5dba193e3ce44170fd88165",
+    "empty-neighbor/dense-before.log": "3fcd3154c7e05fb7d7ce86943274a7f780af2c1d0c5fc987b2283e436e5a0e1e",
+    "after-subruns-corpus.log": "44d5409404aac3593e64c428be50a7e7ee393f30ceb2ed09765a61c81d6438cd"
+  }
+}

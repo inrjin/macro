@@ -1,0 +1,346 @@
+--- runtime.before.rs
++++ runtime.after.rs
+@@ -97,6 +97,54 @@
+ fn frame_passes_input_transition(frame: &OwnedFrame, after: Option<u64>, started_at_ns: Option<u64>) -> bool {
+     frame_passes_transition(frame.sequence, after)
+         && started_at_ns.is_none_or(|started| frame.captured_at_ns > started)
++}
++
++// Shared by the production observation loop and its headless capture-boundary
++// tests. None means no new native pixels, not a successful page transition.
++fn apply_scan_capture(cached: &mut Option<OwnedFrame>, last_sequence: &mut Option<u64>,
++    capture: Result<Option<OwnedFrame>, String>, reuse: bool) -> Result<bool, String> {
++    match capture {
++        Ok(Some(frame)) => {
++            *last_sequence = Some(frame.sequence);
++            *cached = Some(frame);
++            Ok(true)
++        }
++        Ok(None) => Ok(reuse && cached.is_some()),
++        Err(reason) => Err(reason),
++    }
++}
++
++fn navigation_requires_new_pixels(kind: &ActionKind, continuous: bool, delivered: bool) -> bool {
++    delivered && continuous
++        && matches!(kind, ActionKind::Click { purpose, .. } if purpose.starts_with("region:"))
++}
++
++fn candidate_available_in_frame(frame: Option<&OwnedFrame>, target: &Target, color: Color, tolerance: u8,
++    refresh_after: Option<u64>, refresh_after_ns: Option<u64>) -> Result<bool, String> {
++    let Target::Point { point } = target else {
++        return Err("브라우저 요소 연결이 아직 준비되지 않았습니다.".into());
++    };
++    let frame = frame.ok_or("최신 좌석 화면을 받을 수 없습니다.")?;
++    if !frame_passes_input_transition(frame, refresh_after, refresh_after_ns) { return Ok(false); }
++    let local = macro_platform::Point { x: point.x / frame.scale_x, y: point.y / frame.scale_y };
++    Ok(frame.color_at(local).is_some_and(|[r,g,b]| {
++        macro_core::vision::color_matches(Color{r,g,b}, color, tolerance)
++    }))
++}
++
++fn apply_candidate_capture(cached: &mut Option<OwnedFrame>, reference: Option<&FrameReference>,
++    capture: Result<Option<OwnedFrame>, String>) -> Result<(), String> {
++    if let Some(frame) = capture? {
++        let previous_geometry_changed = cached.as_ref().is_some_and(|previous|
++            previous.width != frame.width || previous.height != frame.height
++            || (previous.scale_x - frame.scale_x).abs() > 0.001
++            || (previous.scale_y - frame.scale_y).abs() > 0.001);
++        if previous_geometry_changed || reference.is_some_and(|reference| !same_frame_reference(reference, &frame)) {
++            return Err("클릭 직전 화면 크기나 배율이 바뀌었습니다. 현재 화면에서 좌표를 다시 채집하세요.".into());
++        }
++        *cached = Some(frame);
++    }
++    Ok(())
+ }
+ 
+ fn apply_frame_observation(cached: &mut Option<OwnedFrame>, observation: FrameObservation) -> Result<(), String> {
+@@ -1965,6 +2013,226 @@
+         assert!(!can_rescan_seat_frame(&engine.snapshot(), "seats", true));
+         assert!(engine.step(Event::Tick, 18003).is_empty());
+         assert!(engine.snapshot().selected_ids.is_empty());
++    }
++}
++
++#[cfg(test)]
++mod priority_p1_tests {
++    use super::*;
++
++    const POST_NS: u64 = 100_000_000;
++
++    // Scripted native return values, actual OwnedFrame buffers, production
++    // runtime branches, and the real vision/engine. No AppHandle, OS input,
++    // browser stage marker, or successful selection is supplied to production.
++    struct Replay {
++        engine: Engine,
++        cached: Option<OwnedFrame>,
++        last_sequence: Option<u64>,
++        last_generation: Option<u64>,
++        fence_sequence: Option<u64>,
++        fence_ns: Option<u64>,
++        scope: String,
++        requested: bool,
++    }
++
++    fn frame(sequence: u64, captured_at_ns: u64) -> OwnedFrame {
++        let mut rgba = [240, 240, 240, 255].repeat(24 * 16);
++        for y in 4..8 {
++            for x in 4..8 {
++                rgba[(y * 24 + x) * 4..(y * 24 + x) * 4 + 4].copy_from_slice(&[80, 30, 180, 255]);
++            }
++        }
++        OwnedFrame { width: 24, height: 16, stride: 24 * 4, rgba,
++            origin: macro_platform::Point { x: 0.0, y: 0.0 }, scale_x: 1.0, scale_y: 1.0,
++            sequence, captured_at_ns, last_observed_ns: captured_at_ns }
++    }
++
++    impl Replay {
++        fn after_legacy_navigation(keys: bool) -> Self {
++            let mut profile = Profile::default();
++            profile.color = Color { r: 80, g: 30, b: 180 };
++            profile.color_tolerance = 0;
++            profile.vision.roi = Some(Rect { x: 0.0, y: 0.0, width: 24.0, height: 16.0 });
++            profile.legacy.region_delay_ms = 10;
++            profile.legacy.cancellation_navigation = if keys { macro_core::CancellationNavigation::ArrowKeys }
++                else { macro_core::CancellationNavigation::TwoRegions {
++                    first: Target::Point { point: Point { x: 20.0, y: 2.0 } },
++                    second: Target::Point { point: Point { x: 20.0, y: 12.0 } },
++                }};
++            apply_execution_options(&mut profile, &DesktopConfig::default(), RunMode::Cancellation);
++            let mut engine = Engine::new(profile).unwrap();
++            let start = engine.step(Event::Start { mode: RunMode::Cancellation }, 0);
++            let navigation = start.iter().find(|action| !matches!(action.kind, ActionKind::Observe { .. })).unwrap();
++            assert!(matches!(&navigation.kind, ActionKind::Click { purpose, .. } | ActionKind::Key { purpose, .. }
++                if purpose == "legacy_cancellation_region"));
++            let has_fence = navigation_requires_new_pixels(&navigation.kind, engine.continuous_search(), true);
++            engine.step(Event::ActionAcknowledged { id: navigation.id, success: true, detail: String::new() }, 100);
++            let ready = engine.step(Event::Tick, 110);
++            let scope = ready.iter().find_map(|action| if let ActionKind::Observe { scope } = &action.kind {
++                Some(scope.clone())
++            } else { None }).unwrap();
++            assert_eq!(scope, "seats");
++            Self { engine, cached: Some(frame(12, POST_NS - 1_000_000)), last_sequence: Some(12),
++                last_generation: None, fence_sequence: has_fence.then_some(12), fence_ns: has_fence.then_some(POST_NS),
++                scope, requested: true }
++        }
++
++        fn scan(&mut self, capture: Result<Option<OwnedFrame>, String>, now_ms: u64) -> Result<Option<Point>, String> {
++            self.scan_with_preclick(capture, Ok(None), now_ms)
++        }
++
++        fn scan_with_preclick(&mut self, capture: Result<Option<OwnedFrame>, String>,
++            preclick_capture: Result<Option<OwnedFrame>, String>, now_ms: u64) -> Result<Option<Point>, String> {
++            let state = self.engine.snapshot();
++            let reuse = can_rescan_seat_frame(&state, &self.scope, self.requested
++                || first_legacy_scan_requested(self.engine.profile(), state.generation, self.last_generation));
++            if !apply_scan_capture(&mut self.cached, &mut self.last_sequence, capture, reuse)? { return Ok(None); }
++            let frame = self.cached.as_ref().unwrap();
++            if !frame_passes_input_transition(frame, self.fence_sequence, self.fence_ns) { return Ok(None); }
++            let mut candidates = macro_core::vision::extract_candidates_view(macro_core::vision::RgbaView {
++                width: frame.width as u32, height: frame.height as u32, stride: frame.stride, rgba: &frame.rgba,
++            }, self.engine.effective_color(), self.engine.profile().color_tolerance,
++                self.engine.effective_vision(), state.generation).unwrap();
++            if let Some(index) = state.active_region {
++                for candidate in &mut candidates { candidate.id = format!("zone{index}:{}", candidate.id); }
++            }
++            self.last_generation = Some(state.generation);
++            self.requested = false;
++            let actions = self.engine.step(Event::CandidatesObserved { generation: state.generation, candidates }, now_ms);
++            for action in actions {
++                if let ActionKind::Click { target: target @ Target::Point { point }, purpose } = action.kind {
++                    if purpose.starts_with("seat:") {
++                        // The real second native query may return unchanged pixels,
++                        // a newer image, or an error after candidate extraction.
++                        apply_candidate_capture(&mut self.cached, None, preclick_capture)?;
++                        if candidate_available_in_frame(self.cached.as_ref(), &target,
++                            self.engine.effective_color(), self.engine.profile().color_tolerance, None, None)? {
++                            return Ok(Some(point)); // eligible for guarded native input; not an OS delivery
++                        }
++                        self.engine.step(Event::ActionCancelled { id: action.id }, now_ms);
++                        return Ok(None);
++                    }
++                }
++            }
++            Ok(None)
++        }
++    }
++
++    #[test]
++    fn p1_legacy_old_cached_and_unread_pre_post_pixels_reach_the_real_preclick_check() {
++        for keys in [false, true] {
++            for unread in [false, true] {
++                let mut replay = Replay::after_legacy_navigation(keys);
++                let capture = unread.then(|| frame(13, POST_NS - 1_000_000));
++                let chosen = replay.scan(Ok(capture), 111).unwrap();
++                assert!(chosen.is_some());
++                let cached = replay.cached.as_ref().unwrap();
++                assert!(cached.captured_at_ns < POST_NS);
++                assert!(!frame_passes_input_transition(cached, Some(12), Some(POST_NS)));
++                println!("{}", json!({"case":"legacy_pre_input_pixels","navigation":if keys {"keys"} else {"two_regions"},
++                    "unreadNewSequence":unread,"eligibleSeatPoint":chosen,"nativeInputSent":false}));
++            }
++        }
++    }
++
++    #[test]
++    fn p1_strict_new_pixel_fence_rejects_a_legitimate_static_map_indefinitely() {
++        let mut current = Replay::after_legacy_navigation(true);
++        assert!(current.scan(Ok(None), 111).unwrap().is_some());
++        let mut strict = Replay::after_legacy_navigation(true);
++        strict.fence_sequence = Some(12);
++        strict.fence_ns = Some(POST_NS);
++        for now_ms in [111, 1_000, 60_000, 3_600_000] {
++            assert!(strict.scan(Ok(None), now_ms).unwrap().is_none());
++            let actions = strict.engine.step(Event::Tick, now_ms);
++            assert!(actions.iter().all(|action| matches!(action.kind, ActionKind::Observe { .. })));
++            assert_eq!(strict.engine.snapshot().phase, Phase::Seats);
++        }
++        println!("{}", json!({"case":"legitimate_identical_destination","strictFenceProgress":false,
++            "observedUntilMs":3_600_000,"captureSource":"scripted_static_SCK_contract"}));
++    }
++
++    #[test]
++    fn p1_fresh_idle_and_fresh_pixels_do_not_identify_which_region_the_site_rendered() {
++        for fresh_pixels in [false, true] {
++            let mut points = Vec::new();
++            for truth in ["destination_rendered_identical_map", "previous_region_while_destination_loading"] {
++                let mut replay = Replay::after_legacy_navigation(false);
++                if fresh_pixels {
++                    // A fresh callback or GDI capture may still show old site content.
++                    let post_frame = frame(13, POST_NS + 5_000_000);
++                    assert!(frame_passes_input_transition(&post_frame, Some(12), Some(POST_NS)));
++                    replay.cached = Some(post_frame.clone());
++                    replay.last_sequence = Some(13);
++                } else {
++                    // This uses the production metadata updater; no new seq/capture is invented.
++                    apply_frame_observation(&mut replay.cached, FrameObservation::Unchanged {
++                        sequence: 12, captured_at_ns: POST_NS - 1_000_000, last_observed_ns: POST_NS + 5_000_000,
++                    }).unwrap();
++                    assert!(replay.cached.as_ref().unwrap().last_observed_ns > POST_NS);
++                    assert!(!frame_passes_input_transition(replay.cached.as_ref().unwrap(), Some(12), Some(POST_NS)));
++                }
++                let chosen = replay.scan(Ok(None), 111).unwrap();
++                assert!(chosen.is_some());
++                points.push(chosen);
++                println!("{}", json!({"case":"freshness_is_not_region_identity","truthOnlyInTestOracle":truth,
++                    "freshPixels":fresh_pixels,"eligibleSeatPoint":chosen,"semanticRegionKnownToRuntime":false}));
++            }
++            assert_eq!(points[0], points[1]); // identical observable evidence, opposite site truth
++        }
++    }
++
++    #[test]
++    fn p1_capture_errors_or_no_cached_pixels_never_become_a_static_scan() {
++        let mut replay = Replay::after_legacy_navigation(false);
++        let error = replay.scan(Err("[capture_interrupted] scripted native error".into()), 111).unwrap_err();
++        assert!(recoverable_context_error(&error));
++        assert!(replay.engine.snapshot().pending_action_id.is_none());
++        replay.cached = None;
++        assert!(replay.scan(Ok(None), 112).unwrap().is_none());
++        let fresh = frame(13, POST_NS + 5_000_000);
++        assert!(replay.scan(Ok(Some(fresh)), 113).unwrap().is_some());
++    }
++
++    #[test]
++    fn p1_navigation_fence_keeps_current_delivery_and_mode_boundaries() {
++        let region = ActionKind::Click { target: Target::Point { point: Point { x: 1.0, y: 1.0 } }, purpose: "region:one".into() };
++        assert!(navigation_requires_new_pixels(&region, true, true));
++        assert!(!navigation_requires_new_pixels(&region, true, false));
++        assert!(!navigation_requires_new_pixels(&region, false, true));
++        let legacy = ActionKind::Key { key: Key::ArrowDown, purpose: "legacy_cancellation_region".into() };
++        assert!(!navigation_requires_new_pixels(&legacy, false, true));
++        assert!(!navigation_requires_new_pixels(&legacy, false, false));
++    }
++
++    #[test]
++    fn p1_second_native_query_replaces_pixels_and_rejects_changed_geometry_or_transparency() {
++        for condition in ["unchanged", "new_seat", "new_empty", "geometry", "transparent", "error"] {
++            let mut replay = Replay::after_legacy_navigation(false);
++            let mut updated = frame(13, POST_NS + 5_000_000);
++            match condition {
++                "new_empty" => updated.rgba = [240, 240, 240, 255].repeat(24 * 16),
++                "geometry" => updated.scale_x = 2.0,
++                "transparent" => { for pixel in updated.rgba.chunks_exact_mut(4) { pixel[3] = 249; } },
++                _ => {},
++            }
++            let capture = match condition {
++                "unchanged" => Ok(None),
++                "error" => Err("[capture_interrupted] scripted second-query failure".into()),
++                _ => Ok(Some(updated)),
++            };
++            let result = replay.scan_with_preclick(Ok(None), capture, 111);
++            match condition {
++                "unchanged" | "new_seat" => assert!(result.unwrap().is_some()),
++                "new_empty" | "transparent" => {
++                    assert!(result.unwrap().is_none());
++                    assert!(replay.engine.snapshot().pending_action_id.is_none());
++                    assert!(replay.engine.snapshot().selected_ids.is_empty());
++                },
++                _ => assert!(result.is_err()),
++            }
++        }
+     }
+ }
+ 
+@@ -3445,8 +3713,7 @@
+                 return;
+             }
+             self.feed(Event::ActionAcknowledged { id: action.id, success: result.is_ok(), detail });
+-            if result.is_ok() && self.engine.continuous_search()
+-                && matches!(&action.kind, ActionKind::Click { purpose, .. } if purpose.starts_with("region:")) {
++            if navigation_requires_new_pixels(&action.kind, self.engine.continuous_search(), result.is_ok()) {
+                 self.await_post_input_frame();
+             }
+             if self.engine.snapshot().phase == Phase::Completed {
+@@ -3566,30 +3833,14 @@
+ 
+     fn candidate_still_available(&mut self, target: &Target) -> Result<bool, String> {
+         let sequence = self.frame.as_ref().map(|f| f.sequence).unwrap_or(0);
+-        if let Some(frame) = self.adapter()?.capture_if_changed(sequence).map_err(|e| e.to_string())? {
+-            let previous_geometry_changed = self.frame.as_ref().is_some_and(|previous|
+-                previous.width != frame.width || previous.height != frame.height
+-                || (previous.scale_x - frame.scale_x).abs() > 0.001
+-                || (previous.scale_y - frame.scale_y).abs() > 0.001);
+-            if previous_geometry_changed || self.desktop.capture_reference.as_ref()
+-                .is_some_and(|reference| !same_frame_reference(reference, &frame)) {
+-                return Err("클릭 직전 화면 크기나 배율이 바뀌었습니다. 현재 화면에서 좌표를 다시 채집하세요.".into());
+-            }
+-            self.frame = Some(frame);
+-        }
++        let capture = self.adapter()?.capture_if_changed(sequence).map_err(|e| e.to_string());
++        apply_candidate_capture(&mut self.frame, self.desktop.capture_reference.as_ref(), capture)?;
+         self.candidate_available_on_frame(target)
+     }
+ 
+     fn candidate_available_on_frame(&self, target: &Target) -> Result<bool, String> {
+-        let Target::Point { point } = target else {
+-            return Err("브라우저 요소 연결이 아직 준비되지 않았습니다.".into());
+-        };
+-        let frame = self.frame.as_ref().ok_or("최신 좌석 화면을 받을 수 없습니다.")?;
+-        if !frame_passes_input_transition(frame, self.refresh_frame_after, self.refresh_frame_after_ns) { return Ok(false); }
+-        let local = macro_platform::Point { x: point.x / frame.scale_x, y: point.y / frame.scale_y };
+-        Ok(frame.color_at(local).is_some_and(|[r,g,b]| {
+-            macro_core::vision::color_matches(Color{r,g,b}, self.engine.effective_color(), self.profile.color_tolerance)
+-        }))
++        candidate_available_in_frame(self.frame.as_ref(), target, self.engine.effective_color(),
++            self.profile.color_tolerance, self.refresh_frame_after, self.refresh_frame_after_ns)
+     }
+ 
+     fn default_confirmation(&self) -> Option<String> {
+@@ -3895,13 +4146,9 @@
+         let reuse_seat_frame = can_rescan_seat_frame(&state, &self.scope,
+             self.seat_rescan_requested || first_legacy_scan);
+         let result = self.adapter().and_then(|adapter| adapter.capture_if_changed(last_sequence).map_err(|e| e.to_string()));
+-        match result {
+-            Ok(Some(frame)) => {
+-                self.last_sequence = Some(frame.sequence);
+-                self.frame = Some(frame);
+-            }
+-            Ok(None) if reuse_seat_frame && self.frame.is_some() => {}
+-            Ok(None) => return,
++        match apply_scan_capture(&mut self.frame, &mut self.last_sequence, result, reuse_seat_frame) {
++            Ok(true) => {}
++            Ok(false) => return,
+             Err(reason) => {
+                 self.pause_for_context(reason, None);
+                 return;

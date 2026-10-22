@@ -1,0 +1,2 @@
+# Preserve released source and fixture bytes on Windows checkouts.
+* -text

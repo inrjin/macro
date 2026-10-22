@@ -1,0 +1,8 @@
+(node:82415) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"bug":"selected two regions sends arrows","selected":"legacyRegions","sentNavigation":{"type":"arrow_keys"},"displayedAfterReply":"legacyKeys"}
+{"bug":"F8 in second zone drops unsaved first-zone override","wantedZone0":{"r":0,"g":255,"b":0},"savedRegions":[{"color":null,"vision":null,"complete":null},{"color":{"r":0,"g":0,"b":255},"vision":null,"complete":null}]}
+{"bug":"imported legacy targets lost across single-mode roundtrip","before":{"type":"two_regions","first":{"type":"point","point":{"x":10,"y":20}},"second":{"type":"point","point":{"x":30,"y":40}}},"after":{"type":"none"},"displayedFirst":null}
+{"switchTo":"legacyRegions","automaticRefresh":true,"regionPriority":true,"desktopRefreshMode":"none","nav":"two_regions","refreshTarget":{"type":"point","point":{"x":50,"y":60}}}
+{"switchTo":"legacyKeys","automaticRefresh":true,"regionPriority":true,"desktopRefreshMode":"none","nav":"arrow_keys","refreshTarget":{"type":"point","point":{"x":50,"y":60}}}
+Limits: actual UI/model sources in VM DOM; controlled IPC, no live Tauri, OS input, or user profile writes.

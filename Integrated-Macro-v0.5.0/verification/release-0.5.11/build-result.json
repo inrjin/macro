@@ -1,0 +1,55 @@
+{
+  "version": "0.5.11",
+  "generatedAt": "2026-10-21T15:43:46.639217+00:00",
+  "fullGateExitCode": 0,
+  "requiredChecksAllPassed": true,
+  "requiredCheckCount": 31,
+  "sourceFiles": 138,
+  "sourceUnchangedDuringBuild": true,
+  "buildGateFingerprintFiles": 128,
+  "sourceManifestSHA256": "65f9ab47828be205c5f7cee7c255af364e3e5872007861cc53034c75e9ad9258",
+  "checkReportSHA256": "9c79612835cf18ddf4dc58a36bdcf8a668343d154727d9040f6edeb218789f79",
+  "appExecutableSHA256": "41c02ab87a70e12613de5386363087ea23f030b81723b87010d894fc240ada93",
+  "appFiles": {
+    "Contents/Info.plist": "56ebf564ad3e3792dcca445eead26633b1e3b8a477145d1d1d64d843005a0d02",
+    "Contents/MacOS/integrated-macro": "41c02ab87a70e12613de5386363087ea23f030b81723b87010d894fc240ada93",
+    "Contents/Resources/icon.icns": "be80f1eb77b66015d3119b9d8483fae0c3684f3169793b93a5372d505b827a7c",
+    "Contents/_CodeSignature/CodeResources": "8b2a4458d8753f7d50800825612316fdb422f2d68b7ce3f7a1728de045d089ac"
+  },
+  "appVersion": "0.5.11",
+  "bundleVersion": "0.5.11",
+  "appIdentifier": "dev.integrated-macro.desktop",
+  "minimumMacOS": "13.0",
+  "independentSourceReviews": {
+    "implementation/stop-conflict-followup/source-final.json": {
+      "sha256": "bfceb7461f21bb8c5371ef89068f2948e5a4cdb5b1da88533b4812fba24d63a0",
+      "files": 4,
+      "finalSourceMatches": true
+    },
+    "independent/source-reviewed.json": {
+      "sha256": "190ad364c0e11ddb7a138883b9ac293c02e11b899828c2d43c74906335f0992c",
+      "files": 13,
+      "finalSourceMatches": true
+    },
+    "adversarial/source-final-review.json": {
+      "sha256": "87b20f203de668b9b2f3217cdd667a1937bffa948ecb56bc5ea2817676bdd211",
+      "files": 15,
+      "finalSourceMatches": true
+    }
+  },
+  "previousAuditEvidenceUnchanged": true,
+  "protectedFilesUnchanged": 22,
+  "appLaunched": false,
+  "liveSiteVerified": false,
+  "unverified": [
+    "Actual macOS input/capture/overlay",
+    "Actual Windows input/capture/overlay",
+    "Authenticated NOL booking flow",
+    "Browser transport and site contracts",
+    "End-to-end latency"
+  ],
+  "javascriptPassed": 172,
+  "rustPassed": 466,
+  "rustFailed": 0,
+  "rustIgnored": 5
+}

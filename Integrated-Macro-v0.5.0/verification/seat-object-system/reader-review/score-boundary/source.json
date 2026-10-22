@@ -1,0 +1,6 @@
+{
+  "source": "crates/macro-core/src/selection_count.rs",
+  "source_sha256": "02d0b95fd567dbb0cc49511656a437619a5fb84ec03b04d199c3304ed31ab816",
+  "copied_function_sha256": "86c277f4a470dd6cd2f3eba17c4b6c134f344e604be8e29d9fd3c598b5d0342f",
+  "scope": "Verbatim corrected private score functions with minimal types; old-comparison.rs restores exactly the old multiplication comparison captured during source review. The first attempted old assertion raced the parent fix and therefore failed on corrected source; it is not a pre-fix production execution."
+}

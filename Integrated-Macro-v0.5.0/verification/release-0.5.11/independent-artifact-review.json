@@ -1,0 +1,180 @@
+{
+  "recordedAt": "2026-10-21T15:45:11.811352+00:00",
+  "issues": [],
+  "infoPlist": {
+    "CFBundleDevelopmentRegion": "English",
+    "CFBundleDisplayName": "Integrated Macro",
+    "CFBundleExecutable": "integrated-macro",
+    "CFBundleIdentifier": "dev.integrated-macro.desktop",
+    "CFBundleInfoDictionaryVersion": "6.0",
+    "CFBundleName": "Integrated Macro",
+    "CFBundlePackageType": "APPL",
+    "CFBundleShortVersionString": "0.5.11",
+    "CFBundleVersion": "0.5.11",
+    "CSResourcesFileMapped": true,
+    "LSMinimumSystemVersion": "13.0",
+    "CFBundleIconFile": "icon.icns",
+    "LSRequiresCarbon": true,
+    "NSHighResolutionCapable": true,
+    "NSScreenCaptureUsageDescription": "선택한 브라우저 창에서 구역과 좌석 색상을 확인합니다."
+  },
+  "commands": [
+    {
+      "argv": [
+        "file",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.11/Integrated Macro.app/Contents/MacOS/integrated-macro"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.11/Integrated Macro.app/Contents/MacOS/integrated-macro: Mach-O 64-bit executable arm64\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "lipo",
+        "-archs",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.11/Integrated Macro.app/Contents/MacOS/integrated-macro"
+      ],
+      "exitCode": 0,
+      "stdout": "arm64\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "codesign",
+        "--verify",
+        "--deep",
+        "--strict",
+        "--verbose=2",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.11/Integrated Macro.app"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.11/Integrated Macro.app: valid on disk\n/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.11/Integrated Macro.app: satisfies its Designated Requirement\n"
+    },
+    {
+      "argv": [
+        "codesign",
+        "-dvvv",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.11/Integrated Macro.app"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "Executable=/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.11/Integrated Macro.app/Contents/MacOS/integrated-macro\nIdentifier=dev.integrated-macro.desktop\nFormat=app bundle with Mach-O thin (arm64)\nCodeDirectory v=20500 size=26045 flags=0x10002(adhoc,runtime) hashes=807+3 location=embedded\nHash type=sha256 size=32\nCandidateCDHash sha256=21361d907b700f5463a77760b8678ee47f93de86\nCandidateCDHashFull sha256=21361d907b700f5463a77760b8678ee47f93de86f10b0c35d0b529f3bbb4ec56\nHash choices=sha256\nCMSDigest=21361d907b700f5463a77760b8678ee47f93de86f10b0c35d0b529f3bbb4ec56\nCMSDigestType=2\nCDHash=21361d907b700f5463a77760b8678ee47f93de86\nSignature=adhoc\nInfo.plist entries=15\nTeamIdentifier=not set\nRuntime Version=26.1.0\nSealed Resources version=2 rules=13 files=1\nInternal requirements count=0 size=12\n"
+    },
+    {
+      "argv": [
+        "otool",
+        "-L",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.11/Integrated Macro.app/Contents/MacOS/integrated-macro"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.11/Integrated Macro.app/Contents/MacOS/integrated-macro:\n\t/System/Library/Frameworks/Carbon.framework/Versions/A/Carbon (compatibility version 2.0.0, current version 170.0.0)\n\t/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics (compatibility version 64.0.0, current version 1965.1.4)\n\t/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 4109.1.255)\n\t/System/Library/Frameworks/WebKit.framework/Versions/A/WebKit (compatibility version 1.0.0, current version 622.2.11)\n\t/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices (compatibility version 1.0.0, current version 66.0.0)\n\t/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo (compatibility version 1.2.0, current version 726.2.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1356.0.0)\n\t/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 2685.20.119)\n\t/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore (compatibility version 1.2.0, current version 1193.39.8)\n\t/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 4109.1.255)\n\t/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)\n\t/System/Library/Frameworks/ScreenCaptureKit.framework/Versions/A/ScreenCaptureKit (compatibility version 1.0.0, current version 1.0.0)\n\t/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia (compatibility version 1.0.0, current version 3285.11.5)\n\t/usr/lib/swift/libswiftCore.dylib (compatibility version 0.0.0, current version 0.0.0)\n\t/usr/lib/swift/libswiftFoundation.dylib (compatibility version 1.0.0, current version 120.100.0)\n\t/usr/lib/swift/libswiftDispatch.dylib (compatibility version 1.0.0, current version 1542.100.32)\n\t/usr/lib/libiconv.2.dylib (compatibility version 7.0.0, current version 7.0.0)\n\t/System/Library/Frameworks/ColorSync.framework/Versions/A/ColorSync (compatibility version 1.0.0, current version 3813.1.2)\n\t/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices (compatibility version 1.0.0, current version 1226.0.0)\n\t/usr/lib/swift/libswiftAVFoundation.dylib (compatibility version 1.0.0, current version 2420.7.1, weak)\n\t/usr/lib/swift/libswiftCoreAudio.dylib (compatibility version 1.0.0, current version 411.255.0, weak)\n\t/usr/lib/swift/libswiftCoreFoundation.dylib (compatibility version 1.0.0, current version 120.100.0)\n\t/usr/lib/swift/libswiftCoreImage.dylib (compatibility version 1.0.0, current version 2.2.0, weak)\n\t/usr/lib/swift/libswiftCoreMIDI.dylib (compatibility version 1.0.0, current version 6.0.0, weak)\n\t/usr/lib/swift/libswiftCoreMedia.dylib (compatibility version 1.0.0, current version 3320.8.5)\n\t/usr/lib/swift/libswiftDarwin.dylib (compatibility version 1.0.0, current version 377.120.8, weak)\n\t/usr/lib/swift/libswiftIOKit.dylib (compatibility version 1.0.0, current version 1.0.0, weak)\n\t/usr/lib/swift/libswiftMetal.dylib (compatibility version 1.0.0, current version 373.2.0, weak)\n\t/usr/lib/swift/libswiftOSLog.dylib (compatibility version 1.0.0, current version 10.0.0, weak)\n\t/usr/lib/swift/libswiftObjectiveC.dylib (compatibility version 1.0.0, current version 951.7.0, weak)\n\t/usr/lib/swift/libswiftQuartzCore.dylib (compatibility version 1.0.0, current version 5.0.0, weak)\n\t/usr/lib/swift/libswiftSpatial.dylib (compatibility version 1.0.0, current version 1.0.0, weak)\n\t/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib (compatibility version 1.0.0, current version 877.5.1, weak)\n\t/usr/lib/swift/libswiftXPC.dylib (compatibility version 1.0.0, current version 128.120.2, weak)\n\t/usr/lib/swift/libswiftos.dylib (compatibility version 1.0.0, current version 1082.0.0, weak)\n\t/usr/lib/swift/libswiftsimd.dylib (compatibility version 1.0.0, current version 23.0.0, weak)\n\t/usr/lib/swift/libswiftCoreGraphics.dylib (compatibility version 1.0.0, current version 1.0.0)\n\t/usr/lib/swift/libswiftAppKit.dylib (compatibility version 1.0.0, current version 1.0.0)\n",
+      "stderr": ""
+    }
+  ],
+  "appFiles": {
+    "Contents/Info.plist": {
+      "sha256": "56ebf564ad3e3792dcca445eead26633b1e3b8a477145d1d1d64d843005a0d02",
+      "mode": "0o644",
+      "bytes": 1138
+    },
+    "Contents/_CodeSignature/CodeResources": {
+      "sha256": "8b2a4458d8753f7d50800825612316fdb422f2d68b7ce3f7a1728de045d089ac",
+      "mode": "0o644",
+      "bytes": 2440
+    },
+    "Contents/MacOS/integrated-macro": {
+      "sha256": "41c02ab87a70e12613de5386363087ea23f030b81723b87010d894fc240ada93",
+      "mode": "0o755",
+      "bytes": 13258416
+    },
+    "Contents/Resources/icon.icns": {
+      "sha256": "be80f1eb77b66015d3119b9d8483fae0c3684f3169793b93a5372d505b827a7c",
+      "mode": "0o644",
+      "bytes": 586867
+    }
+  },
+  "actualBuildFiles": {
+    "Contents/Info.plist": {
+      "sha256": "56ebf564ad3e3792dcca445eead26633b1e3b8a477145d1d1d64d843005a0d02",
+      "mode": "0o644",
+      "bytes": 1138
+    },
+    "Contents/_CodeSignature/CodeResources": {
+      "sha256": "8b2a4458d8753f7d50800825612316fdb422f2d68b7ce3f7a1728de045d089ac",
+      "mode": "0o644",
+      "bytes": 2440
+    },
+    "Contents/MacOS/integrated-macro": {
+      "sha256": "41c02ab87a70e12613de5386363087ea23f030b81723b87010d894fc240ada93",
+      "mode": "0o755",
+      "bytes": 13258416
+    },
+    "Contents/Resources/icon.icns": {
+      "sha256": "be80f1eb77b66015d3119b9d8483fae0c3684f3169793b93a5372d505b827a7c",
+      "mode": "0o644",
+      "bytes": 586867
+    }
+  },
+  "zipAppFiles": {
+    "Contents/Info.plist": {
+      "sha256": "56ebf564ad3e3792dcca445eead26633b1e3b8a477145d1d1d64d843005a0d02",
+      "mode": "0o644",
+      "bytes": 1138
+    },
+    "Contents/_CodeSignature/CodeResources": {
+      "sha256": "8b2a4458d8753f7d50800825612316fdb422f2d68b7ce3f7a1728de045d089ac",
+      "mode": "0o644",
+      "bytes": 2440
+    },
+    "Contents/MacOS/integrated-macro": {
+      "sha256": "41c02ab87a70e12613de5386363087ea23f030b81723b87010d894fc240ada93",
+      "mode": "0o755",
+      "bytes": 13258416
+    },
+    "Contents/Resources/icon.icns": {
+      "sha256": "be80f1eb77b66015d3119b9d8483fae0c3684f3169793b93a5372d505b827a7c",
+      "mode": "0o644",
+      "bytes": 586867
+    }
+  },
+  "archive": "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.11.zip",
+  "archiveSHA256": "f8430ad8262923840ab549c6fd25d128dc5e7dad44fbfb91e483cfdc0839722c",
+  "archiveBytes": 5046088,
+  "zipCRCError": null,
+  "manifests": {
+    "rootSource": {
+      "count": 138,
+      "mismatches": []
+    },
+    "independentReview": {
+      "count": 13,
+      "mismatches": []
+    },
+    "buildGateSource": {
+      "count": 128,
+      "mismatches": []
+    },
+    "protectedFiles": {
+      "count": 22,
+      "mismatches": []
+    }
+  },
+  "requiredChecksPassed": 31,
+  "rustTotalsParsedFromActualOutput": {
+    "passed": 466,
+    "failed": 0,
+    "ignored": 5
+  },
+  "javascriptPassParsedFromActualOutput": 172,
+  "buildResultSHA256": "687f65cc14f5c3839661d87137466ffc40c7618854e40cef534ae2f604f5902b",
+  "distributionReceiptSHA256": "4f4552affdd1497fd88d8ff7c630955ce1f1c107205f79184a7c0e4bde612ce7",
+  "checkReportSHA256": "9c79612835cf18ddf4dc58a36bdcf8a668343d154727d9040f6edeb218789f79",
+  "limitations": [
+    "No packaged app launch, actual capture/input/overlay, authenticated site, or Windows runtime execution.",
+    "arm64 package; two-architecture Swift check is not an Intel app package.",
+    "Ad-hoc code signature is not Apple notarization.",
+    "Here ZIP application bytes/modes are streamed and compared; separate adversarial review performs extraction and embedded UI inspection."
+  ],
+  "reviewToolNote": "The initial report attempt assumed TAP # pass format and stopped before creating this report; corrected parser accepts actual Node spec ℹ pass output. No artifact failure occurred."
+}

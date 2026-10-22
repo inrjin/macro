@@ -1,0 +1,375 @@
+{
+  "recordedAt": "2026-10-21T15:44:01.379306+00:00",
+  "issues": [],
+  "archive": "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.11.zip",
+  "archiveSHA256": "f8430ad8262923840ab549c6fd25d128dc5e7dad44fbfb91e483cfdc0839722c",
+  "archiveBytes": 5046088,
+  "archiveEntries": 57,
+  "duplicateEntries": [],
+  "unsafeEntries": [],
+  "corruptEntry": null,
+  "distribution": "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.11",
+  "distributionFiles": {
+    "Integrated Macro.app/Contents/Info.plist": {
+      "type": "file",
+      "sha256": "56ebf564ad3e3792dcca445eead26633b1e3b8a477145d1d1d64d843005a0d02",
+      "bytes": 1138,
+      "mode": "0o644"
+    },
+    "Integrated Macro.app/Contents/MacOS/integrated-macro": {
+      "type": "file",
+      "sha256": "41c02ab87a70e12613de5386363087ea23f030b81723b87010d894fc240ada93",
+      "bytes": 13258416,
+      "mode": "0o755"
+    },
+    "Integrated Macro.app/Contents/Resources/icon.icns": {
+      "type": "file",
+      "sha256": "be80f1eb77b66015d3119b9d8483fae0c3684f3169793b93a5372d505b827a7c",
+      "bytes": 586867,
+      "mode": "0o644"
+    },
+    "Integrated Macro.app/Contents/_CodeSignature/CodeResources": {
+      "type": "file",
+      "sha256": "8b2a4458d8753f7d50800825612316fdb422f2d68b7ce3f7a1728de045d089ac",
+      "bytes": 2440,
+      "mode": "0o644"
+    },
+    "README.txt": {
+      "type": "file",
+      "sha256": "072047201b0bdee0be905856d17f31360a193045a74b0bfd01121ea7e2dbe6af",
+      "bytes": 4707,
+      "mode": "0o644"
+    },
+    "input-check.html": {
+      "type": "file",
+      "sha256": "518d0d95b8a1eacb8941f4dadeb77ce5a480079f37e7ebd3e563cf5363d804e1",
+      "bytes": 8476,
+      "mode": "0o644"
+    },
+    "keyboard-check.html": {
+      "type": "file",
+      "sha256": "40854f9fe41f46d76f5fc54a65afd2502f0bc90db605451b6521188bc85b884b",
+      "bytes": 7080,
+      "mode": "0o644"
+    },
+    "verification/README.txt": {
+      "type": "file",
+      "sha256": "3aadfb9d694d5fdc52b2c91a52e3bff157481a2fb2a833172d8a6b5b05db1aba",
+      "bytes": 716,
+      "mode": "0o644"
+    },
+    "verification/build-and-checks.log": {
+      "type": "file",
+      "sha256": "4c038e508b8b0908f8d34317f1a840004828e7fb6be1ecbbea78fc57845f49d0",
+      "bytes": 69653,
+      "mode": "0o644"
+    },
+    "verification/build-result.json": {
+      "type": "file",
+      "sha256": "687f65cc14f5c3839661d87137466ffc40c7618854e40cef534ae2f604f5902b",
+      "bytes": 2160,
+      "mode": "0o644"
+    },
+    "verification/f9-audit-README.md": {
+      "type": "file",
+      "sha256": "426f49dba8144c990fc5273d756b3e427d32af0b7e0b05374e13fb5d5a907512",
+      "bytes": 4494,
+      "mode": "0o644"
+    },
+    "verification/f9-audit-final-manifest.json": {
+      "type": "file",
+      "sha256": "4f9b7307ccdac6808386be69f84f53ccbbb4e06a90954a76b7bbbd9b47484a68",
+      "bytes": 17598,
+      "mode": "0o644"
+    },
+    "verification/local-checks.json": {
+      "type": "file",
+      "sha256": "9c79612835cf18ddf4dc58a36bdcf8a668343d154727d9040f6edeb218789f79",
+      "bytes": 94884,
+      "mode": "0o644"
+    },
+    "verification/package-receipt.json": {
+      "type": "file",
+      "sha256": "e3a55c3ffa95446ebd2d0d133f4fbd58e4c82a693f60964ea01f6a91d4a7ef65",
+      "bytes": 1682,
+      "mode": "0o644"
+    },
+    "verification/previous-reentrant-source-review.json": {
+      "type": "file",
+      "sha256": "7b3f969826c920810d24325158d787729c814b4de1022c464761af9d097aba20",
+      "bytes": 2514,
+      "mode": "0o644"
+    },
+    "verification/source-after-build.json": {
+      "type": "file",
+      "sha256": "65f9ab47828be205c5f7cee7c255af364e3e5872007861cc53034c75e9ad9258",
+      "bytes": 14791,
+      "mode": "0o644"
+    },
+    "verification/source-continuity.json": {
+      "type": "file",
+      "sha256": "ec68ca8515267fa3295e4b117a2f24112b362e7ca342f7dcef1e2de7cd57271d",
+      "bytes": 1351,
+      "mode": "0o644"
+    },
+    "verification/version-only.diff": {
+      "type": "file",
+      "sha256": "afadce01083b50df62319d5b84d815d3caec7413b5b65b1b18ab945dc155a0e9",
+      "bytes": 3202,
+      "mode": "0o644"
+    }
+  },
+  "packagedAppMatchesBuild": true,
+  "extraction": {
+    "missing": [],
+    "added": [],
+    "different": [],
+    "signature": {
+      "argv": [
+        "codesign",
+        "--verify",
+        "--deep",
+        "--strict",
+        "--verbose=2",
+        "/var/folders/bj/nj6jtv9x0lj28lpv4hv8hhhw0000gn/T/macro-0511-review-yz_vzj01/Integrated-Macro-macOS-v0.5.11/Integrated Macro.app"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "/var/folders/bj/nj6jtv9x0lj28lpv4hv8hhhw0000gn/T/macro-0511-review-yz_vzj01/Integrated-Macro-macOS-v0.5.11/Integrated Macro.app: valid on disk\n/var/folders/bj/nj6jtv9x0lj28lpv4hv8hhhw0000gn/T/macro-0511-review-yz_vzj01/Integrated-Macro-macOS-v0.5.11/Integrated Macro.app: satisfies its Designated Requirement\n"
+    }
+  },
+  "infoPlist": {
+    "CFBundleDevelopmentRegion": "English",
+    "CFBundleDisplayName": "Integrated Macro",
+    "CFBundleExecutable": "integrated-macro",
+    "CFBundleIdentifier": "dev.integrated-macro.desktop",
+    "CFBundleInfoDictionaryVersion": "6.0",
+    "CFBundleName": "Integrated Macro",
+    "CFBundlePackageType": "APPL",
+    "CFBundleShortVersionString": "0.5.11",
+    "CFBundleVersion": "0.5.11",
+    "CSResourcesFileMapped": true,
+    "LSMinimumSystemVersion": "13.0",
+    "CFBundleIconFile": "icon.icns",
+    "LSRequiresCarbon": true,
+    "NSHighResolutionCapable": true,
+    "NSScreenCaptureUsageDescription": "선택한 브라우저 창에서 구역과 좌석 색상을 확인합니다."
+  },
+  "commands": [
+    {
+      "argv": [
+        "file",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.11/Integrated Macro.app/Contents/MacOS/integrated-macro"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.11/Integrated Macro.app/Contents/MacOS/integrated-macro: Mach-O 64-bit executable arm64\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "lipo",
+        "-archs",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.11/Integrated Macro.app/Contents/MacOS/integrated-macro"
+      ],
+      "exitCode": 0,
+      "stdout": "arm64\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "otool",
+        "-L",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.11/Integrated Macro.app/Contents/MacOS/integrated-macro"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.11/Integrated Macro.app/Contents/MacOS/integrated-macro:\n\t/System/Library/Frameworks/Carbon.framework/Versions/A/Carbon (compatibility version 2.0.0, current version 170.0.0)\n\t/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics (compatibility version 64.0.0, current version 1965.1.4)\n\t/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 4109.1.255)\n\t/System/Library/Frameworks/WebKit.framework/Versions/A/WebKit (compatibility version 1.0.0, current version 622.2.11)\n\t/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices (compatibility version 1.0.0, current version 66.0.0)\n\t/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo (compatibility version 1.2.0, current version 726.2.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1356.0.0)\n\t/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 2685.20.119)\n\t/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore (compatibility version 1.2.0, current version 1193.39.8)\n\t/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 4109.1.255)\n\t/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)\n\t/System/Library/Frameworks/ScreenCaptureKit.framework/Versions/A/ScreenCaptureKit (compatibility version 1.0.0, current version 1.0.0)\n\t/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia (compatibility version 1.0.0, current version 3285.11.5)\n\t/usr/lib/swift/libswiftCore.dylib (compatibility version 0.0.0, current version 0.0.0)\n\t/usr/lib/swift/libswiftFoundation.dylib (compatibility version 1.0.0, current version 120.100.0)\n\t/usr/lib/swift/libswiftDispatch.dylib (compatibility version 1.0.0, current version 1542.100.32)\n\t/usr/lib/libiconv.2.dylib (compatibility version 7.0.0, current version 7.0.0)\n\t/System/Library/Frameworks/ColorSync.framework/Versions/A/ColorSync (compatibility version 1.0.0, current version 3813.1.2)\n\t/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices (compatibility version 1.0.0, current version 1226.0.0)\n\t/usr/lib/swift/libswiftAVFoundation.dylib (compatibility version 1.0.0, current version 2420.7.1, weak)\n\t/usr/lib/swift/libswiftCoreAudio.dylib (compatibility version 1.0.0, current version 411.255.0, weak)\n\t/usr/lib/swift/libswiftCoreFoundation.dylib (compatibility version 1.0.0, current version 120.100.0)\n\t/usr/lib/swift/libswiftCoreImage.dylib (compatibility version 1.0.0, current version 2.2.0, weak)\n\t/usr/lib/swift/libswiftCoreMIDI.dylib (compatibility version 1.0.0, current version 6.0.0, weak)\n\t/usr/lib/swift/libswiftCoreMedia.dylib (compatibility version 1.0.0, current version 3320.8.5)\n\t/usr/lib/swift/libswiftDarwin.dylib (compatibility version 1.0.0, current version 377.120.8, weak)\n\t/usr/lib/swift/libswiftIOKit.dylib (compatibility version 1.0.0, current version 1.0.0, weak)\n\t/usr/lib/swift/libswiftMetal.dylib (compatibility version 1.0.0, current version 373.2.0, weak)\n\t/usr/lib/swift/libswiftOSLog.dylib (compatibility version 1.0.0, current version 10.0.0, weak)\n\t/usr/lib/swift/libswiftObjectiveC.dylib (compatibility version 1.0.0, current version 951.7.0, weak)\n\t/usr/lib/swift/libswiftQuartzCore.dylib (compatibility version 1.0.0, current version 5.0.0, weak)\n\t/usr/lib/swift/libswiftSpatial.dylib (compatibility version 1.0.0, current version 1.0.0, weak)\n\t/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib (compatibility version 1.0.0, current version 877.5.1, weak)\n\t/usr/lib/swift/libswiftXPC.dylib (compatibility version 1.0.0, current version 128.120.2, weak)\n\t/usr/lib/swift/libswiftos.dylib (compatibility version 1.0.0, current version 1082.0.0, weak)\n\t/usr/lib/swift/libswiftsimd.dylib (compatibility version 1.0.0, current version 23.0.0, weak)\n\t/usr/lib/swift/libswiftCoreGraphics.dylib (compatibility version 1.0.0, current version 1.0.0)\n\t/usr/lib/swift/libswiftAppKit.dylib (compatibility version 1.0.0, current version 1.0.0)\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "codesign",
+        "--verify",
+        "--deep",
+        "--strict",
+        "--verbose=2",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.11/Integrated Macro.app"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.11/Integrated Macro.app: valid on disk\n/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.11/Integrated Macro.app: satisfies its Designated Requirement\n"
+    },
+    {
+      "argv": [
+        "codesign",
+        "-dvvv",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.11/Integrated Macro.app"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "Executable=/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.11/Integrated Macro.app/Contents/MacOS/integrated-macro\nIdentifier=dev.integrated-macro.desktop\nFormat=app bundle with Mach-O thin (arm64)\nCodeDirectory v=20500 size=26045 flags=0x10002(adhoc,runtime) hashes=807+3 location=embedded\nHash type=sha256 size=32\nCandidateCDHash sha256=21361d907b700f5463a77760b8678ee47f93de86\nCandidateCDHashFull sha256=21361d907b700f5463a77760b8678ee47f93de86f10b0c35d0b529f3bbb4ec56\nHash choices=sha256\nCMSDigest=21361d907b700f5463a77760b8678ee47f93de86f10b0c35d0b529f3bbb4ec56\nCMSDigestType=2\nCDHash=21361d907b700f5463a77760b8678ee47f93de86\nSignature=adhoc\nInfo.plist entries=15\nTeamIdentifier=not set\nRuntime Version=26.1.0\nSealed Resources version=2 rules=13 files=1\nInternal requirements count=0 size=12\n"
+    },
+    {
+      "argv": [
+        "codesign",
+        "-d",
+        "--entitlements",
+        "-",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.11/Integrated Macro.app"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "Executable=/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.11/Integrated Macro.app/Contents/MacOS/integrated-macro\n"
+    }
+  ],
+  "nonSystemDependencies": [],
+  "assets": [
+    {
+      "source": "ui/app.js",
+      "matches": [
+        {
+          "asset": "target/release/build/integrated-macro-394e0eaeeceedf73/out/tauri-codegen-assets/61955be4867b156e02ece8185ae198ef19f0c8b11489a8b182a94665c7d8c329.js",
+          "compressedSHA256": "6e799fe066640b2edfef455272dc1bd260d78a2d82e2737a7b25fc8af606bac5",
+          "plainSHA256": "baea51b1dbd2c172c65bde970d2e3eff42640e53d75ee62ab44d8bd6b7f60486",
+          "binaryOffset": 8335045,
+          "exact": true
+        }
+      ]
+    },
+    {
+      "source": "ui/capture-state.js",
+      "matches": [
+        {
+          "asset": "target/release/build/integrated-macro-0392a91baa486bed/out/tauri-codegen-assets/812c83a228a3300cfe2f94fcd103265a7b0ce47af620b94e0649e39d54463f09.js",
+          "compressedSHA256": "74bb87183c2bdd77e3e312f8c4e91f462b0731d44ae4ece1ef05ec04af80ee06",
+          "plainSHA256": "8fabf974f9998c60d723d4e052eecaabd0456c30570e0a5bc755c6f769d4323a",
+          "binaryOffset": 8330829,
+          "exact": true
+        }
+      ]
+    },
+    {
+      "source": "ui/index.html",
+      "matches": [
+        {
+          "asset": "target/release/build/integrated-macro-394e0eaeeceedf73/out/tauri-codegen-assets/1a2781ffc697d19b86adb94b69d0701c1d4f3e326c5e197764e3934e8aa0c32e.html",
+          "compressedSHA256": "783d635626c79848d12a341058a16bc836ff12841183f0cf0c193ec973c3fa2d",
+          "plainSHA256": "b3d3b4b66700788cbd19472c5d8f6effe55bda0f8f877c9a2e06f9d9a8ad483f",
+          "binaryOffset": 8408167,
+          "exact": false,
+          "normalizedHTMLTokensEqual": true,
+          "expectedVersionPresent": true
+        }
+      ]
+    },
+    {
+      "source": "ui/model.js",
+      "matches": [
+        {
+          "asset": "target/release/build/integrated-macro-394e0eaeeceedf73/out/tauri-codegen-assets/d6cfcee05c8debfe657b3ca38fabea2d8950a43bd22aa3af7efafd01026f56df.js",
+          "compressedSHA256": "c38c0ba79298bb1fa7447f0a294ee28cd939f315e3240f879ec93bb7ae276f72",
+          "plainSHA256": "2351e89ce198302b34f13358c980734b26747dd43594a16b2f442480ee8d101e",
+          "binaryOffset": 8319496,
+          "exact": true
+        }
+      ]
+    },
+    {
+      "source": "ui/overlay.html",
+      "matches": [
+        {
+          "asset": "target/release/build/integrated-macro-0392a91baa486bed/out/tauri-codegen-assets/c69d375ba0f75ee561afaec42ab364e9977f3c49f71449c20cb08333dd51117f.html",
+          "compressedSHA256": "533369eac05ac69b6c2574c2245b996d9400cf83f87ce62a4206f54f33f94f7e",
+          "plainSHA256": "285c8eb11bb05baf85b52f101104a9bf7a0e3291a0813986593065dd86f03fb5",
+          "binaryOffset": 8394311,
+          "exact": false,
+          "normalizedHTMLTokensEqual": true
+        }
+      ]
+    },
+    {
+      "source": "ui/overlay.js",
+      "matches": [
+        {
+          "asset": "target/release/build/integrated-macro-394e0eaeeceedf73/out/tauri-codegen-assets/416855b89e9353c7688dd88aadf3c8fdce028519d1a4d723c24494e551560e6e.js",
+          "compressedSHA256": "a44d2b552329d3c7af89c8c96f42d9845a6f28a144fbbd3d7ee97394644fabc7",
+          "plainSHA256": "00cc95eee61939c572556466139193b78b7f91df2f46c619b16da805fe239b41",
+          "binaryOffset": 8380563,
+          "exact": true
+        }
+      ]
+    },
+    {
+      "source": "ui/package.json",
+      "matches": [
+        {
+          "asset": "target/release/build/integrated-macro-394e0eaeeceedf73/out/tauri-codegen-assets/5ae803850b48e33cd995c98ed12b2b9f4b5a25c3c5c1732e87f4581c7fc005a2.json",
+          "compressedSHA256": "d5ab841456e9d17ff870160ac2fed73a238ff50f6a21f8e21ab6423f790aa5ba",
+          "plainSHA256": "a83b7d91c7e2a7153a6422646d201c8d798e86c93b465f4b289ab493d6bb88ab",
+          "binaryOffset": 8351657,
+          "exact": true
+        }
+      ]
+    },
+    {
+      "source": "ui/profile-sync.js",
+      "matches": [
+        {
+          "asset": "target/release/build/integrated-macro-394e0eaeeceedf73/out/tauri-codegen-assets/71ab0f8d45e7840b99a7f778c2e610b7cb2981c4f09c4b4a5e7c04f87a472e60.js",
+          "compressedSHA256": "b7b7ded35eafc95de2e5be682a81ae1604727b6ffbfae2d0e811de9e634c9c68",
+          "plainSHA256": "bca854080e15b95ef3974d93a7a6cce7a1f0edad817f580625a9661ec3bbb45e",
+          "binaryOffset": 8366579,
+          "exact": true
+        }
+      ]
+    },
+    {
+      "source": "ui/styles.css",
+      "matches": [
+        {
+          "asset": "target/release/build/integrated-macro-0392a91baa486bed/out/tauri-codegen-assets/8aeca666d95a24483c8ab9f1de67f15f4b38e947d99c8b24df5f620e64bbf956.css",
+          "compressedSHA256": "a6c07077efcd3884bbafd060d96cf3efb09614c4df764c021e2bf0beb9e4bea7",
+          "plainSHA256": "a121ebc675b191f32474b493a3a10c603dcffa447e5d15a0497fda701235e3e1",
+          "binaryOffset": 8356771,
+          "exact": true
+        }
+      ]
+    }
+  ],
+  "checkReport": "verification/release-0.5.11/local-checks.json",
+  "checkReportSHA256": "9c79612835cf18ddf4dc58a36bdcf8a668343d154727d9040f6edeb218789f79",
+  "checkedSourceCount": 128,
+  "sourceMismatches": [],
+  "limitations": [
+    "No app launch, actual capture/input/overlay, authenticated site or Windows runtime execution.",
+    "Thin arm64 application; x86_64 native compile is not an Intel app.",
+    "Ad-hoc local signature is not Apple notarization.",
+    "Embedded compressed bytes/HTML token comparison does not establish live webview behavior."
+  ],
+  "protectedFiles": {
+    "count": 22,
+    "changed": [],
+    "manifestSHA256": "2d75c78fdbf48f4a3677e245ab1b70f45083ee36d05522fd9f47cfc2b9f4d017"
+  },
+  "completeSourceManifest": {
+    "files": 138,
+    "beforeEqualsAfter": true,
+    "currentMismatches": [],
+    "sha256": "65f9ab47828be205c5f7cee7c255af364e3e5872007861cc53034c75e9ad9258"
+  },
+  "buildResultExecutableHashMatches": true,
+  "bundledVerificationCopyMismatches": [],
+  "requiredChecksPassed": 31,
+  "automatedResults": {
+    "javascriptPassed": 172,
+    "rustPassed": 466,
+    "rustFailed": 0,
+    "rustIgnored": 5
+  },
+  "documentationReview": {
+    "readmeEqualsReviewedDraft": true,
+    "description": "Exact F9/shortcut/option labels and same-context conflict recovery agree with reviewed source; failed native rebind reset limitation disclosed. Apple Silicon/macOS13/ad-hoc/unnotarized/live-site limitations stated. Detailed audit references are source-relative and explicitly not all bundled.",
+    "verificationReadmeSHA256": "3aadfb9d694d5fdc52b2c91a52e3bff157481a2fb2a833172d8a6b5b05db1aba"
+  },
+  "buildGateLiveReleaseReady": false,
+  "reviewerExecution": "Artifact inspection only; no packaged executable or GUI launched."
+}

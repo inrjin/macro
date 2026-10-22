@@ -1,0 +1,7 @@
+{
+  "crates/macro-core/src/selection_count.rs": "2dcd7760c4812ab684457ee708e033ac526ffb3e0146340952ec2ec670ba7e84",
+  "crates/macro-core/src/selection_count_layout.rs": "386de039c740adc1c29de32b717783ac08f3bb02fd076235990850fb4976810d",
+  "crates/macro-core/src/selection_count_assets/templates.json": "52ce816c2e10dadeb681ac796da6af1689f4aacd00e6d2fc6e11484d51989cee",
+  "crates/macro-core/src/selection_count_assets/empty-negative.json": "eff7d4668bed09ccd7e8fba82b8fc052000ac3ed30e0d729f91e5cef79486a4c",
+  "crates/macro-core/tests/selection_count_audit_reader.rs": "63f4979023ed94d8ce062cc0102c173c5dcf7cb534e21b79c8a1de22790e3de9"
+}

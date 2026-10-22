@@ -1,0 +1,9 @@
+# Count-mode context recovery caller review
+
+The new `automatic_context_recovery` helper preserves the existing continuous-search branch and adds only count-verification runs in Seats, Conflict or Completing. The remaining non-continuous Entry, CAPTCHA, Region, WaitingRegion and WaitingRefresh phases are unchanged, as is feature OFF.
+
+Both actual callers were read: `pause_for_context_at` computes eligibility before cancelling queued input and entering ContextLost, then clears the cached frame and installs TargetRecovery only for a recognized recoverable context error. The native-error branch checks eligibility while the action is pending, restores any navigation visual watch, sends ActionCancelled (known non-delivery), then calls the same pause routine. For the newly covered Seat/Complete/Escape actions, cancellation returns to Seats/Completing/Conflict respectively, so the second eligibility check remains valid. Unknown or partial delivery errors still fall through to fault handling.
+
+The existing cancellation path drops the action proof and stale action ID. Resume does not grant seat input: count mode still requires a new map/count event. Deliberate user Pause is not converted into automatic recovery. Target validation and captured-frame checks in recover_target remain unchanged.
+
+`count_verified_legacy_context_retry_is_limited_to_seat_result_phases` exercises the production policy helper with the actual Engine, cancellation/context/resume transitions, allowed/disallowed phase matrices, OFF and original continuous policy controls. It does not instantiate a Worker or run either caller through native/Tauri state. Caller wiring and order are covered by this independent source review. No additional blocker was found; no app, browser, native input or Windows behavior was exercised.

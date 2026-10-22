@@ -1,0 +1,41 @@
+{
+  "version": "0.5.10",
+  "generatedAt": "2026-10-21T13:24:13.056841+00:00",
+  "platform": "macOS",
+  "arch": "arm64",
+  "minimumMacOS": "13.0",
+  "bundleIdentifier": "dev.integrated-macro.desktop",
+  "buildExitCode": 0,
+  "signatureVerification": "passed",
+  "signing": "ad-hoc; not notarized",
+  "rust": {
+    "passed": 425,
+    "failed": 0,
+    "ignored": 5
+  },
+  "javascript": {
+    "passed": 150,
+    "failed": 0
+  },
+  "native": "Swift arm64/x86_64 compile and host synthetic ABI passed; not Intel app packaging",
+  "sourceAuditFiles": 131,
+  "sourceBeforeAfterEqual": true,
+  "previousReleaseAndAgentsUnchanged": true,
+  "appExecutableSHA256": "53a848be4d714fb4276f7c85dc2f68fab0f41c82fb245a6b7619c17e9da48a3d",
+  "appLaunched": false,
+  "liveBookingTested": false,
+  "windowsBuiltOrRun": false,
+  "sourceChangesSinceAudit": "9 version metadata/UI files plus README documentation; no behavior code changes",
+  "warnings": [
+    "Existing unused VisualRecovery.status method compiler warning",
+    "Native synthetic test process emitted macOS service-connection messages; synthetic ABI returned success",
+    "Not notarized"
+  ],
+  "limitations": [
+    "Actual macOS input/capture/overlay",
+    "Actual Windows input/capture/overlay",
+    "Authenticated NOL booking flow",
+    "Browser transport and site contracts",
+    "End-to-end latency"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "version": "0.5.3",
+  "architecture": "arm64",
+  "sourceSha256Verified": true,
+  "bundleSignatureVerified": true,
+  "executableSha256": "40920a2456a1aced471505faf0f3ee3a5ac35fb0704d2e1ab66f31dbc9bc4586",
+  "rustTestsPassed": 79,
+  "javascriptTestsPassed": 51,
+  "nativeSyntheticWindowCasesPassed": 43,
+  "nativeLazyProbeAssertionsPassed": 1,
+  "nativeFocusCacheAssertionsPassed": 8,
+  "actualMacInputVerified": false,
+  "realBrowserUiVerified": false,
+  "actualBrowserAXVerified": false,
+  "releaseReady": false,
+  "evidenceSha256": {
+    "local-checks.json": "0080059a2d53688d2cf445eb33a56d1aa099aa156981088ab2ee8628d3bfd65c",
+    "native-0.5.3.json": "f63e3eaf1970c24d911b6fcece0689eb589e50a64b6ed36b833fd04b286decf3",
+    "reported-dock-window-metadata.json": "1aa05242dc25be7e9ade55ed11072e69ef3680127a497eceeff00ac3e70f00cc"
+  }
+}

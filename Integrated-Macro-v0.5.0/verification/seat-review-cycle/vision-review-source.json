@@ -1,0 +1,16 @@
+{
+  "scope": "final retained production source after mask proposal rejected",
+  "source_sha256": {
+    "crates/macro-core/src/model.rs": "9aff51550b8ea36c52ed811bc1959074e2c317512a846690edb74d5e9b275857",
+    "crates/macro-core/src/vision.rs": "25f24856ab8d66f93a3e276d54e7ccb5d871df290d6325e81f77ba4b044aa396",
+    "crates/macro-core/src/seat_selection.rs": "7248517b7f3065ccb78d9a640d15ce62f19730ecbc5013e7fe5cf85d641aec1a",
+    "crates/macro-core/src/engine.rs": "f9edcd0da55a92a86b188186252053c00f976fd2a370afff11bca801cdef86df",
+    "src-tauri/src/runtime.rs": "eacdcd9a99f3cc1051a85e42db8227071d670b2ca3b1a75ec54e6d9d32203481",
+    "crates/macro-core/tests/seat_shape_regressions.rs": "90cb4d8bc8bfb58e20d78cf5a480504a84d1e8fc0e8a1c4c62ca07ea0a519c05"
+  },
+  "normal_regressions_passed": 5,
+  "known_limit_success_assertions_in_production_tests": 0,
+  "mask_proposal_adopted": false,
+  "production_model_and_vision_match_before": true,
+  "os_or_browser_executed": false
+}

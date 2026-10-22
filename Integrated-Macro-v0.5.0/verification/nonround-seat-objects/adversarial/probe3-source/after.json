@@ -1,0 +1,11 @@
+{
+  "hashes": {
+    "crates/macro-core/src/seat_object_shapes.rs": "f724cb29ded86af9d365879cb68652075f8104b91c63d2442b8ee60801ae282e",
+    "crates/macro-core/src/seat_objects.rs": "95d696aa1deab1987491352cbfcfc4cbc2f508f6b71ec1ff32f26f645f19982d",
+    "crates/macro-core/src/model.rs": "1580d678e27faf68534dad31de5897d2c58bf9809d5faea9f1169f1061c9278e",
+    "crates/macro-core/src/seat_selection.rs": "37118aff1832c00db7188fc81766fc5f957ee95f80cbb52d0c2a3c0f5e2c2ac9",
+    "crates/macro-core/tests/seat_object_nonround_review.rs": "c43b53115eafac77d1a5c9df4e66a9899e2385d1b1430d1f4b31fe5c2d9864e1",
+    "crates/macro-core/tests/support/seat_object_shapes.rs": "b2451715beb9083e822104757672f6bfe5f2c5de652ec4206ab84067ea8f4efc"
+  },
+  "changed": []
+}

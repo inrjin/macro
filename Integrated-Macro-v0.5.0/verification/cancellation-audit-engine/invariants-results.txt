@@ -1,0 +1,4 @@
+PASS refreshFlag=false confirmedRetained=false: retained state unchanged, same-generation retry, no refresh, exact shortfall, stale ACK/result ignored
+PASS refreshFlag=false confirmedRetained=true: retained state unchanged, same-generation retry, no refresh, exact shortfall, stale ACK/result ignored
+PASS refreshFlag=true confirmedRetained=false: retained state unchanged, same-generation retry, no refresh, exact shortfall, stale ACK/result ignored
+PASS refreshFlag=true confirmedRetained=true: retained state unchanged, same-generation retry, no refresh, exact shortfall, stale ACK/result ignored

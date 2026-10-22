@@ -1,0 +1,17 @@
+{
+  "checkpoint": "escape-before",
+  "scope": "Actual Engine failure acknowledgement and explicit F9; no OS/browser execution. Source hashes recorded immediately after failure, before implementer correction.",
+  "files": {
+    "crates/macro-core/src/engine.rs": "c336a931e59e71a5b009d4453ee39a35427204f03da245d42387c817f7761d9f",
+    "crates/macro-core/src/model.rs": "c0596021075c8401055eaeb52a86ddc613c33997070676ce69254371e8825ef0",
+    "src-tauri/src/runtime.rs": "6959e6303fed02094ca88b06b258ea093466d7609061cbde7e6ec44b8b33e7c8",
+    "crates/macro-core/tests/f9_any_state_review.rs": "a97aaf903c559471495e338cc9607a0b82389e8e455af2ad6394dd0494da0564"
+  },
+  "log": "escape-before.log",
+  "result": {
+    "passed": 0,
+    "failed": 1,
+    "expectedPhase": "Conflict",
+    "actualPhase": "Seats"
+  }
+}

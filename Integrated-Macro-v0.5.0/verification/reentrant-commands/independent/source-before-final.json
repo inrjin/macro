@@ -1,0 +1,18 @@
+{
+  "recordedAt": "2026-10-21T15:17:12.425047+00:00",
+  "stage": "before final independent focused run",
+  "sha256": {
+    "crates/macro-core/src/model.rs": "c2b8a8fe64a29eb01150fcbf874617a76b0d03065efd467d50743d962cfdf07a",
+    "crates/macro-core/src/engine.rs": "12d0c25ff1c45653c510c6ddfc51362d59137a13c7ea3ca4bf8a95c28901a41b",
+    "src-tauri/src/runtime.rs": "72a2671ece056caf1b9b8289db5b967336db2a493377dd851457ec2d118fbdd1",
+    "src-tauri/src/main.rs": "931e1a176b937231dc8729bec5e081f7ef43b1e2a441b238da7325338aa3a17a",
+    "src-tauri/src/reentrant_runtime_tests.rs": "ac6f8a8b65a77099781196033c115c1d2e0f40d46de4dc940f66083b8d610d00",
+    "crates/macro-core/tests/reentrant_commands_review.rs": "61c1d23ee2bcb6fa6e881e7e76509e50f7ea77c717fb099d5afa10f25c81482c",
+    "ui/app.js": "baea51b1dbd2c172c65bde970d2e3eff42640e53d75ee62ab44d8bd6b7f60486",
+    "ui/model.js": "2351e89ce198302b34f13358c980734b26747dd43594a16b2f442480ee8d101e",
+    "ui/overlay.js": "00cc95eee61939c572556466139193b78b7f91df2f46c619b16da805fe239b41",
+    "ui/index.html": "03d61767f68cd2f64198839549565ec455b4e0486bf684a020f4ef35abb8a42a",
+    "ui/tests/run-reentrant-review-dom.mjs": "52d41eda4084e04c8fd3080a0f85c1f0810d8c99c0590fb2a8fef1af4d37f86a",
+    "ui/tests/reentrant-review.test.js": "d89afffab7615d9d05de0f77f40baad3d385c3934faf784bc74ca05618281888"
+  }
+}

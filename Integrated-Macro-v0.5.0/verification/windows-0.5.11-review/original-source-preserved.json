@@ -1,0 +1,6 @@
+{
+  "src-tauri/src/runtime.rs": true,
+  "src-tauri/src/reentrant_runtime_tests.rs": true,
+  "crates/macro-core/src/engine.rs": true,
+  "README.md": true
+}

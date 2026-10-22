@@ -1,0 +1,39 @@
+{
+  "reviewer": "/root/fix_cancellation_start",
+  "recordedAtUtc": "2026-10-22T06:24:52.740660+00:00",
+  "reviewKind": "static build-kit source and caller review, no Windows execution",
+  "files": {
+    "Build-Windows.cmd": "4a21b07aa7c310b6c2e9fe3a7107355a6b0d02af8f1394b68b41caa4b8008796",
+    "build/Build-Windows.ps1": "ca41273d1569e148ee0212b41d366f2891e765ccd6f5cd27f9b509773f39ec08",
+    ".github/workflows/build-windows-0.5.11.yml": "e069a8de892ef3863bdecefc9ede3390d749da8c87a34fa4b07f282fcc2b8920",
+    ".gitattributes": "e5d1a47f1ba9849d4f424648836e0a6574a6beed7521d088177e69b0b5f04d73",
+    "README-Windows.md": "4de5345de002923d68411cc0c425d1b0bd2137e45345e24e562ba7717016e9c3",
+    "source-manifest.json": "65f9ab47828be205c5f7cee7c255af364e3e5872007861cc53034c75e9ad9258",
+    "fixture-manifest.json": "04621be0e312b6a6e0f686da8c4657c1b18d47d5759ba7b99dd501493fe6e7c1"
+  },
+  "releaseSourceFiles": 138,
+  "fixtureFiles": 417,
+  "stagingExact555FilesAndHashes": true,
+  "sourceManifestEqualsMac0511Release": true,
+  "resolvedFindings": [
+    "MSVC environment initialization connected through CMD and same GitHub workflow caller.",
+    "Only fully verified candidate-artifacts are published to artifacts upload path.",
+    "Root gitattributes preserves source/fixture bytes on Windows Git checkout."
+  ],
+  "remainingSourceReviewBlockers": [],
+  "powershellExecuted": false,
+  "cmdExecuted": false,
+  "windowsCompilationSucceeded": false,
+  "windowsApplicationRun": false,
+  "windowsInstallerRun": false,
+  "remoteWorkflowTriggered": false,
+  "claim": "Preparation kit source reviewed; not a Windows executable or runtime verification.",
+  "reviewDocument": {
+    "path": "verification/windows-0.5.11-review/independent-build-kit-review.md",
+    "sha256": "6e2f5849969224f13799047c199d5d62155e540af58857589292b304fdd84a91"
+  },
+  "platformReview": {
+    "path": "verification/windows-0.5.11-review/platform-review.json",
+    "sha256": "f6ea0131f4afef08e9aa84273382c99abc7fcf98d9a8b6b19385f8d84ba5679c"
+  }
+}

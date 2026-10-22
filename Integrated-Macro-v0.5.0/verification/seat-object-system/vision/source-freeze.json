@@ -1,0 +1,33 @@
+{
+  "code_frozen": true,
+  "source_hashes": {
+    "crates/macro-core/src/seat_objects.rs": "694a2a37bca74aff0967cb302315322e55ed21982aa02a504bdfdc8a267902c7",
+    "crates/macro-core/tests/seat_objects.rs": "19b7e4b19f51be9cf118c6dab5b3832b00850be199c158041a0e09545a93f2fa",
+    "verification/seat-object-system/vision/README.md": "9dcc7d088ee97fb095952c99965e9f45dd7535a962787dfdb149ff3b9b8fa572",
+    "verification/seat-object-system/vision/probe/src/main.rs": "071ba95b823204930e32a87d24487497529a6791b37a722a4fcc3d5dab1df785",
+    "verification/seat-object-system/vision/counterexamples.jsonl": "fa0a63a3cf7922308f5c7e30db412e677cf51cfef98665c999ccd8760775df20"
+  },
+  "regressions": {
+    "passed": 11,
+    "failed": 0,
+    "manual_screenshot_ignored_in_standard_run": 1
+  },
+  "actual_static_image_test": {
+    "passed": 1,
+    "available_candidates": 2,
+    "selected_seats_as_candidates": 0,
+    "outline_registration_candidates": 0,
+    "analysis_us": 10024
+  },
+  "independent_reviews": [
+    "fix_cancellation_start: production/callers, core opacity and shared outside-radius corrections, real-Engine oracle",
+    "input_adversarial_review: final source and tests, same-fill small-marker limitation, missing core and four-neighbor corrections"
+  ],
+  "known_limit_probe_not_counted_as_success": true,
+  "runtime_review_findings": [
+    "Static native last_observed_ns used as observation ID stalls after early count and click delay; parent replaced with validated-read serial without fabricating native capture metadata.",
+    "Source-level candidate: a global empty label may establish zero when the true count is outside the supported heading row. Independent rendering verification is pending with the reader reviewer.",
+    "Per-object evidence was discarded from runtime diagnostics; nonblocking observability suggestion sent."
+  ],
+  "no_app_build_or_native_input": true
+}

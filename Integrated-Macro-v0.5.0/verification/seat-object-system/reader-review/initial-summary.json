@@ -1,0 +1,37 @@
+{
+  "confirmed": {
+    "total": 15,
+    "correct": 7,
+    "unreadable": 8,
+    "wrong_confirmed": []
+  },
+  "correct_or_unreadable": {
+    "total": 37,
+    "correct": 9,
+    "unreadable": 28,
+    "wrong_confirmed": []
+  },
+  "unreadable": {
+    "total": 20,
+    "correct": 20,
+    "unreadable": 20,
+    "wrong_confirmed": []
+  },
+  "required_unreadable": [
+    "digit_3",
+    "position_top_left",
+    "position_bottom_left",
+    "position_bottom_right",
+    "position_middle",
+    "size_19",
+    "explicit_empty",
+    "panel_with_list_and_timer"
+  ],
+  "debug_reader_us": {
+    "median": 33798.0,
+    "min": 3746,
+    "max": 172699,
+    "total": 2753528
+  },
+  "scope": "Synthetic 640x300-ish RGBA; debug test binary; no OS/browser/capture latency."
+}

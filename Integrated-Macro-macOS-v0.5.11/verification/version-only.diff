@@ -1,0 +1,128 @@
+--- before/package.json
++++ after/package.json
+@@ -1,6 +1,6 @@
+ {
+   "name": "integrated-macro",
+-  "version": "0.5.10",
++  "version": "0.5.11",
+   "private": true,
+   "type": "module",
+   "scripts": {
+--- before/package-lock.json
++++ after/package-lock.json
+@@ -1,12 +1,12 @@
+ {
+   "name": "integrated-macro",
+-  "version": "0.5.10",
++  "version": "0.5.11",
+   "lockfileVersion": 3,
+   "requires": true,
+   "packages": {
+     "": {
+       "name": "integrated-macro",
+-      "version": "0.5.10",
++      "version": "0.5.11",
+       "devDependencies": {
+         "@tauri-apps/cli": "^2"
+       }
+--- before/Cargo.toml
++++ after/Cargo.toml
+@@ -4,7 +4,7 @@
+ resolver = "2"
+ 
+ [workspace.package]
+-version = "0.5.10"
++version = "0.5.11"
+ edition = "2021"
+ 
+ [workspace.dependencies]
+--- before/Cargo.lock
++++ after/Cargo.lock
+@@ -1575,7 +1575,7 @@
+ 
+ [[package]]
+ name = "integrated-macro"
+-version = "0.5.10"
++version = "0.5.11"
+ dependencies = [
+  "httpdate",
+  "macro-core",
+@@ -1869,7 +1869,7 @@
+ 
+ [[package]]
+ name = "macro-core"
+-version = "0.5.10"
++version = "0.5.11"
+ dependencies = [
+  "serde",
+  "serde_json",
+@@ -1877,7 +1877,7 @@
+ 
+ [[package]]
+ name = "macro-platform"
+-version = "0.5.10"
++version = "0.5.11"
+ dependencies = [
+  "serde",
+  "serde_json",
+--- before/crates/macro-core/Cargo.toml
++++ after/crates/macro-core/Cargo.toml
+@@ -1,6 +1,6 @@
+ [package]
+ name = "macro-core"
+-version = "0.5.10"
++version = "0.5.11"
+ edition = "2021"
+ description = "Platform-independent, evidence-driven integrated macro engine"
+ 
+--- before/crates/macro-platform/Cargo.toml
++++ after/crates/macro-platform/Cargo.toml
+@@ -1,6 +1,6 @@
+ [package]
+ name = "macro-platform"
+-version = "0.5.10"
++version = "0.5.11"
+ edition = "2021"
+ build = "build.rs"
+ 
+--- before/src-tauri/tauri.conf.json
++++ after/src-tauri/tauri.conf.json
+@@ -1,7 +1,7 @@
+ {
+   "$schema": "https://schema.tauri.app/config/2",
+   "productName": "Integrated Macro",
+-  "version": "0.5.10",
++  "version": "0.5.11",
+   "identifier": "dev.integrated-macro.desktop",
+   "build": {
+     "frontendDist": "../ui"
+@@ -11,7 +11,7 @@
+     "windows": [
+       {
+         "label": "main",
+-        "title": "통합 매크로 0.5.10",
++        "title": "통합 매크로 0.5.11",
+         "width": 1180,
+         "height": 840,
+         "minWidth": 900,
+--- before/ui/package.json
++++ after/ui/package.json
+@@ -1,6 +1,6 @@
+ {
+   "name": "integrated-macro-desktop-ui",
+-  "version": "0.5.10",
++  "version": "0.5.11",
+   "private": true,
+   "type": "module",
+   "scripts": {
+--- before/ui/index.html
++++ after/ui/index.html
+@@ -18,7 +18,7 @@
+         <button class="nav-item" data-tab="features"><span>⌘</span>추가 기능</button>
+       </nav>
+       <div class="sidebar-note"><span class="tiny-dot"></span>원본 동작에서 시작합니다<p>추가 기능은 필요한 항목만<br>선택해서 켜세요.</p></div>
+-      <div class="sidebar-footer"><span id="platform-label">환경 확인 중</span><span class="version">v0.5.10</span></div>
++      <div class="sidebar-footer"><span id="platform-label">환경 확인 중</span><span class="version">v0.5.11</span></div>
+     </aside>
+     <div class="workspace">
+       <header class="topbar">

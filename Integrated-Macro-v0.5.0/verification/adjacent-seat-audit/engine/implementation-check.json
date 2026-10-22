@@ -1,0 +1,16 @@
+{
+  "scope": "engine identity/adjacency implementation; no app/release/OS input",
+  "command": "CARGO_HOME=\"$PWD/.build-tools/cargo\" RUSTUP_HOME=\"$PWD/.build-tools/rustup\" RUSTUP_TOOLCHAIN=stable \"$PWD/.build-tools/cargo/bin/cargo\" test -p macro-core --test seat_selection --offline --locked",
+  "result": {
+    "passed": 14,
+    "failed": 0
+  },
+  "sourceSha256": {
+    "crates/macro-core/src/engine.rs": "f9edcd0da55a92a86b188186252053c00f976fd2a370afff11bca801cdef86df",
+    "crates/macro-core/src/seat_selection.rs": "c85483f246808f6e95abc31ebf21f0167f8f5a8333a6bcb350cb2d02aef70ff4",
+    "crates/macro-core/src/lib.rs": "0190eb0503c667d6285f4b0e85e0d709825d042a9ae86397e9a5307c611f1baf",
+    "crates/macro-core/tests/seat_selection.rs": "a88c052490f44a3efb43d92289b291e067f5ce4bf7dd3cc0b63dcf2652452b93"
+  },
+  "independentReview": "input_adversarial_review read-only approved; parent seat_accuracy_pipeline.rs read-only cross-reviewed",
+  "preFixEvidencePreserved": true
+}

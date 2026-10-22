@@ -1,0 +1,33 @@
+{
+  "generatedAt": "2026-10-20T18:33:30.600819+00:00",
+  "releaseDirectory": "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.5",
+  "archive": "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.5.zip",
+  "archiveBytes": 4668232,
+  "archiveSHA256": "8547e1cc0e2155ea6fd38f9c01e200ed00be49964f97bd65923a320b37c14b65",
+  "version": "0.5.5",
+  "architecture": "arm64",
+  "minimumMacOS": "13.0",
+  "allPackagedFilesMatchExtractedFiles": true,
+  "packagedFileCount": 10,
+  "builtAppSignature": "passed",
+  "packagedAppSignature": "passed",
+  "extractedAppSignature": "passed",
+  "dependencies": "/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/target/release/bundle/macos/Integrated Macro.app/Contents/MacOS/integrated-macro:\n\t/System/Library/Frameworks/Carbon.framework/Versions/A/Carbon (compatibility version 2.0.0, current version 170.0.0)\n\t/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics (compatibility version 64.0.0, current version 1965.1.4)\n\t/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 4109.1.255)\n\t/System/Library/Frameworks/WebKit.framework/Versions/A/WebKit (compatibility version 1.0.0, current version 622.2.11)\n\t/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices (compatibility version 1.0.0, current version 66.0.0)\n\t/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo (compatibility version 1.2.0, current version 726.2.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1356.0.0)\n\t/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 2685.20.119)\n\t/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore (compatibility version 1.2.0, current version 1193.39.8)\n\t/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 4109.1.255)\n\t/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)\n\t/System/Library/Frameworks/ScreenCaptureKit.framework/Versions/A/ScreenCaptureKit (compatibility version 1.0.0, current version 1.0.0)\n\t/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia (compatibility version 1.0.0, current version 3285.11.5)\n\t/usr/lib/swift/libswiftCore.dylib (compatibility version 0.0.0, current version 0.0.0)\n\t/usr/lib/swift/libswiftFoundation.dylib (compatibility version 1.0.0, current version 120.100.0)\n\t/usr/lib/swift/libswiftDispatch.dylib (compatibility version 1.0.0, current version 1542.100.32)\n\t/usr/lib/libiconv.2.dylib (compatibility version 7.0.0, current version 7.0.0)\n\t/System/Library/Frameworks/ColorSync.framework/Versions/A/ColorSync (compatibility version 1.0.0, current version 3813.1.2)\n\t/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices (compatibility version 1.0.0, current version 1226.0.0)\n\t/usr/lib/swift/libswiftAVFoundation.dylib (compatibility version 1.0.0, current version 2420.7.1, weak)\n\t/usr/lib/swift/libswiftCoreAudio.dylib (compatibility version 1.0.0, current version 411.255.0, weak)\n\t/usr/lib/swift/libswiftCoreFoundation.dylib (compatibility version 1.0.0, current version 120.100.0)\n\t/usr/lib/swift/libswiftCoreImage.dylib (compatibility version 1.0.0, current version 2.2.0, weak)\n\t/usr/lib/swift/libswiftCoreMIDI.dylib (compatibility version 1.0.0, current version 6.0.0, weak)\n\t/usr/lib/swift/libswiftCoreMedia.dylib (compatibility version 1.0.0, current version 3320.8.5)\n\t/usr/lib/swift/libswiftDarwin.dylib (compatibility version 1.0.0, current version 377.120.8, weak)\n\t/usr/lib/swift/libswiftIOKit.dylib (compatibility version 1.0.0, current version 1.0.0, weak)\n\t/usr/lib/swift/libswiftMetal.dylib (compatibility version 1.0.0, current version 373.2.0, weak)\n\t/usr/lib/swift/libswiftOSLog.dylib (compatibility version 1.0.0, current version 10.0.0, weak)\n\t/usr/lib/swift/libswiftObjectiveC.dylib (compatibility version 1.0.0, current version 951.7.0, weak)\n\t/usr/lib/swift/libswiftQuartzCore.dylib (compatibility version 1.0.0, current version 5.0.0, weak)\n\t/usr/lib/swift/libswiftSpatial.dylib (compatibility version 1.0.0, current version 1.0.0, weak)\n\t/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib (compatibility version 1.0.0, current version 877.5.1, weak)\n\t/usr/lib/swift/libswiftXPC.dylib (compatibility version 1.0.0, current version 128.120.2, weak)\n\t/usr/lib/swift/libswiftos.dylib (compatibility version 1.0.0, current version 1082.0.0, weak)\n\t/usr/lib/swift/libswiftsimd.dylib (compatibility version 1.0.0, current version 23.0.0, weak)\n\t/usr/lib/swift/libswiftCoreGraphics.dylib (compatibility version 1.0.0, current version 1.0.0)\n\t/usr/lib/swift/libswiftAppKit.dylib (compatibility version 1.0.0, current version 1.0.0)",
+  "sourceManifestSHA256": "9039a59ba24d6b81efb32992f052ddc5f926fbeeed9ca26d3f109ee10d258d3d",
+  "executableSHA256": "08d8628b740c11c1ec547d8e63f18feb9bd2668cf25bf589c1b6751586d31256",
+  "checksReportSHA256": "85dc87fa13572610910e74f173bafb28a9a5eb6e9b5ce47143d7f70529eea3dc",
+  "javascriptTests": 107,
+  "rustTests": 151,
+  "nativeCheck": "Swift arm64/x86_64 compilation and host synthetic/ABI checks passed",
+  "previousArchiveUnchanged": true,
+  "AGENTSUnchanged": true,
+  "unverified": [
+    "Actual macOS input/capture/overlay",
+    "Actual Windows input/capture/overlay",
+    "Authenticated NOL booking flow",
+    "Browser transport and site contracts",
+    "End-to-end latency",
+    "Windows packaged app",
+    "F1 settings handoff in a running native app"
+  ]
+}

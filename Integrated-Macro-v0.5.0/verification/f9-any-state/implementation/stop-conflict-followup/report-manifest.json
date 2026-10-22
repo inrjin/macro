@@ -1,0 +1,15 @@
+{
+  "sourceStable": true,
+  "desktop": {
+    "passed": 132,
+    "failed": 0,
+    "ignoredTiming": 1
+  },
+  "artifacts": {
+    "README.md": "a19869550704119764870dada3e2f58776b0cd79d364376f09e0d9bab99d5b0a",
+    "source-before.json": "2a4606f68415ff74fa37a766d23b05bb361d98552064f0df4b4a99b06c8519b5",
+    "source-final.json": "bfceb7461f21bb8c5371ef89068f2948e5a4cdb5b1da88533b4812fba24d63a0",
+    "implementation.diff": "15c794eecefc9d0afbdc84c7d7806073b25586c5846c6ac2a914248ee7699e21",
+    "desktop-final.log": "a92a6252d8f9d24a53074bb52c7cba1fd6d2ec7908a77df8a99d5024ea7520d1"
+  }
+}

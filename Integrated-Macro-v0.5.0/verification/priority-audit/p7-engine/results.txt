@@ -1,0 +1,4 @@
+PASS 4 pause/context-loss cases: queued input IDs discarded, stale ACK inert, delivered first seat retained, only fresh candidate resumes
+PASS 4 popup interruption cases: unsent Esc retries once after resume, delivered Esc does not repeat, actual restoration releases search, first seat preserved
+PASS 5 Stop cases: queued seat/completion/Esc and delivered completion stay stopped, stale ACK cannot revive them or count toward a new run
+13/13 production-component interruption scenarios passed; OS queue/drivers are outside this harness

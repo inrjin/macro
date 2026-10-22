@@ -1,0 +1,9 @@
+
+running 2 tests
+REPRO refresh: sequence newer than app cache can have been captured before refresh -> seat action
+REPRO region: cachedSeq=12 unreadSeq=13 capturedNs=99000000 postNs=100000000 old frame accepted -> seat action
+test pre_refresh_click_unconsumed_sequence_passes_existing_fence ... ok
+test pre_region_click_unconsumed_sequence_passes_existing_fence ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

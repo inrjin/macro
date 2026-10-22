@@ -1,0 +1,12 @@
+{
+  "source": "src-tauri/src/runtime.rs",
+  "sha256": "46aeb00d10e3603b03b15f0f8a74e0a46246dc1652a9f7ef9aea3dce67eaf42c",
+  "p1Tests": 6,
+  "p4Tests": 4,
+  "p7PixelTests": 4,
+  "totalTargetedTests": 14,
+  "nativeOsInput": false,
+  "windowsTargetCompiled": false,
+  "fullWorkerInstantiated": false,
+  "productionBehaviorChange": "Image candidate pixel conversion only; Windows native index and general target coordinate contracts preserved."
+}

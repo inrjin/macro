@@ -1,0 +1,38 @@
+{
+  "command": [
+    "cargo",
+    "test",
+    "-p",
+    "macro-core",
+    "--test",
+    "seat_objects",
+    "--release",
+    "--offline",
+    "--locked",
+    "manual_provided_screenshot",
+    "--",
+    "--ignored",
+    "--nocapture"
+  ],
+  "exit_code": 0,
+  "scope": "Optimized shared Rust test only; not an app/release package. One static PNG decoded without ICC transform; no live native capture or OS input.",
+  "image_dimensions": [
+    3024,
+    1608
+  ],
+  "roi": [
+    0,
+    250,
+    1370,
+    1150
+  ],
+  "source_files": {
+    "crates/macro-core/src/seat_objects.rs": "694a2a37bca74aff0967cb302315322e55ed21982aa02a504bdfdc8a267902c7",
+    "crates/macro-core/tests/seat_objects.rs": "19b7e4b19f51be9cf118c6dab5b3832b00850be199c158041a0e09545a93f2fa"
+  },
+  "analysis_us": [
+    10024
+  ],
+  "synthetic_regression_result": "11 passed; 1 manual screenshot ignored in normal test run; actual object-to-Engine count oracle included",
+  "live_reader_or_native_verification": false
+}

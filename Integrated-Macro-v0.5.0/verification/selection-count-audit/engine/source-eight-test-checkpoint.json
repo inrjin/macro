@@ -1,0 +1,19 @@
+{
+  "scope": "Actual Engine public events and independent site selection ledger. No text recognition, Worker/native execution, or causal attribution of a visual dialog. Production Engine unchanged.",
+  "command": "cargo test -p macro-core --test selection_count_audit_engine --offline --locked -- --nocapture",
+  "result": {
+    "passed": 8,
+    "failed": 0,
+    "ignored": 0
+  },
+  "log": "verification/selection-count-audit/engine/first-pass.log",
+  "logSha256": "7d214abc33cf9356e922e2e1ae602243fe207b01e8eac141f078dad7a814ebc9",
+  "files": {
+    "crates/macro-core/src/engine.rs": "6952db2f267e1c9bcddfc82fd9bcfcbed842170eefae5fcaf6660dbc05c9c235",
+    "crates/macro-core/src/model.rs": "3869b494fa627ecff5a202c26b21d8c4aa1cc99f32c18b2e5ed349d037b284e0",
+    "crates/macro-core/tests/selection_count_audit_engine.rs": "5e51194bcc689fe5998b97a87c94b86b89ff1a09678b2b63885498307eb126cf",
+    "crates/macro-core/tests/selection_count.rs": "20030595097937627f977cf8034e81f4fd9a5476555839b09b10af31f76f5165",
+    "src-tauri/src/runtime.rs": "9ecf8161836b668a3bf41717f64629552bc30415a60b53c3b3c56d2ee0650f1b",
+    "src-tauri/src/selection_count_runtime_tests.rs": "d682e51e965d0f99c15205228e2035ebe7394739bd57c6598eba65726f5d4495"
+  }
+}

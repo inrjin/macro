@@ -1,0 +1,48 @@
+{
+  "reviewedAt": "2026-10-22T01:17:30.052620+00:00",
+  "scope": "Independent source/caller and regression review; no live Worker/native/site execution",
+  "decision": "No additional blocking defect in scoped calibration-retry correction; final whole-source gate pending parent",
+  "files": {
+    "src-tauri/src/runtime.rs": "6cd1a72e60d7658eb091cfdf73ca9789f78037139f012c900c2b76c64b02f2ae",
+    "src-tauri/src/reentrant_runtime_tests.rs": "3c8045c1659817a843ae214c22c1a8a2aa60ffda104bf12bdc46c84dea966f0d",
+    "src-tauri/src/calibration_restart_review.rs": "215b08536a03a1a0971160a8f41f830f53dc1669a75b0d62e84c2322c2817371",
+    "src-tauri/src/f9_any_state_tests.rs": "e624680ba7239b12d63abc097edf8d2145eb272c67e5f24b1c5308aeb438631c",
+    "src-tauri/src/visual_recovery.rs": "34a874a90f82fbfc6a9081edebd6f78269ced0b3d5482a9fe3f8d6813a8365b8",
+    "crates/macro-core/src/engine.rs": "8444a110ed702236b0e094f13a3af95300fb70f747bdf9b6e7c032433467777d",
+    "crates/macro-core/src/seat_selection.rs": "37118aff1832c00db7188fc81766fc5f957ee95f80cbb52d0c2a3c0f5e2c2ac9",
+    "crates/macro-core/src/model.rs": "c0596021075c8401055eaeb52a86ddc613c33997070676ce69254371e8825ef0",
+    "ui/app.js": "baea51b1dbd2c172c65bde970d2e3eff42640e53d75ee62ab44d8bd6b7f60486",
+    "ui/model.js": "2351e89ce198302b34f13358c980734b26747dd43594a16b2f442480ee8d101e",
+    "ui/index.html": "4db994f931de4da4cb1e3d4483b0694a8309dafe4160b9af6c4d46f2392575ff",
+    "ui/overlay.js": "00cc95eee61939c572556466139193b78b7f91df2f46c619b16da805fe239b41",
+    "AGENTS.md": "afef8f4c6854c485ead4b4ecf2389c5271d690ef1360ff0fbfa14e19bf305707"
+  },
+  "evidence": {
+    "verification/calibration-retry/implementation/source-final.json": "8b0f503f8a5d7d2b59852a7dd2faa315e935e3ad62714fbdabb747cff2bb2a0c",
+    "verification/calibration-retry/implementation/final.diff": "9449a296c930cc21b08182867b97375d330073c2989fb19cda547bc638dcdc86",
+    "verification/calibration-retry/implementation/desktop-final.log": "0c989f3cd93af1ccc5a836d2a078d9177990928e7242c3e79d9b5e17acff8bfa",
+    "verification/calibration-retry/implementation/results.json": "62dca10542c84fb48410a628778a6224ad69f04ae289007d357c6254a7bdb911",
+    "verification/calibration-retry/independent/after-provenance-current.log": "2f50a1407ed51292a15a8660216a1f1dc5cbe188b5cd70eb56f24b17ad6d67aa",
+    "verification/calibration-retry/independent/before-result.json": "04db8d99352aae7fc8284f8db9c04d2f84ab20519218d15dbef30d129ebdc0eb",
+    "verification/calibration-retry/independent/geometry-cycle-before.json": "53a0ad25c9b080996eeb5d24fb17e1b2b097905a97393d38913dfe91f01570f7"
+  },
+  "focusedEvidence": {
+    "desktop": {
+      "passed": 142,
+      "failed": 0,
+      "ignored": 1
+    },
+    "independent": {
+      "passed": 9,
+      "failed": 0,
+      "ignored": 0
+    }
+  },
+  "remainingLimits": [
+    "Same native window/geometry does not establish same semantic performance/seat map.",
+    "Count-OFF retained delivery estimates may cause explicit Completed retry to send completion again after external deselection.",
+    "No dedicated current-seat-screen history reset; F1 runs its configured entry flow.",
+    "Original image footprint identity is heuristic; calibration does not prove all newly exposed fragments are separate physical seats.",
+    "No app or release build was made by this review."
+  ]
+}

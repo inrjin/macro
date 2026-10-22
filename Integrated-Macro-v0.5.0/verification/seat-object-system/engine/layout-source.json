@@ -1,0 +1,7 @@
+{
+  "source": "crates/macro-core/src/selection_count_layout.rs",
+  "sha256": "c22545cd11afda2c69a4a2b1beaee1b56c1bc80ba2eb690cfc49998e8108065c",
+  "status": "4 geometry unit tests passed; independent 105 rendered cases evaluated in 4 test functions; current geometry source matches panel-corrected-source.json",
+  "independent_source_record": "verification/seat-object-system/reader-review/panel-corrected-source.json",
+  "independent_output": "verification/seat-object-system/reader-review/panel-corrected-results.log"
+}

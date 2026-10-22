@@ -1,0 +1,15 @@
+{
+  "recordedAt": "2026-10-20T17:55:13.929206+00:00",
+  "check": "Host metadata-only Windows implementation and test typecheck",
+  "exitCode": 0,
+  "harness": "/private/tmp/macro-windows-metadata-jr3ntuz1",
+  "sourceSHA256": {
+    "crates/macro-platform/src/lib.rs": "d3c1beabf92f29348d32d29a68e066e49290018ed61ceba6e8687ac718af4e37",
+    "crates/macro-platform/src/windows.rs": "c0117fe3a2235a03eca968616936e6ae69c602c4e280f0b9945bb3c9c78ec8a0"
+  },
+  "limits": [
+    "No Windows executable was linked.",
+    "No Windows desktop input/listener was exercised.",
+    "Tests were typechecked but not executed."
+  ]
+}

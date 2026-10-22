@@ -1,0 +1,20 @@
+{
+  "fixtureFiles": 83,
+  "allFixturesAndManifestByteIdentical": true,
+  "mismatches": [],
+  "templateAssetByteIdentical": true,
+  "originalTemplatesUnchanged": true,
+  "originalTemplateCount": 287,
+  "finalTemplateCount": 295,
+  "addedLabels": [
+    "heading",
+    "heading",
+    "heading",
+    "heading",
+    "heading",
+    "heading",
+    "heading",
+    "heading"
+  ],
+  "scope": "Recreated in /private/tmp with the audit-only Swift generators; preserved source assets and existing fixtures unchanged"
+}

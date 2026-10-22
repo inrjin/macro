@@ -1,0 +1,23 @@
+{
+  "before": {
+    "src-tauri/src/main.rs": "d3e2c2bceb4c8cf36ad3212a536ee94de42add8648042498ecd68d3ed4855b69",
+    "src-tauri/src/runtime.rs": "849804f0a3f1b3f47b179ab066f2049d9b4a47d12040fe77187db84b7fbc5780",
+    "crates/macro-core/src/model.rs": "eab5347942a383af416f837bb02681a541259fba2e429c6f338518956e92fa49",
+    "crates/macro-core/src/engine.rs": "95f8cd0053bb8d501c7d061603101b774fa5a7e13d0ac18942d1a5e8732e5540",
+    "crates/macro-core/tests/engine.rs": "a20c482036c945749de58845bdfb300aa355edbe6d63dcf712da2e694bd0d073",
+    "ui/index.html": "cf511eddc3871d211d573ba53292e2cba93d0a4dcf305c655c1014d8e1526869",
+    "ui/model.js": "828975d9b3aaab06fc2e77ca6ef7841b0b1e3df232cca921178bfa4bbfcd955e",
+    "ui/tests/run-continuous-flow-dom.mjs": "49dc6f7bee5a197df2c2f05735d252be81db569da28aa327c146dab9d1a14129"
+  },
+  "after": {
+    "src-tauri/src/main.rs": "d3e2c2bceb4c8cf36ad3212a536ee94de42add8648042498ecd68d3ed4855b69",
+    "src-tauri/src/runtime.rs": "0a431ef8819516d90ebd58e1a4f3e8e546743b0715100186cd1dbd098197ab0f",
+    "crates/macro-core/src/model.rs": "eab5347942a383af416f837bb02681a541259fba2e429c6f338518956e92fa49",
+    "crates/macro-core/src/engine.rs": "95f8cd0053bb8d501c7d061603101b774fa5a7e13d0ac18942d1a5e8732e5540",
+    "crates/macro-core/tests/engine.rs": "a20c482036c945749de58845bdfb300aa355edbe6d63dcf712da2e694bd0d073",
+    "ui/index.html": "cf511eddc3871d211d573ba53292e2cba93d0a4dcf305c655c1014d8e1526869",
+    "ui/model.js": "828975d9b3aaab06fc2e77ca6ef7841b0b1e3df232cca921178bfa4bbfcd955e",
+    "ui/tests/run-continuous-flow-dom.mjs": "49dc6f7bee5a197df2c2f05735d252be81db569da28aa327c146dab9d1a14129"
+  },
+  "note": "Runtime changed after the first test run to reject F9 received before a new run. Rust workspace tests were rerun afterward; JavaScript sources stayed unchanged."
+}

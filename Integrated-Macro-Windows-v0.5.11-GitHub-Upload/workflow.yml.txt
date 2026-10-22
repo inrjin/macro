@@ -1,0 +1,59 @@
+name: Build Windows 0.5.11
+
+on:
+  push:
+    paths:
+      - Integrated-Macro-Windows-v0.5.11-Build-Kit.zip
+      - .github/workflows/build-windows.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-2022
+    timeout-minutes: 60
+    env:
+      RUSTUP_TOOLCHAIN: stable
+      CARGO_TERM_COLOR: never
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify and extract the fixed 0.5.11 build kit
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $zip = Join-Path $env:GITHUB_WORKSPACE 'Integrated-Macro-Windows-v0.5.11-Build-Kit.zip'
+          $expected = 'd0e5ed8616f2bdb1e49fd86497d3e2cd557cd460d2cca7c1c10b5777bf36357e'
+          if (-not (Test-Path -LiteralPath $zip -PathType Leaf)) { throw 'The build-kit ZIP is missing.' }
+          $actual = (Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash.ToLowerInvariant()
+          if ($actual -ne $expected) { throw 'Build-kit ZIP SHA-256 mismatch. No build was started.' }
+          $destination = Join-Path $env:RUNNER_TEMP 'integrated-macro-0.5.11'
+          if (Test-Path -LiteralPath $destination) { throw 'The extraction directory already exists.' }
+          Expand-Archive -LiteralPath $zip -DestinationPath $destination
+          $kit = Join-Path $destination 'Integrated-Macro-Windows-v0.5.11-Build-Kit'
+          if (-not (Test-Path -LiteralPath (Join-Path $kit 'Build-Windows.cmd') -PathType Leaf)) {
+            throw 'The expected build-kit root is missing.'
+          }
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Prepare Rust MSVC target
+        shell: pwsh
+        run: |
+          rustup toolchain install stable --profile minimal --target x86_64-pc-windows-msvc
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Test and build the Windows installer
+        shell: cmd
+        working-directory: ${{ runner.temp }}/integrated-macro-0.5.11/Integrated-Macro-Windows-v0.5.11-Build-Kit
+        run: call .\Build-Windows.cmd
+      - name: Upload completed artifacts and build evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-0.5.11-${{ github.run_number }}-${{ github.run_attempt }}
+          if-no-files-found: error
+          path: |
+            ${{ runner.temp }}/integrated-macro-0.5.11/Integrated-Macro-Windows-v0.5.11-Build-Kit/output/*/artifacts/*
+            ${{ runner.temp }}/integrated-macro-0.5.11/Integrated-Macro-Windows-v0.5.11-Build-Kit/output/*/report.json
+            ${{ runner.temp }}/integrated-macro-0.5.11/Integrated-Macro-Windows-v0.5.11-Build-Kit/output/*/build.log

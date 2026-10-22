@@ -1,0 +1,1 @@
+exact=0.55 bounded=0.55 product=55.00000000000001

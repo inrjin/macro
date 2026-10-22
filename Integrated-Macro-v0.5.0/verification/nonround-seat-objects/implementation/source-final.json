@@ -1,0 +1,19 @@
+{
+  "scope": "implementation-owned sources; parent final validation is separate",
+  "files": {
+    "crates/macro-core/src/model.rs": "3869b494fa627ecff5a202c26b21d8c4aa1cc99f32c18b2e5ed349d037b284e0",
+    "crates/macro-core/src/seat_objects.rs": "95d696aa1deab1987491352cbfcfc4cbc2f508f6b71ec1ff32f26f645f19982d",
+    "crates/macro-core/src/seat_object_shapes.rs": "33bad8d441317c4a4c6886c3e9b50efab96d9ea340f551b250d36ce6acb88023",
+    "crates/macro-core/src/vision.rs": "f375df436d66d57ea6ff2b1032f14345ae310127681b7660701cda3179bd5639",
+    "crates/macro-core/tests/seat_selection.rs": "19259870ae732a4e3ced1e28b13e9b391745fc612f9dcb3515c2b8668411f185",
+    "crates/macro-core/tests/seat_object_shape_evidence.rs": "6f861fbde435be3211c1b3d8618afdd63d7a00997fd50f135d3c93140b682866"
+  },
+  "evidence": {
+    "adversarial": "verification/nonround-seat-objects/adversarial/final-corpus.log",
+    "integration": "verification/nonround-seat-objects/independent/after-context-integration.log",
+    "proof": "verification/nonround-seat-objects/evidence-contract-final.log",
+    "round": "verification/nonround-seat-objects/after-integral-prefilter.log",
+    "optimized": "verification/nonround-seat-objects/adversarial/final-performance.log"
+  },
+  "note": "Includes parent comment-only correction describing bounded rasterization fitting; executable logic unchanged."
+}

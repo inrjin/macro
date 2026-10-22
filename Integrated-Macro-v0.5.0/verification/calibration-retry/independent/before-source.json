@@ -1,0 +1,8 @@
+{
+  "files": {
+    "src-tauri/src/runtime.rs": "51afdc3d48876205a9b91e3e837a20167f9d05ac6cbbc68aa57cdc70169ee633",
+    "src-tauri/src/visual_recovery.rs": "34a874a90f82fbfc6a9081edebd6f78269ced0b3d5482a9fe3f8d6813a8365b8",
+    "crates/macro-core/src/engine.rs": "43fb91575b907f8816bc07f4ec6080d75072b6026bbbe95c4377f55e65422013",
+    "src-tauri/src/calibration_restart_review.rs": "c1ba18435741ffa6eed51e2aab9fec9aaf27f7aaabe20d26a945ff41640aa13b"
+  }
+}

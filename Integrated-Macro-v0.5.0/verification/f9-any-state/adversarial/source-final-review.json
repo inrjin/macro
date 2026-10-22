@@ -1,0 +1,55 @@
+{
+  "recordedAt": "2026-10-21T15:40:23.756899+00:00",
+  "status": "Follow-up Stop/F9 and same-target capture-stream corrections reread; no new blocker found in reviewed scenarios; final build and artifact inspection pending",
+  "files": {
+    "crates/macro-core/src/engine.rs": "43fb91575b907f8816bc07f4ec6080d75072b6026bbbe95c4377f55e65422013",
+    "crates/macro-core/src/model.rs": "c0596021075c8401055eaeb52a86ddc613c33997070676ce69254371e8825ef0",
+    "src-tauri/src/runtime.rs": "2d4213c49584b930e2bdc5ed78fb2aaa2700479c7db7bb97cdf0d06377561939",
+    "src-tauri/src/main.rs": "931e1a176b937231dc8729bec5e081f7ef43b1e2a441b238da7325338aa3a17a",
+    "src-tauri/src/f9_any_state_tests.rs": "e624680ba7239b12d63abc097edf8d2145eb272c67e5f24b1c5308aeb438631c",
+    "src-tauri/src/reentrant_runtime_tests.rs": "ac6f8a8b65a77099781196033c115c1d2e0f40d46de4dc940f66083b8d610d00",
+    "crates/macro-core/tests/f9_any_state_review.rs": "a95ded1a93b0b5f426b035606673843df63371d14718b3e1e9b22a7c5c32c0d4",
+    "crates/macro-core/tests/reentrant_commands_review.rs": "e4c176917de8ebfd76f2ed398ba516692636adb888d2edf6809e6759c70d968d",
+    "ui/app.js": "baea51b1dbd2c172c65bde970d2e3eff42640e53d75ee62ab44d8bd6b7f60486",
+    "ui/model.js": "2351e89ce198302b34f13358c980734b26747dd43594a16b2f442480ee8d101e",
+    "ui/index.html": "4db994f931de4da4cb1e3d4483b0694a8309dafe4160b9af6c4d46f2392575ff",
+    "ui/overlay.js": "00cc95eee61939c572556466139193b78b7f91df2f46c619b16da805fe239b41",
+    "ui/tests/run-reentrant-review-dom.mjs": "52d41eda4084e04c8fd3080a0f85c1f0810d8c99c0590fb2a8fef1af4d37f86a",
+    "ui/tests/reentrant-review.test.js": "d89afffab7615d9d05de0f77f40baad3d385c3934faf784bc74ca05618281888",
+    "src-tauri/src/visual_recovery.rs": "34a874a90f82fbfc6a9081edebd6f78269ced0b3d5482a9fe3f8d6813a8365b8"
+  },
+  "implementationFrozenFilesMatch": true,
+  "uiUnchangedSince19CaseRun": true,
+  "logs": {
+    "verification/f9-any-state/implementation/stop-conflict-followup/desktop-final.log": {
+      "sha256": "a92a6252d8f9d24a53074bb52c7cba1fd6d2ec7908a77df8a99d5024ea7520d1",
+      "results": [
+        "ok. 132 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 1.86s"
+      ]
+    },
+    "verification/f9-any-state/adversarial/ui-final.log": {
+      "sha256": "0cc5bea59315f278e8e20ea23c9bc334283e3dbbd0f6ef79d54acdae6e341b5e",
+      "results": []
+    },
+    "verification/f9-any-state/independent/final-core.log": {
+      "sha256": "fc099e8bb6cb8067915d8ee046fa53b54b36255fb5526a1ae392140bf54fb495",
+      "results": [
+        "ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s"
+      ]
+    }
+  },
+  "scope": {
+    "desktopFollowup": "132 passed / 0 failed / 1 timing ignored; actual shared helpers + Engine + VisualRecovery, no live Worker/native adapter",
+    "ui": "19 actual DOM/deferred IPC cases; all corresponding source hashes unchanged",
+    "priorCore": "25 passed at prior checkpoint; latest added getter and runtime follow-up separately reviewed/tested; root full source build gate remains required"
+  },
+  "limitations": [
+    "No actual app, native input/capture, authenticated site or Windows runtime execution.",
+    "F4 stops input; explicit F9 restores only known unresolved conflict history and still requires existing target and settings.",
+    "A successful same-ID/PID rebind preserves incident pixels and restarts only visual stream sequence order.",
+    "If native driver.bind fails after clearing adapter.target, a later bind is treated as a new context and old history is reset; this is not proof the old dialog closed.",
+    "Already posted OS input and already-entered storage commit are not recalled.",
+    "Visual restored/detected signals are image-change heuristics, not semantic server confirmation."
+  ]
+}

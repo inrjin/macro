@@ -1,0 +1,68 @@
+{
+  "recordedAt": "2026-10-21T15:17:52.365560+00:00",
+  "status": "Independent review complete for frozen source; no remaining blocker found in reviewed scenarios",
+  "sourceUnchangedSinceFinalReview": true,
+  "ownExecution": {
+    "command": "node --test ui/tests/reentrant-review.test.js",
+    "passed": 19,
+    "failed": 0,
+    "exitCode": 0
+  },
+  "crossReviewedEvidence": [
+    {
+      "log": "implementation/runtime-all.log",
+      "passed": 124,
+      "failed": 0,
+      "ignored": 1,
+      "scope": "Rust desktop suite; new request regressions use actual helper/Engine, not complete Worker execution"
+    },
+    {
+      "log": "independent/final-core.log",
+      "passed": 15,
+      "failed": 0,
+      "ignored": 0,
+      "scope": "Actual Engine state transitions with supplied events"
+    }
+  ],
+  "limitations": [
+    "No native app/real OS input/real Tauri ordering/live site execution.",
+    "Already submitted OS input cannot be recalled by newer commands.",
+    "macOS held-key autorepeat and actual Windows rapid repeated key behavior untested.",
+    "Retained screen geometry is not semantic seat identity or site success proof.",
+    "No build, release, version, permission or user setting changes by this reviewer."
+  ],
+  "evidence": [
+    {
+      "path": "verification/reentrant-commands/adversarial/README.md",
+      "sha256": "100c44fff45d1da36e561ae66d9f514d98ce4341ca50b9045313a2770fb08290"
+    },
+    {
+      "path": "verification/reentrant-commands/adversarial/ui-final.json",
+      "sha256": "0d295afa8ddd696bd2668b1d5015272fdedd247bcdbed1b2b24b43a78fc0f0af"
+    },
+    {
+      "path": "verification/reentrant-commands/adversarial/source-final.json",
+      "sha256": "1866c0890246e9298576b6c1aff5f2dd0536be9107e959d2803dde29a40b5ab6"
+    },
+    {
+      "path": "verification/reentrant-commands/adversarial/final-dom.log",
+      "sha256": "32735739b3b31e1f45593a62696e06177bf5fa6c690e8b92f1c844d8c2cfce41"
+    },
+    {
+      "path": "verification/reentrant-commands/implementation/runtime-all.log",
+      "sha256": "33769c1b84ed8053e65936d047c4c8097a54946cb81751729bc09cdbf9fb3fba"
+    },
+    {
+      "path": "verification/reentrant-commands/implementation/source-final.json",
+      "sha256": "5ccd659daf1b6231a9d9acfb041d0853c9822e7bfed6bd0b3db295d001037142"
+    },
+    {
+      "path": "verification/reentrant-commands/independent/final-core.log",
+      "sha256": "bc230aa0e5f88bb9a91d42df229c050cd854b26b176b8d48c7217476c8ccc278"
+    },
+    {
+      "path": "verification/reentrant-commands/independent/source-reviewed.json",
+      "sha256": "f2363fd190cd49dd8d1eababe68948df2c2d205b283d31df542a0b344045a1aa"
+    }
+  ]
+}

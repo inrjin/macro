@@ -1,0 +1,36 @@
+{
+  "command": [
+    "cargo",
+    "test",
+    "-p",
+    "macro-core",
+    "--test",
+    "seat_objects",
+    "--release",
+    "--offline",
+    "--locked",
+    "manual_provided_screenshot",
+    "--",
+    "--ignored",
+    "--nocapture"
+  ],
+  "exit_code": 0,
+  "scope": "Optimized shared Rust test only; not an app/release package. One provided static screenshot, no live capture or OS input.",
+  "image_dimensions": [
+    3024,
+    1608
+  ],
+  "roi": [
+    0,
+    250,
+    1370,
+    1150
+  ],
+  "source_files": {
+    "crates/macro-core/src/seat_objects.rs": "b02760dba581fd74e1c8cf3e6a119c80c7d8f5f6bad3168ded340f7f99268687",
+    "crates/macro-core/tests/seat_objects.rs": "812d24cc5c9ad2ee651427cebe90df8339dde84115b12056a299034c68f33246"
+  },
+  "analysis_us": [
+    13203
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "checks": [
+    "real framed ping",
+    "old command never replayed",
+    "new command delivered",
+    "command delivered once",
+    "private status and receipt timestamp",
+    "unknown command rejected",
+    "clean EOF exit",
+    "oversized native frame rejected"
+  ],
+  "scope": "compiled universal native host on Apple Silicon; temporary directory; actual Chrome registration not changed"
+}

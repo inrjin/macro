@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>통합 매크로 · 키보드 입력 확인</title>
+  <style>
+    :root { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif; color: #20312c; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: #f8f8f8; }
+    body[data-theme="darken"] { background: #182438; color: #f8f8f8; }
+    main { width: min(940px, 82vw); margin: 0 auto; padding: 28px 0 160px; }
+    h1 { margin: 0 0 12px; font-size: 25px; }
+    p, li { line-height: 1.7; }
+    .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin: 20px 0; }
+    button, select, input { font: inherit; padding: 11px 14px; border: 1px solid #9aaba4; border-radius: 8px; }
+    button { background: #fff; color: #20312c; cursor: pointer; }
+    button:focus-visible, input:focus-visible { outline: 3px solid #7651dc; outline-offset: 3px; }
+    #continue-target { background: #7651dc; color: #fff; border: 0; min-width: 230px; min-height: 70px; }
+    .readings { background: #fff; color: #20312c; border: 1px solid #cbd6d0; border-radius: 12px; padding: 18px; }
+    pre { margin: 10px 0 0; font-size: 12px; line-height: 1.5; white-space: pre-wrap; }
+    #backdrop { position: fixed; inset: 0; z-index: 10; display: grid; place-items: center; background: rgb(0 0 0 / 55%); }
+    body[data-theme="darken"] #backdrop { background: rgb(255 255 255 / 65%); }
+    #backdrop[hidden] { display: none; }
+    .modal { width: min(520px, calc(100vw - 40px)); border-radius: 18px; padding: 32px; background: #fff; color: #20312c; }
+    .modal h2 { margin-top: 0; font-size: 22px; }
+    #sample-input { display: block; width: 100%; margin: 20px 0; }
+    #submit-input { width: 100%; background: #7651dc; color: #fff; border: 0; }
+    #modal-status { min-height: 28px; }
+    .note { font-size: 13px; }
+  </style>
+</head>
+<body data-theme="brighten">
+  <main>
+    <h1>키보드 입력과 입력창 종료 확인</h1>
+    <p>실제 예매 대신 이 페이지에서 입력 도착과 입력창이 닫히는 시점을 구분합니다.</p>
+    <ol>
+      <li>Google Chrome으로 이 파일을 열고 아래에서 배경 변화 방향을 고릅니다.</li>
+      <li><strong>입력창 열기 / 다시 검사</strong>를 누른 뒤 영문자 한 글자를 직접 입력합니다. 입력창은 그대로 남아 있어야 합니다.</li>
+      <li><strong>입력 완료</strong>를 누르거나 Enter로 제출하면 입력창과 배경 덮개가 함께 사라집니다.</li>
+    </ol>
+    <div class="controls">
+      <label for="theme">닫힌 뒤 배경</label>
+      <select id="theme"><option value="brighten">밝아짐</option><option value="darken">어두워짐</option></select>
+      <button type="button" id="open-input">입력창 열기 / 다시 검사</button>
+      <button type="button" id="continue-target">종료 후 클릭 확인 · <span id="click-count">0</span>회</button>
+    </div>
+    <section class="readings" aria-label="검사 기록">
+      <strong id="status">입력창을 열어 검사를 시작하세요.</strong>
+      <p class="note">아래 수치는 이 페이지의 수신 기록입니다. 앱의 첫 입력 수신·기준색 저장 기록도 함께 확인해야 합니다.</p>
+      <pre id="metadata"></pre>
+    </section>
+    <p class="note">입력 내용은 기록에 넣거나 저장·전송하지 않습니다. 다시 검사하면 입력란과 수치가 초기화됩니다. 실제 예매·결제는 진행하지 않습니다.</p>
+  </main>
+  <div id="backdrop" hidden>
+    <form id="input-form" class="modal" role="dialog" aria-modal="true" aria-labelledby="input-heading">
+      <h2 id="input-heading">영문자 한 글자를 입력하세요</h2>
+      <p>첫 글자를 입력해도 이 창은 닫히지 않습니다.</p>
+      <label for="sample-input">검사용 입력</label>
+      <input id="sample-input" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+      <p id="modal-status" role="status">키보드 입력 대기</p>
+      <button type="submit" id="submit-input">입력 완료</button>
+    </form>
+  </div>
+  <script>
+    (() => {
+      const element = (id) => document.getElementById(id);
+      const backdrop = element('backdrop');
+      const input = element('sample-input');
+      const theme = element('theme');
+      let state;
+
+      function reset() {
+        state = {
+          modalOpen: false, theme: theme.value, openedAtMs: null,
+          keydownCount: 0, trustedKeydownCount: 0,
+          inputEventCount: 0, trustedInputEventCount: 0,
+          firstKeyAtMs: null, lastKeyAtMs: null,
+          submitCount: 0, closedAtMs: null, continuationClicks: 0,
+        };
+      }
+
+      function render() {
+        element('metadata').textContent = JSON.stringify(state, null, 2);
+        element('click-count').textContent = String(state.continuationClicks);
+        element('modal-status').textContent = state.keydownCount
+          ? `키 누름 ${state.keydownCount}회 · 입력 내용 변경 ${state.inputEventCount}회 · 입력창 유지 중`
+          : '키보드 입력 대기';
+        element('status').textContent = state.modalOpen ? '입력창 열림 · 종료 전'
+          : state.closedAtMs === null ? '입력창을 열어 검사를 시작하세요.' : '입력창 종료 · 후속 클릭 확인 가능';
+      }
+
+      element('open-input').addEventListener('click', () => {
+        reset();
+        input.value = '';
+        state.modalOpen = true;
+        state.openedAtMs = Date.now();
+        backdrop.hidden = false;
+        theme.disabled = true;
+        render();
+        input.focus();
+      });
+      theme.addEventListener('change', () => {
+        document.body.dataset.theme = theme.value;
+        state.theme = theme.value;
+        render();
+      });
+      input.addEventListener('keydown', (event) => {
+        if (!state.modalOpen) return;
+        state.keydownCount += 1;
+        if (event.isTrusted) state.trustedKeydownCount += 1;
+        state.firstKeyAtMs ??= Date.now();
+        state.lastKeyAtMs = Date.now();
+        render();
+      });
+      input.addEventListener('input', (event) => {
+        if (!state.modalOpen) return;
+        state.inputEventCount += 1;
+        if (event.isTrusted) state.trustedInputEventCount += 1;
+        render();
+      });
+      element('input-form').addEventListener('submit', (event) => {
+        event.preventDefault();
+        if (!state.modalOpen) return;
+        state.submitCount += 1;
+        state.closedAtMs = Date.now();
+        state.modalOpen = false;
+        backdrop.hidden = true;
+        theme.disabled = false;
+        input.value = '';
+        render();
+      });
+      element('continue-target').addEventListener('click', () => {
+        if (state.modalOpen || state.closedAtMs === null) return;
+        state.continuationClicks += 1;
+        render();
+      });
+      reset();
+      render();
+    })();
+  </script>
+</body>
+</html>

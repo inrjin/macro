@@ -1,0 +1,53 @@
+{
+  "scope": "Final independent source/caller review after targeted corrections. Engine public-event tests and rendered reader/runtime helper tests; no whole Worker, native input, OS or live-site execution.",
+  "engineCommand": "cargo test -p macro-core --test selection_count_audit_engine --offline --locked -- --nocapture",
+  "logs": [
+    {
+      "scope": "engine query and independent site ledger",
+      "path": "verification/selection-count-audit/engine/query-api-pass.log",
+      "sha256": "56e448935bc59526c821829ab4cddd40117ea11665056fbfac7c9d4bd3750895",
+      "passed": 10,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "scope": "runtime ordering and proof helpers",
+      "path": "verification/selection-count-audit/runtime-after-order-fix.log",
+      "sha256": "69c9e1db9749a2d0ab20f1b6b93a2519a58120b12ae011f202e10f1cad1c0e21",
+      "passed": 17,
+      "failed": 0,
+      "ignored": 1
+    },
+    {
+      "scope": "reader zero/numeric/positive controls",
+      "path": "verification/selection-count-audit/implementation/after-zero-monotonic-fringe.log",
+      "sha256": "a7483e9af17f5d17a226048e3d6afd800860b290143653b1aff176762feba9e0",
+      "passed": 14,
+      "failed": 0,
+      "ignored": 1
+    }
+  ],
+  "files": {
+    "crates/macro-core/src/engine.rs": "d893b89bd3f221bade56108df22f1a02eff5e3bfa963e46bc19d38e67367a0bf",
+    "crates/macro-core/src/model.rs": "3869b494fa627ecff5a202c26b21d8c4aa1cc99f32c18b2e5ed349d037b284e0",
+    "crates/macro-core/src/selection_count.rs": "9cf1b6261a0a3ea451a18a693e33d0112f993fa9ac35804c7f4f5a8643e44d45",
+    "crates/macro-core/src/selection_count_layout.rs": "386de039c740adc1c29de32b717783ac08f3bb02fd076235990850fb4976810d",
+    "crates/macro-core/src/selection_count_assets/templates.json": "52ce816c2e10dadeb681ac796da6af1689f4aacd00e6d2fc6e11484d51989cee",
+    "crates/macro-core/tests/selection_count_audit_engine.rs": "da68e78fafbedb9e54c416451e8f18158d897e988a1eaba274e29628b63d701d",
+    "crates/macro-core/tests/selection_count_audit_reader.rs": "c0fb6368ed0fe4b0e947dc5ec56598e290020467beb0795cb209cc039205642d",
+    "crates/macro-core/tests/selection_count_completeness.rs": "42bab58c1e142acd528890fae21d9fcf2443b63ec3baf5cfb5ae4d08b9a1a2d5",
+    "crates/macro-core/tests/selection_count.rs": "20030595097937627f977cf8034e81f4fd9a5476555839b09b10af31f76f5165",
+    "crates/macro-core/tests/selection_count_reader_review.rs": "ddcd9edacc9358b2338a56f81a655aaf572b48c788228c747b783a6a75df63f5",
+    "src-tauri/src/runtime.rs": "c59fe1d370a2210cdfdc337c6a8ffde6cc83eecc588707194ea63f202c2b3ff4",
+    "src-tauri/src/selection_count_runtime_tests.rs": "f3d6f00e857d06c65f3140b43cda9e027f7db9ab3a3716e57525d22c0540df3d"
+  },
+  "finalWorkspaceResult": "Pending parent-owned full-workspace check; do not interpret targeted/source review as an executed workspace or OS check.",
+  "preservedCheckpoint": "verification/selection-count-audit/engine/source-ten-test-query-checkpoint.json",
+  "productionEngineChange": "Side-effect-free selection_count_needs_seat_observation query only; no count/state-transition mutation change.",
+  "limits": [
+    "Supported text/layout fixtures only; approximate image recognition is not arbitrary-font semantic OCR.",
+    "Actual site-selected total and causal mapping of a late generic failure dialog are outside Engine event tests.",
+    "Unknown/no increment/unexplained count changes can hold input indefinitely; this is not proven progress.",
+    "No release build, user-profile changes or Windows/macOS app execution."
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "scope": "Final independent source/caller review after targeted corrections. Engine public-event tests and rendered reader/runtime helper tests; no whole Worker, native input, OS or live-site execution.",
+  "engineCommand": "cargo test -p macro-core --test selection_count_audit_engine --offline --locked -- --nocapture",
+  "logs": [
+    {
+      "scope": "engine query and independent site ledger",
+      "path": "verification/selection-count-audit/engine/query-api-pass.log",
+      "sha256": "56e448935bc59526c821829ab4cddd40117ea11665056fbfac7c9d4bd3750895",
+      "passed": 10,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "scope": "runtime ordering and proof helpers",
+      "path": "verification/selection-count-audit/runtime-after-order-fix.log",
+      "sha256": "69c9e1db9749a2d0ab20f1b6b93a2519a58120b12ae011f202e10f1cad1c0e21",
+      "passed": 17,
+      "failed": 0,
+      "ignored": 1
+    },
+    {
+      "scope": "final reader numeric, empty contradiction, nearby UI and positive controls",
+      "path": "verification/selection-count-audit/implementation/after-final-negative-radius.log",
+      "sha256": "4df33277a6d40dacadce4796e2aa13730eb654ef8897486f37cf78fb8875ba58",
+      "passed": 17,
+      "failed": 0,
+      "ignored": 1
+    },
+    {
+      "scope": "Historical checkpoint: actual reader/evidence-to-Engine initial authorization; predates the final temporal outside-crop assertions.",
+      "path": "verification/selection-count-audit/runtime-empty-contradiction-after.log",
+      "sha256": "b54cb4966243465bbc83c17a92de6bf36e6edfe791c4019b5b997a3297dd7c48",
+      "passed": 1,
+      "failed": 0,
+      "ignored": 0
+    }
+  ],
+  "files": {
+    "crates/macro-core/src/engine.rs": "d893b89bd3f221bade56108df22f1a02eff5e3bfa963e46bc19d38e67367a0bf",
+    "crates/macro-core/src/model.rs": "3869b494fa627ecff5a202c26b21d8c4aa1cc99f32c18b2e5ed349d037b284e0",
+    "crates/macro-core/src/selection_count.rs": "0fceaa4eda7e797ef72ed8fed6b5d0273e08c0942444ccd8254cf3ab31cc259d",
+    "crates/macro-core/src/selection_count_layout.rs": "386de039c740adc1c29de32b717783ac08f3bb02fd076235990850fb4976810d",
+    "crates/macro-core/src/selection_count_assets/templates.json": "52ce816c2e10dadeb681ac796da6af1689f4aacd00e6d2fc6e11484d51989cee",
+    "crates/macro-core/tests/selection_count_audit_engine.rs": "da68e78fafbedb9e54c416451e8f18158d897e988a1eaba274e29628b63d701d",
+    "crates/macro-core/tests/selection_count_audit_reader.rs": "0f1a021fba85ebe9ac8814c507de662d66b6328e5c1d288b0c0132135518571f",
+    "crates/macro-core/tests/selection_count_completeness.rs": "42bab58c1e142acd528890fae21d9fcf2443b63ec3baf5cfb5ae4d08b9a1a2d5",
+    "crates/macro-core/tests/selection_count.rs": "20030595097937627f977cf8034e81f4fd9a5476555839b09b10af31f76f5165",
+    "crates/macro-core/tests/selection_count_reader_review.rs": "ddcd9edacc9358b2338a56f81a655aaf572b48c788228c747b783a6a75df63f5",
+    "src-tauri/src/runtime.rs": "c59fe1d370a2210cdfdc337c6a8ffde6cc83eecc588707194ea63f202c2b3ff4",
+    "src-tauri/src/selection_count_runtime_tests.rs": "7e829648aa99a89ee8d45d76fc78de29a9d0a856b7fac8a507690150f7eba857",
+    "crates/macro-core/src/selection_count_assets/empty-negative.json": "eff7d4668bed09ccd7e8fba82b8fc052000ac3ed30e0d729f91e5cef79486a4c"
+  },
+  "finalWorkspaceResult": {
+    "path": "verification/selection-count-audit/rust-final.log",
+    "sha256": "c98626ce967f4b50a904813075c072cae4227607ddcc8c1f6bdd064ee5788aee",
+    "passed": 425,
+    "failed": 0,
+    "ignored": 5,
+    "exitCode": 0,
+    "reportedBy": "parent; log contents and temporal test name independently checked"
+  },
+  "preservedCheckpoint": "verification/selection-count-audit/engine/source-ten-test-query-checkpoint.json",
+  "productionEngineChange": "Side-effect-free selection_count_needs_seat_observation query only; no count/state-transition mutation change.",
+  "limits": [
+    "Supported text/layout fixtures only; approximate image recognition is not arbitrary-font semantic OCR.",
+    "Actual site-selected total and causal mapping of a late generic failure dialog are outside Engine event tests.",
+    "Unknown/no increment/unexplained count changes can hold input indefinitely; this is not proven progress.",
+    "No release build, user-profile changes or Windows/macOS app execution."
+  ],
+  "readiness": "Reported Engine/caller/reader blockers corrected and independently reviewed; final shared-code workspace and JS checks passed at these hashes. No OS/live-site readiness claim.",
+  "reopenedEvidence": {
+    "path": "verification/selection-count-audit/implementation/label-radius-experiment/comparison.json",
+    "sha256": "e6cc90abe18715c28dcaf5be705b3f003ac1776376bae27e727f14b640b457b2",
+    "cases": 32,
+    "bothRejected": 8,
+    "existingFalseConfirmations": 24,
+    "newOptimizationFalseConfirmations": 0,
+    "status": "Resolved by negative-only text-line sub-runs with exact-pattern memo; failed source/checkpoint preserved."
+  },
+  "performanceComparison": {
+    "path": "verification/selection-count-audit/implementation/label-radius-subruns-experiment/comparison.json",
+    "sha256": "7455f537417eae6fc9fbb41beba92c2f3dd7e4b18c1d000193f36d20b29589b8",
+    "scope": "Three samples per static synthetic optimized-reader scenario; not end-to-end app latency and not uniformly faster."
+  },
+  "javascriptResult": {
+    "path": "verification/selection-count-audit/javascript-final.log",
+    "sha256": "465c034d63b0f6796e1156ee84d32b2555104b896fb58e7f76b0775a2c9c5b27",
+    "passed": 150,
+    "failed": 0
+  },
+  "offlineActualScreenshot": {
+    "path": "verification/selection-count-audit/actual-count3-final.log",
+    "sha256": "df0f5a8d837b7ad4ea335319203c2b572faa24feb4e429487b7a01f77ab527a1",
+    "count": 3,
+    "readerMs": 258,
+    "scope": "One existing user-provided image, optimized static reader only; not live capture or end-to-end latency."
+  },
+  "sourceBeforeFinalTest": {
+    "path": "verification/selection-count-audit/source-before-final-test.json",
+    "sha256": "ce189105d47d7b34639ee365c2ed93322b84a3731ae0c41fa603b3584b2a3c23",
+    "reviewedSourceMatches": true
+  },
+  "finalTemporalAssertions": "Current outside-crop contradiction assertions passed in the final rust-final.log; the separate one-test after log is retained only as an earlier initial-authorization checkpoint."
+}

@@ -1,0 +1,69 @@
+--- before/selection_count_layout.rs
++++ after/selection_count_layout.rs
+@@ -101,7 +101,33 @@
+ fn background_column(frame: RgbaView<'_>, x: usize, top: usize, bottom: usize, background: [u8; 3]) -> bool {
+     // Check every pixel: a narrow horizontal divider must not disappear merely
+     // because an image was sampled at an unfortunate phase.
+-    (top..bottom).all(|y| matches(frame, x, y, background, 8))
++    (top..bottom).all(|y| matches(frame, x, y, background, 3))
++}
++
++struct LabelScope { label: Bounds, outer: Bounds, connected: Vec<bool> }
++impl LabelScope {
++    fn contains(&self, x:usize, y:usize)->bool {
++        self.label.has_point(x,y) || (self.outer.has_point(x,y)
++            && self.connected[(y-self.outer.top)*self.outer.width()+x-self.outer.left])
++    }
++}
++
++fn label_scope(frame:RgbaView<'_>,label:Bounds,padding:usize,background:[u8;3])->Option<LabelScope> {
++    let outer=label.padded(padding,frame.width as usize,frame.height as usize);
++    let mut connected=vec![false;outer.width()*outer.height()];
++    // Only a directly adjacent antialiased fringe belongs to the label. A
++    // transitive flood through near-background pixels can swallow another tiny
++    // character that merely touches that fringe.
++    for y in label.top..label.bottom {for x in label.left..label.right {
++        if pixel(frame,x,y)?==background {continue;}
++        for (nx,ny) in [x.checked_sub(1).map(|nx|(nx,y)),(x+1<outer.right).then_some((x+1,y)),
++            y.checked_sub(1).map(|ny|(x,ny)),(y+1<outer.bottom).then_some((x,y+1))].into_iter().flatten() {
++            if outer.has_point(nx,ny) && !label.has_point(nx,ny) && pixel(frame,nx,ny)?!=background {
++                connected[(ny-outer.top)*outer.width()+nx-outer.left]=true;
++            }
++        }
++    }}
++    Some(LabelScope{label,outer,connected})
+ }
+ 
+ fn panel_geometry(frame: RgbaView<'_>, heading: Bounds, empty: Bounds, button: Bounds) -> Option<Bounds> {
+@@ -131,21 +157,26 @@
+     // not merely consist of one glyph or a short divider from another control.
+     for outside in [left.checked_sub(1), (right < frame.width as usize).then_some(right)].into_iter().flatten() {
+         let differs = (top..bottom).filter(|&y| pixel(frame, outside, y)
+-            .is_some_and(|value| difference(value, background) > 8)).count();
++            .is_some_and(|value| difference(value, background) > 3)).count();
+         if differs * 100 < (bottom - top) * 90 { return None; }
+     }
+     // Require clear content except for the two recognized labels. This rejects
+     // a wrapped numeral, seat rows, another card, or an intervening separator.
+     // It also rejects otherwise legitimate unsupported explanatory layouts.
+-    let allowed_heading = heading.padded(padding, frame.width as usize, frame.height as usize);
+-    let allowed_empty = empty.padded(padding, frame.width as usize, frame.height as usize);
++    // Padding exists only to retain antialiased ink connected to a recognized
++    // label. An unrelated tiny numeral in that margin is still content.
++    let allowed_heading = label_scope(frame,heading,padding,background)?;
++    let allowed_empty = label_scope(frame,empty,padding,background)?;
+     let content_left = left.saturating_add(padding);
+     let content_right = right.saturating_sub(padding);
+     let content_bottom = button.top.saturating_sub(padding);
+     if content_left >= content_right || top >= content_bottom { return None; }
+     for y in top..content_bottom { for x in content_left..content_right {
+-        if allowed_heading.has_point(x, y) || allowed_empty.has_point(x, y) { continue; }
+-        if !matches(frame, x, y, background, 8) { return None; }
++        if allowed_heading.contains(x, y) || allowed_empty.contains(x, y) { continue; }
++        // A faint seat row or wrapped count is still content. Only a genuinely
++        // flat clear area establishes this narrow empty-panel layout; do not
++        // erase low-contrast text using the control/edge color tolerance.
++        if !matches(frame, x, y, background, 0) { return None; }
+     }}
+     // Include the tested side boundary and the button's outer bottom sample,
+     // so an input-time image comparison cannot ignore those supporting pixels.

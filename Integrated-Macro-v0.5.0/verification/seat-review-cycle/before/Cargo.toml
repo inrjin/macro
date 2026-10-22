@@ -1,0 +1,18 @@
+[workspace]
+members = ["crates/macro-core", "crates/macro-platform", "src-tauri"]
+default-members = ["crates/macro-core", "crates/macro-platform"]
+resolver = "2"
+
+[workspace.package]
+version = "0.5.9"
+edition = "2021"
+
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = "debuginfo"
+

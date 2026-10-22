@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-10-20T18:01:01.069654+00:00",
+  "releaseDirectory": "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.4",
+  "archive": "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.4.zip",
+  "archiveBytes": 4655861,
+  "archiveSHA256": "3a6f45549bcb6013e2b94cbff7c337dbeb8d2b47e989f5b9fd7d1e008c8b8e28",
+  "allPackagedFilesMatchExtractedFiles": true,
+  "packagedFileCount": 12,
+  "extractedAppSignature": "passed",
+  "sourceManifestSHA256": "f4cc2f607a53c9d66b8538d3a1159a11a8e234d51bb15186d9ca9f958c6e057b",
+  "executableSHA256": "ede3953e5b80b4e6b2e203e0df023d780ee0b4c3e60c7f8862779e75960aa8b3",
+  "javascriptTests": 97,
+  "rustTests": 144,
+  "unverified": [
+    "Actual macOS input/capture/overlay",
+    "Actual Windows input/capture/overlay",
+    "Authenticated NOL booking flow",
+    "Browser transport and site contracts",
+    "End-to-end latency"
+  ]
+}

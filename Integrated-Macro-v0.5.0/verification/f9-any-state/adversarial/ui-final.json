@@ -1,0 +1,17 @@
+{
+  "recordedAt": "2026-10-21T15:28:54.720024+00:00",
+  "command": "node --test ui/tests/reentrant-review.test.js",
+  "passed": 19,
+  "failed": 0,
+  "exitCode": 0,
+  "scope": "Existing actual DOM asynchronous command/epoch regression; not native F9 phase handling",
+  "files": {
+    "ui/app.js": "baea51b1dbd2c172c65bde970d2e3eff42640e53d75ee62ab44d8bd6b7f60486",
+    "ui/model.js": "2351e89ce198302b34f13358c980734b26747dd43594a16b2f442480ee8d101e",
+    "ui/overlay.js": "00cc95eee61939c572556466139193b78b7f91df2f46c619b16da805fe239b41",
+    "ui/index.html": "4db994f931de4da4cb1e3d4483b0694a8309dafe4160b9af6c4d46f2392575ff",
+    "ui/tests/run-reentrant-review-dom.mjs": "52d41eda4084e04c8fd3080a0f85c1f0810d8c99c0590fb2a8fef1af4d37f86a",
+    "ui/tests/reentrant-review.test.js": "d89afffab7615d9d05de0f77f40baad3d385c3934faf784bc74ca05618281888"
+  },
+  "logSHA256": "0cc5bea59315f278e8e20ea23c9bc334283e3dbbd0f6ef79d54acdae6e341b5e"
+}

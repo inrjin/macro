@@ -1,0 +1,38 @@
+{
+  "reviewer": "/root/fix_cancellation_start",
+  "recordedAtUtc": "2026-10-22T06:59:09.736225+00:00",
+  "archive": "/Users/inrjin/Documents/機械人間/Integrated-Macro-Windows-v0.5.11-GitHub-Upload.zip",
+  "archiveSHA256": "2dbaf3e0b86d5add9ceea1f6666f3884b843843593862ffc9f9406f4a6bb9df8",
+  "archiveBytes": 2540006,
+  "entries": [
+    "Integrated-Macro-Windows-v0.5.11-GitHub-Upload/Integrated-Macro-Windows-v0.5.11-Build-Kit.zip",
+    "Integrated-Macro-Windows-v0.5.11-GitHub-Upload/UPLOAD-GUIDE.md",
+    "Integrated-Macro-Windows-v0.5.11-GitHub-Upload/workflow.yml.txt"
+  ],
+  "fileHashes": {
+    "Integrated-Macro-Windows-v0.5.11-Build-Kit.zip": "d0e5ed8616f2bdb1e49fd86497d3e2cd557cd460d2cca7c1c10b5777bf36357e",
+    "UPLOAD-GUIDE.md": "14a71beb91d5ec96414cc9d3af6e239328400acfb13004d741f3ff03f06de9b1",
+    "workflow.yml.txt": "56a28fddd11d06314ee9a8127fdbd123842e4d89d68323ea8057830f8761e9e3"
+  },
+  "checks": {
+    "outerBytes": true,
+    "outerSHA256": true,
+    "crc": true,
+    "exactlyThreeFiles": true,
+    "noDuplicateOrCaseCollisions": true,
+    "safeRelativePaths": true,
+    "noSymlinks": true,
+    "threeExactReviewedPayloads": true,
+    "innerZIPEqualsOriginalBytes": true,
+    "workflowEqualsReviewedSource": true,
+    "guideEqualsReviewedSource": true
+  },
+  "issues": [],
+  "sourceReviewSHA256": "2b2f875a0d25093720ad4dfcd6fb628db71b35c33f0dc927f60fef3f2be4fd3b",
+  "receiptSHA256": "02a125f8ca95f181067fac383da54b02fa45c21c7fcd3b838b53aec6f85ed5fd",
+  "githubUploadOrWorkflowRun": false,
+  "accountConfigurationChanged": false,
+  "windowsBinaryProducedByReviewer": false,
+  "applicationOrSettingsModified": false,
+  "conclusion": "The three-file upload preparation archive exactly preserves the previously reviewed build-kit ZIP, workflow text and guide. No remote GitHub or Windows execution has been performed."
+}

@@ -1,0 +1,22 @@
+# Count-policy caller audit
+
+This is a read-only audit of all production `optimistic`, `selectionPolicy` and `continuous_search` consumers in `ui/` and `src-tauri/src/runtime.rs`. The count option is independent of the original selection policy; it must not silently change entry, CAPTCHA, region-transition or legacy-refresh behavior.
+
+| Consumer | Required interpretation | Review |
+|---|---|---|
+| `app.js` `renderRunModeChoice` | Count ON hides selected-color/optimistic-count guidance; idle uses unsaved controls, running/paused uses snapshot | Corrected; independent actual DOM checks include running=false/paused=true and OFF restoration. |
+| `app.js` `renderManualActions` | Count ON does not accept manual selected-ID reconciliation; failure refers to last delivered attempt, optional visual-dialog assistance remains optional | Corrected; DOM callback checks actual `confirm_observation` payload without a queued candidate ID. |
+| `model.js` `visualDialogView` | Count ON legacy mode can run visual-dialog monitoring even when not optimistic | Corrected; capture/pause/recovery/error precedence retained. |
+| `model.js` `normalizeSnapshot`, `overlay.js` count | Display site total or unknown, independent of estimates; preserve old OFF presentation | Corrected; count3/estimate2 are distinct and unavailable never displays0. |
+| Runtime manual confirmation/conflict/context helpers | Explicit `Snapshot.selection_count_verification`; use delivered attempts, reject queued-only candidates; manual Pause is distinct from context hold | Corrected helpers and direct real-Engine tests; actual context-hold creation must agree (see below). |
+| Runtime selected-color sampling | Count ON excludes the original color confirmation path | Corrected; the old stray notification was ignored by core for an undelivered candidate, not demonstrated as unsafe native delivery. |
+| Runtime `visual_enabled` and conflict action exposure | Count ON supports the watcher and advertises failure only after a delivered attempt | Corrected. |
+| Runtime `pause_for_context_at` and native recoverable-error branch | Count ON legacy Seats/Conflict/Completing must be able to enter the hold used by the new manual policy | The audit found both still gated only on `continuous_search()`: no TargetRecovery after capture errors, and pre-input recoverable errors could use failed ACK/Faulted. Corrected with one shared `automatic_context_recovery` helper adding only count ON plus Seats/Conflict/Completing. Both actual call sites were reread; unknown/partial delivery still faults, and old continuous behavior is preserved. |
+| Runtime navigation freshness and loop yield | Preserve legacy transition policy; count-gated Engine cannot issue another seat without a new count observation | Existing distinctions are intentional; no blanket replacement with count ON. |
+| Manual entry/CAPTCHA/region/refresh confirmations | Preserve existing routes; count ON is not permission to remove those original stage gates | Kept intentionally. In particular legacy region navigation with conflict recovery may retain its original F6 transition confirmation. |
+
+Tests of the newly exposed context-hold helper with `recovering=true` alone cannot establish that the real Worker ever creates that hold. That caller mismatch was discovered by comparing the new helper to `pause_for_context_at`, rather than accepting the synthetic state setup as end-to-end evidence.
+
+No full Worker/native input/browser run was executed in this review. Remaining website image-to-input timing races and reader support limits are recorded separately.
+
+Final rereview: the actual pre-pause/pre-cancellation call sites now use that shared phase-scoped predicate, rather than merely accepting a fabricated recovery-state test. Count ON legacy native failures proven unsent follow cancellation plus context hold; Resume still requires new count/map evidence. Region/WaitingRefresh and other original phases are deliberately excluded from the new exception. All production consumer matches were classified; no additional blocker was found within this change's scope. Final `../workspace-final.log` passes 367 Rust tests (0 failures,2 manual checks ignored), and `../javascript-final.log` passes 150 JavaScript tests (0 failures). `final-summary.json` binds all 14 reviewed source/test files to those final manifests; current hashes match. This closes the recorded caller defects without changing the declared platform/live-site limitations.

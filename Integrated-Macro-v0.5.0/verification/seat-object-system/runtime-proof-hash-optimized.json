@@ -1,0 +1,1 @@
+{"width":3024,"height":1608,"rounds":200,"meanUs":3344.75,"profile":"rustc -O; production digest body, synthetic RGBA; excludes crop, OCR, capture, native validation and UI"}

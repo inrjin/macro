@@ -1,0 +1,15 @@
+{
+  "scope": "synthetic RGBA -> actual extract_candidates -> actual Engine; no OS/browser input",
+  "command": "CARGO_HOME=\"$PWD/.build-tools/cargo\" RUSTUP_HOME=\"$PWD/.build-tools/rustup\" RUSTUP_TOOLCHAIN=stable \"$PWD/.build-tools/cargo/bin/cargo\" test -p macro-core --test priority_audit --offline --locked -- --nocapture",
+  "sourceSha256": {
+    "crates/macro-core/tests/priority_audit.rs": "e2d2d4777b3a733ae0f10521520c4292bd7dcad28d5951d3480b3f4726c1d2f3",
+    "crates/macro-core/src/engine.rs": "16150aa81efbcab50b8c55dcdf65836845efad8fa6ff41e131b66f16bcfda7a0",
+    "crates/macro-core/src/vision.rs": "51f79259d9c89481c44a831d2a1095584bdb33f40ba5961a783cb68c98f3ec1d",
+    "crates/macro-core/src/model.rs": "eab5347942a383af416f837bb02681a541259fba2e429c6f338518956e92fa49"
+  },
+  "result": {
+    "passed": 3,
+    "failed": 0
+  },
+  "productionSourceModified": false
+}

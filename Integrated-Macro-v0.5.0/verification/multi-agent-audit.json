@@ -1,0 +1,273 @@
+{
+  "generatedAt": "2026-10-21T01:36:24.859086+00:00",
+  "status": "Completed source audit and regression validation; no release packaging or live-app test",
+  "baseRelease": "0.5.8",
+  "team": {
+    "totalAgents": 4,
+    "roles": [
+      "root: visual detection, vision allocation, integration review",
+      "platform: native input/permissions/coordinates and peer review",
+      "runtime: lifecycle, profile version checks, retries and frame boundaries",
+      "UI: settings, asynchronous replies, stop controls and peer review"
+    ],
+    "method": "Reproduce, discuss fixes, implement, independent counterexample review, revise, final validation"
+  },
+  "findings": [
+    {
+      "id": "profile-stale-write",
+      "evidence": "Actual UI harness + extracted production save/storage with actual Engine in idle and paused modes",
+      "fix": "Compare expected profile revision before mutation; pair authoritative profile and revision; reject stale writes",
+      "historicalUserFailureProven": false
+    },
+    {
+      "id": "late-start-after-stop",
+      "evidence": "Actual UI delayed Save/Start plus RuntimeHandle queue/epoch regressions",
+      "fix": "One UI start request; synchronous ingress enqueue; epoch guards through storage, activation, capture; scoped UI-start timeout and current-epoch window handoff"
+    },
+    {
+      "id": "stop-control-blocked",
+      "evidence": "Actual DOM disabled Stop and no IPC during pending Start/Save",
+      "fix": "Dedicated stop IPC and lock ownership; ignore superseded status replies including F4"
+    },
+    {
+      "id": "native-stop-during-validation",
+      "evidence": "Extracted prior adapter methods, validation barrier, OS counters; no actual input",
+      "fix": "Shared and native final guards; unsent cancellation is not acknowledged as a successful seat; always release after delivered down"
+    },
+    {
+      "id": "pre-input-frame",
+      "evidence": "Old sequence-only helper with actual Engine admitted two stale-frame cases",
+      "fix": "Require sequence and native observation time after input start",
+      "limit": "SCK callback arrival time does not prove image production time or finished site rendering"
+    },
+    {
+      "id": "invalid-alpha-evidence",
+      "evidence": "Failing before-fix synthetic transparent frame regression; native path alpha review",
+      "fix": "Opaque central/surrounding samples and paired samples; automatic valid-frame recovery; reject transparent/truncated sampled pixel",
+      "actualOccurrenceInUserCaptureProven": false
+    },
+    {
+      "id": "oversized-component-allocation",
+      "evidence": "Synthetic 3024x1780 all-matching scan with allocator metrics",
+      "fix": "Bound retained candidate geometry but traverse entire oversized component"
+    },
+    {
+      "id": "merge-calibration-components",
+      "evidence": "Peer counterexample to first fix plus actual DOM delayed Arm/F8 events",
+      "fix": "Treat RGB, points, rectangles and capture reference as atomic values; preserve unrelated draft options"
+    }
+  ],
+  "validation": {
+    "javascript": {
+      "command": "npm test",
+      "passed": 137,
+      "failed": 0,
+      "log": "audit-final-js.log"
+    },
+    "rust": {
+      "command": "cargo test --workspace --offline --locked",
+      "passed": 242,
+      "failed": 0,
+      "log": "audit-final-rust.log",
+      "suitePassed": [
+        73,
+        102,
+        27,
+        15,
+        10,
+        15
+      ]
+    },
+    "native": {
+      "command": "bash crates/macro-platform/native/verify-macos.sh",
+      "exitCode": 0,
+      "architecturesCompiled": [
+        "arm64",
+        "x86_64"
+      ],
+      "hostChecks": [
+        "C ABI and allocation",
+        "cancelled input callback and down/up order",
+        "window/activation/capture synthetic checks",
+        "nine observed input metadata pairs replayed through both watches",
+        "keyboard read-only status and disabled watch ABI"
+      ],
+      "log": "audit-final-native.log",
+      "sandboxServiceWarningsPresent": true
+    },
+    "sourceStableSinceFinalFreeze": true,
+    "sourceFileCount": 96,
+    "sourceManifest": "audit-source-freeze.json",
+    "desktopTargetedSourceMatchesFinal": true
+  },
+  "visionStressBenchmark": {
+    "width": 3024,
+    "height": 1780,
+    "iterations": 5,
+    "extraPeakBytesBefore": 72508032,
+    "extraPeakBytesAfter": 6447744,
+    "medianMicrosecondsBefore": 29544,
+    "medianMicrosecondsAfter": 26173,
+    "scope": "Synthetic oversized component, not site latency or app resident memory",
+    "evidence": "audit-round1-vision/"
+  },
+  "limits": [
+    "No live installed-app typing, capture-to-CAPTCHA-dismissal or ticket selection was tested.",
+    "Windows native compilation and execution were not performed.",
+    "Visual CAPTCHA and popup checks are pixel heuristics, not semantic identification or server confirmation.",
+    "Native timestamp fence rejects known pre-input observations, not delayed old frames whose callback arrives after input.",
+    "Stop cannot recall an already-posted event, and a narrow final-check/post race remains.",
+    "20-second expiry cancellation and delayed handoff guards are scoped to UI Start, not all IPC or already-consumed hotkey requests.",
+    "Alpha quality covers sampled central and surrounding grids, not every pixel.",
+    "The reproduced stale-save path may explain missing ROI, but historical causation for the user is not established."
+  ],
+  "releaseBuildPerformed": false,
+  "liveAppLaunched": false,
+  "realOSInputPosted": false,
+  "permissionSettingsChanged": false,
+  "userProfileWritten": false,
+  "preservation": {
+    "agents": {
+      "path": "/Users/inrjin/Documents/機械人間/AGENTS.md",
+      "sha256": "916ca869400ec78ecc76cab04d9b9af51f23543d2d92010471330200457e2db5",
+      "unchanged": true
+    },
+    "releaseExecutable": {
+      "path": "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.8/Integrated Macro.app/Contents/MacOS/integrated-macro",
+      "sha256": "3535cf43b48e010d538232bcefa7bbb533d7a28791c3b6ccbe52452bfbd75063",
+      "unchanged": true
+    },
+    "releaseArchive": {
+      "path": "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.8.zip",
+      "sha256": "6625434c2483b16b417e6f4efec46199d7091ed31a3e404d23d700df1894f90e",
+      "unchanged": true
+    }
+  },
+  "changedOrAddedSourceFilesSincePreviousKeyboardReview": [
+    "adapters/browser/README.md",
+    "crates/macro-core/README.md",
+    "crates/macro-core/src/assets/README.md",
+    "crates/macro-core/src/vision.rs",
+    "crates/macro-core/src/visual_dialog.rs",
+    "crates/macro-core/tests/vision_clock.rs",
+    "crates/macro-core/tests/visual_dialog.rs",
+    "crates/macro-platform/README.md",
+    "crates/macro-platform/native/MacPlatform.swift",
+    "crates/macro-platform/native/VERIFICATION.md",
+    "crates/macro-platform/native/verify-macos.sh",
+    "crates/macro-platform/src/lib.rs",
+    "crates/macro-platform/src/macos.rs",
+    "crates/macro-platform/src/unsupported.rs",
+    "crates/macro-platform/src/windows.rs",
+    "src-tauri/src/main.rs",
+    "src-tauri/src/runtime.rs",
+    "src-tauri/src/visual_recovery.rs",
+    "ui/app.js",
+    "ui/profile-sync.js",
+    "ui/tests/dom-fixture.mjs",
+    "ui/tests/profile-sync.test.js",
+    "ui/tests/run-capture-dom.mjs",
+    "ui/tests/run-profile-race-dom.mjs",
+    "ui/tests/run-start-dom.mjs",
+    "ui/tests/run-start-shortcut-dom.mjs",
+    "ui/tests/start-integration.test.js"
+  ],
+  "sourceSha256": {
+    "Cargo.lock": "6ed7987eb849c0738409e67ca609efc75900a6cdb4efc945de10ee3f03180ca3",
+    "Cargo.toml": "8d7f62145fe754cf156a84fb040330cc574f6e540da6ef53b1a18f3ce73d11bf",
+    "adapters/browser/README.md": "3853648e79574ba930b4bf347801acf6724cf79b6901a6154fd4b1e3bb447537",
+    "adapters/browser/observer.js": "fb19b2022af8a03108664f34fa994d0f6e95e8418fec17ad96a530cc5c3464eb",
+    "crates/macro-core/Cargo.toml": "3bbceff4ab544f34f123188963e59497c5ebbe47e365927168f7fadcc44f7fe7",
+    "crates/macro-core/README.md": "ca22e56d47d71f0169ff72069ff723360d7ce2c421d2cab0ec737d9b6f89dcdd",
+    "crates/macro-core/examples/replay.rs": "ba992422108e66c7b6c39c32adf6c81ed18c0668c6ebf1e96a67869bf155348f",
+    "crates/macro-core/src/assets/README.md": "ea676a5043c279ef5f0b75ec358b93d3dfb2b29b2490c84cc026cd658fbca8e6",
+    "crates/macro-core/src/assets/nol-captcha-title.mask": "b0ccceb2292514757984166464fe8c328cef130de470597965c5828f49fbe53a",
+    "crates/macro-core/src/clock.rs": "ee16850ea2a5eae244dfd4ccba96ea211b8daa453043559ab0539bc793474d7c",
+    "crates/macro-core/src/engine.rs": "16150aa81efbcab50b8c55dcdf65836845efad8fa6ff41e131b66f16bcfda7a0",
+    "crates/macro-core/src/lib.rs": "eb4ada7ae691ef6b38cede5c7ffc3efd42310b0b239ec80dd646a918417eb9b0",
+    "crates/macro-core/src/model.rs": "eab5347942a383af416f837bb02681a541259fba2e429c6f338518956e92fa49",
+    "crates/macro-core/src/nol_captcha.rs": "af0a56333c4d0787e7aa4cefe1e10674fffe1178450a617880291f46db30b27a",
+    "crates/macro-core/src/vision.rs": "51f79259d9c89481c44a831d2a1095584bdb33f40ba5961a783cb68c98f3ec1d",
+    "crates/macro-core/src/visual_dialog.rs": "f81ed79014d3c77e38fc3fc93434f5aaa1ad26f5f12db270a9a0d2a6513be2a1",
+    "crates/macro-core/tests/engine.rs": "a20c482036c945749de58845bdfb300aa355edbe6d63dcf712da2e694bd0d073",
+    "crates/macro-core/tests/nol_captcha.rs": "e5dd3f504f7b3c5239825a788d25ce1059c5aeecaa85c53e2d25352a6986ad1b",
+    "crates/macro-core/tests/vision_clock.rs": "a73797992da906c46c07fe05b9a3f3d8ab0c784bb542d58e5416c9f25503e151",
+    "crates/macro-core/tests/visual_dialog.rs": "8f5be2e0c9b8412589a35426eae433ecd1326cfcd9a4cb8f4b8cb05218160ba4",
+    "crates/macro-platform/Cargo.toml": "3a5bbeb6c9905890486d213f8e5a07b0745388b8dc19422150b53b97f7ee7f3d",
+    "crates/macro-platform/README.md": "8d4a00fdaadffde15262f1c7fe709099c4e1a361622b597d8ed7def5de2b56fb",
+    "crates/macro-platform/build.rs": "258beae4fd5a9f7b19e4c5b5faa48acc8cd962698ae707ab79e8b17f98a4f565",
+    "crates/macro-platform/native/MacPlatform.swift": "c865ccd7059f4e8c604e353c9909e8e563d91684f9e5510c69ffd8e5d4023ce7",
+    "crates/macro-platform/native/VERIFICATION.md": "f33fd08c2ef07167ffea2e534dfc44d1b986d5df5b5eb816e1fc22e36204e27b",
+    "crates/macro-platform/native/verify-macos.sh": "101d1bc99ef2d83c80976b689f8ea6a272f4d4d9484bb4f872ad5373180a45ad",
+    "crates/macro-platform/src/lib.rs": "fad64b68fd3ab41d8f8c06a6b1634f5012b74b59491b81bcaf9e59ebee63e4e0",
+    "crates/macro-platform/src/macos.rs": "c4dff6a75912d57948a5cba5713b30fbdd70911e67401e974396bf612f546a98",
+    "crates/macro-platform/src/unsupported.rs": "0a835b7f1c4aeaab46bf3d053671577316874428c36aeae7c1b95c655fea8967",
+    "crates/macro-platform/src/windows.rs": "30980d0285a8e90a10c12f8f880728034ba419524d95781bfeae7d844c413104",
+    "fixtures/input-check.html": "518d0d95b8a1eacb8941f4dadeb77ce5a480079f37e7ebd3e563cf5363d804e1",
+    "fixtures/keyboard-check.html": "40854f9fe41f46d76f5fc54a65afd2502f0bc90db605451b6521188bc85b884b",
+    "fixtures/keyboard-monitor-routing.json": "0e2c2a3a25507aa269179ba2afeb50f8988d9bd8bdb3f25304f4ed4fc5e39e9c",
+    "package-lock.json": "e1664f3bd05830dd12c12d682cbde596d33212d25de46019eb11034ae74970cb",
+    "package.json": "41ab031c1306af07cd65a15f8d56024023d9cd08edf33c92e43124859f88b5e5",
+    "scripts/bootstrap-macos.sh": "ddef796cbb3747dfb70cf07d8c3317770c15afb345ae6e2a857382dd0fbe0267",
+    "scripts/build-gate.mjs": "cd5b4b527a7183a3a49ece9a0cd4de56f9264a92d913a4bcb05ba97e4823c7f1",
+    "scripts/build-macos.sh": "644b1daa17a4077a8a392e727340d04177ea2b49d0f1b38d2c2b3f12dc6458b6",
+    "scripts/build-windows.ps1": "650e50a31bc131f0bea708ae24d1c5f449c605dba68e25d7679a1d60121d642c",
+    "scripts/check.mjs": "1da0f66c2a9d2e6dd76940b07915446a64de44f6f3148966dbc12596d77496b9",
+    "scripts/diagnose-macos-windows.swift": "3cea68a9c214a5ba4dae21241311c27fd69cc07f0772d5a68dc8243b48161a1d",
+    "scripts/keyboard-probe-native.swift": "5218fdd8d45ebbceec69efce8c8412403632550c23654e506978d1d60eb97396",
+    "src-tauri/Cargo.toml": "e202fc400597470bbdbbd42bdd12ad5d6e55d7dda3ef85061acface7fb0688c0",
+    "src-tauri/Info.plist": "b37a04eb49c7f12cf6463313a301a6d13502ee8ed7f4c3d8c0a7550be6186fbc",
+    "src-tauri/build.rs": "62343b39726897a2c190d7ffe52bfd5ef85236f1f08a9f7d4595ee5993e02c74",
+    "src-tauri/capabilities/desktop.json": "f53ef39e877e4b8ef5e0c2cff216507a3a6313e6b532c5d329c0e4406be06615",
+    "src-tauri/gen/schemas/acl-manifests.json": "a9d7f657ba1cb012be21ae33115d34b157fa461b778415b6b0cd31fe4210132b",
+    "src-tauri/gen/schemas/capabilities.json": "95fcaf1de3bc42cb648b2786ca20deb0a50a84ea3546d564d3e36bd29a04f90d",
+    "src-tauri/gen/schemas/desktop-schema.json": "1600c73a42192d0391c0bcb8b46cece6ce2224502d446c9699ba73284cedad1c",
+    "src-tauri/gen/schemas/macOS-schema.json": "1600c73a42192d0391c0bcb8b46cece6ce2224502d446c9699ba73284cedad1c",
+    "src-tauri/icons/icon.icns": "be80f1eb77b66015d3119b9d8483fae0c3684f3169793b93a5372d505b827a7c",
+    "src-tauri/icons/icon.ico": "75570003f1695a25005e9580d2e5cfd636c18fdbcbb2283d131124f153d2a483",
+    "src-tauri/icons/icon.png": "1ceb0accd7cb31532bea9d02c682d7af8b90d6d2a91cacbbee57aae0b3035000",
+    "src-tauri/src/clock.rs": "77229b68e7342b6c9b734e6fa91ed3f8b31d5e2b3b024debfb864695bbbf8ebc",
+    "src-tauri/src/keyboard_check.rs": "2f08b9787b7d230d9be2f05436c1bbe0d143454ec9240e71452bdb684138f153",
+    "src-tauri/src/main.rs": "5e0a5b19272003d6b2a880c6b8062210f93c05d1004aca1bd13f7110019a3b44",
+    "src-tauri/src/runtime.rs": "5f7329117b3aa8e42c1bda3de1341223a1f0f356aaf5bba50a9a41aec58972df",
+    "src-tauri/src/storage.rs": "598937d2af9a7258d723895049f38ce7b701f5c1c417c376ddcf00b407c88828",
+    "src-tauri/src/visual_recovery.rs": "3dd16f6fb7a1531edaff7f92b1a31b0fad570fbf76801f682625ae1c263b4e29",
+    "src-tauri/tauri.conf.json": "950a2475fae6d55c4f44e8aa66eb480f20d65ba1bf7107904a01034af66c31fd",
+    "tests/browser-observer.test.js": "12cf4cc1a9326e100cddfbcfc7fdb08312d189aac143f5ce1cfbb48be62baf69",
+    "tests/build-gate.test.js": "82fe665309105fb11ea6d0fdafdf617537591f253bb0cd47210fe3af7539efb4",
+    "ui/app.js": "ed542fc64ba44acb75b5816b9e4b5fce18a303042c0e46fcd03845e0b2365f12",
+    "ui/capture-state.js": "8fabf974f9998c60d723d4e052eecaabd0456c30570e0a5bc755c6f769d4323a",
+    "ui/index.html": "7864f6a8284146e05096f8e96fcd70431ece77825d2d207548fe938d1c671a48",
+    "ui/model.js": "3a1e8591290ca784b2be892403892f7dce169c99c50f19cde7cddfbeed57833d",
+    "ui/overlay.html": "64b73cb64a7aeb75891aad02f47ac2f1156512d37ef943beb768ddd48b660e56",
+    "ui/overlay.js": "05c89263082627150325cd4dfea85c6dd7cfe2b6c21d644f7eb9d4c3080ea1bd",
+    "ui/package.json": "8f0a4c8d928d30eacedba2fceecadc10c4e5292c9becdb1986b292e83a9616ef",
+    "ui/profile-sync.js": "4863b7f30bacc2d7798cfa15e6e4b98974e0d2b09d920433cf6d68300b214c3d",
+    "ui/styles.css": "a121ebc675b191f32474b493a3a10c603dcffa447e5d15a0497fda701235e3e1",
+    "ui/tests/capture-integration.test.js": "4ffa2489eba7de33dde2280e3e32a05e78337b893a7aa83b3818d0a5c37d5e5f",
+    "ui/tests/capture-state.test.js": "fc3e03058e9f11c7bd354af55a41635646fbe4463870674330640ce97719f881",
+    "ui/tests/continuous-flow.test.js": "a6d17784786eaf19c01e9bad4797aef2694ae5b0fa35d8d62e9f82699c2875f2",
+    "ui/tests/direct-seats.test.js": "2a1c99767a67938d6f629ce3de11d7880825f9152c474e108e6265644a96db69",
+    "ui/tests/dom-fixture.mjs": "367897b00187fdf517d55fcd7ae75435fe3c9d0a8a2c8b115e723cc64f40d34e",
+    "ui/tests/keyboard-check-ui.test.js": "72f6a67ecaa80432d23e06977a1b20316fa9dc3ec70b460f9932d90b0c967e0d",
+    "ui/tests/keyboard-check.test.js": "a2923d4c8d33715479bf476c0b576dffb96db54b69efe9f2d334eb123b18a611",
+    "ui/tests/model.test.js": "fe433737276de7313a194d5fa7a63b92e2e63c69b4f89bbec70f6def50d29d8c",
+    "ui/tests/optimistic-selection.test.js": "368515fcdc844d8be5463e94c49e15ec9fc090f441895e46c39ed64080430c34",
+    "ui/tests/profile-sync.test.js": "2661a2bbb23aa8389b41fcb6cde007dbf6d5d93994fb82aa5da070f32e592d2b",
+    "ui/tests/run-capture-browser.mjs": "149e3a551fe7b723d060118f25b28fe184731f5fdb6ffe2c1695654525a7e15f",
+    "ui/tests/run-capture-dom.mjs": "fa1fa0f31efa7dbe6d8c3616b70df036ed52ce740a7827cd86dc727923de4c00",
+    "ui/tests/run-continuous-flow-dom.mjs": "76062c3fd8cae9cd8fc425bd8c63802401c2eb4373f33893ad644c42ef311573",
+    "ui/tests/run-keyboard-check-ui-dom.mjs": "e14503ed3a069ae258449d7f63000f3579744cc30f26b8f1ef4b7401625abc11",
+    "ui/tests/run-optimistic-selection-dom.mjs": "deb9dff19ef24c61ae99a97cf93f25aab6723fc47342e1285514c43c80f834bb",
+    "ui/tests/run-profile-race-dom.mjs": "9d90ddcffc29ffa39903522915ca9c9b4387da6c496a8b913ed819aa761a40ab",
+    "ui/tests/run-recovery-dom.mjs": "f1d0e65004bdacdc70666b9cb45f149f7d9ab9a5d3052c9a5243f5f058275af3",
+    "ui/tests/run-start-dom.mjs": "8ac6fdded9986479542ee93e3b0b7f6026864715097016fea48b213f224398d0",
+    "ui/tests/run-start-shortcut-dom.mjs": "24b95a39a7bfa2b8892f43257b9edc345d1075442dc4c4061b036c0910761657",
+    "ui/tests/run-vision-dom.mjs": "62e1ca0dbe9ea2c460f93d8d5c9bcd6d41fea811a4dc8923459210b65c71da3c",
+    "ui/tests/run-visual-dialog-dom.mjs": "f9ce49857cb0d64e31f5337fd0144f7e2e512c800248584755bff72e994d3a1f",
+    "ui/tests/start-integration.test.js": "86acdcbffc25fda4b35e62dd70a4e904107084c07fa5d985c69d6992c1f9259a",
+    "ui/tests/start-shortcut.test.js": "cbe3e44e634c49307b72c719ffba9dfc0f32aa0632adc4eb6f592c4eface23f5",
+    "ui/tests/vision-diagnostics.test.js": "1e9ef8b78ccc5a4472bf3b9c32e7c0ae16c92ff13971bc9306e387831e92201a",
+    "ui/tests/visual-dialog.test.js": "06aea4bd4fb61693cda9dc2fb5e5aeb982c089066f9324b04ae76950c142bb60"
+  }
+}

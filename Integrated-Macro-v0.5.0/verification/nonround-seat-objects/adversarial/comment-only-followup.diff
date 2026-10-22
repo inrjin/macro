@@ -1,0 +1,11 @@
+--- tested
++++ reviewed
+@@ -1,6 +1,6 @@
+ //! Repeated silhouettes are learned from opaque background-separated objects.
+-//! All matching is translation-only at the captured scale. No hole filling,
+-//! closing, dilation or shape-name classifier is applied to observed pixels.
++//! Templates use the captured scale with bounded rasterization fitting at edges.
++//! No hole filling, closing, dilation or shape-name classifier is applied to pixels.
+ use super::*;
+ use std::{collections::{BTreeSet, VecDeque}, sync::Arc};
+ 

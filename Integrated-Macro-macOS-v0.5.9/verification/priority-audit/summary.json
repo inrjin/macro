@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-21",
+  "sourceVersion": "0.5.8",
+  "reviewTeam": 4,
+  "workspaceTests": {
+    "javascript": {
+      "tests": 141,
+      "pass": 141,
+      "fail": 0,
+      "skipped": 0
+    },
+    "rust": {
+      "passed": 270,
+      "failed": 0,
+      "ignored": 0,
+      "suitePassedCounts": [
+        90,
+        0,
+        102,
+        27,
+        3,
+        3,
+        5,
+        15,
+        10,
+        15,
+        0,
+        0
+      ]
+    },
+    "totalPassed": 411
+  },
+  "separateProbes": {
+    "P2ProductionVisualPath": 3,
+    "P7InterruptionMatrix": 13,
+    "includedInWorkspaceTotal": false
+  },
+  "priorities": {
+    "P1": {
+      "status": "limitation_reproduced",
+      "finding": "Old-map content and pixel-identical completed destination cannot always be distinguished; policy unchanged"
+    },
+    "P2": {
+      "status": "normal_control_passed_and_limitation_reproduced",
+      "finding": "Delayed first-attempt popup may be attributed to newest attempt; no added delay or changed policy"
+    },
+    "P3": {
+      "status": "observed_frame_control_passed_and_sampling_limit_measured",
+      "finding": "20ms is a declared synthetic schedule, not measured app latency"
+    },
+    "P4": {
+      "status": "component_contract_passed",
+      "finding": "Interval/off-on behavior and stale timestamp handling pass; response identity remains unknown"
+    },
+    "P5": {
+      "status": "recognition_limits_reproduced",
+      "finding": "Same-color legend, touching components, subthreshold seats and ROI clipping; no threshold changes"
+    },
+    "P6": {
+      "status": "optimistic_policy_limit_reproduced",
+      "finding": "Estimated2 actual1 can propose completion after ignored click or cleared selection"
+    },
+    "P7": {
+      "status": "fractional_pixel_defect_fixed_and_interrupt_contract_passed",
+      "finding": "Image candidate center sampling/native mapping fixed; Windows native pixel-index contract preserved"
+    }
+  },
+  "changedFiles": [
+    "crates/macro-core/tests/priority_audit.rs",
+    "crates/macro-core/tests/priority_selection_oracle.rs",
+    "crates/macro-core/tests/priority_vision_audit.rs",
+    "src-tauri/src/runtime.rs"
+  ],
+  "sourceManifest": "source-freeze.json",
+  "preservation": "preservation.json",
+  "limitations": {
+    "browserLaunch": "sandbox MachPort bootstrap permission denied",
+    "fullWorkerInstantiated": false,
+    "liveBrowserTest": false,
+    "nativeOsInput": false,
+    "windowsTargetBuild": false,
+    "liveSiteTest": false,
+    "hoursLongSoakTest": false
+  },
+  "releaseBuild": false,
+  "appVersionChanged": false,
+  "report": "README.md"
+}

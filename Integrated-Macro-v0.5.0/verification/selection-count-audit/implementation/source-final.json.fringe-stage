@@ -1,0 +1,34 @@
+{
+  "files": [
+    {
+      "path": "crates/macro-core/src/selection_count.rs",
+      "bytes": 23814,
+      "sha256": "9cf1b6261a0a3ea451a18a693e33d0112f993fa9ac35804c7f4f5a8643e44d45"
+    },
+    {
+      "path": "crates/macro-core/src/selection_count_layout.rs",
+      "bytes": 15732,
+      "sha256": "386de039c740adc1c29de32b717783ac08f3bb02fd076235990850fb4976810d"
+    },
+    {
+      "path": "crates/macro-core/src/selection_count_assets/templates.json",
+      "bytes": 304910,
+      "sha256": "52ce816c2e10dadeb681ac796da6af1689f4aacd00e6d2fc6e11484d51989cee"
+    },
+    {
+      "path": "crates/macro-core/tests/selection_count_completeness.rs",
+      "bytes": 3947,
+      "sha256": "42bab58c1e142acd528890fae21d9fcf2443b63ec3baf5cfb5ae4d08b9a1a2d5"
+    },
+    {
+      "path": "verification/selection-count-audit/implementation/generate.swift",
+      "bytes": 8245,
+      "sha256": "5a2f9c381258aaf4f8ad5f259f84d10ac3a46c91f67312947b27aea93687d157"
+    },
+    {
+      "path": "verification/selection-count-audit/implementation/generate-heading-supplement.swift",
+      "bytes": 2398,
+      "sha256": "ddc537fc49f34cbce43f190f89e69a9827a579e59228b5136ef9d9cf18ad92c1"
+    }
+  ]
+}

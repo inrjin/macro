@@ -1,0 +1,92 @@
+{
+  "confirmed": {
+    "total": 19,
+    "correct": 10,
+    "unreadable": 9,
+    "wrong_confirmed": []
+  },
+  "correct_or_unreadable": {
+    "total": 37,
+    "correct": 9,
+    "unreadable": 28,
+    "wrong_confirmed": []
+  },
+  "unreadable": {
+    "total": 21,
+    "correct": 20,
+    "unreadable": 20,
+    "wrong_confirmed": [
+      "contradictory_empty_and_two"
+    ]
+  },
+  "required_unreadable": [
+    "digit_3",
+    "position_top_left",
+    "position_control_two_top_left",
+    "position_bottom_left",
+    "position_bottom_right",
+    "position_middle",
+    "size_19",
+    "explicit_empty",
+    "panel_with_list_and_timer"
+  ],
+  "position_controls": [
+    {
+      "fixture": "position_top_left",
+      "expectedCount": 3,
+      "observedCount": null
+    },
+    {
+      "fixture": "position_control_two_top_left",
+      "expectedCount": 2,
+      "observedCount": null
+    },
+    {
+      "fixture": "position_bottom_left",
+      "expectedCount": 3,
+      "observedCount": null
+    },
+    {
+      "fixture": "position_control_two_bottom_left",
+      "expectedCount": 2,
+      "observedCount": 2
+    },
+    {
+      "fixture": "position_bottom_right",
+      "expectedCount": 3,
+      "observedCount": null
+    },
+    {
+      "fixture": "position_control_two_bottom_right",
+      "expectedCount": 2,
+      "observedCount": 2
+    },
+    {
+      "fixture": "position_middle",
+      "expectedCount": 3,
+      "observedCount": null
+    },
+    {
+      "fixture": "position_control_two_middle",
+      "expectedCount": 2,
+      "observedCount": 2
+    }
+  ],
+  "debug_reader_us": {
+    "median": 33617,
+    "min": 3977,
+    "max": 169952
+  },
+  "scope": "Synthetic 640x300-ish independent CoreText RGBA; debug test binary; not app latency or site validation.",
+  "reader_snapshot": {
+    "crates/macro-core/src/selection_count.rs": "3f8c2e8f5c6f19a6035cba606f1cd5a03b68b6d364e76058308e128ffb447cf6",
+    "crates/macro-core/src/selection_count_assets/templates.json": "d80802f0ece92871cac9dc6878d63eb24d3bfb3dcbfd9e34d11cf97c61314f44"
+  },
+  "evidence_sha256": {
+    "verification/seat-object-system/reader-review/generate-fixtures.swift": "f17e37a2ffcfa941ec0008bafa0db1c0162d63e90029b5da46ee39e25eb523b3",
+    "verification/seat-object-system/reader-review/manifest.json": "b7444bda5ffd19bba32af6c23342e59756aea2717723022538bf2efcaf94c497",
+    "crates/macro-core/tests/selection_count_reader_review.rs": "c44ac00b224453c108790ca36204125706268e3320cfec36aef8d2ee3b98579c",
+    "verification/seat-object-system/reader-review/position-control-results.log": "cc5d933d415073dde8c2650af40646edc4db2994c37c5b3f04304552f510c64a",
+    "verification/seat-object-system/reader-review/probe-results.jsonl": "3a7359466af153aaf01ed70bdd41d849e768d8cd79021a099c83c09571f9f75a"
+  }
+}

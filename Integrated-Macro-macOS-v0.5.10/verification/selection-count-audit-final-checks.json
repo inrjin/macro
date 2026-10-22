@@ -1,0 +1,126 @@
+{
+  "status": "final source audit and automated regression checks completed; not a distribution or live-site readiness claim",
+  "date": "2026-10-21",
+  "platform": "macOS arm64",
+  "commands": [
+    {
+      "command": "cargo test --workspace --offline --locked",
+      "environment": "repository .build-tools CARGO_HOME/RUSTUP_HOME; RUSTUP_TOOLCHAIN=stable",
+      "exitCode": 0,
+      "passed": 425,
+      "failed": 0,
+      "ignored": 5,
+      "log": "rust-final.log"
+    },
+    {
+      "command": "npm test",
+      "exitCode": 0,
+      "passed": 150,
+      "failed": 0,
+      "log": "javascript-final.log"
+    },
+    {
+      "command": "cargo run -p macro-core --offline --locked --release --example count_probe -- /private/tmp/seat-object-analysis/screenshot.rgba 3024 1608",
+      "exitCode": 0,
+      "expected": 3,
+      "observed": 3,
+      "readerMsSingleSample": 258,
+      "log": "actual-count3-final.log"
+    }
+  ],
+  "source": {
+    "files": 131,
+    "beforeAndAfterEqual": true,
+    "before": "source-before-final-test.json",
+    "after": "source-final.json",
+    "changedOrAddedSinceAuditStart": [
+      "README.md",
+      "crates/macro-core/src/engine.rs",
+      "crates/macro-core/src/selection_count.rs",
+      "crates/macro-core/src/selection_count_assets/empty-negative.json",
+      "crates/macro-core/src/selection_count_assets/templates.json",
+      "crates/macro-core/src/selection_count_layout.rs",
+      "crates/macro-core/tests/selection_count_audit_engine.rs",
+      "crates/macro-core/tests/selection_count_audit_reader.rs",
+      "crates/macro-core/tests/selection_count_completeness.rs",
+      "src-tauri/src/runtime.rs",
+      "src-tauri/src/selection_count_runtime_tests.rs"
+    ]
+  },
+  "fixtureInputsAndGenerators": {
+    "files": 484,
+    "beforeAndAfterEqual": true,
+    "before": "fixtures-before-final-test.json",
+    "after": "fixtures-final.json",
+    "note": "File count includes manifests, generators and PNG companions, not unique test cases."
+  },
+  "independentReader": {
+    "passedTests": 9,
+    "failedTests": 0,
+    "manualTimingPassed": 1,
+    "rawScenes": 220,
+    "requiredRecognitions": 43,
+    "requiredRejections": 71,
+    "supportProbes": 106,
+    "supportProbesCorrect": 84,
+    "supportProbesUnreadable": 22,
+    "incorrectConfirmations": 0,
+    "occlusions": 112,
+    "occlusionsCorrect": 36,
+    "occlusionsUnreadable": 76,
+    "occlusionsWrong": 0,
+    "denseSeatMapCount": 1800,
+    "denseMapExpected": 3,
+    "denseMapObserved": 3
+  },
+  "performance": {
+    "frame": [
+      3024,
+      1608
+    ],
+    "samplesPerScene": 3,
+    "readerOnly": true,
+    "finalCount3MapMs": [
+      242.5,
+      253.2
+    ],
+    "finalZeroPanelMapMs": [
+      248.5,
+      260.5
+    ],
+    "initialSameCount3MapMs": [
+      189.4,
+      191.1
+    ],
+    "remainingLatencyRegression": "about 27-34%; excludes capture, seat analysis, scheduling, OS input and server response"
+  },
+  "actualImage": {
+    "sha256": "47acfc57c6d057ee17623192ff80bf8f70f7c86b6740700e08f3408fa5fa0389",
+    "trainingOverlap": "heading was used by earlier templates; reproduction control, not unseen generalization"
+  },
+  "preservation": {
+    "allProtectedHashesUnchanged": true,
+    "manifest": "preservation-final.json"
+  },
+  "distributionBuildPerformed": false,
+  "installedAppLaunched": false,
+  "nativeInputPerformed": false,
+  "liveSiteTestPerformed": false,
+  "limitations": [
+    "No live 0→1→2 transition or unobscured real zero-state screen validated.",
+    "No Windows runtime validation.",
+    "Finite text/layout support; unreadable, contradictory or budget-exhausted evidence holds input.",
+    "No count-only guarantee of individual seat identity or server-side ownership.",
+    "Capture-to-native-input is not atomic."
+  ],
+  "evidenceHashes": {
+    "rust-final.log": "c98626ce967f4b50a904813075c072cae4227607ddcc8c1f6bdd064ee5788aee",
+    "javascript-final.log": "465c034d63b0f6796e1156ee84d32b2555104b896fb58e7f76b0775a2c9c5b27",
+    "actual-count3-final.log": "df0f5a8d837b7ad4ea335319203c2b572faa24feb4e429487b7a01f77ab527a1",
+    "runtime-original-reproduction.log": "566bd495a0fe5cbc5d91de4c1c1d9df64ca3e99ee766b440911dfe3e6732a672",
+    "runtime-empty-contradiction-before.log": "bbe6fa02cf259f2dba8b69862fed9e6c07a15faeafc4f365951a4dd14c2abea5",
+    "adversarial/final-adopted-corpus.log": "bc31aa61ab00ce7b7115ef042fd3d46bec3798d1d73f0c680212db38897cbdc6",
+    "adversarial/final-adopted-performance.log": "9592643ef26987c7dad58765bb2365dc62d087efa0280cf3b2eac4850c4e02d1",
+    "implementation/after-final-negative-radius.log": "4df33277a6d40dacadce4796e2aa13730eb654ef8897486f37cf78fb8875ba58"
+  }
+}

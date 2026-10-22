@@ -1,0 +1,63 @@
+{
+  "recordedAt": "2026-10-22T06:24:28.297926+00:00",
+  "reviewer": "/root/input_adversarial_review",
+  "artifactType": "Windows source/build preparation kit, not executable distribution",
+  "files": {
+    "Build-Windows.cmd": "4a21b07aa7c310b6c2e9fe3a7107355a6b0d02af8f1394b68b41caa4b8008796",
+    "build/Build-Windows.ps1": "ca41273d1569e148ee0212b41d366f2891e765ccd6f5cd27f9b509773f39ec08",
+    ".github/workflows/build-windows-0.5.11.yml": "e069a8de892ef3863bdecefc9ede3390d749da8c87a34fa4b07f282fcc2b8920",
+    ".gitattributes": "e5d1a47f1ba9849d4f424648836e0a6574a6beed7521d088177e69b0b5f04d73",
+    "README-Windows.md": "4de5345de002923d68411cc0c425d1b0bd2137e45345e24e562ba7717016e9c3",
+    "source-manifest.json": "65f9ab47828be205c5f7cee7c255af364e3e5872007861cc53034c75e9ad9258",
+    "fixture-manifest.json": "04621be0e312b6a6e0f686da8c4657c1b18d47d5759ba7b99dd501493fe6e7c1"
+  },
+  "sourceLineageReport": "adversarial-source-review.json",
+  "lineEndingReproduction": "adversarial-line-ending-probe.json",
+  "closedFindings": [
+    {
+      "id": "missing-test-fixtures",
+      "result": "417 manifest/input files accompany release source138; all410 referenced RGBA included and hashed."
+    },
+    {
+      "id": "git-line-ending-hash-mismatch",
+      "result": "Isolated Git core.autocrlf=true reproducer changed LF source hash; * -text preserves bytes. Kit now includes .gitattributes."
+    },
+    {
+      "id": "native-tools-caller",
+      "result": "Both local and Actions callers use Build-Windows.cmd, which locates installed VS through vswhere and calls VsDevCmd inside setlocal. No permanent environment/ExecutionPolicy modification."
+    },
+    {
+      "id": "generated-schema-gate",
+      "result": "Initial source/fixture tree is exact; only four named generated schema outputs are allowed to differ in a unique work copy. Source/locks/config/UI/fixtures remain hashed."
+    },
+    {
+      "id": "partial-artifact-publication",
+      "result": "Candidate files/PE metadata are collected privately before artifacts rename and success; workflow uploads artifacts/report/log, not candidate-artifacts."
+    }
+  ],
+  "staticScriptReview": {
+    "nativeExitChecks": true,
+    "dependencyLocks": "npm ci; cargo --locked; local Tauri CLI build -- --locked",
+    "freshOutput": "unique timestamp/GUID run and CARGO_TARGET_DIR",
+    "mainMachineCheck": "x64 PE0x8664",
+    "installerMachineCheck": "PE0x14c or0x8664",
+    "signatures": "Get-AuthenticodeSignature status recorded; no signing certificate configured",
+    "appExecutedByScript": false,
+    "sourceCopiedBeforeBuild": true,
+    "windowsRuntimeImportsVerified": false,
+    "powershellParsedOrExecuted": false,
+    "cmdExecuted": false,
+    "githubActionRun": false
+  },
+  "blockingExecutableCondition": "No Windows target toolchain/SDK or authorized runnable Windows environment has produced a PE/NSIS artifact. Local target check failed with E0463. Kit review cannot satisfy executable/installation readiness.",
+  "remainingLimits": [
+    "PowerShell/CMD and VS environment setup were read, not executed.",
+    "MSVC/WebView2/PE import and installer behavior must be checked after an actual build.",
+    "macOS tests do not execute Windows-only compilation/tests or validate GDI, DPI, hotkeys, focus, native input, WebView2 or live booking.",
+    "Exact0.5.11 retains known F9/calibration/recognition limitations; no unbuilt correction is included."
+  ],
+  "primaryReferences": [
+    "https://v2.tauri.app/distribute/windows-installer/",
+    "https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution"
+  ]
+}

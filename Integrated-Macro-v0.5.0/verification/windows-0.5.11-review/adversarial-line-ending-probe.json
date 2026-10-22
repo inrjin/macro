@@ -1,0 +1,21 @@
+{
+  "scope": "Local isolated Git worktree conversion only; no repository upload or Windows execution",
+  "cases": [
+    {
+      "attributesMinusText": false,
+      "coreAutocrlf": true,
+      "expectedSha256": "35e0393811f794547c34763eb5773d6cddb295dc4f372180ed4aae67da3ea45f",
+      "checkoutSha256": "96ed723402cc279dba8dc4385a7192cc77c04b9fe37f3fc5a89a6d9478e12c12",
+      "byteEqual": false,
+      "checkoutHasCRLF": true
+    },
+    {
+      "attributesMinusText": true,
+      "coreAutocrlf": true,
+      "expectedSha256": "35e0393811f794547c34763eb5773d6cddb295dc4f372180ed4aae67da3ea45f",
+      "checkoutSha256": "35e0393811f794547c34763eb5773d6cddb295dc4f372180ed4aae67da3ea45f",
+      "byteEqual": true,
+      "checkoutHasCRLF": false
+    }
+  ]
+}

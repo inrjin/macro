@@ -1,0 +1,115 @@
+[
+  {
+    "run": 0,
+    "seatInputs": [],
+    "completionInputs": 0
+  },
+  {
+    "run": 1,
+    "seatInputs": [],
+    "completionInputs": 0
+  },
+  {
+    "run": 2,
+    "seatInputs": [
+      {
+        "x": 322.0,
+        "y": 885.0
+      }
+    ],
+    "completionInputs": 1
+  },
+  {
+    "run": 3,
+    "seatInputs": [
+      {
+        "x": 106.0,
+        "y": 921.0
+      },
+      {
+        "x": 122.0,
+        "y": 920.0
+      },
+      {
+        "x": 142.0,
+        "y": 1101.0
+      }
+    ],
+    "completionInputs": 1
+  },
+  {
+    "run": 4,
+    "seatInputs": [],
+    "completionInputs": 0
+  },
+  {
+    "run": 5,
+    "seatInputs": [
+      {
+        "x": 106.0,
+        "y": 921.0
+      },
+      {
+        "x": 122.0,
+        "y": 920.0
+      },
+      {
+        "x": 142.0,
+        "y": 1101.0
+      }
+    ],
+    "completionInputs": 1
+  },
+  {
+    "run": 6,
+    "seatInputs": [
+      {
+        "x": 106.0,
+        "y": 921.0
+      },
+      {
+        "x": 122.0,
+        "y": 920.0
+      },
+      {
+        "x": 142.0,
+        "y": 1101.0
+      }
+    ],
+    "completionInputs": 1
+  },
+  {
+    "run": 7,
+    "seatInputs": [
+      {
+        "x": 442.0,
+        "y": 610.0
+      },
+      {
+        "x": 732.0,
+        "y": 610.0
+      },
+      {
+        "x": 423.0,
+        "y": 625.0
+      },
+      {
+        "x": 752.0,
+        "y": 627.0
+      },
+      {
+        "x": 742.0,
+        "y": 637.0
+      },
+      {
+        "x": 713.0,
+        "y": 641.0
+      },
+      {
+        "x": 751.0,
+        "y": 644.0
+      }
+    ],
+    "completionInputs": 0
+  }
+]

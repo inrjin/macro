@@ -1,0 +1,7 @@
+{
+  "source_sha256": "d269b4ef0d610784d9bf48837b65856243b5897c49e5faf8cb24dfc9570fb0d9",
+  "command": "cargo test -p macro-core --test seat_objects --offline --locked a_small_unobserved_core -- --nocapture",
+  "exit_code": 101,
+  "result": "0 passed; 1 failed; 10 filtered out",
+  "failure": "even one missing core pixel is an unresolved object, not fewer total pixels"
+}

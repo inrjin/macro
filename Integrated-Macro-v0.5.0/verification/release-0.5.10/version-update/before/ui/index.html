@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>통합 매크로</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#run" aria-label="통합 매크로 실행 화면"><span class="brand-mark">M</span><span>통합 매크로<small>DESKTOP · 0.5</small></span></a>
+      <div class="nav-heading">WORKSPACE</div>
+      <nav aria-label="설정 메뉴">
+        <button class="nav-item active" data-tab="run" aria-current="page"><span>◉</span>실행</button>
+        <button class="nav-item" data-tab="booking"><span>◷</span>예매 준비</button>
+        <button class="nav-item" data-tab="seats"><span>▦</span>좌석 · 구역</button>
+        <button class="nav-item" data-tab="features"><span>⌘</span>추가 기능</button>
+      </nav>
+      <div class="sidebar-note"><span class="tiny-dot"></span>원본 동작에서 시작합니다<p>추가 기능은 필요한 항목만<br>선택해서 켜세요.</p></div>
+      <div class="sidebar-footer"><span id="platform-label">환경 확인 중</span><span class="version">v0.5.9</span></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <div><span class="eyebrow">MY WORKSPACE</span><span class="workspace-name">예매 작업실</span></div>
+        <div class="topbar-actions"><span id="save-status" class="save-status" role="status">설정을 확인하고 있습니다</span><button id="import-button" class="button subtle">불러오기</button><input id="import-file" type="file" accept=".json,application/json" hidden><button id="save-button" class="button primary">설정 저장</button></div>
+      </header>
+      <main>
+        <div id="preview-banner" class="notice warning" hidden>화면 미리보기입니다. 데스크톱 앱에서 열면 실제 화면 캡처와 입력을 사용할 수 있습니다.</div>
+        <div class="notice warning">캡챠 Enter 또는 NOL 캡챠 판단을 켠 일반 예매는 지정한 날짜·회차·다음 버튼을 순서대로 누릅니다. 미지정 단계와 캡챠는 직접 진행하세요. 모든 실행 방식은 좌석 선택 완료 버튼의 클릭이 전달되면 종료하며, 사이트의 예매 성공 여부를 확정하지 않습니다.</div>
+        <div id="feedback" class="notice" role="status" hidden></div>
+        <div id="capture-guide" class="capture-guide" role="status" aria-live="polite" hidden><kbd>F8</kbd><div><strong id="capture-guide-title"></strong><p id="capture-guide-message"></p></div></div>
+        <section class="tab-panel" id="panel-run" aria-labelledby="heading-run">
+          <div class="page-heading"><div><span class="eyebrow">CONTROL CENTER</span><h1 id="heading-run">실행</h1><p>예매창을 연결하고, 준비 상태를 확인하세요.</p></div><span class="pill" id="mode-pill">좌석 바로 탐색</span></div>
+          <div class="status-banner" aria-live="polite">
+            <div class="status-symbol" id="status-symbol"><span></span></div>
+            <div class="status-copy"><span class="eyebrow">CURRENT STATUS</span><h2 id="phase-label">상태 확인 중</h2><p id="phase-message">앱의 실행 상태를 기다리고 있습니다.</p></div>
+            <div class="seat-count"><strong id="selected-count">—</strong><span>/ <span id="target-count">2</span>석</span><small id="selected-count-label">확인된 선택</small></div>
+          </div>
+          <section id="vision-diagnostics" class="card" hidden>
+            <div class="card-heading"><h2 id="vision-heading"></h2><span class="pill" id="vision-candidates"></span></div>
+            <p class="help" id="vision-settings"></p>
+            <p class="help" id="vision-reason"></p>
+            <p class="help" id="vision-geometry"></p>
+          </section>
+          <p id="visual-dialog-status" class="help" role="status" hidden></p>
+          <p id="enter-watch-status" class="help" role="status" hidden></p>
+          <p id="completion-help" class="help" hidden>좌석 선택 완료 버튼이 미지정이면 예매창에서 직접 다음 단계를 진행한 뒤 중지하세요.</p>
+          <section id="manual-confirmation" class="card" hidden>
+            <div class="card-heading"><h2 id="manual-heading">현재 화면 확인</h2><span id="manual-kind" class="pill">직접 확인</span></div>
+            <p class="help" id="manual-message">예매창에서 실제 결과를 확인한 뒤 진행하세요.</p>
+            <div id="manual-actions" class="manual-actions"></div>
+          </section>
+          <div class="two-column">
+            <div class="column">
+              <section class="card">
+                <div class="card-heading"><h2>대상 예매창</h2><button id="refresh-windows" class="text-button">목록 새로고침 ↻</button></div>
+                <p class="help">로그인한 브라우저의 예매창을 선택하세요. 창을 바꿨다면 다시 연결하세요.</p>
+                <label class="field"><span>창 선택</span><select id="target-window"><option value="">열려 있는 창을 확인하세요</option></select></label>
+                <button id="bind-target" class="button secondary full-width" data-native>브라우저 연결</button>
+                <div class="binding-state"><span class="tiny-dot" id="binding-dot"></span><span id="binding-label">연결된 창 없음</span></div>
+              </section>
+              <section class="card">
+                <div class="card-heading"><h2>실행 방식</h2><span class="muted small">현재 화면에 맞게 선택</span></div>
+                <div class="mode-options" role="group" aria-label="실행 방식">
+                  <label class="mode-option"><input type="radio" name="run-mode" value="seats"><span><strong>좌석 바로 탐색</strong><small>현재 좌석 화면에서 바로 반복 탐색</small></span><kbd>F5</kbd></label>
+                  <label class="mode-option"><input type="radio" name="run-mode" value="normal" checked><span><strong>일반 예매</strong><small>현재 설정한 옵션으로 시작</small></span><kbd>F1</kbd></label>
+                  <label class="mode-option"><input type="radio" name="run-mode" value="cancellation"><span><strong>취소표 탐색</strong><small>현재 좌석 반복 탐색 · 선택적 갱신</small></span><kbd>F2</kbd></label>
+                </div>
+                <div class="inline-fields"><label class="field"><span>목표 좌석</span><select data-setting="targetCount"><option value="1">1석</option><option value="2" selected>2석</option><option value="3">3석</option><option value="4">4석</option></select></label><div class="inline-note">선택이 유지된 좌석을 제외한<br>부족한 매수만 채웁니다.</div></div>
+                <p class="help">좌석 바로 탐색은 공통 좌석 색상·좌석 영역을 사용합니다. 날짜·예매 진입·구역 선택을 건너뛰고, 후보가 없어도 설정한 간격으로 계속 탐색합니다. 반복 탐색을 이어가기 위해 F6을 누를 필요는 없습니다.</p>
+                <p class="help">일반 예매에서 ‘캡챠 Enter 후 구역부터 자동 진행’을 켜면, 지정한 날짜·회차·다음 버튼을 순서대로 누른 뒤 캡챠 Enter를 기다립니다. 미지정 단계는 직접 진행하세요. 캡챠를 다시 제출하면 구역·좌석만 다시 찾으며 날짜·회차·다음 버튼을 반복하지 않습니다.</p>
+                <p class="help" id="nol-captcha-help">‘NOL 캡챠 판단’을 켜면 진입 버튼 처리 뒤 첫 영문자·숫자 입력(Shift 가능)에서 왼쪽 아래 배경 색을 한 번 저장합니다. 첫 입력만으로 클릭하지 않고 이후 배경 색 변화가 확인되면 구역·좌석으로 진행합니다. 후속 입력·오답 재입력에도 기준을 유지하며 글자 내용은 수집·저장하지 않습니다. Enter 옵션보다 우선하며 취소표·좌석 바로 탐색에는 적용하지 않습니다.</p>
+                <p class="help">같은 예매창의 다른 입력란은 구별하지 못합니다. 붙여넣기·자동완성만 사용하거나 자동 감지가 안 되면 캡챠를 직접 완료한 뒤 예매창에서 F9 ‘캡챠 이후 진행’을 누르세요. 진입 버튼 처리가 끝난 일반 예매의 캡챠 대기에서 구역·좌석부터 이어갑니다. 정답 여부를 자동 확인하지 않으며, 실행 대기나 좌석 탐색 중에는 동작하지 않습니다.</p>
+                <p class="help">좌석 선택 완료 버튼은 F8로 지정하세요. 한 구역 취소표 탐색도 이 공통 완료 버튼을 사용합니다. 클릭이 전달되면 매크로가 종료됩니다. 미지정이면 자동 완료 클릭 없이 기다리므로 사이트에서 직접 진행한 뒤 중지하세요.</p>
+              </section>
+            </div>
+            <div class="column">
+              <section class="card">
+                <div class="card-heading"><h2>준비 상태</h2><button id="check-readiness" class="text-button" data-native>다시 확인</button></div>
+                <ul id="readiness-list" class="readiness-list"><li class="check-item pending"><span class="check-icon">·</span><div><strong>확인 대기</strong><p>연결과 권한은 앱에서 확인합니다.</p></div></li></ul>
+              </section>
+              <section class="card" aria-labelledby="keyboard-check-heading">
+                <div class="card-heading"><h2 id="keyboard-check-heading">키보드 수신 확인</h2><span class="pill" id="keyboard-check-remaining">20초 검사</span></div>
+                <p class="help">브라우저 연결 후 검사를 시작하면 설정창이 내려갑니다. 연결한 Chrome의 일반 입력란에서 영문자를 직접 입력하세요. 약 20초 동안 확인한 뒤 자동 종료되며 F4로 중지할 수 있습니다.</p>
+                <div class="inline-fields"><button type="button" id="start-keyboard-check" class="button secondary" data-native>키보드 수신 확인</button><button type="button" id="stop-keyboard-check" class="button danger" data-native disabled>검사 중지</button></div>
+                <div id="keyboard-check-result" role="status" aria-live="polite">
+                  <p><strong id="keyboard-check-status">키보드 검사 대기</strong></p>
+                  <p class="help" id="keyboard-check-message"></p>
+                  <p class="help" id="keyboard-check-counts"></p>
+                  <p class="help" id="keyboard-check-rejections" hidden></p>
+                  <p class="help" id="keyboard-check-environment"></p>
+                </div>
+                <p class="help">앱의 문자 입력 수신과 연결 창 일치를 확인합니다. 입력 내용은 저장하지 않으며, 이 검사 결과는 캡챠 종료 인식 결과와 별개입니다.</p>
+              </section>
+              <section class="card activity-card">
+                <div class="card-heading"><h2>실행 기록</h2><span class="live-label"><span class="tiny-dot"></span>LIVE</span></div>
+                <ol id="activity-log" class="activity-log"><li class="empty-log">실행 상태와 오류가 여기에 표시됩니다.</li></ol>
+              </section>
+            </div>
+          </div>
+        </section>
+        <section class="tab-panel" id="panel-booking" aria-labelledby="heading-booking" hidden>
+          <div class="page-heading"><div><span class="eyebrow">BOOKING PLAN</span><h1 id="heading-booking">예매 준비</h1><p>지금 알 수 있는 공연 정보부터 설정하세요.</p></div></div>
+          <section class="card">
+            <div class="card-heading"><h2>공연 정보</h2></div>
+            <div class="inline-fields"><label class="field grow"><span>설정 이름</span><input data-setting="name" placeholder="예: 요네즈 켄시 · 1월 16일"></label><label class="field grow"><span>공연 페이지 주소</span><input type="url" data-setting="url" placeholder="https://nol.yanolja.com/ticket/products/…"></label></div>
+            <div class="inline-fields"><label class="field grow"><span>희망 공연 날짜</span><input type="date" data-setting="performanceDate"></label><label class="field grow"><span>희망 회차 / 시간</span><input data-setting="performanceSession" placeholder="예: 19:00"></label></div>
+            <p class="help">희망 날짜·회차는 메모처럼 저장하며 화면에서 자동으로 찾아 누르지는 않습니다. 캡챠 Enter 또는 NOL 캡챠 판단을 켠 일반 예매도 ‘기존 좌표로 시작’의 지정 버튼을 먼저 누릅니다. 미지정 단계는 예매창이 열린 뒤 직접 선택하세요. 아직 보이지 않는 화면의 좌표는 미리 지정하지 않아도 됩니다.</p>
+          </section>
+          <section class="card">
+            <div class="card-heading"><h2>판매 시작과 시간</h2><label class="switch"><input type="checkbox" data-setting="features.scheduledStart"><span></span><b>예약 시작</b></label></div>
+            <div class="inline-fields"><label class="field grow"><span>판매 시작 시각 · 이 컴퓨터의 시간대</span><input type="datetime-local" step="1" data-setting="saleAt"></label><div class="clock-card"><span>서버 시간 보정</span><strong id="clock-status">측정 전</strong><button id="sync-clock" class="text-button" data-native>서버 시간 측정 ↻</button></div></div>
+            <label class="feature-row compact"><span><strong>서버 시간 보정 사용</strong><small>사이트가 응답한 시간과 통신 지연을 바탕으로 차이를 추정합니다.</small></span><span class="switch"><input type="checkbox" data-setting="features.serverClock"><span></span></span></label>
+            <div class="coordinate-grid" id="scheduled-entry-coordinate"></div>
+            <p class="help">일반 예매의 예약 시작을 사용하려면 지금 보이는 판매 시작 예매 버튼을 지정하세요. F8 지정 버튼을 누른 뒤 예매창의 해당 버튼 위에 마우스를 두고 F8을 누르세요. 취소표 탐색에서는 이 버튼을 사용하지 않습니다.</p>
+            <div class="help-box">판매 시작 시 지정한 예매 버튼을 한 번 클릭합니다. 캡챠 진행 옵션을 켰다면 지정한 날짜·회차·다음 버튼을 이어서 누른 뒤 캡챠를 기다립니다. 미지정 단계와 캡챠는 직접 진행하세요. NOL 캡챠 판단은 첫 영문자·숫자 입력에서 배경 색을 저장한 뒤 색 변화를 기다리며 Enter 옵션보다 우선합니다. 두 옵션을 껐을 때는 현재 대기 단계의 직접 확인을 사용할 수 있습니다.</div>
+          </section>
+          <section class="card">
+            <div class="card-heading"><h2>기존 좌표로 시작</h2><span class="muted small">필요한 단계만 지정</span></div>
+            <p class="help">현재 화면에 보이는 버튼에만 사용하세요. F8 지정 버튼을 누른 뒤 예매창에서 원하는 위치에 마우스를 두고 F8을 누르세요. 일반 예매의 캡챠 Enter 또는 NOL 캡챠 판단을 켜도 날짜 버튼 → 회차 버튼 → 다음 / 예매 버튼 중 지정한 항목을 기존 클릭 간격으로 누른 뒤 캡챠를 기다립니다.</p>
+            <div class="coordinate-grid" id="entry-coordinates"></div>
+          </section>
+        </section>
+        <section class="tab-panel" id="panel-seats" aria-labelledby="heading-seats" hidden>
+          <div class="page-heading"><div><span class="eyebrow">SEAT PREFERENCES</span><h1 id="heading-seats">좌석 · 구역</h1><p>색상과 선택 순서, 탐색 범위를 설정하세요.</p></div></div>
+          <div class="two-column">
+            <div class="column">
+              <section class="card">
+                <div class="card-heading"><h2>좌석 색상</h2><span class="muted small">RGB</span></div>
+                <div class="color-picker-row"><input type="color" data-setting="seatColor" aria-label="좌석 색상"><label class="field grow"><span>색상 값</span><input id="seat-color-text" pattern="#[0-9A-Fa-f]{6}" maxlength="7" placeholder="#5A8DEE"></label><button class="button secondary" id="capture-color" data-capture-field="color" data-native>F8로 색상 지정</button></div>
+                <label class="field"><span>색상 허용 오차 <small>0–255</small></span><input type="number" min="0" max="255" step="1" data-setting="tolerance"></label>
+                <label class="feature-row compact"><span><strong>위쪽 좌석부터 선택</strong><small>같은 색상 후보를 화면 위에서 아래 순서로 정렬합니다.</small></span><span class="switch"><input type="checkbox" data-setting="features.seatTopPriority"><span></span></span></label>
+                <p class="help">범례와 좌석을 구분할 수 있도록 좌석 영역을 지정하세요.</p>
+                <div class="coordinate-grid" id="seat-coordinates"></div>
+                <p class="help" id="optimistic-selection-help">현재 흐름은 입력이 전달된 좌석을 ‘선택 추정’으로 집계하며 선택된 좌석 색상을 사용하지 않습니다. 안내창 자동 대응을 켜면 중앙 화면 변화 또는 주변 어두워짐에 Esc로 대응하고 부족분 탐색을 이어갑니다. 완료 버튼 클릭 직전에 감지를 끝내며, 클릭이 전달되면 실행을 종료합니다. 직접 확인한 실패를 알리는 버튼은 보완 수단입니다.</p>
+                <p class="help" id="count-selection-help" hidden>현재 흐름은 사이트의 선택 좌석 수를 읽어 다음 좌석 입력과 완료를 결정합니다. 수량을 읽지 못하거나 예상과 다르면 추가 입력을 보류하고 계속 확인합니다. 선택된 좌석 색상은 사용하지 않습니다. 안내창 자동 대응을 켜면 중앙 화면 변화 또는 주변 어두워짐에 Esc로 대응합니다.</p>
+                <div id="legacy-selection-color-controls" hidden>
+                  <div class="selected-color-row"><span><strong>선택된 좌석 색상 · 원본 선택 흐름</strong><small id="selected-color-label">미지정 · 선택 확인을 직접 진행합니다</small></span><button id="capture-selected-color" class="text-button" data-capture-field="desktop.selected_color" data-native>F8로 색상 지정</button><button id="clear-selected-color" class="clear-point" type="button">해제</button></div>
+                  <p class="help">원본 선택 흐름에서는 직접 선택한 좌석의 색상을 상태 확인에 사용할 수 있습니다. 좌석 바로 탐색, 캡챠 Enter 또는 NOL 캡챠 판단을 켠 일반 예매, 한 구역 취소표 탐색에는 필요하지 않습니다.</p>
+                </div>
+              </section>
+              <section class="card">
+                <div class="card-heading"><h2>클릭 간격</h2><span class="muted small">밀리초 · ms</span></div>
+                <div class="inline-fields"><label class="field grow"><span>일반 예매</span><input type="number" min="0" max="10000" data-setting="clickDelayMs"></label><label class="field grow"><span>취소표 탐색</span><input type="number" min="0" max="10000" data-setting="cancellationDelayMs"></label></div>
+                <label class="field"><span>구역 이동 후 간격</span><input type="number" min="0" max="10000" data-setting="regionDelayMs"></label>
+              </section>
+            </div>
+            <div class="column">
+              <section class="card">
+                <div class="card-heading"><h2>구역 선택</h2><label class="switch"><input type="checkbox" data-setting="features.regionPriority"><span></span><b>자동 선택</b></label></div>
+                <label class="field"><span>희망 구역 색상</span><input type="color" data-setting="regionColor" aria-label="희망 구역 색상"></label>
+                <div class="priority-stack"><div><span>1</span><strong>무대 정면 중앙</strong><small>같은 색상 안에서 중앙 우선</small></div><div><span>2</span><strong>무대와 가까운 구역</strong><small>중앙 후보 중 가까운 순서</small></div></div>
+                <p class="help">좌석 배치도가 열린 뒤 무대 중심과 구역 탐색 영역을 지정할 수 있습니다. 이미지의 크기가 달라지면 다시 확인하세요.</p>
+                <div class="coordinate-grid" id="region-coordinates"></div>
+              </section>
+              <section class="card">
+                <div class="card-heading"><h2>반복 탐색과 취소표 갱신</h2></div>
+                <label class="field"><span>취소표 탐색 방식</span><select data-setting="refreshMode"><option value="legacyRegions">원본 · 두 구역 클릭</option><option value="legacyKeys">원본 · 위 / 아래 키</option><option value="automatic">한 구역 · 현재 좌석 계속 탐색</option><option value="internalButton">한 구역 · 취소표 새로고침 버튼</option></select></label>
+                <label class="field"><span>빈 좌석 재탐색·새로고침 간격 · ms</span><input type="number" min="100" max="60000" data-setting="refreshIntervalMs"></label>
+                <p class="help">한 구역 취소표는 현재 좌석 화면에서 공통 좌석 색상·좌석 영역으로 시작하며 일반 예매의 예약·진입·구역 선택 옵션을 적용하지 않습니다. 후보가 없어도 설정한 간격으로 화면을 계속 읽습니다. ‘현재 좌석 계속 탐색’은 버튼을 누르지 않습니다.</p>
+                <p class="help">취소표에서 내부 버튼을 사용하려면 ‘한 구역 · 취소표 새로고침 버튼’을 선택하고 ‘취소표에서 버튼 사용’을 켠 뒤 버튼 좌표를 지정하세요. 브라우저 새로고침 키는 보내지 않습니다. 버튼 사용을 꺼도 화면 탐색은 계속됩니다.</p>
+                <div class="coordinate-grid" id="refresh-coordinates"></div>
+                <p class="help">한 구역 취소표 탐색에서는 재탐색 간격이 지나면 실패한 좌석을 다시 후보에 포함합니다. 사이트 갱신 완료를 직접 확인하거나 F6을 누를 필요가 없습니다. 원본 두 구역·위/아래 키 흐름의 화면 이동은 기존 F6 직접 확인을 유지합니다.</p>
+              </section>
+            </div>
+          </div>
+          <section id="legacy-zone-settings">
+            <div class="card-heading"><h2>취소표 구역별 설정</h2><span class="muted small">원본 · 두 구역 탐색</span></div>
+            <p class="help">아래는 원본 두 구역·위/아래 키 이동에서 해당 구역이 활성화됐을 때 사용하는 좌석 색상·영역·완료 버튼입니다. 비워둔 항목은 위의 공통 설정을 사용합니다. 한 구역 취소표 탐색은 공통 좌석 색상·좌석 영역·좌석 선택 완료 버튼을 사용합니다.</p>
+            <div class="two-column">
+              <section class="card">
+                <div class="card-heading"><h2>취소표 1구역</h2><span class="pill">첫 번째 구역</span></div>
+                <label class="zone-color-enable"><input type="checkbox" data-setting="zone0ColorEnabled"><span>이 구역에 별도 좌석 색상 사용</span></label>
+                <div class="zone-color-controls"><input type="color" data-setting="zone0Color" aria-label="취소표 1구역 좌석 색상"><span id="zone0-color-label" class="muted small">공통 색상 사용</span><button class="text-button" data-zone-color="0" data-capture-field="legacy.regions.0.color" data-native>F8로 색상 지정</button></div>
+                <div class="coordinate-grid" id="zone0-coordinates"></div>
+              </section>
+              <section class="card">
+                <div class="card-heading"><h2>취소표 2구역</h2><span class="pill">두 번째 구역</span></div>
+                <label class="zone-color-enable"><input type="checkbox" data-setting="zone1ColorEnabled"><span>이 구역에 별도 좌석 색상 사용</span></label>
+                <div class="zone-color-controls"><input type="color" data-setting="zone1Color" aria-label="취소표 2구역 좌석 색상"><span id="zone1-color-label" class="muted small">공통 색상 사용</span><button class="text-button" data-zone-color="1" data-capture-field="legacy.regions.1.color" data-native>F8로 색상 지정</button></div>
+                <div class="coordinate-grid" id="zone1-coordinates"></div>
+              </section>
+            </div>
+          </section>
+        </section>
+        <section class="tab-panel" id="panel-features" aria-labelledby="heading-features" hidden>
+          <div class="page-heading"><div><span class="eyebrow">OPTIONAL FEATURES</span><h1 id="heading-features">추가 기능</h1><p>새 기능은 처음에 모두 꺼져 있습니다. 필요한 기능을 개별로 켜세요.</p></div><span class="pill" id="enabled-count">0개 사용</span></div>
+          <section class="card feature-card" id="feature-list"></section>
+          <section class="card">
+            <div class="card-heading"><h2>키보드와 실행 안내</h2></div>
+            <div class="shortcut-list"><div><span>일반 예매 시작 · 현재 옵션 적용</span><kbd>F1</kbd></div><div><span>취소표 탐색 · 현재 옵션 적용</span><kbd>F2</kbd></div><div><span>일시정지 / 다시 진행</span><kbd>F3</kbd></div><div><span>즉시 중지</span><kbd>F4</kbd></div><div><span>좌석 바로 탐색 · 현재 옵션 적용</span><kbd>F5</kbd></div><div><span>현재 대기 단계 직접 확인</span><kbd>F6</kbd></div><div><span>앞쪽 예매창 연결</span><kbd>F7</kbd></div><div><span>선택한 항목의 위치 지정</span><kbd>F8</kbd></div><div><span>캡챠 이후 진행 · 직접 완료한 뒤</span><kbd>F9</kbd></div></div>
+            <p class="help">F1은 일반 예매, F2는 취소표 탐색, F5는 좌석 바로 탐색입니다. 선택한 실행 방식과 관계없이 해당 모드를 시작하며 화면에서 바꾼 현재 옵션도 저장해 적용합니다. F5는 브라우저 새로고침 용도가 아닙니다. 연결한 예매창을 앞에 둔 뒤 누르세요. 일부 Mac 키보드는 Fn 키와 함께 눌러야 합니다.</p>
+            <p class="help" id="captcha-shortcut-help">F9는 일반 예매 실행 중 캡챠 대기에서만 사용합니다. 캡챠를 직접 완료한 뒤 누르면 자동 판단을 기다리지 않고 구역·좌석부터 이어가며, 등록한 진입 버튼을 다시 누르지 않습니다. 새 실행을 시작하거나 진행 중인 좌석 탐색을 다시 시작하지 않습니다.</p>
+          </section>
+        </section>
+      </main>
+      <footer class="runbar">
+        <div><span class="tiny-dot" id="runbar-dot"></span><span id="runbar-status">실행 대기</span><small id="capture-status"></small></div>
+        <div class="runbar-actions"><button id="stop-button" class="button danger" data-native disabled>중지 <kbd>F4</kbd></button><button id="pause-button" class="button secondary" data-native disabled>일시정지 <kbd>F3</kbd></button><button id="start-button" class="button primary start-button" data-native>일반 예매 시작 <span>↗</span></button></div>
+      </footer>
+    </div>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

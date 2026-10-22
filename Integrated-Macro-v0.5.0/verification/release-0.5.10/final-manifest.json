@@ -1,0 +1,32 @@
+{
+  "status": "build and local packaging verification completed",
+  "generatedAt": "2026-10-21T13:26:08.962405+00:00",
+  "version": "0.5.10",
+  "sourceFilesVerifiedUnchanged": 131,
+  "priorFilesVerifiedUnchanged": 67,
+  "archiveSHA256": "560901a742636165171de2739df467060c65cb7724e364243279d9610ab3757b",
+  "reviewersCompleted": [
+    "independent",
+    "adversarial"
+  ],
+  "evidenceHashes": {
+    "README.md": "11794962607aed710397cfa541eebd4a54663ac00dcec543fdacec6018a7bbc2",
+    "build-result.json": "4651ebd6afe2cd30178ca7866dd0932ea83f51ddbf5e5edee2d2c94d2f53e553",
+    "local-checks.json": "2dae4dbd052a569f7bb34a718f9a59bbc50ba874668a89e2e349b9bcbb7a02cc",
+    "build-and-checks.log": "a9caa6568212ba4a050c31630d116f21bb291c9de48bf0536dac18523c5c74e2",
+    "distribution-receipt.json": "8607d548ef96f1f3edf6a2b44fda9ca562d40fe7c1ee942fba96b957aede0229",
+    "source-before-build.json": "3f771bfad0037d139025c2a2cbad7cab68c33ceaa1e771eff7e615e794582ad6",
+    "source-after-build.json": "3f771bfad0037d139025c2a2cbad7cab68c33ceaa1e771eff7e615e794582ad6",
+    "fixture-continuity.json": "d56abf32665acf92b3cde70d33c7058ac6e3aed5ea67438ef8a7910e09e412be",
+    "independent-review.md": "530a4cf9eb27e93602f45cd840af3a47a181975af7feb503f6555ef07084bc55",
+    "independent-review-source.json": "abb67b3367fb6c38041e7e4ce865fe91eb049430f16c4a018613080dee318dcb",
+    "independent-review-artifact.json": "8ab1fa2d2535f6b2d564bbc4b8b5520cc5ec5ed95403001d63bef12c02530c7e",
+    "independent-review-distribution.json": "d0ba1df621a3d1cb6705c8c5f9152d72105781a727f77202c3819cc0f62bb970",
+    "adversarial-review.final-manifest.json": "779e2172ae4b67443b1914db2fde68497d4c869646f188fc2f47aab51f249e22",
+    "adversarial-review.md": "236a5ab5ae6c74c556a7dc943dd2b5b12fb25acec277e1f592ec002d4126efb5",
+    "adversarial-review.package.json": "375be804b97d378cbba7aa89b23af81e731394cc73b3defadab930ecdb9f0b82",
+    "version-update/review-result.json": "7e5f32736b1f4b503805f8ef06f425b25e478f8b0a042ce1ff21c569edcc7975"
+  },
+  "liveAppOrSiteVerified": false,
+  "windowsBuiltOrRun": false
+}

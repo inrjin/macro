@@ -1,0 +1,6 @@
+{
+  "crates/macro-core/src/engine.rs": "43fb91575b907f8816bc07f4ec6080d75072b6026bbbe95c4377f55e65422013",
+  "src-tauri/src/runtime.rs": "2d4213c49584b930e2bdc5ed78fb2aaa2700479c7db7bb97cdf0d06377561939",
+  "src-tauri/src/f9_any_state_tests.rs": "e624680ba7239b12d63abc097edf8d2145eb272c67e5f24b1c5308aeb438631c",
+  "src-tauri/src/visual_recovery.rs": "34a874a90f82fbfc6a9081edebd6f78269ced0b3d5482a9fe3f8d6813a8365b8"
+}

@@ -1,0 +1,8 @@
+/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/verification/windows-0.5.11-review/staging/source/target/debug/deps/unicode_ident-86474059d22e53cb.d: /Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/.build-tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unicode-ident-1.0.27/src/lib.rs /Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/.build-tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unicode-ident-1.0.27/src/tables.rs
+
+/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/verification/windows-0.5.11-review/staging/source/target/debug/deps/libunicode_ident-86474059d22e53cb.rlib: /Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/.build-tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unicode-ident-1.0.27/src/lib.rs /Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/.build-tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unicode-ident-1.0.27/src/tables.rs
+
+/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/verification/windows-0.5.11-review/staging/source/target/debug/deps/libunicode_ident-86474059d22e53cb.rmeta: /Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/.build-tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unicode-ident-1.0.27/src/lib.rs /Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/.build-tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unicode-ident-1.0.27/src/tables.rs
+
+/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/.build-tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unicode-ident-1.0.27/src/lib.rs:
+/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/.build-tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unicode-ident-1.0.27/src/tables.rs:

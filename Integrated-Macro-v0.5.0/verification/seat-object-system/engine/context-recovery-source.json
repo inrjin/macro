@@ -1,0 +1,6 @@
+{
+  "src-tauri/src/runtime.rs": "9ecf8161836b668a3bf41717f64629552bc30415a60b53c3b3c56d2ee0650f1b",
+  "src-tauri/src/selection_count_runtime_tests.rs": "5010b5ac51cd58859f42796a352c25f46734296771b11828586743f317c4f483",
+  "crates/macro-core/src/engine.rs": "820884a1547abc9ab6c35e5db743e3e80482d3e69caf9a82afd99b68306c8cb6",
+  "crates/macro-core/src/model.rs": "b597ce7ba48a3c87697ecdd8ceab235a484e170853da25fe6df14b54a08a74e5"
+}

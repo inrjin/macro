@@ -1,0 +1,69 @@
+--- before/crates/macro-core/src/selection_count.rs
++++ current/crates/macro-core/src/selection_count.rs
+@@ -113,10 +113,10 @@
+                         h:(t.height as f64*scale).round() as usize,pixels:0};
+                     let preliminary=score_at_least(mask,width,height,region,t,0.55);
+                     if preliminary<0.55 {continue;}
+-                    // A connected anchor can round one pixel differently from
+-                    // the full word at fractional screen scales. Refine extent,
+-                    // never relax the acceptance threshold to cover that error.
+-                    for dw in -1..=1 { for dh in -1..=1 {
++                    // A one-pixel anchor-width quantization error is amplified
++                    // across a multi-character word. Search a bounded extent
++                    // correction; the full-word score must still pass unchanged.
++                    for dw in -3..=3 { for dh in -1..=1 {
+                         let w=region.w as isize+dw;let h=region.h as isize+dh;
+                         if w<=0 || h<=0 {continue;}
+                         let refined=Box2 {w:w as usize,h:h as usize,..region};
+@@ -144,6 +144,33 @@
+         }
+     }
+     light*100>=total*90
++}
++
++// The component-size filter proposes a digit; it does not prove that digit is
++// the complete count. Signs, punctuation, smaller digits and a second digit at
++// the end of the proposal band must not disappear from the interpretation.
++fn isolated_count(mask: &[bool], width: usize, height: usize, heading: Box2, digit: Box2) -> bool {
++    let slack=heading.h/3+1;
++    let left=heading.x+heading.w;
++    let right=left+heading.h*3;
++    let top=heading.y.saturating_sub(slack);
++    let bottom=heading.y+slack+heading.h*13/10;
++    if right>=width || bottom>=height {return false;}
++    for y in top..bottom {for x in left..right {
++        if mask[y*width+x] && !(x>=digit.x && x<digit.x+digit.w && y>=digit.y && y<digit.y+digit.h) {
++            return false;
++        }
++    }}
++    true
++}
++
++fn standalone_heading(mask: &[bool], width: usize, heading: Box2) -> bool {
++    // "미선택 좌석" and "최대 선택 좌석" contain the expected glyphs but
++    // describe a different quantity. Require a blank word boundary, without
++    // extending the check into another row or assuming a viewport location.
++    let left=heading.x.saturating_sub((heading.h/2).max(2));
++    (heading.y..heading.y+heading.h).all(|y|
++        (left..heading.x).all(|x|!mask[y*width+x]))
+ }
+ 
+ /// Recognize the completion label inside a separately detected button. The
+@@ -211,6 +238,7 @@
+     let headings=find_label(&mask,width,height,&boxes,"heading");
+     if headings.len()!=1 || !light_surround(frame,headings[0]) {return CountRead::Unreadable;}
+     let heading=headings[0];
++    if !standalone_heading(&mask,width,heading) {return CountRead::Unreadable;}
+     // Inconsistent render transitions must not authorize another input. The
+     // explicit empty-state label is checked even when a digit is readable.
+     let empty=find_label(&mask,width,height,&boxes,"empty");
+@@ -224,7 +252,8 @@
+     if let Some(digit)=digits.first().copied() {
+         // Multi-digit counts and fragmented/unrecognized text must not silently
+         // become a single-digit count. Targets are currently limited to 1..4.
+-        if digits.len()!=1 || !light_surround(frame,digit) || has_empty {return CountRead::Unreadable;}
++        if digits.len()!=1 || !light_surround(frame,digit) || has_empty
++            || !isolated_count(&mask,width,height,heading,digit) {return CountRead::Unreadable;}
+         let mut scores=[0.0_f64;10];
+         for t in templates() {
+             if let Ok(n)=t.label.parse::<usize>() {

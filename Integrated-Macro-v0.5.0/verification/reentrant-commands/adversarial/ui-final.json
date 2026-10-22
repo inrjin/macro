@@ -1,0 +1,56 @@
+{
+  "recordedAt": "2026-10-21T15:16:14.202351+00:00",
+  "purpose": "Independent final DOM run, not native IPC/OS/site execution",
+  "command": "node --test ui/tests/reentrant-review.test.js",
+  "result": {
+    "passed": 19,
+    "failed": 0,
+    "exitCode": 0
+  },
+  "source": [
+    {
+      "path": "ui/app.js",
+      "sha256": "baea51b1dbd2c172c65bde970d2e3eff42640e53d75ee62ab44d8bd6b7f60486",
+      "bytes": 54642
+    },
+    {
+      "path": "ui/model.js",
+      "sha256": "2351e89ce198302b34f13358c980734b26747dd43594a16b2f442480ee8d101e",
+      "bytes": 41081
+    },
+    {
+      "path": "ui/index.html",
+      "sha256": "03d61767f68cd2f64198839549565ec455b4e0486bf684a020f4ef35abb8a42a",
+      "bytes": 27930
+    },
+    {
+      "path": "ui/overlay.js",
+      "sha256": "00cc95eee61939c572556466139193b78b7f91df2f46c619b16da805fe239b41",
+      "bytes": 3153
+    },
+    {
+      "path": "ui/overlay.html",
+      "sha256": "64b73cb64a7aeb75891aad02f47ac2f1156512d37ef943beb768ddd48b660e56",
+      "bytes": 663
+    },
+    {
+      "path": "ui/tests/run-reentrant-review-dom.mjs",
+      "sha256": "52d41eda4084e04c8fd3080a0f85c1f0810d8c99c0590fb2a8fef1af4d37f86a",
+      "bytes": 11881
+    },
+    {
+      "path": "ui/tests/reentrant-review.test.js",
+      "sha256": "d89afffab7615d9d05de0f77f40baad3d385c3934faf784bc74ca05618281888",
+      "bytes": 1053
+    },
+    {
+      "path": "ui/tests/dom-fixture.mjs",
+      "sha256": "367897b00187fdf517d55fcd7ae75435fe3c9d0a8a2c8b115e723cc64f40d34e",
+      "bytes": 7082
+    }
+  ],
+  "log": {
+    "path": "verification/reentrant-commands/adversarial/final-dom.log",
+    "sha256": "32735739b3b31e1f45593a62696e06177bf5fa6c690e8b92f1c844d8c2cfce41"
+  }
+}

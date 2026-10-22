@@ -1,0 +1,21 @@
+{
+  "createdAt": "2026-10-19T01:02:03.988Z",
+  "environment": "macOS / headless Chrome for Testing / isolated local URL fixtures, no real CAPTCHA or ticket server",
+  "checks": [
+    "manual gate blocks clicks; moved/resized single section resolves live; loaded map then seat conflicts",
+    "wrong section map never starts seats or changes preferred section",
+    "reappearing human gate cancels automatic clicks",
+    "pixel search derives current shifted map bounds without fixed ROI, including short-document screenshot",
+    "SVG viewBox scale and internal section translation resolve fresh bounds",
+    "same image uses rendered content rectangle after object-fit letterboxing and resize",
+    "cross-origin iframe section maps to trusted viewport click",
+    "nested cross-origin frame offsets are accumulated at each embedding",
+    "map movement after pixel pool preparation stops stale coordinate reuse",
+    "empty preferred section stops without trying another section",
+    "human gate observer survives alert conflict recovery",
+    "changed section identity stops instead of clicking another section",
+    "region picker saves identity and fractions without booking click",
+    "shipped practice page: manual confirmation, resized single section, seat retries and after steps",
+    "extension popup practice preset, entry fields and saved binding round trip"
+  ]
+}

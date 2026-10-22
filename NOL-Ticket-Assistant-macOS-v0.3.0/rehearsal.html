@@ -1,0 +1,18 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>매크로 로컬 연습</title><style>
+body{font:16px/1.6 system-ui,sans-serif;background:#f4f6fa;color:#193348;padding:35px;max-width:1000px;margin:auto}h1{margin:0}button{cursor:pointer;padding:12px 24px;font:inherit;border:0;border-radius:5px;background:#2559ce;color:white}.seats{display:grid;grid-template-columns:repeat(8,34px);gap:16px;padding:30px;background:white;width:max-content;margin:25px 0}.seat{width:34px;height:34px;padding:0;background:#31ad68;border-radius:2px}.seat.selected{background:#4c56d9}#extra1{background:#f0aa23;color:#17293b}#extra2{background:#c23c88}section{margin-top:20px}small{color:#536a7b}#result{font-weight:bold}</style></head><body>
+<h1>좌석 매크로 연습</h1><p>로컬 화면입니다. 실제 예매·네트워크 요청은 없습니다. 이 창에서 F7을 누르고 매크로의 좌표/색상을 보정하세요.</p>
+<small>좌석 범위는 아래 초록색 사각형만 포함합니다. 선택하면 파란색으로 바뀝니다. F8로 좌석 색과 선택 완료 버튼 위치를 채집하세요.</small>
+<div class="seats" id="seats"></div>
+<button id="done">좌석 선택 완료</button><span id="count"> 0석 선택</span>
+<section><button id="extra1" hidden>추가 확인 1</button> <button id="extra2" hidden>추가 확인 2</button></section>
+<p id="result">준비</p><button id="reset">연습 초기화</button>
+<p>추가 확인 버튼은 각각 800ms 뒤 나타납니다. 두 단계를 매크로 후속 클릭에 등록하고 충분한 최소 대기 또는 색 대기를 설정하세요. 이 페이지는 Windows 좌표 매크로 연습용이며 사이트 전용 확장 감지기는 동작하지 않습니다.</p>
+<script>
+let chosen=new Set(),finished=false,timers=[];
+const seats=document.querySelector('#seats'),count=document.querySelector('#count'),result=document.querySelector('#result');
+for(let i=0;i<24;i++){const b=document.createElement('button');b.className='seat';b.ariaLabel='연습 좌석 '+(i+1);b.onclick=()=>{if(finished)return;if(chosen.has(i)){chosen.delete(i);b.classList.remove('selected');}else{chosen.add(i);b.classList.add('selected');}count.textContent=' '+chosen.size+'석 선택';};seats.append(b);}
+document.querySelector('#done').onclick=()=>{if(!chosen.size){result.textContent='좌석을 먼저 선택하세요.';return;}if(finished)return;finished=true;result.textContent='좌석 선택 확인 · 800ms 후 다음 버튼';timers.push(setTimeout(()=>document.querySelector('#extra1').hidden=false,800));};
+document.querySelector('#extra1').onclick=()=>{document.querySelector('#extra1').hidden=true;result.textContent='첫 후속 클릭 확인';timers.push(setTimeout(()=>document.querySelector('#extra2').hidden=false,800));};
+document.querySelector('#extra2').onclick=()=>{document.querySelector('#extra2').hidden=true;result.textContent='연습 완료: 선택 완료 + 후속 클릭 2회';};
+document.querySelector('#reset').onclick=()=>{timers.forEach(clearTimeout);timers=[];chosen.clear();finished=false;document.querySelectorAll('.seat').forEach(b=>b.classList.remove('selected'));document.querySelector('#extra1').hidden=true;document.querySelector('#extra2').hidden=true;count.textContent=' 0석 선택';result.textContent='준비';};
+</script></body></html>

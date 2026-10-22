@@ -1,0 +1,38 @@
+{
+  "artifact": "/Users/inrjin/Documents/機械人間/Integrated-Macro-Windows-v0.5.11-GitHub-Upload.zip",
+  "bytes": 2540006,
+  "sha256": "2dbaf3e0b86d5add9ceea1f6666f3884b843843593862ffc9f9406f4a6bb9df8",
+  "archiveCrcVerified": true,
+  "files": [
+    {
+      "path": "Integrated-Macro-Windows-v0.5.11-GitHub-Upload/Integrated-Macro-Windows-v0.5.11-Build-Kit.zip",
+      "bytes": 3078639,
+      "sha256": "d0e5ed8616f2bdb1e49fd86497d3e2cd557cd460d2cca7c1c10b5777bf36357e"
+    },
+    {
+      "path": "Integrated-Macro-Windows-v0.5.11-GitHub-Upload/UPLOAD-GUIDE.md",
+      "bytes": 2819,
+      "sha256": "14a71beb91d5ec96414cc9d3af6e239328400acfb13004d741f3ff03f06de9b1"
+    },
+    {
+      "path": "Integrated-Macro-Windows-v0.5.11-GitHub-Upload/workflow.yml.txt",
+      "bytes": 2673,
+      "sha256": "56a28fddd11d06314ee9a8127fdbd123842e4d89d68323ea8057830f8761e9e3"
+    }
+  ],
+  "fileCount": 3,
+  "innerBuildKitEntryCount": 577,
+  "originalBuildKitUnchanged": true,
+  "workflowAndGuideMatchReviewedInputs": true,
+  "transferContract": {
+    "uploadToRepositoryRoot": "Integrated-Macro-Windows-v0.5.11-Build-Kit.zip",
+    "createFileAndPasteTextFrom": "workflow.yml.txt",
+    "repositoryWorkflowPath": ".github/workflows/build-windows.yml",
+    "outerArchiveIsNotUploadedAsTheBuildKit": true
+  },
+  "decision": "The three-file upload preparation archive is internally consistent; this is not a Windows executable or executed remote build.",
+  "sourceOrSettingsModified": false,
+  "remoteWrites": false,
+  "windowsExecution": false,
+  "issues": []
+}

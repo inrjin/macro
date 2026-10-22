@@ -1,0 +1,537 @@
+{
+  "generatedAt": "2026-10-21T15:43:04.235Z",
+  "environment": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "node": "v25.4.0"
+  },
+  "releaseReady": false,
+  "note": "Passing unit/ABI checks does not verify actual browser capture, input, overlay, or live booking.",
+  "checks": [
+    {
+      "name": "JavaScript behavior tests",
+      "command": [
+        "/opt/homebrew/Cellar/node/25.4.0/bin/node",
+        "--test",
+        "tests/browser-observer.test.js",
+        "tests/build-gate.test.js",
+        "ui/tests/cancellation-audit.test.js",
+        "ui/tests/capture-integration.test.js",
+        "ui/tests/capture-state.test.js",
+        "ui/tests/continuous-flow.test.js",
+        "ui/tests/direct-seats.test.js",
+        "ui/tests/keyboard-check-ui.test.js",
+        "ui/tests/keyboard-check.test.js",
+        "ui/tests/model.test.js",
+        "ui/tests/optimistic-selection.test.js",
+        "ui/tests/profile-sync.test.js",
+        "ui/tests/reentrant-review.test.js",
+        "ui/tests/seat-evidence.test.js",
+        "ui/tests/start-integration.test.js",
+        "ui/tests/start-shortcut.test.js",
+        "ui/tests/vision-diagnostics.test.js",
+        "ui/tests/visual-dialog.test.js"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": "✔ product booking returns an element reference without performing input (4.34575ms)\n✔ sale gate remains disabled while a countdown is visible, then exposes enabled state (0.180958ms)\n✔ full calendar date precedes session selection, then final booking (0.271916ms)\n✔ CAPTCHA and queue take precedence over booking buttons and seat maps behind them (0.105209ms)\n✔ day numbers, wrong month, and impossible full dates cannot select a date (0.103459ms)\n✔ exact full date resolves identical day numbers in adjacent months (0.072792ms)\n✔ duplicate visible buttons and duplicate matching dates/sessions are ambiguous (0.095542ms)\n✔ visibility and availability require positive evidence and respect aria-disabled (1.715333ms)\n✔ same URL in different windows/documents retains distinct observation identities (0.243ms)\n✔ mixed document/frame evidence and reused control IDs are rejected (0.247792ms)\n✔ error absence, stale completion markers and booking-history text never imply success (0.155584ms)\n✔ diagnostic evidence identifies the positive control without adding core event fields (0.173125ms)\n✔ same-time sessions on a different full date are not interchangeable (0.056584ms)\n✔ collector retains control identities and supports explicitly verified selected-state selectors (0.303958ms)\n✔ packaging requires all required checks to pass, including unavailable or unfinished checks (1.297959ms)\n✔ changing, adding or deleting source after successful tests blocks packaging (0.083917ms)\n✔ passing required checks and unchanged source allow packaging despite an optional failure (0.056042ms)\n✔ the gate reports every blocker and final source comparison detects changes during packaging (0.1625ms)\n✔ fresh cancellation scans the current map while explicit unconfigured two-region mode explains both missing targets (1.8125ms)\n✔ old two-region profiles keep and display their targets across all mode switches without desktop metadata (2.90575ms)\n✔ newly materialized cancellation region slots reconcile independently without changing arbitrary array policy (0.403375ms)\n✔ production cancellation controls preserve mode/override/refresh contracts across button, F2 and F8 (2870.792542ms)\n✔ production UI listeners keep F8 failure visible and save the coordinate after retry (386.285333ms)\n✔ F8 failure remains visible when a legacy armed snapshot arrives after the error event (0.708209ms)\n✔ bootstrap snapshot restores a failure even when its runtime-error event was missed (0.062ms)\n✔ retry moves failure through reading to captured and preserves the saved point detail (0.060542ms)\n✔ cancel and explicit rearm clear failure without erasing it on unrelated snapshots (0.053167ms)\n✔ unrelated runtime errors do not relabel the coordinate field as failed (0.14075ms)\n✔ failure snapshot and error event can arrive in either order (0.702416ms)\n✔ recovery hints identify F7 reconnect for a changed popup and F8 retry for foreground failure (0.145375ms)\n✔ Accessibility recovery names the macro app and macOS setting without assuming Terminal permissions (0.102541ms)\n✔ unavailable hit test offers F8 retry and reconnect while ambiguous focus requires reconnect (0.077666ms)\n✔ real occlusion keeps actionable obstruction removal and F8 retry (0.087209ms)\n✔ new native capture errors retain original details through snapshot updates (0.070209ms)\n✔ unknown capture failures retain armed versus disarmed retry instructions (0.043792ms)\n✔ profile policy matches normal captcha option and cancellation navigation (0.700667ms)\n✔ single-region choices preserve original region coordinates for later use (1.507583ms)\n✔ refresh button modes round trip with old and current stored spelling (0.7045ms)\n✔ imported arrow navigation is shown without requiring desktop metadata (0.121625ms)\n✔ completed means execution ended in every mode, not verified booking success (0.3395ms)\n✔ Enter watch uses runtime text and cannot cover paused, capture or terminal state (0.074625ms)\n✔ NOL captcha status takes priority over Enter and only displays during normal entry or captcha (0.120959ms)\n✔ production controls follow unsaved mode options, Enter watch and final completion without F6 (332.01075ms)\n✔ direct seats require a valid common ROI even when a cancellation zone has one (0.840875ms)\n✔ direct seats ignore earlier booking settings while normal mode retains validation (0.090166ms)\n✔ automatic target recovery is distinct from manual pause without rewriting engine phase (0.31775ms)\n✔ missing seat area is a displayed wait without changing run or selection state (0.150333ms)\n✔ production recovery controls cancel automatic resume with pause and remain stoppable (262.939375ms)\n✔ keyboard diagnostic activity preserves the engine running state (1.773292ms)\n✔ keyboard diagnostic results distinguish callbacks, acceptance, and unavailable permission evidence (0.517792ms)\n✔ finished keyboard results override earlier F8 feedback but yield to later operations (0.478167ms)\n✔ production keyboard diagnostic controls isolate checks from booking and show native results (516.786208ms)\n✔ keyboard fixture keeps the modal and backdrop open through first and later input (1.382792ms)\n✔ keyboard fixture records explicit submission separately and counts only subsequent target clicks (0.361209ms)\n✔ keyboard fixture supports both background directions and discards previous run metadata (0.324709ms)\n✔ keyboard fixture serializes only counts, timestamps, and explicit display state (0.861958ms)\n✔ new features remain independently off and unknown future screens are not required to save (1.26125ms)\n✔ NOL captcha detection remains an independent default-off option across old profiles and form saves (2.215291ms)\n✔ manual entry is independently optional and preserves the initial and follow-up button settings (2.293375ms)\n✔ adjacent-seat preference is independent, defaults off for older settings, and preserves target counts (1.071708ms)\n✔ form serialization preserves runtime metadata and uses the core snake_case contract (0.13075ms)\n✔ sale time round trips in the local timezone, and scheduling only requires its own fields (6.243ms)\n✔ invalid counts, colors and active URLs receive matching user-facing field names (0.752209ms)\n✔ capture coordinates remain window-relative and rectangle corners may be supplied in either order (0.900208ms)\n✔ original two-region navigation and arrow-key navigation survive save/load (0.435ms)\n✔ legacy profiles with two-region targets and no desktop metadata retain their targets (0.286417ms)\n✔ selected count uses confirmed IDs and never counts attempted inputs as selected (0.191667ms)\n✔ import rejects unsupported schemas and ignores prototype pollution keys (0.150875ms)\n✔ optional per-zone overrides stay empty until the current zone is configured (0.224375ms)\n✔ two cancellation zones retain independent colors, search bounds, and completion buttons (0.919833ms)\n✔ clearing one zone override restores its common fallback and keeps unrelated overrides (0.212333ms)\n✔ imported per-zone rectangles display correctly without capture metadata (1.178416ms)\n✔ a color-only capture after a 2x to 1x screen change invalidates every old coordinate (0.288708ms)\n✔ changed geometry preserves keyboard navigation and applies only the new point (0.087792ms)\n✔ unchanged capture geometry preserves coordinates during color calibration (0.058125ms)\n✔ small scale rounding matches the native runtime geometry tolerance (0.0495ms)\n✔ new zone bounds inherit common vision exclusions exactly like native capture (0.060042ms)\n✔ scheduled entry requires its visible booking button and keeps it distinct from legacy next (0.317625ms)\n✔ scheduled cancellation does not require the normal-booking entry button (0.048375ms)\n✔ automatic entry prerequisites apply only to normal entry and allow the captcha Enter route (0.091166ms)\n✔ ordinary immediate booking remains valid without an entry target when automatic entry is off (0.029541ms)\n✔ stable seat IDs expose positions and distinguish equal coordinates in different zones (0.321084ms)\n✔ unknown or malformed candidate IDs never invent a spatial position (0.081833ms)\n✔ direct seats display the unique delivered estimate without changing confirmed count (2.6935ms)\n✔ runtime estimate is authoritative when raw history includes failed earlier attempts (0.102166ms)\n✔ explicit observed policy continues displaying confirmed selections (0.087084ms)\n✔ runtime optimistic policy applies to normal and cancellation flows too (0.079ms)\n✔ direct seats never require a selected-seat color (0.184667ms)\n✔ production seats optimistic controls retain one-click reporting during automatic recovery (256.853458ms)\n✔ production normal optimistic controls retain one-click reporting during automatic recovery (247.37475ms)\n✔ production cancellation optimistic controls retain one-click reporting during automatic recovery (248.688084ms)\n✔ new native coordinates merge with independent local settings and retain unknown fields (1.978917ms)\n✔ explicit local clear survives an unrelated remote update but cannot replace a newer capture (0.117708ms)\n✔ zone array settings reconcile independently and accepted saves become clean (0.128667ms)\n✔ native color, point, ROI and frame calibration remain whole values across concurrent edits (0.47025ms)\n✔ production UI preserves capture revisions and sends one cancellable start request (1497.813666ms)\n✔ replacement execution adversarial DOM: running-button (227.968625ms)\n✔ replacement execution adversarial DOM: button-double (225.355209ms)\n✔ replacement execution adversarial DOM: same-mode (198.00725ms)\n✔ replacement execution adversarial DOM: different-mode (191.301042ms)\n✔ replacement execution adversarial DOM: old-finally (175.042041ms)\n✔ replacement execution adversarial DOM: old-state-event (147.17925ms)\n✔ replacement execution adversarial DOM: old-error (152.289542ms)\n✔ replacement execution adversarial DOM: stop-two-pending (152.462416ms)\n✔ replacement execution adversarial DOM: invalid-latest (139.395042ms)\n✔ replacement execution adversarial DOM: native-cleanup-before-new-success (134.612625ms)\n✔ replacement execution adversarial DOM: native-stop-old-success (129.922084ms)\n✔ replacement execution adversarial DOM: native-stop-old-error (144.425583ms)\n✔ replacement execution adversarial DOM: old-state-control (118.711459ms)\n✔ replacement execution adversarial DOM: same-revision-terminal (127.275333ms)\n✔ replacement execution adversarial DOM: old-state-overlay (65.757ms)\n✔ replacement execution adversarial DOM: button-mode-switch (133.177292ms)\n✔ replacement execution adversarial DOM: cancellation-switch (127.756042ms)\n✔ replacement execution adversarial DOM: invalid-shortcut-native-newer (118.139834ms)\n✔ replacement execution adversarial DOM: overlay-bootstrap-error (59.921583ms)\n✔ new seat evidence options preserve old profiles and round-trip independently (1.258625ms)\n✔ unreadable site count is not presented as zero or the click estimate (0.289625ms)\n✔ site count stays distinct from delivered and queued clicks (0.12525ms)\n✔ object diagnostics distinguish one bridged color component from two seat objects (0.279375ms)\n✔ ambiguous object diagnostics explain evidence rather than a fabricated size rejection (0.087916ms)\n✔ production policy help uses count verification in draft and active modes (690.583959ms)\n✔ count verification shows actual visual monitoring for legacy policies without masking holds (0.207083ms)\n✔ production UI explicit direct-seat mode starts with the common seat range (198.349083ms)\n✔ production UI direct-seat mode bypasses unrelated schedule and entry prerequisites while retaining settings (197.307916ms)\n✔ production UI direct-seat mode requires both seat-range corners before saving or starting (132.418042ms)\n✔ production UI ordinary start sends configuration and start in one request without hidden-screen coordinates (168.979167ms)\n✔ production UI scheduled start preserves sale time and entry target without future calendar coordinates (164.630209ms)\n✔ production UI cancellation start preserves the selected run mode (134.693708ms)\n✔ production UI cancellation bypasses normal-only entry, schedule and clock prerequisites (138.607792ms)\n✔ production UI captcha Enter mode starts without an unknown entry button (137.670666ms)\n✔ production UI captcha Enter mode preserves registered date, session and next clicks (123.873083ms)\n✔ production UI NOL-only captcha mode preserves registered entry coordinates and independent Enter OFF (123.625792ms)\n✔ production UI manual entry without CAPTCHA detection preserves saved coordinates and bypasses automatic-entry validation (142.426958ms)\n✔ production UI manual entry and NOL detection are independent options with registered coordinates retained (135.325084ms)\n✔ production UI failed native start stays idle and shows the activation error (135.527167ms)\n✔ production UI failed persistence prevents native start (142.739541ms)\n✔ production UI scheduled start requires the currently visible entry button (106.462458ms)\n✔ F1 normal shortcut handshake: current-options (228.371ms)\n✔ F1 normal shortcut handshake: validation (199.513916ms)\n✔ F1 normal shortcut handshake: save-failure (208.908042ms)\n✔ F1 normal shortcut handshake: cancelled (150.921ms)\n✔ F1 normal shortcut handshake: duplicate (169.52125ms)\n✔ F1 normal shortcut handshake: busy (132.152208ms)\n✔ F1 normal shortcut handshake: bootstrap-pending (117.994083ms)\n✔ F1 normal shortcut handshake: bootstrap-failed (108.33525ms)\n✔ F1 normal shortcut handshake: overlay (60.792292ms)\n✔ F1 normal shortcut handshake: nol-only-entry (157.235417ms)\n✔ F2 cancellation shortcut handshake: current-options (160.142958ms)\n✔ F2 cancellation shortcut handshake: normal-validation-bypass (169.128959ms)\n✔ F5 seats shortcut handshake: current-options (150.997459ms)\n✔ F5 seats shortcut handshake: validation (131.148959ms)\n✔ F5 seats shortcut handshake: save-failure (143.332375ms)\n✔ F5 seats shortcut handshake: cancelled (124.907208ms)\n✔ F5 seats shortcut handshake: duplicate (140.059625ms)\n✔ F5 seats shortcut handshake: busy (116.304417ms)\n✔ F5 seats shortcut handshake: bootstrap-pending (102.588666ms)\n✔ F5 seats shortcut handshake: bootstrap-failed (93.0045ms)\n✔ F5 seats shortcut handshake: overlay (52.2705ms)\n✔ F5 seats shortcut handshake: normal-validation-bypass (133.227459ms)\n✔ unscanned or incomplete diagnostics never fabricate zero candidates (0.805333ms)\n✔ zero matching pixels and rejected components explain different causes (0.226792ms)\n✔ diagnostics show actual effective color and active source without promising seats (0.104333ms)\n✔ seat fragments rejected for lack of clickable area explain the zero-candidate result (0.06675ms)\n✔ pre-refresh image statistics never appear as actionable overlay candidates (0.087292ms)\n✔ last scan never replaces paused or waiting-region phase (0.28725ms)\n✔ overlay candidate count appears only during active seat scans outside F8/errors (0.072875ms)\n✔ actual settings and overlay listeners render scan diagnostics without changing phase (281.734417ms)\n✔ visual dialog status names a candidate without confirming a seat failure (0.916375ms)\n✔ visual status cannot cover capture, pause, recovery, errors or observed selection (0.131208ms)\n✔ production seats optimistic flow retains optional dialog fallback and ends monitoring honestly (222.763292ms)\n✔ production normal optimistic flow retains optional dialog fallback and ends monitoring honestly (206.682417ms)\n✔ production cancellation optimistic flow retains optional dialog fallback and ends monitoring honestly (216.825625ms)\nℹ tests 172\nℹ suites 0\nℹ pass 172\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 3578.22725"
+    },
+    {
+      "name": "JavaScript syntax: adapters/browser/observer.js",
+      "command": [
+        "/opt/homebrew/Cellar/node/25.4.0/bin/node",
+        "--check",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/adapters/browser/observer.js"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "name": "JavaScript syntax: scripts/build-gate.mjs",
+      "command": [
+        "/opt/homebrew/Cellar/node/25.4.0/bin/node",
+        "--check",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/scripts/build-gate.mjs"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "name": "JavaScript syntax: scripts/check.mjs",
+      "command": [
+        "/opt/homebrew/Cellar/node/25.4.0/bin/node",
+        "--check",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/scripts/check.mjs"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "name": "JavaScript syntax: ui/app.js",
+      "command": [
+        "/opt/homebrew/Cellar/node/25.4.0/bin/node",
+        "--check",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/ui/app.js"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "name": "JavaScript syntax: ui/capture-state.js",
+      "command": [
+        "/opt/homebrew/Cellar/node/25.4.0/bin/node",
+        "--check",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/ui/capture-state.js"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "name": "JavaScript syntax: ui/model.js",
+      "command": [
+        "/opt/homebrew/Cellar/node/25.4.0/bin/node",
+        "--check",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/ui/model.js"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "name": "JavaScript syntax: ui/overlay.js",
+      "command": [
+        "/opt/homebrew/Cellar/node/25.4.0/bin/node",
+        "--check",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/ui/overlay.js"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "name": "JavaScript syntax: ui/profile-sync.js",
+      "command": [
+        "/opt/homebrew/Cellar/node/25.4.0/bin/node",
+        "--check",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/ui/profile-sync.js"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "name": "JavaScript syntax: ui/tests/dom-fixture.mjs",
+      "command": [
+        "/opt/homebrew/Cellar/node/25.4.0/bin/node",
+        "--check",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/ui/tests/dom-fixture.mjs"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "name": "JavaScript syntax: ui/tests/run-cancellation-audit-dom.mjs",
+      "command": [
+        "/opt/homebrew/Cellar/node/25.4.0/bin/node",
+        "--check",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/ui/tests/run-cancellation-audit-dom.mjs"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "name": "JavaScript syntax: ui/tests/run-capture-browser.mjs",
+      "command": [
+        "/opt/homebrew/Cellar/node/25.4.0/bin/node",
+        "--check",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/ui/tests/run-capture-browser.mjs"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "name": "JavaScript syntax: ui/tests/run-capture-dom.mjs",
+      "command": [
+        "/opt/homebrew/Cellar/node/25.4.0/bin/node",
+        "--check",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/ui/tests/run-capture-dom.mjs"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "name": "JavaScript syntax: ui/tests/run-continuous-flow-dom.mjs",
+      "command": [
+        "/opt/homebrew/Cellar/node/25.4.0/bin/node",
+        "--check",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/ui/tests/run-continuous-flow-dom.mjs"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "name": "JavaScript syntax: ui/tests/run-keyboard-check-ui-dom.mjs",
+      "command": [
+        "/opt/homebrew/Cellar/node/25.4.0/bin/node",
+        "--check",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/ui/tests/run-keyboard-check-ui-dom.mjs"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "name": "JavaScript syntax: ui/tests/run-optimistic-selection-dom.mjs",
+      "command": [
+        "/opt/homebrew/Cellar/node/25.4.0/bin/node",
+        "--check",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/ui/tests/run-optimistic-selection-dom.mjs"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "name": "JavaScript syntax: ui/tests/run-profile-race-dom.mjs",
+      "command": [
+        "/opt/homebrew/Cellar/node/25.4.0/bin/node",
+        "--check",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/ui/tests/run-profile-race-dom.mjs"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "name": "JavaScript syntax: ui/tests/run-recovery-dom.mjs",
+      "command": [
+        "/opt/homebrew/Cellar/node/25.4.0/bin/node",
+        "--check",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/ui/tests/run-recovery-dom.mjs"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "name": "JavaScript syntax: ui/tests/run-reentrant-review-dom.mjs",
+      "command": [
+        "/opt/homebrew/Cellar/node/25.4.0/bin/node",
+        "--check",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/ui/tests/run-reentrant-review-dom.mjs"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "name": "JavaScript syntax: ui/tests/run-seat-evidence-dom.mjs",
+      "command": [
+        "/opt/homebrew/Cellar/node/25.4.0/bin/node",
+        "--check",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/ui/tests/run-seat-evidence-dom.mjs"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "name": "JavaScript syntax: ui/tests/run-start-dom.mjs",
+      "command": [
+        "/opt/homebrew/Cellar/node/25.4.0/bin/node",
+        "--check",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/ui/tests/run-start-dom.mjs"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "name": "JavaScript syntax: ui/tests/run-start-shortcut-dom.mjs",
+      "command": [
+        "/opt/homebrew/Cellar/node/25.4.0/bin/node",
+        "--check",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/ui/tests/run-start-shortcut-dom.mjs"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "name": "JavaScript syntax: ui/tests/run-vision-dom.mjs",
+      "command": [
+        "/opt/homebrew/Cellar/node/25.4.0/bin/node",
+        "--check",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/ui/tests/run-vision-dom.mjs"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "name": "JavaScript syntax: ui/tests/run-visual-dialog-dom.mjs",
+      "command": [
+        "/opt/homebrew/Cellar/node/25.4.0/bin/node",
+        "--check",
+        "/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/ui/tests/run-visual-dialog-dom.mjs"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "name": "Rust toolchain",
+      "command": [
+        "cargo",
+        "--version"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": "cargo 1.99.1 (5f94df478 2026-08-27)"
+    },
+    {
+      "name": "Rust core, platform and desktop tests",
+      "command": [
+        "cargo",
+        "test",
+        "--workspace",
+        "--offline",
+        "--locked"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": "running 133 tests\ntest keyboard_check::tests::check_restricts_start_to_inactive_bound_runs_without_capture ... ok\ntest clock::tests::timezone_is_explicit_and_equivalent ... ok\ntest reentrant_handoff_tests::obsolete_success_and_error_neither_focus_nor_minimize_over_a_new_execution ... ok\ntest clock::tests::deadline_uses_monotonic_sample_and_rejects_stale_clock ... ok\ntest runtime::f9_any_state_tests::f8_capture_commit_rechecks_ownership_after_logging_or_publishing_delay ... ok\ntest keyboard_check::tests::check_counts_callback_queue_and_target_acceptance_separately ... ok\ntest keyboard_check::tests::check_accepts_windows_signals_without_callback_diagnostics_and_resets_between_runs ... ok\ntest runtime::f9_any_state_tests::recovery_after_explicit_handoff_resumes_search_and_never_old_entry_or_sale ... ok\ntest runtime::priority_p1_tests::p1_capture_errors_or_no_cached_pixels_never_become_a_static_scan ... ok\ntest runtime::f9_any_state_tests::stopped_count_handoff_keeps_receipt_lineage_but_rotates_authorization ... ok\ntest runtime::f9_any_state_tests::legacy_conflict_retry_caller_rearms_unsent_escape_but_keeps_success_latched ... ok\ntest runtime::priority_p1_tests::p1_navigation_fence_keeps_current_delivery_and_mode_boundaries ... ok\ntest runtime::f9_any_state_tests::changed_binding_resets_only_the_previous_windows_selection_context ... ok\ntest runtime::priority_p1_tests::p1_fresh_idle_and_fresh_pixels_do_not_identify_which_region_the_site_rendered ... ok\ntest runtime::priority_p1_tests::p1_strict_new_pixel_fence_rejects_a_legitimate_static_map_indefinitely ... ok\ntest runtime::priority_p1_tests::p1_second_native_query_replaces_pixels_and_rejects_changed_geometry_or_transparency ... ok\ntest runtime::priority_p1_tests::p1_legacy_old_cached_and_unread_pre_post_pixels_reach_the_real_preclick_check ... ok\ntest runtime::priority_p7_pixel_tests::p7_candidate_mapping_bounds_scales_negative_origins_and_fractional_compatibility ... ok\ntest runtime::priority_p4_tests::p4_delayed_pre_latest_refresh_image_is_blocked_then_new_seat_resumes ... ok\ntest runtime::priority_p4_tests::p4_same_pixels_new_capture_releases_fence_but_response_identity_remains_unknown ... ok\ntest runtime::priority_p7_pixel_tests::p7_only_image_candidate_actions_select_centered_input_and_selected_color_uses_that_pixel ... ok\ntest runtime::reentrant_runtime_tests::every_execution_supersedes_every_older_execution_before_native_validation_returns ... ok\ntest runtime::reentrant_runtime_tests::f9_normal_handoff_keeps_the_region_mapping_for_a_later_f2 ... ok\ntest runtime::reentrant_runtime_tests::failed_changed_settings_cannot_leak_into_f9_restored_selection_context ... ok\ntest runtime::priority_p7_pixel_tests::p7_windows_input_keeps_integer_indices_and_avoids_double_centering ... ok\ntest runtime::reentrant_runtime_tests::inverted_queue_order_does_not_let_old_controls_clear_the_new_start_gate ... ok\ntest runtime::reentrant_runtime_tests::later_stop_or_capture_invalidates_prepared_payload_and_new_start_has_its_own_epoch ... ok\ntest runtime::reentrant_runtime_tests::repeated_identical_start_payload_is_idempotent_but_changed_stale_settings_stay_rejected ... ok\ntest runtime::reentrant_runtime_tests::retained_selection_mapping_requires_same_area_color_and_count_policy ... ok\ntest runtime::runtime_tests::captcha_input_batch_drops_invalid_and_late_signals_before_waiting_for_new_input ... ok\ntest runtime::runtime_tests::cancellation_execution_options_isolate_refresh_and_general_region_settings ... ok\ntest runtime::runtime_tests::captcha_input_batch_is_bounded_and_preserves_earliest_notifications ... ok\ntest runtime::runtime_tests::captcha_input_batch_waits_in_order_and_discards_only_expired_candidates ... ok\ntest runtime::runtime_tests::captcha_input_watch_never_arms_during_entry_pause_or_other_modes ... ok\ntest runtime::runtime_tests::captcha_reference_waits_for_input_time_frame_and_rejects_late_capture ... ok\ntest runtime::runtime_tests::capture_labels_reject_unknown_fields_before_arming ... ok\ntest runtime::runtime_tests::color_capture_on_new_scale_invalidates_old_coordinates ... ok\ntest runtime::runtime_tests::captcha_input_batch_retries_a_later_frame_eligible_signal_without_advancing_engine ... ok\ntest runtime::runtime_tests::controls_invalidate_start_shortcut_before_the_worker_receives_them ... ok\ntest runtime::runtime_tests::cancellation_without_an_authorized_button_scans_empty_static_maps_without_refresh ... ok\ntest runtime::runtime_tests::direct_seat_setup_ignores_unused_entry_and_schedule_but_requires_seat_area ... ok\ntest runtime::runtime_tests::idle_capture_metadata_advances_observation_without_inventing_pixels_or_sequence ... ok\ntest runtime::runtime_tests::first_character_only_arms_color_reference_and_later_background_change_releases_engine ... ok\ntest runtime::runtime_tests::explicit_two_region_cancellation_requires_both_buttons_only_when_starting_that_mode ... ok\ntest runtime::runtime_tests::keyboard_check_after_stop_clears_stale_interrupt_and_ignores_old_shortcut_response ... ok\ntest runtime::runtime_tests::keyboard_check_controls_cancel_before_shortcut_capture_and_manual_paths ... ok\ntest runtime::runtime_tests::keyboard_check_failed_preflight_preserves_pending_shortcut_and_interrupt ... ok\ntest runtime::runtime_tests::latest_f9_during_startup_or_before_run_initialization_is_an_explicit_handoff ... ok\ntest runtime::f9_any_state_tests::same_window_rebind_restarts_visual_sequence_without_forgetting_incident_pixels ... ok\ntest runtime::runtime_tests::manual_captcha_preflight_accepts_idle_undelivered_entry_stop_and_search_modes ... ok\ntest runtime::runtime_tests::manual_captcha_preflight_accepts_wait_or_pause_without_changing_the_run ... ok\ntest runtime::runtime_tests::nol_gate_allows_unspecified_manual_entry_but_never_skips_a_scheduled_button ... ok\ntest runtime::runtime_tests::queued_manual_captcha_request_is_cancelled_by_later_controls ... ok\ntest runtime::runtime_tests::entry_button_capture_survives_save_and_geometry_change_clears_it ... ok\ntest runtime::runtime_tests::saved_refresh_button_spellings_work_only_for_opted_in_cancellation ... ok\ntest runtime::runtime_tests::region_capture_does_not_replace_arrow_key_navigation ... ok\ntest runtime::runtime_tests::scheduled_entry_requires_an_actual_button_but_f2_keeps_original_navigation ... ok\ntest runtime::runtime_tests::region_capture_updates_region_color_without_changing_seat_color ... ok\ntest runtime::runtime_tests::start_shortcut_accepts_one_current_response_and_preserves_requested_mode ... ok\ntest runtime::priority_p7_pixel_tests::p7_extracted_candidate_checks_the_same_physical_pixel_at_fractional_scale ... ok\ntest runtime::runtime_tests::start_shortcut_expiry_is_final_and_reports_the_timed_out_mode_once ... ok\ntest runtime::runtime_tests::stop_after_accepting_ui_response_invalidates_in_progress_start_epoch ... ok\ntest runtime::runtime_tests::stored_entry_coordinates_do_not_enable_a_disabled_feature ... ok\ntest runtime::priority_p4_tests::p4_refresh_no_response_retries_only_the_registered_button_at_the_interval ... ok\ntest runtime::runtime_tests::per_region_roi_capture_preserves_global_settings ... ok\ntest runtime::runtime_tests::unseen_map_can_be_calibrated_later_without_future_coordinates ... ok\ntest runtime::seat_accuracy_runtime_tests::candidate_cache_retains_original_inflight_point_until_result_is_resolved ... ok\ntest runtime::seat_poll_tests::cached_rescan_requires_idle_seat_observation_not_result_or_refresh ... ok\ntest runtime::seat_poll_tests::cancelled_native_post_is_not_a_failed_or_successful_seat_ack ... ok\ntest runtime::seat_poll_tests::captcha_enter_rejects_old_runs_other_apps_and_known_other_windows ... ok\ntest runtime::seat_accuracy_runtime_tests::candidate_cache_can_seed_a_missing_current_candidate_from_the_latest_frame ... ok\ntest runtime::seat_poll_tests::continuous_routes_do_not_require_manual_entry_region_refresh_or_completion ... ok\ntest runtime::seat_poll_tests::captcha_input_records_all_routing_results_and_retains_valid_signals_in_order ... ok\ntest runtime::seat_poll_tests::f6_remains_available_after_context_loss_on_an_already_open_seat_map ... ok\ntest runtime::seat_poll_tests::manual_failure_remains_available_during_context_hold_not_manual_pause ... ok\ntest runtime::seat_poll_tests::missing_seat_area_wait_starts_after_captcha_and_clears_after_calibration ... ok\ntest runtime::seat_accuracy_runtime_tests::supported_seats_still_obey_refresh_timestamp_roi_exclusions_and_opacity ... ok\ntest runtime::f9_any_state_tests::ordinary_stop_discards_speculative_watch_and_restored_image_closes_retained_incident ... ok\ntest runtime::priority_p4_tests::p4_static_refresh_off_keeps_scanning_and_unchanged_on_keeps_refreshing ... ok\ntest runtime::seat_accuracy_runtime_tests::pre_click_rejects_a_seat_that_became_a_color_fragment_without_counting_delivery ... ok\ntest runtime::seat_poll_tests::new_start_between_timeout_epoch_invalidation_and_cleanup_keeps_its_controls ... ok\ntest runtime::seat_poll_tests::post_refresh_old_pixels_cannot_trigger_a_seat_but_polling_continues ... ok\ntest runtime::seat_poll_tests::recovery_never_retries_unknown_delivery_or_identity_changes ... ok\ntest runtime::seat_poll_tests::region_click_requires_a_capture_after_native_post_not_only_a_new_sequence ... ok\ntest runtime::seat_poll_tests::optimistic_conflict_uses_delivered_attempt_not_queued_next_seat ... ok\ntest runtime::seat_poll_tests::empty_static_map_is_polled_then_new_pixels_produce_one_click ... ok\ntest runtime::seat_poll_tests::timeout_cleanup_does_not_own_a_new_shortcut_pending_or_run_in_the_same_epoch ... ok\ntest runtime::seat_poll_tests::seat_area_wait_respects_the_active_cancellation_region_override ... ok\ntest runtime::seat_poll_tests::stale_full_profile_cannot_replace_a_new_capture_revision ... ok\ntest runtime::seat_poll_tests::timed_out_ui_start_cancels_queued_or_blocked_work_without_cancelling_a_newer_start ... ok\ntest runtime::selection_count_capture_tests::impossible_native_timestamp_is_never_a_count_baseline ... ok\ntest runtime::seat_poll_tests::ui_enqueue_captures_epoch_before_a_delayed_blocking_reply_wait ... ok\ntest runtime::selection_count_capture_tests::native_reobservation_can_confirm_static_count_without_forging_changed_pixels ... ok\ntest runtime::seat_poll_tests::ui_start_keeps_its_ingress_epoch_when_stop_arrives_during_save ... ok\ntest runtime::selection_count_capture_tests::post_click_counts_reject_old_run_wrong_action_and_stale_observation ... ok\ntest runtime::selection_count_runtime_tests::count_evidence_hash_cost ... ignored, manual synthetic proof hashing cost; record build profile, not OS or end-to-end latency\ntest runtime::selection_count_runtime_tests::count_verified_legacy_context_retry_is_limited_to_seat_result_phases ... ok\ntest runtime::selection_count_runtime_tests::count_option_off_preserves_the_original_timed_attempt_path ... ok\ntest runtime::selection_count_runtime_tests::manual_completion_remains_observable_and_unknown_never_claims_completion ... ok\ntest runtime::selection_count_runtime_tests::count_verified_legacy_manual_failure_tracks_delivery_not_queued_candidate ... ok\ntest runtime::selection_count_runtime_tests::count_flag_changes_only_seat_manual_policy_and_preserves_original_step_confirmations ... ok\ntest runtime::selection_count_runtime_tests::pause_and_stop_rotate_requests_while_native_receipts_remain_bound_to_the_run ... ok\ntest runtime::selection_count_runtime_tests::proof_is_action_and_run_scoped_and_rejects_incomplete_or_regressed_frames ... ok\ntest runtime::selection_count_runtime_tests::heading_move_zero_panel_change_and_complete_count_decrease_invalidate_proof ... ok\ntest runtime::selection_count_runtime_tests::preinput_count_change_cancels_next_seat_without_delivery_or_completion ... ok\ntest runtime::seat_accuracy_runtime_tests::candidate_cache_discards_historical_observations_during_continuous_search ... ok\ntest runtime::selection_count_runtime_tests::static_sck_pixels_and_timestamp_can_progress_after_delay_with_distinct_read_serials ... ok\ntest runtime::selection_count_runtime_tests::unknown_count_holds_completion_then_fresh_read_changes_phase_once ... ok\ntest shortcut_tests::f1_requests_current_normal_settings_and_does_not_dispatch_seats ... ok\ntest runtime::selection_count_runtime_tests::pure_count_cache_preserves_fresh_poll_serials_and_rechecks_changed_pixels_or_layout ... ok\ntest runtime::selection_count_runtime_tests::cancellation_zero_proof_also_guards_refresh_and_both_legacy_navigation_inputs ... ok\ntest shortcut_tests::f2_requests_current_cancellation_options_before_starting ... ok\ntest shortcut_tests::f5_requests_current_seat_settings_without_dispatching_browser_refresh ... ok\ntest shortcut_tests::f9_requests_manual_captcha_continuation_without_starting_a_run ... ok\ntest runtime::selection_count_runtime_tests::timer_only_change_rereads_once_but_global_unknown_blocks_same_numeric_crop ... ok\ntest shortcut_tests::registered_keys_include_f9_and_all_have_commands ... ok\ntest shortcut_tests::stopped_or_cancelled_start_reply_cannot_minimize_settings_later ... ok\ntest runtime::seat_poll_tests::visual_recovery_waits_for_opaque_capture_before_resuming_engine ... ok\ntest visual_recovery::tests::geometry_errors_preserve_incident_and_do_not_fake_restoration ... ok\ntest visual_recovery::tests::interrupted_unsent_escape_retries_after_resume_without_second_rollback_or_sent_escape ... ok\ntest visual_recovery::tests::an_incident_cannot_replace_its_baseline_or_attribute_failure_to_another_seat ... ok\ntest visual_recovery::tests::no_signal_without_a_delivered_attempt_and_normal_images_keep_watch_armed ... ok\ntest visual_recovery::tests::next_delivered_seat_replaces_armed_attempt_but_small_changes_do_not_end_watch ... ok\ntest visual_recovery::tests::transparent_capture_preserves_incident_until_opaque_restoration ... ok\ntest visual_recovery::tests::manual_reset_clears_incident_and_accepts_a_new_run_sequence ... ok\ntest visual_recovery::tests::one_incident_emits_one_failure_and_only_a_new_restored_image_ends_it ... ok\ntest visual_recovery::tests::visual_failure_cancels_queued_completion_preserves_other_seat_and_fills_deficit ... ok\ntest runtime::f9_any_state_tests::stop_and_f9_preserve_known_dialog_and_only_retry_undelivered_escape ... ok\ntest storage::tests::profile_replacement_preserves_unknown_desktop_fields ... ok\ntest runtime::selection_count_runtime_tests::decoded_counts_need_current_candidates_but_completed_totals_do_not ... ok\ntest runtime::selection_count_runtime_tests::rendered_reader_rechecks_global_contradictions_but_accepts_timer_only_changes ... ok\ntest runtime::selection_count_runtime_tests::rendered_compound_numbers_cannot_authorize_a_seat_or_premature_completion ... ok\ntest runtime::selection_count_runtime_tests::contradictory_empty_text_cannot_authorize_completion_from_a_readable_number ... ok\n\ntest result: ok. 132 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 1.85s\n\n\nrunning 6 tests\ntest selection_count::score_tests::exact_threshold_is_not_lost_to_float_multiplication_rounding ... ok\ntest selection_count_layout::tests::missing_pixels_and_interior_separator_are_not_an_empty_panel ... ok\ntest selection_count_layout::tests::whole_white_viewport_and_shared_footer_do_not_establish_panel_ownership ... ok\ntest selection_count_layout::tests::curved_edge_antialias_has_the_same_geometry_for_blue_and_gray_controls ... ok\ntest selection_count_layout::tests::geometry_requires_a_panel_and_rejects_extra_wrapped_count_content ... ok\ntest selection_count::score_tests::early_rejection_preserves_every_score_that_can_meet_the_threshold ... ok\n\ntest result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.42s\n\n\nrunning 102 tests\ntest calibration_cannot_change_color_while_click_outcome_is_pending ... ok\ntest acknowledged_initial_entry_is_not_repeated_after_pause_or_late_cancel ... ok\ntest acknowledged_seat_cannot_be_rolled_back_as_undelivered ... ok\ntest cancelled_captcha_entry_click_resumes_remaining_coordinates_without_replaying_delivered_ones ... ok\ntest captcha_completion_after_initial_entry_does_not_imply_ready_seat_screen ... ok\ntest additions_default_off_and_old_coordinate_flow_needs_no_hidden_coordinates ... ok\ntest captcha_enter_does_not_restart_after_handing_off_manual_completion ... ok\ntest cancellation_internal_refresh_repeats_without_manual_phase_confirmation ... ok\ntest captcha_enter_does_not_restart_paused_stopped_or_other_modes ... ok\ntest cancellation_retries_failed_seat_after_interval_preserving_other_attempt_without_refresh ... ok\ntest cancellation_refresh_delivery_is_not_refresh_evidence_and_retry_has_its_own_interval ... ok\ntest captcha_enter_waits_for_sale_initial_entry_and_registered_sequence_without_replaying_them ... ok\ntest captcha_option_preserves_original_entry_clicks_then_gates_region_and_empty_seat_search ... ok\ntest captcha_requires_positive_completion_and_obeys_optional_auto_resume ... ok\ntest clearing_scheduled_entry_before_delivery_does_not_fall_through_to_old_coordinates ... ok\ntest completion_bound_while_paused_submits_once_on_resume ... ok\ntest completion_target_can_be_discovered_after_booking_opens ... ok\ntest duplicate_entry_observation_does_not_repeat_the_same_click ... ok\ntest empty_search_poll_never_retries_a_click_with_an_unknown_result ... ok\ntest empty_live_frames_do_not_postpone_refresh_forever ... ok\ntest completion_delivery_ends_every_mode_without_claiming_selected_seats_or_handling_late_errors ... ok\ntest entry_target_cannot_change_while_delivery_is_ambiguous ... ok\ntest enhanced_cancellation_navigation_requires_confirmed_updates ... ok\ntest empty_seat_map_keeps_polling_without_a_conflict_or_page_refresh ... ok\ntest entry_target_works_with_or_without_semantic_auto_entry_flag ... ok\ntest explicit_handoff_is_available_during_sale_initial_entry_and_registered_inputs ... ok\ntest explicit_region_map_confirmation_handles_already_open_and_paused_seat_maps ... ok\ntest fresh_seat_observation_does_not_wait_for_the_periodic_poll ... ok\ntest explicit_region_map_confirmation_invalidates_queued_region_input_and_late_ack ... ok\ntest failed_candidates_return_only_after_confirmed_new_refresh_generation ... ok\ntest geometry_invalidation_discards_cancelled_and_queued_legacy_coordinates ... ok\ntest geometry_invalidation_after_entry_clears_old_coordinates_without_replaying_them ... ok\ntest geometry_invalidation_preserves_selected_seats_and_requires_new_candidates ... ok\ntest independent_seats_action_correlated_results_reject_stale_retry_and_previous_run ... ok\ntest independent_seats_does_not_refresh_retained_or_provisional_selections ... ok\ntest independent_seats_mode_serialization_preserves_existing_mode_values ... ok\ntest independent_seats_new_run_discards_prior_cancellation_navigation_and_late_ack ... ok\ntest geometry_invalidation_rejects_ambiguous_initial_delivery_without_mutation ... ok\ntest independent_seats_multiple_late_failures_share_one_escape_and_allow_cancelled_retry ... ok\ntest independent_seats_late_conflict_cancels_queued_next_seat_without_counting_it ... ok\ntest independent_seats_never_counts_failed_or_cancelled_input_delivery ... ok\ntest independent_seats_empty_maps_never_enter_legacy_region_navigation ... ok\ntest independent_seats_resumes_after_calibration_without_reentering_booking_or_regions ... ok\ntest independent_seats_optional_conflict_recovery_off_still_excludes_only_failed_attempt ... ok\ntest independent_seats_late_conflict_keeps_other_attempt_and_cancels_queued_completion ... ok\ntest independent_seats_repeat_start_and_resume_preserve_delivered_attempts ... ok\ntest independent_seats_starts_directly_with_all_entry_and_region_features_enabled ... ok\ntest independent_seats_returns_to_seats_after_positive_captcha_confirmation ... ok\ntest input_ack_is_not_selection_evidence_in_recovery_mode ... ok\ntest invalid_counts_and_schema_versions_are_rejected ... ok\ntest legacy_auto_refresh_hint_does_not_refresh_normal_mode_or_advance_generation ... ok\ntest late_conflict_at_selection_complete_reopens_only_missing_seat ... ok\ntest independent_seats_counts_delivered_clicks_without_selection_markers ... ok\ntest manual_captcha_completion_cancels_unsent_work_without_resetting_delivered_seats ... ok\ntest legacy_click_sequence_stops_on_completion_delivery_without_confirming_attempts ... ok\ntest manual_captcha_completion_hands_search_modes_to_normal_and_explicitly_resumes_normal ... ok\ntest new_single_region_priority_does_not_alternate_original_f2_regions ... ok\ntest manually_closed_known_conflict_can_continue_after_undelivered_escape ... ok\ntest nol_captcha_signal_cannot_resume_paused_or_stopped_runs ... ok\ntest nol_captcha_handoff_recheck_cancels_region_without_replaying_entry ... ok\ntest nol_captcha_handoff_recheck_cancels_seat_without_counting_stale_ack ... ok\ntest nol_captcha_without_registered_entry_waits_then_searches_seats_once ... ok\ntest normal_and_single_region_cancellation_ignore_legacy_region_overrides ... ok\ntest nol_captcha_gate_preserves_sale_and_registered_entry_then_starts_continuous_region_search ... ok\ntest nol_captcha_signal_is_ignored_when_option_is_off ... ok\ntest nol_captcha_feature_defaults_off_for_existing_profiles ... ok\ntest normal_entry_order_remains_while_explicit_handoff_is_available_at_each_step ... ok\ntest original_f2_ignores_the_normal_booking_entry_target ... ok\ntest original_optional_date_session_next_sequence_and_delays_remain ... ok\ntest original_cancellation_blank_maps_keep_alternating_without_manual_confirmation ... ok\ntest original_timed_region_wait_does_not_request_manual_confirmation ... ok\ntest original_f2_uses_each_regions_color_roi_and_completion_target ... ok\ntest pause_drops_stale_candidate_frame_and_resume_waits_for_current_click_result ... ok\ntest partial_failure_retains_one_and_fills_exactly_one_shortfall ... ok\ntest pausing_before_sale_keeps_entry_pending_until_resume ... ok\ntest paused_calibration_preserves_partial_selection_and_rejected_candidates ... ok\ntest proven_undelivered_initial_entry_retries_once_after_pause ... ok\ntest nol_captcha_option_does_not_change_seats_or_cancellation_modes ... ok\ntest periodic_poll_preserves_partial_selection_and_rejected_candidates ... ok\ntest region_settings_validate_limits_and_can_change_during_pause ... ok\ntest proven_undelivered_seat_cancellation_allows_fresh_retry_after_pause ... ok\ntest region_click_waits_for_identified_seat_map_before_any_seat_click ... ok\ntest periodic_search_preserves_confirmed_and_attempted_seats_without_refreshing_them ... ok\ntest repeated_empty_polls_do_not_hide_an_input_delivery_timeout ... ok\ntest repeated_captcha_enter_discards_old_attempts_conflicts_and_queued_completion ... ok\ntest scheduled_entry_clicks_at_deadline_once_then_waits_for_confirmed_seat_map ... ok\ntest refresh_button_requires_cancellation_mode_explicit_option_and_point_target ... ok\ntest selection_reconciliation_handles_server_clearing_all_seats ... ok\ntest stopping_independent_seats_preserves_normal_scheduled_entry_behavior ... ok\ntest single_zone_cancellation_without_common_completion_hands_off_after_seat_attempt ... ok\ntest timed_multi_stage_entry_uses_enabled_controls_and_exact_date_session ... ok\ntest undelivered_completion_can_resume_without_losing_selected_seat ... ok\ntest unacknowledged_input_faults_without_retrying_the_click ... ok\ntest undelivered_entry_can_be_recalibrated_before_retry ... ok\ntest undelivered_f2_navigation_restores_zone_and_does_not_scan_before_retry ... ok\ntest undelivered_legacy_date_is_requeued_instead_of_skipped ... ok\ntest single_zone_cancellation_ignores_normal_entry_flags_and_keeps_scanning_without_refresh ... ok\ntest updating_or_clearing_entry_after_delivery_never_reclicks_or_skips_manual_wait ... ok\ntest visible_entry_target_validation_rejects_invalid_coordinates ... ok\ntest unexpected_ack_and_late_selection_events_do_not_affect_new_runs ... ok\ntest region_map_confirmation_does_not_advance_unrelated_or_paused_phases ... ok\ntest manual_captcha_completion_preserves_entry_and_searches_without_automatic_detection ... ok\n\ntest result: ok. 102 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n\nrunning 10 tests\ntest f9_abandons_an_undelivered_initial_or_legacy_entry_queue_instead_of_replaying_it ... ok\ntest stopped_legacy_delivery_without_a_selection_verdict_keeps_its_original_footprint ... ok\ntest f9_after_a_failed_escape_keeps_the_known_conflict_and_rearms_only_the_failed_escape ... ok\ntest f9_from_confirmed_legacy_conflict_does_not_turn_the_known_failed_seat_into_a_kept_attempt ... ok\ntest f9_restarts_unknown_and_stopped_count_waits_without_reusing_old_authorization ... ok\ntest an_explicit_f9_event_also_overrides_idle_waiting_sale_and_stopped ... ok\ntest idle_f9_uses_post_captcha_options_without_waiting_for_sale_or_captcha_detection ... ok\ntest f9_after_stop_keeps_delivered_seats_but_a_later_stop_still_blocks_all_input ... ok\ntest legacy_conflict_handoff_retries_queued_or_failed_escape_but_never_a_delivered_escape ... ok\ntest f9_accepts_every_reachable_engine_phase_without_replaying_the_previous_work ... ok\n\ntest result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n\nrunning 27 tests\ntest input_arming_does_not_require_or_classify_the_patch_as_a_modal_background ... ok\ntest first_input_saves_the_current_frame_even_after_unarmed_observation_in_the_same_poll ... ok\ntest input_changes_and_an_enlarged_clipped_panel_do_not_replace_patch_reference ... ok\ntest central_markings_disappearing_or_small_color_noise_cannot_complete ... ok\ntest initially_closed_screen_never_reports_a_dismissal ... ok\ntest colored_dark_and_bright_opaque_patch_references_are_all_recorded_once ... ok\ntest dismissal_requires_new_pixels_and_a_successful_stable_native_poll_interval ... ok\ntest modal_moving_or_growing_after_an_error_is_still_visible ... ok\ntest nineteen_changed_points_wait_and_twenty_changed_points_start_stability ... ok\ntest loading_and_modal_color_changes_before_input_never_arm_or_complete ... ok\ntest patch_policy_checks_only_background_color_after_input_arming ... ok\ntest brighter_darker_and_equal_luminance_color_changes_use_the_same_close_and_recheck_rule ... ok\ntest opaque_white_and_black_replacements_remain_indistinguishable_by_this_local_patch_policy ... ok\ntest neither_small_negative_noise_nor_pixels_with_the_original_sequence_can_close ... ok\ntest stored_baseline_does_not_drift_while_typing_and_difference_must_be_at_least_45 ... ok\ntest stale_or_invalid_input_frames_cannot_create_a_reference ... ok\ntest returning_panel_cancels_pending_close_and_restarts_stability ... ok\ntest typing_wrong_answer_challenge_change_and_button_color_are_ignored ... ok\ntest first_input_arms_without_text_or_a_panel_at_multiple_frame_sizes ... ok\ntest stale_capture_during_closing_breaks_the_stability_interval ... ok\ntest repeated_or_wrong_answer_input_never_replaces_the_reference_or_completes ... ok\ntest interruption_retracts_pending_or_undelivered_dismissal_but_keeps_presence ... ok\ntest resize_invalid_capture_and_reset_discard_old_presence ... ok\ntest stale_sequences_timestamps_or_repeated_poll_time_cannot_complete ... ok\ntest first_click_recheck_has_no_extra_delay_but_revokes_an_unchanged_or_transparent_frame ... ok\ntest visual_dismissal_drives_the_engine_once_then_empty_seat_search_continues ... ok\ntest transparent_frames_cannot_arm_or_complete_and_break_the_stability_interval ... ok\n\ntest result: ok. 27 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.39s\n\n\nrunning 3 tests\ntest p1_new_frame_metadata_does_not_establish_that_the_zone_finished_loading ... ok\ntest p1_reproduces_old_pixels_becoming_a_current_generation_seat_candidate ... ok\ntest p1_identical_static_maps_cannot_reveal_zone_completion_from_pixels_alone ... ok\n\ntest result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n\nrunning 3 tests\ntest p6_control_accepted_clicks_match_independent_site_selection ... ok\ntest p6_counterexample_silent_ignored_click_can_complete_with_one_actual_seat ... ok\ntest p6_counterexample_site_clearing_earlier_selection_is_not_observed_by_optimistic_count ... ok\n\ntest result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s\n\n\nrunning 5 tests\ntest p5_roi_clipping_can_turn_an_oversized_nonseat_into_a_small_accepted_component ... ok\ntest p5_same_colored_legend_is_currently_a_candidate_and_roi_or_exclusion_can_remove_it ... ok\ntest p5_touching_seats_merge_and_subthreshold_seats_are_rejected_by_current_geometry_rules ... ok\ntest p5_partial_opacity_is_currently_accepted_by_extraction_and_is_not_semantic_visibility ... ok\ntest p3_sampled_transient_seat_is_proposed_but_unobserved_intervals_remain_a_sampling_limit ... ok\n\ntest result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s\n\n\nrunning 15 tests\ntest f9_from_an_empty_search_uses_normal_region_priority_without_replaying_entry ... ok\ntest f9_accepts_a_delivered_initial_booking_wait_with_saved_hidden_buttons ... ok\ntest compatible_restart_preserves_count_awaiting_but_never_its_previous_authorization ... ok\ntest f9_retry_keeps_delivered_footprint_and_reobserves_without_replaying_entry ... ok\ntest a_lower_restart_target_cannot_add_more_seats_than_the_retained_total ... ok\ntest changed_context_reset_does_not_apply_old_footprints_or_old_ack_to_the_new_map ... ok\ntest f9_retains_a_legacy_regions_roi_color_completion_and_alias_exclusion ... ok\ntest f9_retry_rotates_count_request_and_keeps_an_unresolved_delivered_attempt ... ok\ntest compatible_mode_restart_keeps_retained_and_failed_marks_but_not_cancelled_input ... ok\ntest manual_entry_off_keeps_the_existing_date_session_next_order ... ok\ntest f9_from_both_search_modes_keeps_selection_and_changes_only_post_entry_work ... ok\ntest manual_entry_skips_saved_hidden_steps_but_keeps_the_scheduled_first_booking_click ... ok\ntest explicit_completed_retry_requires_new_observation_and_delivers_completion_only_once ... ok\ntest valid_manual_handoff_is_not_revoked_by_applying_new_captcha_options ... ok\ntest retry_during_conflict_preserves_dialog_and_rearms_only_an_undelivered_escape ... ok\n\ntest result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n\nrunning 3 tests\ntest two_and_three_actual_seats_are_selected_despite_repaint_and_inactive_color_residue ... ok\ntest actual_pixels_prefer_lower_adjacent_groups_then_fall_back_to_separate_seats ... ok\ntest selected_seat_repaint_cannot_fill_two_or_three_requested_seats_with_one_physical_seat ... ok\n\ntest result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.18s\n\n\nrunning 8 tests\ntest pre_click_requires_the_patch_even_if_the_target_pixel_still_matches ... ok\ntest support_validation_handles_edges_stride_and_invalid_inputs ... ok\ntest opacity_changes_seat_eligibility_without_changing_generic_alpha_policy ... ok\ntest solid_small_seats_and_close_neighbors_remain_separate ... ok\ntest clipped_large_shape_can_still_pass_so_patch_support_does_not_prove_seat_identity ... ok\ntest thin_outline_and_three_pixel_l_shape_are_explicit_seat_filter_limitations ... ok\ntest click_uses_a_supported_pixel_but_geometry_keeps_the_whole_component ... ok\ntest logged_three_pixel_shape_is_rejected_only_by_the_seat_extractor ... ok\n\ntest result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s\n\n\nrunning 11 tests\ntest serialized_candidates_do_not_recreate_process_local_shape_authorization ... ok\ntest zone_prefix_and_benign_roi_changes_preserve_original_point_authorization ... ok\ntest retained_slanted_object_survives_alias_repaint_while_failed_neighbor_retries_after_refresh ... ok\ntest overlapping_boxes_do_not_merge_independent_slanted_neighbors ... ok\ntest three_fragment_selected_styles_leave_no_middle_fragment_for_the_engine_to_click ... ok\ntest optional_object_mode_off_keeps_the_ordinary_color_pipeline_with_either_count_policy ... ok\ntest slanted_same_row_pair_outranks_isolated_seat_only_when_adjacent_enabled ... ok\ntest stale_nonround_shape_is_rejected_even_if_its_old_click_patch_stays_available ... ok\ntest internal_dark_color_splits_do_not_create_multiple_engine_seats ... ok\ntest independent_shape_families_select_two_distinct_objects_with_count_on_and_off ... ok\ntest all_available_maps_keep_learning_and_progress_without_gray_reference_objects ... ok\n\ntest result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.70s\n\n\nrunning 22 tests\ntest a_fully_filled_bridge_is_not_proof_of_two_separate_objects ... ok\ntest diagonal_disjoint_square_neighbors_do_not_need_a_forced_spacing_radius ... ok\ntest every_repeated_reference_needs_its_own_observed_surrounding_boundary ... ok\ntest performance_all_available_and_sparse_large_seed ... ignored, manual optimized dense/sparse work measurements, no latency assertion\ntest performance_hundreds_and_thousand_seats ... ignored, manual optimized static-image latency, not an app/OS measurement\ntest competing_fragment_clusters_do_not_disable_distant_small_family_seats ... ok\ntest an_incomplete_reference_family_alone_is_not_authority_to_click_white_marked_objects ... ok\ntest foreground_upper_bound_preserves_a_connected_three_by_three_grid ... ok\ntest independent_large_and_small_families_keep_available_objects_in_both ... ok\ntest one_pixel_size_variation_and_multiple_families_are_not_silently_discarded ... ok\ntest pre_click_rechecks_newly_competing_fragment_interpretations ... ok\ntest padded_scanlines_ignore_poisoned_padding_bytes ... ok\ntest required_nonround_and_round_families_keep_positive_coverage ... ok\ntest repeated_open_white_marks_cannot_teach_fragments_as_new_seats ... ok\ntest multicolor_and_block_letter_fills_keep_object_identity ... ok\ntest repeated_selected_holes_do_not_become_the_learned_available_family ... ok\ntest dark_text_splits_color_but_not_the_independent_full_object ... ok\ntest antialiasing_subpixel_offsets_and_dark_background_retain_positive_controls ... ok\ntest selected_fill_and_large_white_holes_do_not_gain_extra_object_clicks ... ok\ntest separated_neighbors_and_narrow_bridges_keep_two_distinct_hit_targets ... ok\ntest unobserved_or_excluded_object_does_not_poison_its_observed_neighbor ... ok\ntest repeated_narrow_bridge_pairs_do_not_redefine_two_seats_as_one_family ... ok\n\ntest result: ok. 20 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.48s\n\n\nrunning 2 tests\ntest shape_proof_requires_finite_integer_grid_and_checked_dimensions ... ok\ntest cloned_candidates_share_proof_but_json_roundtrip_cannot_authorize_object_clicks ... ok\n\ntest result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s\n\n\nrunning 12 tests\ntest manual_provided_screenshot_detects_available_full_objects ... ignored, manual private screenshot check; no original image is kept in the repository\ntest registering_outline_color_is_reported_ambiguous_instead_of_choosing_selected_fill ... ok\ntest one_pixel_background_gap_keeps_close_round_neighbors_separate ... ok\ntest exclusions_clipping_and_partial_transparency_do_not_create_clickable_objects ... ok\ntest pre_click_rechecks_whole_object_when_the_center_color_patch_still_exists ... ok\ntest a_narrow_same_color_bridge_does_not_turn_two_round_objects_into_one_click ... ok\ntest one_pixel_gaps_in_four_directions_remain_clickable_without_neighbor_absorption ... ok\ntest repeated_gray_objects_define_size_and_full_outline_survives_internal_color_splits ... ok\ntest split_bridge_proposals_reach_two_real_objects_and_completion_waits_for_external_total ... ok\ntest selected_dark_fill_and_expanded_halo_cannot_become_new_available_fragments ... ok\ntest unexplained_inner_background_mark_and_unlearned_shapes_are_not_counted_as_available ... ok\ntest a_small_unobserved_core_cannot_be_hidden_by_the_whole_roi_opacity_ratio ... ok\n\ntest result: ok. 11 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.02s\n\n\nrunning 7 tests\ntest gradual_vertical_drift_does_not_outrank_a_real_three_seat_row ... ok\ntest missing_adjacent_option_defaults_off_and_off_keeps_front_order ... ok\ntest distant_small_component_cannot_break_an_existing_same_row_pair ... ok\ntest retained_middle_seat_extends_from_its_neighbor_instead_of_the_group_far_end ... ok\ntest image_candidates_serialize_metadata_without_pixel_masks ... ok\ntest geometryless_json_keeps_order_and_exact_point_deduplication ... ok\ntest retained_original_footprint_survives_pause_and_refresh_but_stale_generation_is_inert ... ok\n\ntest result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s\n\n\nrunning 14 tests\ntest disabled_option_and_geometryless_imports_keep_existing_order ... ok\ntest missing_middle_seat_or_different_rows_are_not_an_adjacent_pair ... ok\ntest failed_geometry_from_another_legacy_zone_does_not_block_the_same_position ... ok\ntest new_run_clears_geometric_marks ... ok\ntest new_observation_prefers_extending_retained_seat_to_a_distant_new_group ... ok\ntest full_triple_wins_over_pair_and_isolated_candidates ... ok\ntest exact_point_alias_without_geometry_is_blocked_across_refresh_and_pause ... ok\ntest full_pair_wins_over_an_earlier_isolated_seat ... ok\ntest original_component_blocks_shrunk_and_split_aliases_but_not_a_close_neighbor ... ok\ntest failed_footprint_is_excluded_until_retry_or_refresh_while_retained_seat_stays_blocked ... ok\ntest partial_pair_then_separated_fallback_fills_three_without_waiting ... ok\ntest proven_undelivered_candidate_does_not_reserve_its_footprint ... ok\ntest touching_small_neighbor_boxes_are_not_treated_as_the_same_seat ... ok\ntest real_pixel_extraction_cannot_count_three_shrinking_renders_as_three_seats ... ok\n\ntest result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n\nrunning 5 tests\ntest split_selected_object_does_not_hide_its_neighbor_across_a_one_pixel_gap ... ok\ntest one_pixel_background_gap_and_diagonal_contact_keep_actual_neighbors_clickable ... ok\ntest conflict_retry_releases_only_the_failed_object_and_keeps_selected_fragments_excluded ... ok\ntest retained_ring_blocks_a_repainted_inner_marker_instead_of_completing_with_one_object ... ok\ntest selected_inset_and_split_pixels_cannot_count_one_physical_object_twice ... ok\n\ntest result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.32s\n\n\nrunning 15 tests\ntest legacy_navigation_is_preserved_but_initial_selection_is_read_before_it ... ok\ntest initial_target_completes_without_seat_input_and_excess_count_holds ... ok\ntest automatic_refresh_needs_fresh_zero_and_never_discards_preexisting_or_pending_selection ... ok\ntest cancelled_undelivered_seat_is_not_counted_and_old_ack_is_inert ... ok\ntest duplicate_observation_cannot_reauthorize_after_delay ... ok\ntest delayed_next_input_requires_another_fresh_observation_not_tick ... ok\ntest normal_entry_and_captcha_order_are_unchanged_by_count_option ... ok\ntest each_delivery_requires_exact_increment_and_final_fresh_target_before_completion ... ok\ntest decrease_jump_and_unreadable_do_not_restore_reclick_or_release_pending_effect ... ok\ntest late_known_failure_during_next_pending_effect_requires_adjusted_total ... ok\ntest known_failure_reconciles_count_and_keeps_other_delivered_seat ... ok\ntest request_rotation_blocks_old_context_refresh_and_run_results ... ok\ntest unreadable_observation_invalidates_verified_status_without_inventing_zero_or_erasing_pending_effect ... ok\ntest unknown_baseline_never_clicks_and_initial_total_is_not_an_additional_target ... ok\ntest options_default_off_and_existing_profile_roundtrips ... ok\n\ntest result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n\nrunning 10 tests\ntest stop_restart_discards_pending_effect_and_late_count_without_changing_off_policy ... ok\ntest cancelling_an_escape_then_pausing_preserves_the_one_unresolved_seat_and_retries_only_escape ... ok\ntest refresh_and_legacy_navigation_cancellation_rotate_requests_and_never_discard_positive_baseline ... ok\ntest count_map_requirement_is_explicit_and_preserves_completion_and_initial_navigation ... ok\ntest latest_frame_candidates_must_precede_its_count_to_avoid_discarding_a_new_seat ... ok\ntest completion_revocation_unknown_decrease_and_context_change_need_a_new_matching_observation ... ok\ntest two_distinct_late_failures_share_one_escape_and_do_not_erase_a_remaining_pending_effect ... ok\ntest conflict_of_accounted_seat_cancels_queued_completion_and_replaces_only_lost_selection ... ok\ntest revoked_next_click_never_spends_a_selection_or_accepts_old_ack_in_any_run_mode ... ok\ntest repeated_unknown_static_counts_and_stale_requests_keep_one_effect_until_real_increment ... ok\n\ntest result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n\nrunning 10 tests\ntest representative_large_frames_manual_timing ... ignored, manual optimized reader-only timing; no capture, app or OS latency\ntest zero_panel_recognition_and_dimmed_rejection_are_separate ... ok\ntest unrelated_or_duplicate_labels_do_not_authorize_a_count ... ok\ntest nearby_other_ui_does_not_hide_empty_text_or_invent_it ... ok\ntest dense_seat_map_noise_keeps_the_same_readable_count ... ok\ntest small_or_faint_nonzero_text_is_not_evidence_of_zero ... ok\ntest heldout_typography_never_changes_the_number ... ok\ntest contradictory_empty_text_blocks_numeric_confirmation_across_raster_scales ... ok\ntest normal_empty_panel_scales_and_ink_keep_prior_readable_controls ... ok\ntest white_occlusion_of_a_digit_may_reject_but_must_not_change_its_value ... ok\n\ntest result: ok. 9 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 16.52s\n\n\nrunning 3 tests\ntest diagnostic_reasons_share_the_legacy_result_without_authorizing_unknowns ... ok\ntest complete_single_digit_controls_remain_readable ... ok\ntest compound_numeric_context_cannot_be_truncated_to_one_digit ... ok\n\ntest result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 7.92s\n\n\nrunning 5 tests\ntest malformed_buffers_never_become_zero_or_a_confirmed_count ... ok\ntest missing_pixels_outside_the_numeric_crop_do_not_prove_global_label_uniqueness ... ok\ntest alternative_fonts_and_unsupported_variants_may_reject_but_never_change_the_count ... ok\ntest missing_ambiguous_clipped_or_unrelated_text_never_confirms_a_count ... ok\ntest independent_positive_counts_positions_scales_and_empty_are_read ... ok\n\ntest result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 7.80s\n\n\nrunning 15 tests\ntest capture_pixels_map_to_bound_content_with_os_scale ... ok\ntest central_region_always_beats_a_closer_side_region ... ok\ntest extraction_diagnostics_distinguish_color_mismatch_from_component_size_rejection ... ok\ntest http_date_second_precision_is_explicit_not_millisecond_accuracy ... ok\ntest inconsistent_server_samples_expand_uncertainty ... ok\ntest excludes_legend_and_outside_roi_before_extracting_components ... ok\ntest extraction_diagnostics_count_only_visible_matching_pixels_in_effective_roi ... ok\ntest concave_component_click_is_on_color_not_empty_centroid ... ok\ntest borrowed_padded_native_capture_matches_packed_capture_without_copying ... ok\ntest invalid_clock_samples_and_corrupt_pixel_buffers_are_rejected ... ok\ntest monotonic_sale_deadline_is_armed_once_without_wall_clock_polling ... ok\ntest extraction_diagnostics_recognize_separate_small_round_seat_components ... ok\ntest three_fastest_samples_exclude_one_slow_outlier ... ok\ntest top_first_seat_priority_is_distinct_from_stage_region_priority ... ok\ntest oversized_component_is_fully_consumed_without_hiding_a_separate_seat ... ok\n\ntest result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n\nrunning 10 tests\ntest incomplete_center_is_rejected_even_when_most_of_the_whole_window_is_opaque ... ok\ntest thresholds_use_region_relative_fraction_and_material_delta ... ok\ntest transparent_capture_cannot_be_used_as_dialog_or_restoration_evidence ... ok\ntest center_popup_change_alone_triggers_without_surrounding_darkening ... ok\ntest stale_sequence_changed_geometry_invalid_config_and_corrupt_images_are_rejected ... ok\ntest sampling_stays_bounded_and_ignores_native_row_padding ... ok\ntest minor_seat_colors_and_large_bright_outer_changes_do_not_trigger ... ok\ntest surrounding_darkening_alone_triggers_and_both_signals_are_optional ... ok\ntest no_longer_large_is_not_equivalent_to_baseline_restoration ... ok\ntest transparent_edges_are_ignored_and_comparison_needs_overlapping_opaque_samples ... ok\n\ntest result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n\nrunning 15 tests\ntest tests::enter_signals_require_current_token_and_recent_monotonic_time ... ok\ntest tests::cancelled_input_skips_validation_and_current_input_posts_once ... ok\ntest tests::invalid_frame_coordinates_never_read_another_row ... ok\ntest macos::tests::focused_window_error_keeps_actionable_native_code ... ok\ntest tests::color_at_rejects_transparent_and_truncated_pixels ... ok\ntest tests::captcha_input_contract_has_only_routing_and_monotonic_metadata ... ok\ntest tests::enter_diagnostic_json_supports_callback_and_expired_queue_metadata_without_text ... ok\ntest macos::tests::window_title_pipe_is_not_mistaken_for_native_error ... ok\ntest tests::keyboard_input_status_serializes_app_checks_and_unknowns_without_claiming_delivery ... ok\ntest tests::input_cancelled_during_window_validation_never_reaches_post ... ok\ntest tests::native_error_keeps_its_code_when_runtime_converts_it_to_text ... ok\ntest tests::negative_monitor_origin_is_preserved_and_outside_points_rejected ... ok\ntest tests::validation_failure_is_not_hidden_by_a_simultaneous_cancellation ... ok\ntest tests::retina_frame_uses_actual_scale_and_stride ... ok\ntest macos::tests::native_cancellation_callback_is_synchronous_and_fails_closed_on_panic ... ok\n\ntest result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s\n\n\n   Compiling macro-core v0.5.11 (/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/crates/macro-core)\n    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.28s\n     Running unittests src/main.rs (target/debug/deps/integrated_macro-0c291886b84bc27b)\n     Running unittests src/lib.rs (target/debug/deps/macro_core-6ab41c1080a32846)\n     Running tests/engine.rs (target/debug/deps/engine-d25abbbc178f9803)\n     Running tests/f9_any_state_review.rs (target/debug/deps/f9_any_state_review-ebbd63f4c478c20f)\n     Running tests/nol_captcha.rs (target/debug/deps/nol_captcha-674e564fb9e7f1c2)\n     Running tests/priority_audit.rs (target/debug/deps/priority_audit-b01d533e9cb9604d)\n     Running tests/priority_selection_oracle.rs (target/debug/deps/priority_selection_oracle-6336d7603799bede)\n     Running tests/priority_vision_audit.rs (target/debug/deps/priority_vision_audit-06623d5160db21de)\n     Running tests/reentrant_commands_review.rs (target/debug/deps/reentrant_commands_review-f6177cd776600456)\n     Running tests/seat_accuracy_pipeline.rs (target/debug/deps/seat_accuracy_pipeline-2f0e1c7b3b54ad16)\n     Running tests/seat_candidate_geometry.rs (target/debug/deps/seat_candidate_geometry-c2e1c97cbbdc2737)\n     Running tests/seat_object_nonround_integration.rs (target/debug/deps/seat_object_nonround_integration-06576e80c950542b)\n     Running tests/seat_object_nonround_review.rs (target/debug/deps/seat_object_nonround_review-40ebcd1a6654f4fb)\n     Running tests/seat_object_shape_evidence.rs (target/debug/deps/seat_object_shape_evidence-7cbe847b8aae21d0)\n     Running tests/seat_objects.rs (target/debug/deps/seat_objects-0f5c180fe408b9ba)\n     Running tests/seat_review_regressions.rs (target/debug/deps/seat_review_regressions-83e97d4243e58e38)\n     Running tests/seat_selection.rs (target/debug/deps/seat_selection-fba709b5bce5baaf)\n     Running tests/seat_shape_regressions.rs (target/debug/deps/seat_shape_regressions-8af294a4e63eac86)\n     Running tests/selection_count.rs (target/debug/deps/selection_count-eb6c8b0f0ae8dec6)\n     Running tests/selection_count_audit_engine.rs (target/debug/deps/selection_count_audit_engine-1fb319ba1995a585)\n     Running tests/selection_count_audit_reader.rs (target/debug/deps/selection_count_audit_reader-2a60ae85b5dc64f7)\n     Running tests/selection_count_completeness.rs (target/debug/deps/selection_count_completeness-8555fa74acdbe153)\n     Running tests/selection_count_reader_review.rs (target/debug/deps/selection_count_reader_review-c96b84fd1f4cf925)\n     Running tests/vision_clock.rs (target/debug/deps/vision_clock-df4f8747e59b2da1)\n     Running tests/visual_dialog.rs (target/debug/deps/visual_dialog-ebd9d078ceffc5f8)\n     Running unittests src/lib.rs (target/debug/deps/macro_platform-a697fa3fe351e591)\n   Doc-tests macro_core\n   Doc-tests macro_platform"
+    },
+    {
+      "name": "macOS native ABI verification",
+      "command": [
+        "bash",
+        "crates/macro-platform/native/verify-macos.sh"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": "Native synthetic window validation (43), activation (16), capture lifecycle, Enter/CAPTCHA filters, nine observed recipient-pair replays for both watches, independent watches, read-only keyboard status, diagnostics/off-only ABI, allocation/free and thread guard OK; permission bits=0\nSwift arm64/x86_64 compilation and host ABI smoke passed.\n\n2026-10-22 00:42:18.965 smoke[58650:38144429] Connection Invalid error for service com.apple.hiservices-xpcservice.\n2026-10-22 00:42:18.965 smoke[58650:38144412] Error received in message reply handler: Connection invalid\nsysctlbyname for kern.hv_vmm_present failed with status -1kIOSurfaceMethodSetCoreVideoBridgedKeys failed: 10000003"
+    },
+    {
+      "name": "Source stability before packaging",
+      "status": "passed",
+      "required": true,
+      "changedSources": [],
+      "note": "Packaging can only use the unchanged source that passed the preceding checks."
+    },
+    {
+      "name": "macOS packaged application",
+      "command": [
+        "npm",
+        "run",
+        "build",
+        "--",
+        "--bundles",
+        "app",
+        "--ci",
+        "--",
+        "--offline",
+        "--locked"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": "> integrated-macro@0.5.11 build\n> tauri build --bundles app --ci -- --offline --locked\n\nSigning with identity \"-\"\nSigning /Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/target/release/bundle/macos/Integrated Macro.app/Contents/MacOS/integrated-macro\nSigning with identity \"-\"\nSigning /Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/target/release/bundle/macos/Integrated Macro.app\n\n        Info Looking up installed tauri packages to check mismatched versions...\n   Compiling macro-core v0.5.11 (/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/crates/macro-core)\n   Compiling integrated-macro v0.5.11 (/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/src-tauri)\nwarning: field `received_at` is never read\n   --> src-tauri/src/runtime.rs:720:79\n    |\n720 | struct Request { command: Command, reply: Option<Reply>, shortcut_epoch: u64, received_at: Instant }\n    |        ------- field in this struct                                           ^^^^^^^^^^^\n    |\n    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default\n\nwarning: method `status` is never used\n   --> src-tauri/src/visual_recovery.rs:107:12\n    |\n 32 | impl VisualRecovery {\n    | ------------------- method in this implementation\n...\n107 |     pub fn status(&self) -> &'static str {\n    |            ^^^^^^\n\nwarning: `integrated-macro` (bin \"integrated-macro\") generated 2 warnings\n    Finished `release` profile [optimized] target(s) in 44.25s\n       Built application at: /Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/target/release/integrated-macro\n    Bundling Integrated Macro.app (/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/target/release/bundle/macos/Integrated Macro.app)\n     Signing with identity \"-\"\n/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/target/release/bundle/macos/Integrated Macro.app/Contents/MacOS/integrated-macro: replacing existing signature\n/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/target/release/bundle/macos/Integrated Macro.app: replacing existing signature\n        Warn skipping app notarization, no APPLE_ID & APPLE_PASSWORD & APPLE_TEAM_ID or APPLE_API_KEY & APPLE_API_ISSUER & APPLE_API_KEY_PATH environment variables found\n    Finished 1 bundle at:\n        /Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/target/release/bundle/macos/Integrated Macro.app (13.21 MiB)"
+    },
+    {
+      "name": "macOS application signature",
+      "command": [
+        "codesign",
+        "--verify",
+        "--deep",
+        "--strict",
+        "target/release/bundle/macos/Integrated Macro.app"
+      ],
+      "status": "passed",
+      "required": true,
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "name": "Source stability during verification",
+      "status": "passed",
+      "required": true,
+      "changedSources": [],
+      "note": "Changes during checks require a fresh run so fingerprints describe the source actually verified."
+    }
+  ],
+  "unverified": [
+    "Actual macOS input/capture/overlay",
+    "Actual Windows input/capture/overlay",
+    "Authenticated NOL booking flow",
+    "Browser transport and site contracts",
+    "End-to-end latency"
+  ],
+  "sourceSha256": {
+    "Cargo.lock": "317f44d411366e06daa178f78c6b71210f2e5c9dcf3374990cba701edf6cfb5b",
+    "Cargo.toml": "a47cc6293efa6607e0ca386d3fd832925046c35bb68784d512be61a11798d3cc",
+    "adapters/browser/observer.js": "fb19b2022af8a03108664f34fa994d0f6e95e8418fec17ad96a530cc5c3464eb",
+    "crates/macro-core/Cargo.toml": "53272b4ae1c89cf8a27e0f2c410ea9401d54a38ac8a5d586ae72495aae46ca98",
+    "crates/macro-core/examples/count_probe.rs": "bfe7c72e4f248a556be5abc7e48a2d0302bfeb79fe5fa748ea335c7ff0e379e8",
+    "crates/macro-core/examples/replay.rs": "ba992422108e66c7b6c39c32adf6c81ed18c0668c6ebf1e96a67869bf155348f",
+    "crates/macro-core/src/assets/nol-captcha-title.mask": "b0ccceb2292514757984166464fe8c328cef130de470597965c5828f49fbe53a",
+    "crates/macro-core/src/clock.rs": "ee16850ea2a5eae244dfd4ccba96ea211b8daa453043559ab0539bc793474d7c",
+    "crates/macro-core/src/engine.rs": "43fb91575b907f8816bc07f4ec6080d75072b6026bbbe95c4377f55e65422013",
+    "crates/macro-core/src/lib.rs": "998c7fcbf432b52c93c096098c2060430abe31b2d012d12a5e031ba6ce1db451",
+    "crates/macro-core/src/model.rs": "c0596021075c8401055eaeb52a86ddc613c33997070676ce69254371e8825ef0",
+    "crates/macro-core/src/nol_captcha.rs": "af0a56333c4d0787e7aa4cefe1e10674fffe1178450a617880291f46db30b27a",
+    "crates/macro-core/src/seat_object_shapes.rs": "33bad8d441317c4a4c6886c3e9b50efab96d9ea340f551b250d36ce6acb88023",
+    "crates/macro-core/src/seat_objects.rs": "95d696aa1deab1987491352cbfcfc4cbc2f508f6b71ec1ff32f26f645f19982d",
+    "crates/macro-core/src/seat_selection.rs": "37118aff1832c00db7188fc81766fc5f957ee95f80cbb52d0c2a3c0f5e2c2ac9",
+    "crates/macro-core/src/selection_count.rs": "0fceaa4eda7e797ef72ed8fed6b5d0273e08c0942444ccd8254cf3ab31cc259d",
+    "crates/macro-core/src/selection_count_assets/empty-negative.json": "eff7d4668bed09ccd7e8fba82b8fc052000ac3ed30e0d729f91e5cef79486a4c",
+    "crates/macro-core/src/selection_count_assets/templates.json": "52ce816c2e10dadeb681ac796da6af1689f4aacd00e6d2fc6e11484d51989cee",
+    "crates/macro-core/src/selection_count_layout.rs": "386de039c740adc1c29de32b717783ac08f3bb02fd076235990850fb4976810d",
+    "crates/macro-core/src/vision.rs": "f375df436d66d57ea6ff2b1032f14345ae310127681b7660701cda3179bd5639",
+    "crates/macro-core/src/visual_dialog.rs": "f81ed79014d3c77e38fc3fc93434f5aaa1ad26f5f12db270a9a0d2a6513be2a1",
+    "crates/macro-core/tests/engine.rs": "48ad810912eb58c9c6a1d1d1e890b6a0006bda7a2dbce80ab626d44d72d07513",
+    "crates/macro-core/tests/f9_any_state_review.rs": "a95ded1a93b0b5f426b035606673843df63371d14718b3e1e9b22a7c5c32c0d4",
+    "crates/macro-core/tests/nol_captcha.rs": "e5dd3f504f7b3c5239825a788d25ce1059c5aeecaa85c53e2d25352a6986ad1b",
+    "crates/macro-core/tests/priority_audit.rs": "e2d2d4777b3a733ae0f10521520c4292bd7dcad28d5951d3480b3f4726c1d2f3",
+    "crates/macro-core/tests/priority_selection_oracle.rs": "a2017de764148249e999dfdf95eee5f95bac35555d9273be5c09d468b5d9b4d7",
+    "crates/macro-core/tests/priority_vision_audit.rs": "1baa55ca22acf658aa5793ac5561d8d7432713f957ae20f14e51747b6748a261",
+    "crates/macro-core/tests/reentrant_commands_review.rs": "e4c176917de8ebfd76f2ed398ba516692636adb888d2edf6809e6759c70d968d",
+    "crates/macro-core/tests/seat_accuracy_pipeline.rs": "36b1eaab54063b3889916c0864445f775c738149c8c313f977c00877f9270da7",
+    "crates/macro-core/tests/seat_candidate_geometry.rs": "3230af8013bbcd98fa85dd8361662198e295f80796ebf8c71ed6bf39b785fe51",
+    "crates/macro-core/tests/seat_object_nonround_integration.rs": "0d91daa69684f242af312a87f939ce61d3a2d77678935336442af238562d1963",
+    "crates/macro-core/tests/seat_object_nonround_review.rs": "f71812774dfaf5a8ac67bdf503b5aa7c09fd96dbf78c8b842af0f4603bec68e1",
+    "crates/macro-core/tests/seat_object_shape_evidence.rs": "6f861fbde435be3211c1b3d8618afdd63d7a00997fd50f135d3c93140b682866",
+    "crates/macro-core/tests/seat_objects.rs": "19b7e4b19f51be9cf118c6dab5b3832b00850be199c158041a0e09545a93f2fa",
+    "crates/macro-core/tests/seat_review_regressions.rs": "14782d4415fd96e4ab0c06961cdf8b4b5b1059714f68eb1f6123710162d2402f",
+    "crates/macro-core/tests/seat_selection.rs": "19259870ae732a4e3ced1e28b13e9b391745fc612f9dcb3515c2b8668411f185",
+    "crates/macro-core/tests/seat_shape_regressions.rs": "90cb4d8bc8bfb58e20d78cf5a480504a84d1e8fc0e8a1c4c62ca07ea0a519c05",
+    "crates/macro-core/tests/selection_count.rs": "20030595097937627f977cf8034e81f4fd9a5476555839b09b10af31f76f5165",
+    "crates/macro-core/tests/selection_count_audit_engine.rs": "da68e78fafbedb9e54c416451e8f18158d897e988a1eaba274e29628b63d701d",
+    "crates/macro-core/tests/selection_count_audit_reader.rs": "0f1a021fba85ebe9ac8814c507de662d66b6328e5c1d288b0c0132135518571f",
+    "crates/macro-core/tests/selection_count_completeness.rs": "42bab58c1e142acd528890fae21d9fcf2443b63ec3baf5cfb5ae4d08b9a1a2d5",
+    "crates/macro-core/tests/selection_count_reader_review.rs": "ddcd9edacc9358b2338a56f81a655aaf572b48c788228c747b783a6a75df63f5",
+    "crates/macro-core/tests/support/seat_object_shapes.rs": "b2451715beb9083e822104757672f6bfe5f2c5de652ec4206ab84067ea8f4efc",
+    "crates/macro-core/tests/vision_clock.rs": "ad613a9efc500e0665ae2cdacd8c4864d9d42bf77f97580b035e8be0781fc2ae",
+    "crates/macro-core/tests/visual_dialog.rs": "8f5be2e0c9b8412589a35426eae433ecd1326cfcd9a4cb8f4b8cb05218160ba4",
+    "crates/macro-platform/Cargo.toml": "6ca761e22daac76cd9780739b559ddf5096c0acfe97121759e00cba5f6cdbbce",
+    "crates/macro-platform/build.rs": "258beae4fd5a9f7b19e4c5b5faa48acc8cd962698ae707ab79e8b17f98a4f565",
+    "crates/macro-platform/native/MacPlatform.swift": "c865ccd7059f4e8c604e353c9909e8e563d91684f9e5510c69ffd8e5d4023ce7",
+    "crates/macro-platform/native/verify-macos.sh": "101d1bc99ef2d83c80976b689f8ea6a272f4d4d9484bb4f872ad5373180a45ad",
+    "crates/macro-platform/src/lib.rs": "fad64b68fd3ab41d8f8c06a6b1634f5012b74b59491b81bcaf9e59ebee63e4e0",
+    "crates/macro-platform/src/macos.rs": "c4dff6a75912d57948a5cba5713b30fbdd70911e67401e974396bf612f546a98",
+    "crates/macro-platform/src/unsupported.rs": "0a835b7f1c4aeaab46bf3d053671577316874428c36aeae7c1b95c655fea8967",
+    "crates/macro-platform/src/windows.rs": "30980d0285a8e90a10c12f8f880728034ba419524d95781bfeae7d844c413104",
+    "fixtures/input-check.html": "518d0d95b8a1eacb8941f4dadeb77ce5a480079f37e7ebd3e563cf5363d804e1",
+    "fixtures/keyboard-check.html": "40854f9fe41f46d76f5fc54a65afd2502f0bc90db605451b6521188bc85b884b",
+    "fixtures/keyboard-monitor-routing.json": "0e2c2a3a25507aa269179ba2afeb50f8988d9bd8bdb3f25304f4ed4fc5e39e9c",
+    "package-lock.json": "d876985643f4533d72c889acbea113b08e44740a2ea1489e2d7827dad7ac1796",
+    "package.json": "ed35d13f9849fbb50edae7396383eb307fbe86e8f9818c854d473d059733f59f",
+    "scripts/bootstrap-macos.sh": "ddef796cbb3747dfb70cf07d8c3317770c15afb345ae6e2a857382dd0fbe0267",
+    "scripts/build-gate.mjs": "cd5b4b527a7183a3a49ece9a0cd4de56f9264a92d913a4bcb05ba97e4823c7f1",
+    "scripts/build-macos.sh": "644b1daa17a4077a8a392e727340d04177ea2b49d0f1b38d2c2b3f12dc6458b6",
+    "scripts/build-windows.ps1": "650e50a31bc131f0bea708ae24d1c5f449c605dba68e25d7679a1d60121d642c",
+    "scripts/check.mjs": "1da0f66c2a9d2e6dd76940b07915446a64de44f6f3148966dbc12596d77496b9",
+    "scripts/diagnose-macos-windows.swift": "3cea68a9c214a5ba4dae21241311c27fd69cc07f0772d5a68dc8243b48161a1d",
+    "scripts/keyboard-probe-native.swift": "5218fdd8d45ebbceec69efce8c8412403632550c23654e506978d1d60eb97396",
+    "src-tauri/Cargo.toml": "e202fc400597470bbdbbd42bdd12ad5d6e55d7dda3ef85061acface7fb0688c0",
+    "src-tauri/Info.plist": "b37a04eb49c7f12cf6463313a301a6d13502ee8ed7f4c3d8c0a7550be6186fbc",
+    "src-tauri/build.rs": "62343b39726897a2c190d7ffe52bfd5ef85236f1f08a9f7d4595ee5993e02c74",
+    "src-tauri/capabilities/desktop.json": "f53ef39e877e4b8ef5e0c2cff216507a3a6313e6b532c5d329c0e4406be06615",
+    "src-tauri/gen/schemas/acl-manifests.json": "a9d7f657ba1cb012be21ae33115d34b157fa461b778415b6b0cd31fe4210132b",
+    "src-tauri/gen/schemas/capabilities.json": "95fcaf1de3bc42cb648b2786ca20deb0a50a84ea3546d564d3e36bd29a04f90d",
+    "src-tauri/gen/schemas/desktop-schema.json": "1600c73a42192d0391c0bcb8b46cece6ce2224502d446c9699ba73284cedad1c",
+    "src-tauri/gen/schemas/macOS-schema.json": "1600c73a42192d0391c0bcb8b46cece6ce2224502d446c9699ba73284cedad1c",
+    "src-tauri/icons/icon.icns": "be80f1eb77b66015d3119b9d8483fae0c3684f3169793b93a5372d505b827a7c",
+    "src-tauri/icons/icon.ico": "75570003f1695a25005e9580d2e5cfd636c18fdbcbb2283d131124f153d2a483",
+    "src-tauri/icons/icon.png": "1ceb0accd7cb31532bea9d02c682d7af8b90d6d2a91cacbbee57aae0b3035000",
+    "src-tauri/src/clock.rs": "77229b68e7342b6c9b734e6fa91ed3f8b31d5e2b3b024debfb864695bbbf8ebc",
+    "src-tauri/src/f9_any_state_tests.rs": "e624680ba7239b12d63abc097edf8d2145eb272c67e5f24b1c5308aeb438631c",
+    "src-tauri/src/keyboard_check.rs": "2f08b9787b7d230d9be2f05436c1bbe0d143454ec9240e71452bdb684138f153",
+    "src-tauri/src/main.rs": "931e1a176b937231dc8729bec5e081f7ef43b1e2a441b238da7325338aa3a17a",
+    "src-tauri/src/reentrant_runtime_tests.rs": "ac6f8a8b65a77099781196033c115c1d2e0f40d46de4dc940f66083b8d610d00",
+    "src-tauri/src/runtime.rs": "2d4213c49584b930e2bdc5ed78fb2aaa2700479c7db7bb97cdf0d06377561939",
+    "src-tauri/src/selection_count_runtime_tests.rs": "7e829648aa99a89ee8d45d76fc78de29a9d0a856b7fac8a507690150f7eba857",
+    "src-tauri/src/storage.rs": "598937d2af9a7258d723895049f38ce7b701f5c1c417c376ddcf00b407c88828",
+    "src-tauri/src/visual_recovery.rs": "34a874a90f82fbfc6a9081edebd6f78269ced0b3d5482a9fe3f8d6813a8365b8",
+    "src-tauri/tauri.conf.json": "e1d45b5c7b6d0e43128b807702db3a603fef5334333b72130f5a112da258ae7c",
+    "tests/browser-observer.test.js": "12cf4cc1a9326e100cddfbcfc7fdb08312d189aac143f5ce1cfbb48be62baf69",
+    "tests/build-gate.test.js": "82fe665309105fb11ea6d0fdafdf617537591f253bb0cd47210fe3af7539efb4",
+    "ui/app.js": "baea51b1dbd2c172c65bde970d2e3eff42640e53d75ee62ab44d8bd6b7f60486",
+    "ui/capture-state.js": "8fabf974f9998c60d723d4e052eecaabd0456c30570e0a5bc755c6f769d4323a",
+    "ui/index.html": "4db994f931de4da4cb1e3d4483b0694a8309dafe4160b9af6c4d46f2392575ff",
+    "ui/model.js": "2351e89ce198302b34f13358c980734b26747dd43594a16b2f442480ee8d101e",
+    "ui/overlay.html": "64b73cb64a7aeb75891aad02f47ac2f1156512d37ef943beb768ddd48b660e56",
+    "ui/overlay.js": "00cc95eee61939c572556466139193b78b7f91df2f46c619b16da805fe239b41",
+    "ui/package.json": "a83b7d91c7e2a7153a6422646d201c8d798e86c93b465f4b289ab493d6bb88ab",
+    "ui/profile-sync.js": "bca854080e15b95ef3974d93a7a6cce7a1f0edad817f580625a9661ec3bbb45e",
+    "ui/styles.css": "a121ebc675b191f32474b493a3a10c603dcffa447e5d15a0497fda701235e3e1",
+    "ui/tests/cancellation-audit.test.js": "d0ae8c0881f255f196a778d6cc3186cca775156791c895a89eaceba8b10123a9",
+    "ui/tests/capture-integration.test.js": "4ffa2489eba7de33dde2280e3e32a05e78337b893a7aa83b3818d0a5c37d5e5f",
+    "ui/tests/capture-state.test.js": "fc3e03058e9f11c7bd354af55a41635646fbe4463870674330640ce97719f881",
+    "ui/tests/continuous-flow.test.js": "a6d17784786eaf19c01e9bad4797aef2694ae5b0fa35d8d62e9f82699c2875f2",
+    "ui/tests/direct-seats.test.js": "2a1c99767a67938d6f629ce3de11d7880825f9152c474e108e6265644a96db69",
+    "ui/tests/dom-fixture.mjs": "367897b00187fdf517d55fcd7ae75435fe3c9d0a8a2c8b115e723cc64f40d34e",
+    "ui/tests/keyboard-check-ui.test.js": "72f6a67ecaa80432d23e06977a1b20316fa9dc3ec70b460f9932d90b0c967e0d",
+    "ui/tests/keyboard-check.test.js": "a2923d4c8d33715479bf476c0b576dffb96db54b69efe9f2d334eb123b18a611",
+    "ui/tests/model.test.js": "51b15dfc3a5418f46405c993e17331411721bc84c4936d0e60c61a141c89a8b5",
+    "ui/tests/optimistic-selection.test.js": "368515fcdc844d8be5463e94c49e15ec9fc090f441895e46c39ed64080430c34",
+    "ui/tests/profile-sync.test.js": "2661a2bbb23aa8389b41fcb6cde007dbf6d5d93994fb82aa5da070f32e592d2b",
+    "ui/tests/reentrant-review.test.js": "d89afffab7615d9d05de0f77f40baad3d385c3934faf784bc74ca05618281888",
+    "ui/tests/run-cancellation-audit-dom.mjs": "0eb6070e9786aa61d96fd0428d821e90aa3118636d0592566b1ef3b12967e93d",
+    "ui/tests/run-capture-browser.mjs": "149e3a551fe7b723d060118f25b28fe184731f5fdb6ffe2c1695654525a7e15f",
+    "ui/tests/run-capture-dom.mjs": "fa1fa0f31efa7dbe6d8c3616b70df036ed52ce740a7827cd86dc727923de4c00",
+    "ui/tests/run-continuous-flow-dom.mjs": "16133e241bc49da633915fcc1515a2173bd0394b1c7239dafffa7cb35e73d867",
+    "ui/tests/run-keyboard-check-ui-dom.mjs": "e14503ed3a069ae258449d7f63000f3579744cc30f26b8f1ef4b7401625abc11",
+    "ui/tests/run-optimistic-selection-dom.mjs": "deb9dff19ef24c61ae99a97cf93f25aab6723fc47342e1285514c43c80f834bb",
+    "ui/tests/run-profile-race-dom.mjs": "3029c650329c5479fcb694fc91c6560b85cc4a404724477dba262898edce2b20",
+    "ui/tests/run-recovery-dom.mjs": "d892fcceed8cb7c2bb1c0ff33fa73c36854c4b864589bbe75d128631a6f731ec",
+    "ui/tests/run-reentrant-review-dom.mjs": "52d41eda4084e04c8fd3080a0f85c1f0810d8c99c0590fb2a8fef1af4d37f86a",
+    "ui/tests/run-seat-evidence-dom.mjs": "fd50d35dc3816ba2396176a1e374baad4d6ad27a4baac04b868ff0962caa9e08",
+    "ui/tests/run-start-dom.mjs": "9bd03f23744b71cc8ab5e070af804584d1a04940fe3bd55ce0cb45129bbbe66a",
+    "ui/tests/run-start-shortcut-dom.mjs": "652a88c4dd8b67c3401c69bdc70a0dd250cccb9c378c8ca7ecb5b635cadef3fe",
+    "ui/tests/run-vision-dom.mjs": "62e1ca0dbe9ea2c460f93d8d5c9bcd6d41fea811a4dc8923459210b65c71da3c",
+    "ui/tests/run-visual-dialog-dom.mjs": "f9ce49857cb0d64e31f5337fd0144f7e2e512c800248584755bff72e994d3a1f",
+    "ui/tests/seat-evidence.test.js": "b84edf9883ed5b61c12418bb3a73cd906ee04b59182b33cc9b32be1350c22201",
+    "ui/tests/start-integration.test.js": "975bf0e60d7565809e9348e4a647a12507167070c398d5ec30adddcb4b3d39fe",
+    "ui/tests/start-shortcut.test.js": "cbe3e44e634c49307b72c719ffba9dfc0f32aa0632adc4eb6f592c4eface23f5",
+    "ui/tests/vision-diagnostics.test.js": "3c1bf60f09c91714d59ffd2f9f2a3540aa8ce87c998efcdf384e93b63502a94b",
+    "ui/tests/visual-dialog.test.js": "06aea4bd4fb61693cda9dc2fb5e5aeb982c089066f9324b04ae76950c142bb60"
+  }
+}

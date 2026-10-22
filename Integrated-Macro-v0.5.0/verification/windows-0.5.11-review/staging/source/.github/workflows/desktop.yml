@@ -1,0 +1,37 @@
+name: Desktop validation
+on:
+  workflow_dispatch:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-14, windows-2022]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - name: Install current Rust toolchain
+        run: rustup update stable
+      - name: Select Rust
+        run: rustup default stable
+      - name: Install Tauri CLI
+        run: npm install --no-audit --no-fund
+      - name: JavaScript tests
+        run: npm test
+      - name: Native and shared Rust tests
+        run: cargo test --workspace
+      - name: Build desktop application
+        run: npm run build -- --no-bundle
+      - name: Save resolved dependencies
+        uses: actions/upload-artifact@v4
+        with:
+          name: resolved-dependencies-${{ matrix.os }}
+          path: |
+            Cargo.lock
+            package-lock.json

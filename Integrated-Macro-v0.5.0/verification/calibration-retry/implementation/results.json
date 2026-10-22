@@ -1,0 +1,18 @@
+{
+  "desktop": {
+    "command": "cargo test -p integrated-macro --offline --locked",
+    "exit_code": 0,
+    "passed": 142,
+    "failed": 0,
+    "ignored": 1,
+    "log": "desktop-final.log"
+  },
+  "independent": {
+    "passed": 9,
+    "failed": 0,
+    "ignored": 0,
+    "log": "../independent/after-provenance-current.log"
+  },
+  "build_produced": false,
+  "note": "The final Engine doc comment says the guards apply before input; F9 commits an Observe-only checkpoint before physical validation. Only this comment was clarified after desktop compilation; executable sources are unchanged. Parent full checks will use source-final.json."
+}

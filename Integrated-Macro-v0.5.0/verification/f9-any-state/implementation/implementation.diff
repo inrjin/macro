@@ -1,0 +1,766 @@
+--- before/crates/macro-core/src/model.rs
++++ after/crates/macro-core/src/model.rs
+@@ -423,8 +423,8 @@
+         #[serde(default)] screen_id: String,
+     },
+     CaptchaCompleted,
+-    /// Explicit user confirmation replaces post-entry search work, retaining
+-    /// delivered seats. It never skips undelivered entry or replays entry clicks.
++    /// Explicit user confirmation hands every phase directly to post-CAPTCHA
++    /// search, retaining delivered seats and discarding unsent entry clicks.
+     CaptchaManuallyCompleted,
+     /// A real browser Enter submission restarts the optional normal booking search.
+     /// This is a user trigger, not evidence that the CAPTCHA was accepted.
+--- before/crates/macro-core/src/engine.rs
++++ after/crates/macro-core/src/engine.rs
+@@ -198,28 +198,9 @@
+                 || matches!(self.initial_entry, InitialEntryState::AwaitingMap | InitialEntryState::Confirmed))
+     }
+ 
+-    /// Manual confirmation needs no detector/Enter option or recognized image.
+-    /// Only fully delivered entry inputs may hand off to region/seat searching.
+-    pub fn can_manually_complete_captcha(&self) -> bool {
+-        let phase = self.confirmation_phase();
+-        if self.mode != RunMode::Normal {
+-            return matches!(phase, Phase::Captcha | Phase::Region | Phase::WaitingRegion | Phase::Seats
+-                | Phase::Conflict | Phase::Completing | Phase::Completed | Phase::WaitingRefresh);
+-        }
+-        // With automatic CAPTCHA routes disabled, delivery of the initial
+-        // booking click deliberately waits in Entry for the user's handoff.
+-        // F9 confirms those intervening manual steps without replaying them.
+-        if phase == Phase::Entry && !self.has_captcha_gate() && self.has_initial_entry()
+-            && self.initial_entry == InitialEntryState::AwaitingMap && self.pending.is_none() {
+-            return true;
+-        }
+-        matches!(phase, Phase::Captcha | Phase::Region | Phase::WaitingRegion
+-                | Phase::Seats | Phase::Conflict | Phase::Completing | Phase::Completed)
+-            && self.legacy_entry_complete && self.legacy_queue.is_empty()
+-            && (self.confirmation_phase() != Phase::Captcha || self.pending.is_none())
+-            && (!self.has_initial_entry()
+-                || matches!(self.initial_entry, InitialEntryState::AwaitingMap | InitialEntryState::Confirmed))
+-    }
++    /// Explicit F9 is a user-provided entry/CAPTCHA completion signal in every
++    /// phase. Runtime still validates settings, permissions, window and pixels.
++    pub fn can_manually_complete_captcha(&self) -> bool { true }
+ 
+     /// Enter must come from the bound browser. Scheduled or undelivered entry clicks
+     /// cannot be skipped, and stopped/paused runs never restart from a keyboard event.
+@@ -556,6 +537,11 @@
+                 if self.pending.as_ref().is_some_and(|p| p.id == id) {
+                     let pending = self.pending.take().unwrap();
+                     if !success {
++                        if matches!(pending.effect, Effect::Escape) {
++                            // A failed delivery is not a successful dismissal. An
++                            // explicit retry may re-observe this known conflict.
++                            self.conflict_dismiss_requested = false;
++                        }
+                         self.fault(&format!("입력 실패 · {detail}"));
+                         return actions;
+                     }
+@@ -1006,7 +992,7 @@
+         }
+         self.retain_unconfirmed_delivery();
+         let previous = self.clone();
+-        let previous_phase = previous.confirmation_phase();
++        let previous_phase = previous.restart_phase();
+         self.now_ms = self.now_ms.max(now_ms);
+         self.profile = profile;
+         self.reset_run(mode);
+@@ -1033,6 +1019,7 @@
+             self.restart_observation_required = true;
+             if previous_phase == Phase::Conflict {
+                 self.phase = Phase::Conflict;
++                self.current = previous.current;
+                 self.conflict_dismiss_requested = previous.conflict_dismiss_requested;
+                 self.observe("conflict_dialog", &mut actions);
+             } else if self.has_retained_selection() {
+@@ -1058,26 +1045,31 @@
+     /// Runtime first checks retained color/area/shape/count compatibility.
+     pub fn restart_after_entry(&mut self, profile: Profile, now_ms: u64) -> Result<Vec<Action>, ValidationError> {
+         profile.validate()?;
+-        if !self.can_manually_complete_captcha() {
+-            return Err(ValidationError("F9은 진행 중인 탐색 또는 일반 예매 입장 완료 후 사용하세요".into()));
+-        }
+         self.profile = profile;
+         self.now_ms = self.now_ms.max(now_ms);
+         self.manual_captcha_completed = true;
+         let mut actions = vec![];
+-        // The delivered-entry preflight belongs to the previous run settings.
+-        // Newly enabled CAPTCHA options must not reclassify that old state.
++        // F9 itself supplies entry completion; no previous phase or option can
++        // turn this explicit handoff back into scheduled/registered entry.
+         self.restart_post_entry(&mut actions);
+         self.ensure_selection_count_request();
+         Ok(actions)
+     }
+ 
+     fn retain_unconfirmed_delivery(&mut self) {
+-        if let Some(id) = &self.current {
+-            if self.seat_marks.iter().any(|(_, seat)| seat.id == *id) && !self.rejected.contains(id) {
+-                self.attempted.insert(id.clone());
+-            }
+-        }
++        // Stop clears current, but a remembered delivery must not become a new
++        // candidate when an explicit handoff starts the same screen again.
++        for (_, mark) in &self.seat_marks {
++            if !self.rejected.contains(&mark.id) && !self.selected.contains(&mark.id) {
++                self.attempted.insert(mark.id.clone());
++            }
++        }
++    }
++
++    fn restart_phase(&self) -> Phase {
++        if self.phase == Phase::Faulted && self.resume_phase == Phase::Conflict {
++            Phase::Conflict
++        } else { self.confirmation_phase() }
+     }
+ 
+     /// A repeated F9 never replays entry and never forgets delivered selections.
+@@ -1086,12 +1078,12 @@
+             self.step(Event::ActionCancelled { id }, self.now_ms);
+         }
+         self.retain_unconfirmed_delivery();
+-        let conflict = self.confirmation_phase() == Phase::Conflict;
++        let conflict = self.restart_phase() == Phase::Conflict;
+         self.mode = RunMode::Normal;
+         self.legacy_queue.clear();
+         self.legacy_entry_complete = true;
+         self.pending = None;
+-        self.current = None;
++        if !conflict { self.current = None; }
+         self.current_seat = None;
+         self.candidates.clear();
+         self.invalidate_selection_count_request();
+@@ -1256,7 +1248,9 @@
+     }
+ 
+     fn seat_result(&mut self, id: String, result: SeatOutcome, actions: &mut Vec<Action>) {
+-        if self.continuous_search() || self.profile.features.nol_selection_count {
++        let legacy_conflict = self.phase == Phase::Conflict && self.conflict_attempt.is_none()
++            && self.current.as_ref() == Some(&id);
++        if !legacy_conflict && (self.continuous_search() || self.profile.features.nol_selection_count) {
+             // Compatibility events can identify only the current active attempt for
+             // this candidate. Adapters should use DeliveredSeatResult to distinguish
+             // a late outcome from a retry of the same coordinate after refresh.
+@@ -1288,6 +1282,12 @@
+             }
+             SeatOutcome::Conflict => {
+                 self.remember_current_seat();
++                // Keep the known failure across Stop/F9 even though Stop clears
++                // current. It must never be promoted to a retained delivery.
++                self.selected.remove(&id);
++                self.attempted.remove(&id);
++                self.rejected.insert(id.clone());
++                self.last_rejected_retry_ms = self.now_ms;
+                 self.pending = None;
+                 self.current = Some(id);
+                 self.phase = Phase::Conflict;
+@@ -1684,6 +1684,7 @@
+ 
+     fn fault(&mut self, message: &str) {
+         self.pending = None;
++        self.resume_phase = self.phase;
+         self.phase = Phase::Faulted;
+         self.message = message.into();
+     }
+--- before/crates/macro-core/tests/engine.rs
++++ after/crates/macro-core/tests/engine.rs
+@@ -2340,11 +2340,13 @@
+     }
+ }
+ 
+-fn assert_manual_captcha_rejected(engine: &mut Engine, now: u64) {
+-    let before = serde_json::to_value(engine.snapshot()).unwrap();
+-    assert!(!engine.can_manually_complete_captcha());
+-    assert!(engine.step(Event::CaptchaManuallyCompleted, now).is_empty());
+-    assert_eq!(serde_json::to_value(engine.snapshot()).unwrap(), before);
++fn assert_manual_captcha_handoff_available(engine: &mut Engine, now: u64) {
++    let mut explicit = engine.clone();
++    let previous = explicit.snapshot().generation;
++    assert!(explicit.can_manually_complete_captcha());
++    assert!(physical(&explicit.step(Event::CaptchaManuallyCompleted, now)).is_empty());
++    assert!(explicit.snapshot().generation > previous);
++    assert!(matches!(explicit.snapshot().phase, Phase::Region | Phase::Seats | Phase::Conflict));
+ }
+ 
+ #[test]
+@@ -2365,10 +2367,10 @@
+                 p.refresh_interval_ms = 100;
+                 let profile_before = serde_json::to_value(&p).unwrap();
+                 let mut engine = Engine::new(p).unwrap();
+-                assert_manual_captcha_rejected(&mut engine, 0);
++                assert_manual_captcha_handoff_available(&mut engine, 0);
+                 let mut actions = engine.step(Event::Start { mode: RunMode::Normal }, 1);
+                 for (index, expected) in [target(500.0, 200.0), target(500.0, 300.0), target(500.0, 400.0)].into_iter().enumerate() {
+-                    assert_manual_captcha_rejected(&mut engine, index as u64 + 2);
++                    assert_manual_captcha_handoff_available(&mut engine, index as u64 + 2);
+                     assert_eq!(physical(&actions).len(), 1);
+                     assert!(matches!(&physical(&actions)[0].kind, ActionKind::Click { target, purpose }
+                         if target == &expected && purpose == "legacy_entry"));
+@@ -2416,22 +2418,22 @@
+ }
+ 
+ #[test]
+-fn manual_captcha_completion_cannot_skip_sale_initial_entry_or_registered_inputs() {
++fn explicit_handoff_is_available_during_sale_initial_entry_and_registered_inputs() {
+     let mut p = independent_seats_profile();
+     p.features.nol_captcha_detection = true;
+     p.sale_deadline_ms = Some(100);
+     p.legacy.normal_click_delay_ms = 0;
+     let mut engine = Engine::new(p).unwrap();
+     assert!(physical(&engine.step(Event::Start { mode: RunMode::Normal }, 0)).is_empty());
+-    assert_manual_captcha_rejected(&mut engine, 99);
++    assert_manual_captcha_handoff_available(&mut engine, 99);
+     let initial = engine.step(Event::Tick, 100);
+     assert!(matches!(&physical(&initial)[0].kind, ActionKind::Click { purpose, .. } if purpose == "initial_entry"));
+-    assert_manual_captcha_rejected(&mut engine, 101);
++    assert_manual_captcha_handoff_available(&mut engine, 101);
+     let mut actions = ack(&mut engine, &initial, 102);
+     for index in 0..3 {
+         assert_eq!(physical(&actions).len(), 1);
+         assert!(matches!(&physical(&actions)[0].kind, ActionKind::Click { purpose, .. } if purpose == "legacy_entry"));
+-        assert_manual_captcha_rejected(&mut engine, 103 + index * 2);
++        assert_manual_captcha_handoff_available(&mut engine, 103 + index * 2);
+         actions = ack(&mut engine, &actions, 104 + index * 2);
+     }
+     assert!(physical(&actions).is_empty());
+@@ -2441,7 +2443,7 @@
+ }
+ 
+ #[test]
+-fn manual_captcha_completion_requires_last_entry_delivery_again_after_new_start() {
++fn normal_entry_order_remains_while_explicit_handoff_is_available_at_each_step() {
+     let mut p = recovery_profile(1);
+     p.legacy.date = Some(target(500.0, 200.0));
+     p.legacy.session = Some(target(500.0, 300.0));
+@@ -2455,7 +2457,7 @@
+     engine.step(Event::CaptchaManuallyCompleted, 5);
+     assert!(engine.continuous_search());
+     engine.step(Event::Stop, 6);
+-    assert_manual_captcha_rejected(&mut engine, 7);
++    assert_manual_captcha_handoff_available(&mut engine, 7);
+     let first = engine.step(Event::Start { mode: RunMode::Normal }, 8);
+     assert!(!engine.continuous_search());
+     let second = ack(&mut engine, &first, 9);
+@@ -2466,9 +2468,9 @@
+     engine.step(entry(EntryStage::Captcha, true, None), 11);
+     assert_eq!(engine.snapshot().phase, Phase::Captcha);
+     assert_eq!(engine.snapshot().pending_action_id, None);
+-    assert_manual_captcha_rejected(&mut engine, 12);
++    assert_manual_captcha_handoff_available(&mut engine, 12);
+     assert!(ack(&mut engine, &last, 13).is_empty());
+-    assert_manual_captcha_rejected(&mut engine, 14);
++    assert_manual_captcha_handoff_available(&mut engine, 14);
+ }
+ 
+ #[test]
+--- before/src-tauri/src/runtime.rs
++++ after/src-tauri/src/runtime.rs
+@@ -619,19 +619,26 @@
+     if capture_armed {
+         return Err("캡챠 이후 진행(F9): 좌표 지정을 마친 뒤 다시 누르세요.".into());
+     }
+-    let paused = engine.snapshot().phase == Phase::Paused;
+-    // Check a paused run without resuming real entry/seat input on a wrong key.
+-    let mut candidate = engine.clone();
+-    if paused { candidate.step(Event::Resume, 0); }
+-    if !candidate.can_manually_complete_captcha() {
+-        return Err("캡챠 이후 진행(F9): 진행 중인 좌석·취소표 탐색 또는 일반 예매 입장 완료 후 사용하세요. 날짜·회차는 다시 누르지 않습니다.".into());
+-    }
+-    Ok(paused)
+-}
+-
+-fn manual_captcha_request_current(received_epoch: u64, current_epoch: u64, interrupted: bool,
+-    received_at: Instant, run_started_at: Instant) -> bool {
+-    received_epoch == current_epoch && !interrupted && received_at >= run_started_at
++    Ok(engine.snapshot().phase == Phase::Paused)
++}
++
++fn manual_captcha_request_current(received_epoch: u64, current_epoch: u64, interrupted: bool) -> bool {
++    received_epoch == current_epoch && !interrupted
++}
++
++fn f9_starts_new_logical_run(engine: &Engine, run_id: u64) -> bool {
++    // A stopped/faulted booking may still carry real delivery receipts; keep
++    // that lineage. Idle is a fresh engine, including after settings/rebind.
++    run_id == 0 || engine.snapshot().phase == Phase::Idle
++}
++
++fn binding_changes_context(previous: Option<&macro_platform::TargetWindow>, next: &macro_platform::TargetWindow) -> bool {
++    previous.is_none_or(|previous| previous.id != next.id || previous.pid != next.pid)
++}
++
++fn reset_engine_after_rebind(engine: &mut Engine, profile: &Profile, changed: bool) -> Result<(), String> {
++    if changed { *engine = Engine::new(profile.clone()).map_err(|error| error.to_string())?; }
++    Ok(())
+ }
+ 
+ #[derive(Clone, Debug)]
+@@ -715,6 +722,24 @@
+ fn control_request_current(request: &Request, epoch: u64) -> bool {
+     !request.command.cancels_start_shortcut() || matches!(request.command, Command::Shutdown)
+         || request.shortcut_epoch == epoch
++}
++
++fn capture_commit_current(capture_epoch: u64, current_epoch: u64) -> bool {
++    capture_epoch == current_epoch
++}
++
++fn known_conflict_retry_event(state: &macro_core::Snapshot, visual_incident: bool) -> Option<Event> {
++    if state.phase != Phase::Conflict || state.pending_action_id.is_some() { return None; }
++    if let Some(attempt) = &state.conflict_attempt {
++        visual_incident.then(|| Event::DeliveredSeatResult {
++            action_id: attempt.action_id, candidate_id: attempt.candidate_id.clone(),
++            result: SeatOutcome::Conflict,
++        })
++    } else {
++        state.current_candidate_id.as_ref().map(|candidate_id| Event::SeatResult {
++            candidate_id: candidate_id.clone(), result: SeatOutcome::Conflict,
++        })
++    }
+ }
+ 
+ fn start_profile_save_needed(profile: &Value, revision: u64, stored: &Value, current_revision: u64) -> Result<bool, String> {
+@@ -1387,19 +1412,19 @@
+     }
+ 
+     #[test]
+-    fn manual_captcha_preflight_rejects_undelivered_entry_or_stop_but_accepts_search_modes() {
++    fn manual_captcha_preflight_accepts_idle_undelivered_entry_stop_and_search_modes() {
+         let mut profile = Profile::default();
+         profile.features.nol_captcha_detection = true;
+         profile.legacy.date = Some(Target::Point { point: Point { x: 10.0, y: 20.0 } });
+         let mut engine = Engine::new(profile.clone()).unwrap();
+-        assert!(manual_captcha_resume_required(&engine, false).is_err());
++        assert_eq!(manual_captcha_resume_required(&engine, false), Ok(engine.snapshot().phase == Phase::Paused));
+         engine.step(Event::Start { mode: RunMode::Normal }, 10);
+         assert_eq!(engine.snapshot().phase, Phase::Entry);
+         engine.step(Event::Pause, 20);
+-        assert!(manual_captcha_resume_required(&engine, false).is_err());
++        assert_eq!(manual_captcha_resume_required(&engine, false), Ok(engine.snapshot().phase == Phase::Paused));
+         assert_eq!(engine.snapshot().phase, Phase::Paused);
+         engine.step(Event::Stop, 30);
+-        assert!(manual_captcha_resume_required(&engine, false).is_err());
++        assert_eq!(manual_captcha_resume_required(&engine, false), Ok(engine.snapshot().phase == Phase::Paused));
+         for mode in [RunMode::Seats, RunMode::Cancellation] {
+             let mut engine = Engine::new(profile.clone()).unwrap();
+             engine.step(Event::Start { mode }, 10);
+@@ -1411,46 +1436,38 @@
+ 
+     #[test]
+     fn queued_manual_captcha_request_is_cancelled_by_later_controls() {
+-        let run_started_at = Instant::now();
+         for control in [Command::Stop, Command::Pause, Command::CaptureArmed,
+             Command::Bind(None), Command::StartFromUi { mode: RunMode::Normal, profile: json!({}), expected_profile_revision: 0 }] {
+             let (tx, rx) = mpsc::channel();
+-            let handle = RuntimeHandle {
+-                tx, interrupt: Arc::new(AtomicBool::new(false)),
+-                shortcut_epoch: Arc::new(AtomicU64::new(0)),
+-            };
++            let handle = RuntimeHandle { tx, interrupt: Arc::new(AtomicBool::new(false)),
++                shortcut_epoch: Arc::new(AtomicU64::new(0)) };
+             handle.send(Command::ContinueAfterCaptcha);
+             let request = rx.try_recv().unwrap();
+             assert!(manual_captcha_request_current(request.shortcut_epoch,
+-                handle.shortcut_epoch.load(Ordering::SeqCst), false, request.received_at, run_started_at));
++                handle.shortcut_epoch.load(Ordering::SeqCst), false));
+             handle.send(control);
+             assert!(!manual_captcha_request_current(request.shortcut_epoch,
+-                handle.shortcut_epoch.load(Ordering::SeqCst), handle.interrupt.load(Ordering::SeqCst),
+-                request.received_at, run_started_at));
+-        }
+-        assert!(!manual_captcha_request_current(3, 3, true, run_started_at, run_started_at));
+-    }
+-
+-    #[test]
+-    fn manual_captcha_received_during_shortcut_start_cannot_confirm_the_new_run() {
++                handle.shortcut_epoch.load(Ordering::SeqCst), handle.interrupt.load(Ordering::SeqCst)));
++        }
++        assert!(!manual_captcha_request_current(3, 3, true));
++    }
++
++    #[test]
++    fn latest_f9_during_startup_or_before_run_initialization_is_an_explicit_handoff() {
+         for mode in [RunMode::Normal, RunMode::Seats, RunMode::Cancellation] {
+             let (tx, rx) = mpsc::channel();
+-            let handle = RuntimeHandle {
+-                tx, interrupt: Arc::new(AtomicBool::new(false)),
+-                shortcut_epoch: Arc::new(AtomicU64::new(0)),
+-            };
++            let handle = RuntimeHandle { tx, interrupt: Arc::new(AtomicBool::new(false)),
++                shortcut_epoch: Arc::new(AtomicU64::new(0)) };
+             handle.send(Command::PrepareShortcut(mode));
+-            let _ = rx.try_recv().unwrap();
+-            // F9 arrives while the UI response/native startup is still pending.
++            let old = rx.try_recv().unwrap();
+             handle.send(Command::ContinueAfterCaptcha);
+             let request = rx.try_recv().unwrap();
+-            let new_run_started_at = request.received_at + Duration::from_nanos(1);
+-            assert_eq!(request.shortcut_epoch, handle.shortcut_epoch.load(Ordering::SeqCst));
+-            assert!(!manual_captcha_request_current(request.shortcut_epoch,
+-                handle.shortcut_epoch.load(Ordering::SeqCst), false, request.received_at, new_run_started_at));
++            // A later native initialization timestamp is not an ownership test.
++            let initialized_at = request.received_at + Duration::from_nanos(1);
++            assert!(request.received_at < initialized_at);
+             assert!(manual_captcha_request_current(request.shortcut_epoch,
+-                handle.shortcut_epoch.load(Ordering::SeqCst), false,
+-                new_run_started_at + Duration::from_nanos(1), new_run_started_at));
++                handle.shortcut_epoch.load(Ordering::SeqCst), false));
++            assert!(!control_request_current(&old, handle.shortcut_epoch.load(Ordering::SeqCst)));
+         }
+     }
+ 
+@@ -3658,7 +3675,7 @@
+             return;
+         }
+         if matches!(request.command, Command::ContinueAfterCaptcha) {
+-            let result = self.continue_after_captcha(request.shortcut_epoch, request.received_at);
++            let result = self.continue_after_captcha(request.shortcut_epoch);
+             let result = self.current_execution_result(result, request.shortcut_epoch);
+             if let Err(message) = &result { self.report_error(message.clone()); }
+             if let Some(reply) = request.reply { let _ = reply.send(result); }
+@@ -3766,7 +3783,18 @@
+                     adapter.windows().map_err(|e| e.to_string())?.into_iter()
+                         .find(|w| w.id == id).ok_or("선택한 브라우저 창을 찾을 수 없습니다.")?
+                 } else { adapter.foreground_window().map_err(|e| e.to_string())? };
++                let changed_context = binding_changes_context(adapter.target(), &target);
+                 adapter.bind(target.clone()).map_err(|e| e.to_string())?;
++                reset_engine_after_rebind(&mut self.engine, &self.profile, changed_context)?;
++                if changed_context {
++                    self.actions.clear();
++                    self.selection_count_input_proof = None;
++                    self.selection_count_read_cache = None;
++                    self.selection_count_after_input = None;
++                    self.run_shortcut_epoch = None;
++                    self.run_id = self.run_id.saturating_add(1);
++                    self.run_started_at = Instant::now();
++                }
+                 self.frame = None;
+                 self.last_sequence = None;
+                 self.last_scan_generation = None;
+@@ -4039,21 +4067,27 @@
+         Ok(())
+     }
+ 
++    fn capture_restart_context(&self) -> RestartContext {
++        let geometry = self.frame.as_ref().map(|frame| FrameReference {
++                width: frame.width, height: frame.height, scale_x: frame.scale_x, scale_y: frame.scale_y,
++            }).or_else(|| self.desktop.capture_reference.clone());
++        RestartContext { engine: self.engine.clone(),
++                target_id: self.native.as_ref().ok().and_then(NativeAdapter::target).map(|target| target.id),
++                geometry, run_id: self.run_id, started_at: self.run_started_at,
++                count_receipt: self.selection_count_after_input }
++    }
++
+     fn supersede_execution(&mut self, post_entry: bool) {
+         self.cancel_queued_actions();
+         if !matches!(self.engine.snapshot().phase, Phase::Idle | Phase::Stopped | Phase::Faulted) {
+-            let geometry = self.frame.as_ref().map(|frame| FrameReference {
+-                width: frame.width, height: frame.height, scale_x: frame.scale_x, scale_y: frame.scale_y,
+-            }).or_else(|| self.desktop.capture_reference.clone());
+-            self.restart_context = Some(RestartContext { engine: self.engine.clone(),
+-                target_id: self.native.as_ref().ok().and_then(NativeAdapter::target).map(|target| target.id),
+-                geometry, run_id: self.run_id, started_at: self.run_started_at,
+-                count_receipt: self.selection_count_after_input });
++            self.restart_context = Some(self.capture_restart_context());
+         } else if post_entry {
+             // A prepared start has stopped the old work while waiting for UI.
+             // A newer F9 may still resume that same completed-entry context.
+             if let Some(context) = &self.restart_context {
+                 self.engine = context.engine.clone();
++            } else if self.engine.has_retained_selection() {
++                self.restart_context = Some(self.capture_restart_context());
+             }
+         }
+         self.deactivate_enter_watch();
+@@ -4184,7 +4218,7 @@
+                 && same_search_mapping(&context.engine, &profile, mode)
+         });
+         if restart.as_ref().is_some_and(|context| context.engine.has_retained_selection()) && !preserve {
+-            return Err("이전 작업은 중단했습니다. 전달한 좌석 기록과 현재 창·좌석 범위가 달라 재클릭을 보류합니다. 기존 화면·설정을 유지해 다시 시작하거나 F4로 기록을 끝내세요.".into());
++            return Err("이전 작업은 중단했습니다. 전달한 좌석 기록과 현재 창·좌석 범위가 달라 재클릭을 보류합니다. 기존 화면·설정을 복원해 다시 시작하세요. F4는 입력만 중지하며 좌석 선택을 해제하지 않습니다.".into());
+         }
+         self.runtime_message = None;
+         let restart_actions = if preserve {
+@@ -4417,6 +4451,11 @@
+         self.runtime_message = Some(format!("{label} · 좌표 저장 중"));
+         self.publish();
+         self.record("capture_save", json!({"field":field,"point":point,"frame":reference}));
++        // Publishing/logging may block after the first capture guard. Do not
++        // commit an old F8 result after a newer F9/F4 has taken ownership.
++        if !capture_commit_current(epoch, self.shortcut_epoch.load(Ordering::SeqCst)) {
++            return Ok(self.cancelled_profile_reply());
++        }
+         self.save(updated)?;
+         value["profile"] = self.raw_profile.clone();
+         value["profileRevision"] = json!(self.profile_revision);
+@@ -4689,16 +4728,11 @@
+ 
+     fn rearm_cancelled_visual_escape(&mut self) {
+         let state = self.engine.snapshot();
+-        if self.visual_recovery.is_incident() && state.phase == Phase::Conflict
+-            && state.pending_action_id.is_none() {
+-            if let Some(attempt) = state.conflict_attempt {
+-                // Core only reissues this if the previous Esc was proven unsent.
+-                // A successfully delivered Esc is never repeated for this incident.
+-                self.feed(Event::DeliveredSeatResult {
+-                    action_id: attempt.action_id, candidate_id: attempt.candidate_id,
+-                    result: SeatOutcome::Conflict,
+-                });
+-            }
++        if let Some(event) = known_conflict_retry_event(&state, self.visual_recovery.is_incident()) {
++            // Core only rearms an unsent or explicitly retried failed Esc;
++            // successful delivery stays latched. A legacy confirmation has a
++            // current candidate but no visual-attempt ID.
++            self.feed(event);
+         }
+     }
+ 
+@@ -4755,9 +4789,9 @@
+         manual_confirmation_kind(&state, self.engine.confirmation_phase(), &self.scope)
+     }
+ 
+-    fn continue_after_captcha(&mut self, received_epoch: u64, received_at: Instant) -> Result<Value, String> {
++    fn continue_after_captcha(&mut self, received_epoch: u64) -> Result<Value, String> {
+         if !manual_captcha_request_current(received_epoch,
+-            self.shortcut_epoch.load(Ordering::SeqCst), self.interrupt.load(Ordering::SeqCst), received_at, self.run_started_at) {
++            self.shortcut_epoch.load(Ordering::SeqCst), self.interrupt.load(Ordering::SeqCst)) {
+             return Ok(json!({"cancelled":true}));
+         }
+         let resume = manual_captcha_resume_required(&self.engine, self.capture_armed)?;
+@@ -4766,20 +4800,13 @@
+         profile.sale_deadline_ms = None;
+         profile.site_auto_refresh = false;
+         if self.engine.has_retained_selection() && !same_post_entry_mapping(&self.engine, &profile) {
+-            return Err("F9 재시도 중단 · 전달한 좌석 기록과 현재 색상·좌석 범위·판정 옵션이 다릅니다. 기존 설정으로 되돌려 재시도하거나 F4로 기록을 끝내세요.".into());
+-        }
+-        self.adapter()?.validate_target().map_err(|error|
+-            format!("캡챠 이후 진행(F9): 연결한 예매창에서 다시 누르세요. {error}"))?;
+-        let frame = self.adapter()?.capture().map_err(|error| error.to_string())?;
+-        if self.desktop.capture_reference.as_ref().is_some_and(|reference| !same_frame_reference(reference, &frame))
+-            || self.restart_context.as_ref().and_then(|context| context.geometry.as_ref())
+-                .is_some_and(|reference| !same_frame_reference(reference, &frame)) {
+-            return Err("F9 재시도 중단 · 창 크기나 배율이 달라 현재 좌석 기록을 사용할 수 없습니다.".into());
+-        }
+-        // Stop/pause/calibration received during native validation wins over F9.
+-        if !manual_captcha_request_current(received_epoch,
+-            self.shortcut_epoch.load(Ordering::SeqCst), self.interrupt.load(Ordering::SeqCst), received_at, self.run_started_at) {
+-            return Ok(json!({"cancelled":true}));
++            return Err("F9 재시도 보류 · 전달한 좌석 기록과 현재 색상·좌석 범위·판정 옵션이 다릅니다. 기존 설정을 복원하세요. F4는 입력만 중지하며 좌석 선택을 해제하지 않습니다.".into());
++        }
++        let fresh_run = f9_starts_new_logical_run(&self.engine, self.run_id);
++        if fresh_run {
++            self.run_id = self.run_id.saturating_add(1);
++            self.run_started_at = Instant::now();
++            self.selection_count_after_input = None;
+         }
+         self.cancel_queued_actions();
+         self.deactivate_enter_watch();
+@@ -4787,8 +4814,6 @@
+         self.captcha_input_watch_error = None;
+         self.target_recovery = None;
+         self.nol_captcha.reset();
+-        // This is the user's confirmation, not a detector verdict. Otherwise a
+-        // missing NOL baseline would send the first click back to CAPTCHA wait.
+         self.nol_handoff_pending = false;
+         self.frame = None;
+         self.last_sequence = None;
+@@ -4803,13 +4828,42 @@
+         self.candidates.clear();
+         self.vision_diagnostics = None;
+         let actions = self.engine.restart_after_entry(profile, self.now()).map_err(|error| error.to_string())?;
+-        self.actions.extend(actions);
++        self.actions.extend(actions); // Observe only; physical inputs remain guarded below.
++        self.run_shortcut_epoch = Some(received_epoch);
++        // Commit the post-entry checkpoint before target validation, so a
++        // transient context loss can only resume search, never old entry clicks.
++        let validation = (|| -> Result<OwnedFrame, String> {
++            let permissions = self.adapter()?.permissions();
++            self.permissions = Some(permissions.clone());
++            if !permissions.screen_capture || !permissions.input {
++                return Err(format!("F9 실행 권한을 확인하세요. {}", permissions.details.join(" ")));
++            }
++            self.adapter()?.validate_target().map_err(|error| error.to_string())?;
++            let frame = self.adapter()?.capture().map_err(|error| error.to_string())?;
++            self.adapter()?.validate_target().map_err(|error| error.to_string())?;
++            if self.desktop.capture_reference.as_ref().is_some_and(|reference| !same_frame_reference(reference, &frame))
++                || self.restart_context.as_ref().and_then(|context| context.geometry.as_ref())
++                    .is_some_and(|reference| !same_frame_reference(reference, &frame)) {
++                return Err("F9 재시도 보류 · 창 크기나 배율이 달라 현재 좌표와 좌석 기록을 사용할 수 없습니다.".into());
++            }
++            Ok(frame)
++        })();
++        if !manual_captcha_request_current(received_epoch,
++            self.shortcut_epoch.load(Ordering::SeqCst), self.interrupt.load(Ordering::SeqCst)) {
++            return Ok(json!({"cancelled":true}));
++        }
+         self.restart_context = None;
+-        self.run_shortcut_epoch = Some(received_epoch);
+-        self.runtime_message = None;
+         self.feedback_until_ms = self.now() + 5000;
++        match validation {
++            Ok(frame) => { self.frame = Some(frame); self.runtime_message = None; }
++            Err(error) => {
++                self.pause_for_context(error.clone(), None);
++                if self.target_recovery.is_none() { return Err(error); }
++            }
++        }
+         self.record("captcha_manual_completed", json!({
+-            "shortcut":"F9", "resumed":resume, "phase":self.engine.snapshot().phase,
++            "shortcut":"F9", "resumed":resume, "freshRun":fresh_run,
++            "phase":self.engine.snapshot().phase, "recovering":self.target_recovery.is_some(),
+         }));
+         Ok(self.snapshot_value())
+     }
+@@ -5412,3 +5466,7 @@
+ #[cfg(test)]
+ #[path = "reentrant_runtime_tests.rs"]
+ mod reentrant_runtime_tests;
++
++#[cfg(test)]
++#[path = "f9_any_state_tests.rs"]
++mod f9_any_state_tests;
+--- before/src-tauri/src/f9_any_state_tests.rs
++++ after/src-tauri/src/f9_any_state_tests.rs
+@@ -0,0 +1,141 @@
++//! Production ingress/context helpers and Engine. No Worker, OS or live page execution.
++use super::*;
++
++fn candidate() -> Candidate {
++    let point = Point { x:20.0,y:30.0 };
++    Candidate { id:"a".into(), point, color:Profile::default().color,
++        target:Target::Point {point}, selected:false, geometry:None }
++}
++
++fn delivered(count: bool) -> (Engine, u64) {
++    let mut profile = Profile::default();
++    profile.target_seats = 2;
++    profile.features.nol_selection_count = count;
++    let mut engine = Engine::new(profile).unwrap();
++    engine.step(Event::Start {mode:RunMode::Seats}, 0);
++    let mut actions = engine.step(Event::CandidatesObserved {generation:0,candidates:vec![candidate()]}, 1);
++    if count {
++        let request = engine.selection_count_request().unwrap();
++        actions = engine.step(Event::SelectionCountObserved {request_id:request.id,observation_id:1,count:0}, 2);
++    }
++    let id = actions.iter().find(|action| matches!(action.kind, ActionKind::Click {..})).unwrap().id;
++    engine.step(Event::ActionAcknowledged {id,success:true,detail:String::new()}, 3);
++    (engine,id)
++}
++
++#[test]
++fn stopped_count_handoff_keeps_receipt_lineage_but_rotates_authorization() {
++    let (mut engine, action) = delivered(true);
++    let old_request = engine.selection_count_request().unwrap();
++    engine.step(Event::Stop, 4);
++    assert!(!f9_starts_new_logical_run(&engine, 7));
++    let profile = engine.profile().clone();
++    engine.restart_after_entry(profile, 5).unwrap();
++    let request = engine.selection_count_request().unwrap();
++    assert_ne!(request.id, old_request.id);
++    assert_eq!(request.after_action_id, Some(action));
++    let frame = OwnedFrame {width:2,height:2,stride:8,rgba:vec![255;16],
++        origin:macro_platform::Point {x:0.0,y:0.0},scale_x:1.0,scale_y:1.0,
++        sequence:1,captured_at_ns:110,last_observed_ns:120};
++    assert!(selection_count_frame_fresh(&frame, 7, request.after_action_id, Some((7,action,100))));
++    assert!(!selection_count_frame_fresh(&frame, 8, request.after_action_id, Some((7,action,100))));
++    assert!(engine.step(Event::SelectionCountObserved {
++        request_id:old_request.id,observation_id:99,count:2}, 6).is_empty());
++    assert!(f9_starts_new_logical_run(&Engine::new(Profile::default()).unwrap(), 0));
++    assert!(f9_starts_new_logical_run(&Engine::new(Profile::default()).unwrap(), 7));
++}
++
++#[test]
++fn changed_binding_resets_only_the_previous_windows_selection_context() {
++    let target = |id,pid| macro_platform::TargetWindow {id,pid,title:String::new(),
++        rect:macro_platform::Rect {x:0.0,y:0.0,width:100.0,height:100.0}};
++    let a = target(1,100);
++    assert!(!binding_changes_context(Some(&a), &target(1,100)));
++    assert!(binding_changes_context(Some(&a), &target(2,100)));
++    assert!(binding_changes_context(Some(&a), &target(1,200)));
++    for count in [false,true] {
++        let (mut engine,_) = delivered(count);
++        engine.step(Event::Stop,4);
++        let profile = engine.profile().clone();
++        reset_engine_after_rebind(&mut engine,&profile,false).unwrap();
++        assert!(engine.has_retained_selection());
++        reset_engine_after_rebind(&mut engine,&profile,true).unwrap();
++        assert_eq!(engine.snapshot().phase,Phase::Idle);
++        assert!(!engine.has_retained_selection());
++        assert!(engine.snapshot().attempted_ids.is_empty());
++        assert!(engine.selection_count_request().is_none());
++    }
++}
++
++#[test]
++fn recovery_after_explicit_handoff_resumes_search_and_never_old_entry_or_sale() {
++    for region in [false,true] {
++        let mut profile = Profile::default();
++        profile.entry_target = Some(Target::Point {point:Point {x:1.0,y:2.0}});
++        profile.legacy.date = Some(Target::Point {point:Point {x:3.0,y:4.0}});
++        profile.features.server_clock = true;
++        profile.sale_deadline_ms = Some(1_000_000);
++        profile.features.region_priority = region;
++        let mut engine = Engine::new(profile.clone()).unwrap();
++        engine.step(Event::Start {mode:RunMode::Normal},0);
++        let actions = engine.restart_after_entry(profile,1).unwrap();
++        assert!(actions.iter().all(|action| matches!(action.kind,ActionKind::Observe {..})));
++        let phase = if region {Phase::Region} else {Phase::Seats};
++        assert_eq!(engine.snapshot().phase,phase);
++        let reason = "[target_occluded] fixture occlusion";
++        assert!(recoverable_context_error(reason));
++        assert!(automatic_context_recovery(engine.continuous_search(),&engine.snapshot()));
++        engine.step(Event::ContextLost {reason:reason.into()},2);
++        assert_eq!(engine.confirmation_phase(),phase);
++        for event in [Event::Resume,Event::Tick] {
++            let actions = engine.step(event,2_000_000);
++            assert!(actions.iter().all(|action| matches!(action.kind,ActionKind::Observe {..})));
++        }
++        assert_eq!(engine.snapshot().phase,phase);
++    }
++}
++
++#[test]
++fn legacy_conflict_retry_caller_rearms_unsent_escape_but_keeps_success_latched() {
++    let mut profile = Profile::default();
++    profile.features.conflict_recovery = true;
++    profile.target_seats = 2;
++    let mut engine = Engine::new(profile.clone()).unwrap();
++    engine.step(Event::Start {mode:RunMode::Normal},0);
++    assert!(!engine.continuous_search());
++    let actions = engine.step(Event::CandidatesObserved {generation:0,candidates:vec![candidate()]},1);
++    let seat_id = actions.iter().find(|a| matches!(a.kind,ActionKind::Click {..})).unwrap().id;
++    engine.step(Event::ActionAcknowledged {id:seat_id,success:true,detail:String::new()},2);
++    let actions = engine.step(Event::SeatResult {candidate_id:"a".into(),result:SeatOutcome::Conflict},3);
++    let old_escape = actions.iter().find(|a| matches!(a.kind,ActionKind::Key {key:Key::Escape,..})).unwrap().id;
++    engine.restart_after_entry(profile,4).unwrap(); // cancels the unsent Esc
++    assert!(engine.continuous_search());
++    assert!(engine.snapshot().attempted_ids.is_empty());
++    let event = known_conflict_retry_event(&engine.snapshot(),false).unwrap();
++    let actions = engine.step(event,5);
++    let escape = actions.iter().find(|a| matches!(a.kind,ActionKind::Key {key:Key::Escape,..})).unwrap().id;
++    assert!(escape > old_escape);
++    assert!(known_conflict_retry_event(&engine.snapshot(),false).is_none());
++    engine.step(Event::ActionAcknowledged {id:escape,success:true,detail:String::new()},6);
++    let event = known_conflict_retry_event(&engine.snapshot(),false).unwrap();
++    assert!(engine.step(event,7).iter().all(|a| matches!(a.kind,ActionKind::Observe {..})));
++    engine.step(Event::ConflictDialogGone,8);
++    assert!(known_conflict_retry_event(&engine.snapshot(),false).is_none());
++}
++
++#[test]
++fn f8_capture_commit_rechecks_ownership_after_logging_or_publishing_delay() {
++    for newer in [Command::ContinueAfterCaptcha,Command::Stop] {
++        let (tx,rx) = mpsc::channel();
++        let handle = RuntimeHandle {tx,interrupt:Arc::new(AtomicBool::new(false)),
++            shortcut_epoch:Arc::new(AtomicU64::new(0))};
++        handle.send(Command::CaptureArmed);
++        let capture = rx.recv().unwrap();
++        assert!(capture_commit_current(capture.shortcut_epoch,handle.shortcut_epoch.load(Ordering::SeqCst)));
++        // The capture and local profile update finished, but publish/log I/O
++        // still held the Worker. New ingress already owns the upcoming commit.
++        handle.send(newer);
++        rx.recv().unwrap();
++        assert!(!capture_commit_current(capture.shortcut_epoch,handle.shortcut_epoch.load(Ordering::SeqCst)));
++    }
++}

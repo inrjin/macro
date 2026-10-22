@@ -1,0 +1,31 @@
+{
+  "scope": "optional NOL total-count gate: final component source hashes and parent integration results",
+  "files": {
+    "crates/macro-core/src/model.rs": "b597ce7ba48a3c87697ecdd8ceab235a484e170853da25fe6df14b54a08a74e5",
+    "crates/macro-core/src/engine.rs": "820884a1547abc9ab6c35e5db743e3e80482d3e69caf9a82afd99b68306c8cb6",
+    "crates/macro-core/tests/engine.rs": "513a29cb387526e2d6f6f91af7325268bc3564ff452b993f5a20a48a905d61d2",
+    "crates/macro-core/tests/selection_count.rs": "20030595097937627f977cf8034e81f4fd9a5476555839b09b10af31f76f5165"
+  },
+  "note": "Final workspace includes Snapshot count-policy flag, manual routing and narrowly scoped context recovery callers. The final 122-file manifest and 54-file JavaScript manifest matched current files; no production changes were made for this documentation update.",
+  "parent_integration_log": "verification/seat-object-system/workspace-final.log",
+  "independent_manual_routing_probe": "verification/seat-object-system/engine/manual-routing-repro/corrected/results.log",
+  "parent_javascript_log": "verification/seat-object-system/javascript-final.log",
+  "final_results": {
+    "rust": {
+      "passed": 367,
+      "failed": 0,
+      "ignored": 2
+    },
+    "javascript": {
+      "passed": 150,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "tested_source_manifests": {
+    "verification/seat-object-system/source-before-final-test.json": 122,
+    "verification/seat-object-system/javascript-tested-source.json": 54
+  },
+  "historical_workspace_log": "verification/seat-object-system/workspace-before-manual-routing.log",
+  "context_recovery_review": "verification/seat-object-system/engine/context-recovery-review.md"
+}

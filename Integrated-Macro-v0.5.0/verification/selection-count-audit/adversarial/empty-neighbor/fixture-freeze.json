@@ -1,0 +1,13 @@
+{
+  "count": 6,
+  "files": {
+    "verification/selection-count-audit/adversarial/empty-neighbor/manifest.json": "4abcb0a9a020b40b08175dc6dbe830cbe99d4dfd2803a87b2b86d6c54fcd8637",
+    "verification/selection-count-audit/adversarial/empty-neighbor/generate.swift": "f51b1baf13ecf87a22665f8fb1240b4aa1bb4f9e734926568489a5513990e6f5",
+    "verification/selection-count-audit/adversarial/empty-neighbor/fixtures/empty_near_block.rgba": "57f4defb4aeef1b99e681b8858eb8fb5427a14e0b241e179c7adc4f8649c58fb",
+    "verification/selection-count-audit/adversarial/empty-neighbor/fixtures/empty_near_text.rgba": "699c6f2c02ec4c840740488d6cd37d5afc70c6578928a306f3c2f3dcd2b41741",
+    "verification/selection-count-audit/adversarial/empty-neighbor/fixtures/empty_far_block.rgba": "bf59572aa6ad9ceead8e448b20e62b2c8eda2be45cb6c211fa9416e3fd4240d7",
+    "verification/selection-count-audit/adversarial/empty-neighbor/fixtures/noempty_near_block.rgba": "ed249fcf7f91a46d29d2e3c8a3c8883eef3d7935e057b0a398bc7f91a83e3fd8",
+    "verification/selection-count-audit/adversarial/empty-neighbor/fixtures/noempty_near_text.rgba": "e1863bcd301eca6a0fcd6aefee90da5b2dda21e0e70eb8d55565c9038eceb3a1",
+    "verification/selection-count-audit/adversarial/empty-neighbor/fixtures/noempty_far_block.rgba": "eddde7871e3054e4a9827c0faee27606e93f474d42da6f1f8ed144e6a7de5e4b"
+  }
+}

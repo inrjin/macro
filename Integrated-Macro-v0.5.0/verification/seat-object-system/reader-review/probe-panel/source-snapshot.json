@@ -1,0 +1,5 @@
+{
+  "crates/macro-core/src/selection_count.rs": "ac0bfa90491f3dc3e071b3824d769720dfb11bf2209982e6080ea52e11b7b923",
+  "crates/macro-core/src/selection_count_layout.rs": "93c62c7d153bcae7f8e2bfe22aa772d571367bfab6e23f77048ba3618cba5e99",
+  "crates/macro-core/src/selection_count_assets/templates.json": "91a8450eaa3df3888d344cc5bd28daddcf1b2cf86f43add85f6aacb2179b4085"
+}

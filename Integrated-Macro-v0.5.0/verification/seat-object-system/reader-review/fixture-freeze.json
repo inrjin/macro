@@ -1,0 +1,552 @@
+{
+  "scope": "Frozen independent CoreText assets; these are not an execution result or live screenshot corpus",
+  "fixtureCount": 108,
+  "expected": {
+    "confirmed": 41,
+    "correct_or_unreadable": 37,
+    "unreadable": 30
+  },
+  "manifestSha256": "89086c84c6c70d3b38251d3cd625bc64b98ed30494d8ceb94dff339c79f106f1",
+  "files": [
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/digit_0.rgba",
+      "bytes": 768000,
+      "sha256": "c1bce70f29c426c1c77093b4c050b96d77944b8a29b5e4b09467d64468b0d3e7"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/digit_1.rgba",
+      "bytes": 768000,
+      "sha256": "bdac63d0fe3270fb49e63e469d0a55be9e9f41ee8bc10a8ca9169cc4a402a45f"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/digit_2.rgba",
+      "bytes": 768000,
+      "sha256": "175f84e01d938c92c6a3cb20e0054c47912e0b7ce16161a8693c3eccf66f6464"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/digit_3.rgba",
+      "bytes": 768000,
+      "sha256": "17633c580c0b5161968bd24774370c1df2408d826aa4648a4218dde81cb144d4"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/digit_4.rgba",
+      "bytes": 768000,
+      "sha256": "63aeb8bab4c45f37ff17813437de7c520a942780790d6dcad48047454118a9cf"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/digit_5.rgba",
+      "bytes": 768000,
+      "sha256": "25786c883a0f3f96c915019b3ae98718d974a3c91df2e7d86ab17d64eee64387"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/digit_6.rgba",
+      "bytes": 768000,
+      "sha256": "1544f5e7dab91ff862cfd64c64792d4532b8064d479cc0821f02812e9c9b4137"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/digit_7.rgba",
+      "bytes": 768000,
+      "sha256": "fc69278c4ba8de01b2b2082fbc8136ee05903d967b1e50a6e96cdd7e0b7efe2c"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/digit_8.rgba",
+      "bytes": 768000,
+      "sha256": "1c461d994acacbc23efcc8e39ab36332bad787ab7b7f87e858ad6da145c14280"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/digit_9.rgba",
+      "bytes": 768000,
+      "sha256": "e5de4662e488a5703d709ee5eea45ce81a105506f4b21aa551484bca11e4aa7b"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/position_top_left.rgba",
+      "bytes": 768000,
+      "sha256": "368c9c50ed69fbc570836d32f5a478a282529db0a2d6deb045c9c2144b2117dc"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/position_control_two_top_left.rgba",
+      "bytes": 768000,
+      "sha256": "64ee292b255cbd2657d6367e066d99c2c00212a14114f9c321d03cf4185b6352"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/position_bottom_left.rgba",
+      "bytes": 768000,
+      "sha256": "669192db55ce86eaa91ac2e07fe553a7fc1cdbe89dd6cba9c5aa3f191eabc88f"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/position_control_two_bottom_left.rgba",
+      "bytes": 768000,
+      "sha256": "82ae9273166c4ea3552c60f7b5dff2754dcde618b482e012eeeacd7843004bd7"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/position_bottom_right.rgba",
+      "bytes": 768000,
+      "sha256": "6d8aebe4d1d52e515587751283960185086c231b1a93d972b75568b4babae7e8"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/position_control_two_bottom_right.rgba",
+      "bytes": 768000,
+      "sha256": "7b8776804960f0873b879b1ef28297548a421b6d047158b62d7812d54a02186c"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/position_middle.rgba",
+      "bytes": 768000,
+      "sha256": "4337acf9b37fe1c5847250c668cac3f54275c1eb6225de92910c156694758886"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/position_control_two_middle.rgba",
+      "bytes": 768000,
+      "sha256": "6394c8f8513671686d5164aeb56dcb3e5e48d5228729a77fc9636a7a47ba5cf7"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/size_16.rgba",
+      "bytes": 768000,
+      "sha256": "65c182d68c868175e75ace8c1c48886f131e731b4e613d6995a00de703e98e1c"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/size_19.rgba",
+      "bytes": 768000,
+      "sha256": "c03f81c501429a4638e35c113deae7a9c01d6c561cfa5be02aeff1b28313e72f"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/size_24.rgba",
+      "bytes": 768000,
+      "sha256": "175f84e01d938c92c6a3cb20e0054c47912e0b7ce16161a8693c3eccf66f6464"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/size_29.rgba",
+      "bytes": 768000,
+      "sha256": "7d6591454a57b57bf7e3727175cec70ae058ab496b3719250b5aebf816ff96ba"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/size_36.rgba",
+      "bytes": 768000,
+      "sha256": "264beab8baab1f95a967727b976295ea39b3e749b31e62351daf859910b51f49"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/size_44.rgba",
+      "bytes": 768000,
+      "sha256": "38a15dec15c9ac24aced8c106296947814dd7bce5b28aa028e9673e6bd8ea8f0"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/font_neo_regular_1.rgba",
+      "bytes": 768000,
+      "sha256": "e7666a19a5f45c15e5e1ff3f37d96382771eb63897a457bef085599cc82402f0"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/font_neo_regular_2.rgba",
+      "bytes": 768000,
+      "sha256": "4a49daa4a4c2b3eb754aa91ecb60e1990f33464f0ba7df802c231bc452148e75"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/font_neo_regular_3.rgba",
+      "bytes": 768000,
+      "sha256": "c8e2170147d271c08f296305a2fb746efd2450a17024d55b16dec3adff16e2ff"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/font_neo_regular_4.rgba",
+      "bytes": 768000,
+      "sha256": "4bf4fa527b056bec25689ab19705bb7e30616f9c1e8199ed822856b769df55d5"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/font_neo_regular_8.rgba",
+      "bytes": 768000,
+      "sha256": "3c52776d6682e50c60eee2d6d5aca9fc99fdf1d0c709b7aa375be7ef4f4778bb"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/font_neo_medium_1.rgba",
+      "bytes": 768000,
+      "sha256": "e0043382202182c1ca7d4ab2f3ad9224f79c64b9e8f2b18676a470be50823c0d"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/font_neo_medium_2.rgba",
+      "bytes": 768000,
+      "sha256": "dfc5f4c2adb4e7b84605965b554375dc76f9ddb4b1c8cd4af99777c5c69b9146"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/font_neo_medium_3.rgba",
+      "bytes": 768000,
+      "sha256": "b2fbe9f4a1945c9d9e6ee8d4153edc2c0f64505147b089a7f587a32d3d5939fe"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/font_neo_medium_4.rgba",
+      "bytes": 768000,
+      "sha256": "8e8efc0a90072714e6b9a7a32f47da66088bc87457912aa7709cea82767b1fc1"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/font_neo_medium_8.rgba",
+      "bytes": 768000,
+      "sha256": "2609b8fcd6fa76d01fc75b11b538719fe147f0e652bac1dfbaab2c2260bcd230"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/font_neo_semibold_1.rgba",
+      "bytes": 768000,
+      "sha256": "4efa9e2509fd51624119f45a12bf507b1257e4b6def53972f7a3ca2031b21541"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/font_neo_semibold_2.rgba",
+      "bytes": 768000,
+      "sha256": "3bdea75e85579b7c8943c3f5ae609af62ee5bdbe081fc9776899e0ba4ed3a84f"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/font_neo_semibold_3.rgba",
+      "bytes": 768000,
+      "sha256": "4d303993baa38061407e826f0eadff4157e93d923ce04212c7fd6673f2dec355"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/font_neo_semibold_4.rgba",
+      "bytes": 768000,
+      "sha256": "ff2765e86be4e35cf0131785e3c55410e0bc4edc7b9b780cc6c8d6223b7da44f"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/font_neo_semibold_8.rgba",
+      "bytes": 768000,
+      "sha256": "08821a5c942882a28c5536d1201a78445df98d632d1b7449556f0ab76ec0a61e"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/font_neo_heavy_1.rgba",
+      "bytes": 768000,
+      "sha256": "5d417e23d0e17c10ad447965c71b6e669474596be99f8f6dff9e35e00bab9e2c"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/font_neo_heavy_2.rgba",
+      "bytes": 768000,
+      "sha256": "9c2bec415a92dc90ba8efa5a50b5c98b317663b013ff904899abef10f5734d73"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/font_neo_heavy_3.rgba",
+      "bytes": 768000,
+      "sha256": "12f47176882a44cb54d271b99d23c29f94a2ab6a337844da498f537292110407"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/font_neo_heavy_4.rgba",
+      "bytes": 768000,
+      "sha256": "219791e318b97b12cd524975d24e3d5d586956ce0ee1245ad46e97395f0cfe64"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/font_neo_heavy_8.rgba",
+      "bytes": 768000,
+      "sha256": "3e0303cb69439ee74cb753c7bf54e0397fbe17b39398e693824acff759c41772"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/font_apple_gothic_1.rgba",
+      "bytes": 768000,
+      "sha256": "dab435a1e3c02767771030e2863945d1394f68c950ddb97761399de435688b72"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/font_apple_gothic_2.rgba",
+      "bytes": 768000,
+      "sha256": "2beef34bbf43049ceaac442a0be6fabf6165424ecd6b3d7f33d881b92535a373"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/font_apple_gothic_3.rgba",
+      "bytes": 768000,
+      "sha256": "3cc06dc25bc563a1cde830062515b237b241bc218ba45d9a5fd9627da20da6f3"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/font_apple_gothic_4.rgba",
+      "bytes": 768000,
+      "sha256": "c11928a88d6cc0a46b35751b60d978b132d6c1b590d2f3800986ea55312a1b2c"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/font_apple_gothic_8.rgba",
+      "bytes": 768000,
+      "sha256": "16061b7e3b0270c618d3d5872b31f230bab6c26d610b5adb93c0b45d3a984875"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/ink_darker_blue.rgba",
+      "bytes": 768000,
+      "sha256": "acdee44902d9a6fa351fb2010de05e0928a76eddeb57a5a49524de6a846e05c0"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/ink_purple_blue.rgba",
+      "bytes": 768000,
+      "sha256": "98ff35d06a7d93b2f826a1c6012c6f8e0869754b511e76352159256a6187715d"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/ink_dark_digit.rgba",
+      "bytes": 768000,
+      "sha256": "cf65a9f5fa9283f5cae2dadde7b7c3cf5c388f7c72d922dc924bc5a6e679fa58"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/explicit_empty.rgba",
+      "bytes": 768000,
+      "sha256": "5b6a24e0c3991b653266210185526b1b510f4f2737c3da63214a39236e983461"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/heading_without_number.rgba",
+      "bytes": 768000,
+      "sha256": "255e3738b428d0fe53ff6e99107de0cf8c07da6f4b2ce835ba5de07140394cdf"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/blank.rgba",
+      "bytes": 768000,
+      "sha256": "d734cba5a1c20b1822d70d4e2d2bc45e59c2f65917c099bff722b987d087e24f"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/number_without_heading.rgba",
+      "bytes": 768000,
+      "sha256": "55150ba4acb478245880d77df5652243ae02e09e7d6ca1b0bf8f412ed4c73f9b"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/empty_without_heading.rgba",
+      "bytes": 768000,
+      "sha256": "88d8747eea77941ace694d216b2b54bcd041b805e164f09a649adb7af7bfeefe"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/lookalike_57.rgba",
+      "bytes": 768000,
+      "sha256": "9a5fc9d3eefa9de52d5fbe4bbee998f92c3cb05b5f5e9259de96d749f78f187d"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/lookalike_58.rgba",
+      "bytes": 768000,
+      "sha256": "a099b38a32ea37bc027982c10eb5b44e105f812fe1c6c7b90614e999e8f6401c"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/lookalike_59.rgba",
+      "bytes": 768000,
+      "sha256": "2b16f620002562909a1480d6892b9fa551e730817648a6f6575258d22e411e40"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/lookalike_60.rgba",
+      "bytes": 768000,
+      "sha256": "a7d2e114ea8c0478dd6f88d8e1890d58fde2cb80a661c97902361e2c1a89871b"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/lookalike_61.rgba",
+      "bytes": 768000,
+      "sha256": "d622a0b67a123deff2b476498479624b9a112c7eec0bc15ed68758f9ec9d6a0f"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/timer_and_price.rgba",
+      "bytes": 768000,
+      "sha256": "f4ac3bd6ba037fd4c32764fde1c5914db47c37ad15ab7894f32f8aaa9e179940"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/completion_label.rgba",
+      "bytes": 768000,
+      "sha256": "45b3e3ab04c07a3d773cbcae7e1a35417b5b7ab565352ecfbded848e30385955"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/compound_number_64.rgba",
+      "bytes": 768000,
+      "sha256": "669e9238bd4f0c0eadb9eb94f88e3e668140df372e4a9e21c327663e7984badd"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/compound_number_65.rgba",
+      "bytes": 768000,
+      "sha256": "0954e9ffa2aba54b0d74d3a659a90ebcb636870b6b2f1a544b519940e6893581"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/compound_number_66.rgba",
+      "bytes": 768000,
+      "sha256": "d382336410c13b68b92b4c44c47944d0bd9016847d13e0d787fd4a87b6074ff1"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/compound_number_67.rgba",
+      "bytes": 768000,
+      "sha256": "ea352780cf216256341287aae1b0f9dfe603f7679ccf339629a37add566f79ba"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/compound_number_68.rgba",
+      "bytes": 768000,
+      "sha256": "ebd9cd9b8dc2978746de2a4d12fe5032352cb4b935b3b4d8b5536f54ad499826"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/duplicate_3_3.rgba",
+      "bytes": 768000,
+      "sha256": "f4f855bded2235cc3574ea1e3dd4e0905a0e3ca6b69fbb469272be01a5c7298a"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/duplicate_1_3.rgba",
+      "bytes": 768000,
+      "sha256": "719d37a33087d36531c39cb54d00d57b1c5f045680fbd2b09d7cf8bf157c0b76"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/clipped_heading.rgba",
+      "bytes": 768000,
+      "sha256": "940b4aa75229689d770ee3e84b70bc0870104c8ab081a3003b76754541e430ed"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/clipped_digit.rgba",
+      "bytes": 51840,
+      "sha256": "00cfd9808b49f1b615f10b6a0e16d75446eb082770c23ac07c74ffd8244f0d5c"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/transparent_pixels.rgba",
+      "bytes": 768000,
+      "sha256": "9c8e42ac721e4608ffb2e8e9c6b582bbd419955f66b26a4f9214b04ee76904cb"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/contradictory_empty_and_three.rgba",
+      "bytes": 768000,
+      "sha256": "b53d6dd64484a95580d25ca3b7024ebc9d2a8f3abda930e8fedda142412f12c4"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/contradictory_empty_and_two.rgba",
+      "bytes": 768000,
+      "sha256": "fdeb117e7c6c970a7a9c797791a7a66f0fa35e2bd15f0a35c967851ae2200fe6"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/panel_with_list_and_timer.rgba",
+      "bytes": 768000,
+      "sha256": "373426d4979d6452c9e0ddddbc14bb1d44e940feef607a03bf0af20482461833"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/holdout_size_21_digit_0.rgba",
+      "bytes": 768000,
+      "sha256": "c262e45637e97f95a050913bbbb72b67dbbec2d5d20209925ec0bdb563b3080b"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/holdout_size_21_digit_1.rgba",
+      "bytes": 768000,
+      "sha256": "fcd0525f14946589af0616d52e915d7138b80cbd21b4a3387bd914808db7d1de"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/holdout_size_21_digit_2.rgba",
+      "bytes": 768000,
+      "sha256": "92455d88d9425c0e7cead74b0cd188dff09b464150e50d2b38cc47af51ec7c63"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/holdout_size_21_digit_3.rgba",
+      "bytes": 768000,
+      "sha256": "50a6497ab33fbb4642dae8d09a6bd3cc814b4c9633d959cce643ce29244cc22d"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/holdout_size_21_digit_4.rgba",
+      "bytes": 768000,
+      "sha256": "10333f9c23158f83f1491f9c8212fedfed444f9e939a2241a9b0fa8ed942e0e1"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/holdout_size_27_digit_0.rgba",
+      "bytes": 768000,
+      "sha256": "62ad801d6495d244c6000ed1074d20d3ef3505ec5265a4a8eb792c3fec3f48c4"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/holdout_size_27_digit_1.rgba",
+      "bytes": 768000,
+      "sha256": "66c91c0b6d1eb414d9239816b5ffe733ea8dbd7c1f893eb145461edadff336e9"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/holdout_size_27_digit_2.rgba",
+      "bytes": 768000,
+      "sha256": "1adc745e4821a5b1b9082c0d42e31766619475c0be898aa9a61f58650c920ac8"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/holdout_size_27_digit_3.rgba",
+      "bytes": 768000,
+      "sha256": "b8cf131c8d5e8a52c18d18594f3f6da5011eb69ab0f37fb3207c8cd224a66fb6"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/holdout_size_27_digit_4.rgba",
+      "bytes": 768000,
+      "sha256": "b5d7ecb223a8a654369459083b6a96826f525787154e3e7263ea086d37924558"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/holdout_size_35_digit_0.rgba",
+      "bytes": 768000,
+      "sha256": "21648d4661fc859ff7adc92877e41be24351320f89b7620882735b83c756d65a"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/holdout_size_35_digit_1.rgba",
+      "bytes": 768000,
+      "sha256": "cd53193da18ebea4775307e32efe76418f4aee54b11f27a1b633d01757def1c0"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/holdout_size_35_digit_2.rgba",
+      "bytes": 768000,
+      "sha256": "fff9b6daf3f7887a92e6ffda2740712db2bb131ee160d8e0b7ffdcab9dc320f7"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/holdout_size_35_digit_3.rgba",
+      "bytes": 768000,
+      "sha256": "6a5cb60414fe1430835fd2305d0448a7872dfa0563fd97821d2dee690b0a78d9"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/holdout_size_35_digit_4.rgba",
+      "bytes": 768000,
+      "sha256": "c7b577db228ba6c547447b2ba8b558016035df95cb4f969c8a1a625bde07e046"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/holdout_fractional_digit_2.rgba",
+      "bytes": 768000,
+      "sha256": "1b6bff63d71289b230b35fe1ab4db032cd489a33f7abe98e2debb04a0393d171"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/holdout_fractional_digit_3.rgba",
+      "bytes": 768000,
+      "sha256": "6cf1e21ed8fd2e867a132c18df47d89d12f39b9cd6f300715cc700df36ba77f7"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/explicit_empty_dark_control.rgba",
+      "bytes": 768000,
+      "sha256": "a296ba01a5262a0c20779022b40179964620a1c050b8485d8dced0f01bed1842"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/unrelated_empty_with_wrapped_count_three.rgba",
+      "bytes": 768000,
+      "sha256": "cd437ded4519a7a202a5f071b6240ce25d7b7d73f820bb564cc601fe86fa378d"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/panel_empty_right_disabled.rgba",
+      "bytes": 768000,
+      "sha256": "24abb90bcb7ab9e99932f358b94ef5931f1899e57cc986c63646b8ada2c12db4"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/panel_empty_left_disabled.rgba",
+      "bytes": 768000,
+      "sha256": "741fe819853188a0c6f4ec75b21faba2daf40d2c77083a14daf3b59d6eb6872c"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/panel_empty_right_enabled.rgba",
+      "bytes": 768000,
+      "sha256": "7de080783d458666b6b38afdb7aa1702ca06c35d336fd86ec1d2b38a221812aa"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/panel_empty_left_viewport_edge.rgba",
+      "bytes": 768000,
+      "sha256": "9e32985f3f4a414c8da1d855aa793e5d1c8d2e2e8963bf401a25cee40abe5714"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/panel_empty_no_button.rgba",
+      "bytes": 768000,
+      "sha256": "ce18c3cfa9100ecc7cbcc664be00c47109077fc815d5fbe083af274c27a5e9c0"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/panel_empty_wrong_button.rgba",
+      "bytes": 768000,
+      "sha256": "9ff182c7498c416ea8f7e5aba896f877ee5c30d0694f655a2cefa684107827c5"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/panel_empty_with_rows.rgba",
+      "bytes": 768000,
+      "sha256": "64a7d815d7823eb6f1a5c6cb8e5d2341a625198739fb565d93051ea9aff9947c"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/panel_empty_with_count_two.rgba",
+      "bytes": 768000,
+      "sha256": "15e09e067f7f3be0e3feece65bd876be4ef06d627f985d6216c1c7054a9d684f"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/two_panels_shared_footer.rgba",
+      "bytes": 768000,
+      "sha256": "fc7e2ea5636cb42119f7fa00b8e294311eb6165ec4931cebac7fd9b23b5ac934"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/count_two_timer_9_42.rgba",
+      "bytes": 768000,
+      "sha256": "cb7b08ff5d0bff6dee831af08c6c8fca5603e8e40e5879a246d0f244fb081464"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/count_two_timer_9_41.rgba",
+      "bytes": 768000,
+      "sha256": "05af15c07fd97e3e0dadaed3033e01a9889e1f1e300c2301297e6093ee342baa"
+    },
+    {
+      "path": "verification/seat-object-system/reader-review/fixtures/count_two_second_heading_outside_band.rgba",
+      "bytes": 768000,
+      "sha256": "65aaeb46556143520f653a67a3edc747701f2e8fac2e74dae7c32b615e97c14b"
+    }
+  ]
+}

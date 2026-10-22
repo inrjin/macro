@@ -1,0 +1,179 @@
+{
+  "reviewer": "/root/fix_cancellation_start",
+  "reviewKind": "read-only Windows platform and build prerequisite review",
+  "recordedAtUtc": "2026-10-22T06:19:28.529897+00:00",
+  "release": "0.5.11",
+  "releaseManifest": "verification/release-0.5.11/source-before-build.json",
+  "releaseManifestSHA256": "65f9ab47828be205c5f7cee7c255af364e3e5872007861cc53034c75e9ad9258",
+  "reviewedFiles": [
+    {
+      "path": "crates/macro-platform/src/windows.rs",
+      "sha256": "30980d0285a8e90a10c12f8f880728034ba419524d95781bfeae7d844c413104",
+      "releaseSha256": "30980d0285a8e90a10c12f8f880728034ba419524d95781bfeae7d844c413104",
+      "releaseMatches": true,
+      "stagingSha256": "30980d0285a8e90a10c12f8f880728034ba419524d95781bfeae7d844c413104",
+      "stagingMatches": true
+    },
+    {
+      "path": "crates/macro-platform/src/lib.rs",
+      "sha256": "fad64b68fd3ab41d8f8c06a6b1634f5012b74b59491b81bcaf9e59ebee63e4e0",
+      "releaseSha256": "fad64b68fd3ab41d8f8c06a6b1634f5012b74b59491b81bcaf9e59ebee63e4e0",
+      "releaseMatches": true,
+      "stagingSha256": "fad64b68fd3ab41d8f8c06a6b1634f5012b74b59491b81bcaf9e59ebee63e4e0",
+      "stagingMatches": true
+    },
+    {
+      "path": "crates/macro-platform/build.rs",
+      "sha256": "258beae4fd5a9f7b19e4c5b5faa48acc8cd962698ae707ab79e8b17f98a4f565",
+      "releaseSha256": "258beae4fd5a9f7b19e4c5b5faa48acc8cd962698ae707ab79e8b17f98a4f565",
+      "releaseMatches": true,
+      "stagingSha256": "258beae4fd5a9f7b19e4c5b5faa48acc8cd962698ae707ab79e8b17f98a4f565",
+      "stagingMatches": true
+    },
+    {
+      "path": "src-tauri/Cargo.toml",
+      "sha256": "e202fc400597470bbdbbd42bdd12ad5d6e55d7dda3ef85061acface7fb0688c0",
+      "releaseSha256": "e202fc400597470bbdbbd42bdd12ad5d6e55d7dda3ef85061acface7fb0688c0",
+      "releaseMatches": true,
+      "stagingSha256": "e202fc400597470bbdbbd42bdd12ad5d6e55d7dda3ef85061acface7fb0688c0",
+      "stagingMatches": true
+    },
+    {
+      "path": "src-tauri/tauri.conf.json",
+      "sha256": "e1d45b5c7b6d0e43128b807702db3a603fef5334333b72130f5a112da258ae7c",
+      "releaseSha256": "e1d45b5c7b6d0e43128b807702db3a603fef5334333b72130f5a112da258ae7c",
+      "releaseMatches": true,
+      "stagingSha256": "e1d45b5c7b6d0e43128b807702db3a603fef5334333b72130f5a112da258ae7c",
+      "stagingMatches": true
+    },
+    {
+      "path": "Cargo.toml",
+      "sha256": "a47cc6293efa6607e0ca386d3fd832925046c35bb68784d512be61a11798d3cc",
+      "releaseSha256": "a47cc6293efa6607e0ca386d3fd832925046c35bb68784d512be61a11798d3cc",
+      "releaseMatches": true,
+      "stagingSha256": "a47cc6293efa6607e0ca386d3fd832925046c35bb68784d512be61a11798d3cc",
+      "stagingMatches": true
+    },
+    {
+      "path": "Cargo.lock",
+      "sha256": "317f44d411366e06daa178f78c6b71210f2e5c9dcf3374990cba701edf6cfb5b",
+      "releaseSha256": "317f44d411366e06daa178f78c6b71210f2e5c9dcf3374990cba701edf6cfb5b",
+      "releaseMatches": true,
+      "stagingSha256": "317f44d411366e06daa178f78c6b71210f2e5c9dcf3374990cba701edf6cfb5b",
+      "stagingMatches": true
+    },
+    {
+      "path": "package.json",
+      "sha256": "ed35d13f9849fbb50edae7396383eb307fbe86e8f9818c854d473d059733f59f",
+      "releaseSha256": "ed35d13f9849fbb50edae7396383eb307fbe86e8f9818c854d473d059733f59f",
+      "releaseMatches": true,
+      "stagingSha256": "ed35d13f9849fbb50edae7396383eb307fbe86e8f9818c854d473d059733f59f",
+      "stagingMatches": true
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "d876985643f4533d72c889acbea113b08e44740a2ea1489e2d7827dad7ac1796",
+      "releaseSha256": "d876985643f4533d72c889acbea113b08e44740a2ea1489e2d7827dad7ac1796",
+      "releaseMatches": true,
+      "stagingSha256": "d876985643f4533d72c889acbea113b08e44740a2ea1489e2d7827dad7ac1796",
+      "stagingMatches": true
+    },
+    {
+      "path": "scripts/build-windows.ps1",
+      "sha256": "650e50a31bc131f0bea708ae24d1c5f449c605dba68e25d7679a1d60121d642c",
+      "releaseSha256": "650e50a31bc131f0bea708ae24d1c5f449c605dba68e25d7679a1d60121d642c",
+      "releaseMatches": true,
+      "stagingSha256": "650e50a31bc131f0bea708ae24d1c5f449c605dba68e25d7679a1d60121d642c",
+      "stagingMatches": true
+    },
+    {
+      "path": ".github/workflows/desktop.yml",
+      "sha256": "407e0c3f02c1afcccb5b404473227cd30ceea945f121d7d5a0109b900f91fc89",
+      "releaseSha256": "407e0c3f02c1afcccb5b404473227cd30ceea945f121d7d5a0109b900f91fc89",
+      "releaseMatches": true,
+      "stagingSha256": "407e0c3f02c1afcccb5b404473227cd30ceea945f121d7d5a0109b900f91fc89",
+      "stagingMatches": true
+    },
+    {
+      "path": "crates/macro-core/src/selection_count.rs",
+      "sha256": "0fceaa4eda7e797ef72ed8fed6b5d0273e08c0942444ccd8254cf3ab31cc259d",
+      "releaseSha256": "0fceaa4eda7e797ef72ed8fed6b5d0273e08c0942444ccd8254cf3ab31cc259d",
+      "releaseMatches": true,
+      "stagingSha256": "0fceaa4eda7e797ef72ed8fed6b5d0273e08c0942444ccd8254cf3ab31cc259d",
+      "stagingMatches": true
+    },
+    {
+      "path": "crates/macro-core/src/nol_captcha.rs",
+      "sha256": "af0a56333c4d0787e7aa4cefe1e10674fffe1178450a617880291f46db30b27a",
+      "releaseSha256": "af0a56333c4d0787e7aa4cefe1e10674fffe1178450a617880291f46db30b27a",
+      "releaseMatches": true,
+      "stagingSha256": "af0a56333c4d0787e7aa4cefe1e10674fffe1178450a617880291f46db30b27a",
+      "stagingMatches": true
+    },
+    {
+      "path": "crates/macro-core/src/selection_count_assets/templates.json",
+      "sha256": "52ce816c2e10dadeb681ac796da6af1689f4aacd00e6d2fc6e11484d51989cee",
+      "releaseSha256": "52ce816c2e10dadeb681ac796da6af1689f4aacd00e6d2fc6e11484d51989cee",
+      "releaseMatches": true,
+      "stagingSha256": "52ce816c2e10dadeb681ac796da6af1689f4aacd00e6d2fc6e11484d51989cee",
+      "stagingMatches": true
+    },
+    {
+      "path": "crates/macro-core/src/selection_count_assets/empty-negative.json",
+      "sha256": "eff7d4668bed09ccd7e8fba82b8fc052000ac3ed30e0d729f91e5cef79486a4c",
+      "releaseSha256": "eff7d4668bed09ccd7e8fba82b8fc052000ac3ed30e0d729f91e5cef79486a4c",
+      "releaseMatches": true,
+      "stagingSha256": "eff7d4668bed09ccd7e8fba82b8fc052000ac3ed30e0d729f91e5cef79486a4c",
+      "stagingMatches": true
+    }
+  ],
+  "localWindowsAttempt": {
+    "path": "verification/windows-0.5.11-review/windows-check-attempt.json",
+    "sha256": "e62e64eb0ff844d968a04b7640af4c7365a7c170fc80f9b1504e24a8db799d4c",
+    "details": {
+      "command": [
+        "check",
+        "--locked",
+        "--offline",
+        "-p",
+        "macro-platform",
+        "--target",
+        "x86_64-pc-windows-msvc"
+      ],
+      "host": "macOS arm64",
+      "exitCode": 101,
+      "windowsBinaryBuilt": false,
+      "windowsRuntimeTested": false
+    },
+    "logSHA256": "a4713bad3fed96845cf03bf889e6f3e3c5a55969c6b175e3a3e0a316f6a636ee"
+  },
+  "sourceChangedByReviewer": false,
+  "windowsCompileSucceeded": false,
+  "windowsRuntimeExecuted": false,
+  "liveInputSent": false,
+  "appLaunched": false,
+  "dedicatedWindowsRunnerFound": false,
+  "newDemonstratedCodeBlockers": [],
+  "environmentBlockers": [
+    "x86_64-pc-windows-msvc Rust standard library missing (E0463); native Windows SDK/linker and an actual Windows runner remain unavailable in the reviewed environment."
+  ],
+  "limits": [
+    "GDI capture performance, mixed DPI, multi-monitor placement, focus recovery and Windows key delivery not exercised.",
+    "Windows diagnostic methods return no callback metadata; macOS-only health fields are None.",
+    "Optional raster count recognition has no real Windows screen corpus validation.",
+    "Windows-only cfg tests were not run by macOS test evidence.",
+    "No executable or installer produced by the blocked attempt."
+  ],
+  "primarySources": [
+    "https://learn.microsoft.com/en-us/windows/win32/hidpi/dpi-awareness-context",
+    "https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-setwindowdisplayaffinity",
+    "https://learn.microsoft.com/en-us/windows/win32/winmsg/lowlevelkeyboardproc",
+    "https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-sendinput",
+    "https://v2.tauri.app/start/prerequisites/"
+  ],
+  "reviewDocument": {
+    "path": "verification/windows-0.5.11-review/platform-review.md",
+    "sha256": "37ca5fcc621d70b4a78265e8562f6b5f2d24837779d929af792fbeee586fcefd"
+  },
+  "peerReviewCorrection": "Original scripts/build-windows.ps1 checks LASTEXITCODE after all four external commands; only npm install/unlocked Cargo and missing source/artifact receipt gates were identified."
+}

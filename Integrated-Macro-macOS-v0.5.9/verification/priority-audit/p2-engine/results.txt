@@ -1,0 +1,4 @@
+PASS on-time second-seat popup: actual visual signal -> Esc -> actual restoration -> third pixel candidate, first attempt preserved
+REPRODUCED late first-seat popup: detector attributes it to latest second attempt; failed first attempt remains estimated, accepted second is removed
+REPRODUCED post-completion popup: successful completion delivery ends visual watch, so later pixels generate no failure signal
+3/3 synthetic pixel/production component probes completed; no live browser or native input was executed

@@ -1,0 +1,17 @@
+{
+  "name": "integrated-macro",
+  "version": "0.5.11",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tauri dev",
+    "build": "tauri build",
+    "test": "node --test ui/tests/*.test.js tests/*.test.js",
+    "test:rust": "cargo test --workspace",
+    "check": "node scripts/check.mjs",
+    "tauri": "tauri"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2"
+  }
+}

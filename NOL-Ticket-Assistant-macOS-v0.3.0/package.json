@@ -1,0 +1,17 @@
+{
+  "name": "nol-ticket-assistant",
+  "private": true,
+  "version": "0.3.0",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/core.test.js tests/background.test.js tests/seat-core.test.js tests/mac-link.test.js",
+    "test:browser": "node tests/browser.test.js",
+    "test:extension": "node tests/extension.test.js",
+    "test:entry": "node tests/entry-extension.test.js",
+    "test:seats": "node tests/seat-extension.test.js",
+    "test:browser-all": "node tests/browser.test.js && node tests/extension.test.js && node tests/seat-extension.test.js && node tests/entry-extension.test.js"
+  },
+  "devDependencies": {
+    "playwright-core": "1.58.2"
+  }
+}

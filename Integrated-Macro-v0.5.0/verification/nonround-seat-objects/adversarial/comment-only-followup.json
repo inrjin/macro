@@ -1,0 +1,6 @@
+{
+  "path": "crates/macro-core/src/seat_object_shapes.rs",
+  "testedSHA256": "ce8980bdfb828e773a0d6e1f03ef67cb4bb81f751485a1e5c1d92ca5621398b0",
+  "reviewedSHA256": "33bad8d441317c4a4c6886c3e9b50efab96d9ea340f551b250d36ce6acb88023",
+  "change": "Module documentation lines 2\u20133 only; executable source bytes after initial three lines identical. No tests/benchmarks repeated for prose-only correction."
+}

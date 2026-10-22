@@ -1,0 +1,13 @@
+{
+  "version": "0.5.2",
+  "architecture": "arm64",
+  "sourceSha256Verified": true,
+  "bundleSignatureVerified": true,
+  "executableSha256": "0d7e2b44d65816363277b6232e7b59f6eb93b1bbde580de4c98c16cb67750551",
+  "rustTestsPassed": 77,
+  "javascriptTestsPassed": 46,
+  "nativeSyntheticWindowCasesPassed": 18,
+  "actualMacInputVerified": false,
+  "realBrowserUiVerified": false,
+  "releaseReady": false
+}

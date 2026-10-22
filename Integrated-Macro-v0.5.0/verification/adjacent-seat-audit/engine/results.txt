@@ -1,0 +1,29 @@
+observed inset=0 id=pixel:10:20 point=Point { x: 14.0, y: 24.0 }
+observed inset=0 id=pixel:10:20 point=Point { x: 14.0, y: 24.0 }
+observed inset=0 id=pixel:10:20 point=Point { x: 14.0, y: 24.0 }
+observed inset=0 id=pixel:10:20 point=Point { x: 14.0, y: 24.0 }
+observed inset=0 id=pixel:10:20 point=Point { x: 14.0, y: 24.0 }
+observed inset=0 id=pixel:10:20 point=Point { x: 14.0, y: 24.0 }
+observed inset=0 id=pixel:10:20 point=Point { x: 14.0, y: 24.0 }
+observed inset=0 id=pixel:10:20 point=Point { x: 14.0, y: 24.0 }
+PASS target=2: unchanged component ID is never clicked or counted twice
+observed inset=0 id=pixel:10:20 point=Point { x: 14.0, y: 24.0 }
+observed inset=1 id=pixel:11:21 point=Point { x: 14.0, y: 24.0 }
+REPRODUCED target=2: 2 distinct component IDs count 2 attempts at identical point Point { x: 14.0, y: 24.0 }; site selected=0, completion=true
+observed inset=0 id=pixel:10:20 point=Point { x: 14.0, y: 24.0 }
+observed inset=0 id=pixel:10:20 point=Point { x: 14.0, y: 24.0 }
+observed inset=0 id=pixel:10:20 point=Point { x: 14.0, y: 24.0 }
+observed inset=0 id=pixel:10:20 point=Point { x: 14.0, y: 24.0 }
+observed inset=0 id=pixel:10:20 point=Point { x: 14.0, y: 24.0 }
+observed inset=0 id=pixel:10:20 point=Point { x: 14.0, y: 24.0 }
+observed inset=0 id=pixel:10:20 point=Point { x: 14.0, y: 24.0 }
+observed inset=0 id=pixel:10:20 point=Point { x: 14.0, y: 24.0 }
+PASS target=3: unchanged component ID is never clicked or counted twice
+observed inset=0 id=pixel:10:20 point=Point { x: 14.0, y: 24.0 }
+observed inset=1 id=pixel:11:21 point=Point { x: 14.0, y: 24.0 }
+observed inset=2 id=pixel:12:22 point=Point { x: 14.0, y: 24.0 }
+REPRODUCED target=3: 3 distinct component IDs count 3 attempts at identical point Point { x: 14.0, y: 24.0 }; site selected=1, completion=true
+observed inset=0 id=pixel:10:20 point=Point { x: 14.0, y: 24.0 }
+observed inset=0 id=pixel:10:20 point=Point { x: 14.0, y: 24.0 }
+PASS duplicate/stale ACK control: IDs prevent duplicate ACK counting; the alias is newly generated candidate identity, not repeated ACK handling
+5/5 component-level scenarios completed; 2 are reproductions, not fixed behavior; no OS/browser/site request executed

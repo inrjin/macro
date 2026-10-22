@@ -1,0 +1,11 @@
+navigation=ArrowKeys refreshFlag=false afterDelay=Seats generation=1 observations=1 message=원본 구역 대기 시간 경과 · 현재 화면에서 좌석 탐색 재개
+nextPhysical=1 phase=WaitingRefresh message=취소표 구역 전환 중 · 새 좌석 화면 확인 대기
+navigation=ArrowKeys refreshFlag=true afterDelay=WaitingRefresh generation=0 observations=0 message=새로고침이 끝나면 F6을 누르세요 · 확인 후 좌석 탐색
+nextPhysical=0 phase=Seats message=좌석 탐색 중 · 내부 새로고침을 사용하려면 좌석 화면 새로고침 버튼을 지정하세요
+navigation=TwoRegions { first: Point { point: Point { x: 100.0, y: 10.0 } }, second: Point { point: Point { x: 200.0, y: 10.0 } } } refreshFlag=false afterDelay=Seats generation=1 observations=1 message=원본 구역 대기 시간 경과 · 현재 화면에서 좌석 탐색 재개
+nextPhysical=1 phase=WaitingRefresh message=취소표 구역 전환 중 · 새 좌석 화면 확인 대기
+navigation=TwoRegions { first: Point { point: Point { x: 100.0, y: 10.0 } }, second: Point { point: Point { x: 200.0, y: 10.0 } } } refreshFlag=true afterDelay=WaitingRefresh generation=0 observations=0 message=새로고침이 끝나면 F6을 누르세요 · 확인 후 좌석 탐색
+nextPhysical=0 phase=Seats message=좌석 탐색 중 · 내부 새로고침을 사용하려면 좌석 화면 새로고침 버튼을 지정하세요
+navigation=ArrowKeys normalRegionPriority=true phase=Region physical=0
+navigation=TwoRegions { first: Point { point: Point { x: 100.0, y: 10.0 } }, second: Point { point: Point { x: 200.0, y: 10.0 } } } normalRegionPriority=true phase=Region physical=0
+REPRODUCED: stale internal-refresh flag changes both legacy navigation modes; no OS input or app execution.

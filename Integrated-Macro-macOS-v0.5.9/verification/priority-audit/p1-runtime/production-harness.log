@@ -1,0 +1,23 @@
+   Compiling integrated-macro v0.5.8 (/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/src-tauri)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.97s
+     Running unittests src/main.rs (target/debug/deps/integrated_macro-b7da2ffd8ed18f1e)
+
+running 6 tests
+test runtime::priority_p1_tests::p1_navigation_fence_keeps_current_delivery_and_mode_boundaries ... ok
+test runtime::priority_p1_tests::p1_capture_errors_or_no_cached_pixels_never_become_a_static_scan ... ok
+{"case":"freshness_is_not_region_identity","eligibleSeatPoint":{"x":5.0,"y":5.0},"freshPixels":false,"semanticRegionKnownToRuntime":false,"truthOnlyInTestOracle":"destination_rendered_identical_map"}
+{"case":"legacy_pre_input_pixels","eligibleSeatPoint":{"x":5.0,"y":5.0},"nativeInputSent":false,"navigation":"two_regions","unreadNewSequence":false}
+{"captureSource":"scripted_static_SCK_contract","case":"legitimate_identical_destination","observedUntilMs":3600000,"strictFenceProgress":false}
+{"case":"freshness_is_not_region_identity","eligibleSeatPoint":{"x":5.0,"y":5.0},"freshPixels":false,"semanticRegionKnownToRuntime":false,"truthOnlyInTestOracle":"previous_region_while_destination_loading"}
+{"case":"legacy_pre_input_pixels","eligibleSeatPoint":{"x":5.0,"y":5.0},"nativeInputSent":false,"navigation":"two_regions","unreadNewSequence":true}
+test runtime::priority_p1_tests::p1_second_native_query_replaces_pixels_and_rejects_changed_geometry_or_transparency ... ok
+test runtime::priority_p1_tests::p1_strict_new_pixel_fence_rejects_a_legitimate_static_map_indefinitely ... ok
+{"case":"freshness_is_not_region_identity","eligibleSeatPoint":{"x":5.0,"y":5.0},"freshPixels":true,"semanticRegionKnownToRuntime":false,"truthOnlyInTestOracle":"destination_rendered_identical_map"}
+{"case":"legacy_pre_input_pixels","eligibleSeatPoint":{"x":5.0,"y":5.0},"nativeInputSent":false,"navigation":"keys","unreadNewSequence":false}
+{"case":"freshness_is_not_region_identity","eligibleSeatPoint":{"x":5.0,"y":5.0},"freshPixels":true,"semanticRegionKnownToRuntime":false,"truthOnlyInTestOracle":"previous_region_while_destination_loading"}
+{"case":"legacy_pre_input_pixels","eligibleSeatPoint":{"x":5.0,"y":5.0},"nativeInputSent":false,"navigation":"keys","unreadNewSequence":true}
+test runtime::priority_p1_tests::p1_fresh_idle_and_fresh_pixels_do_not_identify_which_region_the_site_rendered ... ok
+test runtime::priority_p1_tests::p1_legacy_old_cached_and_unread_pre_post_pixels_reach_the_real_preclick_check ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 76 filtered out; finished in 0.00s
+

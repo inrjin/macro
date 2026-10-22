@@ -1,0 +1,10 @@
+[package]
+name = "adjacent-seat-vision-probe"
+version = "0.0.0"
+edition = "2021"
+
+[workspace]
+
+[dependencies]
+macro-core = { path = "../../../crates/macro-core" }
+macro-platform = { path = "../../../crates/macro-platform" }

@@ -1,0 +1,6 @@
+{
+  "scope": "actual macro_core Engine with synthetic events; no OS input, app launch, or user profile access",
+  "library": "/Users/inrjin/Documents/\u6a5f\u68b0\u4eba\u9593/Integrated-Macro-v0.5.0/target/debug/deps/libmacro_core-67a29fe26a635523.rlib",
+  "librarySHA256": "9d699d2f1a3067324dd2f33ffe02cea4d814ee9e1940a01d46b21bb73d478791",
+  "engineSHA256": "16150aa81efbcab50b8c55dcdf65836845efad8fa6ff41e131b66f16bcfda7a0"
+}

@@ -1,0 +1,118 @@
+{
+  "current-radius": [
+    {
+      "scenario": "blank",
+      "microseconds": [
+        47445,
+        26618,
+        24634
+      ],
+      "medianUs": 26618,
+      "counts": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "scenario": "many_components",
+      "microseconds": [
+        156863,
+        157415,
+        157609
+      ],
+      "medianUs": 157415,
+      "counts": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "scenario": "count3_with_map",
+      "microseconds": [
+        283931,
+        282465,
+        284338
+      ],
+      "medianUs": 283931,
+      "counts": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "scenario": "zero_panel_with_map",
+      "microseconds": [
+        298574,
+        298226,
+        303697
+      ],
+      "medianUs": 298574,
+      "counts": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "heading-only": [
+    {
+      "scenario": "blank",
+      "microseconds": [
+        33905,
+        25007,
+        24532
+      ],
+      "medianUs": 25007,
+      "counts": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "scenario": "many_components",
+      "microseconds": [
+        163805,
+        178412,
+        170540
+      ],
+      "medianUs": 170540,
+      "counts": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "scenario": "count3_with_map",
+      "microseconds": [
+        243518,
+        247851,
+        241122
+      ],
+      "medianUs": 243518,
+      "counts": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "scenario": "zero_panel_with_map",
+      "microseconds": [
+        252964,
+        250159,
+        254632
+      ],
+      "medianUs": 252964,
+      "counts": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

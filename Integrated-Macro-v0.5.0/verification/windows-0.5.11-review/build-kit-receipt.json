@@ -1,0 +1,15 @@
+{
+  "version": "0.5.11",
+  "artifactType": "Windows source/build preparation kit, NOT executable distribution",
+  "folder": "/Users/inrjin/Documents/機械人間/Integrated-Macro-Windows-v0.5.11-Build-Kit",
+  "archive": "/Users/inrjin/Documents/機械人間/Integrated-Macro-Windows-v0.5.11-Build-Kit.zip",
+  "archiveBytes": 3078639,
+  "archiveSHA256": "d0e5ed8616f2bdb1e49fd86497d3e2cd557cd460d2cca7c1c10b5777bf36357e",
+  "fileCount": 577,
+  "kitManifestSHA256": "611dd59dc839efa23331f6751c51e6b36f0059d54f1eafeb087c07a296747d88",
+  "sourceFilesMatched": 138,
+  "fixtureFilesMatched": 417,
+  "zipCrcAndEveryFileHashVerified": true,
+  "windowsBinaryProduced": false,
+  "windowsBuildStillBlocked": true
+}

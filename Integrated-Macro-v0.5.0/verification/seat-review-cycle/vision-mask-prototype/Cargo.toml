@@ -1,0 +1,13 @@
+[package]
+name = "seat-shape-mask-prototype"
+version = "0.0.0"
+edition = "2021"
+
+[workspace]
+
+[dependencies]
+macro-core = { path = "core" }
+
+[[test]]
+name = "ring_comparison"
+path = "../ring-comparison.rs"

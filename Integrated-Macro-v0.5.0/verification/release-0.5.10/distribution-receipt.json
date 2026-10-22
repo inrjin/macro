@@ -1,0 +1,87 @@
+{
+  "version": "0.5.10",
+  "distributionPath": "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.10",
+  "archivePath": "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.10.zip",
+  "archiveBytes": 5010843,
+  "archiveSHA256": "560901a742636165171de2739df467060c65cb7724e364243279d9610ab3757b",
+  "distributionFiles": {
+    "Integrated Macro.app/Contents/Info.plist": {
+      "sha256": "cecb4181d86e32cdb742e9a8923e91680ad3d0a0a468b8187394760b8d9f4f02",
+      "mode": 420
+    },
+    "Integrated Macro.app/Contents/MacOS/integrated-macro": {
+      "sha256": "53a848be4d714fb4276f7c85dc2f68fab0f41c82fb245a6b7619c17e9da48a3d",
+      "mode": 493
+    },
+    "Integrated Macro.app/Contents/Resources/icon.icns": {
+      "sha256": "be80f1eb77b66015d3119b9d8483fae0c3684f3169793b93a5372d505b827a7c",
+      "mode": 420
+    },
+    "Integrated Macro.app/Contents/_CodeSignature/CodeResources": {
+      "sha256": "8b2a4458d8753f7d50800825612316fdb422f2d68b7ce3f7a1728de045d089ac",
+      "mode": 420
+    },
+    "README.txt": {
+      "sha256": "6f2245be2b41ff2a75907471ac3672b4aed620139d48763c8f1a875c6a25237c",
+      "mode": 420
+    },
+    "input-check.html": {
+      "sha256": "518d0d95b8a1eacb8941f4dadeb77ce5a480079f37e7ebd3e563cf5363d804e1",
+      "mode": 420
+    },
+    "keyboard-check.html": {
+      "sha256": "40854f9fe41f46d76f5fc54a65afd2502f0bc90db605451b6521188bc85b884b",
+      "mode": 420
+    },
+    "verification/README.txt": {
+      "sha256": "3772794d1d89c0d8747250a0edb2b7fba5f31fd0c5f06d261afc0a9e6832c1cf",
+      "mode": 420
+    },
+    "verification/build-and-checks.log": {
+      "sha256": "a9caa6568212ba4a050c31630d116f21bb291c9de48bf0536dac18523c5c74e2",
+      "mode": 420
+    },
+    "verification/build-result.json": {
+      "sha256": "4651ebd6afe2cd30178ca7866dd0932ea83f51ddbf5e5edee2d2c94d2f53e553",
+      "mode": 420
+    },
+    "verification/fixture-continuity.json": {
+      "sha256": "d56abf32665acf92b3cde70d33c7058ac6e3aed5ea67438ef8a7910e09e412be",
+      "mode": 420
+    },
+    "verification/local-checks.json": {
+      "sha256": "2dae4dbd052a569f7bb34a718f9a59bbc50ba874668a89e2e349b9bcbb7a02cc",
+      "mode": 420
+    },
+    "verification/package-receipt.json": {
+      "sha256": "db783e5e454b78e43858702687edbc629e27b771204063ac02ebb210f1778f36",
+      "mode": 420
+    },
+    "verification/selection-count-audit-final-checks.json": {
+      "sha256": "eee87944e1dc6417e12dae7ec19ca83c3966199ecd53f6669242fa2d60827f0f",
+      "mode": 420
+    },
+    "verification/source-after-build.json": {
+      "sha256": "3f771bfad0037d139025c2a2cbad7cab68c33ceaa1e771eff7e615e794582ad6",
+      "mode": 420
+    },
+    "verification/version-documentation.diff": {
+      "sha256": "864b025353286061e776bd6896f6b92e0b5e1a1cf65848d65e49b09580e67f03",
+      "mode": 420
+    },
+    "verification/version-review-result.json": {
+      "sha256": "7e5f32736b1f4b503805f8ef06f425b25e478f8b0a042ce1ff21c569edcc7975",
+      "mode": 420
+    },
+    "verification/version-version-only.diff": {
+      "sha256": "7683bc0c881fc215829c99a0d93d5e5fd56e18acac7c8a701412895fb23003e3",
+      "mode": 420
+    }
+  },
+  "extractedFilesMatch": true,
+  "extractedSignatureVerified": true,
+  "previousFilesVerifiedUnchanged": 67,
+  "extractVerificationPath": "/private/tmp/macro-0.5.10-verify-b_lbrou1/Integrated-Macro-macOS-v0.5.10",
+  "appLaunched": false,
+  "actualInputTested": false
+}

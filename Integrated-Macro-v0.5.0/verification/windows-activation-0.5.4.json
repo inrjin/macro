@@ -1,0 +1,14 @@
+{
+  "version": "0.5.4",
+  "recordedAt": "2026-10-20T16:21:54.305583+00:00",
+  "check": "Rust host metadata-only typecheck of actual platform lib.rs + windows.rs using temporary target selection harness",
+  "exitCode": 0,
+  "sourceSHA256": {
+    "crates/macro-platform/src/lib.rs": "2a16a9ceaf22127dc38b4a3e7c788c2fa08c7496c3dbd20f692f470a1d46d882",
+    "crates/macro-platform/src/windows.rs": "5245c1b991f9c70dfa080847fca923f4055bde52de32b9a4523974879847badf"
+  },
+  "limits": [
+    "Host compilation emits metadata only. It does not link Windows libraries or verify the Windows target ABI, desktop focus, restoration or input.",
+    "Native activation execution was not attempted."
+  ]
+}

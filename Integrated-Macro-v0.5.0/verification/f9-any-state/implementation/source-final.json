@@ -1,0 +1,11 @@
+{
+  "crates/macro-core/src/model.rs": "c0596021075c8401055eaeb52a86ddc613c33997070676ce69254371e8825ef0",
+  "crates/macro-core/src/engine.rs": "1d061271e3029f109251d6a09f5e456d4942d0df22782c85e10c7beb0bb2cf9c",
+  "crates/macro-core/tests/engine.rs": "48ad810912eb58c9c6a1d1d1e890b6a0006bda7a2dbce80ab626d44d72d07513",
+  "src-tauri/src/runtime.rs": "bb48e9ff2a7443bb3cf03674c9f93539f3c5942ff059ca51becbe5b65ae84599",
+  "src-tauri/src/reentrant_runtime_tests.rs": "ac6f8a8b65a77099781196033c115c1d2e0f40d46de4dc940f66083b8d610d00",
+  "src-tauri/src/f9_any_state_tests.rs": "ee4b57ee2310584bce13e663d9c1c7aa0b173e6e4889540aee517177372368c2",
+  "crates/macro-core/tests/f9_any_state_review.rs": "a95ded1a93b0b5f426b035606673843df63371d14718b3e1e9b22a7c5c32c0d4",
+  "crates/macro-core/tests/reentrant_commands_review.rs": "e4c176917de8ebfd76f2ed398ba516692636adb888d2edf6809e6759c70d968d",
+  "src-tauri/src/main.rs": "931e1a176b937231dc8729bec5e081f7ef43b1e2a441b238da7325338aa3a17a"
+}

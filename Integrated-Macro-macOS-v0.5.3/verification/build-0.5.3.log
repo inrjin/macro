@@ -1,0 +1,219 @@
+PASSED JavaScript behavior tests
+✔ product booking returns an element reference without performing input (4.650167ms)
+✔ sale gate remains disabled while a countdown is visible, then exposes enabled state (0.213375ms)
+✔ full calendar date precedes session selection, then final booking (0.286042ms)
+✔ CAPTCHA and queue take precedence over booking buttons and seat maps behind them (0.118125ms)
+✔ day numbers, wrong month, and impossible full dates cannot select a date (0.112ms)
+✔ exact full date resolves identical day numbers in adjacent months (0.075041ms)
+✔ duplicate visible buttons and duplicate matching dates/sessions are ambiguous (0.124625ms)
+✔ visibility and availability require positive evidence and respect aria-disabled (0.680125ms)
+✔ same URL in different windows/documents retains distinct observation identities (0.227167ms)
+✔ mixed document/frame evidence and reused control IDs are rejected (0.211875ms)
+✔ error absence, stale completion markers and booking-history text never imply success (0.114875ms)
+✔ diagnostic evidence identifies the positive control without adding core event fields (0.121833ms)
+✔ same-time sessions on a different full date are not interchangeable (0.054917ms)
+✔ collector retains control identities and supports explicitly verified selected-state selectors (0.315708ms)
+✔ production UI listeners keep F8 failure visible and save the coordinate after retry (157.827958ms)
+✔ F8 failure remains visible when a legacy armed snapshot arrives after the error event (0.813333ms)
+✔ bootstrap snapshot restores a failure even when its runtime-error event was missed (0.065542ms)
+✔ retry moves failure through reading to captured and preserves the saved point detail (0.062375ms)
+✔ cancel and explicit rearm clear failure without erasing it on unrelated snapshots (0.0635ms)
+✔ unrelated runtime errors do not relabel the coordinate field as failed (0.041292ms)
+✔ failure snapshot and error event can arrive in either order (0.600583ms)
+✔ recovery hints identify F7 reconnect for a changed popup and F8 retry for foreground failure (0.112666ms)
+✔ Accessibility recovery names the macro app and macOS setting without assuming Terminal permissions (0.103833ms)
+✔ unavailable hit test offers F8 retry and reconnect while ambiguous focus requires reconnect (0.070375ms)
+✔ real occlusion keeps actionable obstruction removal and F8 retry (0.089834ms)
+✔ new native capture errors retain original details through snapshot updates (0.063625ms)
+✔ unknown capture failures retain armed versus disarmed retry instructions (0.039625ms)
+✔ new features remain independently off and unknown future screens are not required to save (1.986208ms)
+✔ form serialization preserves runtime metadata and uses the core snake_case contract (0.741916ms)
+✔ sale time round trips in the local timezone, and scheduling only requires its own fields (3.478083ms)
+✔ invalid counts, colors and active URLs receive matching user-facing field names (0.258792ms)
+✔ capture coordinates remain window-relative and rectangle corners may be supplied in either order (0.369166ms)
+✔ original two-region navigation and arrow-key navigation survive save/load (0.197792ms)
+✔ legacy profiles with two-region targets and no desktop metadata retain their targets (0.109333ms)
+✔ selected count uses confirmed IDs and never counts attempted inputs as selected (0.075375ms)
+✔ import rejects unsupported schemas and ignores prototype pollution keys (0.216125ms)
+✔ optional per-zone overrides stay empty until the current zone is configured (0.226083ms)
+✔ two cancellation zones retain independent colors, search bounds, and completion buttons (0.602708ms)
+✔ clearing one zone override restores its common fallback and keeps unrelated overrides (0.5105ms)
+✔ imported per-zone rectangles display correctly without capture metadata (0.109833ms)
+✔ a color-only capture after a 2x to 1x screen change invalidates every old coordinate (0.181167ms)
+✔ changed geometry preserves keyboard navigation and applies only the new point (0.067125ms)
+✔ unchanged capture geometry preserves coordinates during color calibration (0.052333ms)
+✔ small scale rounding matches the native runtime geometry tolerance (0.046958ms)
+✔ new zone bounds inherit common vision exclusions exactly like native capture (0.095916ms)
+✔ scheduled entry requires its visible booking button and keeps it distinct from legacy next (0.148542ms)
+✔ scheduled cancellation does not require the normal-booking entry button (0.040458ms)
+✔ automatic entry without a browser bridge requires normal mode and an explicit entry button (0.070666ms)
+✔ ordinary immediate booking remains valid without an entry target when automatic entry is off (0.0275ms)
+✔ stable seat IDs expose positions and distinguish equal coordinates in different zones (0.085333ms)
+✔ unknown or malformed candidate IDs never invent a spatial position (0.026917ms)
+ℹ tests 51
+ℹ suites 0
+ℹ pass 51
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 229.933125
+PASSED JavaScript syntax: adapters/browser/observer.js
+PASSED JavaScript syntax: scripts/check.mjs
+PASSED JavaScript syntax: ui/app.js
+PASSED JavaScript syntax: ui/capture-state.js
+PASSED JavaScript syntax: ui/model.js
+PASSED JavaScript syntax: ui/overlay.js
+PASSED JavaScript syntax: ui/tests/dom-fixture.mjs
+PASSED JavaScript syntax: ui/tests/run-capture-browser.mjs
+PASSED JavaScript syntax: ui/tests/run-capture-dom.mjs
+PASSED Rust toolchain
+cargo 1.99.1 (5f94df478 2026-08-27)
+PASSED Rust core, platform and desktop tests
+running 12 tests
+test runtime::runtime_tests::capture_labels_reject_unknown_fields_before_arming ... ok
+test clock::tests::timezone_is_explicit_and_equivalent ... ok
+test clock::tests::deadline_uses_monotonic_sample_and_rejects_stale_clock ... ok
+test runtime::runtime_tests::scheduled_entry_requires_an_actual_button_but_f2_keeps_original_navigation ... ok
+test runtime::runtime_tests::stored_entry_coordinates_do_not_enable_a_disabled_feature ... ok
+test runtime::runtime_tests::color_capture_on_new_scale_invalidates_old_coordinates ... ok
+test runtime::runtime_tests::region_capture_updates_region_color_without_changing_seat_color ... ok
+test runtime::runtime_tests::region_capture_does_not_replace_arrow_key_navigation ... ok
+test runtime::runtime_tests::unseen_map_can_be_calibrated_later_without_future_coordinates ... ok
+test runtime::runtime_tests::entry_button_capture_survives_save_and_geometry_change_clears_it ... ok
+test runtime::runtime_tests::per_region_roi_capture_preserves_global_settings ... ok
+test storage::tests::profile_replacement_preserves_unknown_desktop_fields ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 50 tests
+test clearing_scheduled_entry_before_delivery_does_not_fall_through_to_old_coordinates ... ok
+test calibration_cannot_change_color_while_click_outcome_is_pending ... ok
+test additions_default_off_and_old_coordinate_flow_needs_no_hidden_coordinates ... ok
+test duplicate_entry_observation_does_not_repeat_the_same_click ... ok
+test acknowledged_seat_cannot_be_rolled_back_as_undelivered ... ok
+test completion_target_can_be_discovered_after_booking_opens ... ok
+test captcha_completion_after_initial_entry_does_not_imply_ready_seat_screen ... ok
+test completion_bound_while_paused_submits_once_on_resume ... ok
+test captcha_requires_positive_completion_and_obeys_optional_auto_resume ... ok
+test acknowledged_initial_entry_is_not_repeated_after_pause_or_late_cancel ... ok
+test empty_live_frames_do_not_postpone_refresh_forever ... ok
+test enhanced_cancellation_navigation_requires_confirmed_updates ... ok
+test entry_target_cannot_change_while_delivery_is_ambiguous ... ok
+test failed_candidates_return_only_after_confirmed_new_refresh_generation ... ok
+test geometry_invalidation_discards_cancelled_and_queued_legacy_coordinates ... ok
+test entry_target_works_with_or_without_semantic_auto_entry_flag ... ok
+test geometry_invalidation_after_entry_clears_old_coordinates_without_replaying_them ... ok
+test geometry_invalidation_preserves_selected_seats_and_requires_new_candidates ... ok
+test input_ack_is_not_selection_evidence_in_recovery_mode ... ok
+test invalid_counts_and_schema_versions_are_rejected ... ok
+test geometry_invalidation_rejects_ambiguous_initial_delivery_without_mutation ... ok
+test new_single_region_priority_does_not_alternate_original_f2_regions ... ok
+test late_conflict_at_selection_complete_reopens_only_missing_seat ... ok
+test legacy_click_sequence_tracks_attempts_and_waits_for_real_completion ... ok
+test manually_closed_known_conflict_can_continue_after_undelivered_escape ... ok
+test normal_mode_ignores_legacy_region_overrides_and_missing_values_fall_back ... ok
+test original_f2_ignores_the_normal_booking_entry_target ... ok
+test original_cancellation_blank_maps_keep_alternating_without_manual_confirmation ... ok
+test original_optional_date_session_next_sequence_and_delays_remain ... ok
+test pause_drops_stale_candidate_frame_and_resume_waits_for_current_click_result ... ok
+test partial_failure_retains_one_and_fills_exactly_one_shortfall ... ok
+test original_f2_uses_each_regions_color_roi_and_completion_target ... ok
+test pausing_before_sale_keeps_entry_pending_until_resume ... ok
+test proven_undelivered_initial_entry_retries_once_after_pause ... ok
+test paused_calibration_preserves_partial_selection_and_rejected_candidates ... ok
+test proven_undelivered_seat_cancellation_allows_fresh_retry_after_pause ... ok
+test region_click_waits_for_identified_seat_map_before_any_seat_click ... ok
+test scheduled_entry_clicks_at_deadline_once_then_waits_for_confirmed_seat_map ... ok
+test site_auto_refresh_waits_for_external_evidence_without_requesting_a_button ... ok
+test selection_reconciliation_handles_server_clearing_all_seats ... ok
+test region_settings_validate_limits_and_can_change_during_pause ... ok
+test unacknowledged_input_faults_without_retrying_the_click ... ok
+test undelivered_completion_can_resume_without_losing_selected_seat ... ok
+test undelivered_entry_can_be_recalibrated_before_retry ... ok
+test timed_multi_stage_entry_uses_enabled_controls_and_exact_date_session ... ok
+test undelivered_f2_navigation_restores_zone_and_does_not_scan_before_retry ... ok
+test undelivered_legacy_date_is_requeued_instead_of_skipped ... ok
+test unexpected_ack_and_late_selection_events_do_not_affect_new_runs ... ok
+test visible_entry_target_validation_rejects_invalid_coordinates ... ok
+test updating_or_clearing_entry_after_delivery_never_reclicks_or_skips_manual_wait ... ok
+
+test result: ok. 50 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 11 tests
+test monotonic_sale_deadline_is_armed_once_without_wall_clock_polling ... ok
+test capture_pixels_map_to_bound_content_with_os_scale ... ok
+test invalid_clock_samples_and_corrupt_pixel_buffers_are_rejected ... ok
+test inconsistent_server_samples_expand_uncertainty ... ok
+test central_region_always_beats_a_closer_side_region ... ok
+test http_date_second_precision_is_explicit_not_millisecond_accuracy ... ok
+test three_fastest_samples_exclude_one_slow_outlier ... ok
+test borrowed_padded_native_capture_matches_packed_capture_without_copying ... ok
+test concave_component_click_is_on_color_not_empty_centroid ... ok
+test excludes_legend_and_outside_roi_before_extracting_components ... ok
+test top_first_seat_priority_is_distinct_from_stage_region_priority ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 6 tests
+test macos::tests::focused_window_error_keeps_actionable_native_code ... ok
+test tests::invalid_frame_coordinates_never_read_another_row ... ok
+test macos::tests::window_title_pipe_is_not_mistaken_for_native_error ... ok
+test tests::retina_frame_uses_actual_scale_and_stride ... ok
+test tests::native_error_keeps_its_code_when_runtime_converts_it_to_text ... ok
+test tests::negative_monitor_origin_is_preserved_and_outside_points_rejected ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+   Compiling macro-platform v0.5.3 (/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/crates/macro-platform)
+   Compiling integrated-macro v0.5.3 (/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/src-tauri)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.14s
+     Running unittests src/main.rs (target/debug/deps/integrated_macro-eead08e4bc3243bc)
+     Running unittests src/lib.rs (target/debug/deps/macro_core-f9075ea1162144ff)
+     Running tests/engine.rs (target/debug/deps/engine-6c2c8e12b207392f)
+     Running tests/vision_clock.rs (target/debug/deps/vision_clock-fcaca02dc1d70215)
+     Running unittests src/lib.rs (target/debug/deps/macro_platform-490cafe5298f3d61)
+   Doc-tests macro_core
+   Doc-tests macro_platform
+PASSED macOS packaged application
+> integrated-macro@0.5.3 build
+> tauri build --bundles app --ci -- --offline --locked
+
+Signing with identity "-"
+Signing /Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/target/release/bundle/macos/Integrated Macro.app/Contents/MacOS/integrated-macro
+Signing with identity "-"
+Signing /Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/target/release/bundle/macos/Integrated Macro.app
+
+        Info Looking up installed tauri packages to check mismatched versions...
+   Compiling macro-platform v0.5.3 (/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/crates/macro-platform)
+   Compiling integrated-macro v0.5.3 (/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/src-tauri)
+   Compiling macro-core v0.5.3 (/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/crates/macro-core)
+    Finished `release` profile [optimized] target(s) in 1m 11s
+       Built application at: /Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/target/release/integrated-macro
+    Bundling Integrated Macro.app (/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/target/release/bundle/macos/Integrated Macro.app)
+     Signing with identity "-"
+/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/target/release/bundle/macos/Integrated Macro.app/Contents/MacOS/integrated-macro: replacing existing signature
+/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/target/release/bundle/macos/Integrated Macro.app: replacing existing signature
+        Warn skipping app notarization, no APPLE_ID & APPLE_PASSWORD & APPLE_TEAM_ID or APPLE_API_KEY & APPLE_API_ISSUER & APPLE_API_KEY_PATH environment variables found
+    Finished 1 bundle at:
+        /Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/target/release/bundle/macos/Integrated Macro.app (11.67 MiB)
+PASSED macOS application signature

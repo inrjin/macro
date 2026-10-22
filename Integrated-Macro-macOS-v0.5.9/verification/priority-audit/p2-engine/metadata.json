@@ -1,0 +1,29 @@
+{
+  "compileCommand": [
+    "/Users/inrjin/Documents/\u6a5f\u68b0\u4eba\u9593/Integrated-Macro-v0.5.0/.build-tools/cargo/bin/rustc",
+    "--edition=2021",
+    "/Users/inrjin/Documents/\u6a5f\u68b0\u4eba\u9593/Integrated-Macro-v0.5.0/verification/priority-audit/p2-engine/visual_path.rs",
+    "--extern",
+    "macro_core=/Users/inrjin/Documents/\u6a5f\u68b0\u4eba\u9593/Integrated-Macro-v0.5.0/target/debug/deps/libmacro_core-67a29fe26a635523.rlib",
+    "-L",
+    "/Users/inrjin/Documents/\u6a5f\u68b0\u4eba\u9593/Integrated-Macro-v0.5.0/target/debug/deps",
+    "-o",
+    "/private/tmp/macro-priority-p2-visual-path"
+  ],
+  "runCommand": [
+    "/private/tmp/macro-priority-p2-visual-path"
+  ],
+  "compileExitCode": 0,
+  "runExitCode": 0,
+  "linkedLibrary": "target/debug/deps/libmacro_core-67a29fe26a635523.rlib",
+  "linkedLibrarySha256": "9d699d2f1a3067324dd2f33ffe02cea4d814ee9e1940a01d46b21bb73d478791",
+  "sourceSha256": {
+    "crates/macro-core/src/engine.rs": "16150aa81efbcab50b8c55dcdf65836845efad8fa6ff41e131b66f16bcfda7a0",
+    "crates/macro-core/src/vision.rs": "51f79259d9c89481c44a831d2a1095584bdb33f40ba5961a783cb68c98f3ec1d",
+    "crates/macro-core/src/visual_dialog.rs": "f81ed79014d3c77e38fc3fc93434f5aaa1ad26f5f12db270a9a0d2a6513be2a1",
+    "src-tauri/src/visual_recovery.rs": "3dd16f6fb7a1531edaff7f92b1a31b0fad570fbf76801f682625ae1c263b4e29",
+    "src-tauri/src/runtime.rs": "b2852440f8cae52bb39251fb763d9cf2c2aa13686c49e6c121dabd8b39b36db2",
+    "verification/priority-audit/p2-engine/visual_path.rs": "da657d101bab33fec62760b77f0e69f3f0ea156c54a6d600dabef0f0bcfaf2a2"
+  },
+  "scope": "synthetic pixels + actual vision/Engine/VisualRecovery; copied small runtime signal dispatch/reset only; no native/browser execution"
+}

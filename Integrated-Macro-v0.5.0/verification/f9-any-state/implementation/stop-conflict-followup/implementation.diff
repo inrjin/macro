@@ -1,0 +1,321 @@
+--- before/crates/macro-core/src/engine.rs
++++ after/crates/macro-core/src/engine.rs
+@@ -1072,6 +1072,12 @@
+         } else { self.confirmation_phase() }
+     }
+ 
++    /// The adapter may retain only this checkpoint while input is stopped.
++    /// It does not establish that the dialog has closed or authorize input.
++    pub fn has_unresolved_conflict(&self) -> bool {
++        self.restart_phase() == Phase::Conflict
++    }
++
+     /// A repeated F9 never replays entry and never forgets delivered selections.
+     fn restart_post_entry(&mut self, actions: &mut Vec<Action>) {
+         if let Some(id) = self.pending.as_ref().map(|pending| pending.id) {
+--- before/src-tauri/src/runtime.rs
++++ after/src-tauri/src/runtime.rs
+@@ -740,6 +740,24 @@
+             candidate_id: candidate_id.clone(), result: SeatOutcome::Conflict,
+         })
+     }
++}
++
++fn cancel_unposted_actions(engine: &mut Engine, actions: &mut VecDeque<Action>, now: u64) {
++    for action in actions.drain(..) {
++        if !matches!(action.kind, ActionKind::Observe { .. }) {
++            // This queue contains only actions that have not entered native input.
++            let _ = engine.step(Event::ActionCancelled { id:action.id }, now);
++        }
++    }
++}
++
++fn stopped_conflict_context(current: Option<RestartContext>, previous: Option<RestartContext>,
++    visual: &mut VisualRecovery) -> Option<RestartContext> {
++    let context = current.or(previous).filter(|context| context.engine.has_unresolved_conflict());
++    // Stopped performs no observation/input. Retain only an already detected
++    // incident, never an ordinary speculative seat watch.
++    if context.is_none() || !visual.is_incident() { visual.reset(); }
++    context
+ }
+ 
+ fn start_profile_save_needed(profile: &Value, revision: u64, stored: &Value, current_revision: u64) -> Result<bool, String> {
+@@ -3768,13 +3786,11 @@
+                 Ok(serde_json::to_value(windows).map_err(|e| e.to_string())?)
+             }
+             Command::Bind(id) => {
+-                self.restart_context = None;
+                 if self.active() { return Err("브라우저 연결을 변경하려면 먼저 일시정지하세요.".into()); }
+                 self.deactivate_enter_watch();
+                 self.deactivate_captcha_input_watch();
+                 self.captcha_input_watch_error = None;
+                 self.target_recovery = None;
+-                self.visual_recovery.reset();
+                 self.nol_captcha.reset();
+                 self.nol_handoff_pending = false;
+                 self.cancel_capture("브라우저 연결 변경으로 좌표 채집을 취소했습니다.");
+@@ -3787,6 +3803,8 @@
+                 adapter.bind(target.clone()).map_err(|e| e.to_string())?;
+                 reset_engine_after_rebind(&mut self.engine, &self.profile, changed_context)?;
+                 if changed_context {
++                    self.restart_context = None;
++                    self.visual_recovery.reset();
+                     self.actions.clear();
+                     self.selection_count_input_proof = None;
+                     self.selection_count_read_cache = None;
+@@ -3794,6 +3812,8 @@
+                     self.run_shortcut_epoch = None;
+                     self.run_id = self.run_id.saturating_add(1);
+                     self.run_started_at = Instant::now();
++                } else {
++                    self.visual_recovery.same_target_stream_restarted();
+                 }
+                 self.frame = None;
+                 self.last_sequence = None;
+@@ -3902,13 +3922,16 @@
+                 self.command(Command::Resume)
+             }
+             Command::Stop => {
+-                self.restart_context = None;
+                 self.target_recovery = None;
+-                self.visual_recovery.reset();
++                // Cancellation must precede the checkpoint: a queued Esc has
++                // not been delivered and must not retain a successful-Esc latch.
++                self.cancel_queued_actions();
++                let current = self.engine.has_unresolved_conflict().then(|| self.capture_restart_context());
++                self.restart_context = stopped_conflict_context(current,
++                    self.restart_context.take(), &mut self.visual_recovery);
+                 self.interrupt.store(false, Ordering::SeqCst);
+                 self.cancel_capture("중지하여 좌표 채집도 취소했습니다.");
+                 self.capture_armed = false;
+-                self.actions.clear();
+                 self.feed(Event::Stop);
+                 self.runtime_message = Some("중지했습니다.".into());
+                 Ok(self.snapshot_value())
+@@ -4406,14 +4429,8 @@
+ 
+     fn cancel_queued_actions(&mut self) {
+         self.selection_count_input_proof = None;
+-        let ids: Vec<u64> = self.actions.drain(..).filter_map(|action| {
+-            (!matches!(action.kind, ActionKind::Observe { .. })).then_some(action.id)
+-        }).collect();
+-        for id in ids {
+-            let now = self.now();
+-            // These IDs are still in our queue, so no native call has occurred.
+-            let _ = self.engine.step(Event::ActionCancelled { id }, now);
+-        }
++        let now = self.now();
++        cancel_unposted_actions(&mut self.engine, &mut self.actions, now);
+     }
+ 
+     fn cancel_capture(&mut self, reason: &str) {
+--- before/src-tauri/src/f9_any_state_tests.rs
++++ after/src-tauri/src/f9_any_state_tests.rs
+@@ -139,3 +139,148 @@
+         assert!(!capture_commit_current(capture.shortcut_epoch,handle.shortcut_epoch.load(Ordering::SeqCst)));
+     }
+ }
++
++fn conflict_sample(sequence: u64, popup: bool) -> macro_core::visual_dialog::VisualSample {
++    let mut rgba = vec![200;64*48*4];
++    for (i,pixel) in rgba.chunks_exact_mut(4).enumerate() {
++        pixel[3] = 255;
++        if popup && (20..44).contains(&(i%64)) && (16..32).contains(&(i/64)) {
++            pixel[..3].fill(30);
++        }
++    }
++    macro_core::visual_dialog::sample_frame(macro_core::vision::RgbaView {
++        width:64,height:48,stride:256,rgba:&rgba},sequence).unwrap()
++}
++
++fn conflict_checkpoint(engine: &Engine) -> RestartContext {
++    RestartContext {engine:engine.clone(),target_id:Some(5),geometry:None,
++        run_id:8,started_at:Instant::now(),count_receipt:None}
++}
++
++fn only_input(actions: &[Action]) -> &Action {
++    let inputs:Vec<_> = actions.iter().filter(|action| !matches!(action.kind,ActionKind::Observe {..})).collect();
++    assert_eq!(inputs.len(),1,"{actions:?}");
++    inputs[0]
++}
++
++#[test]
++fn stop_and_f9_preserve_known_dialog_and_only_retry_undelivered_escape() {
++    for visual in [false,true] { for delivery in ["queued","failed","delivered"] {
++        let mut profile = Profile::default();
++        profile.target_seats = 2;
++        profile.features.conflict_recovery = true;
++        let mut engine = Engine::new(profile.clone()).unwrap();
++        engine.step(Event::Start {mode:if visual {RunMode::Seats} else {RunMode::Normal}},0);
++        let actions = engine.step(Event::CandidatesObserved {generation:0,candidates:vec![candidate()]},1);
++        let seat = only_input(&actions).clone();
++        engine.step(Event::ActionAcknowledged {id:seat.id,success:true,detail:String::new()},2);
++        let mut recovery = VisualRecovery::default();
++        let event = if visual {
++            let attempt = engine.snapshot().delivered_attempts[0].clone();
++            recovery.arm(conflict_sample(1,false),attempt);
++            match recovery.observe(conflict_sample(2,true)).unwrap().unwrap() {
++                VisualSignal::Suspected {attempt,..} => Event::DeliveredSeatResult {
++                    action_id:attempt.action_id,candidate_id:attempt.candidate_id,result:SeatOutcome::Conflict},
++                _ => panic!("the synthetic popup must produce a real visual incident"),
++            }
++        } else { Event::SeatResult {candidate_id:"a".into(),result:SeatOutcome::Conflict} };
++        let mut queue:VecDeque<_> = engine.step(event,3).into();
++        let escape = only_input(queue.make_contiguous()).clone();
++        if delivery != "queued" {
++            queue.clear(); // native call has already consumed the action
++            engine.step(Event::ActionAcknowledged {id:escape.id,success:delivery=="delivered",detail:String::new()},4);
++        }
++        // These are the production Stop helpers, in actual caller order. The
++        // live Worker/adapter is not instantiated by this deterministic test.
++        cancel_unposted_actions(&mut engine,&mut queue,5);
++        let current = engine.has_unresolved_conflict().then(||conflict_checkpoint(&engine));
++        let mut checkpoint = stopped_conflict_context(current,None,&mut recovery);
++        engine.step(Event::Stop,5);
++        assert_eq!(engine.snapshot().phase,Phase::Stopped);
++        assert!(queue.is_empty());
++        assert!(engine.step(Event::Tick,6).is_empty());
++        assert!(engine.step(Event::ActionAcknowledged {id:escape.id,success:true,detail:String::new()},6).is_empty());
++        // A repeated F4 has no active Conflict engine but keeps its known checkpoint.
++        cancel_unposted_actions(&mut engine,&mut queue,7);
++        checkpoint = stopped_conflict_context(None,checkpoint,&mut recovery);
++        engine.step(Event::Stop,7);
++        assert_eq!(recovery.is_incident(),visual);
++        engine = checkpoint.unwrap().engine; // existing F9 supersede restoration
++        let actions = engine.restart_after_entry(profile,8).unwrap();
++        assert!(actions.iter().all(|a| matches!(a.kind,ActionKind::Observe {..})));
++        assert_eq!(engine.snapshot().phase,Phase::Conflict,"{visual}/{delivery}");
++        if visual { assert!(recovery.observe(conflict_sample(3,true)).unwrap().is_none()); }
++        let retry = known_conflict_retry_event(&engine.snapshot(),recovery.is_incident()).unwrap();
++        let actions = engine.step(retry,9);
++        if delivery == "delivered" {
++            assert!(actions.iter().all(|a| matches!(a.kind,ActionKind::Observe {..})));
++        } else {
++            let input = only_input(&actions);
++            assert!(matches!(input.kind,ActionKind::Key {key:Key::Escape,..}));
++            assert!(input.id>escape.id);
++            engine.step(Event::ActionAcknowledged {id:input.id,success:true,detail:String::new()},10);
++        }
++        if visual { assert!(matches!(recovery.observe(conflict_sample(4,false)).unwrap(),Some(VisualSignal::Restored {..}))); }
++        engine.step(Event::ConflictDialogGone,11);
++        assert!(engine.snapshot().attempted_ids.is_empty());
++        assert!(engine.snapshot().rejected_ids.contains(&"a".into()));
++        let mut next = candidate();next.id="b".into();next.point.x=60.0;next.target=Target::Point {point:next.point};
++        let actions = engine.step(Event::CandidatesObserved {generation:engine.snapshot().generation,candidates:vec![candidate(),next]},12);
++        assert!(matches!(&only_input(&actions).kind,ActionKind::Click {purpose,..} if purpose=="seat:b"));
++    }}
++}
++
++#[test]
++fn ordinary_stop_discards_speculative_watch_and_restored_image_closes_retained_incident() {
++    let (mut engine,_) = delivered(false);
++    let attempt = engine.snapshot().delivered_attempts[0].clone();
++    let mut recovery = VisualRecovery::default();
++    recovery.arm(conflict_sample(1,false),attempt);
++    assert!(stopped_conflict_context(None,None,&mut recovery).is_none());
++    assert!(!recovery.is_armed());
++    let attempt = engine.snapshot().delivered_attempts[0].clone();
++    recovery.arm(conflict_sample(1,false),attempt);
++    let Some(VisualSignal::Suspected {attempt,..}) = recovery.observe(conflict_sample(2,true)).unwrap() else {panic!()};
++    let mut queue:VecDeque<_> = engine.step(Event::DeliveredSeatResult {
++        action_id:attempt.action_id,candidate_id:attempt.candidate_id,result:SeatOutcome::Conflict},4).into();
++    cancel_unposted_actions(&mut engine,&mut queue,5);
++    let checkpoint = stopped_conflict_context(Some(conflict_checkpoint(&engine)),None,&mut recovery).unwrap();
++    engine.step(Event::Stop,5);
++    engine = checkpoint.engine;
++    let profile = engine.profile().clone();
++    engine.restart_after_entry(profile,6).unwrap();
++    // observe_frame runs before the retry helper: a popup already closed while
++    // stopped releases the incident without an unnecessary Esc.
++    assert!(matches!(recovery.observe(conflict_sample(3,false)).unwrap(),Some(VisualSignal::Restored {..})));
++    engine.step(Event::ConflictDialogGone,7);
++    assert!(known_conflict_retry_event(&engine.snapshot(),recovery.is_incident()).is_none());
++    assert_eq!(engine.snapshot().phase,Phase::Seats);
++}
++
++#[test]
++fn same_window_rebind_restarts_visual_sequence_without_forgetting_incident_pixels() {
++    let (mut engine,_) = delivered(false);
++    let attempt = engine.snapshot().delivered_attempts[0].clone();
++    let mut recovery = VisualRecovery::default();
++    recovery.arm(conflict_sample(100,false),attempt);
++    let Some(VisualSignal::Suspected {attempt,..}) = recovery.observe(conflict_sample(101,true)).unwrap() else {panic!()};
++    engine.step(Event::DeliveredSeatResult {action_id:attempt.action_id,
++        candidate_id:attempt.candidate_id,result:SeatOutcome::Conflict},4);
++    let checkpoint = stopped_conflict_context(Some(conflict_checkpoint(&engine)),None,&mut recovery).unwrap();
++    engine.step(Event::Stop,5);
++    // The actual Bind caller invokes this only after adapter.bind succeeds
++    // with the same ID/PID; a driver failure is not simulated by this test.
++    recovery.same_target_stream_restarted();
++    assert!(recovery.is_incident());
++    assert!(recovery.observe(conflict_sample(1,true)).unwrap().is_none());
++    assert_eq!(recovery.latest_report().unwrap().baseline_sequence,100);
++    assert!(recovery.is_incident());
++    engine = checkpoint.engine;
++    let profile = engine.profile().clone();engine.restart_after_entry(profile,6).unwrap();
++    let Some(VisualSignal::Restored {report}) = recovery.observe(conflict_sample(2,false)).unwrap() else {panic!()};
++    assert_eq!(report.baseline_sequence,100,"original source provenance is retained");
++    assert_eq!(report.sequence,2);
++    engine.step(Event::ConflictDialogGone,7);
++    assert_eq!(engine.snapshot().phase,Phase::Seats);
++    assert!(!recovery.is_armed());
++}
+--- before/src-tauri/src/visual_recovery.rs
++++ after/src-tauri/src/visual_recovery.rs
+@@ -18,6 +18,7 @@
+     baseline: VisualSample,
+     attempt: DeliveredSeatAttempt,
+     last_sequence: u64,
++    restarted_stream: bool,
+     incident: bool,
+ }
+ 
+@@ -35,6 +36,7 @@
+         if self.is_incident() { return false; }
+         self.armed = Some(ArmedObservation {
+             last_sequence: sample.sequence,
++            restarted_stream: false,
+             baseline: sample,
+             attempt,
+             incident: false,
+@@ -49,9 +51,19 @@
+     pub fn observe(&mut self, sample: VisualSample) -> Result<Option<VisualSignal>, ValidationError> {
+         let Some(armed) = self.armed.as_mut() else { return Ok(None); };
+         if sample.sequence <= armed.last_sequence { return Ok(None); }
+-        let Some(report) = compare_samples(&armed.baseline, &sample, &self.config)? else {
++        // Native sequence numbers restart after a successful same-target bind.
++        // Compare retained pixels against the new stream without changing the
++        // original baseline provenance or any native/count frame metadata.
++        let mut comparison_baseline;
++        let baseline = if armed.restarted_stream {
++            comparison_baseline = armed.baseline.clone();
++            comparison_baseline.sequence = 0;
++            &comparison_baseline
++        } else { &armed.baseline };
++        let Some(mut report) = compare_samples(baseline, &sample, &self.config)? else {
+             return Ok(None);
+         };
++        report.baseline_sequence = armed.baseline.sequence;
+         armed.last_sequence = sample.sequence;
+         self.report = Some(report);
+         if armed.incident {
+@@ -70,6 +82,19 @@
+ 
+     pub fn is_incident(&self) -> bool {
+         self.armed.as_ref().is_some_and(|armed| armed.incident)
++    }
++
++    /// Call only after a successful bind to the same window and process. A
++    /// known incident keeps its baseline pixels, original sequence provenance
++    /// and attributed attempt; only new-stream ordering starts again at zero.
++    /// Consequently report baseline/current sequences may belong to different
++    /// capture streams. A failed bind must not call this method.
++    pub fn same_target_stream_restarted(&mut self) {
++        if let Some(armed) = self.armed.as_mut().filter(|armed| armed.incident) {
++            armed.last_sequence = 0;
++            armed.restarted_stream = true;
++            self.report = None;
++        } else { self.reset(); }
+     }
+ 
+     pub fn reset(&mut self) {

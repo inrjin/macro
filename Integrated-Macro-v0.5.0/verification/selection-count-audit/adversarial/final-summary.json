@@ -1,0 +1,256 @@
+{
+  "status": "Final independent reader regression and static timing checks passed; no unresolved reproduced blocker in this audit corpus. Not a universal OCR or live-site guarantee.",
+  "source": {
+    "crates/macro-core/src/selection_count.rs": "0fceaa4eda7e797ef72ed8fed6b5d0273e08c0942444ccd8254cf3ab31cc259d",
+    "crates/macro-core/src/selection_count_layout.rs": "386de039c740adc1c29de32b717783ac08f3bb02fd076235990850fb4976810d",
+    "crates/macro-core/src/selection_count_assets/templates.json": "52ce816c2e10dadeb681ac796da6af1689f4aacd00e6d2fc6e11484d51989cee",
+    "crates/macro-core/src/selection_count_assets/empty-negative.json": "eff7d4668bed09ccd7e8fba82b8fc052000ac3ed30e0d729f91e5cef79486a4c",
+    "crates/macro-core/tests/selection_count_audit_reader.rs": "0f1a021fba85ebe9ac8814c507de662d66b6328e5c1d288b0c0132135518571f"
+  },
+  "environment": {
+    "os": "macOS 26.5.2 (25F84)",
+    "arch": "arm64",
+    "profile": "release optimized",
+    "wallClockGuarantee": false
+  },
+  "testLog": "final-adopted-corpus.log",
+  "tests": {
+    "passed": 9,
+    "failed": 0,
+    "ignored": 1
+  },
+  "fixtures": {
+    "total": 220,
+    "groupResults": {
+      "empty_contradiction": {
+        "total": 32,
+        "correct": 0,
+        "unknown": 32,
+        "wrong": 0
+      },
+      "font_scale": {
+        "total": 50,
+        "correct": 46,
+        "unknown": 4,
+        "wrong": 0
+      },
+      "heldout_font": {
+        "total": 40,
+        "correct": 26,
+        "unknown": 14,
+        "wrong": 0
+      },
+      "contrast": {
+        "total": 20,
+        "correct": 20,
+        "unknown": 0,
+        "wrong": 0
+      },
+      "cut_base": {
+        "total": 4,
+        "correct": 4,
+        "unknown": 0,
+        "wrong": 0
+      },
+      "background": {
+        "total": 4,
+        "correct": 0,
+        "unknown": 4,
+        "wrong": 0
+      },
+      "empty_neighbor": {
+        "total": 6,
+        "correct": 3,
+        "unknown": 3,
+        "wrong": 0
+      },
+      "zero_support": {
+        "total": 26,
+        "correct": 26,
+        "unknown": 0,
+        "wrong": 0
+      },
+      "zero_extra": {
+        "total": 26,
+        "correct": 0,
+        "unknown": 26,
+        "wrong": 0
+      },
+      "context": {
+        "total": 4,
+        "correct": 0,
+        "unknown": 4,
+        "wrong": 0
+      },
+      "duplicate": {
+        "total": 5,
+        "correct": 0,
+        "unknown": 5,
+        "wrong": 0
+      },
+      "zero": {
+        "total": 3,
+        "correct": 2,
+        "unknown": 1,
+        "wrong": 0
+      }
+    },
+    "policyResults": {
+      "unreadable": {
+        "total": 71,
+        "correct": 0,
+        "unknown": 71,
+        "wrong": 0
+      },
+      "correct_or_unreadable": {
+        "total": 106,
+        "correct": 84,
+        "unknown": 22,
+        "wrong": 0
+      },
+      "confirmed": {
+        "total": 43,
+        "correct": 43,
+        "unknown": 0,
+        "wrong": 0
+      }
+    },
+    "wrongConfirmedCount": 0,
+    "unrecognizedOptionalCases": [
+      "holdout_20_5",
+      "holdout_20_6",
+      "holdout_26_5",
+      "holdout_26_8",
+      "font_georgia_0",
+      "font_georgia_1",
+      "font_georgia_2",
+      "font_georgia_5",
+      "font_georgia_6",
+      "font_georgia_7",
+      "font_georgia_8",
+      "font_georgia_9",
+      "font_menlo_0",
+      "font_menlo_1",
+      "font_menlo_6",
+      "font_verdana_1",
+      "font_verdana_6",
+      "font_verdana_8",
+      "background_250",
+      "background_245",
+      "background_235",
+      "background_220"
+    ]
+  },
+  "digitOcclusions": {
+    "digitOcclusionCorrect": 36,
+    "digitOcclusionUnknown": 76,
+    "digitOcclusionWrong": 0
+  },
+  "denseMapControl": {
+    "seats": 1800,
+    "seatWidth": 15,
+    "seatHeight": 13,
+    "horizontalGap": 3,
+    "expectedCount": 3,
+    "result": "passed",
+    "test": "dense_seat_map_noise_keeps_the_same_readable_count"
+  },
+  "manualTiming": {
+    "log": "final-adopted-performance.log",
+    "passed": 1,
+    "failed": 0,
+    "scenarios": [
+      {
+        "counts": [
+          null,
+          null,
+          null
+        ],
+        "height": 1608,
+        "manualScenario": "blank",
+        "readerUs": [
+          33879,
+          25525,
+          25308
+        ],
+        "scope": "optimized static synthetic reader only, 3 samples; not end-to-end app latency",
+        "width": 3024,
+        "medianUs": 25525
+      },
+      {
+        "counts": [
+          null,
+          null,
+          null
+        ],
+        "height": 1608,
+        "manualScenario": "many_components",
+        "readerUs": [
+          159314,
+          159659,
+          164144
+        ],
+        "scope": "optimized static synthetic reader only, 3 samples; not end-to-end app latency",
+        "width": 3024,
+        "medianUs": 159659
+      },
+      {
+        "counts": [
+          3,
+          3,
+          3
+        ],
+        "height": 1608,
+        "manualScenario": "count3_with_map",
+        "readerUs": [
+          252898,
+          253156,
+          242480
+        ],
+        "scope": "optimized static synthetic reader only, 3 samples; not end-to-end app latency",
+        "width": 3024,
+        "medianUs": 252898
+      },
+      {
+        "counts": [
+          0,
+          0,
+          0
+        ],
+        "height": 1608,
+        "manualScenario": "zero_panel_with_map",
+        "readerUs": [
+          248461,
+          256624,
+          260526
+        ],
+        "scope": "optimized static synthetic reader only, 3 samples; not end-to-end app latency",
+        "width": 3024,
+        "medianUs": 256624
+      }
+    ],
+    "comparison": "Same count3+map scene initially 189.4–191.1 ms; final 242.5–253.2 ms, still approximately 27–34% slower. Pre-final broader radius checkpoint 287.6–306.0 ms. Initial zero timing used a different, then rejected, low-contrast boundary."
+  },
+  "resolvedFindings": [
+    "Misleading heading prefix was accepted as a selected total.",
+    "Second heading in AppleGothic was missed.",
+    "Fractional heading proposal truncated real glyph pixels.",
+    "Low-contrast visible zero-panel boundary was erased.",
+    "Tiny/faint contradictory text was swallowed by panel/label allowances.",
+    "Strict zero correction regressed six previously readable normal zero cases.",
+    "Supported empty-message font/scale variants were missed while a readable positive count was present.",
+    "Nearby same-row UI caused the new maximal-line matcher to miss empty text.",
+    "Naive substring enumeration exhausted a budget on a dense valid seat map."
+  ],
+  "limits": [
+    "220 independently rendered scenes plus 112 controlled occlusions and one procedural dense-map control are finite tests.",
+    "No unobscured real zero screenshot is available; parent tests the supplied real count3 image separately.",
+    "22 optional font/size/background inputs remain unreadable; unknown does not establish zero.",
+    "Additional unsupported fonts/layouts, overlap fully inside accepted glyphs, or distant semantics are not universally disambiguated.",
+    "Windows actual font rasterization/subpixel antialiasing and real OS input were not executed.",
+    "A recognized website total does not prove server-side seat ownership.",
+    "Capture-to-input races and Worker/IPC/platform behavior need their separate parent/runtime evidence.",
+    "Bounded search can return Unknown when uncertain or over budget; no strict wall-clock deadline is guaranteed.",
+    "No distribution build, installed-app launch, user setting change or keyboard injection was performed."
+  ]
+}

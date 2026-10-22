@@ -1,0 +1,95 @@
+{
+  "stage": "Post-version-update independent review",
+  "auditedSourceFiles": 131,
+  "unchangedAuditedFiles": 121,
+  "changed": [
+    "Cargo.lock",
+    "Cargo.toml",
+    "README.md",
+    "crates/macro-core/Cargo.toml",
+    "crates/macro-platform/Cargo.toml",
+    "package-lock.json",
+    "package.json",
+    "src-tauri/tauri.conf.json",
+    "ui/index.html",
+    "ui/package.json"
+  ],
+  "versionFiles": [
+    {
+      "path": "package.json",
+      "versionSubstitutions": 1,
+      "beforeSha256": "1386a0121ec4065492ccce31b392a4dd34c3bf9a30823577567bf579a9980a99",
+      "afterSha256": "9db335e9a7c2dbc2552595df0d0380128baec75301733a061a1161b4e56659ed",
+      "matchesExpectedBytes": true
+    },
+    {
+      "path": "package-lock.json",
+      "versionSubstitutions": 2,
+      "beforeSha256": "a624ce2332bda9d50268ee92e8b411253d044e3f864e25c0ef1337666633fbe4",
+      "afterSha256": "8dc10e24de3dd5bffde17677c9724054ec80838b8d1603d8d8db2718e26e6cb0",
+      "matchesExpectedBytes": true
+    },
+    {
+      "path": "Cargo.toml",
+      "versionSubstitutions": 1,
+      "beforeSha256": "f785ffe27833cb4323babe47772a0f3eefec2d677f1f664b9c7f905680c1b938",
+      "afterSha256": "cb4d1d6de7f39f2fe765ab1a2a446e2a1095a82409e90ff329a2d22ad812a683",
+      "matchesExpectedBytes": true
+    },
+    {
+      "path": "Cargo.lock",
+      "versionSubstitutions": 3,
+      "beforeSha256": "666514fce0abac2e81a41ba2cba96b297c762b94f6d06dfe6c26048885cde5ea",
+      "afterSha256": "b32686d6fca7b7dcf402372a1acfdad9649a6a527141fa2c01b8111f5ff5f014",
+      "matchesExpectedBytes": true
+    },
+    {
+      "path": "crates/macro-core/Cargo.toml",
+      "versionSubstitutions": 1,
+      "beforeSha256": "59b81024edb0a2470e21a778f803859dd9fdcbe5a5f8ef37d5cf1cf1c9b6faef",
+      "afterSha256": "8bed22473bebd61e2c2cf2db6a111202c72cfb3418797020dbca4cd21d2da37b",
+      "matchesExpectedBytes": true
+    },
+    {
+      "path": "crates/macro-platform/Cargo.toml",
+      "versionSubstitutions": 1,
+      "beforeSha256": "8e9b3d21668a889287e0eab36e85565014766f78e89994c9bb4044563f6193c5",
+      "afterSha256": "9da29a623a65ac588ee2178f5ff9363cfc02548d0e79196d005c8001c72ae4c6",
+      "matchesExpectedBytes": true
+    },
+    {
+      "path": "src-tauri/tauri.conf.json",
+      "versionSubstitutions": 2,
+      "beforeSha256": "5cb3949d2733f53f319d6992f02bdff12c289b2c8916cdfbfe47e3776b46ee7c",
+      "afterSha256": "1738fb5063dceb3b71bf2cd637117eb6784daa1503327bf83ec377e3f0b3e1c8",
+      "matchesExpectedBytes": true
+    },
+    {
+      "path": "ui/package.json",
+      "versionSubstitutions": 1,
+      "beforeSha256": "5d8efd7220b248e83d141ddc32d54a89be76450d7361b0fd95b26952b795d405",
+      "afterSha256": "4ff15c7c4b5ed8b4975c31cf6f5af7a05ceb27fc32aa53a4573a0bc8a6e6227f",
+      "matchesExpectedBytes": true
+    },
+    {
+      "path": "ui/index.html",
+      "versionSubstitutions": 1,
+      "beforeSha256": "39e349c070f39de9efee006eb7d484f0e8d7620dda9d3e080aff908c999f08e3",
+      "afterSha256": "be0384a7a3d110dadb92b89cd690a35d4c026dbd46c20ec005c77d9211b2debf",
+      "matchesExpectedBytes": true
+    }
+  ],
+  "versionSubstitutions": 13,
+  "documentationDiff": "version-update/documentation.diff",
+  "issues": [],
+  "bundleIdentifier": "dev.integrated-macro.desktop",
+  "minimumMacOS": "13.0",
+  "signingIdentity": "-",
+  "frontendDist": "../ui",
+  "historicalAuditLogHashesPreviouslyVerified": true,
+  "distributionBuild": "not inspected yet",
+  "notes": [
+    "README reviewed separately as release-state documentation; no prior audit results rewritten.",
+    "Native two-architecture compile checks do not imply a universal Tauri app; package architecture remains to be inspected."
+  ]
+}

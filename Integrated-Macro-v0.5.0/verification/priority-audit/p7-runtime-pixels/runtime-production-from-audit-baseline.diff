@@ -1,0 +1,232 @@
+--- runtime.before-priority-audit.rs
++++ runtime.final-production.rs
+@@ -54,6 +54,8 @@
+     next_check_ms: u64,
+     #[serde(skip)]
+     blocked_point: Option<Point>,
++    #[serde(skip)]
++    blocked_image_candidate: bool,
+ }
+ 
+ fn recoverable_context_error(reason: &str) -> bool {
+@@ -97,6 +99,75 @@
+ fn frame_passes_input_transition(frame: &OwnedFrame, after: Option<u64>, started_at_ns: Option<u64>) -> bool {
+     frame_passes_transition(frame.sequence, after)
+         && started_at_ns.is_none_or(|started| frame.captured_at_ns > started)
++}
++
++// Shared by the production observation loop and its headless capture-boundary
++// tests. None means no new native pixels, not a successful page transition.
++fn apply_scan_capture(cached: &mut Option<OwnedFrame>, last_sequence: &mut Option<u64>,
++    capture: Result<Option<OwnedFrame>, String>, reuse: bool) -> Result<bool, String> {
++    match capture {
++        Ok(Some(frame)) => {
++            *last_sequence = Some(frame.sequence);
++            *cached = Some(frame);
++            Ok(true)
++        }
++        Ok(None) => Ok(reuse && cached.is_some()),
++        Err(reason) => Err(reason),
++    }
++}
++
++fn navigation_requires_new_pixels(kind: &ActionKind, continuous: bool, delivered: bool) -> bool {
++    delivered && continuous
++        && matches!(kind, ActionKind::Click { purpose, .. } if purpose.starts_with("region:"))
++}
++
++fn is_image_candidate_action(kind: &ActionKind) -> bool {
++    matches!(kind, ActionKind::Click { purpose, .. } if purpose.starts_with("seat:") || purpose.starts_with("region:"))
++}
++
++// Vision targets are captured pixel indices. Sample their centers so division
++// and multiplication at a fractional scale cannot floor into the neighbor.
++// Windows' native input adapter already centers its physical-pixel indices;
++// preserve that input contract instead of adding a second half-pixel there.
++fn image_candidate_local(frame: &OwnedFrame, point: Point, windows_native_index: bool) -> Result<macro_platform::Point, String> {
++    if !point.x.is_finite() || !point.y.is_finite() || point.x < 0.0 || point.y < 0.0
++        || point.x >= frame.width as f64 || point.y >= frame.height as f64
++        || !frame.scale_x.is_finite() || !frame.scale_y.is_finite() || frame.scale_x <= 0.0 || frame.scale_y <= 0.0 {
++        return Err("좌석 후보의 픽셀 위치나 화면 배율이 올바르지 않습니다. 현재 화면을 다시 확인하세요.".into());
++    }
++    if windows_native_index || point.x.fract() != 0.0 || point.y.fract() != 0.0 {
++        return Ok(macro_platform::Point { x: point.x / frame.scale_x, y: point.y / frame.scale_y });
++    }
++    frame.pixel_to_local(point.x as usize, point.y as usize)
++        .ok_or_else(|| "좌석 후보가 현재 화면 범위를 벗어났습니다.".into())
++}
++
++fn candidate_available_in_frame(frame: Option<&OwnedFrame>, target: &Target, color: Color, tolerance: u8,
++    refresh_after: Option<u64>, refresh_after_ns: Option<u64>) -> Result<bool, String> {
++    let Target::Point { point } = target else {
++        return Err("브라우저 요소 연결이 아직 준비되지 않았습니다.".into());
++    };
++    let frame = frame.ok_or("최신 좌석 화면을 받을 수 없습니다.")?;
++    if !frame_passes_input_transition(frame, refresh_after, refresh_after_ns) { return Ok(false); }
++    let local = image_candidate_local(frame, *point, false)?;
++    Ok(frame.color_at(local).is_some_and(|[r,g,b]| {
++        macro_core::vision::color_matches(Color{r,g,b}, color, tolerance)
++    }))
++}
++
++fn apply_candidate_capture(cached: &mut Option<OwnedFrame>, reference: Option<&FrameReference>,
++    capture: Result<Option<OwnedFrame>, String>) -> Result<(), String> {
++    if let Some(frame) = capture? {
++        let previous_geometry_changed = cached.as_ref().is_some_and(|previous|
++            previous.width != frame.width || previous.height != frame.height
++            || (previous.scale_x - frame.scale_x).abs() > 0.001
++            || (previous.scale_y - frame.scale_y).abs() > 0.001);
++        if previous_geometry_changed || reference.is_some_and(|reference| !same_frame_reference(reference, &frame)) {
++            return Err("클릭 직전 화면 크기나 배율이 바뀌었습니다. 현재 화면에서 좌표를 다시 채집하세요.".into());
++        }
++        *cached = Some(frame);
++    }
++    Ok(())
+ }
+ 
+ fn apply_frame_observation(cached: &mut Option<OwnedFrame>, observation: FrameObservation) -> Result<(), String> {
+@@ -3150,6 +3221,10 @@
+     }
+ 
+     fn pause_for_context(&mut self, reason: String, blocked_point: Option<Point>) {
++        self.pause_for_context_at(reason, blocked_point, false);
++    }
++
++    fn pause_for_context_at(&mut self, reason: String, blocked_point: Option<Point>, blocked_image_candidate: bool) {
+         let retry = self.engine.continuous_search() && recoverable_context_error(&reason);
+         self.cancel_queued_actions();
+         self.feed(Event::ContextLost { reason: reason.clone() });
+@@ -3161,7 +3236,7 @@
+         self.seat_rescan_requested = false;
+         self.vision_diagnostics = None;
+         self.target_recovery = retry.then(|| TargetRecovery {
+-            active: true, reason: reason.clone(), next_check_ms: self.now() + 250, blocked_point,
++            active: true, reason: reason.clone(), next_check_ms: self.now() + 250, blocked_point, blocked_image_candidate,
+         });
+         self.runtime_message = retry.then(|| "예매창 복귀 대기 · 클릭 보류 · 확인되면 자동 재개".into());
+         self.record("context_wait", json!({"automaticRecovery":retry,"reason":reason}));
+@@ -3175,6 +3250,7 @@
+         }
+         if self.interrupt.load(Ordering::SeqCst) || self.now() < waiting.next_check_ms { return; }
+         let blocked_point = waiting.blocked_point;
++        let blocked_image_candidate = waiting.blocked_image_candidate;
+         let next_check_ms = self.now() + 250;
+         self.target_recovery.as_mut().unwrap().next_check_ms = next_check_ms;
+         let result = (|| -> Result<OwnedFrame, String> {
+@@ -3185,9 +3261,11 @@
+                 return Err("화면 크기나 배율이 달라졌습니다. 현재 화면에서 좌표를 다시 채집하세요.".into());
+             }
+             if let Some(point) = blocked_point {
+-                self.adapter()?.validate_point(macro_platform::Point {
++                let local = if blocked_image_candidate { image_candidate_local(&frame, point, cfg!(target_os = "windows"))? }
++                else { macro_platform::Point {
+                     x: point.x / frame.scale_x, y: point.y / frame.scale_y,
+-                }).map_err(|e| e.to_string())?;
++                }};
++                self.adapter()?.validate_point(local).map_err(|e| e.to_string())?;
+             }
+             validate_visual_recovery_frame(&frame, self.visual_enabled())?;
+             Ok(frame)
+@@ -3399,7 +3477,7 @@
+             let result = match &action.kind {
+                 ActionKind::Click { target, .. }
+                 | ActionKind::Refresh { target }
+-                | ActionKind::CompleteSelection { target } => self.click(target, &cancelled),
++                | ActionKind::CompleteSelection { target } => self.click(target, is_image_candidate_action(&action.kind), &cancelled),
+                 ActionKind::Key { key, .. } => self.adapter().and_then(|adapter| {
+                     adapter.key_guarded(match key {
+                         Key::Escape => macro_platform::Key::Escape,
+@@ -3441,12 +3519,11 @@
+                 };
+                 if let Some(watch) = navigation_watch { self.visual_recovery = watch; }
+                 self.feed(Event::ActionCancelled { id: action.id });
+-                self.pause_for_context(detail, point);
++                self.pause_for_context_at(detail, point, is_image_candidate_action(&action.kind));
+                 return;
+             }
+             self.feed(Event::ActionAcknowledged { id: action.id, success: result.is_ok(), detail });
+-            if result.is_ok() && self.engine.continuous_search()
+-                && matches!(&action.kind, ActionKind::Click { purpose, .. } if purpose.starts_with("region:")) {
++            if navigation_requires_new_pixels(&action.kind, self.engine.continuous_search(), result.is_ok()) {
+                 self.await_post_input_frame();
+             }
+             if self.engine.snapshot().phase == Phase::Completed {
+@@ -3550,10 +3627,15 @@
+         }
+     }
+ 
+-    fn click(&mut self, target: &Target, cancelled: &dyn Fn() -> bool) -> Result<InputReceipt, String> {
++    fn click(&mut self, target: &Target, image_candidate: bool, cancelled: &dyn Fn() -> bool) -> Result<InputReceipt, String> {
+         let Target::Point { point } = target else {
+             return Err("브라우저 요소 연결이 아직 설정되지 않았습니다. 화면을 확인하세요.".into());
+         };
++        if image_candidate {
++            let frame = self.frame.as_ref().ok_or("좌석 후보의 현재 화면을 받을 수 없습니다.")?;
++            let local = image_candidate_local(frame, *point, cfg!(target_os = "windows"))?;
++            return self.adapter()?.click_guarded(local, cancelled).map_err(|e| e.to_string());
++        }
+         let (sx, sy) = self.frame.as_ref().map(|f| (f.scale_x, f.scale_y))
+             .or_else(|| self.desktop.capture_reference.as_ref().map(|f| (f.scale_x, f.scale_y)))
+             .ok_or("현재 화면의 배율을 확인하지 못했습니다. 좌표 채집 또는 브라우저 연결을 확인하세요.")?;
+@@ -3566,30 +3648,14 @@
+ 
+     fn candidate_still_available(&mut self, target: &Target) -> Result<bool, String> {
+         let sequence = self.frame.as_ref().map(|f| f.sequence).unwrap_or(0);
+-        if let Some(frame) = self.adapter()?.capture_if_changed(sequence).map_err(|e| e.to_string())? {
+-            let previous_geometry_changed = self.frame.as_ref().is_some_and(|previous|
+-                previous.width != frame.width || previous.height != frame.height
+-                || (previous.scale_x - frame.scale_x).abs() > 0.001
+-                || (previous.scale_y - frame.scale_y).abs() > 0.001);
+-            if previous_geometry_changed || self.desktop.capture_reference.as_ref()
+-                .is_some_and(|reference| !same_frame_reference(reference, &frame)) {
+-                return Err("클릭 직전 화면 크기나 배율이 바뀌었습니다. 현재 화면에서 좌표를 다시 채집하세요.".into());
+-            }
+-            self.frame = Some(frame);
+-        }
++        let capture = self.adapter()?.capture_if_changed(sequence).map_err(|e| e.to_string());
++        apply_candidate_capture(&mut self.frame, self.desktop.capture_reference.as_ref(), capture)?;
+         self.candidate_available_on_frame(target)
+     }
+ 
+     fn candidate_available_on_frame(&self, target: &Target) -> Result<bool, String> {
+-        let Target::Point { point } = target else {
+-            return Err("브라우저 요소 연결이 아직 준비되지 않았습니다.".into());
+-        };
+-        let frame = self.frame.as_ref().ok_or("최신 좌석 화면을 받을 수 없습니다.")?;
+-        if !frame_passes_input_transition(frame, self.refresh_frame_after, self.refresh_frame_after_ns) { return Ok(false); }
+-        let local = macro_platform::Point { x: point.x / frame.scale_x, y: point.y / frame.scale_y };
+-        Ok(frame.color_at(local).is_some_and(|[r,g,b]| {
+-            macro_core::vision::color_matches(Color{r,g,b}, self.engine.effective_color(), self.profile.color_tolerance)
+-        }))
++        candidate_available_in_frame(self.frame.as_ref(), target, self.engine.effective_color(),
++            self.profile.color_tolerance, self.refresh_frame_after, self.refresh_frame_after_ns)
+     }
+ 
+     fn default_confirmation(&self) -> Option<String> {
+@@ -3895,13 +3961,9 @@
+         let reuse_seat_frame = can_rescan_seat_frame(&state, &self.scope,
+             self.seat_rescan_requested || first_legacy_scan);
+         let result = self.adapter().and_then(|adapter| adapter.capture_if_changed(last_sequence).map_err(|e| e.to_string()));
+-        match result {
+-            Ok(Some(frame)) => {
+-                self.last_sequence = Some(frame.sequence);
+-                self.frame = Some(frame);
+-            }
+-            Ok(None) if reuse_seat_frame && self.frame.is_some() => {}
+-            Ok(None) => return,
++        match apply_scan_capture(&mut self.frame, &mut self.last_sequence, result, reuse_seat_frame) {
++            Ok(true) => {}
++            Ok(false) => return,
+             Err(reason) => {
+                 self.pause_for_context(reason, None);
+                 return;
+@@ -3928,8 +3990,7 @@
+         if state.phase == Phase::Seats && !state.optimistic_selection {
+             if let (Some(id), Some(selected_color)) = (&state.current_candidate_id, self.desktop.selected_color) {
+                 if let Some(candidate) = self.candidates.get(id) {
+-                    let local = macro_platform::Point { x: candidate.point.x / frame.scale_x, y: candidate.point.y / frame.scale_y };
+-                    if let Some([r,g,b]) = frame.color_at(local) {
++                    if let Some([r,g,b]) = image_candidate_local(frame, candidate.point, false).ok().and_then(|local| frame.color_at(local)) {
+                         let observed = Color {r,g,b};
+                         if macro_core::vision::color_matches(observed, selected_color, self.profile.color_tolerance)
+                             && !macro_core::vision::color_matches(observed, self.engine.effective_color(), self.profile.color_tolerance)

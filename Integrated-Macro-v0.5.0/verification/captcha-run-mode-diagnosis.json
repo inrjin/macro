@@ -1,0 +1,458 @@
+{
+  "recordedAt": "2026-10-20T18:15:06.923488+00:00",
+  "scope": "Read-only diagnosis; source, installed settings and distributed apps unchanged. No live browser input performed.",
+  "savedSettings": {
+    "auto_captcha_resume": false,
+    "region_priority": true,
+    "target_seats": 1,
+    "region_roi": {
+      "height": 35,
+      "width": 1303,
+      "x": 328,
+      "y": 616
+    },
+    "run_mode": null
+  },
+  "recentRunEvidence": [
+    {
+      "detail": {
+        "hasEntryTarget": true,
+        "mode": "normal",
+        "scheduled": false
+      },
+      "elapsedMs": 39104,
+      "kind": "start_requested",
+      "runId": 0,
+      "timeMs": 1792519508246
+    },
+    {
+      "detail": {
+        "deadlineMs": null,
+        "phase": "entry"
+      },
+      "elapsedMs": 39171,
+      "kind": "started",
+      "runId": 1,
+      "timeMs": 1792519508313
+    },
+    {
+      "detail": {
+        "hasEntryTarget": true,
+        "mode": "seats",
+        "scheduled": false
+      },
+      "elapsedMs": 179728,
+      "kind": "start_requested",
+      "runId": 1,
+      "timeMs": 1792519648865
+    },
+    {
+      "detail": {
+        "deadlineMs": null,
+        "phase": "seats"
+      },
+      "elapsedMs": 179743,
+      "kind": "started",
+      "runId": 2,
+      "timeMs": 1792519648880
+    },
+    {
+      "detail": {
+        "action": {
+          "target": {
+            "point": {
+              "x": 2607.0,
+              "y": 1654.0
+            },
+            "type": "point"
+          },
+          "type": "complete_selection"
+        },
+        "actionId": 6,
+        "delivered": true,
+        "error": ""
+      },
+      "elapsedMs": 179790,
+      "kind": "input",
+      "runId": 2,
+      "timeMs": 1792519648928
+    },
+    {
+      "detail": {
+        "hasEntryTarget": true,
+        "mode": "seats",
+        "scheduled": false
+      },
+      "elapsedMs": 245268,
+      "kind": "start_requested",
+      "runId": 2,
+      "timeMs": 1792519714404
+    },
+    {
+      "detail": {
+        "deadlineMs": null,
+        "phase": "seats"
+      },
+      "elapsedMs": 245294,
+      "kind": "started",
+      "runId": 3,
+      "timeMs": 1792519714430
+    },
+    {
+      "detail": {
+        "action": {
+          "target": {
+            "point": {
+              "x": 2607.0,
+              "y": 1654.0
+            },
+            "type": "point"
+          },
+          "type": "complete_selection"
+        },
+        "actionId": 6,
+        "delivered": true,
+        "error": ""
+      },
+      "elapsedMs": 245363,
+      "kind": "input",
+      "runId": 3,
+      "timeMs": 1792519714499
+    },
+    {
+      "detail": {
+        "hasEntryTarget": true,
+        "mode": "seats",
+        "scheduled": false
+      },
+      "elapsedMs": 253839,
+      "kind": "start_requested",
+      "runId": 3,
+      "timeMs": 1792519722975
+    },
+    {
+      "detail": {
+        "deadlineMs": null,
+        "phase": "seats"
+      },
+      "elapsedMs": 253850,
+      "kind": "started",
+      "runId": 4,
+      "timeMs": 1792519722985
+    },
+    {
+      "detail": {
+        "action": {
+          "target": {
+            "point": {
+              "x": 2607.0,
+              "y": 1654.0
+            },
+            "type": "point"
+          },
+          "type": "complete_selection"
+        },
+        "actionId": 6,
+        "delivered": true,
+        "error": ""
+      },
+      "elapsedMs": 253936,
+      "kind": "input",
+      "runId": 4,
+      "timeMs": 1792519723071
+    },
+    {
+      "detail": {
+        "hasEntryTarget": true,
+        "mode": "seats",
+        "scheduled": false
+      },
+      "elapsedMs": 257840,
+      "kind": "start_requested",
+      "runId": 4,
+      "timeMs": 1792519726976
+    },
+    {
+      "detail": {
+        "deadlineMs": null,
+        "phase": "seats"
+      },
+      "elapsedMs": 257861,
+      "kind": "started",
+      "runId": 5,
+      "timeMs": 1792519726996
+    },
+    {
+      "detail": {
+        "action": {
+          "target": {
+            "point": {
+              "x": 2607.0,
+              "y": 1654.0
+            },
+            "type": "point"
+          },
+          "type": "complete_selection"
+        },
+        "actionId": 6,
+        "delivered": true,
+        "error": ""
+      },
+      "elapsedMs": 257914,
+      "kind": "input",
+      "runId": 5,
+      "timeMs": 1792519727049
+    },
+    {
+      "detail": {
+        "hasEntryTarget": true,
+        "mode": "seats",
+        "scheduled": false
+      },
+      "elapsedMs": 273601,
+      "kind": "start_requested",
+      "runId": 5,
+      "timeMs": 1792519742736
+    },
+    {
+      "detail": {
+        "deadlineMs": null,
+        "phase": "seats"
+      },
+      "elapsedMs": 273623,
+      "kind": "started",
+      "runId": 6,
+      "timeMs": 1792519742758
+    },
+    {
+      "detail": {
+        "action": {
+          "target": {
+            "point": {
+              "x": 2607.0,
+              "y": 1654.0
+            },
+            "type": "point"
+          },
+          "type": "complete_selection"
+        },
+        "actionId": 6,
+        "delivered": true,
+        "error": ""
+      },
+      "elapsedMs": 273669,
+      "kind": "input",
+      "runId": 6,
+      "timeMs": 1792519742804
+    },
+    {
+      "detail": {
+        "hasEntryTarget": true,
+        "mode": "seats",
+        "scheduled": false
+      },
+      "elapsedMs": 276886,
+      "kind": "start_requested",
+      "runId": 6,
+      "timeMs": 1792519746021
+    },
+    {
+      "detail": {
+        "deadlineMs": null,
+        "phase": "seats"
+      },
+      "elapsedMs": 276905,
+      "kind": "started",
+      "runId": 7,
+      "timeMs": 1792519746040
+    },
+    {
+      "detail": {
+        "action": {
+          "target": {
+            "point": {
+              "x": 2607.0,
+              "y": 1654.0
+            },
+            "type": "point"
+          },
+          "type": "complete_selection"
+        },
+        "actionId": 6,
+        "delivered": true,
+        "error": ""
+      },
+      "elapsedMs": 276959,
+      "kind": "input",
+      "runId": 7,
+      "timeMs": 1792519746094
+    },
+    {
+      "detail": {
+        "hasEntryTarget": true,
+        "mode": "seats",
+        "scheduled": false
+      },
+      "elapsedMs": 283705,
+      "kind": "start_requested",
+      "runId": 7,
+      "timeMs": 1792519752840
+    },
+    {
+      "detail": {
+        "deadlineMs": null,
+        "phase": "seats"
+      },
+      "elapsedMs": 283721,
+      "kind": "started",
+      "runId": 8,
+      "timeMs": 1792519752855
+    },
+    {
+      "detail": {
+        "action": {
+          "target": {
+            "point": {
+              "x": 2607.0,
+              "y": 1654.0
+            },
+            "type": "point"
+          },
+          "type": "complete_selection"
+        },
+        "actionId": 6,
+        "delivered": true,
+        "error": ""
+      },
+      "elapsedMs": 283790,
+      "kind": "input",
+      "runId": 8,
+      "timeMs": 1792519752924
+    },
+    {
+      "detail": {
+        "hasEntryTarget": true,
+        "mode": "seats",
+        "scheduled": false
+      },
+      "elapsedMs": 294593,
+      "kind": "start_requested",
+      "runId": 8,
+      "timeMs": 1792519763727
+    },
+    {
+      "detail": {
+        "deadlineMs": null,
+        "phase": "seats"
+      },
+      "elapsedMs": 294614,
+      "kind": "started",
+      "runId": 9,
+      "timeMs": 1792519763748
+    },
+    {
+      "detail": {
+        "action": {
+          "target": {
+            "point": {
+              "x": 2607.0,
+              "y": 1654.0
+            },
+            "type": "point"
+          },
+          "type": "complete_selection"
+        },
+        "actionId": 6,
+        "delivered": true,
+        "error": ""
+      },
+      "elapsedMs": 294683,
+      "kind": "input",
+      "runId": 9,
+      "timeMs": 1792519763818
+    },
+    {
+      "detail": {
+        "hasEntryTarget": true,
+        "mode": "normal",
+        "scheduled": false
+      },
+      "elapsedMs": 307203,
+      "kind": "start_requested",
+      "runId": 9,
+      "timeMs": 1792519776337
+    },
+    {
+      "detail": {
+        "deadlineMs": null,
+        "phase": "entry"
+      },
+      "elapsedMs": 307221,
+      "kind": "started",
+      "runId": 10,
+      "timeMs": 1792519776355
+    },
+    {
+      "detail": {
+        "hasEntryTarget": true,
+        "mode": "seats",
+        "scheduled": false
+      },
+      "elapsedMs": 358701,
+      "kind": "start_requested",
+      "runId": 10,
+      "timeMs": 1792519827833
+    },
+    {
+      "detail": {
+        "hasEntryTarget": true,
+        "mode": "seats",
+        "scheduled": false
+      },
+      "elapsedMs": 360242,
+      "kind": "start_requested",
+      "runId": 10,
+      "timeMs": 1792519829374
+    },
+    {
+      "detail": {
+        "deadlineMs": null,
+        "phase": "seats"
+      },
+      "elapsedMs": 360269,
+      "kind": "started",
+      "runId": 11,
+      "timeMs": 1792519829402
+    },
+    {
+      "detail": {
+        "action": {
+          "target": {
+            "point": {
+              "x": 2607.0,
+              "y": 1654.0
+            },
+            "type": "point"
+          },
+          "type": "complete_selection"
+        },
+        "actionId": 6,
+        "delivered": true,
+        "error": ""
+      },
+      "elapsedMs": 360815,
+      "kind": "input",
+      "runId": 11,
+      "timeMs": 1792519829947
+    }
+  ],
+  "recentEnterEventCount": 0,
+  "findings": [
+    "F1 hardcodes Seats and bypasses CAPTCHA/region; UI selected mode is not persisted.",
+    "Saved CAPTCHA Enter feature is disabled; Normal legacy_entry then WaitingRegion follows the legacy path.",
+    "Seats counts delivered color candidate as an attempted seat and target1 then delivers completion and terminates. This does not prove real reservation success.",
+    "Color extraction cannot establish whether the clicked component is stage, region, text or seat from logs alone."
+  ],
+  "focusedRegression": "cargo test -p macro-core --test engine captcha_enter --offline --locked: 4 passed, 0 failed",
+  "pendingPreference": "Asked whether F1 should use the selected saved mode, with mode persisted across launches. No response yet; no shortcut behavior changed."
+}

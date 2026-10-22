@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-21",
+  "purpose": "Isolated local browser fixture; no existing Chrome profile or ticket site",
+  "driver": "/Users/inrjin/.local/share/mise/installs/node/24.19.0/lib/node_modules/rea-agents/node_modules/playwright-core",
+  "launch": "chromium.launch({headless:true})",
+  "intendedContent": "<button>local only</button>",
+  "result": "browser process terminated before the local page could be exercised",
+  "observedFatalError": "bootstrap_check_in org.chromium.Chromium.MachPortRendezvousServer.84206: Permission denied (1100)",
+  "observedExitSignal": "SIGTRAP",
+  "permissionEscalationRequested": false,
+  "retriedWithBypass": false,
+  "browserRenderingVerified": false,
+  "nativeInputVerified": false,
+  "fallbackScope": "Synthetic RGBA and scripted observations passed to production vision, engine and runtime helpers; explicitly not browser/OS execution"
+}

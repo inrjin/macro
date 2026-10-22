@@ -1,0 +1,23 @@
+{
+  "method": "Exact corrected runtime helper source linked to actual current macro_core; no Worker/native/UI execution",
+  "files": {
+    "src-tauri/src/runtime.rs": "3b9d3063032dcb9c1157da399ba35d3620d843f23334820de833463eca224807",
+    "crates/macro-core/src/engine.rs": "820884a1547abc9ab6c35e5db743e3e80482d3e69caf9a82afd99b68306c8cb6",
+    "crates/macro-core/src/model.rs": "b597ce7ba48a3c87697ecdd8ceab235a484e170853da25fe6df14b54a08a74e5"
+  },
+  "probeSHA256": "0696dfe776bceddbee17fc409e355ad9463c95b2d813dace4677b971b59c97fa",
+  "rlib": "/Users/inrjin/Documents/\u6a5f\u68b0\u4eba\u9593/Integrated-Macro-v0.5.0/target/debug/deps/libmacro_core-1bc8151207dc4ba3.rlib",
+  "rlibSHA256": "a91f6205136d09bfb95ff757e3599be649d3bfb7061a5aba7a008e2732b9e283",
+  "compileCommand": [
+    "/Users/inrjin/Documents/\u6a5f\u68b0\u4eba\u9593/Integrated-Macro-v0.5.0/.build-tools/cargo/bin/rustc",
+    "--edition=2021",
+    "/Users/inrjin/Documents/\u6a5f\u68b0\u4eba\u9593/Integrated-Macro-v0.5.0/verification/seat-object-system/engine/manual-routing-repro/corrected/probe.rs",
+    "--extern",
+    "macro_core=/Users/inrjin/Documents/\u6a5f\u68b0\u4eba\u9593/Integrated-Macro-v0.5.0/target/debug/deps/libmacro_core-1bc8151207dc4ba3.rlib",
+    "-L",
+    "dependency=/Users/inrjin/Documents/\u6a5f\u68b0\u4eba\u9593/Integrated-Macro-v0.5.0/target/debug/deps",
+    "-o",
+    "/Users/inrjin/Documents/\u6a5f\u68b0\u4eba\u9593/Integrated-Macro-v0.5.0/verification/seat-object-system/engine/manual-routing-repro/corrected/probe"
+  ],
+  "compileExit": 0
+}

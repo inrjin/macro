@@ -1,0 +1,89 @@
+{
+  "status": "scoped independent checks complete; parent owns workspace checks",
+  "sourceHashes": {
+    "crates/macro-core/src/seat_objects.rs": "95d696aa1deab1987491352cbfcfc4cbc2f508f6b71ec1ff32f26f645f19982d",
+    "crates/macro-core/src/seat_object_shapes.rs": "ce8980bdfb828e773a0d6e1f03ef67cb4bb81f751485a1e5c1d92ca5621398b0",
+    "crates/macro-core/src/model.rs": "3869b494fa627ecff5a202c26b21d8c4aa1cc99f32c18b2e5ed349d037b284e0",
+    "crates/macro-core/src/seat_selection.rs": "37118aff1832c00db7188fc81766fc5f957ee95f80cbb52d0c2a3c0f5e2c2ac9",
+    "crates/macro-core/tests/seat_object_nonround_review.rs": "f71812774dfaf5a8ac67bdf503b5aa7c09fd96dbf78c8b842af0f4603bec68e1",
+    "crates/macro-core/tests/support/seat_object_shapes.rs": "b2451715beb9083e822104757672f6bfe5f2c5de652ec4206ab84067ea8f4efc"
+  },
+  "sourceUnchangedDuringChecks": true,
+  "normalTests": {
+    "passed": 20,
+    "failed": 0,
+    "ignored": 2
+  },
+  "manualOptimizedBenchmarks": {
+    "passed": 2,
+    "failed": 0,
+    "testThreads": 1
+  },
+  "loggedScenarioRows": 162,
+  "exactHitScenarioRows": 159,
+  "positiveExactHitScenes": 157,
+  "timingsUs": {
+    "sparseAvailable200CombinedMedians": [
+      5908,
+      5738
+    ],
+    "sparseAvailable1000CombinedMedians": [
+      7530,
+      7718
+    ],
+    "allAvailable1000ExtractionMedian": 20811,
+    "allAvailableFirstPreclick": [
+      544,
+      534,
+      492
+    ],
+    "largeSparseBeforeSingle": 1457875,
+    "largeSparseAfterSingle": 3263
+  },
+  "logs": {
+    "final-corpus.log": "42ad26d82a0254be63c345c8d9d2134c3e2998963f14b76f46fa185e61d81804",
+    "final-performance.log": "05c531a1e875ed7e6c56b2ea982c08db12f5209bb92c12e090de6689d88b3cb9",
+    "probe1.log": "80789cf524983f1ef3f99f26040043fd2c52873f9d28c7742b0a1a7ca3980aac",
+    "probe2.log": "7c6dde79a5d3dfa95c58df32f3d9923013bbb4ea403a29ee48b9c62929f08fe5",
+    "probe3.log": "bb7df0824e3636bcbb9b97a786bae8b06b916434a530fa5179142c322c4db7c2",
+    "repeated-selected-before.log": "c490d0fec58f23e9fb58d360d06502d03e2e202d593c92a65c78c7d7f3e912f8",
+    "repeated-bridge-before.log": "962146f939271b5f286285dbda5bd405064d02e2aff1d7e56b15dbf0a1df6982",
+    "open-white-before.log": "eac3021d9f53ea36cb93634ba8cbcef1951949b91aa96840dfdbaf1ade2eea32",
+    "temporal-competition-before.log": "e14e4cfb11fb1f9a66c8477ccd976a643cd19afe801400376d81810a63f56723",
+    "performance-dense-sparse-intermediate.log": "e3ec62706cd041bd73f3f8c48eb02b9d9cd7745e147741dd4b947ca191147edd",
+    "foreground-bound-positive.log": "d00f99a495615a7e40abb68731ef3cc1cd5edd74d75813c14f6afc62bf9bb158"
+  },
+  "reviewSha256": "635eb7a597106da2224171720e434329397a9d779a8a085c26d79add3a8cd854",
+  "notExecuted": [
+    "distribution build",
+    "app launch",
+    "browser",
+    "native OS input",
+    "live ticket site",
+    "Windows runtime"
+  ],
+  "remainingLimits": [
+    "finite synthetic image support is not universal seat identity",
+    "identical pixels may mean one or several site hit objects",
+    "client count does not prove server ownership",
+    "capture-to-native-input TOCTOU",
+    "all-available joined groups without independent single-shape evidence",
+    "hollow/marked reference ambiguity",
+    "actual capture/Worker/OS latency not measured"
+  ],
+  "commentOnlyFollowup": {
+    "path": "crates/macro-core/src/seat_object_shapes.rs",
+    "testedSHA256": "ce8980bdfb828e773a0d6e1f03ef67cb4bb81f751485a1e5c1d92ca5621398b0",
+    "reviewedSHA256": "33bad8d441317c4a4c6886c3e9b50efab96d9ea340f551b250d36ce6acb88023",
+    "change": "Module documentation lines 2–3 only; executable source bytes after initial three lines identical. No tests/benchmarks repeated for prose-only correction."
+  },
+  "finalReviewedHashes": {
+    "crates/macro-core/src/seat_objects.rs": "95d696aa1deab1987491352cbfcfc4cbc2f508f6b71ec1ff32f26f645f19982d",
+    "crates/macro-core/src/seat_object_shapes.rs": "33bad8d441317c4a4c6886c3e9b50efab96d9ea340f551b250d36ce6acb88023",
+    "crates/macro-core/src/model.rs": "3869b494fa627ecff5a202c26b21d8c4aa1cc99f32c18b2e5ed349d037b284e0",
+    "crates/macro-core/src/seat_selection.rs": "37118aff1832c00db7188fc81766fc5f957ee95f80cbb52d0c2a3c0f5e2c2ac9",
+    "crates/macro-core/tests/seat_object_nonround_review.rs": "f71812774dfaf5a8ac67bdf503b5aa7c09fd96dbf78c8b842af0f4603bec68e1",
+    "crates/macro-core/tests/support/seat_object_shapes.rs": "b2451715beb9083e822104757672f6bfe5f2c5de652ec4206ab84067ea8f4efc"
+  },
+  "blockerStatus": "No unresolved blocking contradiction found in the bounded independently tested contract; universal semantic/OS guarantees explicitly excluded."
+}

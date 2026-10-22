@@ -1,0 +1,10 @@
+{
+  "README.md": "a8a7471496bb7d9df194193ef859c1e7e97dfd6f5b72540899779fa4ddf5a2c4",
+  "source-before.json": "3aef09832edd0e02dd2db747d00ad9d0e59e7afa28cb9963b0a04d6dfce6fc37",
+  "source-final.json": "5ccd659daf1b6231a9d9acfb041d0853c9822e7bfed6bd0b3db295d001037142",
+  "implementation.diff": "1dc517da4a612dc391bc7de3693f4f62a4e702a59a5e69b42b1e0ca870e3988b",
+  "runtime-focused.log": "ad3a57a90def15c87b40a7b605e620ca6ba869a996e3611d31a8f12e7b820b12",
+  "runtime-focused-2.log": "43c2fd3cbe2a99b11fefb4ad9660bd6cd508a4432498f9cdbb38feb035bc7535",
+  "runtime-all.log": "33769c1b84ed8053e65936d047c4c8097a54946cb81751729bc09cdbf9fb3fba",
+  "core-engine-all.log": "f95b3dc8e757f3f01565d1f747911b61e355da3f0e359c128ed93fd2fc3440dd"
+}

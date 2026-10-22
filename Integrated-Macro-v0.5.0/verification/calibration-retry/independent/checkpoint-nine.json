@@ -1,0 +1,17 @@
+{
+  "checkpoint": "9 independent regressions before Resume policy/epoch followup",
+  "scope": "Production helpers plus actual Engine; source review of Worker call ordering. No Worker execution, native capture, user profile, live app, or release build.",
+  "result": {
+    "passed": 9,
+    "failed": 0,
+    "ignored": 0,
+    "log": "after-provenance-current.log"
+  },
+  "files": {
+    "src-tauri/src/runtime.rs": "6cd1a72e60d7658eb091cfdf73ca9789f78037139f012c900c2b76c64b02f2ae",
+    "src-tauri/src/calibration_restart_review.rs": "215b08536a03a1a0971160a8f41f830f53dc1669a75b0d62e84c2322c2817371",
+    "crates/macro-core/src/engine.rs": "28e4fdcc7c7f29db1d454d8ed39f6cadfee684caaf592c2abf2af5a1ef43576d",
+    "src-tauri/src/visual_recovery.rs": "34a874a90f82fbfc6a9081edebd6f78269ced0b3d5482a9fe3f8d6813a8365b8"
+  },
+  "testFixtureCorrection": "after-provenance.log failed because the test unwrapped a selection-count request while paused. It now stores the prior request ID before pausing; no production change for this correction."
+}

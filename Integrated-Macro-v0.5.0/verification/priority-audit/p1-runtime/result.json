@@ -1,0 +1,9 @@
+{
+  "tests": 6,
+  "passed": 6,
+  "source": "src-tauri/src/runtime.rs",
+  "sourceSha256AtP1": "b2852440f8cae52bb39251fb763d9cf2c2aa13686c49e6c121dabd8b39b36db2",
+  "productionBehaviorChanged": false,
+  "actualWorkerOrOsExercised": false,
+  "remainingLimitation": "Legacy timed navigation cannot distinguish stale same-pixel content from a rendered identical destination."
+}

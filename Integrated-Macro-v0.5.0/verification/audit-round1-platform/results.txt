@@ -1,0 +1,2 @@
+input_kind=click stop_before_validation_return=true posts_after_stop=1
+input_kind=key stop_before_validation_return=true posts_after_stop=1

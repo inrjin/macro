@@ -1,0 +1,21 @@
+{
+  "artifactType": "Three-file GitHub web-upload preparation pack, NOT Windows executable",
+  "archive": "/Users/inrjin/Documents/機械人間/Integrated-Macro-Windows-v0.5.11-GitHub-Upload.zip",
+  "sha256": "2dbaf3e0b86d5add9ceea1f6666f3884b843843593862ffc9f9406f4a6bb9df8",
+  "bytes": 2540006,
+  "fileCount": 3,
+  "files": {
+    "workflow.yml.txt": "56a28fddd11d06314ee9a8127fdbd123842e4d89d68323ea8057830f8761e9e3",
+    "UPLOAD-GUIDE.md": "14a71beb91d5ec96414cc9d3af6e239328400acfb13004d741f3ff03f06de9b1",
+    "Integrated-Macro-Windows-v0.5.11-Build-Kit.zip": "d0e5ed8616f2bdb1e49fd86497d3e2cd557cd460d2cca7c1c10b5777bf36357e"
+  },
+  "originalBuildKitUnchanged": true,
+  "appSourceUnchanged": true,
+  "remoteUploadOrRunPerformed": false,
+  "accountConnectionChanged": false,
+  "authenticationStored": false,
+  "privateRepoAccessAvailable": false,
+  "actualWindowsBuildPerformed": false,
+  "workflowSyntaxParsedLocally": true,
+  "guideMatchesUploadPaths": true
+}

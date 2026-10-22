@@ -1,0 +1,182 @@
+{
+  "before": {
+    "schema_version": 1,
+    "name": "기본 설정",
+    "target_seats": 2,
+    "color": {
+      "r": 130,
+      "g": 70,
+      "b": 210
+    },
+    "color_tolerance": 12,
+    "region_color": {
+      "r": 130,
+      "g": 70,
+      "b": 210
+    },
+    "features": {
+      "server_clock": false,
+      "auto_entry": false,
+      "auto_captcha_resume": false,
+      "nol_captcha_detection": false,
+      "region_priority": false,
+      "seat_priority": false,
+      "conflict_recovery": false,
+      "automatic_refresh": false,
+      "status_overlay": false
+    },
+    "legacy": {
+      "date": null,
+      "session": null,
+      "next": null,
+      "complete": null,
+      "cancellation_navigation": {
+        "type": "none"
+      },
+      "regions": [],
+      "blind_click_sequence": true,
+      "normal_click_delay_ms": 60,
+      "cancellation_click_delay_ms": 60,
+      "region_delay_ms": 200
+    },
+    "desired_date": null,
+    "desired_session": null,
+    "server_url": null,
+    "entry_target": null,
+    "sale_deadline_ms": null,
+    "refresh_target": null,
+    "refresh_interval_ms": 1000,
+    "action_timeout_ms": 2000,
+    "observation_timeout_ms": 5000,
+    "vision": {
+      "roi": null,
+      "exclusions": [],
+      "min_component_pixels": 3,
+      "max_component_pixels": 100000
+    },
+    "desktop": {
+      "scheduled_start": false,
+      "sale_time": null,
+      "refresh_mode": "none",
+      "cancellation_mode": "legacyRegions",
+      "region_color": {
+        "r": 130,
+        "g": 70,
+        "b": 210
+      },
+      "stage_center": null,
+      "region_roi": null,
+      "capture_points": {
+        "seat_start": {
+          "x": 100,
+          "y": 120
+        }
+      },
+      "capture_reference": {
+        "width": 1200,
+        "height": 800,
+        "scale_x": 1,
+        "scale_y": 1
+      }
+    }
+  },
+  "savePayload": {
+    "schema_version": 1,
+    "name": "기본 설정",
+    "target_seats": 2,
+    "color": {
+      "r": 130,
+      "g": 70,
+      "b": 210
+    },
+    "color_tolerance": 12,
+    "region_color": {
+      "r": 130,
+      "g": 70,
+      "b": 210
+    },
+    "features": {
+      "server_clock": false,
+      "auto_entry": false,
+      "auto_captcha_resume": false,
+      "nol_captcha_detection": false,
+      "region_priority": false,
+      "seat_priority": false,
+      "conflict_recovery": false,
+      "automatic_refresh": false,
+      "status_overlay": false
+    },
+    "legacy": {
+      "date": null,
+      "session": null,
+      "next": null,
+      "complete": null,
+      "cancellation_navigation": {
+        "type": "none"
+      },
+      "regions": [],
+      "blind_click_sequence": true,
+      "normal_click_delay_ms": 60,
+      "cancellation_click_delay_ms": 60,
+      "region_delay_ms": 200
+    },
+    "desired_date": null,
+    "desired_session": null,
+    "server_url": null,
+    "entry_target": null,
+    "sale_deadline_ms": null,
+    "refresh_target": null,
+    "refresh_interval_ms": 1000,
+    "action_timeout_ms": 2000,
+    "observation_timeout_ms": 5000,
+    "vision": {
+      "roi": null,
+      "exclusions": [],
+      "min_component_pixels": 3,
+      "max_component_pixels": 100000
+    },
+    "desktop": {
+      "scheduled_start": false,
+      "sale_time": null,
+      "refresh_mode": "none",
+      "cancellation_mode": "legacyRegions",
+      "region_color": {
+        "r": 130,
+        "g": 70,
+        "b": 210
+      },
+      "stage_center": null,
+      "region_roi": null,
+      "capture_points": {
+        "seat_start": {
+          "x": 100,
+          "y": 120
+        }
+      },
+      "capture_reference": {
+        "width": 1200,
+        "height": 800,
+        "scale_x": 1,
+        "scale_y": 1
+      }
+    }
+  },
+  "capture": {
+    "field": "vision.roi.end",
+    "point": {
+      "x": 700,
+      "y": 620
+    },
+    "color": {
+      "r": 130,
+      "g": 70,
+      "b": 210
+    },
+    "frame": {
+      "width": 1200,
+      "height": 800,
+      "scale_x": 1,
+      "scale_y": 1
+    }
+  }
+}

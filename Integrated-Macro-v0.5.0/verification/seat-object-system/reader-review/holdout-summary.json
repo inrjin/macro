@@ -1,0 +1,143 @@
+{
+  "confirmed": {
+    "total": 37,
+    "correct": 28,
+    "unreadable": 9,
+    "wrong_confirmed": []
+  },
+  "correct_or_unreadable": {
+    "total": 37,
+    "correct": 19,
+    "unreadable": 18,
+    "wrong_confirmed": []
+  },
+  "unreadable": {
+    "total": 22,
+    "correct": 20,
+    "unreadable": 20,
+    "wrong_confirmed": [
+      {
+        "fixture": "contradictory_empty_and_two",
+        "expectedCount": null,
+        "observedCount": 2
+      },
+      {
+        "fixture": "unrelated_empty_with_wrapped_count_three",
+        "expectedCount": null,
+        "observedCount": 0
+      }
+    ]
+  },
+  "heldout": [
+    {
+      "fixture": "holdout_size_21_digit_0",
+      "expectedCount": 0,
+      "observedCount": null
+    },
+    {
+      "fixture": "holdout_size_21_digit_1",
+      "expectedCount": 1,
+      "observedCount": 1
+    },
+    {
+      "fixture": "holdout_size_21_digit_2",
+      "expectedCount": 2,
+      "observedCount": 2
+    },
+    {
+      "fixture": "holdout_size_21_digit_3",
+      "expectedCount": 3,
+      "observedCount": 3
+    },
+    {
+      "fixture": "holdout_size_21_digit_4",
+      "expectedCount": 4,
+      "observedCount": 4
+    },
+    {
+      "fixture": "holdout_size_27_digit_0",
+      "expectedCount": 0,
+      "observedCount": 0
+    },
+    {
+      "fixture": "holdout_size_27_digit_1",
+      "expectedCount": 1,
+      "observedCount": 1
+    },
+    {
+      "fixture": "holdout_size_27_digit_2",
+      "expectedCount": 2,
+      "observedCount": 2
+    },
+    {
+      "fixture": "holdout_size_27_digit_3",
+      "expectedCount": 3,
+      "observedCount": 3
+    },
+    {
+      "fixture": "holdout_size_27_digit_4",
+      "expectedCount": 4,
+      "observedCount": 4
+    },
+    {
+      "fixture": "holdout_size_35_digit_0",
+      "expectedCount": 0,
+      "observedCount": 0
+    },
+    {
+      "fixture": "holdout_size_35_digit_1",
+      "expectedCount": 1,
+      "observedCount": 1
+    },
+    {
+      "fixture": "holdout_size_35_digit_2",
+      "expectedCount": 2,
+      "observedCount": 2
+    },
+    {
+      "fixture": "holdout_size_35_digit_3",
+      "expectedCount": 3,
+      "observedCount": null
+    },
+    {
+      "fixture": "holdout_size_35_digit_4",
+      "expectedCount": 4,
+      "observedCount": 4
+    },
+    {
+      "fixture": "holdout_fractional_digit_2",
+      "expectedCount": 2,
+      "observedCount": 2
+    },
+    {
+      "fixture": "holdout_fractional_digit_3",
+      "expectedCount": 3,
+      "observedCount": 3
+    }
+  ],
+  "required_unreadable": [
+    "digit_3",
+    "position_top_left",
+    "position_bottom_left",
+    "position_bottom_right",
+    "position_middle",
+    "explicit_empty",
+    "panel_with_list_and_timer",
+    "holdout_size_21_digit_0",
+    "holdout_size_35_digit_3"
+  ],
+  "debug_reader_us": {
+    "median": 107783.5,
+    "max": 781824
+  },
+  "source_sha256": {
+    "crates/macro-core/src/selection_count.rs": "0417a2078d3a224c1bad51738752016edcb5446dbbfdf38847582f1bcf40a3a1",
+    "crates/macro-core/src/selection_count_assets/templates.json": "212ce08195736dd36e544e947070fa69b30093bea24678553e6f1976490d6bff",
+    "crates/macro-core/tests/selection_count_reader_review.rs": "c44ac00b224453c108790ca36204125706268e3320cfec36aef8d2ee3b98579c"
+  },
+  "evidence_sha256": {
+    "verification/seat-object-system/reader-review/generate-fixtures.swift": "560623d78b123b171c3f0f8535e5ba2e88b10687cebd165bd13f3fada2cb8f34",
+    "verification/seat-object-system/reader-review/manifest.json": "4d56b1dbdce05daf0477ff6d256b1b6fceaf8c98161582c80d6854bc2433da24",
+    "verification/seat-object-system/reader-review/holdout-results.log": "4cab4dfe4a9b1e0663b4402f4af4558727e6a69bc049a27694c8e066ce35d5f0"
+  }
+}

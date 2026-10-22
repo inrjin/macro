@@ -1,0 +1,73 @@
+{
+  "status": "Final source regression review passed within the documented image/helper scope; live-site completeness is not established",
+  "workspaceResult": {
+    "passed": 367,
+    "failed": 0,
+    "ignored": 2,
+    "log": "verification/seat-object-system/workspace-final.log",
+    "logSha256": "61e1e6896e95a6e127cc0337ea7599ba1a74a45cf319323f013f786c1ca48d03",
+    "testedSourceManifest": "verification/seat-object-system/source-before-final-test.json"
+  },
+  "readerTestsPassed": 5,
+  "renderedFixtures": {
+    "total": 108,
+    "requiredCorrect": 41,
+    "requiredUnreadable": 30,
+    "optionalCorrectOrUnreadable": 37,
+    "optionalRecognizedUnreadableSplit": "Not emitted by the final captured test log; no recognition percentage inferred"
+  },
+  "extraChecks": [
+    "malformed buffer rejection",
+    "global alpha0/249 outside evidence rejection; alpha250 positive",
+    "storage-padding opacity does not count as viewport pixels"
+  ],
+  "testedSourceSha256": {
+    "crates/macro-core/src/model.rs": "b597ce7ba48a3c87697ecdd8ceab235a484e170853da25fe6df14b54a08a74e5",
+    "crates/macro-core/src/engine.rs": "820884a1547abc9ab6c35e5db743e3e80482d3e69caf9a82afd99b68306c8cb6",
+    "crates/macro-core/src/selection_count.rs": "8c7e0a9b0cec2eb025c75e1283bf626daec1e265c824cc9be714c3410623e626",
+    "crates/macro-core/src/selection_count_layout.rs": "c22545cd11afda2c69a4a2b1beaee1b56c1bc80ba2eb690cfc49998e8108065c",
+    "crates/macro-core/src/selection_count_assets/templates.json": "1bbd1c695ff42ab060bd88a05e5a493cf0cede8dd332f3fc1559f0d4a62d87f7",
+    "crates/macro-core/tests/selection_count_reader_review.rs": "ddcd9edacc9358b2338a56f81a655aaf572b48c788228c747b783a6a75df63f5",
+    "src-tauri/src/runtime.rs": "9ecf8161836b668a3bf41717f64629552bc30415a60b53c3b3c56d2ee0650f1b",
+    "src-tauri/src/selection_count_runtime_tests.rs": "5010b5ac51cd58859f42796a352c25f46734296771b11828586743f317c4f483",
+    "ui/app.js": "6967ab904094f0133d88f94ba5cd50287a8534fafabde7ddb24a97364ca63d0c",
+    "ui/model.js": "98bff5a33a1fadfce953f76437be938f07978dbfbe6f1ca1475e0bd0be4312e3",
+    "ui/overlay.js": "23fefb02bb9e7a2e8e5e6e0d49693a3625123948460936982a24c4554e112aaa",
+    "ui/index.html": "39e349c070f39de9efee006eb7d484f0e8d7620dda9d3e080aff908c999f08e3",
+    "ui/tests/run-seat-evidence-dom.mjs": "fd50d35dc3816ba2396176a1e374baad4d6ad27a4baac04b868ff0962caa9e08",
+    "ui/tests/seat-evidence.test.js": "b23f1d877bea2e41b6cddc6767c80a04a27f248e28a4a6d122986dfca22075a7"
+  },
+  "sourceMatch": "All14 reviewed source/test hashes equal current files and their corresponding final Rust or JavaScript test manifest. Parent reports zero pre/post source changes; all108 fixture hashes were independently rechecked.",
+  "fixtureManifestSha256": "89086c84c6c70d3b38251d3cd625bc64b98ed30494d8ceb94dff339c79f106f1",
+  "scopeLimits": [
+    "Independent synthetic CoreText rendering, not Windows/browser font validation",
+    "Real count3 heading is a trained reproduction control; no unobscured real zero-state proof",
+    "Round-object option default-off; generic/count options independent; non-round merge/split unresolved",
+    "Count is site-displayed selection total, not reservation ownership",
+    "Latest acquired image to OS-post TOCTOU remains; no real Worker/native input executed",
+    "No distribution build or live application launch"
+  ],
+  "javascriptResult": {
+    "passed": 150,
+    "failed": 0,
+    "skipped": 0,
+    "log": "verification/seat-object-system/javascript-final.log",
+    "logSha256": "b2bc64585dd1551c0e4ffc0397f3528a3c1117c6550fcd9b3eae03e668b71d60",
+    "testedSourceManifest": "verification/seat-object-system/javascript-tested-source.json",
+    "manifestFileCount": 54
+  },
+  "previousWorkspaceResult": {
+    "passed": 364,
+    "failed": 0,
+    "ignored": 2,
+    "log": "verification/seat-object-system/workspace-before-manual-routing.log",
+    "note": "Before final explicit count-policy/manual-routing/context-recovery caller corrections; not final source evidence"
+  },
+  "focusedRuntimeResult": {
+    "passed": 15,
+    "failed": 0,
+    "ignored": 1,
+    "log": "verification/seat-object-system/runtime-count-guard.log"
+  },
+  "callerReview": "caller-review.md"
+}

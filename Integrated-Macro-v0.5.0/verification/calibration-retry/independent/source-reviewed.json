@@ -1,0 +1,50 @@
+{
+  "status": "reviewed-no-blocker-within-documented-scope",
+  "productionEditsByReviewer": false,
+  "releaseBuiltByReviewer": false,
+  "liveWorkerOrOSInputExecuted": false,
+  "sourceSha256": {
+    "src-tauri/src/runtime.rs": "6cd1a72e60d7658eb091cfdf73ca9789f78037139f012c900c2b76c64b02f2ae",
+    "src-tauri/src/calibration_restart_review.rs": "215b08536a03a1a0971160a8f41f830f53dc1669a75b0d62e84c2322c2817371",
+    "src-tauri/src/reentrant_runtime_tests.rs": "3c8045c1659817a843ae214c22c1a8a2aa60ffda104bf12bdc46c84dea966f0d",
+    "src-tauri/src/f9_any_state_tests.rs": "e624680ba7239b12d63abc097edf8d2145eb272c67e5f24b1c5308aeb438631c",
+    "src-tauri/src/visual_recovery.rs": "34a874a90f82fbfc6a9081edebd6f78269ced0b3d5482a9fe3f8d6813a8365b8",
+    "crates/macro-core/src/engine.rs": "8444a110ed702236b0e094f13a3af95300fb70f747bdf9b6e7c032433467777d",
+    "crates/macro-core/src/model.rs": "c0596021075c8401055eaeb52a86ddc613c33997070676ce69254371e8825ef0",
+    "crates/macro-core/src/seat_selection.rs": "37118aff1832c00db7188fc81766fc5f957ee95f80cbb52d0c2a3c0f5e2c2ac9"
+  },
+  "checks": {
+    "independent": {
+      "log": "after-provenance-current.log",
+      "passed": 9,
+      "failed": 0,
+      "ignored": 0,
+      "sha256": "2f50a1407ed51292a15a8660216a1f1dc5cbe188b5cd70eb56f24b17ad6d67aa"
+    },
+    "finalDesktop": {
+      "log": "../implementation/desktop-final.log",
+      "passed": 142,
+      "failed": 0,
+      "ignored": 1,
+      "sha256": "0c989f3cd93af1ccc5a836d2a078d9177990928e7242c3e79d9b5e17acff8bfa"
+    },
+    "baseline": {
+      "log": "before.log",
+      "expectedFailures": 2,
+      "sha256": "d678dabe292044e6807d217daf1979017f3c55a7109dbb4d0caaf9ea95f4d010"
+    }
+  },
+  "reviewSha256": "69dc585559026b18ce7ebe48b28eca9115dcff9a045cb1db829e67cbf3d680d5",
+  "parentFinalWorkspaceNativeChecks": "pending parent final report; not inferred from focused or desktop tests",
+  "limits": [
+    "synthetic Engine/helper tests; Worker call ordering reviewed as source",
+    "same window/geometry does not prove same semantic site map",
+    "Windows/live-site input untested",
+    "existing optimistic count and image identity limitations remain"
+  ],
+  "peerReview": {
+    "reviewer": "/root/input_adversarial_review",
+    "scope": "final ninth regression source plus Resume policy/epoch actual callers",
+    "result": "no additional scoped blocker"
+  }
+}

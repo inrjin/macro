@@ -1,0 +1,8 @@
+{
+  "crates/macro-core/src/seat_objects.rs": true,
+  "crates/macro-core/src/seat_object_shapes.rs": false,
+  "crates/macro-core/src/model.rs": true,
+  "crates/macro-core/src/seat_selection.rs": true,
+  "crates/macro-core/tests/seat_object_nonround_review.rs": false,
+  "crates/macro-core/tests/support/seat_object_shapes.rs": true
+}

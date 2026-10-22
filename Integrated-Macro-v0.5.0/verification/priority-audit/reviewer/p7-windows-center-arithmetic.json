@@ -1,0 +1,53 @@
+{
+  "scope": "Source arithmetic only; inverse cell is an explicit floor-mapping model, not measured Windows pointer behavior. No OS input was sent.",
+  "rows": [
+    {
+      "virtualWidth": 1920,
+      "inputPoint": 61.0,
+      "productionAbsolute": 2099,
+      "inverseCellUnderFloorModel": 61
+    },
+    {
+      "virtualWidth": 1920,
+      "inputPoint": 61.5,
+      "productionAbsolute": 2116,
+      "inverseCellUnderFloorModel": 61
+    },
+    {
+      "virtualWidth": 2560,
+      "inputPoint": 61.0,
+      "productionAbsolute": 1574,
+      "inverseCellUnderFloorModel": 61
+    },
+    {
+      "virtualWidth": 2560,
+      "inputPoint": 61.5,
+      "productionAbsolute": 1587,
+      "inverseCellUnderFloorModel": 61
+    },
+    {
+      "virtualWidth": 3840,
+      "inputPoint": 61.0,
+      "productionAbsolute": 1049,
+      "inverseCellUnderFloorModel": 61
+    },
+    {
+      "virtualWidth": 3840,
+      "inputPoint": 61.5,
+      "productionAbsolute": 1058,
+      "inverseCellUnderFloorModel": 61
+    },
+    {
+      "virtualWidth": 4096,
+      "inputPoint": 61.0,
+      "productionAbsolute": 984,
+      "inverseCellUnderFloorModel": 61
+    },
+    {
+      "virtualWidth": 4096,
+      "inputPoint": 61.5,
+      "productionAbsolute": 992,
+      "inverseCellUnderFloorModel": 62
+    }
+  ]
+}

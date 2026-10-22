@@ -1,0 +1,9 @@
+{
+  "method": "Exact runtime helper source copied into standalone pure program linked to compiled production macro_core; no Worker/native/UI execution.",
+  "files": {
+    "src-tauri/src/runtime.rs": "6ed0906ff6d3cbe61b25afe72c87f19132af17142c6583e8047449533fe437e8",
+    "crates/macro-core/src/engine.rs": "111ac1fa3f1e582c6ad803115838eea9d0f6d117e052a5429e0a351ade67c51f",
+    "crates/macro-core/src/model.rs": "630c051bda5f1412dc579d6444bc7f596cf8708d7d4bb1d452e4818ead0c3b1e"
+  },
+  "probeSHA256": "b6e3d73d156608fedbca696e52be209628e533df395629a5c377f4f081de3f58"
+}

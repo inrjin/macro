@@ -1,0 +1,26 @@
+{
+  "recordedAt": "2026-10-20T17:56:01.933826+00:00",
+  "command": "bash crates/macro-platform/native/verify-macos.sh",
+  "exitCode": 0,
+  "combinedOutput": "sysctlbyname for kern.hv_vmm_present failed with status -1kIOSurfaceMethodSetCoreVideoBridgedKeys failed: 10000003\nNative synthetic window validation (43), activation (16), capture lifecycle, Enter metadata/off-only ABI, allocation/free and thread guard OK; permission bits=0\nSwift arm64/x86_64 compilation and host ABI smoke passed.\n",
+  "sourceSHA256": {
+    "crates/macro-platform/native/MacPlatform.swift": "59eb97a52b17bf6cbe27a6ff09ea50a14922ff65e835b8873ab998994c77af9a",
+    "crates/macro-platform/native/verify-macos.sh": "48a4c81897f8fbef55129ea5a9ce65f37554a1df053390f608acc68e1f5804bb"
+  },
+  "checks": {
+    "optimizedArchitectures": [
+      "arm64",
+      "x86_64"
+    ],
+    "namedWindowValidationCases": 43,
+    "activationCases": 16,
+    "enterKeyFilterCases": 10,
+    "enterFreshnessTokenAssertions": 5,
+    "enterABI": "off-only allocation/watch-disabled/drain/free"
+  },
+  "limits": [
+    "permission bits=0; no actual Enter monitor installation, permission prompt, screen capture, focus activation or browser input occurred.",
+    "Synthetic key metadata tests do not establish actual Return/keypad Enter delivery, native callback timing or lifecycle while a browser runs.",
+    "Windows runtime and executable linkage were not tested."
+  ]
+}

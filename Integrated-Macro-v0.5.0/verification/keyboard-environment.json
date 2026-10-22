@@ -1,0 +1,13 @@
+{
+  "accessibilityTrusted" : false,
+  "inputPosted" : false,
+  "listenEventAccess" : false,
+  "mainThread" : true,
+  "monitorInstalled" : false,
+  "osVersion" : "Version 26.5.2 (Build 25F84)",
+  "postEventAccess" : false,
+  "probeOnly" : true,
+  "processID" : 72330,
+  "screenCaptureAccess" : false,
+  "secureEventInputEnabled" : false
+}

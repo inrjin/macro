@@ -1,0 +1,273 @@
+{
+  "cases": [
+    {
+      "case": "full_screenshot",
+      "cold": {
+        "iterations": 20,
+        "max_ms": 0.609542,
+        "mean_ms": 0.186602
+      },
+      "height": 1964,
+      "observation": {
+        "backdrop": {
+          "baseline_mean_rgb": [
+            115,
+            115,
+            116
+          ],
+          "baseline_samples": 25,
+          "brightened_samples": 0,
+          "frame_opaque_basis_points": 10000,
+          "gate_reason": "background_dim",
+          "mean_rgb": [
+            115,
+            115,
+            116
+          ],
+          "opaque_samples": 25,
+          "patch": {
+            "height": 78,
+            "width": 120,
+            "x": 90,
+            "y": 1728
+          },
+          "sample_count": 25
+        },
+        "dismissed": false,
+        "panel": {
+          "height": 1120,
+          "width": 1038,
+          "x": 994,
+          "y": 483
+        },
+        "status": "visible",
+        "title_score_basis_points": 8927
+      },
+      "visible_recheck": {
+        "iterations": 100,
+        "max_ms": 0.003375,
+        "mean_ms": 0.0011711900000000008
+      },
+      "width": 3024
+    },
+    {
+      "case": "chrome_window_crop",
+      "cold": {
+        "iterations": 20,
+        "max_ms": 0.1865,
+        "mean_ms": 0.17068735000000004
+      },
+      "height": 1780,
+      "observation": {
+        "backdrop": {
+          "baseline_mean_rgb": [
+            112,
+            112,
+            115
+          ],
+          "baseline_samples": 25,
+          "brightened_samples": 0,
+          "frame_opaque_basis_points": 10000,
+          "gate_reason": "background_dim",
+          "mean_rgb": [
+            112,
+            112,
+            115
+          ],
+          "opaque_samples": 25,
+          "patch": {
+            "height": 71,
+            "width": 120,
+            "x": 90,
+            "y": 1566
+          },
+          "sample_count": 25
+        },
+        "dismissed": false,
+        "panel": {
+          "height": 1122,
+          "width": 1032,
+          "x": 996,
+          "y": 416
+        },
+        "status": "visible",
+        "title_score_basis_points": 8927
+      },
+      "visible_recheck": {
+        "iterations": 100,
+        "max_ms": 0.0011250000000000001,
+        "mean_ms": 0.0008324700000000005
+      },
+      "width": 3024
+    },
+    {
+      "case": "chrome_half_scale",
+      "cold": {
+        "iterations": 20,
+        "max_ms": 0.114666,
+        "mean_ms": 0.0947125
+      },
+      "height": 890,
+      "observation": {
+        "backdrop": {
+          "baseline_mean_rgb": [
+            112,
+            112,
+            115
+          ],
+          "baseline_samples": 25,
+          "brightened_samples": 0,
+          "frame_opaque_basis_points": 10000,
+          "gate_reason": "background_dim",
+          "mean_rgb": [
+            112,
+            112,
+            115
+          ],
+          "opaque_samples": 25,
+          "patch": {
+            "height": 35,
+            "width": 60,
+            "x": 45,
+            "y": 783
+          },
+          "sample_count": 25
+        },
+        "dismissed": false,
+        "panel": {
+          "height": 561,
+          "width": 518,
+          "x": 498,
+          "y": 208
+        },
+        "status": "visible",
+        "title_score_basis_points": 8003
+      },
+      "visible_recheck": {
+        "iterations": 100,
+        "max_ms": 0.001042,
+        "mean_ms": 0.0007441900000000006
+      },
+      "width": 1512
+    },
+    {
+      "case": "chrome_three_quarter_scale",
+      "cold": {
+        "iterations": 20,
+        "max_ms": 0.11141699999999999,
+        "mean_ms": 0.09338125
+      },
+      "height": 1335,
+      "observation": {
+        "backdrop": {
+          "baseline_mean_rgb": [
+            112,
+            112,
+            115
+          ],
+          "baseline_samples": 25,
+          "brightened_samples": 0,
+          "frame_opaque_basis_points": 10000,
+          "gate_reason": "background_dim",
+          "mean_rgb": [
+            112,
+            112,
+            115
+          ],
+          "opaque_samples": 25,
+          "patch": {
+            "height": 53,
+            "width": 90,
+            "x": 68,
+            "y": 1174
+          },
+          "sample_count": 25
+        },
+        "dismissed": false,
+        "panel": {
+          "height": 842,
+          "width": 768,
+          "x": 750,
+          "y": 312
+        },
+        "status": "visible",
+        "title_score_basis_points": 8824
+      },
+      "visible_recheck": {
+        "iterations": 100,
+        "max_ms": 0.000958,
+        "mean_ms": 0.0007524600000000005
+      },
+      "width": 2268
+    },
+    {
+      "case": "chrome_one_quarter_larger",
+      "cold": {
+        "iterations": 20,
+        "max_ms": 1.497625,
+        "mean_ms": 0.22586460000000005
+      },
+      "height": 2225,
+      "observation": {
+        "backdrop": {
+          "baseline_mean_rgb": [
+            112,
+            112,
+            115
+          ],
+          "baseline_samples": 25,
+          "brightened_samples": 0,
+          "frame_opaque_basis_points": 10000,
+          "gate_reason": "background_dim",
+          "mean_rgb": [
+            112,
+            112,
+            115
+          ],
+          "opaque_samples": 25,
+          "patch": {
+            "height": 89,
+            "width": 151,
+            "x": 113,
+            "y": 1958
+          },
+          "sample_count": 25
+        },
+        "dismissed": false,
+        "panel": {
+          "height": 1400,
+          "width": 1294,
+          "x": 1244,
+          "y": 522
+        },
+        "status": "visible",
+        "title_score_basis_points": 8440
+      },
+      "visible_recheck": {
+        "iterations": 100,
+        "max_ms": 0.001708,
+        "mean_ms": 0.00043957000000000024
+      },
+      "width": 3780
+    }
+  ],
+  "pixel_buffers_saved_to_repository": false,
+  "profiles_modified": false,
+  "scope": "One supplied screenshot and deterministic window crop/downsample; no actual accepted or wrong-answer transition, no live native capture or app-input test.",
+  "temporary_full_rgba_deleted": true,
+  "build_scope": "Standalone optimized Rust helper and macro-core only; no desktop app build, package, signing, launch, or live input.",
+  "chrome_window_crop_from_original": {
+    "x": 0,
+    "y": 66,
+    "width": 3024,
+    "height": 1780
+  },
+  "analysis_only_timing": true,
+  "limitations": [
+    "Only the supplied still-visible screenshot, its exact browser-window crop, and deterministic resizes were analyzed. No real typing, wrong-answer, or successful dismissal frame transition was available.",
+    "The actual successful-dismissal backdrop RGB values and native capture-to-input latency were not measured.",
+    "A fully opaque white replacement or flash lasting through the 100 ms interval can satisfy this local backdrop-only rule and is not distinguished from genuine backdrop restoration.",
+    "The fixed patch may require reassessment for a different browser layout, bottom toolbar, page design, or dark background. Such live configurations were not tested.",
+    "Timings cover the in-process detector on already available pixels only; native capture, runtime scheduling, rendering, and app input are excluded."
+  ]
+}

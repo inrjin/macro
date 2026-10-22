@@ -1,0 +1,22 @@
+{
+  "scope": "Final retained row/cache source; synthetic extraction/Engine tests only; no OS input or release build",
+  "files": {
+    "crates/macro-core/src/model.rs": "9aff51550b8ea36c52ed811bc1959074e2c317512a846690edb74d5e9b275857",
+    "crates/macro-core/src/vision.rs": "25f24856ab8d66f93a3e276d54e7ccb5d871df290d6325e81f77ba4b044aa396",
+    "crates/macro-core/src/engine.rs": "f9edcd0da55a92a86b188186252053c00f976fd2a370afff11bca801cdef86df",
+    "crates/macro-core/src/seat_selection.rs": "7248517b7f3065ccb78d9a640d15ce62f19730ecbc5013e7fe5cf85d641aec1a",
+    "src-tauri/src/runtime.rs": "eacdcd9a99f3cc1051a85e42db8227071d670b2ca3b1a75ec54e6d9d32203481",
+    "crates/macro-core/tests/seat_review_regressions.rs": "14782d4415fd96e4ab0c06961cdf8b4b5b1059714f68eb1f6123710162d2402f",
+    "crates/macro-core/tests/seat_shape_regressions.rs": "90cb4d8bc8bfb58e20d78cf5a480504a84d1e8fc0e8a1c4c62ca07ea0a519c05"
+  },
+  "baselineUnchanged": {
+    "crates/macro-core/src/model.rs": true,
+    "crates/macro-core/src/vision.rs": true,
+    "crates/macro-core/src/engine.rs": true
+  },
+  "evidence": {
+    "verification/seat-review-cycle/independent-before.log": "d2855fa8b0200f7daf0b26058d3eb4b9ecfa2cbed285e4a7402d6677f65193fc",
+    "verification/seat-review-cycle/independent-after.log": "fedd15c4111a4b0da91230352a3f4e80f17a47857345089a276c2bd7481627dc",
+    "verification/seat-review-cycle/independent-final.log": "c63347c84ea5b530e75ac3c3c013604b9045576a8b779bf3ec08bc6ee17cfd2f"
+  }
+}

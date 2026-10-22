@@ -1,0 +1,261 @@
+{
+  "fixtures" : [
+    {
+      "expectation" : "unreadable",
+      "file" : "empty-neighbor\/fixtures\/empty_near_block.rgba",
+      "group" : "empty_neighbor",
+      "height" : 300,
+      "name" : "empty_near_block",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 130.47200000000001,
+          "y" : 28
+        },
+        {
+          "advance" : 188.04000000000002,
+          "ascent" : 18.000036478042603,
+          "descent" : 6.0000121593475342,
+          "fontSize" : 20,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 260,
+          "y" : 150
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "empty-neighbor\/fixtures\/empty_near_text.rgba",
+      "group" : "empty_neighbor",
+      "height" : 300,
+      "name" : "empty_near_text",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 130.47200000000001,
+          "y" : 28
+        },
+        {
+          "advance" : 188.04000000000002,
+          "ascent" : 18.000036478042603,
+          "descent" : 6.0000121593475342,
+          "fontSize" : 20,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 260,
+          "y" : 150
+        },
+        {
+          "advance" : 34.600000000000001,
+          "ascent" : 18.000036478042603,
+          "descent" : 6.0000121593475342,
+          "fontSize" : 20,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "닫기",
+          "x" : 452.04000000000002,
+          "y" : 150
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "empty-neighbor\/fixtures\/empty_far_block.rgba",
+      "group" : "empty_neighbor",
+      "height" : 300,
+      "name" : "empty_far_block",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 130.47200000000001,
+          "y" : 28
+        },
+        {
+          "advance" : 188.04000000000002,
+          "ascent" : 18.000036478042603,
+          "descent" : 6.0000121593475342,
+          "fontSize" : 20,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 260,
+          "y" : 150
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 2,
+      "expectation" : "confirmed",
+      "file" : "empty-neighbor\/fixtures\/noempty_near_block.rgba",
+      "group" : "empty_neighbor",
+      "height" : 300,
+      "name" : "noempty_near_block",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 2,
+      "expectation" : "confirmed",
+      "file" : "empty-neighbor\/fixtures\/noempty_near_text.rgba",
+      "group" : "empty_neighbor",
+      "height" : 300,
+      "name" : "noempty_near_text",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 130.47200000000001,
+          "y" : 28
+        },
+        {
+          "advance" : 34.600000000000001,
+          "ascent" : 18.000036478042603,
+          "descent" : 6.0000121593475342,
+          "fontSize" : 20,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "닫기",
+          "x" : 452.04000000000002,
+          "y" : 150
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 2,
+      "expectation" : "confirmed",
+      "file" : "empty-neighbor\/fixtures\/noempty_far_block.rgba",
+      "group" : "empty_neighbor",
+      "height" : 300,
+      "name" : "noempty_far_block",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    }
+  ],
+  "note" : "Independent adjacent UI positive\/negative controls; known Neo20 empty detector miss must not be revived by greedy full-line merging."
+}

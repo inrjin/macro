@@ -1,0 +1,16 @@
+{
+  "repository": "/Users/inrjin/Documents/機械人間/Integrated-Macro-Windows-v0.5.11-Git-Push",
+  "branch": "windows-build-0.5.11",
+  "commit": "bec162eac85af46019e714e0b3d9153cd338a4e9",
+  "remote": "https://github.com/inrjin/macro.git",
+  "trackedFiles": {
+    "Integrated-Macro-Windows-v0.5.11-Build-Kit.zip": "d0e5ed8616f2bdb1e49fd86497d3e2cd557cd460d2cca7c1c10b5777bf36357e",
+    ".github/workflows/build-windows.yml": "56a28fddd11d06314ee9a8127fdbd123842e4d89d68323ea8057830f8761e9e3"
+  },
+  "cleanWorkingTree": true,
+  "commitAuthor": "Codex <codex@local.invalid> (local author only; not GitHub authentication)",
+  "globalGitOrCredentialConfigurationChanged": false,
+  "remotePushPerformed": false,
+  "windowsBuildPerformed": false,
+  "originalBuildKitChanged": false
+}

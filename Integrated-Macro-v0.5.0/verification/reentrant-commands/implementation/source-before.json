@@ -1,0 +1,22 @@
+[
+  {
+    "path": "crates/macro-core/src/model.rs",
+    "sha256": "3869b494fa627ecff5a202c26b21d8c4aa1cc99f32c18b2e5ed349d037b284e0"
+  },
+  {
+    "path": "crates/macro-core/src/engine.rs",
+    "sha256": "d893b89bd3f221bade56108df22f1a02eff5e3bfa963e46bc19d38e67367a0bf"
+  },
+  {
+    "path": "src-tauri/src/runtime.rs",
+    "sha256": "c59fe1d370a2210cdfdc337c6a8ffde6cc83eecc588707194ea63f202c2b3ff4"
+  },
+  {
+    "path": "src-tauri/src/main.rs",
+    "sha256": "5e0a5b19272003d6b2a880c6b8062210f93c05d1004aca1bd13f7110019a3b44"
+  },
+  {
+    "path": "crates/macro-core/tests/engine.rs",
+    "sha256": "513a29cb387526e2d6f6f91af7325268bc3564ff452b993f5a20a48a905d61d2"
+  }
+]

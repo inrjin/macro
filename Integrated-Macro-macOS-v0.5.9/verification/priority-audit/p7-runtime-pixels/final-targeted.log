@@ -1,0 +1,39 @@
+   Compiling integrated-macro v0.5.8 (/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/src-tauri)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.89s
+     Running unittests src/main.rs (target/debug/deps/integrated_macro-b7da2ffd8ed18f1e)
+
+running 14 tests
+test runtime::priority_p1_tests::p1_navigation_fence_keeps_current_delivery_and_mode_boundaries ... ok
+test runtime::priority_p7_pixel_tests::p7_candidate_mapping_bounds_scales_negative_origins_and_fractional_compatibility ... ok
+{"captureSource":"scripted_static_SCK_contract","case":"legitimate_identical_destination","observedUntilMs":3600000,"strictFenceProgress":false}
+{"case":"freshness_is_not_region_identity","eligibleSeatPoint":{"x":5.0,"y":5.0},"freshPixels":false,"semanticRegionKnownToRuntime":false,"truthOnlyInTestOracle":"destination_rendered_identical_map"}
+{"case":"legacy_pre_input_pixels","eligibleSeatPoint":{"x":5.0,"y":5.0},"nativeInputSent":false,"navigation":"two_regions","unreadNewSequence":false}
+test runtime::priority_p1_tests::p1_capture_errors_or_no_cached_pixels_never_become_a_static_scan ... ok
+{"case":"refresh_response_identity_unobservable","eligibleSeatCount":1,"refreshCompletionClaimed":false,"truthOnlyInTestOracle":"latest_refresh_response"}
+test runtime::priority_p1_tests::p1_strict_new_pixel_fence_rejects_a_legitimate_static_map_indefinitely ... {"case":"legacy_pre_input_pixels","eligibleSeatPoint":{"x":5.0,"y":5.0},"nativeInputSent":false,"navigation":"two_regions","unreadNewSequence":true}
+ok
+{"case":"freshness_is_not_region_identity","eligibleSeatPoint":{"x":5.0,"y":5.0},"freshPixels":false,"semanticRegionKnownToRuntime":false,"truthOnlyInTestOracle":"previous_region_while_destination_loading"}
+test runtime::priority_p4_tests::p4_delayed_pre_latest_refresh_image_is_blocked_then_new_seat_resumes ... ok
+test runtime::priority_p7_pixel_tests::p7_only_image_candidate_actions_select_centered_input_and_selected_color_uses_that_pixel ... ok
+{"case":"windows_existing_integer_index_contract","doubleCenteredNormalization":992,"existingNormalization":984,"nativePixelIndex":61.0,"samplePixelCenter":61.5,"windowsOsExecuted":false}
+{"case":"refresh_response_identity_unobservable","eligibleSeatCount":1,"refreshCompletionClaimed":false,"truthOnlyInTestOracle":"older_response_rendered_after_latest_post"}
+{"case":"legacy_pre_input_pixels","eligibleSeatPoint":{"x":5.0,"y":5.0},"nativeInputSent":false,"navigation":"keys","unreadNewSequence":false}
+{"case":"freshness_is_not_region_identity","eligibleSeatPoint":{"x":5.0,"y":5.0},"freshPixels":true,"semanticRegionKnownToRuntime":false,"truthOnlyInTestOracle":"destination_rendered_identical_map"}
+{"centerRoundTrip":[61,5],"pixelIndex":[61,5],"rawRoundTrip":[61,5],"scale":1.0}
+{"case":"freshness_is_not_region_identity","eligibleSeatPoint":{"x":5.0,"y":5.0},"freshPixels":true,"semanticRegionKnownToRuntime":false,"truthOnlyInTestOracle":"previous_region_while_destination_loading"}
+test runtime::priority_p1_tests::p1_second_native_query_replaces_pixels_and_rejects_changed_geometry_or_transparency ... {"case":"legacy_pre_input_pixels","eligibleSeatPoint":{"x":5.0,"y":5.0},"nativeInputSent":false,"navigation":"keys","unreadNewSequence":true}
+ok
+test runtime::priority_p4_tests::p4_same_pixels_new_capture_releases_fence_but_response_identity_remains_unknown ... ok
+test runtime::priority_p1_tests::p1_fresh_idle_and_fresh_pixels_do_not_identify_which_region_the_site_rendered ... ok
+test runtime::priority_p7_pixel_tests::p7_windows_input_keeps_integer_indices_and_avoids_double_centering ... ok
+test runtime::priority_p1_tests::p1_legacy_old_cached_and_unread_pre_post_pixels_reach_the_real_preclick_check ... ok
+{"centerRoundTrip":[61,5],"pixelIndex":[61,5],"rawRoundTrip":[61,5],"scale":2.0}
+{"buttonDeliveriesSimulated":[1000,2000,3000,4000,5000,6000,7000,8000,9000,10000],"case":"no_refresh_response","generation":0,"nativeInputSent":false,"scans":11}
+test runtime::priority_p4_tests::p4_refresh_no_response_retries_only_the_registered_button_at_the_interval ... ok
+{"centerRoundTrip":[61,5],"pixelIndex":[61,5],"rawRoundTrip":[60,5],"scale":1.75}
+{"centerRoundTrip":[61,5],"pixelIndex":[61,5],"rawRoundTrip":[61,5],"scale":1.3}
+test runtime::priority_p7_pixel_tests::p7_extracted_candidate_checks_the_same_physical_pixel_at_fractional_scale ... ok
+test runtime::priority_p4_tests::p4_static_refresh_off_keeps_scanning_and_unchanged_on_keeps_refreshing ... ok
+
+test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 76 filtered out; finished in 0.00s
+

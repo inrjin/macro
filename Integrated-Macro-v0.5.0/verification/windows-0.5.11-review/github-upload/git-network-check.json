@@ -1,0 +1,7 @@
+{
+  "operation": "Read-only ls-remote; credentials disabled, no push attempted",
+  "exitCode": 128,
+  "error": "fatal: unable to access 'https://github.com/inrjin/macro.git/': Could not resolve host: github.com",
+  "anyRemoteRefsRead": false,
+  "credentialsRequestedOrStored": false
+}

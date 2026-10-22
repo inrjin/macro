@@ -1,0 +1,31 @@
+{
+  "generatedAt": "2026-10-21T13:25:13.043992+00:00",
+  "sourceBundle": "/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/target/release/bundle/macos/Integrated Macro.app",
+  "distributedBundle": "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.10/Integrated Macro.app",
+  "appFiles": {
+    "Contents/Info.plist": {
+      "sha256": "cecb4181d86e32cdb742e9a8923e91680ad3d0a0a468b8187394760b8d9f4f02",
+      "mode": 420
+    },
+    "Contents/_CodeSignature/CodeResources": {
+      "sha256": "8b2a4458d8753f7d50800825612316fdb422f2d68b7ce3f7a1728de045d089ac",
+      "mode": 420
+    },
+    "Contents/MacOS/integrated-macro": {
+      "sha256": "53a848be4d714fb4276f7c85dc2f68fab0f41c82fb245a6b7619c17e9da48a3d",
+      "mode": 493
+    },
+    "Contents/Resources/icon.icns": {
+      "sha256": "be80f1eb77b66015d3119b9d8483fae0c3684f3169793b93a5372d505b827a7c",
+      "mode": 420
+    }
+  },
+  "distributionMatchesSourceBytesAndModes": true,
+  "filesCompared": 4,
+  "signatureExitCode": 0,
+  "signatureOutput": "/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.10/Integrated Macro.app: valid on disk\n/Users/inrjin/Documents/機械人間/Integrated-Macro-macOS-v0.5.10/Integrated Macro.app: satisfies its Designated Requirement\n",
+  "archiveSHA256": "560901a742636165171de2739df467060c65cb7724e364243279d9610ab3757b",
+  "archiveMatchesReceipt": true,
+  "readOnly": true,
+  "appLaunched": false
+}

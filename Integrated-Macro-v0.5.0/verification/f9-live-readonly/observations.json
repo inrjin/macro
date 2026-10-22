@@ -1,0 +1,189 @@
+{
+  "scope": "Read-only audit of existing F9 runtime metadata and source; no app control, settings change, native input, build or release.",
+  "source_log": {
+    "rows": 3083,
+    "bytes": 1688977,
+    "mtime_ns": 1792632493434402312,
+    "sha256": "662e5d10c9b996c076576ffe11e618eb000125ce06abde222087f2fd93837c50",
+    "last_event": {
+      "kind": "state",
+      "phase": "waiting_sale",
+      "timeMs": 1792632493434
+    }
+  },
+  "f9_handler_records": 28,
+  "evidence": [
+    {
+      "source_line": 2387,
+      "timeKST": "2026-10-22T09:28:13.687",
+      "appVersion": "0.5.11",
+      "kind": "captcha_manual_completed",
+      "logical_run": 8,
+      "detail": {
+        "freshRun": false,
+        "phase": "region",
+        "recovering": false,
+        "resumed": true,
+        "shortcut": "F9"
+      }
+    },
+    {
+      "source_line": 2420,
+      "timeKST": "2026-10-22T09:31:14.815",
+      "appVersion": "0.5.11",
+      "kind": "captcha_manual_completed",
+      "logical_run": 9,
+      "detail": {
+        "freshRun": false,
+        "phase": "region",
+        "recovering": false,
+        "resumed": false,
+        "shortcut": "F9"
+      }
+    },
+    {
+      "source_line": 2788,
+      "timeKST": "2026-10-22T09:42:22.491",
+      "appVersion": "0.5.11",
+      "kind": "error",
+      "logical_run": 12,
+      "detail": {
+        "captureField": null,
+        "message": "F9 재시도 보류 · 전달한 좌석 기록과 현재 색상·좌석 범위·판정 옵션이 다릅니다. 기존 설정을 복원하세요. F4는 입력만 중지하며 좌석 선택을 해제하지 않습니다."
+      }
+    },
+    {
+      "source_line": 2874,
+      "timeKST": "2026-10-22T10:12:54.728",
+      "appVersion": "0.5.11",
+      "kind": "captcha_manual_completed",
+      "logical_run": 2,
+      "detail": {
+        "freshRun": false,
+        "phase": "seats",
+        "recovering": false,
+        "resumed": false,
+        "shortcut": "F9"
+      }
+    },
+    {
+      "source_line": 2878,
+      "timeKST": "2026-10-22T10:13:00.053",
+      "appVersion": "0.5.11",
+      "kind": "captcha_manual_completed",
+      "logical_run": 2,
+      "detail": {
+        "freshRun": false,
+        "phase": "seats",
+        "recovering": false,
+        "resumed": false,
+        "shortcut": "F9"
+      }
+    },
+    {
+      "source_line": 2915,
+      "timeKST": "2026-10-22T10:13:37.776",
+      "appVersion": "0.5.11",
+      "kind": "captcha_manual_completed",
+      "logical_run": 3,
+      "detail": {
+        "freshRun": true,
+        "phase": "seats",
+        "recovering": false,
+        "resumed": false,
+        "shortcut": "F9"
+      }
+    },
+    {
+      "source_line": 2921,
+      "timeKST": "2026-10-22T10:13:51.541",
+      "appVersion": "0.5.11",
+      "kind": "captcha_manual_completed",
+      "logical_run": 3,
+      "detail": {
+        "freshRun": false,
+        "phase": "seats",
+        "recovering": false,
+        "resumed": false,
+        "shortcut": "F9"
+      }
+    },
+    {
+      "source_line": 2955,
+      "timeKST": "2026-10-22T10:14:06.447",
+      "appVersion": "0.5.11",
+      "kind": "vision_scan",
+      "logical_run": 3,
+      "detail": {
+        "phase": "seats",
+        "accepted_count": 31,
+        "matching_pixels": 14091,
+        "reference_objects": 977,
+        "object_reasons": {
+          "available_fill": 31,
+          "unsupported_shape": 31
+        }
+      }
+    },
+    {
+      "source_line": 2956,
+      "timeKST": "2026-10-22T10:14:06.451",
+      "appVersion": "0.5.11",
+      "kind": "input",
+      "logical_run": 3,
+      "detail": {
+        "type": "click",
+        "purpose": "seat:object:270:708:6861436117230534332",
+        "delivered": true,
+        "error": ""
+      }
+    },
+    {
+      "source_line": 2962,
+      "timeKST": "2026-10-22T10:14:06.993",
+      "appVersion": "0.5.11",
+      "kind": "input",
+      "logical_run": 3,
+      "detail": {
+        "type": "click",
+        "purpose": "seat:object:306:708:6861436117230534332",
+        "delivered": true,
+        "error": ""
+      }
+    },
+    {
+      "source_line": 2967,
+      "timeKST": "2026-10-22T10:14:07.499",
+      "appVersion": "0.5.11",
+      "kind": "input",
+      "logical_run": 3,
+      "detail": {
+        "type": "complete_selection",
+        "purpose": null,
+        "delivered": true,
+        "error": ""
+      }
+    }
+  ],
+  "source_hashes": {
+    "AGENTS.md": "afef8f4c6854c485ead4b4ecf2389c5271d690ef1360ff0fbfa14e19bf305707",
+    "src-tauri/src/runtime.rs": "6cd1a72e60d7658eb091cfdf73ca9789f78037139f012c900c2b76c64b02f2ae",
+    "src-tauri/src/reentrant_runtime_tests.rs": "3c8045c1659817a843ae214c22c1a8a2aa60ffda104bf12bdc46c84dea966f0d",
+    "src-tauri/src/calibration_restart_review.rs": "215b08536a03a1a0971160a8f41f830f53dc1669a75b0d62e84c2322c2817371",
+    "crates/macro-core/src/engine.rs": "8444a110ed702236b0e094f13a3af95300fb70f747bdf9b6e7c032433467777d",
+    "README.md": "73689ced907d67ac726395d101f107b0500c3a65a211816e8a219c9f0d623348"
+  },
+  "release_manifest_sha256": "53805656b7bfaa42a4c3202264b1d787bfd07ce8d44991a45c5d3670ad1e88fe",
+  "limits": [
+    "Handler acceptance and native delivery are not live site seat acceptance.",
+    "No captured image or DOM identifies which page was visible in historical candidate-zero frames.",
+    "Current saved settings cannot be applied retrospectively to prior F9 events.",
+    "Unbuilt calibration-retry changes do not fix region color zero matches or all no-repeated-shape scans.",
+    "Count OFF retains estimated selection receipts; this audit does not establish whether those seats were still held.",
+    "No tests run: application source unchanged."
+  ],
+  "f9_handler_records_by_version": {
+    "0.5.10": 1,
+    "0.5.11": 27
+  }
+}

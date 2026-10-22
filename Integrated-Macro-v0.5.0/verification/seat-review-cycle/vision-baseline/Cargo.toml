@@ -1,0 +1,17 @@
+[package]
+name = "seat-shape-baseline-probe"
+version = "0.0.0"
+edition = "2021"
+
+[workspace]
+
+[dependencies]
+macro-core = { path = "../before/crates/macro-core" }
+
+[[test]]
+name = "seat_shape_regressions"
+path = "../ring-comparison.rs"
+
+[[test]]
+name = "ring_comparison"
+path = "../ring-comparison.rs"

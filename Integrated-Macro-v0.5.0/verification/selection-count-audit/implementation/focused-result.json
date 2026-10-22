@@ -1,0 +1,20 @@
+{
+  "command": "cargo test -p macro-core --release --offline --locked --test selection_count_completeness --test selection_count_audit_reader --test selection_count_reader_review -- --nocapture",
+  "log": "after-final-negative-radius.log",
+  "passed": 17,
+  "failed": 0,
+  "ignored": 1,
+  "corpora": {
+    "implementationScenes": 82,
+    "independentScenes": 220,
+    "independentDenseMapControl": {
+      "seats": 1800,
+      "count": 3
+    },
+    "independentOpaqueStripMutations": 112,
+    "preservedHistoricalScenes": 108
+  },
+  "scope": "Shared Rust independently rendered/synthetic RGBA; not Worker/OS/browser/site execution",
+  "ignoredMeaning": "manual optimized timing excluded from automatic pass count",
+  "timingComparison": "label-radius-subruns-experiment/comparison.json"
+}

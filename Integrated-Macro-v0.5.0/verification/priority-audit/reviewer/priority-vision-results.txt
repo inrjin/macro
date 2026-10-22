@@ -1,0 +1,18 @@
+   Compiling macro-core v0.5.8 (/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/crates/macro-core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.55s
+     Running tests/priority_vision_audit.rs (target/debug/deps/priority_vision_audit-577c86ba2090094d)
+
+running 5 tests
+{"clipped_roi_candidates":1,"false_positive_after_crop":1,"full_component_pixels":400,"full_image_candidates":0,"max_component_pixels":25,"scenario":"P5 clipped nonseat"}
+{"broad_roi_candidates":2,"broad_roi_false_positives":1,"cropped_roi_false_positives":0,"excluded_legend_false_positives":0,"first_proposed_click_is_legend":true,"scenario":"P5 legend"}
+test p5_roi_clipping_can_turn_an_oversized_nonseat_into_a_small_accepted_component ... ok
+test p5_same_colored_legend_is_currently_a_candidate_and_roi_or_exclusion_can_remove_it ... ok
+{"edge_touching_candidates":1,"one_pixel_gap_candidates":2,"scenario":"P5 component geometry","small_seats":[{"accepted":0,"matching_pixels":1,"rejected_too_small":1},{"accepted":0,"matching_pixels":2,"rejected_too_small":1},{"accepted":1,"matching_pixels":3,"rejected_too_small":0}],"truth_seats":2}
+test p5_touching_seats_merge_and_subthreshold_seats_are_rejected_by_current_geometry_rules ... ok
+{"rows":[{"alpha":0,"vision_candidates":0},{"alpha":1,"vision_candidates":1},{"alpha":64,"vision_candidates":1},{"alpha":249,"vision_candidates":1},{"alpha":250,"vision_candidates":1},{"alpha":255,"vision_candidates":1}],"scenario":"P5 opacity","scope":"extraction only; no native click claim"}
+test p5_partial_opacity_is_currently_accepted_by_extraction_and_is_not_semantic_visibility ... ok
+{"evidence":"synthetic RGBA + real vision/Engine; no OS input","rows":[{"max_proposal_delay_ms":0,"missed_sampling_cases":19,"observable_cases":1,"phase_cases":20,"proposed_click_cases":1,"sample_interval_ms":20,"visible_duration_ms":1},{"max_proposal_delay_ms":3,"missed_sampling_cases":16,"observable_cases":4,"phase_cases":20,"proposed_click_cases":4,"sample_interval_ms":20,"visible_duration_ms":4},{"max_proposal_delay_ms":7,"missed_sampling_cases":12,"observable_cases":8,"phase_cases":20,"proposed_click_cases":8,"sample_interval_ms":20,"visible_duration_ms":8},{"max_proposal_delay_ms":15,"missed_sampling_cases":4,"observable_cases":16,"phase_cases":20,"proposed_click_cases":16,"sample_interval_ms":20,"visible_duration_ms":16},{"max_proposal_delay_ms":19,"missed_sampling_cases":0,"observable_cases":20,"phase_cases":20,"proposed_click_cases":20,"sample_interval_ms":20,"visible_duration_ms":40}],"scenario":"P3 transient appearance"}
+test p3_sampled_transient_seat_is_proposed_but_unobserved_intervals_remain_a_sampling_limit ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+

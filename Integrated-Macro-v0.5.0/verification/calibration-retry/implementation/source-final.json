@@ -1,0 +1,13 @@
+{
+  "src-tauri/src/runtime.rs": "6cd1a72e60d7658eb091cfdf73ca9789f78037139f012c900c2b76c64b02f2ae",
+  "src-tauri/src/reentrant_runtime_tests.rs": "3c8045c1659817a843ae214c22c1a8a2aa60ffda104bf12bdc46c84dea966f0d",
+  "src-tauri/src/calibration_restart_review.rs": "215b08536a03a1a0971160a8f41f830f53dc1669a75b0d62e84c2322c2817371",
+  "src-tauri/src/f9_any_state_tests.rs": "e624680ba7239b12d63abc097edf8d2145eb272c67e5f24b1c5308aeb438631c",
+  "crates/macro-core/src/engine.rs": "8444a110ed702236b0e094f13a3af95300fb70f747bdf9b6e7c032433467777d",
+  "crates/macro-core/src/model.rs": "c0596021075c8401055eaeb52a86ddc613c33997070676ce69254371e8825ef0",
+  "src-tauri/src/visual_recovery.rs": "34a874a90f82fbfc6a9081edebd6f78269ced0b3d5482a9fe3f8d6813a8365b8",
+  "README.md": "73689ced907d67ac726395d101f107b0500c3a65a211816e8a219c9f0d623348",
+  "AGENTS.md": "afef8f4c6854c485ead4b4ecf2389c5271d690ef1360ff0fbfa14e19bf305707",
+  "Cargo.toml": "a47cc6293efa6607e0ca386d3fd832925046c35bb68784d512be61a11798d3cc",
+  "package.json": "ed35d13f9849fbb50edae7396383eb307fbe86e8f9818c854d473d059733f59f"
+}

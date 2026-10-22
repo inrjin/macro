@@ -1,0 +1,46 @@
+{
+  "reviewer": "/root/fix_cancellation_start",
+  "recordedAtUtc": "2026-10-22T06:58:12.498148+00:00",
+  "scope": "Read-only static workflow, guide, exact inner ZIP and actual existing CMD caller review; no GitHub upload or execution.",
+  "workflowSHA256": "56a28fddd11d06314ee9a8127fdbd123842e4d89d68323ea8057830f8761e9e3",
+  "guideSHA256": "14a71beb91d5ec96414cc9d3af6e239328400acfb13004d741f3ff03f06de9b1",
+  "innerArchiveSHA256": "d0e5ed8616f2bdb1e49fd86497d3e2cd557cd460d2cca7c1c10b5777bf36357e",
+  "innerArchiveBytes": 3078639,
+  "innerArchiveFiles": 577,
+  "checks": {
+    "fixedArchiveHashBeforeExtraction": true,
+    "newExtractionRootRejectsExisting": true,
+    "sameReviewedCmdBuildCaller": true,
+    "pushAndManualTriggers": true,
+    "workflowSavePathMatchesPushFilter": true,
+    "guideExplicitlyRejectsRootTxtUpload": true,
+    "rerunArtifactNameUsesAttempt": true,
+    "onlyReadContentsPermission": true,
+    "artifactPathsExcludeCandidates": true,
+    "guideNoImplicitCodexPrivateAccess": true,
+    "guideNoWindowsExecutionClaim": true
+  },
+  "yamlSyntaxCheck": {
+    "parser": "Ruby Psych",
+    "passed": true,
+    "steps": 6,
+    "limitation": "YAML parser success is not GitHub Actions or PowerShell execution validation; YAML 1.1 on-key spelling was handled when inspecting the parsed trigger."
+  },
+  "peerDiscussion": [
+    "Both reviewers checked the extraction root against the pinned safe ZIP; no additional dynamic archive parser is required to establish the exact already-reviewed bytes.",
+    "Hosted Windows rerun starts a job environment; an already-existing extraction directory rejects rather than reuses stale files.",
+    "GitHub repo-local GITHUB_TOKEN access is separate from the Codex connector account; no promise of direct private-repository status or artifact access is made."
+  ],
+  "correctedOrBlockingFindings": [],
+  "githubAuthenticationChanged": false,
+  "externalRepositoryWrites": false,
+  "workflowExecuted": false,
+  "powershellOrCmdExecuted": false,
+  "windowsBinaryBuilt": false,
+  "documentationSources": [
+    "https://docs.github.com/en/actions/get-started/quickstart",
+    "https://docs.github.com/en/actions/tutorials/authenticate-with-github_token",
+    "https://github.com/actions/checkout/blob/main/README.md"
+  ],
+  "conclusion": "No additional static blocker found. Guide correctly instructs root ZIP upload followed by creating the exact .github/workflows/build-windows.yml file, and distinguishes private browser permissions from the current Codex connection."
+}

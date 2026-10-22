@@ -1,0 +1,397 @@
+--- before/src-tauri/src/runtime.rs
++++ after/src-tauri/src/runtime.rs
+@@ -753,10 +753,19 @@
+ 
+ fn stopped_conflict_context(current: Option<RestartContext>, previous: Option<RestartContext>,
+     visual: &mut VisualRecovery) -> Option<RestartContext> {
+-    let context = current.or(previous).filter(|context| context.engine.has_unresolved_conflict());
++    let keep = |context: &RestartContext| context.engine.has_unresolved_conflict()
++        || context.engine.has_retained_selection();
++    // A repeated Stop may still expose retained seats on its stopped Engine,
++    // but that must not replace the earlier unresolved-dialog checkpoint.
++    let context = if current.as_ref().is_some_and(|context| context.engine.has_unresolved_conflict()) {
++        current
++    } else if previous.as_ref().is_some_and(|context| context.engine.has_unresolved_conflict()) {
++        previous
++    } else { current.filter(keep).or_else(|| previous.filter(keep)) };
+     // Stopped performs no observation/input. Retain only an already detected
+     // incident, never an ordinary speculative seat watch.
+-    if context.is_none() || !visual.is_incident() { visual.reset(); }
++    if !context.as_ref().is_some_and(|context| context.engine.has_unresolved_conflict())
++        || !visual.is_incident() { visual.reset(); }
+     context
+ }
+ 
+@@ -2985,31 +2994,95 @@
+     count_receipt: Option<(u64, u64, u64)>,
+ }
+ 
++fn preserve_restart_provenance(mut current: RestartContext, previous: Option<&RestartContext>) -> RestartContext {
++    if let Some(previous) = previous.filter(|previous| previous.run_id == current.run_id
++        && (previous.engine.has_retained_selection() || previous.engine.has_unresolved_conflict())
++        && (current.engine.has_retained_selection() || current.engine.has_unresolved_conflict())) {
++        // A failed capture/restart is not a new physical origin for old seats.
++        // Preserve even an unknown original geometry until validation succeeds.
++        current.target_id = previous.target_id;
++        current.geometry = previous.geometry.clone();
++    }
++    current
++}
++
++#[derive(Clone, Copy, Debug, PartialEq, Eq)]
++enum RestartBlockReason {
++    WindowChanged,
++    GeometryUnavailable,
++    GeometryChanged,
++    SelectionCountPolicyChanged,
++    ObjectPolicyChanged,
++    NavigationChanged,
++}
++
++impl RestartBlockReason {
++    fn code(self) -> &'static str {
++        match self {
++            Self::WindowChanged => "window_changed",
++            Self::GeometryUnavailable => "geometry_unavailable",
++            Self::GeometryChanged => "geometry_changed",
++            Self::SelectionCountPolicyChanged => "selection_count_policy_changed",
++            Self::ObjectPolicyChanged => "object_policy_changed",
++            Self::NavigationChanged => "navigation_changed",
++        }
++    }
++
++    fn message(self, previous: &Engine, next: &Profile) -> String {
++        let state = |enabled| if enabled { "켜짐" } else { "꺼짐" };
++        match self {
++            Self::SelectionCountPolicyChanged => return format!(
++                "‘NOL 선택 좌석 수 확인’ 설정이 다릅니다(이전: {}, 현재: {}). 이전 설정으로 복원하세요.",
++                state(previous.profile().features.nol_selection_count),state(next.features.nol_selection_count)),
++            Self::ObjectPolicyChanged => return format!(
++                "‘좌석 외곽으로 구분’ 설정이 다릅니다(이전: {}, 현재: {}). 이전 설정으로 복원하세요.",
++                state(previous.profile().features.seat_objects),state(next.features.seat_objects)),
++            Self::WindowChanged => "이전 좌석 기록의 브라우저 창과 현재 연결 창이 다릅니다. 이전 창 연결을 확인하세요.",
++            Self::GeometryUnavailable => "이전 좌석 기록의 화면 크기·배율을 확인할 수 없어 좌표 재사용을 보류합니다.",
++            Self::GeometryChanged => "이전 좌석 기록과 창 크기·배율이 다릅니다. 이전 창 크기·배율을 복원하세요.",
++            Self::NavigationChanged => "취소표 구역 이동 방식 또는 구역 버튼이 이전 실행과 다릅니다. 기존 이동 설정을 복원하세요.",
++        }.into()
++    }
++}
++
++fn selection_policy_mismatch(previous: &Engine, next: &Profile) -> Option<RestartBlockReason> {
++    if previous.profile().features.nol_selection_count != next.features.nol_selection_count {
++        Some(RestartBlockReason::SelectionCountPolicyChanged)
++    } else if previous.profile().features.seat_objects != next.features.seat_objects {
++        Some(RestartBlockReason::ObjectPolicyChanged)
++    } else { None }
++}
++
+ fn same_search_mapping(previous: &Engine, next: &Profile, mode: RunMode) -> bool {
+-    let region = if mode == RunMode::Cancellation {
+-        previous.snapshot().active_region.and_then(|index| next.legacy.regions.get(index))
+-    } else { None };
+-    same_candidate_interpretation(previous, next, region)
++    selection_policy_mismatch(previous, next).is_none()
+         && (mode != RunMode::Cancellation || previous.snapshot().active_region.is_none()
+             || serde_json::to_value(&previous.profile().legacy.cancellation_navigation).ok()
+                 == serde_json::to_value(&next.legacy.cancellation_navigation).ok())
+ }
+ 
+-fn same_candidate_interpretation(previous: &Engine, next: &Profile,
+-    region: Option<&macro_core::LegacyRegionSettings>) -> bool {
+-    let vision = region.and_then(|region| region.vision.as_ref()).unwrap_or(&next.vision);
+-    let color = region.and_then(|region| region.color).unwrap_or(next.color);
+-    serde_json::to_value(previous.effective_vision()).ok() == serde_json::to_value(vision).ok()
+-        && previous.effective_color() == color && previous.profile().color_tolerance == next.color_tolerance
+-        && previous.profile().features.nol_selection_count == next.features.nol_selection_count
+-        && previous.profile().features.seat_objects == next.features.seat_objects
+-}
+-
+ fn same_post_entry_mapping(previous: &Engine, next: &Profile) -> bool {
+-    // A delivered selection stays in its current cancellation region even when
+-    // F9 changes the run mode to Normal. Do not silently switch to global ROI.
+-    let region = previous.snapshot().active_region.and_then(|index| next.legacy.regions.get(index));
+-    same_candidate_interpretation(previous, next, region)
++    // ROI/color/thresholds filter NEW observations. They do not move the original
++    // delivered pixel footprints or erase selection/count receipts. F9 retains
++    // its current region; other explicit modes use their normal region mapping.
++    selection_policy_mismatch(previous, next).is_none()
++}
++
++fn physical_restart_block_reason(context: &RestartContext, target_id: Option<u64>, frame: Option<&OwnedFrame>)
++    -> Option<RestartBlockReason> {
++    if target_id.is_none() || context.target_id != target_id { return Some(RestartBlockReason::WindowChanged); }
++    let (Some(geometry),Some(frame)) = (context.geometry.as_ref(),frame) else {
++        return Some(RestartBlockReason::GeometryUnavailable);
++    };
++    if !same_frame_reference(geometry,frame) { return Some(RestartBlockReason::GeometryChanged); }
++    None
++}
++
++fn restart_block_reason(context: &RestartContext, target_id: Option<u64>, frame: Option<&OwnedFrame>,
++    next: &Profile, mode: RunMode) -> Option<RestartBlockReason> {
++    if let Some(reason) = physical_restart_block_reason(context,target_id,frame) { return Some(reason); }
++    if let Some(reason) = selection_policy_mismatch(&context.engine,next) { return Some(reason); }
++    if !same_search_mapping(&context.engine,next,mode) { return Some(RestartBlockReason::NavigationChanged); }
++    None
+ }
+ 
+ struct Worker {
+@@ -3906,8 +3979,37 @@
+                 else { self.command(Command::Pause) }
+             }
+             Command::Resume => {
++                let resume_epoch = self.shortcut_epoch.load(Ordering::SeqCst);
++                self.adapter()?.validate_target().map_err(|e| e.to_string())?;
++                if self.restart_context.as_ref().is_some_and(|context|
++                    context.engine.has_retained_selection() || context.engine.has_unresolved_conflict()) {
++                    // A failed F9 kept its original physical proof. Manual
++                    // Resume cannot bypass that proof using newly saved pixels.
++                    let frame = self.adapter()?.capture().map_err(|error|error.to_string())?;
++                    self.adapter()?.validate_target().map_err(|error|error.to_string())?;
++                    if self.desktop.capture_reference.as_ref().is_some_and(|reference| !same_frame_reference(reference,&frame)) {
++                        return Err("화면 크기나 배율이 좌표 채집 때와 달라졌습니다. 현재 화면에서 좌표를 다시 채집하세요.".into());
++                    }
++                    let context = self.restart_context.as_ref().unwrap();
++                    if let Some(reason) = restart_block_reason(context,
++                        self.native.as_ref().ok().and_then(NativeAdapter::target).map(|target|target.id),Some(&frame),
++                        &self.profile,self.engine.snapshot().mode) {
++                        return Err(format!("재개 보류 · {}",reason.message(&context.engine,&self.profile)));
++                    }
++                    if resume_epoch != self.shortcut_epoch.load(Ordering::SeqCst) {
++                        return Ok(self.cancelled_profile_reply());
++                    }
++                    self.frame = Some(frame);
++                    // Save may have replaced the live Engine with Idle. Its
++                    // no-op Resume must not erase the old retained checkpoint.
++                    if self.engine.has_retained_selection() || self.engine.has_unresolved_conflict() {
++                        self.restart_context = None;
++                    }
++                }
++                if resume_epoch != self.shortcut_epoch.load(Ordering::SeqCst) {
++                    return Ok(self.cancelled_profile_reply());
++                }
+                 self.target_recovery = None;
+-                self.adapter()?.validate_target().map_err(|e| e.to_string())?;
+                 self.interrupt.store(false, Ordering::SeqCst);
+                 self.runtime_message = None;
+                 self.last_sequence = None;
+@@ -3916,9 +4018,12 @@
+                 Ok(self.snapshot_value())
+             }
+             Command::ResumeFromUi => {
+-                self.target_recovery = None;
+                 if self.engine.snapshot().phase != Phase::Paused { return Err("일시정지한 실행만 재개할 수 있습니다.".into()); }
++                let resume_epoch = self.shortcut_epoch.load(Ordering::SeqCst);
+                 self.activate_booking_target()?;
++                if resume_epoch != self.shortcut_epoch.load(Ordering::SeqCst) {
++                    return Ok(self.cancelled_profile_reply());
++                }
+                 self.command(Command::Resume)
+             }
+             Command::Stop => {
+@@ -3926,7 +4031,8 @@
+                 // Cancellation must precede the checkpoint: a queued Esc has
+                 // not been delivered and must not retain a successful-Esc latch.
+                 self.cancel_queued_actions();
+-                let current = self.engine.has_unresolved_conflict().then(|| self.capture_restart_context());
++                let current = (self.engine.has_unresolved_conflict() || self.engine.has_retained_selection())
++                    .then(|| self.capture_restart_context());
+                 self.restart_context = stopped_conflict_context(current,
+                     self.restart_context.take(), &mut self.visual_recovery);
+                 self.interrupt.store(false, Ordering::SeqCst);
+@@ -4094,10 +4200,10 @@
+         let geometry = self.frame.as_ref().map(|frame| FrameReference {
+                 width: frame.width, height: frame.height, scale_x: frame.scale_x, scale_y: frame.scale_y,
+             }).or_else(|| self.desktop.capture_reference.clone());
+-        RestartContext { engine: self.engine.clone(),
++        preserve_restart_provenance(RestartContext { engine: self.engine.clone(),
+                 target_id: self.native.as_ref().ok().and_then(NativeAdapter::target).map(|target| target.id),
+                 geometry, run_id: self.run_id, started_at: self.run_started_at,
+-                count_receipt: self.selection_count_after_input }
++                count_receipt: self.selection_count_after_input },self.restart_context.as_ref())
+     }
+ 
+     fn supersede_execution(&mut self, post_entry: bool) {
+@@ -4234,14 +4340,16 @@
+             return Ok(json!({"cancelled":true}));
+         }
+         let restart = self.restart_context.clone().filter(|_| mode != RunMode::Normal);
+-        let preserve = restart.as_ref().is_some_and(|context| {
+-            context.target_id == self.native.as_ref().ok().and_then(NativeAdapter::target).map(|target| target.id)
+-                && context.geometry.as_ref().is_some_and(|geometry|
+-                    self.frame.as_ref().is_some_and(|frame| same_frame_reference(geometry, frame)))
+-                && same_search_mapping(&context.engine, &profile, mode)
+-        });
+-        if restart.as_ref().is_some_and(|context| context.engine.has_retained_selection()) && !preserve {
+-            return Err("이전 작업은 중단했습니다. 전달한 좌석 기록과 현재 창·좌석 범위가 달라 재클릭을 보류합니다. 기존 화면·설정을 복원해 다시 시작하세요. F4는 입력만 중지하며 좌석 선택을 해제하지 않습니다.".into());
++        let blocked = restart.as_ref().and_then(|context| restart_block_reason(context,
++            self.native.as_ref().ok().and_then(NativeAdapter::target).map(|target| target.id),
++            self.frame.as_ref(), &profile, mode));
++        let preserve = restart.is_some() && blocked.is_none();
++        if let Some(context) = restart.as_ref().filter(|context| context.engine.has_retained_selection()
++            || context.engine.has_unresolved_conflict()) {
++            if let Some(reason) = blocked {
++                self.record("restart_blocked", json!({"reason":reason.code(),"mode":mode}));
++                return Err(format!("재시작 보류 · {} 이전 좌석 기록은 유지됩니다.",reason.message(&context.engine,&profile)));
++            }
+         }
+         self.runtime_message = None;
+         let restart_actions = if preserve {
+@@ -4352,6 +4460,13 @@
+             if self.desktop.capture_reference.as_ref().is_some_and(|reference| !same_frame_reference(reference, &frame)) {
+                 return Err("화면 크기나 배율이 달라졌습니다. 현재 화면에서 좌표를 다시 채집하세요.".into());
+             }
++            if let Some(context) = self.restart_context.as_ref().filter(|context|
++                context.engine.has_retained_selection() || context.engine.has_unresolved_conflict()) {
++                if let Some(reason) = physical_restart_block_reason(context,
++                    self.native.as_ref().ok().and_then(NativeAdapter::target).map(|target|target.id),Some(&frame)) {
++                    return Err(format!("재시작 보류 · {}",reason.message(&context.engine,&self.profile)));
++                }
++            }
+             if let Some(point) = blocked_point {
+                 let local = if blocked_image_candidate { image_candidate_local(&frame, point, cfg!(target_os = "windows"))? }
+                 else { macro_platform::Point {
+@@ -4368,6 +4483,7 @@
+             Ok(frame) => {
+                 if !frame_passes_input_transition(&frame, self.seat_frame_after, self.seat_frame_after_ns) { return; }
+                 self.frame = Some(frame);
++                self.restart_context = None;
+                 self.last_sequence = None;
+                 self.target_recovery = None;
+                 self.runtime_message = None;
+@@ -4816,8 +4932,11 @@
+         apply_execution_options(&mut profile, &self.desktop, RunMode::Normal);
+         profile.sale_deadline_ms = None;
+         profile.site_auto_refresh = false;
+-        if self.engine.has_retained_selection() && !same_post_entry_mapping(&self.engine, &profile) {
+-            return Err("F9 재시도 보류 · 전달한 좌석 기록과 현재 색상·좌석 범위·판정 옵션이 다릅니다. 기존 설정을 복원하세요. F4는 입력만 중지하며 좌석 선택을 해제하지 않습니다.".into());
++        if (self.engine.has_retained_selection() || self.engine.has_unresolved_conflict())
++            && !same_post_entry_mapping(&self.engine, &profile) {
++            let reason = selection_policy_mismatch(&self.engine,&profile).unwrap();
++            self.record("restart_blocked", json!({"reason":reason.code(),"shortcut":"F9"}));
++            return Err(format!("F9 재시도 보류 · {} 이전 좌석 기록은 유지됩니다.",reason.message(&self.engine,&profile)));
+         }
+         let fresh_run = f9_starts_new_logical_run(&self.engine, self.run_id);
+         if fresh_run {
+@@ -4858,10 +4977,15 @@
+             self.adapter()?.validate_target().map_err(|error| error.to_string())?;
+             let frame = self.adapter()?.capture().map_err(|error| error.to_string())?;
+             self.adapter()?.validate_target().map_err(|error| error.to_string())?;
+-            if self.desktop.capture_reference.as_ref().is_some_and(|reference| !same_frame_reference(reference, &frame))
+-                || self.restart_context.as_ref().and_then(|context| context.geometry.as_ref())
+-                    .is_some_and(|reference| !same_frame_reference(reference, &frame)) {
++            if self.desktop.capture_reference.as_ref().is_some_and(|reference| !same_frame_reference(reference, &frame)) {
+                 return Err("F9 재시도 보류 · 창 크기나 배율이 달라 현재 좌표와 좌석 기록을 사용할 수 없습니다.".into());
++            }
++            if let Some(context) = self.restart_context.as_ref().filter(|context|
++                context.engine.has_retained_selection() || context.engine.has_unresolved_conflict()) {
++                if let Some(reason) = physical_restart_block_reason(context,
++                    self.native.as_ref().ok().and_then(NativeAdapter::target).map(|target|target.id),Some(&frame)) {
++                    return Err(format!("F9 재시도 보류 · {}",reason.message(&context.engine,&self.profile)));
++                }
+             }
+             Ok(frame)
+         })();
+@@ -4869,10 +4993,9 @@
+             self.shortcut_epoch.load(Ordering::SeqCst), self.interrupt.load(Ordering::SeqCst)) {
+             return Ok(json!({"cancelled":true}));
+         }
+-        self.restart_context = None;
+         self.feedback_until_ms = self.now() + 5000;
+         match validation {
+-            Ok(frame) => { self.frame = Some(frame); self.runtime_message = None; }
++            Ok(frame) => { self.frame = Some(frame); self.restart_context = None; self.runtime_message = None; }
+             Err(error) => {
+                 self.pause_for_context(error.clone(), None);
+                 if self.target_recovery.is_none() { return Err(error); }
+@@ -5487,3 +5610,7 @@
+ #[cfg(test)]
+ #[path = "f9_any_state_tests.rs"]
+ mod f9_any_state_tests;
++
++#[cfg(test)]
++#[path = "calibration_restart_review.rs"]
++mod calibration_restart_review;
+--- before/src-tauri/src/reentrant_runtime_tests.rs
++++ after/src-tauri/src/reentrant_runtime_tests.rs
+@@ -81,7 +81,7 @@
+ }
+ 
+ #[test]
+-fn retained_selection_mapping_requires_same_area_color_and_count_policy() {
++fn retained_selection_allows_filter_calibration_but_requires_same_count_policy() {
+     let mut profile = Profile::default();
+     profile.vision.roi = Some(Rect { x:0.0, y:0.0, width:100.0, height:100.0 });
+     let mut engine = Engine::new(profile.clone()).unwrap();
+@@ -89,15 +89,15 @@
+     assert!(same_search_mapping(&engine, &profile, RunMode::Cancellation));
+     let mut changed = profile.clone();
+     changed.vision.roi.as_mut().unwrap().x = 1.0;
+-    assert!(!same_search_mapping(&engine, &changed, RunMode::Seats));
++    assert!(same_search_mapping(&engine, &changed, RunMode::Seats));
+     changed = profile.clone(); changed.color.r = changed.color.r.wrapping_add(1);
+-    assert!(!same_search_mapping(&engine, &changed, RunMode::Seats));
++    assert!(same_search_mapping(&engine, &changed, RunMode::Seats));
+     changed = profile; changed.features.nol_selection_count = true;
+     assert!(!same_search_mapping(&engine, &changed, RunMode::Seats));
+ }
+ 
+ #[test]
+-fn failed_changed_settings_cannot_leak_into_f9_restored_selection_context() {
++fn f9_recalibration_keeps_history_but_does_not_change_count_or_object_policy() {
+     let profile = Profile::default();
+     let mut engine = Engine::new(profile.clone()).unwrap();
+     engine.step(Event::Start { mode:RunMode::Seats }, 0);
+@@ -112,11 +112,29 @@
+             "objects" => changed.features.seat_objects = true,
+             _ => unreachable!(),
+         }
+-        assert!(!same_post_entry_mapping(&engine, &changed), "{kind}");
++        assert_eq!(same_post_entry_mapping(&engine, &changed), !matches!(kind,"count"|"objects"), "{kind}");
+     }
+     let mut new_target = profile;
+     new_target.target_seats += 1;
+     assert!(same_post_entry_mapping(&engine, &new_target), "new target does not erase seat identity");
++}
++
++#[test]
++fn policy_hold_names_the_actual_control_and_previous_value() {
++    for previous_enabled in [false,true] {
++        for count in [false,true] {
++            let mut profile = Profile::default();
++            if count { profile.features.nol_selection_count = previous_enabled; }
++            else { profile.features.seat_objects = previous_enabled; }
++            let previous = Engine::new(profile.clone()).unwrap();
++            if count { profile.features.nol_selection_count = !previous_enabled; }
++            else { profile.features.seat_objects = !previous_enabled; }
++            let reason = selection_policy_mismatch(&previous,&profile).unwrap();
++            let message = reason.message(&previous,&profile);
++            assert!(message.contains(if count { "NOL 선택 좌석 수 확인" } else { "좌석 외곽으로 구분" }));
++            assert!(message.contains(if previous_enabled { "이전: 켜짐, 현재: 꺼짐" } else { "이전: 꺼짐, 현재: 켜짐" }));
++        }
++    }
+ }
+ 
+ #[test]
+@@ -146,6 +164,8 @@
+     assert_eq!(engine.snapshot().active_region, Some(current));
+     let mut snapshot_profile = profile.clone();
+     snapshot_profile.legacy.regions[current].color = Some(Color {r:11,g:20,b:30});
++    assert!(same_search_mapping(&engine, &snapshot_profile, RunMode::Cancellation));
++    assert!(same_search_mapping(&engine, &profile, RunMode::Cancellation));
++    snapshot_profile.legacy.cancellation_navigation = macro_core::CancellationNavigation::None;
+     assert!(!same_search_mapping(&engine, &snapshot_profile, RunMode::Cancellation));
+-    assert!(same_search_mapping(&engine, &profile, RunMode::Cancellation));
+ }
+--- before/crates/macro-core/src/engine.rs
++++ after/crates/macro-core/src/engine.rs
+@@ -1042,7 +1042,8 @@
+     }
+ 
+     /// Apply the caller's normal-mode execution settings without replaying entry.
+-    /// Runtime first checks retained color/area/shape/count compatibility.
++    /// Runtime guards physical window/geometry and shape/count policy before input.
++    /// Calibration filters may change without erasing delivered seat footprints.
+     pub fn restart_after_entry(&mut self, profile: Profile, now_ms: u64) -> Result<Vec<Action>, ValidationError> {
+         profile.validate()?;
+         self.profile = profile;

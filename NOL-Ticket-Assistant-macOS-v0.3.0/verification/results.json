@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-19",
+  "developmentOS": "macOS arm64",
+  "unitTests": {
+    "passed": 18,
+    "command": "npm test"
+  },
+  "browserFixtures": {
+    "passed": 4,
+    "browser": "Google Chrome",
+    "realTicketNetwork": false
+  },
+  "extensionIntegration": {
+    "passed": 2,
+    "browser": "Chrome for Testing 145.0.7632.6",
+    "realExtensionLoaded": true,
+    "trustedInputVerified": true,
+    "nativeMessaging": "mocked",
+    "http": "local fixture responses; other HTTP blocked"
+  },
+  "windowsMacroRuntime": "not tested; Self-Test.cmd supplied",
+  "windowsNativeHostRuntime": "not tested; bridge/test.ps1 supplied",
+  "liveAuthenticatedBooking": "not observed",
+  "limitations": [
+    "Actual authenticated NOL seat page, exact rejection/success profile and seat acquisition not observed",
+    "Local reaction benchmark is not server acquisition time and does not guarantee sub-10ms",
+    "Windows runtime untested",
+    "Mac GUI automation blocked by tool timeouts",
+    "One seat success per browser engine run; pixel candidate cache is a single screenshot",
+    "Literal coordinate steps require stable page layout",
+    "Live NOL entrance/CAPTCHA/section/seat DOM remains unobserved; per-performance calibration required",
+    "Canvas section identity/internal pan/zoom unsupported; same-URL image content replacement not detected",
+    "Pixel candidate cache invalidates on map boundary movement, not internal Canvas repaint"
+  ],
+  "version": "0.3.0",
+  "seatExtensionIntegration": {
+    "passed": 8,
+    "benchmark": "seat-benchmark-v0.3.json",
+    "externalHTTP": "blocked; local fixture only",
+    "trustedInputVerified": true
+  },
+  "macNativeHost": {
+    "passed": 8,
+    "report": "mac-host-results.json",
+    "realSubprocess": true,
+    "actualBrowserRegistration": "not performed"
+  },
+  "macApp": {
+    "build": "Universal arm64+x86_64, macOS 13 minimum, SwiftUI/AppKit",
+    "selfTestChecks": 12,
+    "signature": "ad-hoc; codesign --verify --deep --strict passed",
+    "appProcessLaunch": "v0.3 compiled app launched in --self-test mode on Apple Silicon; native GUI controls not automated",
+    "guiAutomation": "not completed; cua.getApp repeatedly returned timeoutReached; does not prove GUI controls work",
+    "intelRuntime": "not tested",
+    "embeddedResources": "built extension and rehearsal byte-equal to verified sources"
+  },
+  "entryIntegration": {
+    "passed": 15,
+    "report": "entry-tests.json",
+    "trustedInputVerified": true,
+    "externalHTTP": "blocked; synthetic human-confirmation fixture, no real CAPTCHA",
+    "popupControls": "practice preset, entry fields, profile save round trip passed; entry-popup.png inspected"
+  }
+}

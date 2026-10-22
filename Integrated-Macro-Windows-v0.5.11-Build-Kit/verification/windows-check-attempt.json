@@ -1,0 +1,15 @@
+{
+  "command": [
+    "check",
+    "--locked",
+    "--offline",
+    "-p",
+    "macro-platform",
+    "--target",
+    "x86_64-pc-windows-msvc"
+  ],
+  "host": "macOS arm64",
+  "exitCode": 101,
+  "windowsBinaryBuilt": false,
+  "windowsRuntimeTested": false
+}

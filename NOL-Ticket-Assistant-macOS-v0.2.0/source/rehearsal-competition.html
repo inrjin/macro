@@ -1,0 +1,23 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>좌석 경합 연습 · 실제 예매 없음</title>
+<style>body{font:16px system-ui;max-width:1000px;margin:28px auto;color:#16243b;background:#eef3f8}h1{font-size:25px}.bar{display:flex;gap:12px;align-items:center;flex-wrap:wrap}button,input,select{font:inherit;padding:8px}#seats{display:grid;grid-template-columns:repeat(12,32px);gap:7px;width:max-content;margin:25px 0}.seat{width:32px;height:28px;padding:0;background:#8b5cf6;border:0;border-radius:4px;color:white;cursor:pointer}.seat.chosen{background:#00806e}.seat.rejected{background:#8592a5}#conflict{position:fixed;top:180px;left:180px;background:white;padding:24px;border:3px solid #d53f61;box-shadow:0 10px 90px #48576b}#success{background:#e0fff1;padding:15px}.steps{display:flex;gap:14px}pre{white-space:pre-wrap;font-size:13px}#metrics{font-variant-numeric:tabular-nums}</style>
+<h1>좌석 경합 연습</h1><p>이 파일은 오프라인 연습용입니다. 실제 예매·서버 접속·결제가 없습니다. 브라우저 확장의 ‘파일 URL 액세스 허용’을 켜세요.</p>
+<div class="bar"><label>실패 방식 <select id="variant"><option value="dom">화면 안내창</option><option value="alert">브라우저 alert</option><option value="unknown">알 수 없는 안내</option><option value="timeout">응답 없음</option></select></label><label>먼저 실패할 후보 <input id="failures" type="number" min="0" max="90" value="3" style="width:65px"></label><label>응답 지연 ms <input id="latency" type="number" value="40" min="0" max="3000" style="width:75px"></label><label><input id="requireCommit" type="checkbox">완료 버튼 필요</label><button id="reset">초기화</button></div>
+<div id="seats"></div><button id="commit">좌석 선택 완료</button>
+<div id="conflict" hidden><p id="conflictText">연습: 이미 선택된 좌석입니다.</p><button id="dismiss">확인</button></div>
+<div id="success" hidden>연습: 좌석 선택 성공</div>
+<div class="steps"><button id="after1" disabled>후속 클릭 1</button><button id="after2" disabled>후속 클릭 2</button></div>
+<p id="metrics"></p><details><summary>연습 프로필 JSON</summary><pre id="profile"></pre></details>
+<script>
+const $=id=>document.getElementById(id);let pending=null,serial=0,lastFailure=null;
+window.results={clicks:[],gaps:[],trusted:[],after:[],responses:[]};
+window.practiceProfile={mode:'dom',candidateSelector:'.seat:not(.rejected)',successSelector:'#success',successText:'연습: 좌석 선택 성공',alertText:'연습: 이미 선택된 좌석입니다.',conflictSelector:'#conflictText',conflictText:'연습: 이미 선택된 좌석입니다.',dismiss:{selector:'#dismiss'},maxAttempts:100,timeoutMs:4000,after:[{selector:'#after1'},{selector:'#after2'}]};
+function render(){const a=results.gaps.slice().sort((a,b)=>a-b);$('metrics').textContent='클릭 후보: '+results.clicks.join(', ')+' · 실패 안내→다음 클릭: '+a.map(x=>x.toFixed(2)+'ms').join(', ')+' · 후속: '+results.after.join(', ');}
+function answer(id){const seq=serial;setTimeout(()=>{if(seq!==serial)return;const kind=$('variant').value;if(kind==='timeout')return;results.responses.push(performance.now());if(results.clicks.length<=Number($('failures').value)||kind==='unknown'){
+  document.querySelector('[data-seat="'+id+'"]').classList.add('rejected');lastFailure=performance.now();
+  if(kind==='alert'){alert(practiceProfile.alertText);}else{$('conflictText').textContent=kind==='unknown'?'연습: 확인되지 않은 오류':practiceProfile.conflictText;$('conflict').hidden=false;}
+}else{$('success').hidden=false;$('after1').disabled=false;}render();},Number($('latency').value));}
+function reset(){serial++;pending=null;lastFailure=null;window.results={clicks:[],gaps:[],trusted:[],after:[],responses:[]};$('seats').innerHTML='';$('conflict').hidden=true;$('success').hidden=true;$('after1').disabled=true;$('after2').disabled=true;for(let i=0;i<96;i++){const b=document.createElement('button');b.className='seat';b.dataset.seat=i;b.textContent=i+1;b.onclick=e=>{if(lastFailure!==null){results.gaps.push(performance.now()-lastFailure);lastFailure=null;}results.clicks.push(i);results.trusted.push(e.isTrusted);b.classList.add('chosen');pending=i;if(!$('requireCommit').checked){pending=null;answer(i);}render();};$('seats').append(b);}render();}
+$('dismiss').onclick=()=>{$('conflict').hidden=true;};$('commit').onclick=()=>{if(pending!==null){const id=pending;pending=null;answer(id);}};
+$('after1').onclick=e=>{results.after.push('1');results.trusted.push(e.isTrusted);$('after1').disabled=true;$('after2').disabled=false;render();};$('after2').onclick=e=>{results.after.push('2');results.trusted.push(e.isTrusted);$('after2').disabled=true;render();};
+$('reset').onclick=reset;$('profile').textContent=JSON.stringify(practiceProfile,null,2);reset();
+</script></html>

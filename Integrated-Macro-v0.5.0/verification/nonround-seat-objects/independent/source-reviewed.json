@@ -1,0 +1,33 @@
+{
+  "scope": "Actual extractor/original pre-click proof/Engine plus independent synthetic hit and count oracle; no text reader, browser, native input, app or release build",
+  "command": "cargo test -p macro-core --test seat_object_nonround_integration --offline --locked -- --nocapture",
+  "result": {
+    "passed": 11,
+    "failed": 0,
+    "ignored": 0
+  },
+  "log": "verification/nonround-seat-objects/independent/after-context-integration.log",
+  "logSha256": "5dfbcc16a5ec74399480fbd922e4973fc4c4c838b4c23cda04c7cd41e89b57cf",
+  "files": {
+    "crates/macro-core/src/model.rs": "3869b494fa627ecff5a202c26b21d8c4aa1cc99f32c18b2e5ed349d037b284e0",
+    "crates/macro-core/src/engine.rs": "6952db2f267e1c9bcddfc82fd9bcfcbed842170eefae5fcaf6660dbc05c9c235",
+    "crates/macro-core/src/vision.rs": "f375df436d66d57ea6ff2b1032f14345ae310127681b7660701cda3179bd5639",
+    "crates/macro-core/src/seat_selection.rs": "37118aff1832c00db7188fc81766fc5f957ee95f80cbb52d0c2a3c0f5e2c2ac9",
+    "crates/macro-core/src/seat_objects.rs": "95d696aa1deab1987491352cbfcfc4cbc2f508f6b71ec1ff32f26f645f19982d",
+    "crates/macro-core/src/seat_object_shapes.rs": "33bad8d441317c4a4c6886c3e9b50efab96d9ea340f551b250d36ce6acb88023",
+    "crates/macro-core/tests/seat_object_nonround_integration.rs": "0d91daa69684f242af312a87f939ce61d3a2d77678935336442af238562d1963",
+    "crates/macro-core/tests/support/seat_object_shapes.rs": "b2451715beb9083e822104757672f6bfe5f2c5de652ec4206ab84067ea8f4efc",
+    "crates/macro-core/tests/seat_candidate_geometry.rs": "3230af8013bbcd98fa85dd8361662198e295f80796ebf8c71ed6bf39b785fe51",
+    "src-tauri/src/runtime.rs": "9ecf8161836b668a3bf41717f64629552bc30415a60b53c3b3c56d2ee0650f1b",
+    "ui/model.js": "96b92eb157fae250a3db4c47f07b35e23916fe982ae2ced01e23039f063e301f",
+    "ui/index.html": "39e349c070f39de9efee006eb7d484f0e8d7620dda9d3e080aff908c999f08e3",
+    "README.md": "c2e3860e31487126af09315314e33c96ceed333f0398a937f9aff02d5e396f7b"
+  },
+  "checkpoint": "Final independent source review after prefix/context fixes; parent final workspace run tracked separately",
+  "validationSourceRelationship": "The 11-test log predates only explanatory comments in model.rs and the first two comment lines of seat_object_shapes.rs. Exact diffs were inspected; executable code, integration tests, shared renderer and affected callers are unchanged from that run.",
+  "testCheckpoint": "verification/nonround-seat-objects/independent/source-reviewed-eleven-test-pre-comment.json",
+  "additionalReviewedSources": {
+    "crates/macro-core/tests/seat_object_nonround_review.rs": "f71812774dfaf5a8ac67bdf503b5aa7c09fd96dbf78c8b842af0f4603bec68e1",
+    "verification/nonround-seat-objects/adversarial/final-performance.log": "05c531a1e875ed7e6c56b2ea982c08db12f5209bb92c12e090de6689d88b3cb9"
+  }
+}

@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>통합 매크로 상태</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="overlay-body">
+  <div class="overlay" id="overlay" role="status" aria-live="polite">
+    <span class="overlay-indicator"></span>
+    <div class="overlay-copy"><strong id="overlay-phase">실행 대기</strong><p id="overlay-message">앱 상태를 기다리고 있습니다.</p></div>
+    <span class="overlay-count" id="overlay-count">—</span>
+  </div>
+  <script type="module" src="overlay.js"></script>
+</body>
+</html>

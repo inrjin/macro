@@ -1,0 +1,119 @@
+--- runtime.before.rs
++++ runtime.after-without-p1-tests.rs
+@@ -97,6 +97,54 @@
+ fn frame_passes_input_transition(frame: &OwnedFrame, after: Option<u64>, started_at_ns: Option<u64>) -> bool {
+     frame_passes_transition(frame.sequence, after)
+         && started_at_ns.is_none_or(|started| frame.captured_at_ns > started)
++}
++
++// Shared by the production observation loop and its headless capture-boundary
++// tests. None means no new native pixels, not a successful page transition.
++fn apply_scan_capture(cached: &mut Option<OwnedFrame>, last_sequence: &mut Option<u64>,
++    capture: Result<Option<OwnedFrame>, String>, reuse: bool) -> Result<bool, String> {
++    match capture {
++        Ok(Some(frame)) => {
++            *last_sequence = Some(frame.sequence);
++            *cached = Some(frame);
++            Ok(true)
++        }
++        Ok(None) => Ok(reuse && cached.is_some()),
++        Err(reason) => Err(reason),
++    }
++}
++
++fn navigation_requires_new_pixels(kind: &ActionKind, continuous: bool, delivered: bool) -> bool {
++    delivered && continuous
++        && matches!(kind, ActionKind::Click { purpose, .. } if purpose.starts_with("region:"))
++}
++
++fn candidate_available_in_frame(frame: Option<&OwnedFrame>, target: &Target, color: Color, tolerance: u8,
++    refresh_after: Option<u64>, refresh_after_ns: Option<u64>) -> Result<bool, String> {
++    let Target::Point { point } = target else {
++        return Err("브라우저 요소 연결이 아직 준비되지 않았습니다.".into());
++    };
++    let frame = frame.ok_or("최신 좌석 화면을 받을 수 없습니다.")?;
++    if !frame_passes_input_transition(frame, refresh_after, refresh_after_ns) { return Ok(false); }
++    let local = macro_platform::Point { x: point.x / frame.scale_x, y: point.y / frame.scale_y };
++    Ok(frame.color_at(local).is_some_and(|[r,g,b]| {
++        macro_core::vision::color_matches(Color{r,g,b}, color, tolerance)
++    }))
++}
++
++fn apply_candidate_capture(cached: &mut Option<OwnedFrame>, reference: Option<&FrameReference>,
++    capture: Result<Option<OwnedFrame>, String>) -> Result<(), String> {
++    if let Some(frame) = capture? {
++        let previous_geometry_changed = cached.as_ref().is_some_and(|previous|
++            previous.width != frame.width || previous.height != frame.height
++            || (previous.scale_x - frame.scale_x).abs() > 0.001
++            || (previous.scale_y - frame.scale_y).abs() > 0.001);
++        if previous_geometry_changed || reference.is_some_and(|reference| !same_frame_reference(reference, &frame)) {
++            return Err("클릭 직전 화면 크기나 배율이 바뀌었습니다. 현재 화면에서 좌표를 다시 채집하세요.".into());
++        }
++        *cached = Some(frame);
++    }
++    Ok(())
+ }
+ 
+ fn apply_frame_observation(cached: &mut Option<OwnedFrame>, observation: FrameObservation) -> Result<(), String> {
+@@ -3445,8 +3493,7 @@
+                 return;
+             }
+             self.feed(Event::ActionAcknowledged { id: action.id, success: result.is_ok(), detail });
+-            if result.is_ok() && self.engine.continuous_search()
+-                && matches!(&action.kind, ActionKind::Click { purpose, .. } if purpose.starts_with("region:")) {
++            if navigation_requires_new_pixels(&action.kind, self.engine.continuous_search(), result.is_ok()) {
+                 self.await_post_input_frame();
+             }
+             if self.engine.snapshot().phase == Phase::Completed {
+@@ -3566,30 +3613,14 @@
+ 
+     fn candidate_still_available(&mut self, target: &Target) -> Result<bool, String> {
+         let sequence = self.frame.as_ref().map(|f| f.sequence).unwrap_or(0);
+-        if let Some(frame) = self.adapter()?.capture_if_changed(sequence).map_err(|e| e.to_string())? {
+-            let previous_geometry_changed = self.frame.as_ref().is_some_and(|previous|
+-                previous.width != frame.width || previous.height != frame.height
+-                || (previous.scale_x - frame.scale_x).abs() > 0.001
+-                || (previous.scale_y - frame.scale_y).abs() > 0.001);
+-            if previous_geometry_changed || self.desktop.capture_reference.as_ref()
+-                .is_some_and(|reference| !same_frame_reference(reference, &frame)) {
+-                return Err("클릭 직전 화면 크기나 배율이 바뀌었습니다. 현재 화면에서 좌표를 다시 채집하세요.".into());
+-            }
+-            self.frame = Some(frame);
+-        }
++        let capture = self.adapter()?.capture_if_changed(sequence).map_err(|e| e.to_string());
++        apply_candidate_capture(&mut self.frame, self.desktop.capture_reference.as_ref(), capture)?;
+         self.candidate_available_on_frame(target)
+     }
+ 
+     fn candidate_available_on_frame(&self, target: &Target) -> Result<bool, String> {
+-        let Target::Point { point } = target else {
+-            return Err("브라우저 요소 연결이 아직 준비되지 않았습니다.".into());
+-        };
+-        let frame = self.frame.as_ref().ok_or("최신 좌석 화면을 받을 수 없습니다.")?;
+-        if !frame_passes_input_transition(frame, self.refresh_frame_after, self.refresh_frame_after_ns) { return Ok(false); }
+-        let local = macro_platform::Point { x: point.x / frame.scale_x, y: point.y / frame.scale_y };
+-        Ok(frame.color_at(local).is_some_and(|[r,g,b]| {
+-            macro_core::vision::color_matches(Color{r,g,b}, self.engine.effective_color(), self.profile.color_tolerance)
+-        }))
++        candidate_available_in_frame(self.frame.as_ref(), target, self.engine.effective_color(),
++            self.profile.color_tolerance, self.refresh_frame_after, self.refresh_frame_after_ns)
+     }
+ 
+     fn default_confirmation(&self) -> Option<String> {
+@@ -3895,13 +3926,9 @@
+         let reuse_seat_frame = can_rescan_seat_frame(&state, &self.scope,
+             self.seat_rescan_requested || first_legacy_scan);
+         let result = self.adapter().and_then(|adapter| adapter.capture_if_changed(last_sequence).map_err(|e| e.to_string()));
+-        match result {
+-            Ok(Some(frame)) => {
+-                self.last_sequence = Some(frame.sequence);
+-                self.frame = Some(frame);
+-            }
+-            Ok(None) if reuse_seat_frame && self.frame.is_some() => {}
+-            Ok(None) => return,
++        match apply_scan_capture(&mut self.frame, &mut self.last_sequence, result, reuse_seat_frame) {
++            Ok(true) => {}
++            Ok(false) => return,
+             Err(reason) => {
+                 self.pause_for_context(reason, None);
+                 return;

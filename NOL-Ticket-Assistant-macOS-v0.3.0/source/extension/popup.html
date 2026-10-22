@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><title>NOL 예매 시작 도우미</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+<header><h1>예매 시작 도우미</h1><span id="state">설정</span></header>
+<p>공연 날짜·회차와 로그인은 사이트에서 미리 확인하세요. 예매 버튼이 보이는 위치에서 대기합니다.</p>
+<label>상품 주소<input id="url" type="url" placeholder="https://nol.yanolja.com/ticket/products/…"></label>
+<button id="useTab">현재 상품 탭 주소 사용</button>
+<fieldset><legend>1 · 예매 버튼</legend>
+<label>CSS 선택자<input id="buttonSelector" placeholder="#booking-aside-container button"></label>
+<label>정확한 버튼 글자<input id="buttonText" value="예매하기"></label>
+<button id="pickButton">화면에서 버튼 지정</button>
+<label>오픈 시각 (한국시간 · 비워두면 활성화 즉시)<input id="saleAt" type="datetime-local" step="1"></label>
+<div class="row"><label>최대 대기 (분)<input id="timeoutMinutes" type="number" min="1" max="180" value="30"></label><button id="clock">서버 시각 참고 측정</button></div>
+<small id="clockInfo">서버 Date는 초 단위이며 예매 서버와 다를 수 있습니다. 실제 버튼 활성 상태도 반드시 확인합니다.</small>
+</fieldset>
+<fieldset><legend>2 · 좌석 화면 준비 감지</legend>
+<label class="check"><input id="autoMacro" type="checkbox">준비 조건 충족 시 좌석 처리 시작</label>
+<label>처리 방식<select id="seatDriver"><option value="browser">브라우저 좌석 엔진 (Mac/Windows)</option><option value="native">Windows AHK 매크로</option></select></label>
+<label>준비 요소가 있는 프레임 URL (쿼리 제외)<input id="readyUrl" type="url"></label>
+<label>준비 요소 CSS 선택자<input id="readySelector"></label>
+<input id="readyText" type="hidden" value="">
+<button id="pickReady">현재 좌석 화면에서 준비 요소 지정</button>
+<small>구역 진입을 켠 브라우저 프로필은 보안 확인 패널 등 예매 화면 진입 요소를 지정할 수 있습니다. 그 외에는 좌석 지도 로딩 완료 요소를 지정하세요. 실제 화면에 맞춘 설정이 필요합니다.</small>
+<div class="row"><label>브라우저<select id="browser"><option value="chrome">Chrome</option><option value="msedge">Edge</option></select></label><button id="ping">Windows 연결 확인</button></div>
+</fieldset>
+<fieldset><legend>3 · 좌석 경합 · 후속 클릭</legend>
+<p>실제 성공 요소와 실패 문구를 먼저 지정해야 실행됩니다. 아래 연습 프로필은 제공된 연습 페이지 전용입니다.</p>
+<details><summary>지정 구역 1곳 · 지도 크기 자동 보정</summary>
+<p>‘구역 지정’은 요소와 구역 안의 위치 비율을 저장합니다. ‘지도 지정’은 현재 좌석 지도 전체를 검색 범위로 사용합니다. 화면 좌표를 미리 정할 필요가 없습니다.</p>
+<div class="row"><button id="pickRegion">원하는 구역 지정</button><button id="pickMap">좌석 지도 요소 지정</button></div>
+<label class="check"><input id="entryEnabled" type="checkbox">직접 보안 확인 후 지정 구역으로 진입</label>
+<label>구역 이름 (표시용)<input id="regionName"></label>
+<label>보안 확인 패널 CSS · 보이면 대기<input id="entryBlocked"></label>
+<label>구역 선택 화면 준비 CSS<input id="entryReady"></label>
+<label>위 조건의 프레임 URL · 최상위면 비움<input id="entryFrame"></label>
+<label>지정 구역의 지도 로딩 완료 CSS<input id="mapReady"></label>
+<label>지도 준비 프레임 URL · 같으면 비움<input id="mapFrame"></label>
+<button id="applyEntry">진입 조건을 아래 JSON에 반영</button>
+<small>CAPTCHA 문자는 직접 입력합니다. 지도 준비 조건은 구역 식별과 로딩 완료를 함께 확인해야 합니다. Canvas 구역의 내부 확대·이동은 실제 구조 확인 전에는 지원하지 않습니다.</small>
+</details>
+<label>좌석 프로필 JSON<textarea id="profile" rows="12" spellcheck="false"></textarea></label>
+<div class="row"><button id="practiceProfile">좌석 연습 프로필</button><button id="practiceEntry">구역 연습 프로필</button><button id="seatSave">좌석 설정 저장</button></div>
+<div class="row"><button id="pickROI">고정 영역 지정</button><button id="pickColor">좌석 색 지정</button><button id="pickCommit">완료 좌표 지정</button><button id="pickAfter">후속 좌표 추가</button></div>
+<button id="seatStart" class="primary">현재 좌석 탭에서 시작</button><button id="macConnect">Mac 앱 연결</button>
+</fieldset>
+<div class="actions"><button id="save">설정 저장</button><button id="arm" class="primary">현재 탭에서 대기 시작</button><button id="stop">대기 중지</button></div>
+<p class="hint">대기 시작 후 팝업은 닫힙니다. 상품 탭을 전면에 두세요. 브라우저 좌석 작업: Alt+Shift+S 또는 중지 버튼 · Windows AHK: <b>F3</b></p>
+<output id="message" role="status"></output>
+<details><summary>최근 기록 · 설치 ID</summary><code id="extensionId"></code><pre id="logs"></pre></details>
+<script type="module" src="popup.js"></script></body></html>

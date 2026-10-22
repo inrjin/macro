@@ -1,0 +1,9 @@
+{
+  "name": "integrated-macro-desktop-ui",
+  "version": "0.5.9",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.js"
+  }
+}

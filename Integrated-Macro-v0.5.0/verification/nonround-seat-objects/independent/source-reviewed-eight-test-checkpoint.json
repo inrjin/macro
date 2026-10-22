@@ -1,0 +1,17 @@
+{
+  "scope": "Independent source review plus 8 extractor/pre-click/Engine/site-oracle tests; no browser, native input, app or release build",
+  "log": "verification/nonround-seat-objects/independent/after-shape-review.log",
+  "files": {
+    "crates/macro-core/src/model.rs": "53e07d9055e1145cf045783fdcd7725cc83da5ed0976721658359edde6892d73",
+    "crates/macro-core/src/engine.rs": "6952db2f267e1c9bcddfc82fd9bcfcbed842170eefae5fcaf6660dbc05c9c235",
+    "crates/macro-core/src/vision.rs": "c450800972d96adcefe6677376a1c1632c7ad5fd4c376fffe74202bf4348fd08",
+    "crates/macro-core/src/seat_selection.rs": "37118aff1832c00db7188fc81766fc5f957ee95f80cbb52d0c2a3c0f5e2c2ac9",
+    "crates/macro-core/src/seat_objects.rs": "95d696aa1deab1987491352cbfcfc4cbc2f508f6b71ec1ff32f26f645f19982d",
+    "crates/macro-core/src/seat_object_shapes.rs": "2b184cd1ae8bf6f592e3fa83d5541e6330d46cbecfdfe2e2c79b8e763413b9cc",
+    "crates/macro-core/tests/seat_object_nonround_integration.rs": "eac9f63e7b93f088db43272bd806910b779be65edfcdfa1a26fc095256870824",
+    "crates/macro-core/tests/support/seat_object_shapes.rs": "b2451715beb9083e822104757672f6bfe5f2c5de652ec4206ab84067ea8f4efc",
+    "src-tauri/src/runtime.rs": "9ecf8161836b668a3bf41717f64629552bc30415a60b53c3b3c56d2ee0650f1b",
+    "ui/model.js": "cbc6bd069b3683f28889a3607f1c7768bf34fff686f00f1725330ed16d8f2cf4",
+    "ui/index.html": "39e349c070f39de9efee006eb7d484f0e8d7620dda9d3e080aff908c999f08e3"
+  }
+}

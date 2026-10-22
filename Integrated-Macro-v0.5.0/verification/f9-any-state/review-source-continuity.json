@@ -1,0 +1,17 @@
+{
+  "implementation/stop-conflict-followup/source-final.json": {
+    "sha256": "bfceb7461f21bb8c5371ef89068f2948e5a4cdb5b1da88533b4812fba24d63a0",
+    "files": 4,
+    "finalSourceMatches": true
+  },
+  "independent/source-reviewed.json": {
+    "sha256": "190ad364c0e11ddb7a138883b9ac293c02e11b899828c2d43c74906335f0992c",
+    "files": 13,
+    "finalSourceMatches": true
+  },
+  "adversarial/source-final-review.json": {
+    "sha256": "87b20f203de668b9b2f3217cdd667a1937bffa948ecb56bc5ea2817676bdd211",
+    "files": 15,
+    "finalSourceMatches": true
+  }
+}

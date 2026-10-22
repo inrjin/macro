@@ -1,0 +1,26 @@
+{
+  "version": "0.5.4",
+  "recordedAt": "2026-10-20T16:22:11.020002+00:00",
+  "command": "bash crates/macro-platform/native/verify-macos.sh",
+  "exitCode": 0,
+  "combinedOutput": "sysctlbyname for kern.hv_vmm_present failed with status -1kIOSurfaceMethodSetCoreVideoBridgedKeys failed: 10000003\nNative synthetic window validation (43), activation (16), capture lifecycle, ABI allocation/free and thread guard OK; permission bits=0\nSwift arm64/x86_64 compilation and host ABI smoke passed.\n",
+  "sourceSHA256": {
+    "crates/macro-platform/native/MacPlatform.swift": "7d35f84f771dfb3c74ed3985099c2e454b3dae7102dd7d0ffee6ceb4e04c7162",
+    "crates/macro-platform/native/verify-macos.sh": "b7888c4248ab0c9de7fd055f6bd51efa203496242d3ce856d24b341c57f9c308"
+  },
+  "checks": {
+    "namedWindowValidationCases": 43,
+    "activationCases": 16,
+    "lazyProbeAssertions": 1,
+    "frameFocusCacheAssertions": 8,
+    "optimizedArchitectures": [
+      "arm64",
+      "x86_64"
+    ]
+  },
+  "limits": [
+    "Activation/window/AX fixtures and clock are synthetic; no actual desktop focus change, input, screen capture, or permission request occurred.",
+    "Compilation and synthetic checks do not establish packaged app input readiness.",
+    "Windows runtime and build were not executed on Windows."
+  ]
+}

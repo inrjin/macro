@@ -1,0 +1,16 @@
+{
+  "scope": "independent seat shape review; source hashes at review completion",
+  "source_sha256": {
+    "crates/macro-core/src/model.rs": "494f95cfa11ee8626b2416cd529686299418331c0d2ee6e3c89c8a485cd7c9eb",
+    "crates/macro-core/src/vision.rs": "a361f1fb21f1643021b7818ae2a51d78d09a78114e6db8cdc57e9eaf710e9979",
+    "crates/macro-core/src/seat_selection.rs": "47c2e7634e6a415dc45710afaa3e55a01d5d1280c5f3bf72a1ea773c7072c4bf",
+    "crates/macro-core/src/engine.rs": "f9edcd0da55a92a86b188186252053c00f976fd2a370afff11bca801cdef86df",
+    "src-tauri/src/runtime.rs": "5613c421f42528ded39b464f572691c63014fbc791bd5c25d120c966b3b6ba06",
+    "crates/macro-core/tests/seat_shape_regressions.rs": "0a38aa96808fd044f73f3293ec5482bcbf39d5ee876229501aafbf60577c4aec"
+  },
+  "normal_regressions_passed": 5,
+  "known_limit_observations_passed": 2,
+  "manual_timing_tests_passed": 1,
+  "known_limit_cases_are_not_correct_selection_success": true,
+  "os_or_browser_executed": false
+}

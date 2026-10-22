@@ -1,0 +1,14 @@
+   Compiling macro-core v0.5.8 (/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/crates/macro-core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.37s
+     Running tests/priority_selection_oracle.rs (target/debug/deps/priority_selection_oracle-f5b77325cc0abe16)
+
+running 3 tests
+P6 ClearEarlierOnSecond: requested=2 estimated=2 site=1 clicks=2 completion_emitted=true
+P6 IgnoreFirst: requested=2 estimated=2 site=1 clicks=2 completion_emitted=true
+test p6_counterexample_site_clearing_earlier_selection_is_not_observed_by_optimistic_count ... ok
+P6 Accept: requested=2 estimated=2 site=2 clicks=2 completion_emitted=true
+test p6_counterexample_silent_ignored_click_can_complete_with_one_actual_seat ... ok
+test p6_control_accepted_clicks_match_independent_site_selection ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

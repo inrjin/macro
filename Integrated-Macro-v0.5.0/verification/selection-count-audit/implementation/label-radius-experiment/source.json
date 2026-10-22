@@ -1,0 +1,12 @@
+{
+  "productionFiles": {
+    "crates/macro-core/src/selection_count.rs": "9cf1b6261a0a3ea451a18a693e33d0112f993fa9ac35804c7f4f5a8643e44d45",
+    "crates/macro-core/src/selection_count_layout.rs": "386de039c740adc1c29de32b717783ac08f3bb02fd076235990850fb4976810d",
+    "crates/macro-core/src/selection_count_assets/templates.json": "52ce816c2e10dadeb681ac796da6af1689f4aacd00e6d2fc6e11484d51989cee"
+  },
+  "delta": {
+    "before": "                for dy in -1..=1 { for dx in -2..=2 {",
+    "after": "                let radius=if cfg!(feature=\"heading_only\") && label!=\"heading\" {1}else{2};\n                for dy in -1..=1 { for dx in -radius..=radius {"
+  },
+  "scope": "Snapshot reader/layout with feature-gated translation radius only. Copied regression imports point to experimental reader; fixture paths point to preserved repository corpus. No production changes."
+}

@@ -1,0 +1,72 @@
+{
+  "recordedAt": "2026-10-22T01:09:33.573431+00:00",
+  "sourceBaseline": "released 0.5.11 source manifest",
+  "reportedMessage": "이전 작업은 중단했습니다. 전달한 좌석 기록과 현재 창·좌석 범위가 달라 재클릭을 보류합니다. 기존 화면·설정을 복원해 다시 시작하세요. F4는 입력만 중지하며 좌석 선택을 해제하지 않습니다.",
+  "matchingErrorCount": 15,
+  "firstErrorTimeMs": 1792627866579,
+  "lastErrorTimeMs": 1792631169652,
+  "latestRunId": 12,
+  "observedSequence": [
+    "failed restart retains previous RestartContext",
+    "settings save produces visible Idle engine",
+    "same-window binding retains previous context",
+    "F8 seat ROI calibration saves successfully",
+    "F5 still returns the same mismatch error"
+  ],
+  "latestRecognitionSettings": {
+    "color": {
+      "b": 250,
+      "g": 201,
+      "r": 210
+    },
+    "colorTolerance": 29,
+    "vision": {
+      "exclusions": [],
+      "max_component_pixels": 100000,
+      "min_component_pixels": 3,
+      "roi": {
+        "height": 1345,
+        "width": 2063,
+        "x": 0,
+        "y": 434
+      }
+    },
+    "countVerification": false,
+    "seatObjects": true,
+    "captureReference": {
+      "height": 1784,
+      "scale_x": 2,
+      "scale_y": 2,
+      "width": 3024
+    }
+  },
+  "initialExactMismatchUnknown": true,
+  "userSettingsModified": false,
+  "noRawURLsWindowTitlesImagesOrTypedContentCopied": true,
+  "lastObservedRun12Search": {
+    "timeMs": 1792629243752,
+    "frame": {
+      "width": 3024,
+      "height": 1784,
+      "scaleX": 2,
+      "scaleY": 2
+    },
+    "roi": {
+      "x": 3,
+      "y": 331,
+      "width": 1968,
+      "height": 1353
+    },
+    "color": {
+      "r": 210,
+      "g": 201,
+      "b": 250
+    },
+    "colorTolerance": 30
+  },
+  "observedRecognitionChanges": [
+    "ROI changed from (3,331,1968,1353) to (0,434,2063,1345)",
+    "color tolerance changed from 30 to 29",
+    "observed captured frame geometry stayed 3024x1784 with scale 2"
+  ]
+}

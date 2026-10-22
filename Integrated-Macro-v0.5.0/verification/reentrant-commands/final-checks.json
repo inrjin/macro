@@ -1,0 +1,61 @@
+{
+  "status": "source changes and automated verification complete; not a distribution or live-site claim",
+  "generatedAt": "2026-10-21T15:19:17.331945+00:00",
+  "commands": [
+    {
+      "command": "cargo test --workspace --offline --locked",
+      "exitCode": 0,
+      "passed": 448,
+      "failed": 0,
+      "ignored": 5,
+      "groups": 27,
+      "log": "rust-final.log"
+    },
+    {
+      "command": "npm test",
+      "exitCode": 0,
+      "passed": 172,
+      "failed": 0,
+      "log": "javascript-final.log"
+    },
+    {
+      "command": "node --check ui/app.js; node --check ui/model.js; node --check ui/overlay.js",
+      "exitCode": 0
+    }
+  ],
+  "sourceFiles": 136,
+  "sourceBeforeAfterEqual": true,
+  "protectedReleaseAndAgentsFiles": 22,
+  "protectedFilesUnchanged": true,
+  "independentEngineTests": 15,
+  "independentDOMTests": 19,
+  "userReport": "user-reported-f9.json",
+  "distributionBuildPerformed": false,
+  "appLaunched": false,
+  "nativeInputPerformed": false,
+  "liveSiteTestPerformed": false,
+  "windowsRuntimeTestPerformed": false,
+  "limitations": [
+    "Already delivered OS input cannot be undone.",
+    "No live macOS/Windows shortcut delivery, focus, or booking validation.",
+    "Physical held-key behavior on macOS remains unverified; Windows plugin uses existing MOD_NOREPEAT.",
+    "Fresh current observations are required after explicit retry; unknown selection counts can keep waiting.",
+    "Count OFF preserves delivered-seat estimates, not server-side ownership.",
+    "Different seat settings/window geometry with retained selection can require reconciliation before retry.",
+    "F9 from Idle/Stopped or before the initial booking input is delivered does not bypass the initial run.",
+    "Settings save, calibration, and binding mutations retain their separate command locks."
+  ],
+  "evidenceHashes": {
+    "rust-final.log": "8b9b5a5a0edb90aeda7fd738e2946f56a5fd903af89cda79c42cf0dea7c431b0",
+    "javascript-final.log": "317fa822e80e2a49786448d640fb68fb9981822197bd129a54718081d6cdd00b",
+    "source-before-final-checks.json": "8e2b442bd148f0c259a1bbfe4baf848ee3d4e4e1137cf5750e74a07d0ae9eb92",
+    "source-after-final-checks.json": "8e2b442bd148f0c259a1bbfe4baf848ee3d4e4e1137cf5750e74a07d0ae9eb92",
+    "changes-since-release.json": "09ddfd1f62aba8d25b23aa49ac2c2338b313564c899ed45a2bd0e21e218fbe34",
+    "user-reported-f9.json": "c7ecf1d00bbbb4dc9d770d92626d6c801a5252dc4df0ef6db955c163bb94356d",
+    "independent/final-core.log": "bc230aa0e5f88bb9a91d42df229c050cd854b26b176b8d48c7217476c8ccc278",
+    "adversarial/final-dom.log": "32735739b3b31e1f45593a62696e06177bf5fa6c690e8b92f1c844d8c2cfce41",
+    "implementation/runtime-all.log": "33769c1b84ed8053e65936d047c4c8097a54946cb81751729bc09cdbf9fb3fba",
+    "review-source-continuity.json": "57625d0c278d0258d822bc65ef1e4ab900fbca03081fd0058fb8d632e896ce06"
+  },
+  "reviewSourceContinuity": "review-source-continuity.json"
+}

@@ -1,0 +1,38 @@
+name: Build Windows 0.5.11
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-2022
+    timeout-minutes: 60
+    env:
+      RUSTUP_TOOLCHAIN: stable
+      CARGO_TERM_COLOR: never
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - name: Prepare Rust MSVC target
+        shell: pwsh
+        run: |
+          rustup toolchain install stable --profile minimal --target x86_64-pc-windows-msvc
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Verify source, test, and build NSIS installer
+        shell: cmd
+        run: call .\Build-Windows.cmd
+      - name: Upload installer and build evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-0.5.11-${{ github.run_number }}
+          if-no-files-found: error
+          path: |
+            output/*/artifacts/*
+            output/*/report.json
+            output/*/build.log

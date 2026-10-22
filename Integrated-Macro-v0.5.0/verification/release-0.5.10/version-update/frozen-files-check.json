@@ -1,0 +1,46 @@
+{
+  "allMatch": true,
+  "files": [
+    {
+      "path": "package.json",
+      "matches": true
+    },
+    {
+      "path": "package-lock.json",
+      "matches": true
+    },
+    {
+      "path": "Cargo.toml",
+      "matches": true
+    },
+    {
+      "path": "Cargo.lock",
+      "matches": true
+    },
+    {
+      "path": "crates/macro-core/Cargo.toml",
+      "matches": true
+    },
+    {
+      "path": "crates/macro-platform/Cargo.toml",
+      "matches": true
+    },
+    {
+      "path": "src-tauri/tauri.conf.json",
+      "matches": true
+    },
+    {
+      "path": "ui/package.json",
+      "matches": true
+    },
+    {
+      "path": "ui/index.html",
+      "matches": true
+    },
+    {
+      "path": "README.md",
+      "matches": true
+    }
+  ],
+  "scope": "Read-only hash comparison after freeze; no cargo/build/tests"
+}

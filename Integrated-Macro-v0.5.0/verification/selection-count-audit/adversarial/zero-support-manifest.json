@@ -1,0 +1,1226 @@
+{
+  "fixtures": [
+    {
+      "count": 0,
+      "expectation": "confirmed",
+      "file": "zero-controls/zero_size20_phase0_x50.rgba",
+      "group": "zero_support",
+      "height": 340,
+      "name": "zero_size20_phase0_x50",
+      "note": "Independent normal empty-panel typography; prior-readable controls become required regressions after the frozen baseline comparison.",
+      "stride": 2560,
+      "text": [
+        {
+          "advance": 74.46,
+          "ascent": 18.000036478042603,
+          "descent": 6.000012159347534,
+          "fontSize": 20,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 좌석",
+          "x": 50,
+          "y": 30
+        },
+        {
+          "advance": 206.844,
+          "ascent": 19.800040125846863,
+          "descent": 6.600013375282288,
+          "fontSize": 22,
+          "requestedFont": "AppleSDGothicNeo-Regular",
+          "resolvedFont": "AppleSDGothicNeo-Regular",
+          "value": "선택된 좌석이 없습니다.",
+          "x": 60,
+          "y": 145
+        },
+        {
+          "advance": 67.014,
+          "ascent": 16.200032830238342,
+          "descent": 5.400010943412781,
+          "fontSize": 18,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 완료",
+          "x": 171.493,
+          "y": 270.19997811317444
+        }
+      ],
+      "width": 640,
+      "baselineCount": 0
+    },
+    {
+      "count": 0,
+      "expectation": "confirmed",
+      "file": "zero-controls/zero_size20_phase0_x300.rgba",
+      "group": "zero_support",
+      "height": 340,
+      "name": "zero_size20_phase0_x300",
+      "note": "Independent normal empty-panel typography; prior-readable controls become required regressions after the frozen baseline comparison.",
+      "stride": 2560,
+      "text": [
+        {
+          "advance": 74.46,
+          "ascent": 18.000036478042603,
+          "descent": 6.000012159347534,
+          "fontSize": 20,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 좌석",
+          "x": 300,
+          "y": 30
+        },
+        {
+          "advance": 206.844,
+          "ascent": 19.800040125846863,
+          "descent": 6.600013375282288,
+          "fontSize": 22,
+          "requestedFont": "AppleSDGothicNeo-Regular",
+          "resolvedFont": "AppleSDGothicNeo-Regular",
+          "value": "선택된 좌석이 없습니다.",
+          "x": 310,
+          "y": 145
+        },
+        {
+          "advance": 67.014,
+          "ascent": 16.200032830238342,
+          "descent": 5.400010943412781,
+          "fontSize": 18,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 완료",
+          "x": 421.493,
+          "y": 270.19997811317444
+        }
+      ],
+      "width": 640,
+      "baselineCount": 0
+    },
+    {
+      "count": 0,
+      "expectation": "confirmed",
+      "file": "zero-controls/zero_size20_phase5_x50.rgba",
+      "group": "zero_support",
+      "height": 340,
+      "name": "zero_size20_phase5_x50",
+      "note": "Independent normal empty-panel typography; prior-readable controls become required regressions after the frozen baseline comparison.",
+      "stride": 2560,
+      "text": [
+        {
+          "advance": 74.46,
+          "ascent": 18.000036478042603,
+          "descent": 6.000012159347534,
+          "fontSize": 20,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 좌석",
+          "x": 50.5,
+          "y": 30.5
+        },
+        {
+          "advance": 206.844,
+          "ascent": 19.800040125846863,
+          "descent": 6.600013375282288,
+          "fontSize": 22,
+          "requestedFont": "AppleSDGothicNeo-Regular",
+          "resolvedFont": "AppleSDGothicNeo-Regular",
+          "value": "선택된 좌석이 없습니다.",
+          "x": 60,
+          "y": 145
+        },
+        {
+          "advance": 67.014,
+          "ascent": 16.200032830238342,
+          "descent": 5.400010943412781,
+          "fontSize": 18,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 완료",
+          "x": 171.493,
+          "y": 270.19997811317444
+        }
+      ],
+      "width": 640,
+      "baselineCount": 0
+    },
+    {
+      "count": 0,
+      "expectation": "confirmed",
+      "file": "zero-controls/zero_size20_phase5_x300.rgba",
+      "group": "zero_support",
+      "height": 340,
+      "name": "zero_size20_phase5_x300",
+      "note": "Independent normal empty-panel typography; prior-readable controls become required regressions after the frozen baseline comparison.",
+      "stride": 2560,
+      "text": [
+        {
+          "advance": 74.46,
+          "ascent": 18.000036478042603,
+          "descent": 6.000012159347534,
+          "fontSize": 20,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 좌석",
+          "x": 300.5,
+          "y": 30.5
+        },
+        {
+          "advance": 206.844,
+          "ascent": 19.800040125846863,
+          "descent": 6.600013375282288,
+          "fontSize": 22,
+          "requestedFont": "AppleSDGothicNeo-Regular",
+          "resolvedFont": "AppleSDGothicNeo-Regular",
+          "value": "선택된 좌석이 없습니다.",
+          "x": 310,
+          "y": 145
+        },
+        {
+          "advance": 67.014,
+          "ascent": 16.200032830238342,
+          "descent": 5.400010943412781,
+          "fontSize": 18,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 완료",
+          "x": 421.493,
+          "y": 270.19997811317444
+        }
+      ],
+      "width": 640,
+      "baselineCount": 0
+    },
+    {
+      "count": 0,
+      "expectation": "correct_or_unreadable",
+      "file": "zero-controls/zero_size23_phase0_x50.rgba",
+      "group": "zero_support",
+      "height": 340,
+      "name": "zero_size23_phase0_x50",
+      "note": "Independent normal empty-panel typography; prior-readable controls become required regressions after the frozen baseline comparison.",
+      "stride": 2560,
+      "text": [
+        {
+          "advance": 85.62899999999999,
+          "ascent": 20.700041949748993,
+          "descent": 6.900013983249664,
+          "fontSize": 23,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 좌석",
+          "x": 50,
+          "y": 30
+        },
+        {
+          "advance": 206.844,
+          "ascent": 19.800040125846863,
+          "descent": 6.600013375282288,
+          "fontSize": 22,
+          "requestedFont": "AppleSDGothicNeo-Regular",
+          "resolvedFont": "AppleSDGothicNeo-Regular",
+          "value": "선택된 좌석이 없습니다.",
+          "x": 60,
+          "y": 145
+        },
+        {
+          "advance": 67.014,
+          "ascent": 16.200032830238342,
+          "descent": 5.400010943412781,
+          "fontSize": 18,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 완료",
+          "x": 171.493,
+          "y": 270.19997811317444
+        }
+      ],
+      "width": 640,
+      "baselineCount": null
+    },
+    {
+      "count": 0,
+      "expectation": "correct_or_unreadable",
+      "file": "zero-controls/zero_size23_phase0_x300.rgba",
+      "group": "zero_support",
+      "height": 340,
+      "name": "zero_size23_phase0_x300",
+      "note": "Independent normal empty-panel typography; prior-readable controls become required regressions after the frozen baseline comparison.",
+      "stride": 2560,
+      "text": [
+        {
+          "advance": 85.62899999999999,
+          "ascent": 20.700041949748993,
+          "descent": 6.900013983249664,
+          "fontSize": 23,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 좌석",
+          "x": 300,
+          "y": 30
+        },
+        {
+          "advance": 206.844,
+          "ascent": 19.800040125846863,
+          "descent": 6.600013375282288,
+          "fontSize": 22,
+          "requestedFont": "AppleSDGothicNeo-Regular",
+          "resolvedFont": "AppleSDGothicNeo-Regular",
+          "value": "선택된 좌석이 없습니다.",
+          "x": 310,
+          "y": 145
+        },
+        {
+          "advance": 67.014,
+          "ascent": 16.200032830238342,
+          "descent": 5.400010943412781,
+          "fontSize": 18,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 완료",
+          "x": 421.493,
+          "y": 270.19997811317444
+        }
+      ],
+      "width": 640,
+      "baselineCount": null
+    },
+    {
+      "count": 0,
+      "expectation": "confirmed",
+      "file": "zero-controls/zero_size23_phase5_x50.rgba",
+      "group": "zero_support",
+      "height": 340,
+      "name": "zero_size23_phase5_x50",
+      "note": "Independent normal empty-panel typography; prior-readable controls become required regressions after the frozen baseline comparison.",
+      "stride": 2560,
+      "text": [
+        {
+          "advance": 85.62899999999999,
+          "ascent": 20.700041949748993,
+          "descent": 6.900013983249664,
+          "fontSize": 23,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 좌석",
+          "x": 50.5,
+          "y": 30.5
+        },
+        {
+          "advance": 206.844,
+          "ascent": 19.800040125846863,
+          "descent": 6.600013375282288,
+          "fontSize": 22,
+          "requestedFont": "AppleSDGothicNeo-Regular",
+          "resolvedFont": "AppleSDGothicNeo-Regular",
+          "value": "선택된 좌석이 없습니다.",
+          "x": 60,
+          "y": 145
+        },
+        {
+          "advance": 67.014,
+          "ascent": 16.200032830238342,
+          "descent": 5.400010943412781,
+          "fontSize": 18,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 완료",
+          "x": 171.493,
+          "y": 270.19997811317444
+        }
+      ],
+      "width": 640,
+      "baselineCount": 0
+    },
+    {
+      "count": 0,
+      "expectation": "confirmed",
+      "file": "zero-controls/zero_size23_phase5_x300.rgba",
+      "group": "zero_support",
+      "height": 340,
+      "name": "zero_size23_phase5_x300",
+      "note": "Independent normal empty-panel typography; prior-readable controls become required regressions after the frozen baseline comparison.",
+      "stride": 2560,
+      "text": [
+        {
+          "advance": 85.62899999999999,
+          "ascent": 20.700041949748993,
+          "descent": 6.900013983249664,
+          "fontSize": 23,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 좌석",
+          "x": 300.5,
+          "y": 30.5
+        },
+        {
+          "advance": 206.844,
+          "ascent": 19.800040125846863,
+          "descent": 6.600013375282288,
+          "fontSize": 22,
+          "requestedFont": "AppleSDGothicNeo-Regular",
+          "resolvedFont": "AppleSDGothicNeo-Regular",
+          "value": "선택된 좌석이 없습니다.",
+          "x": 310,
+          "y": 145
+        },
+        {
+          "advance": 67.014,
+          "ascent": 16.200032830238342,
+          "descent": 5.400010943412781,
+          "fontSize": 18,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 완료",
+          "x": 421.493,
+          "y": 270.19997811317444
+        }
+      ],
+      "width": 640,
+      "baselineCount": 0
+    },
+    {
+      "count": 0,
+      "expectation": "confirmed",
+      "file": "zero-controls/zero_size24_phase0_x50.rgba",
+      "group": "zero_support",
+      "height": 340,
+      "name": "zero_size24_phase0_x50",
+      "note": "Independent normal empty-panel typography; prior-readable controls become required regressions after the frozen baseline comparison.",
+      "stride": 2560,
+      "text": [
+        {
+          "advance": 89.35200000000002,
+          "ascent": 21.600043773651123,
+          "descent": 7.200014591217041,
+          "fontSize": 24,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 좌석",
+          "x": 50,
+          "y": 30
+        },
+        {
+          "advance": 206.844,
+          "ascent": 19.800040125846863,
+          "descent": 6.600013375282288,
+          "fontSize": 22,
+          "requestedFont": "AppleSDGothicNeo-Regular",
+          "resolvedFont": "AppleSDGothicNeo-Regular",
+          "value": "선택된 좌석이 없습니다.",
+          "x": 60,
+          "y": 145
+        },
+        {
+          "advance": 67.014,
+          "ascent": 16.200032830238342,
+          "descent": 5.400010943412781,
+          "fontSize": 18,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 완료",
+          "x": 171.493,
+          "y": 270.19997811317444
+        }
+      ],
+      "width": 640,
+      "baselineCount": 0
+    },
+    {
+      "count": 0,
+      "expectation": "confirmed",
+      "file": "zero-controls/zero_size24_phase0_x300.rgba",
+      "group": "zero_support",
+      "height": 340,
+      "name": "zero_size24_phase0_x300",
+      "note": "Independent normal empty-panel typography; prior-readable controls become required regressions after the frozen baseline comparison.",
+      "stride": 2560,
+      "text": [
+        {
+          "advance": 89.35200000000002,
+          "ascent": 21.600043773651123,
+          "descent": 7.200014591217041,
+          "fontSize": 24,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 좌석",
+          "x": 300,
+          "y": 30
+        },
+        {
+          "advance": 206.844,
+          "ascent": 19.800040125846863,
+          "descent": 6.600013375282288,
+          "fontSize": 22,
+          "requestedFont": "AppleSDGothicNeo-Regular",
+          "resolvedFont": "AppleSDGothicNeo-Regular",
+          "value": "선택된 좌석이 없습니다.",
+          "x": 310,
+          "y": 145
+        },
+        {
+          "advance": 67.014,
+          "ascent": 16.200032830238342,
+          "descent": 5.400010943412781,
+          "fontSize": 18,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 완료",
+          "x": 421.493,
+          "y": 270.19997811317444
+        }
+      ],
+      "width": 640,
+      "baselineCount": 0
+    },
+    {
+      "count": 0,
+      "expectation": "confirmed",
+      "file": "zero-controls/zero_size24_phase5_x50.rgba",
+      "group": "zero_support",
+      "height": 340,
+      "name": "zero_size24_phase5_x50",
+      "note": "Independent normal empty-panel typography; prior-readable controls become required regressions after the frozen baseline comparison.",
+      "stride": 2560,
+      "text": [
+        {
+          "advance": 89.35200000000002,
+          "ascent": 21.600043773651123,
+          "descent": 7.200014591217041,
+          "fontSize": 24,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 좌석",
+          "x": 50.5,
+          "y": 30.5
+        },
+        {
+          "advance": 206.844,
+          "ascent": 19.800040125846863,
+          "descent": 6.600013375282288,
+          "fontSize": 22,
+          "requestedFont": "AppleSDGothicNeo-Regular",
+          "resolvedFont": "AppleSDGothicNeo-Regular",
+          "value": "선택된 좌석이 없습니다.",
+          "x": 60,
+          "y": 145
+        },
+        {
+          "advance": 67.014,
+          "ascent": 16.200032830238342,
+          "descent": 5.400010943412781,
+          "fontSize": 18,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 완료",
+          "x": 171.493,
+          "y": 270.19997811317444
+        }
+      ],
+      "width": 640,
+      "baselineCount": 0
+    },
+    {
+      "count": 0,
+      "expectation": "confirmed",
+      "file": "zero-controls/zero_size24_phase5_x300.rgba",
+      "group": "zero_support",
+      "height": 340,
+      "name": "zero_size24_phase5_x300",
+      "note": "Independent normal empty-panel typography; prior-readable controls become required regressions after the frozen baseline comparison.",
+      "stride": 2560,
+      "text": [
+        {
+          "advance": 89.35200000000002,
+          "ascent": 21.600043773651123,
+          "descent": 7.200014591217041,
+          "fontSize": 24,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 좌석",
+          "x": 300.5,
+          "y": 30.5
+        },
+        {
+          "advance": 206.844,
+          "ascent": 19.800040125846863,
+          "descent": 6.600013375282288,
+          "fontSize": 22,
+          "requestedFont": "AppleSDGothicNeo-Regular",
+          "resolvedFont": "AppleSDGothicNeo-Regular",
+          "value": "선택된 좌석이 없습니다.",
+          "x": 310,
+          "y": 145
+        },
+        {
+          "advance": 67.014,
+          "ascent": 16.200032830238342,
+          "descent": 5.400010943412781,
+          "fontSize": 18,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 완료",
+          "x": 421.493,
+          "y": 270.19997811317444
+        }
+      ],
+      "width": 640,
+      "baselineCount": 0
+    },
+    {
+      "count": 0,
+      "expectation": "confirmed",
+      "file": "zero-controls/zero_size26_phase0_x50.rgba",
+      "group": "zero_support",
+      "height": 340,
+      "name": "zero_size26_phase0_x50",
+      "note": "Independent normal empty-panel typography; prior-readable controls become required regressions after the frozen baseline comparison.",
+      "stride": 2560,
+      "text": [
+        {
+          "advance": 96.79799999999999,
+          "ascent": 23.400047421455383,
+          "descent": 7.800015807151794,
+          "fontSize": 26,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 좌석",
+          "x": 50,
+          "y": 30
+        },
+        {
+          "advance": 206.844,
+          "ascent": 19.800040125846863,
+          "descent": 6.600013375282288,
+          "fontSize": 22,
+          "requestedFont": "AppleSDGothicNeo-Regular",
+          "resolvedFont": "AppleSDGothicNeo-Regular",
+          "value": "선택된 좌석이 없습니다.",
+          "x": 60,
+          "y": 145
+        },
+        {
+          "advance": 67.014,
+          "ascent": 16.200032830238342,
+          "descent": 5.400010943412781,
+          "fontSize": 18,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 완료",
+          "x": 171.493,
+          "y": 270.19997811317444
+        }
+      ],
+      "width": 640,
+      "baselineCount": 0
+    },
+    {
+      "count": 0,
+      "expectation": "confirmed",
+      "file": "zero-controls/zero_size26_phase0_x300.rgba",
+      "group": "zero_support",
+      "height": 340,
+      "name": "zero_size26_phase0_x300",
+      "note": "Independent normal empty-panel typography; prior-readable controls become required regressions after the frozen baseline comparison.",
+      "stride": 2560,
+      "text": [
+        {
+          "advance": 96.79799999999999,
+          "ascent": 23.400047421455383,
+          "descent": 7.800015807151794,
+          "fontSize": 26,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 좌석",
+          "x": 300,
+          "y": 30
+        },
+        {
+          "advance": 206.844,
+          "ascent": 19.800040125846863,
+          "descent": 6.600013375282288,
+          "fontSize": 22,
+          "requestedFont": "AppleSDGothicNeo-Regular",
+          "resolvedFont": "AppleSDGothicNeo-Regular",
+          "value": "선택된 좌석이 없습니다.",
+          "x": 310,
+          "y": 145
+        },
+        {
+          "advance": 67.014,
+          "ascent": 16.200032830238342,
+          "descent": 5.400010943412781,
+          "fontSize": 18,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 완료",
+          "x": 421.493,
+          "y": 270.19997811317444
+        }
+      ],
+      "width": 640,
+      "baselineCount": 0
+    },
+    {
+      "count": 0,
+      "expectation": "confirmed",
+      "file": "zero-controls/zero_size26_phase5_x50.rgba",
+      "group": "zero_support",
+      "height": 340,
+      "name": "zero_size26_phase5_x50",
+      "note": "Independent normal empty-panel typography; prior-readable controls become required regressions after the frozen baseline comparison.",
+      "stride": 2560,
+      "text": [
+        {
+          "advance": 96.79799999999999,
+          "ascent": 23.400047421455383,
+          "descent": 7.800015807151794,
+          "fontSize": 26,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 좌석",
+          "x": 50.5,
+          "y": 30.5
+        },
+        {
+          "advance": 206.844,
+          "ascent": 19.800040125846863,
+          "descent": 6.600013375282288,
+          "fontSize": 22,
+          "requestedFont": "AppleSDGothicNeo-Regular",
+          "resolvedFont": "AppleSDGothicNeo-Regular",
+          "value": "선택된 좌석이 없습니다.",
+          "x": 60,
+          "y": 145
+        },
+        {
+          "advance": 67.014,
+          "ascent": 16.200032830238342,
+          "descent": 5.400010943412781,
+          "fontSize": 18,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 완료",
+          "x": 171.493,
+          "y": 270.19997811317444
+        }
+      ],
+      "width": 640,
+      "baselineCount": 0
+    },
+    {
+      "count": 0,
+      "expectation": "confirmed",
+      "file": "zero-controls/zero_size26_phase5_x300.rgba",
+      "group": "zero_support",
+      "height": 340,
+      "name": "zero_size26_phase5_x300",
+      "note": "Independent normal empty-panel typography; prior-readable controls become required regressions after the frozen baseline comparison.",
+      "stride": 2560,
+      "text": [
+        {
+          "advance": 96.79799999999999,
+          "ascent": 23.400047421455383,
+          "descent": 7.800015807151794,
+          "fontSize": 26,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 좌석",
+          "x": 300.5,
+          "y": 30.5
+        },
+        {
+          "advance": 206.844,
+          "ascent": 19.800040125846863,
+          "descent": 6.600013375282288,
+          "fontSize": 22,
+          "requestedFont": "AppleSDGothicNeo-Regular",
+          "resolvedFont": "AppleSDGothicNeo-Regular",
+          "value": "선택된 좌석이 없습니다.",
+          "x": 310,
+          "y": 145
+        },
+        {
+          "advance": 67.014,
+          "ascent": 16.200032830238342,
+          "descent": 5.400010943412781,
+          "fontSize": 18,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 완료",
+          "x": 421.493,
+          "y": 270.19997811317444
+        }
+      ],
+      "width": 640,
+      "baselineCount": 0
+    },
+    {
+      "count": 0,
+      "expectation": "confirmed",
+      "file": "zero-controls/zero_size30_phase0_x50.rgba",
+      "group": "zero_support",
+      "height": 340,
+      "name": "zero_size30_phase0_x50",
+      "note": "Independent normal empty-panel typography; prior-readable controls become required regressions after the frozen baseline comparison.",
+      "stride": 2560,
+      "text": [
+        {
+          "advance": 111.69,
+          "ascent": 27.000054717063904,
+          "descent": 9.000018239021301,
+          "fontSize": 30,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 좌석",
+          "x": 50,
+          "y": 30
+        },
+        {
+          "advance": 206.844,
+          "ascent": 19.800040125846863,
+          "descent": 6.600013375282288,
+          "fontSize": 22,
+          "requestedFont": "AppleSDGothicNeo-Regular",
+          "resolvedFont": "AppleSDGothicNeo-Regular",
+          "value": "선택된 좌석이 없습니다.",
+          "x": 60,
+          "y": 145
+        },
+        {
+          "advance": 67.014,
+          "ascent": 16.200032830238342,
+          "descent": 5.400010943412781,
+          "fontSize": 18,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 완료",
+          "x": 171.493,
+          "y": 270.19997811317444
+        }
+      ],
+      "width": 640,
+      "baselineCount": 0
+    },
+    {
+      "count": 0,
+      "expectation": "confirmed",
+      "file": "zero-controls/zero_size30_phase0_x300.rgba",
+      "group": "zero_support",
+      "height": 340,
+      "name": "zero_size30_phase0_x300",
+      "note": "Independent normal empty-panel typography; prior-readable controls become required regressions after the frozen baseline comparison.",
+      "stride": 2560,
+      "text": [
+        {
+          "advance": 111.69,
+          "ascent": 27.000054717063904,
+          "descent": 9.000018239021301,
+          "fontSize": 30,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 좌석",
+          "x": 300,
+          "y": 30
+        },
+        {
+          "advance": 206.844,
+          "ascent": 19.800040125846863,
+          "descent": 6.600013375282288,
+          "fontSize": 22,
+          "requestedFont": "AppleSDGothicNeo-Regular",
+          "resolvedFont": "AppleSDGothicNeo-Regular",
+          "value": "선택된 좌석이 없습니다.",
+          "x": 310,
+          "y": 145
+        },
+        {
+          "advance": 67.014,
+          "ascent": 16.200032830238342,
+          "descent": 5.400010943412781,
+          "fontSize": 18,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 완료",
+          "x": 421.493,
+          "y": 270.19997811317444
+        }
+      ],
+      "width": 640,
+      "baselineCount": 0
+    },
+    {
+      "count": 0,
+      "expectation": "confirmed",
+      "file": "zero-controls/zero_size30_phase5_x50.rgba",
+      "group": "zero_support",
+      "height": 340,
+      "name": "zero_size30_phase5_x50",
+      "note": "Independent normal empty-panel typography; prior-readable controls become required regressions after the frozen baseline comparison.",
+      "stride": 2560,
+      "text": [
+        {
+          "advance": 111.69,
+          "ascent": 27.000054717063904,
+          "descent": 9.000018239021301,
+          "fontSize": 30,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 좌석",
+          "x": 50.5,
+          "y": 30.5
+        },
+        {
+          "advance": 206.844,
+          "ascent": 19.800040125846863,
+          "descent": 6.600013375282288,
+          "fontSize": 22,
+          "requestedFont": "AppleSDGothicNeo-Regular",
+          "resolvedFont": "AppleSDGothicNeo-Regular",
+          "value": "선택된 좌석이 없습니다.",
+          "x": 60,
+          "y": 145
+        },
+        {
+          "advance": 67.014,
+          "ascent": 16.200032830238342,
+          "descent": 5.400010943412781,
+          "fontSize": 18,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 완료",
+          "x": 171.493,
+          "y": 270.19997811317444
+        }
+      ],
+      "width": 640,
+      "baselineCount": 0
+    },
+    {
+      "count": 0,
+      "expectation": "confirmed",
+      "file": "zero-controls/zero_size30_phase5_x300.rgba",
+      "group": "zero_support",
+      "height": 340,
+      "name": "zero_size30_phase5_x300",
+      "note": "Independent normal empty-panel typography; prior-readable controls become required regressions after the frozen baseline comparison.",
+      "stride": 2560,
+      "text": [
+        {
+          "advance": 111.69,
+          "ascent": 27.000054717063904,
+          "descent": 9.000018239021301,
+          "fontSize": 30,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 좌석",
+          "x": 300.5,
+          "y": 30.5
+        },
+        {
+          "advance": 206.844,
+          "ascent": 19.800040125846863,
+          "descent": 6.600013375282288,
+          "fontSize": 22,
+          "requestedFont": "AppleSDGothicNeo-Regular",
+          "resolvedFont": "AppleSDGothicNeo-Regular",
+          "value": "선택된 좌석이 없습니다.",
+          "x": 310,
+          "y": 145
+        },
+        {
+          "advance": 67.014,
+          "ascent": 16.200032830238342,
+          "descent": 5.400010943412781,
+          "fontSize": 18,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 완료",
+          "x": 421.493,
+          "y": 270.19997811317444
+        }
+      ],
+      "width": 640,
+      "baselineCount": 0
+    },
+    {
+      "count": 0,
+      "expectation": "confirmed",
+      "file": "zero-controls/zero_size33_phase0_x50.rgba",
+      "group": "zero_support",
+      "height": 340,
+      "name": "zero_size33_phase0_x50",
+      "note": "Independent normal empty-panel typography; prior-readable controls become required regressions after the frozen baseline comparison.",
+      "stride": 2560,
+      "text": [
+        {
+          "advance": 122.85900000000001,
+          "ascent": 29.700060188770294,
+          "descent": 9.900020062923431,
+          "fontSize": 33,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 좌석",
+          "x": 50,
+          "y": 30
+        },
+        {
+          "advance": 206.844,
+          "ascent": 19.800040125846863,
+          "descent": 6.600013375282288,
+          "fontSize": 22,
+          "requestedFont": "AppleSDGothicNeo-Regular",
+          "resolvedFont": "AppleSDGothicNeo-Regular",
+          "value": "선택된 좌석이 없습니다.",
+          "x": 60,
+          "y": 145
+        },
+        {
+          "advance": 67.014,
+          "ascent": 16.200032830238342,
+          "descent": 5.400010943412781,
+          "fontSize": 18,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 완료",
+          "x": 171.493,
+          "y": 270.19997811317444
+        }
+      ],
+      "width": 640,
+      "baselineCount": 0
+    },
+    {
+      "count": 0,
+      "expectation": "confirmed",
+      "file": "zero-controls/zero_size33_phase0_x300.rgba",
+      "group": "zero_support",
+      "height": 340,
+      "name": "zero_size33_phase0_x300",
+      "note": "Independent normal empty-panel typography; prior-readable controls become required regressions after the frozen baseline comparison.",
+      "stride": 2560,
+      "text": [
+        {
+          "advance": 122.85900000000001,
+          "ascent": 29.700060188770294,
+          "descent": 9.900020062923431,
+          "fontSize": 33,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 좌석",
+          "x": 300,
+          "y": 30
+        },
+        {
+          "advance": 206.844,
+          "ascent": 19.800040125846863,
+          "descent": 6.600013375282288,
+          "fontSize": 22,
+          "requestedFont": "AppleSDGothicNeo-Regular",
+          "resolvedFont": "AppleSDGothicNeo-Regular",
+          "value": "선택된 좌석이 없습니다.",
+          "x": 310,
+          "y": 145
+        },
+        {
+          "advance": 67.014,
+          "ascent": 16.200032830238342,
+          "descent": 5.400010943412781,
+          "fontSize": 18,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 완료",
+          "x": 421.493,
+          "y": 270.19997811317444
+        }
+      ],
+      "width": 640,
+      "baselineCount": 0
+    },
+    {
+      "count": 0,
+      "expectation": "confirmed",
+      "file": "zero-controls/zero_size33_phase5_x50.rgba",
+      "group": "zero_support",
+      "height": 340,
+      "name": "zero_size33_phase5_x50",
+      "note": "Independent normal empty-panel typography; prior-readable controls become required regressions after the frozen baseline comparison.",
+      "stride": 2560,
+      "text": [
+        {
+          "advance": 122.85900000000001,
+          "ascent": 29.700060188770294,
+          "descent": 9.900020062923431,
+          "fontSize": 33,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 좌석",
+          "x": 50.5,
+          "y": 30.5
+        },
+        {
+          "advance": 206.844,
+          "ascent": 19.800040125846863,
+          "descent": 6.600013375282288,
+          "fontSize": 22,
+          "requestedFont": "AppleSDGothicNeo-Regular",
+          "resolvedFont": "AppleSDGothicNeo-Regular",
+          "value": "선택된 좌석이 없습니다.",
+          "x": 60,
+          "y": 145
+        },
+        {
+          "advance": 67.014,
+          "ascent": 16.200032830238342,
+          "descent": 5.400010943412781,
+          "fontSize": 18,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 완료",
+          "x": 171.493,
+          "y": 270.19997811317444
+        }
+      ],
+      "width": 640,
+      "baselineCount": 0
+    },
+    {
+      "count": 0,
+      "expectation": "confirmed",
+      "file": "zero-controls/zero_size33_phase5_x300.rgba",
+      "group": "zero_support",
+      "height": 340,
+      "name": "zero_size33_phase5_x300",
+      "note": "Independent normal empty-panel typography; prior-readable controls become required regressions after the frozen baseline comparison.",
+      "stride": 2560,
+      "text": [
+        {
+          "advance": 122.85900000000001,
+          "ascent": 29.700060188770294,
+          "descent": 9.900020062923431,
+          "fontSize": 33,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 좌석",
+          "x": 300.5,
+          "y": 30.5
+        },
+        {
+          "advance": 206.844,
+          "ascent": 19.800040125846863,
+          "descent": 6.600013375282288,
+          "fontSize": 22,
+          "requestedFont": "AppleSDGothicNeo-Regular",
+          "resolvedFont": "AppleSDGothicNeo-Regular",
+          "value": "선택된 좌석이 없습니다.",
+          "x": 310,
+          "y": 145
+        },
+        {
+          "advance": 67.014,
+          "ascent": 16.200032830238342,
+          "descent": 5.400010943412781,
+          "fontSize": 18,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 완료",
+          "x": 421.493,
+          "y": 270.19997811317444
+        }
+      ],
+      "width": 640,
+      "baselineCount": 0
+    },
+    {
+      "count": 0,
+      "expectation": "confirmed",
+      "file": "zero-controls/zero_uniform_gray.rgba",
+      "group": "zero_support",
+      "height": 340,
+      "name": "zero_uniform_gray",
+      "note": "Independent normal empty-panel typography; prior-readable controls become required regressions after the frozen baseline comparison.",
+      "stride": 2560,
+      "text": [
+        {
+          "advance": 89.35200000000002,
+          "ascent": 21.600043773651123,
+          "descent": 7.200014591217041,
+          "fontSize": 24,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 좌석",
+          "x": 300,
+          "y": 30
+        },
+        {
+          "advance": 206.844,
+          "ascent": 19.800040125846863,
+          "descent": 6.600013375282288,
+          "fontSize": 22,
+          "requestedFont": "AppleSDGothicNeo-Regular",
+          "resolvedFont": "AppleSDGothicNeo-Regular",
+          "value": "선택된 좌석이 없습니다.",
+          "x": 310,
+          "y": 145
+        },
+        {
+          "advance": 67.014,
+          "ascent": 16.200032830238342,
+          "descent": 5.400010943412781,
+          "fontSize": 18,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 완료",
+          "x": 421.493,
+          "y": 270.19997811317444
+        }
+      ],
+      "width": 640,
+      "baselineCount": 0
+    },
+    {
+      "count": 0,
+      "expectation": "confirmed",
+      "file": "zero-controls/zero_uniform_blue.rgba",
+      "group": "zero_support",
+      "height": 340,
+      "name": "zero_uniform_blue",
+      "note": "Independent normal empty-panel typography; prior-readable controls become required regressions after the frozen baseline comparison.",
+      "stride": 2560,
+      "text": [
+        {
+          "advance": 89.35200000000002,
+          "ascent": 21.600043773651123,
+          "descent": 7.200014591217041,
+          "fontSize": 24,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 좌석",
+          "x": 300,
+          "y": 30
+        },
+        {
+          "advance": 206.844,
+          "ascent": 19.800040125846863,
+          "descent": 6.600013375282288,
+          "fontSize": 22,
+          "requestedFont": "AppleSDGothicNeo-Regular",
+          "resolvedFont": "AppleSDGothicNeo-Regular",
+          "value": "선택된 좌석이 없습니다.",
+          "x": 310,
+          "y": 145
+        },
+        {
+          "advance": 67.014,
+          "ascent": 16.200032830238342,
+          "descent": 5.400010943412781,
+          "fontSize": 18,
+          "requestedFont": "AppleSDGothicNeo-Bold",
+          "resolvedFont": "AppleSDGothicNeo-Bold",
+          "value": "선택 완료",
+          "x": 421.493,
+          "y": 270.19997811317444
+        }
+      ],
+      "width": 640,
+      "baselineCount": 0
+    }
+  ]
+}

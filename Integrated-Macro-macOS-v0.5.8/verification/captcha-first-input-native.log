@@ -1,0 +1,9 @@
+Command: bash crates/macro-platform/native/verify-macos.sh
+Working directory: /Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0
+Source: after removing the sourcePID == 0 restriction; own-PID filter retained.
+Exit code: 0
+
+sysctlbyname for kern.hv_vmm_present failed with status -1kIOSurfaceMethodSetCoreVideoBridgedKeys failed: 10000003
+Native synthetic window validation (43), activation (16), capture lifecycle, Enter/CAPTCHA filters, independent watches, diagnostics/off-only ABI, allocation/free and thread guard OK; permission bits=0
+Swift arm64/x86_64 compilation and host ABI smoke passed.
+

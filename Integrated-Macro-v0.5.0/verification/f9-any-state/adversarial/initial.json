@@ -1,0 +1,41 @@
+{
+  "recordedAt": "2026-10-21T15:23:27.697539+00:00",
+  "scope": "Source checkpoint before this reviewer started any-state review; does not imply all team mutations have not started.",
+  "files": [
+    {
+      "path": "crates/macro-core/src/engine.rs",
+      "sha256": "12d0c25ff1c45653c510c6ddfc51362d59137a13c7ea3ca4bf8a95c28901a41b",
+      "bytes": 86490
+    },
+    {
+      "path": "src-tauri/src/runtime.rs",
+      "sha256": "72a2671ece056caf1b9b8289db5b967336db2a493377dd851457ec2d118fbdd1",
+      "bytes": 304369
+    },
+    {
+      "path": "src-tauri/src/main.rs",
+      "sha256": "931e1a176b937231dc8729bec5e081f7ef43b1e2a441b238da7325338aa3a17a",
+      "bytes": 15036
+    },
+    {
+      "path": "ui/app.js",
+      "sha256": "baea51b1dbd2c172c65bde970d2e3eff42640e53d75ee62ab44d8bd6b7f60486",
+      "bytes": 54642
+    },
+    {
+      "path": "ui/model.js",
+      "sha256": "2351e89ce198302b34f13358c980734b26747dd43594a16b2f442480ee8d101e",
+      "bytes": 41081
+    },
+    {
+      "path": "ui/index.html",
+      "sha256": "78c628b56446618833e52cf3450aac5cb5b3a43974ea948df343dbceb1c24a8f",
+      "bytes": 27930
+    },
+    {
+      "path": "ui/overlay.js",
+      "sha256": "00cc95eee61939c572556466139193b78b7f91df2f46c619b16da805fe239b41",
+      "bytes": 3153
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "scope": "Actual HTML/app/model listeners with stubbed IPC; no Engine or OS execution",
+  "defaultOff": true,
+  "importAndFormRoundTrip": true,
+  "cases": 24,
+  "rows": [
+    {
+      "mode": "normal",
+      "trigger": "button",
+      "requestedCount": 2,
+      "currentOption": false,
+      "persistedOppositeOption": true,
+      "sentOption": false
+    },
+    {
+      "mode": "normal",
+      "trigger": "button",
+      "requestedCount": 3,
+      "currentOption": false,
+      "persistedOppositeOption": true,
+      "sentOption": false
+    },
+    {
+      "mode": "normal",
+      "trigger": "button",
+      "requestedCount": 2,
+      "currentOption": true,
+      "persistedOppositeOption": false,
+      "sentOption": true
+    },
+    {
+      "mode": "normal",
+      "trigger": "button",
+      "requestedCount": 3,
+      "currentOption": true,
+      "persistedOppositeOption": false,
+      "sentOption": true
+    },
+    {
+      "mode": "normal",
+      "trigger": "shortcut",
+      "requestedCount": 2,
+      "currentOption": false,
+      "persistedOppositeOption": true,
+      "sentOption": false
+    },
+    {
+      "mode": "normal",
+      "trigger": "shortcut",
+      "requestedCount": 3,
+      "currentOption": false,
+      "persistedOppositeOption": true,
+      "sentOption": false
+    },
+    {
+      "mode": "normal",
+      "trigger": "shortcut",
+      "requestedCount": 2,
+      "currentOption": true,
+      "persistedOppositeOption": false,
+      "sentOption": true
+    },
+    {
+      "mode": "normal",
+      "trigger": "shortcut",
+      "requestedCount": 3,
+      "currentOption": true,
+      "persistedOppositeOption": false,
+      "sentOption": true
+    },
+    {
+      "mode": "cancellation",
+      "trigger": "button",
+      "requestedCount": 2,
+      "currentOption": false,
+      "persistedOppositeOption": true,
+      "sentOption": false
+    },
+    {
+      "mode": "cancellation",
+      "trigger": "button",
+      "requestedCount": 3,
+      "currentOption": false,
+      "persistedOppositeOption": true,
+      "sentOption": false
+    },
+    {
+      "mode": "cancellation",
+      "trigger": "button",
+      "requestedCount": 2,
+      "currentOption": true,
+      "persistedOppositeOption": false,
+      "sentOption": true
+    },
+    {
+      "mode": "cancellation",
+      "trigger": "button",
+      "requestedCount": 3,
+      "currentOption": true,
+      "persistedOppositeOption": false,
+      "sentOption": true
+    },
+    {
+      "mode": "cancellation",
+      "trigger": "shortcut",
+      "requestedCount": 2,
+      "currentOption": false,
+      "persistedOppositeOption": true,
+      "sentOption": false
+    },
+    {
+      "mode": "cancellation",
+      "trigger": "shortcut",
+      "requestedCount": 3,
+      "currentOption": false,
+      "persistedOppositeOption": true,
+      "sentOption": false
+    },
+    {
+      "mode": "cancellation",
+      "trigger": "shortcut",
+      "requestedCount": 2,
+      "currentOption": true,
+      "persistedOppositeOption": false,
+      "sentOption": true
+    },
+    {
+      "mode": "cancellation",
+      "trigger": "shortcut",
+      "requestedCount": 3,
+      "currentOption": true,
+      "persistedOppositeOption": false,
+      "sentOption": true
+    },
+    {
+      "mode": "seats",
+      "trigger": "button",
+      "requestedCount": 2,
+      "currentOption": false,
+      "persistedOppositeOption": true,
+      "sentOption": false
+    },
+    {
+      "mode": "seats",
+      "trigger": "button",
+      "requestedCount": 3,
+      "currentOption": false,
+      "persistedOppositeOption": true,
+      "sentOption": false
+    },
+    {
+      "mode": "seats",
+      "trigger": "button",
+      "requestedCount": 2,
+      "currentOption": true,
+      "persistedOppositeOption": false,
+      "sentOption": true
+    },
+    {
+      "mode": "seats",
+      "trigger": "button",
+      "requestedCount": 3,
+      "currentOption": true,
+      "persistedOppositeOption": false,
+      "sentOption": true
+    },
+    {
+      "mode": "seats",
+      "trigger": "shortcut",
+      "requestedCount": 2,
+      "currentOption": false,
+      "persistedOppositeOption": true,
+      "sentOption": false
+    },
+    {
+      "mode": "seats",
+      "trigger": "shortcut",
+      "requestedCount": 3,
+      "currentOption": false,
+      "persistedOppositeOption": true,
+      "sentOption": false
+    },
+    {
+      "mode": "seats",
+      "trigger": "shortcut",
+      "requestedCount": 2,
+      "currentOption": true,
+      "persistedOppositeOption": false,
+      "sentOption": true
+    },
+    {
+      "mode": "seats",
+      "trigger": "shortcut",
+      "requestedCount": 3,
+      "currentOption": true,
+      "persistedOppositeOption": false,
+      "sentOption": true
+    }
+  ]
+}

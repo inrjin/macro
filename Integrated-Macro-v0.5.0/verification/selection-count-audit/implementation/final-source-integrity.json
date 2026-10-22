@@ -1,0 +1,54 @@
+{
+  "allMatch": true,
+  "files": [
+    {
+      "path": "crates/macro-core/src/selection_count.rs",
+      "sha256": "0fceaa4eda7e797ef72ed8fed6b5d0273e08c0942444ccd8254cf3ab31cc259d",
+      "matches": true,
+      "bytesMatch": true
+    },
+    {
+      "path": "crates/macro-core/src/selection_count_layout.rs",
+      "sha256": "386de039c740adc1c29de32b717783ac08f3bb02fd076235990850fb4976810d",
+      "matches": true,
+      "bytesMatch": true
+    },
+    {
+      "path": "crates/macro-core/src/selection_count_assets/templates.json",
+      "sha256": "52ce816c2e10dadeb681ac796da6af1689f4aacd00e6d2fc6e11484d51989cee",
+      "matches": true,
+      "bytesMatch": true
+    },
+    {
+      "path": "crates/macro-core/src/selection_count_assets/empty-negative.json",
+      "sha256": "eff7d4668bed09ccd7e8fba82b8fc052000ac3ed30e0d729f91e5cef79486a4c",
+      "matches": true,
+      "bytesMatch": true
+    },
+    {
+      "path": "crates/macro-core/tests/selection_count_completeness.rs",
+      "sha256": "42bab58c1e142acd528890fae21d9fcf2443b63ec3baf5cfb5ae4d08b9a1a2d5",
+      "matches": true,
+      "bytesMatch": true
+    },
+    {
+      "path": "verification/selection-count-audit/implementation/generate.swift",
+      "sha256": "5a2f9c381258aaf4f8ad5f259f84d10ac3a46c91f67312947b27aea93687d157",
+      "matches": true,
+      "bytesMatch": true
+    },
+    {
+      "path": "verification/selection-count-audit/implementation/generate-heading-supplement.swift",
+      "sha256": "ddc537fc49f34cbce43f190f89e69a9827a579e59228b5136ef9d9cf18ad92c1",
+      "matches": true,
+      "bytesMatch": true
+    },
+    {
+      "path": "verification/selection-count-audit/implementation/generate-empty-negative.swift",
+      "sha256": "509bb74569c4aa5e86de863dbd6403ff2318bc728423ab2c1f47948baf0271bd",
+      "matches": true,
+      "bytesMatch": true
+    }
+  ],
+  "scope": "Read-only confirmation of frozen production, test and generator files; no source changes"
+}

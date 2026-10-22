@@ -1,0 +1,42 @@
+{
+  "source": "User-pasted physical typing comparison, 2026-10-21; final summary line was truncated",
+  "probeSHA256": "4d9bb4b24c76ab930182ac436e5747093036194c39b95778d0bdc1c0759f3208",
+  "observerPID": 73574,
+  "browserPID": 19961,
+  "frontAppCGWindowIDs": [123013],
+  "environment": {
+    "accessibilityTrusted": true,
+    "listenEventAccess": true,
+    "postEventAccess": true,
+    "secureEventInput": false
+  },
+  "installed": {"globalMonitor": true, "sessionTap": true, "sessionTapEnabled": true},
+  "reportedSummary": {
+    "allKeyDownCallbacks": {"cg_session_tap": 10, "nsevent_global": 10},
+    "characterCandidateCallbacks": {"cg_session_tap": 9, "nsevent_global": 9},
+    "mainRunLoopHeartbeats": 20
+  },
+  "sharedCandidateFields": {"sourcePID": 0, "frontPID": 19961, "repeated": false, "modifiers": 256},
+  "channelFields": {
+    "cg_session_tap": {"recipientPID": 19961, "productionFilter": "accepted_before_target_check"},
+    "nsevent_global": {"recipientPID": 73574, "windowNumber": 0, "productionFilter": "recipient_mismatch", "secondCGReadRecipientPID": 73574}
+  },
+  "pairedEventTimestampNs": [
+    1260047721976375,
+    1260050929890291,
+    1260051989413666,
+    1260052940857416,
+    1260058896696250,
+    1260060410889583,
+    1260061350166458,
+    1260062232047500,
+    1260063070560625
+  ],
+  "conclusion": "All nine paired character callbacks reach both APIs. The legacy recipient/front-PID equality check rejects every NSEvent global-monitor sample because its recipient is the observing process.",
+  "limits": [
+    "Standalone process permissions do not establish the released app's permissions.",
+    "The probe reproduces the production filter decision, not the complete app runtime or CAPTCHA completion.",
+    "Window-list metadata was collected after callbacks; it is not event-time focus proof."
+  ],
+  "terminalPermissionsModifiedByAgent": false
+}

@@ -1,0 +1,9 @@
+[package]
+name="selection-count-zero-probe"
+version="0.0.0"
+edition="2021"
+[workspace]
+[dependencies]
+macro-core={path="../../../../crates/macro-core"}
+serde={version="1",features=["derive"]}
+serde_json="1"

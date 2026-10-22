@@ -1,0 +1,4022 @@
+{
+  "evidenceScope" : "Synthetic glyph\/layout fixtures. No live site or OCR performance guarantee.",
+  "fixtures" : [
+    {
+      "count" : 0,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/digit_0.rgba",
+      "group" : "digits",
+      "height" : 300,
+      "name" : "digit_0",
+      "note" : "Independent CoreText heading and numeral; not copied from reader masks.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "0",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 1,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/digit_1.rgba",
+      "group" : "digits",
+      "height" : 300,
+      "name" : "digit_1",
+      "note" : "Independent CoreText heading and numeral; not copied from reader masks.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "1",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 2,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/digit_2.rgba",
+      "group" : "digits",
+      "height" : 300,
+      "name" : "digit_2",
+      "note" : "Independent CoreText heading and numeral; not copied from reader masks.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 3,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/digit_3.rgba",
+      "group" : "digits",
+      "height" : 300,
+      "name" : "digit_3",
+      "note" : "Independent CoreText heading and numeral; not copied from reader masks.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 4,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/digit_4.rgba",
+      "group" : "digits",
+      "height" : 300,
+      "name" : "digit_4",
+      "note" : "Independent CoreText heading and numeral; not copied from reader masks.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "4",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 5,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/digit_5.rgba",
+      "group" : "digits",
+      "height" : 300,
+      "name" : "digit_5",
+      "note" : "Independent CoreText heading and numeral; not copied from reader masks.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "5",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 6,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/digit_6.rgba",
+      "group" : "digits",
+      "height" : 300,
+      "name" : "digit_6",
+      "note" : "Independent CoreText heading and numeral; not copied from reader masks.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "6",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 7,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/digit_7.rgba",
+      "group" : "digits",
+      "height" : 300,
+      "name" : "digit_7",
+      "note" : "Independent CoreText heading and numeral; not copied from reader masks.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "7",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 8,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/digit_8.rgba",
+      "group" : "digits",
+      "height" : 300,
+      "name" : "digit_8",
+      "note" : "Independent CoreText heading and numeral; not copied from reader masks.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "8",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 9,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/digit_9.rgba",
+      "group" : "digits",
+      "height" : 300,
+      "name" : "digit_9",
+      "note" : "Independent CoreText heading and numeral; not copied from reader masks.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "9",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 3,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/position_top_left.rgba",
+      "group" : "position",
+      "height" : 300,
+      "name" : "position_top_left",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 3,
+          "y" : 2
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 101.47200000000002,
+          "y" : 2
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 2,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/position_control_two_top_left.rgba",
+      "group" : "position",
+      "height" : 300,
+      "name" : "position_control_two_top_left",
+      "note" : "Digit2 is recognized at default position in initial prototype; separates digit failure from position failure.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 3,
+          "y" : 2
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 101.47200000000002,
+          "y" : 2
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 3,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/position_bottom_left.rgba",
+      "group" : "position",
+      "height" : 300,
+      "name" : "position_bottom_left",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 8,
+          "y" : 240
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 106.47200000000002,
+          "y" : 240
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 2,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/position_control_two_bottom_left.rgba",
+      "group" : "position",
+      "height" : 300,
+      "name" : "position_control_two_bottom_left",
+      "note" : "Digit2 is recognized at default position in initial prototype; separates digit failure from position failure.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 8,
+          "y" : 240
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 106.47200000000002,
+          "y" : 240
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 3,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/position_bottom_right.rgba",
+      "group" : "position",
+      "height" : 300,
+      "name" : "position_bottom_right",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 430,
+          "y" : 240
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 528.47199999999998,
+          "y" : 240
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 2,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/position_control_two_bottom_right.rgba",
+      "group" : "position",
+      "height" : 300,
+      "name" : "position_control_two_bottom_right",
+      "note" : "Digit2 is recognized at default position in initial prototype; separates digit failure from position failure.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 430,
+          "y" : 240
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 528.47199999999998,
+          "y" : 240
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 3,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/position_middle.rgba",
+      "group" : "position",
+      "height" : 300,
+      "name" : "position_middle",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 230,
+          "y" : 120
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 328.47200000000004,
+          "y" : 120
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 2,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/position_control_two_middle.rgba",
+      "group" : "position",
+      "height" : 300,
+      "name" : "position_control_two_middle",
+      "note" : "Digit2 is recognized at default position in initial prototype; separates digit failure from position failure.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 230,
+          "y" : 120
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 328.47200000000004,
+          "y" : 120
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 2,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/size_16.rgba",
+      "group" : "scale",
+      "height" : 300,
+      "name" : "size_16",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 59.567999999999998,
+          "ascent" : 14.400029182434082,
+          "descent" : 4.8000097274780273,
+          "fontSize" : 16,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 8.8984375,
+          "ascent" : 14.484375,
+          "descent" : 3.390625,
+          "fontSize" : 16,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 97.647999999999996,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 2,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/size_19.rgba",
+      "group" : "scale",
+      "height" : 300,
+      "name" : "size_19",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 70.736999999999995,
+          "ascent" : 17.100034654140472,
+          "descent" : 5.7000115513801575,
+          "fontSize" : 19,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 10.56689453125,
+          "ascent" : 17.2001953125,
+          "descent" : 4.0263671875,
+          "fontSize" : 19,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 109.95699999999999,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 2,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/size_24.rgba",
+      "group" : "scale",
+      "height" : 300,
+      "name" : "size_24",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 2,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/size_29.rgba",
+      "group" : "scale",
+      "height" : 300,
+      "name" : "size_29",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 107.96700000000001,
+          "ascent" : 26.100052893161774,
+          "descent" : 8.7000176310539246,
+          "fontSize" : 29,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 16.12841796875,
+          "ascent" : 26.2529296875,
+          "descent" : 6.1455078125,
+          "fontSize" : 29,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 150.98700000000002,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 2,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/size_36.rgba",
+      "group" : "scale",
+      "height" : 300,
+      "name" : "size_36",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 134.02799999999999,
+          "ascent" : 32.400065660476685,
+          "descent" : 10.800021886825562,
+          "fontSize" : 36,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 20.021484375,
+          "ascent" : 32.58984375,
+          "descent" : 7.62890625,
+          "fontSize" : 36,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 179.708,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 2,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/size_44.rgba",
+      "group" : "scale",
+      "height" : 300,
+      "name" : "size_44",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 163.81199999999998,
+          "ascent" : 39.600080251693726,
+          "descent" : 13.200026750564575,
+          "fontSize" : 44,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 24.470703125,
+          "ascent" : 39.83203125,
+          "descent" : 9.32421875,
+          "fontSize" : 44,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 212.53199999999998,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 1,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/font_neo_regular_1.rgba",
+      "group" : "font",
+      "height" : 300,
+      "name" : "font_neo_regular_1",
+      "note" : "Alternative-font safety coverage; recognition rate is reported separately.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "ArialMT",
+          "resolvedFont" : "ArialMT",
+          "value" : "1",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 2,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/font_neo_regular_2.rgba",
+      "group" : "font",
+      "height" : 300,
+      "name" : "font_neo_regular_2",
+      "note" : "Alternative-font safety coverage; recognition rate is reported separately.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "ArialMT",
+          "resolvedFont" : "ArialMT",
+          "value" : "2",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 3,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/font_neo_regular_3.rgba",
+      "group" : "font",
+      "height" : 300,
+      "name" : "font_neo_regular_3",
+      "note" : "Alternative-font safety coverage; recognition rate is reported separately.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "ArialMT",
+          "resolvedFont" : "ArialMT",
+          "value" : "3",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 4,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/font_neo_regular_4.rgba",
+      "group" : "font",
+      "height" : 300,
+      "name" : "font_neo_regular_4",
+      "note" : "Alternative-font safety coverage; recognition rate is reported separately.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "ArialMT",
+          "resolvedFont" : "ArialMT",
+          "value" : "4",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 8,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/font_neo_regular_8.rgba",
+      "group" : "font",
+      "height" : 300,
+      "name" : "font_neo_regular_8",
+      "note" : "Alternative-font safety coverage; recognition rate is reported separately.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "ArialMT",
+          "resolvedFont" : "ArialMT",
+          "value" : "8",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 1,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/font_neo_medium_1.rgba",
+      "group" : "font",
+      "height" : 300,
+      "name" : "font_neo_medium_1",
+      "note" : "Alternative-font safety coverage; recognition rate is reported separately.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Medium",
+          "resolvedFont" : "AppleSDGothicNeo-Medium",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.343999999999999,
+          "ascent" : 23.400146484375,
+          "descent" : 5.2078857421875,
+          "fontSize" : 24,
+          "requestedFont" : "HelveticaNeue-Medium",
+          "resolvedFont" : "HelveticaNeue-Medium",
+          "value" : "1",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 2,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/font_neo_medium_2.rgba",
+      "group" : "font",
+      "height" : 300,
+      "name" : "font_neo_medium_2",
+      "note" : "Alternative-font safety coverage; recognition rate is reported separately.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Medium",
+          "resolvedFont" : "AppleSDGothicNeo-Medium",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.343999999999999,
+          "ascent" : 23.400146484375,
+          "descent" : 5.2078857421875,
+          "fontSize" : 24,
+          "requestedFont" : "HelveticaNeue-Medium",
+          "resolvedFont" : "HelveticaNeue-Medium",
+          "value" : "2",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 3,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/font_neo_medium_3.rgba",
+      "group" : "font",
+      "height" : 300,
+      "name" : "font_neo_medium_3",
+      "note" : "Alternative-font safety coverage; recognition rate is reported separately.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Medium",
+          "resolvedFont" : "AppleSDGothicNeo-Medium",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.343999999999999,
+          "ascent" : 23.400146484375,
+          "descent" : 5.2078857421875,
+          "fontSize" : 24,
+          "requestedFont" : "HelveticaNeue-Medium",
+          "resolvedFont" : "HelveticaNeue-Medium",
+          "value" : "3",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 4,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/font_neo_medium_4.rgba",
+      "group" : "font",
+      "height" : 300,
+      "name" : "font_neo_medium_4",
+      "note" : "Alternative-font safety coverage; recognition rate is reported separately.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Medium",
+          "resolvedFont" : "AppleSDGothicNeo-Medium",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.343999999999999,
+          "ascent" : 23.400146484375,
+          "descent" : 5.2078857421875,
+          "fontSize" : 24,
+          "requestedFont" : "HelveticaNeue-Medium",
+          "resolvedFont" : "HelveticaNeue-Medium",
+          "value" : "4",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 8,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/font_neo_medium_8.rgba",
+      "group" : "font",
+      "height" : 300,
+      "name" : "font_neo_medium_8",
+      "note" : "Alternative-font safety coverage; recognition rate is reported separately.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Medium",
+          "resolvedFont" : "AppleSDGothicNeo-Medium",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.343999999999999,
+          "ascent" : 23.400146484375,
+          "descent" : 5.2078857421875,
+          "fontSize" : 24,
+          "requestedFont" : "HelveticaNeue-Medium",
+          "resolvedFont" : "HelveticaNeue-Medium",
+          "value" : "8",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 1,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/font_neo_semibold_1.rgba",
+      "group" : "font",
+      "height" : 300,
+      "name" : "font_neo_semibold_1",
+      "note" : "Alternative-font safety coverage; recognition rate is reported separately.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-SemiBold",
+          "resolvedFont" : "AppleSDGothicNeo-SemiBold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 18.48046875,
+          "descent" : 5.51953125,
+          "fontSize" : 24,
+          "requestedFont" : "Helvetica-Bold",
+          "resolvedFont" : "Helvetica-Bold",
+          "value" : "1",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 2,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/font_neo_semibold_2.rgba",
+      "group" : "font",
+      "height" : 300,
+      "name" : "font_neo_semibold_2",
+      "note" : "Alternative-font safety coverage; recognition rate is reported separately.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-SemiBold",
+          "resolvedFont" : "AppleSDGothicNeo-SemiBold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 18.48046875,
+          "descent" : 5.51953125,
+          "fontSize" : 24,
+          "requestedFont" : "Helvetica-Bold",
+          "resolvedFont" : "Helvetica-Bold",
+          "value" : "2",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 3,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/font_neo_semibold_3.rgba",
+      "group" : "font",
+      "height" : 300,
+      "name" : "font_neo_semibold_3",
+      "note" : "Alternative-font safety coverage; recognition rate is reported separately.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-SemiBold",
+          "resolvedFont" : "AppleSDGothicNeo-SemiBold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 18.48046875,
+          "descent" : 5.51953125,
+          "fontSize" : 24,
+          "requestedFont" : "Helvetica-Bold",
+          "resolvedFont" : "Helvetica-Bold",
+          "value" : "3",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 4,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/font_neo_semibold_4.rgba",
+      "group" : "font",
+      "height" : 300,
+      "name" : "font_neo_semibold_4",
+      "note" : "Alternative-font safety coverage; recognition rate is reported separately.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-SemiBold",
+          "resolvedFont" : "AppleSDGothicNeo-SemiBold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 18.48046875,
+          "descent" : 5.51953125,
+          "fontSize" : 24,
+          "requestedFont" : "Helvetica-Bold",
+          "resolvedFont" : "Helvetica-Bold",
+          "value" : "4",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 8,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/font_neo_semibold_8.rgba",
+      "group" : "font",
+      "height" : 300,
+      "name" : "font_neo_semibold_8",
+      "note" : "Alternative-font safety coverage; recognition rate is reported separately.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-SemiBold",
+          "resolvedFont" : "AppleSDGothicNeo-SemiBold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 18.48046875,
+          "descent" : 5.51953125,
+          "fontSize" : 24,
+          "requestedFont" : "Helvetica-Bold",
+          "resolvedFont" : "Helvetica-Bold",
+          "value" : "8",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 1,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/font_neo_heavy_1.rgba",
+      "group" : "font",
+      "height" : 300,
+      "name" : "font_neo_heavy_1",
+      "note" : "Alternative-font safety coverage; recognition rate is reported separately.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Heavy",
+          "resolvedFont" : "AppleSDGothicNeo-Heavy",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 16.800000000000001,
+          "ascent" : 24,
+          "descent" : 8.783935546875,
+          "fontSize" : 24,
+          "requestedFont" : "AvenirNext-Heavy",
+          "resolvedFont" : "AvenirNext-Heavy",
+          "value" : "1",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 2,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/font_neo_heavy_2.rgba",
+      "group" : "font",
+      "height" : 300,
+      "name" : "font_neo_heavy_2",
+      "note" : "Alternative-font safety coverage; recognition rate is reported separately.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Heavy",
+          "resolvedFont" : "AppleSDGothicNeo-Heavy",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 16.800000000000001,
+          "ascent" : 24,
+          "descent" : 8.783935546875,
+          "fontSize" : 24,
+          "requestedFont" : "AvenirNext-Heavy",
+          "resolvedFont" : "AvenirNext-Heavy",
+          "value" : "2",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 3,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/font_neo_heavy_3.rgba",
+      "group" : "font",
+      "height" : 300,
+      "name" : "font_neo_heavy_3",
+      "note" : "Alternative-font safety coverage; recognition rate is reported separately.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Heavy",
+          "resolvedFont" : "AppleSDGothicNeo-Heavy",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 16.800000000000001,
+          "ascent" : 24,
+          "descent" : 8.783935546875,
+          "fontSize" : 24,
+          "requestedFont" : "AvenirNext-Heavy",
+          "resolvedFont" : "AvenirNext-Heavy",
+          "value" : "3",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 4,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/font_neo_heavy_4.rgba",
+      "group" : "font",
+      "height" : 300,
+      "name" : "font_neo_heavy_4",
+      "note" : "Alternative-font safety coverage; recognition rate is reported separately.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Heavy",
+          "resolvedFont" : "AppleSDGothicNeo-Heavy",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 16.800000000000001,
+          "ascent" : 24,
+          "descent" : 8.783935546875,
+          "fontSize" : 24,
+          "requestedFont" : "AvenirNext-Heavy",
+          "resolvedFont" : "AvenirNext-Heavy",
+          "value" : "4",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 8,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/font_neo_heavy_8.rgba",
+      "group" : "font",
+      "height" : 300,
+      "name" : "font_neo_heavy_8",
+      "note" : "Alternative-font safety coverage; recognition rate is reported separately.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Heavy",
+          "resolvedFont" : "AppleSDGothicNeo-Heavy",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 16.800000000000001,
+          "ascent" : 24,
+          "descent" : 8.783935546875,
+          "fontSize" : 24,
+          "requestedFont" : "AvenirNext-Heavy",
+          "resolvedFont" : "AvenirNext-Heavy",
+          "value" : "8",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 1,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/font_apple_gothic_1.rgba",
+      "group" : "font",
+      "height" : 300,
+      "name" : "font_apple_gothic_1",
+      "note" : "Alternative-font safety coverage; recognition rate is reported separately.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 103.68000000000001,
+          "ascent" : 21.3841552734375,
+          "descent" : 7.7999267578125,
+          "fontSize" : 24,
+          "requestedFont" : "AppleGothic",
+          "resolvedFont" : "AppleGothic",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "1",
+          "x" : 144.80000000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 2,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/font_apple_gothic_2.rgba",
+      "group" : "font",
+      "height" : 300,
+      "name" : "font_apple_gothic_2",
+      "note" : "Alternative-font safety coverage; recognition rate is reported separately.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 103.68000000000001,
+          "ascent" : 21.3841552734375,
+          "descent" : 7.7999267578125,
+          "fontSize" : 24,
+          "requestedFont" : "AppleGothic",
+          "resolvedFont" : "AppleGothic",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 144.80000000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 3,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/font_apple_gothic_3.rgba",
+      "group" : "font",
+      "height" : 300,
+      "name" : "font_apple_gothic_3",
+      "note" : "Alternative-font safety coverage; recognition rate is reported separately.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 103.68000000000001,
+          "ascent" : 21.3841552734375,
+          "descent" : 7.7999267578125,
+          "fontSize" : 24,
+          "requestedFont" : "AppleGothic",
+          "resolvedFont" : "AppleGothic",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 144.80000000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 4,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/font_apple_gothic_4.rgba",
+      "group" : "font",
+      "height" : 300,
+      "name" : "font_apple_gothic_4",
+      "note" : "Alternative-font safety coverage; recognition rate is reported separately.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 103.68000000000001,
+          "ascent" : 21.3841552734375,
+          "descent" : 7.7999267578125,
+          "fontSize" : 24,
+          "requestedFont" : "AppleGothic",
+          "resolvedFont" : "AppleGothic",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "4",
+          "x" : 144.80000000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 8,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/font_apple_gothic_8.rgba",
+      "group" : "font",
+      "height" : 300,
+      "name" : "font_apple_gothic_8",
+      "note" : "Alternative-font safety coverage; recognition rate is reported separately.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 103.68000000000001,
+          "ascent" : 21.3841552734375,
+          "descent" : 7.7999267578125,
+          "fontSize" : 24,
+          "requestedFont" : "AppleGothic",
+          "resolvedFont" : "AppleGothic",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "8",
+          "x" : 144.80000000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 3,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/ink_darker_blue.rgba",
+      "group" : "ink",
+      "height" : 300,
+      "name" : "ink_darker_blue",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 3,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/ink_purple_blue.rgba",
+      "group" : "ink",
+      "height" : 300,
+      "name" : "ink_purple_blue",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 3,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/ink_dark_digit.rgba",
+      "group" : "ink",
+      "height" : 300,
+      "name" : "ink_dark_digit",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/explicit_empty.rgba",
+      "group" : "empty_unassociated",
+      "height" : 300,
+      "name" : "explicit_empty",
+      "note" : "Former positive reclassified by explicit stronger panel-evidence contract; bare heading+empty is insufficient.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 110,
+          "y" : 155
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/heading_without_number.rgba",
+      "group" : "absence",
+      "height" : 300,
+      "name" : "heading_without_number",
+      "note" : "No numeral is not zero.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/blank.rgba",
+      "group" : "absence",
+      "height" : 300,
+      "name" : "blank",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/number_without_heading.rgba",
+      "group" : "absence",
+      "height" : 300,
+      "name" : "number_without_heading",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 165,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/empty_without_heading.rgba",
+      "group" : "absence",
+      "height" : 300,
+      "name" : "empty_without_heading",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 226.24799999999999,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 70,
+          "y" : 130
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/lookalike_57.rgba",
+      "group" : "lookalike",
+      "height" : 300,
+      "name" : "lookalike_57",
+      "note" : "선택 완료",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 130.35200000000003,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/lookalike_58.rgba",
+      "group" : "lookalike",
+      "height" : 300,
+      "name" : "lookalike_58",
+      "note" : "좌석 선택",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "좌석 선택",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 130.35200000000003,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/lookalike_59.rgba",
+      "group" : "lookalike",
+      "height" : 300,
+      "name" : "lookalike_59",
+      "note" : "선택 좌",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 68.592000000000013,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 109.59200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/lookalike_60.rgba",
+      "group" : "lookalike",
+      "height" : 300,
+      "name" : "lookalike_60",
+      "note" : "전체삭제",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 83.040000000000006,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "전체삭제",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 124.04000000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 3,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/lookalike_61.rgba",
+      "group" : "lookalike",
+      "height" : 300,
+      "name" : "lookalike_61",
+      "note" : "선택 좌석수",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 110.11200000000002,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석수",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 151.11200000000002,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/timer_and_price.rgba",
+      "group" : "distractor",
+      "height" : 300,
+      "name" : "timer_and_price",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 137.18400000000003,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "좌석 선택 시간",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 48.03515625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "9:42",
+          "x" : 210,
+          "y" : 28
+        },
+        {
+          "advance" : 107.51390625000001,
+          "ascent" : 21.7265625,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "154,000원",
+          "x" : 32,
+          "y" : 140
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/completion_label.rgba",
+      "group" : "distractor",
+      "height" : 300,
+      "name" : "completion_label",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 32,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/compound_number_64.rgba",
+      "group" : "compound",
+      "height" : 300,
+      "name" : "compound_number_64",
+      "note" : "12",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 26.6953125,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "12",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/compound_number_65.rgba",
+      "group" : "compound",
+      "height" : 300,
+      "name" : "compound_number_65",
+      "note" : "23",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 26.6953125,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "23",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/compound_number_66.rgba",
+      "group" : "compound",
+      "height" : 300,
+      "name" : "compound_number_66",
+      "note" : "3:00",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 48.03515625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3:00",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 3,
+      "expectation" : "correct_or_unreadable",
+      "file" : "fixtures\/compound_number_67.rgba",
+      "group" : "compound",
+      "height" : 300,
+      "name" : "compound_number_67",
+      "note" : "3석",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 34.107656250000005,
+          "ascent" : 21.7265625,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3석",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/compound_number_68.rgba",
+      "group" : "compound",
+      "height" : 300,
+      "name" : "compound_number_68",
+      "note" : "3.5",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 33.36328125,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3.5",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/duplicate_3_3.rgba",
+      "group" : "duplicate",
+      "height" : 300,
+      "name" : "duplicate_3_3",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 28,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 126.47200000000002,
+          "y" : 28
+        },
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 330,
+          "y" : 170
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 428.47200000000004,
+          "y" : 170
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/duplicate_1_3.rgba",
+      "group" : "duplicate",
+      "height" : 300,
+      "name" : "duplicate_1_3",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 28,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "1",
+          "x" : 126.47200000000002,
+          "y" : 28
+        },
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 330,
+          "y" : 170
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 428.47200000000004,
+          "y" : 170
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/clipped_heading.rgba",
+      "group" : "clipping",
+      "height" : 300,
+      "name" : "clipped_heading",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : -35,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 88,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/clipped_digit.rgba",
+      "group" : "clipping",
+      "height" : 90,
+      "name" : "clipped_digit",
+      "note" : "",
+      "stride" : 576,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 40,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 138.47200000000004,
+          "y" : 28
+        }
+      ],
+      "width" : 144
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/transparent_pixels.rgba",
+      "group" : "opacity",
+      "height" : 300,
+      "name" : "transparent_pixels",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 130.47200000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/contradictory_empty_and_three.rgba",
+      "group" : "contradiction",
+      "height" : 300,
+      "name" : "contradictory_empty_and_three",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 130.47200000000001,
+          "y" : 28
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 110,
+          "y" : 155
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/contradictory_empty_and_two.rgba",
+      "group" : "contradiction",
+      "height" : 300,
+      "name" : "contradictory_empty_and_two",
+      "note" : "Same contradiction using a numeral already recognized by the initial reader.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 130.47200000000001,
+          "y" : 28
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 110,
+          "y" : 155
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 3,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/panel_with_list_and_timer.rgba",
+      "group" : "layout",
+      "height" : 300,
+      "name" : "panel_with_list_and_timer",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 330,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 428.47200000000004,
+          "y" : 28
+        },
+        {
+          "advance" : 117.93599999999999,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "211구역 A열 11번",
+          "x" : 330,
+          "y" : 90
+        },
+        {
+          "advance" : 123.66,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "211구역 D열 10번",
+          "x" : 330,
+          "y" : 145
+        },
+        {
+          "advance" : 121.24799999999999,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "211구역 F열 10번",
+          "x" : 330,
+          "y" : 200
+        },
+        {
+          "advance" : 102.88799999999998,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "좌석 선택 시간",
+          "x" : 20,
+          "y" : 25
+        },
+        {
+          "advance" : 36.0263671875,
+          "ascent" : 16.294921875,
+          "descent" : 3.814453125,
+          "fontSize" : 18,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "9:42",
+          "x" : 140,
+          "y" : 25
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 0,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/holdout_size_21_digit_0.rgba",
+      "group" : "holdout_scale",
+      "height" : 300,
+      "name" : "holdout_size_21_digit_0",
+      "note" : "Held-out size after first template expansion.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 78.183000000000021,
+          "ascent" : 18.900038301944733,
+          "descent" : 6.3000127673149109,
+          "fontSize" : 21,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 11.67919921875,
+          "ascent" : 19.0107421875,
+          "descent" : 4.4501953125,
+          "fontSize" : 21,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "0",
+          "x" : 118.16300000000003,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 1,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/holdout_size_21_digit_1.rgba",
+      "group" : "holdout_scale",
+      "height" : 300,
+      "name" : "holdout_size_21_digit_1",
+      "note" : "Held-out size after first template expansion.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 78.183000000000021,
+          "ascent" : 18.900038301944733,
+          "descent" : 6.3000127673149109,
+          "fontSize" : 21,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 11.67919921875,
+          "ascent" : 19.0107421875,
+          "descent" : 4.4501953125,
+          "fontSize" : 21,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "1",
+          "x" : 118.16300000000003,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 2,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/holdout_size_21_digit_2.rgba",
+      "group" : "holdout_scale",
+      "height" : 300,
+      "name" : "holdout_size_21_digit_2",
+      "note" : "Held-out size after first template expansion.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 78.183000000000021,
+          "ascent" : 18.900038301944733,
+          "descent" : 6.3000127673149109,
+          "fontSize" : 21,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 11.67919921875,
+          "ascent" : 19.0107421875,
+          "descent" : 4.4501953125,
+          "fontSize" : 21,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 118.16300000000003,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 3,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/holdout_size_21_digit_3.rgba",
+      "group" : "holdout_scale",
+      "height" : 300,
+      "name" : "holdout_size_21_digit_3",
+      "note" : "Held-out size after first template expansion.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 78.183000000000021,
+          "ascent" : 18.900038301944733,
+          "descent" : 6.3000127673149109,
+          "fontSize" : 21,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 11.67919921875,
+          "ascent" : 19.0107421875,
+          "descent" : 4.4501953125,
+          "fontSize" : 21,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 118.16300000000003,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 4,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/holdout_size_21_digit_4.rgba",
+      "group" : "holdout_scale",
+      "height" : 300,
+      "name" : "holdout_size_21_digit_4",
+      "note" : "Held-out size after first template expansion.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 78.183000000000021,
+          "ascent" : 18.900038301944733,
+          "descent" : 6.3000127673149109,
+          "fontSize" : 21,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 11.67919921875,
+          "ascent" : 19.0107421875,
+          "descent" : 4.4501953125,
+          "fontSize" : 21,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "4",
+          "x" : 118.16300000000003,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 0,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/holdout_size_27_digit_0.rgba",
+      "group" : "holdout_scale",
+      "height" : 300,
+      "name" : "holdout_size_27_digit_0",
+      "note" : "Held-out size after first template expansion.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 100.521,
+          "ascent" : 24.300049245357513,
+          "descent" : 8.1000164151191711,
+          "fontSize" : 27,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 15.01611328125,
+          "ascent" : 24.4423828125,
+          "descent" : 5.7216796875,
+          "fontSize" : 27,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "0",
+          "x" : 142.78100000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 1,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/holdout_size_27_digit_1.rgba",
+      "group" : "holdout_scale",
+      "height" : 300,
+      "name" : "holdout_size_27_digit_1",
+      "note" : "Held-out size after first template expansion.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 100.521,
+          "ascent" : 24.300049245357513,
+          "descent" : 8.1000164151191711,
+          "fontSize" : 27,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 15.01611328125,
+          "ascent" : 24.4423828125,
+          "descent" : 5.7216796875,
+          "fontSize" : 27,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "1",
+          "x" : 142.78100000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 2,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/holdout_size_27_digit_2.rgba",
+      "group" : "holdout_scale",
+      "height" : 300,
+      "name" : "holdout_size_27_digit_2",
+      "note" : "Held-out size after first template expansion.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 100.521,
+          "ascent" : 24.300049245357513,
+          "descent" : 8.1000164151191711,
+          "fontSize" : 27,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 15.01611328125,
+          "ascent" : 24.4423828125,
+          "descent" : 5.7216796875,
+          "fontSize" : 27,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 142.78100000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 3,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/holdout_size_27_digit_3.rgba",
+      "group" : "holdout_scale",
+      "height" : 300,
+      "name" : "holdout_size_27_digit_3",
+      "note" : "Held-out size after first template expansion.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 100.521,
+          "ascent" : 24.300049245357513,
+          "descent" : 8.1000164151191711,
+          "fontSize" : 27,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 15.01611328125,
+          "ascent" : 24.4423828125,
+          "descent" : 5.7216796875,
+          "fontSize" : 27,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 142.78100000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 4,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/holdout_size_27_digit_4.rgba",
+      "group" : "holdout_scale",
+      "height" : 300,
+      "name" : "holdout_size_27_digit_4",
+      "note" : "Held-out size after first template expansion.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 100.521,
+          "ascent" : 24.300049245357513,
+          "descent" : 8.1000164151191711,
+          "fontSize" : 27,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 15.01611328125,
+          "ascent" : 24.4423828125,
+          "descent" : 5.7216796875,
+          "fontSize" : 27,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "4",
+          "x" : 142.78100000000001,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 0,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/holdout_size_35_digit_0.rgba",
+      "group" : "holdout_scale",
+      "height" : 300,
+      "name" : "holdout_size_35_digit_0",
+      "note" : "Held-out size after first template expansion.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 130.30500000000001,
+          "ascent" : 31.500063836574558,
+          "descent" : 10.500021278858187,
+          "fontSize" : 35,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 19.46533203125,
+          "ascent" : 31.6845703125,
+          "descent" : 7.4169921875,
+          "fontSize" : 35,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "0",
+          "x" : 175.60500000000002,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 1,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/holdout_size_35_digit_1.rgba",
+      "group" : "holdout_scale",
+      "height" : 300,
+      "name" : "holdout_size_35_digit_1",
+      "note" : "Held-out size after first template expansion.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 130.30500000000001,
+          "ascent" : 31.500063836574558,
+          "descent" : 10.500021278858187,
+          "fontSize" : 35,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 19.46533203125,
+          "ascent" : 31.6845703125,
+          "descent" : 7.4169921875,
+          "fontSize" : 35,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "1",
+          "x" : 175.60500000000002,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 2,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/holdout_size_35_digit_2.rgba",
+      "group" : "holdout_scale",
+      "height" : 300,
+      "name" : "holdout_size_35_digit_2",
+      "note" : "Held-out size after first template expansion.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 130.30500000000001,
+          "ascent" : 31.500063836574558,
+          "descent" : 10.500021278858187,
+          "fontSize" : 35,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 19.46533203125,
+          "ascent" : 31.6845703125,
+          "descent" : 7.4169921875,
+          "fontSize" : 35,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 175.60500000000002,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 3,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/holdout_size_35_digit_3.rgba",
+      "group" : "holdout_scale",
+      "height" : 300,
+      "name" : "holdout_size_35_digit_3",
+      "note" : "Held-out size after first template expansion.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 130.30500000000001,
+          "ascent" : 31.500063836574558,
+          "descent" : 10.500021278858187,
+          "fontSize" : 35,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 19.46533203125,
+          "ascent" : 31.6845703125,
+          "descent" : 7.4169921875,
+          "fontSize" : 35,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 175.60500000000002,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 4,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/holdout_size_35_digit_4.rgba",
+      "group" : "holdout_scale",
+      "height" : 300,
+      "name" : "holdout_size_35_digit_4",
+      "note" : "Held-out size after first template expansion.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 130.30500000000001,
+          "ascent" : 31.500063836574558,
+          "descent" : 10.500021278858187,
+          "fontSize" : 35,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 19.46533203125,
+          "ascent" : 31.6845703125,
+          "descent" : 7.4169921875,
+          "fontSize" : 35,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "4",
+          "x" : 175.60500000000002,
+          "y" : 28
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 2,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/holdout_fractional_digit_2.rgba",
+      "group" : "holdout_raster",
+      "height" : 300,
+      "name" : "holdout_fractional_digit_2",
+      "note" : "Subpixel origin changes antialiasing without changing the string.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32.5,
+          "y" : 28.5
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 130.97200000000001,
+          "y" : 28.5
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 3,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/holdout_fractional_digit_3.rgba",
+      "group" : "holdout_raster",
+      "height" : 300,
+      "name" : "holdout_fractional_digit_3",
+      "note" : "Subpixel origin changes antialiasing without changing the string.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32.5,
+          "y" : 28.5
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 130.97200000000001,
+          "y" : 28.5
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/explicit_empty_dark_control.rgba",
+      "group" : "empty_unassociated",
+      "height" : 300,
+      "name" : "explicit_empty_dark_control",
+      "note" : "Former dark positive reclassified by stronger panel-evidence contract; retained as negative.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 226.07999999999998,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Medium",
+          "resolvedFont" : "AppleSDGothicNeo-Medium",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 110,
+          "y" : 155
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/unrelated_empty_with_wrapped_count_three.rgba",
+      "group" : "association",
+      "height" : 300,
+      "name" : "unrelated_empty_with_wrapped_count_three",
+      "note" : "Unsupported wrapped count with actual rows in one panel and unrelated empty text in another must not become zero.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "3",
+          "x" : 32,
+          "y" : 70
+        },
+        {
+          "advance" : 117.93599999999999,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "211구역 A열 11번",
+          "x" : 32,
+          "y" : 110
+        },
+        {
+          "advance" : 123.66,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "211구역 D열 10번",
+          "x" : 32,
+          "y" : 145
+        },
+        {
+          "advance" : 121.24799999999999,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "211구역 F열 10번",
+          "x" : 32,
+          "y" : 180
+        },
+        {
+          "advance" : 226.07999999999998,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Medium",
+          "resolvedFont" : "AppleSDGothicNeo-Medium",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 330,
+          "y" : 190
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 0,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/panel_empty_right_disabled.rgba",
+      "group" : "panel_empty",
+      "height" : 300,
+      "name" : "panel_empty_right_disabled",
+      "note" : "Declared same-panel heading, explicit-empty and completion-button layout; no absolute viewport quadrant assumption.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 280,
+          "y" : 25
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 130
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 406.49299999999999,
+          "y" : 245.19997811317444
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 0,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/panel_empty_left_disabled.rgba",
+      "group" : "panel_empty",
+      "height" : 300,
+      "name" : "panel_empty_left_disabled",
+      "note" : "Declared same-panel heading, explicit-empty and completion-button layout; no absolute viewport quadrant assumption.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 40,
+          "y" : 25
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 70,
+          "y" : 130
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 166.49299999999999,
+          "y" : 245.19997811317444
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 0,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/panel_empty_right_enabled.rgba",
+      "group" : "panel_empty",
+      "height" : 300,
+      "name" : "panel_empty_right_enabled",
+      "note" : "Declared same-panel heading, explicit-empty and completion-button layout; no absolute viewport quadrant assumption.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 280,
+          "y" : 25
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 130
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 406.49299999999999,
+          "y" : 245.19997811317444
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 0,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/panel_empty_left_viewport_edge.rgba",
+      "group" : "panel_empty",
+      "height" : 300,
+      "name" : "panel_empty_left_viewport_edge",
+      "note" : "Declared same-panel heading, explicit-empty and completion-button layout; no absolute viewport quadrant assumption.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 20,
+          "y" : 25
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 50,
+          "y" : 130
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 146.49299999999999,
+          "y" : 245.19997811317444
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/panel_empty_no_button.rgba",
+      "group" : "panel_empty_negative",
+      "height" : 300,
+      "name" : "panel_empty_no_button",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 280,
+          "y" : 25
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 130
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/panel_empty_wrong_button.rgba",
+      "group" : "panel_empty_negative",
+      "height" : 300,
+      "name" : "panel_empty_wrong_button",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 280,
+          "y" : 25
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 130
+        },
+        {
+          "advance" : 62.279999999999994,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "돌아가기",
+          "x" : 408.86000000000001,
+          "y" : 245.19997811317444
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/panel_empty_with_rows.rgba",
+      "group" : "panel_empty_negative",
+      "height" : 300,
+      "name" : "panel_empty_with_rows",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 280,
+          "y" : 25
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 130
+        },
+        {
+          "advance" : 117.93599999999999,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "211구역 A열 11번",
+          "x" : 280,
+          "y" : 80
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 406.49299999999999,
+          "y" : 245.19997811317444
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/panel_empty_with_count_two.rgba",
+      "group" : "panel_empty_negative",
+      "height" : 300,
+      "name" : "panel_empty_with_count_two",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 280,
+          "y" : 25
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 378.47200000000004,
+          "y" : 25
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 310,
+          "y" : 130
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 406.49299999999999,
+          "y" : 245.19997811317444
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/two_panels_shared_footer.rgba",
+      "group" : "panel_empty_negative",
+      "height" : 300,
+      "name" : "two_panels_shared_footer",
+      "note" : "",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 30,
+          "y" : 25
+        },
+        {
+          "advance" : 206.84399999999999,
+          "ascent" : 19.800040125846863,
+          "descent" : 6.6000133752822876,
+          "fontSize" : 22,
+          "requestedFont" : "AppleSDGothicNeo-Regular",
+          "resolvedFont" : "AppleSDGothicNeo-Regular",
+          "value" : "선택된 좌석이 없습니다.",
+          "x" : 350,
+          "y" : 120
+        },
+        {
+          "advance" : 67.013999999999996,
+          "ascent" : 16.200032830238342,
+          "descent" : 5.4000109434127808,
+          "fontSize" : 18,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 완료",
+          "x" : 286.49299999999999,
+          "y" : 250.19997811317444
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 2,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/count_two_timer_9_42.rgba",
+      "group" : "temporal_control",
+      "height" : 300,
+      "name" : "count_two_timer_9_42",
+      "note" : "Only the unrelated timer changes between this pair; the selected count remains2.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 130.47200000000001,
+          "y" : 28
+        },
+        {
+          "advance" : 36.0263671875,
+          "ascent" : 16.294921875,
+          "descent" : 3.814453125,
+          "fontSize" : 18,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "9:42",
+          "x" : 420,
+          "y" : 200
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "count" : 2,
+      "expectation" : "confirmed",
+      "file" : "fixtures\/count_two_timer_9_41.rgba",
+      "group" : "temporal_control",
+      "height" : 300,
+      "name" : "count_two_timer_9_41",
+      "note" : "Only the unrelated timer changes between this pair; the selected count remains2.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 130.47200000000001,
+          "y" : 28
+        },
+        {
+          "advance" : 36.0263671875,
+          "ascent" : 16.294921875,
+          "descent" : 3.814453125,
+          "fontSize" : 18,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "9:41",
+          "x" : 420,
+          "y" : 200
+        }
+      ],
+      "width" : 640
+    },
+    {
+      "expectation" : "unreadable",
+      "file" : "fixtures\/count_two_second_heading_outside_band.rgba",
+      "group" : "temporal_negative",
+      "height" : 300,
+      "name" : "count_two_second_heading_outside_band",
+      "note" : "A second source appears outside the first numeric evidence band; the original band remains byte-identical.",
+      "stride" : 2560,
+      "text" : [
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 32,
+          "y" : 28
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 130.47200000000001,
+          "y" : 28
+        },
+        {
+          "advance" : 89.352000000000018,
+          "ascent" : 21.600043773651123,
+          "descent" : 7.200014591217041,
+          "fontSize" : 24,
+          "requestedFont" : "AppleSDGothicNeo-Bold",
+          "resolvedFont" : "AppleSDGothicNeo-Bold",
+          "value" : "선택 좌석",
+          "x" : 330,
+          "y" : 170
+        },
+        {
+          "advance" : 13.34765625,
+          "ascent" : 21.7265625,
+          "descent" : 5.0859375,
+          "fontSize" : 24,
+          "requestedFont" : "Arial-BoldMT",
+          "resolvedFont" : "Arial-BoldMT",
+          "value" : "2",
+          "x" : 428.47200000000004,
+          "y" : 170
+        }
+      ],
+      "width" : 640
+    }
+  ],
+  "generator" : "CoreText independent text renderer",
+  "pixelFormat" : "RGBA8, top-to-bottom, opaque unless fixture explicitly tests alpha"
+}

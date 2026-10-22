@@ -1,0 +1,14 @@
+{
+  "source": "/Users/inrjin/Documents/\u6a5f\u68b0\u4eba\u9593/Integrated-Macro-v0.5.0/crates/macro-platform/src/lib.rs",
+  "sourceSHA256": "3849134a0a47f09773003ad90b0c77eee98233e60deada4b5f142b7439147e55",
+  "copiedMethods": [
+    "NativeAdapter::click",
+    "NativeAdapter::key"
+  ],
+  "mocked": [
+    "window validation barrier",
+    "OS input counters"
+  ],
+  "realOSInput": false,
+  "exitCode": 0
+}

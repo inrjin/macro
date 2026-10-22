@@ -1,0 +1,25 @@
+{
+  "sourceStable": true,
+  "checks": {
+    "desktop": {
+      "passed": 129,
+      "failed": 0,
+      "ignoredTiming": 1
+    },
+    "independentCore": {
+      "passed": 25,
+      "failed": 0
+    }
+  },
+  "artifacts": {
+    "README.md": "27d9f6a8f59a0b4268402ee7597c55d015c785ca7d26a0a11a4207fd49f5aa26",
+    "source-before.json": "d52db062a1457f5fcaeb0b3fd6ad40168b3443c0c0dc89905cf72456724820a5",
+    "source-final.json": "eaa7e04465f18477adc7cf41861d87dca6da7af9a48be3f7c29d6224100ee4ff",
+    "implementation.diff": "6e69d513f5c92abbe0e963de1dd7f3d9f960cdc962ccccb7ba8006e983fbc91c",
+    "desktop-final.log": "a760a08f9dd35b86b7fac15e9c06f15c1bf1022272d4da35733f992781bdd1fd"
+  },
+  "limitations": [
+    "No live Worker/native OS input/site execution",
+    "Parent owns full workspace/native/build/release checks"
+  ]
+}

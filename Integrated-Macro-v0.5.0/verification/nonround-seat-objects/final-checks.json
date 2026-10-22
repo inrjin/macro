@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-21",
+  "status": "Source implementation and bounded regression review complete; no distribution build or live-site readiness claim",
+  "sources": {
+    "count": 127,
+    "before": "source-before-final-test.json",
+    "after": "source-final.json",
+    "sha256": "2b6d772689b38a94a6fcd5c777f0c6854bacaf415f0bbde49555839fead1c49e",
+    "unchanged_during_final_tests": true
+  },
+  "javascript_sources": {
+    "count": 54,
+    "manifest": "javascript-tested-source.json",
+    "sha256": "120b78d1a8c0e2ab7afd4fdade4a1914047140e7e8b2f51f2fa569d04beeb94e",
+    "unchanged_during_final_tests": true
+  },
+  "reviews": {
+    "implementation": {
+      "manifest": "verification/nonround-seat-objects/implementation/source-final.json",
+      "sha256": "90f11e0cf45f7d4554d8e130f14932ba9241b51bd93610b908f41e33cc4da57e",
+      "reviewed_files_match": true
+    },
+    "independent": {
+      "manifest": "verification/nonround-seat-objects/independent/source-reviewed.json",
+      "sha256": "029efc7ade89355f848e82ddfd03f8077d5ed6d89e888978ac9801d45bcf68e2",
+      "reviewed_files_match": true
+    },
+    "adversarial": {
+      "manifest": "verification/nonround-seat-objects/adversarial/summary.json",
+      "sha256": "661a14c8e12ce4754f68d33b4edc1749a7e9df218fe040078f7ecc7484adf5bb",
+      "reviewed_files_match": true
+    }
+  },
+  "tests": [
+    {
+      "command": "cargo test --workspace --offline --locked",
+      "exit_code": 0,
+      "passed": 400,
+      "failed": 0,
+      "ignored": 4,
+      "log": "workspace-final.log",
+      "sha256": "dfc39393e47a7c8928b08323e01d665987d5b56cb594ddaab4b27d6b09a4ee6e"
+    },
+    {
+      "command": "npm test",
+      "exit_code": 0,
+      "passed": 150,
+      "failed": 0,
+      "log": "javascript-final.log",
+      "sha256": "9025806415d1fa28ed871afeacfbce60ef5296a10b904d7f87798f2e930ed11c"
+    },
+    {
+      "command": "cargo test -p macro-core --offline --locked --release --test seat_objects manual_provided_screenshot_detects_available_full_objects -- --ignored --nocapture --test-threads=1",
+      "exit_code": 0,
+      "passed": 1,
+      "failed": 0,
+      "log": "provided-image-final.log",
+      "sha256": "bebdf1e6e7db4edb78fff6865babe8b59ad7e3bf6a97e2e0edc57b30c2488b09",
+      "image_kind": "Previously provided round-seat image; raw image not copied to repository",
+      "raw_rgba_sha256": "47acfc57c6d057ee17623192ff80bf8f70f7c86b6740700e08f3408fa5fa0389",
+      "available_detected": 2,
+      "selected_marked_objects_excluded": 3
+    },
+    {
+      "command": "cargo test -p macro-core --offline --locked --release --test seat_object_nonround_review performance_ -- --ignored --nocapture --test-threads=1",
+      "passed": 2,
+      "failed": 0,
+      "log": "adversarial/final-performance.log",
+      "sha256": "05c531a1e875ed7e6c56b2ea982c08db12f5209bb92c12e090de6689d88b3cb9",
+      "source_relation": "Before final two-line module comment correction; executable source bytes unchanged, recorded in adversarial/comment-only-followup.json"
+    }
+  ],
+  "remaining_ignored": "Existing unrelated selection_count_runtime_tests::count_evidence_hash_cost manual benchmark not rerun",
+  "performance_scope": "Optimized static synthetic images, no capture/Worker/native click/site response timing; no latency guarantee",
+  "preservation": {
+    "manifest": "preservation-final.json",
+    "sha256": "a6d9e7bf7bb9014a87d3eb29925c2028cda676199e4d84c42c45e2334b7990e2",
+    "all_unchanged": true
+  },
+  "report": {
+    "path": "README.md",
+    "sha256": "c87c993c4cdfc507abad0f409cb29c6f33003f6df7b2de4cd35e45908af40d57"
+  },
+  "not_executed": [
+    "distribution build",
+    "app launch",
+    "native input",
+    "live ticket site",
+    "Windows runtime",
+    "real non-round concert screenshot"
+  ],
+  "remaining_limits": [
+    "Identical pixels do not establish site hit-target semantics",
+    "Repeated complete individual silhouettes and visible boundaries required",
+    "Ambiguous marks or broad merges can be held, limiting progress",
+    "Capture-to-input changes remain possible",
+    "Count verification is independent and optimistic count-OFF behavior is unchanged"
+  ]
+}

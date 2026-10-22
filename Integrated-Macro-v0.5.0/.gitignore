@@ -1,0 +1,9 @@
+target/
+node_modules/
+.build-tools/
+.DS_Store
+src-tauri/gen/
+verification/local-*/
+*.log
+verification/npm-cache/
+

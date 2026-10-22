@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-10-20T18:00:48.694497+00:00",
+  "version": "0.5.4",
+  "architecture": "arm64",
+  "minimumOS": "13.0",
+  "sourceManifestSHA256": "f4cc2f607a53c9d66b8538d3a1159a11a8e234d51bb15186d9ca9f958c6e057b",
+  "executableSHA256": "ede3953e5b80b4e6b2e203e0df023d780ee0b4c3e60c7f8862779e75960aa8b3",
+  "appFilesSHA256": {
+    "Contents/Info.plist": "c43a6e11e0ad5af34b0adbdffd2dd06a3da3b0ce7b9dc800e898f640ed0b23b8",
+    "Contents/MacOS/integrated-macro": "ede3953e5b80b4e6b2e203e0df023d780ee0b4c3e60c7f8862779e75960aa8b3",
+    "Contents/Resources/icon.icns": "be80f1eb77b66015d3119b9d8483fae0c3684f3169793b93a5372d505b827a7c",
+    "Contents/_CodeSignature/CodeResources": "8b2a4458d8753f7d50800825612316fdb422f2d68b7ce3f7a1728de045d089ac"
+  },
+  "javascriptTests": 97,
+  "rustTests": 144,
+  "codesignVerify": "passed",
+  "unverified": [
+    "Actual macOS input/capture/overlay",
+    "Actual Windows input/capture/overlay",
+    "Authenticated NOL booking flow",
+    "Browser transport and site contracts",
+    "End-to-end latency"
+  ]
+}

@@ -1,0 +1,1 @@
+{"baselineCount":2,"evidence":{"height":52.0,"width":161.0,"x":28.0,"y":18.0},"evidenceBytesIdentical":true,"laterRead":"Unreadable","scope":"actual reader + byte equality; not Worker/native input execution","wholeFrameIdentical":false}

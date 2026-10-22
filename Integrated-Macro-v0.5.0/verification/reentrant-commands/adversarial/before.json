@@ -1,0 +1,9 @@
+{
+  "ui/app.js": "6967ab904094f0133d88f94ba5cd50287a8534fafabde7ddb24a97364ca63d0c",
+  "ui/model.js": "96b92eb157fae250a3db4c47f07b35e23916fe982ae2ced01e23039f063e301f",
+  "ui/index.html": "be0384a7a3d110dadb92b89cd690a35d4c026dbd46c20ec005c77d9211b2debf",
+  "src-tauri/src/runtime.rs": "c59fe1d370a2210cdfdc337c6a8ffde6cc83eecc588707194ea63f202c2b3ff4",
+  "src-tauri/src/main.rs": "5e0a5b19272003d6b2a880c6b8062210f93c05d1004aca1bd13f7110019a3b44",
+  "crates/macro-core/src/engine.rs": "d893b89bd3f221bade56108df22f1a02eff5e3bfa963e46bc19d38e67367a0bf",
+  "crates/macro-core/src/model.rs": "3869b494fa627ecff5a202c26b21d8c4aa1cc99f32c18b2e5ed349d037b284e0"
+}

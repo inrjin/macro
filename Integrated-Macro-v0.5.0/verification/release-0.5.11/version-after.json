@@ -1,0 +1,11 @@
+{
+  "package.json": "ed35d13f9849fbb50edae7396383eb307fbe86e8f9818c854d473d059733f59f",
+  "package-lock.json": "d876985643f4533d72c889acbea113b08e44740a2ea1489e2d7827dad7ac1796",
+  "Cargo.toml": "a47cc6293efa6607e0ca386d3fd832925046c35bb68784d512be61a11798d3cc",
+  "Cargo.lock": "317f44d411366e06daa178f78c6b71210f2e5c9dcf3374990cba701edf6cfb5b",
+  "crates/macro-core/Cargo.toml": "53272b4ae1c89cf8a27e0f2c410ea9401d54a38ac8a5d586ae72495aae46ca98",
+  "crates/macro-platform/Cargo.toml": "6ca761e22daac76cd9780739b559ddf5096c0acfe97121759e00cba5f6cdbbce",
+  "src-tauri/tauri.conf.json": "e1d45b5c7b6d0e43128b807702db3a603fef5334333b72130f5a112da258ae7c",
+  "ui/package.json": "a83b7d91c7e2a7153a6422646d201c8d798e86c93b465f4b289ab493d6bb88ab",
+  "ui/index.html": "78c628b56446618833e52cf3450aac5cb5b3a43974ea948df343dbceb1c24a8f"
+}

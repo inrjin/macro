@@ -1,0 +1,17 @@
+   Compiling integrated-macro v0.5.8 (/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0/src-tauri)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.16s
+     Running unittests src/main.rs (target/debug/deps/integrated_macro-b7da2ffd8ed18f1e)
+
+running 4 tests
+test runtime::priority_p7_pixel_tests::p7_only_image_candidate_actions_select_centered_input_and_selected_color_uses_that_pixel ... ok
+test runtime::priority_p7_pixel_tests::p7_candidate_mapping_bounds_scales_negative_origins_and_fractional_compatibility ... ok
+{"case":"windows_existing_integer_index_contract","doubleCenteredNormalization":992,"existingNormalization":984,"nativePixelIndex":61.0,"samplePixelCenter":61.5,"windowsOsExecuted":false}
+test runtime::priority_p7_pixel_tests::p7_windows_input_keeps_integer_indices_and_avoids_double_centering ... ok
+{"centerRoundTrip":[61,5],"pixelIndex":[61,5],"rawRoundTrip":[61,5],"scale":1.0}
+{"centerRoundTrip":[61,5],"pixelIndex":[61,5],"rawRoundTrip":[61,5],"scale":2.0}
+{"centerRoundTrip":[61,5],"pixelIndex":[61,5],"rawRoundTrip":[60,5],"scale":1.75}
+{"centerRoundTrip":[61,5],"pixelIndex":[61,5],"rawRoundTrip":[61,5],"scale":1.3}
+test runtime::priority_p7_pixel_tests::p7_extracted_candidate_checks_the_same_physical_pixel_at_fractional_scale ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 86 filtered out; finished in 0.00s
+

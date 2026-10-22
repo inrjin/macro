@@ -1,0 +1,9 @@
+{
+  "version": "0.5.1",
+  "architecture": "arm64",
+  "sourceDirectory": "/Users/inrjin/Documents/機械人間/Integrated-Macro-v0.5.0",
+  "buildVerification": "local-checks.json",
+  "executableSha256": "8837a0406dbf5b5f17d4150d44ff3d796d0213c164803078d4aa458e9df820df",
+  "realMacInputVerified": false,
+  "windowsBuildVerified": false
+}

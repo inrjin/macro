@@ -1,0 +1,64 @@
+{
+  "manifest_version": 3,
+  "name": "NOL 예매 시작 도우미",
+  "version": "0.2.0",
+  "description": "Mac/Windows 브라우저 예매 보조: 버튼 감지, 확인된 좌석 경합 재시도, 선택적 후속 클릭",
+  "minimum_chrome_version": "120",
+  "permissions": [
+    "storage",
+    "tabs",
+    "debugger",
+    "nativeMessaging",
+    "alarms",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "https://nol.yanolja.com/*",
+    "https://tickets.interpark.com/*",
+    "https://ticket.interpark.com/*",
+    "https://poticket.interpark.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://nol.yanolja.com/*",
+        "https://tickets.interpark.com/*",
+        "https://ticket.interpark.com/*",
+        "https://poticket.interpark.com/*"
+      ],
+      "js": [
+        "dom.js",
+        "content.js",
+        "seat-content.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "file:///*/rehearsal-competition.html"
+      ],
+      "js": [
+        "dom.js",
+        "seat-content.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "commands": {
+    "stop": {
+      "suggested_key": {
+        "default": "Alt+Shift+S"
+      },
+      "description": "브라우저 대기와 좌석 작업 중지"
+    }
+  }
+}

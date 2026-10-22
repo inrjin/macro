@@ -1,0 +1,12 @@
+{
+  "byteIdentical": true,
+  "templateCount": 78,
+  "labels": [
+    "empty_negative"
+  ],
+  "bytes": 594710,
+  "sha256": "eff7d4668bed09ccd7e8fba82b8fc052000ac3ed30e0d729f91e5cef79486a4c",
+  "generator": "generate-empty-negative.swift",
+  "recreatedPath": "/private/tmp/selection-count-empty-negative-recreated.json",
+  "scope": "Audit-only Swift generator, no fixture bitmap imports; production zero bank unchanged"
+}

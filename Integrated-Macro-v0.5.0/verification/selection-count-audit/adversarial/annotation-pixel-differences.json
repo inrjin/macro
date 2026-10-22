@@ -1,0 +1,4823 @@
+[
+  {
+    "case": "zero_tiny_6_x386",
+    "headingChangedPixels": 12,
+    "changedPureBackgroundPixels": 5,
+    "changedOutsideOriginalBox": 10,
+    "changes": [
+      {
+        "x": 386,
+        "y": 37,
+        "before": [
+          45,
+          45,
+          45
+        ],
+        "after": [
+          46,
+          46,
+          49
+        ],
+        "outsideOriginalRecognizedBox": false,
+        "beforePureBackground": false
+      },
+      {
+        "x": 387,
+        "y": 37,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          149,
+          158,
+          251
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          196,
+          201,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 386,
+        "y": 38,
+        "before": [
+          45,
+          45,
+          45
+        ],
+        "after": [
+          70,
+          77,
+          147
+        ],
+        "outsideOriginalRecognizedBox": false,
+        "beforePureBackground": false
+      },
+      {
+        "x": 387,
+        "y": 38,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          124,
+          136,
+          253
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          189,
+          195,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 39,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          168,
+          176,
+          250
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          189,
+          195,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 40,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          168,
+          176,
+          250
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          189,
+          195,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 41,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          207,
+          210,
+          247
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          222,
+          225,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      }
+    ]
+  },
+  {
+    "case": "zero_tiny_6_x387",
+    "headingChangedPixels": 12,
+    "changedPureBackgroundPixels": 10,
+    "changedOutsideOriginalBox": 12,
+    "changes": [
+      {
+        "x": 387,
+        "y": 37,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          242,
+          242,
+          245
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          153,
+          162,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          196,
+          201,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 38,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          172,
+          179,
+          249
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          126,
+          138,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          189,
+          195,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          173,
+          181,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          189,
+          195,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          173,
+          181,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          189,
+          195,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          214,
+          218,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          222,
+          225,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      }
+    ]
+  },
+  {
+    "case": "zero_tiny_6_x388",
+    "headingChangedPixels": 12,
+    "changedPureBackgroundPixels": 12,
+    "changedOutsideOriginalBox": 12,
+    "changes": [
+      {
+        "x": 388,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          251,
+          252,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          153,
+          162,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          196,
+          201,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          177,
+          184,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          126,
+          138,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          189,
+          195,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          173,
+          181,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          189,
+          195,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          173,
+          181,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          189,
+          195,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          214,
+          218,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          222,
+          225,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      }
+    ]
+  },
+  {
+    "case": "zero_tiny_7_x386",
+    "headingChangedPixels": 14,
+    "changedPureBackgroundPixels": 6,
+    "changedOutsideOriginalBox": 12,
+    "changes": [
+      {
+        "x": 387,
+        "y": 37,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          213,
+          216,
+          247
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          171,
+          179,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 386,
+        "y": 38,
+        "before": [
+          45,
+          45,
+          45
+        ],
+        "after": [
+          58,
+          62,
+          100
+        ],
+        "outsideOriginalRecognizedBox": false,
+        "beforePureBackground": false
+      },
+      {
+        "x": 387,
+        "y": 38,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          108,
+          121,
+          254
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          126,
+          137,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 386,
+        "y": 39,
+        "before": [
+          45,
+          45,
+          45
+        ],
+        "after": [
+          58,
+          62,
+          99
+        ],
+        "outsideOriginalRecognizedBox": false,
+        "beforePureBackground": false
+      },
+      {
+        "x": 387,
+        "y": 39,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          187,
+          192,
+          248
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          126,
+          137,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 40,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          206,
+          209,
+          247
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          126,
+          137,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 41,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          206,
+          209,
+          247
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          126,
+          137,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 42,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          225,
+          227,
+          246
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          191,
+          196,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      }
+    ]
+  },
+  {
+    "case": "zero_tiny_7_x387",
+    "headingChangedPixels": 14,
+    "changedPureBackgroundPixels": 12,
+    "changedOutsideOriginalBox": 14,
+    "changes": [
+      {
+        "x": 388,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          221,
+          224,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          171,
+          179,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 38,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          206,
+          209,
+          247
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          109,
+          122,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          126,
+          137,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 39,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          206,
+          210,
+          247
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          193,
+          199,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          126,
+          137,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          213,
+          217,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          126,
+          137,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          213,
+          217,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          126,
+          137,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          234,
+          236,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          191,
+          196,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      }
+    ]
+  },
+  {
+    "case": "zero_tiny_7_x388",
+    "headingChangedPixels": 14,
+    "changedPureBackgroundPixels": 14,
+    "changedOutsideOriginalBox": 14,
+    "changes": [
+      {
+        "x": 389,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          221,
+          224,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          171,
+          179,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          213,
+          217,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          109,
+          122,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          126,
+          137,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          214,
+          217,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          193,
+          199,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          126,
+          137,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          213,
+          217,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          126,
+          137,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          213,
+          217,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          126,
+          137,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          234,
+          236,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          191,
+          196,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      }
+    ]
+  },
+  {
+    "case": "zero_tiny_8_x386",
+    "headingChangedPixels": 24,
+    "changedPureBackgroundPixels": 14,
+    "changedOutsideOriginalBox": 21,
+    "changes": [
+      {
+        "x": 387,
+        "y": 37,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          244,
+          244,
+          245
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          198,
+          203,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          242,
+          243,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 386,
+        "y": 38,
+        "before": [
+          45,
+          45,
+          45
+        ],
+        "after": [
+          46,
+          46,
+          50
+        ],
+        "outsideOriginalRecognizedBox": false,
+        "beforePureBackground": false
+      },
+      {
+        "x": 387,
+        "y": 38,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          162,
+          170,
+          250
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          97,
+          111,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          220,
+          223,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 386,
+        "y": 39,
+        "before": [
+          45,
+          45,
+          45
+        ],
+        "after": [
+          67,
+          73,
+          135
+        ],
+        "outsideOriginalRecognizedBox": false,
+        "beforePureBackground": false
+      },
+      {
+        "x": 387,
+        "y": 39,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          135,
+          146,
+          252
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          97,
+          111,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          220,
+          223,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 386,
+        "y": 40,
+        "before": [
+          45,
+          45,
+          45
+        ],
+        "after": [
+          47,
+          48,
+          55
+        ],
+        "outsideOriginalRecognizedBox": false,
+        "beforePureBackground": false
+      },
+      {
+        "x": 387,
+        "y": 40,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          242,
+          242,
+          245
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          97,
+          111,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          221,
+          224,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 41,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          242,
+          242,
+          245
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          97,
+          111,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          220,
+          223,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 42,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          242,
+          242,
+          245
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          97,
+          111,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          220,
+          223,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 43,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          244,
+          244,
+          245
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 43,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          176,
+          183,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 43,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          238,
+          239,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      }
+    ]
+  },
+  {
+    "case": "zero_tiny_8_x387",
+    "headingChangedPixels": 24,
+    "changedPureBackgroundPixels": 21,
+    "changedOutsideOriginalBox": 24,
+    "changes": [
+      {
+        "x": 388,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          254,
+          254,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          198,
+          203,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          242,
+          243,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 38,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          240,
+          241,
+          245
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          167,
+          174,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          97,
+          111,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          220,
+          223,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 39,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          181,
+          187,
+          249
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          138,
+          148,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          97,
+          111,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          220,
+          223,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 40,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          237,
+          238,
+          245
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          252,
+          252,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          97,
+          111,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          221,
+          224,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          252,
+          252,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          97,
+          111,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          220,
+          223,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          252,
+          252,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          97,
+          111,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          220,
+          223,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 43,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          254,
+          254,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 43,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          176,
+          183,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 43,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          238,
+          239,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      }
+    ]
+  },
+  {
+    "case": "zero_tiny_8_x388",
+    "headingChangedPixels": 24,
+    "changedPureBackgroundPixels": 24,
+    "changedOutsideOriginalBox": 24,
+    "changes": [
+      {
+        "x": 389,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          254,
+          254,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          198,
+          203,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 391,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          242,
+          243,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          250,
+          251,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          167,
+          174,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          97,
+          111,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 391,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          220,
+          223,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          186,
+          192,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          138,
+          148,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          97,
+          111,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 391,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          220,
+          223,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          246,
+          247,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          252,
+          252,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          97,
+          111,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 391,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          221,
+          224,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          252,
+          252,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          97,
+          111,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 391,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          220,
+          223,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          252,
+          252,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          97,
+          111,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 391,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          220,
+          223,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 43,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          254,
+          254,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 43,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          176,
+          183,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 391,
+        "y": 43,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          238,
+          239,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      }
+    ]
+  },
+  {
+    "case": "zero_tiny_9_x386",
+    "headingChangedPixels": 20,
+    "changedPureBackgroundPixels": 14,
+    "changedOutsideOriginalBox": 17,
+    "changes": [
+      {
+        "x": 388,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          180,
+          186,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          195,
+          200,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 386,
+        "y": 39,
+        "before": [
+          45,
+          45,
+          45
+        ],
+        "after": [
+          47,
+          48,
+          55
+        ],
+        "outsideOriginalRecognizedBox": false,
+        "beforePureBackground": false
+      },
+      {
+        "x": 387,
+        "y": 39,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          166,
+          173,
+          250
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          97,
+          111,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          157,
+          166,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 386,
+        "y": 40,
+        "before": [
+          45,
+          45,
+          45
+        ],
+        "after": [
+          63,
+          68,
+          120
+        ],
+        "outsideOriginalRecognizedBox": false,
+        "beforePureBackground": false
+      },
+      {
+        "x": 387,
+        "y": 40,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          127,
+          138,
+          252
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          115,
+          127,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          157,
+          166,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 386,
+        "y": 41,
+        "before": [
+          45,
+          45,
+          45
+        ],
+        "after": [
+          48,
+          49,
+          58
+        ],
+        "outsideOriginalRecognizedBox": false,
+        "beforePureBackground": false
+      },
+      {
+        "x": 387,
+        "y": 41,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          243,
+          243,
+          245
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          133,
+          144,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          157,
+          166,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          133,
+          144,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          157,
+          166,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 43,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          133,
+          144,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 43,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          157,
+          166,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 44,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          134,
+          144,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 44,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          157,
+          166,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      }
+    ]
+  },
+  {
+    "case": "zero_tiny_9_x387",
+    "headingChangedPixels": 20,
+    "changedPureBackgroundPixels": 17,
+    "changedOutsideOriginalBox": 20,
+    "changes": [
+      {
+        "x": 389,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          180,
+          186,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          195,
+          200,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 39,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          237,
+          238,
+          245
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          170,
+          178,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          97,
+          111,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          157,
+          166,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 40,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          191,
+          196,
+          248
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          129,
+          140,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          115,
+          127,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          157,
+          166,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 41,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          235,
+          236,
+          245
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          253,
+          253,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          133,
+          144,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          157,
+          166,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          133,
+          144,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          157,
+          166,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 43,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          133,
+          144,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 43,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          157,
+          166,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 44,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          134,
+          144,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 44,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          157,
+          166,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      }
+    ]
+  },
+  {
+    "case": "zero_tiny_9_x388",
+    "headingChangedPixels": 20,
+    "changedPureBackgroundPixels": 20,
+    "changedOutsideOriginalBox": 20,
+    "changes": [
+      {
+        "x": 390,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          180,
+          186,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 391,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          195,
+          200,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          246,
+          247,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          170,
+          178,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          97,
+          111,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 391,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          157,
+          166,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          197,
+          203,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          129,
+          140,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          115,
+          127,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 391,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          157,
+          166,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          245,
+          245,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          253,
+          253,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          133,
+          144,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 391,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          157,
+          166,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          133,
+          144,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 391,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          157,
+          166,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 43,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          133,
+          144,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 391,
+        "y": 43,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          157,
+          166,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 390,
+        "y": 44,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          134,
+          144,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 391,
+        "y": 44,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          157,
+          166,
+          255
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      }
+    ]
+  },
+  {
+    "case": "zero_extra_nearwhite_heading",
+    "headingChangedPixels": 14,
+    "changedPureBackgroundPixels": 12,
+    "changedOutsideOriginalBox": 14,
+    "changes": [
+      {
+        "x": 388,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          254,
+          254,
+          254
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          254,
+          254,
+          254
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 38,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          248,
+          248,
+          248
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          254,
+          254,
+          254
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          254,
+          254,
+          254
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 39,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          247,
+          247,
+          247
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          254,
+          254,
+          254
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          254,
+          254,
+          254
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          254,
+          254,
+          254
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          254,
+          254,
+          254
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          254,
+          254,
+          254
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          254,
+          254,
+          254
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          254,
+          254,
+          254
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          254,
+          254,
+          254
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      }
+    ]
+  },
+  {
+    "case": "zero_extra_nearwhite_overlap_heading",
+    "headingChangedPixels": 14,
+    "changedPureBackgroundPixels": 6,
+    "changedOutsideOriginalBox": 12,
+    "changes": [
+      {
+        "x": 387,
+        "y": 37,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          247,
+          247,
+          247
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          254,
+          254,
+          254
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 386,
+        "y": 38,
+        "before": [
+          45,
+          45,
+          45
+        ],
+        "after": [
+          119,
+          119,
+          119
+        ],
+        "outsideOriginalRecognizedBox": false,
+        "beforePureBackground": false
+      },
+      {
+        "x": 387,
+        "y": 38,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          253,
+          253,
+          253
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          254,
+          254,
+          254
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 386,
+        "y": 39,
+        "before": [
+          45,
+          45,
+          45
+        ],
+        "after": [
+          106,
+          106,
+          106
+        ],
+        "outsideOriginalRecognizedBox": false,
+        "beforePureBackground": false
+      },
+      {
+        "x": 387,
+        "y": 39,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          249,
+          249,
+          249
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          254,
+          254,
+          254
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 40,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          247,
+          247,
+          247
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          254,
+          254,
+          254
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 41,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          247,
+          247,
+          247
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          254,
+          254,
+          254
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 42,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          246,
+          246,
+          246
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          254,
+          254,
+          254
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      }
+    ]
+  },
+  {
+    "case": "zero_extra_nearwhite_empty_edge",
+    "headingChangedPixels": 0,
+    "changedPureBackgroundPixels": 0,
+    "changedOutsideOriginalBox": 0,
+    "changes": []
+  },
+  {
+    "case": "zero_extra_light_heading",
+    "headingChangedPixels": 14,
+    "changedPureBackgroundPixels": 12,
+    "changedOutsideOriginalBox": 14,
+    "changes": [
+      {
+        "x": 388,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          253,
+          253,
+          253
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          252,
+          252,
+          252
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 38,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          247,
+          247,
+          247
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          251,
+          251,
+          251
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          251,
+          251,
+          251
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 39,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          246,
+          246,
+          246
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          253,
+          253,
+          253
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          251,
+          251,
+          251
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          253,
+          253,
+          253
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          251,
+          251,
+          251
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          253,
+          253,
+          253
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          251,
+          251,
+          251
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          254,
+          254,
+          254
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          253,
+          253,
+          253
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      }
+    ]
+  },
+  {
+    "case": "zero_extra_light_overlap_heading",
+    "headingChangedPixels": 13,
+    "changedPureBackgroundPixels": 6,
+    "changedOutsideOriginalBox": 11,
+    "changes": [
+      {
+        "x": 387,
+        "y": 37,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          246,
+          246,
+          246
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          252,
+          252,
+          252
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 386,
+        "y": 38,
+        "before": [
+          45,
+          45,
+          45
+        ],
+        "after": [
+          118,
+          118,
+          118
+        ],
+        "outsideOriginalRecognizedBox": false,
+        "beforePureBackground": false
+      },
+      {
+        "x": 387,
+        "y": 38,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          250,
+          250,
+          250
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          251,
+          251,
+          251
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 386,
+        "y": 39,
+        "before": [
+          45,
+          45,
+          45
+        ],
+        "after": [
+          105,
+          105,
+          105
+        ],
+        "outsideOriginalRecognizedBox": false,
+        "beforePureBackground": false
+      },
+      {
+        "x": 387,
+        "y": 39,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          247,
+          247,
+          247
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          251,
+          251,
+          251
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 40,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          246,
+          246,
+          246
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          251,
+          251,
+          251
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 41,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          246,
+          246,
+          246
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          251,
+          251,
+          251
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          253,
+          253,
+          253
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      }
+    ]
+  },
+  {
+    "case": "zero_extra_light_empty_edge",
+    "headingChangedPixels": 0,
+    "changedPureBackgroundPixels": 0,
+    "changedOutsideOriginalBox": 0,
+    "changes": []
+  },
+  {
+    "case": "zero_extra_black_heading",
+    "headingChangedPixels": 14,
+    "changedPureBackgroundPixels": 12,
+    "changedOutsideOriginalBox": 14,
+    "changes": [
+      {
+        "x": 388,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          217,
+          217,
+          217
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          152,
+          152,
+          152
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 38,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          197,
+          197,
+          197
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          67,
+          67,
+          67
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          87,
+          87,
+          87
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 39,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          195,
+          195,
+          195
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          179,
+          179,
+          179
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          87,
+          87,
+          87
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          203,
+          203,
+          203
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          87,
+          87,
+          87
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          203,
+          203,
+          203
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          87,
+          87,
+          87
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 388,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          229,
+          229,
+          229
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 389,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          171,
+          171,
+          171
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      }
+    ]
+  },
+  {
+    "case": "zero_extra_black_overlap_heading",
+    "headingChangedPixels": 12,
+    "changedPureBackgroundPixels": 6,
+    "changedOutsideOriginalBox": 12,
+    "changes": [
+      {
+        "x": 387,
+        "y": 37,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          208,
+          208,
+          208
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 37,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          152,
+          152,
+          152
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 38,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          66,
+          66,
+          66
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 38,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          87,
+          87,
+          87
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 39,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          172,
+          172,
+          172
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 39,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          87,
+          87,
+          87
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 40,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          195,
+          195,
+          195
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 40,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          87,
+          87,
+          87
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 41,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          195,
+          195,
+          195
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 41,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          87,
+          87,
+          87
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      },
+      {
+        "x": 387,
+        "y": 42,
+        "before": [
+          245,
+          245,
+          245
+        ],
+        "after": [
+          220,
+          220,
+          220
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": false
+      },
+      {
+        "x": 388,
+        "y": 42,
+        "before": [
+          255,
+          255,
+          255
+        ],
+        "after": [
+          171,
+          171,
+          171
+        ],
+        "outsideOriginalRecognizedBox": true,
+        "beforePureBackground": true
+      }
+    ]
+  },
+  {
+    "case": "zero_extra_black_empty_edge",
+    "headingChangedPixels": 0,
+    "changedPureBackgroundPixels": 0,
+    "changedOutsideOriginalBox": 0,
+    "changes": []
+  }
+]

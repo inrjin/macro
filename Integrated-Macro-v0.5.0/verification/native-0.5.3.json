@@ -1,0 +1,28 @@
+{
+  "version": "0.5.3",
+  "recordedAt": "2026-10-20T16:01:00.176301+00:00",
+  "command": "bash crates/macro-platform/native/verify-macos.sh",
+  "exitCode": 0,
+  "combinedOutput": "sysctlbyname for kern.hv_vmm_present failed with status -1kIOSurfaceMethodSetCoreVideoBridgedKeys failed: 10000003\nNative synthetic window validation, capture lifecycle, ABI allocation/free and thread guard OK; permission bits=0\nSwift arm64/x86_64 compilation and host ABI smoke passed.\n",
+  "sourceSHA256": {
+    "crates/macro-platform/native/MacPlatform.swift": "18f3a8885fa294ea0afa3eed73b265a3115761b0d31e178d43f08460e70702c2",
+    "crates/macro-platform/native/verify-macos.sh": "e24ceaffef7fe1f9bf2ccf52067a4ea7c3a6a4d27eff36610c0cab8aabd44562"
+  },
+  "checks": {
+    "namedWindowValidationCases": 43,
+    "lazyProbeAssertions": 1,
+    "frameFocusCacheAssertions": 8,
+    "optimizedArchitectures": [
+      "arm64",
+      "x86_64"
+    ],
+    "hostABI": "passed",
+    "captureLifecycle": "passed",
+    "permissionBits": 0
+  },
+  "limits": [
+    "Window metadata fixtures include the reported Dock, Chrome helper, Chrome target and pointer coordinates; AX hit/focus outcomes are synthetic.",
+    "No actual screen capture, click, key, focus manipulation, permission request, or live Dock/browser AX hit was performed.",
+    "Compilation and synthetic evidence do not establish packaged desktop input readiness."
+  ]
+}

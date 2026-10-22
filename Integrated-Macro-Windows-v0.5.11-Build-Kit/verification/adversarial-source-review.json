@@ -1,0 +1,14 @@
+{
+  "recordedAt": "2026-10-22T06:18:27.649508+00:00",
+  "sourceRoot": "verification/windows-0.5.11-review/staging/source",
+  "expectedSourceFiles": 138,
+  "sourceFilesMatched": 138,
+  "fixtures": 417,
+  "manifestLinkedRgbaFiles": 410,
+  "sourceManifestMatchesReleased": true,
+  "runtimeSHA256": "2d4213c49584b930e2bdc5ed78fb2aaa2700479c7db7bb97cdf0d06377561939",
+  "currentUnbuiltRuntimeIncluded": false,
+  "calibrationRestartTestIncluded": false,
+  "issues": [],
+  "scope": "Byte/hash and manifest reference validation only, not Windows execution or compilation"
+}

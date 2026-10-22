@@ -1,0 +1,530 @@
+[
+  {
+    "actualHits": [],
+    "candidateCount": 0,
+    "case": "circle15:subpixel_aa",
+    "elapsedUs": 16016,
+    "expectedObjects": [
+      8,
+      9
+    ],
+    "objectStats": {
+      "ambiguous_objects": 2,
+      "background": {
+        "b": 254,
+        "g": 254,
+        "r": 254
+      },
+      "background_samples": 3600,
+      "foreground_components": 10,
+      "merged_color_components": 0,
+      "reference_objects": 8,
+      "resolved_objects": 0,
+      "search_budget_exhausted": 0,
+      "split_connected_components": 0,
+      "template_diameter": 15.0,
+      "template_families": 1
+    },
+    "scope": "independent synthetic pixels -> actual extractor/pre-click; no browser/OS"
+  },
+  {
+    "actualHits": [
+      9
+    ],
+    "candidateCount": 1,
+    "case": "rectangle_plus_one",
+    "elapsedUs": 20483,
+    "expectedObjects": [
+      8,
+      9
+    ],
+    "objectStats": {
+      "ambiguous_objects": 1,
+      "background": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "background_samples": 3600,
+      "foreground_components": 10,
+      "merged_color_components": 0,
+      "reference_objects": 9,
+      "resolved_objects": 1,
+      "search_budget_exhausted": 0,
+      "split_connected_components": 0,
+      "template_diameter": 15.0,
+      "template_families": 1
+    },
+    "scope": "independent synthetic pixels -> actual extractor/pre-click; no browser/OS"
+  },
+  {
+    "actualHits": [
+      9
+    ],
+    "candidateCount": 1,
+    "case": "ellipse_minus_one",
+    "elapsedUs": 12789,
+    "expectedObjects": [
+      8,
+      9
+    ],
+    "objectStats": {
+      "ambiguous_objects": 1,
+      "background": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "background_samples": 3600,
+      "foreground_components": 10,
+      "merged_color_components": 0,
+      "reference_objects": 9,
+      "resolved_objects": 1,
+      "search_budget_exhausted": 0,
+      "split_connected_components": 0,
+      "template_diameter": 17.0,
+      "template_families": 1
+    },
+    "scope": "independent synthetic pixels -> actual extractor/pre-click; no browser/OS"
+  },
+  {
+    "actualHits": [
+      9
+    ],
+    "candidateCount": 1,
+    "case": "circle15:dark_aa",
+    "elapsedUs": 14714,
+    "expectedObjects": [
+      8,
+      9
+    ],
+    "objectStats": {
+      "ambiguous_objects": 1,
+      "background": {
+        "b": 30,
+        "g": 26,
+        "r": 24
+      },
+      "background_samples": 3600,
+      "foreground_components": 10,
+      "merged_color_components": 0,
+      "reference_objects": 9,
+      "resolved_objects": 1,
+      "search_budget_exhausted": 0,
+      "split_connected_components": 0,
+      "template_diameter": 15.0,
+      "template_families": 1
+    },
+    "scope": "independent synthetic pixels -> actual extractor/pre-click; no browser/OS"
+  },
+  {
+    "actualHits": [
+      9
+    ],
+    "candidateCount": 1,
+    "case": "diamond_plus_one",
+    "elapsedUs": 9344,
+    "expectedObjects": [
+      8,
+      9
+    ],
+    "objectStats": {
+      "ambiguous_objects": 1,
+      "background": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "background_samples": 3600,
+      "foreground_components": 10,
+      "merged_color_components": 0,
+      "reference_objects": 9,
+      "resolved_objects": 1,
+      "search_budget_exhausted": 0,
+      "split_connected_components": 0,
+      "template_diameter": 19.0,
+      "template_families": 1
+    },
+    "scope": "independent synthetic pixels -> actual extractor/pre-click; no browser/OS"
+  },
+  {
+    "actualHits": [
+      9
+    ],
+    "candidateCount": 1,
+    "case": "square15:subpixel_aa",
+    "elapsedUs": 12514,
+    "expectedObjects": [
+      8,
+      9
+    ],
+    "objectStats": {
+      "ambiguous_objects": 1,
+      "background": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "background_samples": 3600,
+      "foreground_components": 10,
+      "merged_color_components": 0,
+      "reference_objects": 9,
+      "resolved_objects": 1,
+      "search_budget_exhausted": 0,
+      "split_connected_components": 0,
+      "template_diameter": 15.0,
+      "template_families": 1
+    },
+    "scope": "independent synthetic pixels -> actual extractor/pre-click; no browser/OS"
+  },
+  {
+    "actualHits": [
+      9
+    ],
+    "candidateCount": 1,
+    "case": "square15:checker_3px",
+    "elapsedUs": 10273,
+    "expectedObjects": [
+      8,
+      9
+    ],
+    "objectStats": {
+      "ambiguous_objects": 1,
+      "background": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "background_samples": 3600,
+      "foreground_components": 10,
+      "merged_color_components": 0,
+      "reference_objects": 10,
+      "resolved_objects": 1,
+      "search_budget_exhausted": 0,
+      "split_connected_components": 0,
+      "template_diameter": 15.0,
+      "template_families": 1
+    },
+    "scope": "independent synthetic pixels -> actual extractor/pre-click; no browser/OS"
+  },
+  {
+    "actualHits": [
+      9
+    ],
+    "candidateCount": 1,
+    "case": "square15:dark_aa",
+    "elapsedUs": 13694,
+    "expectedObjects": [
+      8,
+      9
+    ],
+    "objectStats": {
+      "ambiguous_objects": 1,
+      "background": {
+        "b": 30,
+        "g": 26,
+        "r": 24
+      },
+      "background_samples": 3600,
+      "foreground_components": 10,
+      "merged_color_components": 0,
+      "reference_objects": 9,
+      "resolved_objects": 1,
+      "search_budget_exhausted": 0,
+      "split_connected_components": 0,
+      "template_diameter": 15.0,
+      "template_families": 1
+    },
+    "scope": "independent synthetic pixels -> actual extractor/pre-click; no browser/OS"
+  },
+  {
+    "actualHits": [
+      9
+    ],
+    "candidateCount": 1,
+    "case": "rectangle19x11:subpixel_aa",
+    "elapsedUs": 6907,
+    "expectedObjects": [
+      8,
+      9
+    ],
+    "objectStats": {
+      "ambiguous_objects": 1,
+      "background": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "background_samples": 3600,
+      "foreground_components": 10,
+      "merged_color_components": 0,
+      "reference_objects": 9,
+      "resolved_objects": 1,
+      "search_budget_exhausted": 0,
+      "split_connected_components": 0,
+      "template_diameter": 15.0,
+      "template_families": 1
+    },
+    "scope": "independent synthetic pixels -> actual extractor/pre-click; no browser/OS"
+  },
+  {
+    "actualHits": [
+      9
+    ],
+    "candidateCount": 1,
+    "case": "rectangle19x11:dark_aa",
+    "elapsedUs": 18205,
+    "expectedObjects": [
+      8,
+      9
+    ],
+    "objectStats": {
+      "ambiguous_objects": 1,
+      "background": {
+        "b": 30,
+        "g": 26,
+        "r": 24
+      },
+      "background_samples": 3600,
+      "foreground_components": 10,
+      "merged_color_components": 0,
+      "reference_objects": 9,
+      "resolved_objects": 1,
+      "search_budget_exhausted": 0,
+      "split_connected_components": 0,
+      "template_diameter": 15.0,
+      "template_families": 1
+    },
+    "scope": "independent synthetic pixels -> actual extractor/pre-click; no browser/OS"
+  },
+  {
+    "actualHits": [],
+    "candidateCount": 0,
+    "case": "rounded19x13:subpixel_aa",
+    "elapsedUs": 11563,
+    "expectedObjects": [
+      8,
+      9
+    ],
+    "objectStats": {
+      "ambiguous_objects": 2,
+      "background": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "background_samples": 3600,
+      "foreground_components": 10,
+      "merged_color_components": 0,
+      "reference_objects": 8,
+      "resolved_objects": 0,
+      "search_budget_exhausted": 0,
+      "split_connected_components": 0,
+      "template_diameter": 16.0,
+      "template_families": 1
+    },
+    "scope": "independent synthetic pixels -> actual extractor/pre-click; no browser/OS"
+  },
+  {
+    "actualHits": [
+      9
+    ],
+    "candidateCount": 1,
+    "case": "rounded19x13:dark_aa",
+    "elapsedUs": 7521,
+    "expectedObjects": [
+      8,
+      9
+    ],
+    "objectStats": {
+      "ambiguous_objects": 1,
+      "background": {
+        "b": 30,
+        "g": 26,
+        "r": 24
+      },
+      "background_samples": 3600,
+      "foreground_components": 10,
+      "merged_color_components": 0,
+      "reference_objects": 9,
+      "resolved_objects": 1,
+      "search_budget_exhausted": 0,
+      "split_connected_components": 0,
+      "template_diameter": 16.0,
+      "template_families": 1
+    },
+    "scope": "independent synthetic pixels -> actual extractor/pre-click; no browser/OS"
+  },
+  {
+    "actualHits": [],
+    "candidateCount": 0,
+    "case": "diamond19:subpixel_aa",
+    "elapsedUs": 6877,
+    "expectedObjects": [
+      8,
+      9
+    ],
+    "objectStats": {
+      "ambiguous_objects": 2,
+      "background": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "background_samples": 3600,
+      "foreground_components": 10,
+      "merged_color_components": 0,
+      "reference_objects": 8,
+      "resolved_objects": 0,
+      "search_budget_exhausted": 0,
+      "split_connected_components": 0,
+      "template_diameter": 19.0,
+      "template_families": 1
+    },
+    "scope": "independent synthetic pixels -> actual extractor/pre-click; no browser/OS"
+  },
+  {
+    "actualHits": [],
+    "candidateCount": 0,
+    "case": "ellipse21x13:subpixel_aa",
+    "elapsedUs": 6965,
+    "expectedObjects": [
+      8,
+      9
+    ],
+    "objectStats": {
+      "ambiguous_objects": 2,
+      "background": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "background_samples": 3600,
+      "foreground_components": 10,
+      "merged_color_components": 0,
+      "reference_objects": 8,
+      "resolved_objects": 0,
+      "search_budget_exhausted": 0,
+      "split_connected_components": 0,
+      "template_diameter": 17.0,
+      "template_families": 1
+    },
+    "scope": "independent synthetic pixels -> actual extractor/pre-click; no browser/OS"
+  },
+  {
+    "actualHits": [
+      9
+    ],
+    "candidateCount": 1,
+    "case": "ellipse21x13:dark_aa",
+    "elapsedUs": 10542,
+    "expectedObjects": [
+      8,
+      9
+    ],
+    "objectStats": {
+      "ambiguous_objects": 1,
+      "background": {
+        "b": 30,
+        "g": 26,
+        "r": 24
+      },
+      "background_samples": 3600,
+      "foreground_components": 10,
+      "merged_color_components": 0,
+      "reference_objects": 9,
+      "resolved_objects": 1,
+      "search_budget_exhausted": 0,
+      "split_connected_components": 0,
+      "template_diameter": 17.0,
+      "template_families": 1
+    },
+    "scope": "independent synthetic pixels -> actual extractor/pre-click; no browser/OS"
+  },
+  {
+    "actualHits": [],
+    "candidateCount": 0,
+    "case": "rotated_rectangle30:subpixel_aa",
+    "elapsedUs": 7111,
+    "expectedObjects": [
+      8,
+      9
+    ],
+    "objectStats": {
+      "ambiguous_objects": 2,
+      "background": {
+        "b": 254,
+        "g": 254,
+        "r": 254
+      },
+      "background_samples": 3600,
+      "foreground_components": 10,
+      "merged_color_components": 0,
+      "reference_objects": 8,
+      "resolved_objects": 0,
+      "search_budget_exhausted": 0,
+      "split_connected_components": 0,
+      "template_diameter": 21.0,
+      "template_families": 1
+    },
+    "scope": "independent synthetic pixels -> actual extractor/pre-click; no browser/OS"
+  },
+  {
+    "actualHits": [
+      9
+    ],
+    "candidateCount": 1,
+    "case": "rotated_rectangle30:dark_aa",
+    "elapsedUs": 9359,
+    "expectedObjects": [
+      8,
+      9
+    ],
+    "objectStats": {
+      "ambiguous_objects": 1,
+      "background": {
+        "b": 30,
+        "g": 26,
+        "r": 24
+      },
+      "background_samples": 3600,
+      "foreground_components": 10,
+      "merged_color_components": 0,
+      "reference_objects": 9,
+      "resolved_objects": 1,
+      "search_budget_exhausted": 0,
+      "split_connected_components": 0,
+      "template_diameter": 21.0,
+      "template_families": 1
+    },
+    "scope": "independent synthetic pixels -> actual extractor/pre-click; no browser/OS"
+  },
+  {
+    "actualHits": [],
+    "candidateCount": 0,
+    "case": "rotated_ellipse25:subpixel_aa",
+    "elapsedUs": 6665,
+    "expectedObjects": [
+      8,
+      9
+    ],
+    "objectStats": {
+      "ambiguous_objects": 2,
+      "background": {
+        "b": 254,
+        "g": 254,
+        "r": 254
+      },
+      "background_samples": 3600,
+      "foreground_components": 10,
+      "merged_color_components": 0,
+      "reference_objects": 8,
+      "resolved_objects": 0,
+      "search_budget_exhausted": 0,
+      "split_connected_components": 0,
+      "template_diameter": 18.0,
+      "template_families": 1
+    },
+    "scope": "independent synthetic pixels -> actual extractor/pre-click; no browser/OS"
+  }
+]

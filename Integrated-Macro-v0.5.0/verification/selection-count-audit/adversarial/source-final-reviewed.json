@@ -1,0 +1,21 @@
+{
+  "sourceUnchangedDuringFinalRuns": true,
+  "files": {
+    "crates/macro-core/src/selection_count.rs": "0fceaa4eda7e797ef72ed8fed6b5d0273e08c0942444ccd8254cf3ab31cc259d",
+    "crates/macro-core/src/selection_count_layout.rs": "386de039c740adc1c29de32b717783ac08f3bb02fd076235990850fb4976810d",
+    "crates/macro-core/src/selection_count_assets/templates.json": "52ce816c2e10dadeb681ac796da6af1689f4aacd00e6d2fc6e11484d51989cee",
+    "crates/macro-core/src/selection_count_assets/empty-negative.json": "eff7d4668bed09ccd7e8fba82b8fc052000ac3ed30e0d729f91e5cef79486a4c",
+    "crates/macro-core/tests/selection_count_audit_reader.rs": "0f1a021fba85ebe9ac8814c507de662d66b6328e5c1d288b0c0132135518571f",
+    "verification/selection-count-audit/adversarial/generate.swift": "b2043c309c7dc522b3a0f03e62dbbf6f468d28c7786701f2763fa6d2e2ad9d29",
+    "verification/selection-count-audit/adversarial/generate-extras.swift": "061d9266e81439c31f82df90ab6f597e548c807ce78240ee6313a404c5c1ca60",
+    "verification/selection-count-audit/adversarial/generate-zero-controls.swift": "27d64900872b24c087c982ac4599954b3016870447378a320b451187ba270bc1",
+    "verification/selection-count-audit/adversarial/radius-negative/generate.swift": "a2384641cb32c069b1d044441b6bc7461625cbd8a2f49547232e86d240bad9f9",
+    "verification/selection-count-audit/adversarial/empty-neighbor/generate.swift": "f51b1baf13ecf87a22665f8fb1240b4aa1bb4f9e734926568489a5513990e6f5",
+    "verification/selection-count-audit/adversarial/manifest.json": "89e40e7fe3db097ec46c907dedcdaffc93c07589e3cec4ed250aacde43cf3824",
+    "verification/selection-count-audit/adversarial/extra-manifest.json": "d86f4c9b943a4c7adfe9ca42459b5e3aaf0849e997c401be7bbd6134a1e7a51a",
+    "verification/selection-count-audit/adversarial/zero-support-manifest.json": "564375e93bca7c3eb653b1e3db41d496477296a35744a8425e8ca94de070e887",
+    "verification/selection-count-audit/adversarial/radius-negative/manifest.json": "e93ecfcda53f46bf7941a4ea4068c3aac995f0d64107f5acb947bdacadc96dfd",
+    "verification/selection-count-audit/adversarial/empty-neighbor/manifest.json": "4abcb0a9a020b40b08175dc6dbe830cbe99d4dfd2803a87b2b86d6c54fcd8637",
+    "verification/selection-count-audit/adversarial/all-fixtures-final.json": "758b0375ce0112083ca486839c916c1189320ce8ccce2245cf635f1434598236"
+  }
+}

@@ -1,0 +1,7501 @@
+[
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 0,
+    "timeMs": 1792549104470,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "대기 중",
+      "pendingActionId": null,
+      "phase": "idle",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 0,
+    "timeMs": 1792549104470,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "대기 중",
+      "pendingActionId": null,
+      "phase": "idle",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 0,
+    "timeMs": 1792549110730,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "브라우저 연결 완료 · YUURI LIVE 2026 IN SEOUL 콘서트 일정 및 예매 | NOL(야놀자)",
+      "pendingActionId": null,
+      "phase": "idle",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 0,
+    "timeMs": 1792549125781,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "연결한 예매창으로 전환 중",
+      "pendingActionId": null,
+      "phase": "idle",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "started",
+    "runId": 1,
+    "timeMs": 1792549125858,
+    "detail": {
+      "deadlineMs": null,
+      "effectiveOptions": {
+        "automaticRefresh": false,
+        "cancellationNavigation": "none",
+        "hasRefreshTarget": false,
+        "regionPriority": true
+      },
+      "phase": "entry"
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 1,
+    "timeMs": 1792549125870,
+    "detail": {
+      "action": {
+        "purpose": "legacy_entry",
+        "target": {
+          "point": {
+            "x": 2116.0,
+            "y": 727.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 1,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 1,
+    "timeMs": 1792549125871,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "지정된 날짜·회차·다음 좌표 클릭 중",
+      "pendingActionId": null,
+      "phase": "entry",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 1,
+    "timeMs": 1792549125975,
+    "detail": {
+      "action": {
+        "purpose": "legacy_entry",
+        "target": {
+          "point": {
+            "x": 2185.0,
+            "y": 1194.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 2,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 1,
+    "timeMs": 1792549126084,
+    "detail": {
+      "action": {
+        "purpose": "legacy_entry",
+        "target": {
+          "point": {
+            "x": 2366.0,
+            "y": 1376.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 3,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 1,
+    "timeMs": 1792549126184,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "등록된 진입 버튼 처리 끝 · NOL 캡챠 첫 문자 입력에 기준 색을 저장합니다",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 1,
+    "timeMs": 1792549126533,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 판단 · 첫 문자 입력 대기 · 완료했다면 F9",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 1,
+    "timeMs": 1792549133304,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 판단 · 첫 입력 수신 · 기준 화면 읽는 중",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 1,
+    "timeMs": 1792549133324,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 판단 · 첫 입력 기준 저장됨 · 배경 색 변화 대기",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 1,
+    "timeMs": 1792549136172,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 판단 · 왼쪽 아래 배경 색 변화 확인 중",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 1,
+    "timeMs": 1792549136298,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 배경 색 변화 감지 · 구역 탐색 시작",
+      "pendingActionId": null,
+      "phase": "region",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 1,
+    "timeMs": 1792549136312,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 21,
+          "g": 168,
+          "r": 29
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "region",
+        "roi": {
+          "height": 35.0,
+          "width": 1303.0,
+          "x": 328.0,
+          "y": 616.0
+        },
+        "source": "region_map",
+        "stats": {
+          "accepted_count": 1,
+          "components_found": 1,
+          "matching_pixels": 3815,
+          "rejected_too_large": 0,
+          "rejected_too_small": 0
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 1109
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 1,
+    "timeMs": 1792549136319,
+    "detail": {
+      "action": {
+        "purpose": "region:pixel:470:616",
+        "target": {
+          "point": {
+            "x": 524.0,
+            "y": 633.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 7,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 1,
+    "timeMs": 1792549136319,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "‘좌석 영역 · 첫 모서리’와 ‘좌석 영역 · 반대 모서리’를 F8로 지정하세요. 지정 후 예매창에서 F3으로 다시 진행합니다.",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": true
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 1,
+    "timeMs": 1792549136332,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "‘좌석 영역 · 첫 모서리’와 ‘좌석 영역 · 반대 모서리’를 F8로 지정하세요. 지정 후 예매창에서 F3으로 다시 진행합니다.",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": true
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 1,
+    "timeMs": 1792549139597,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "예매창 복귀 대기 · 클릭 보류 · 확인되면 자동 재개",
+      "pendingActionId": null,
+      "phase": "paused",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 1,
+    "timeMs": 1792549149131,
+    "detail": {
+      "captureArmed": true,
+      "captureError": null,
+      "captureState": "armed",
+      "message": "좌석 범위 끝 · 예매창의 대상 위에서 F8",
+      "pendingActionId": null,
+      "phase": "paused",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 1,
+    "timeMs": 1792549153201,
+    "detail": {
+      "captureArmed": true,
+      "captureError": null,
+      "captureState": "reading",
+      "message": "F8 수신 · 좌석 범위 끝 읽는 중",
+      "pendingActionId": null,
+      "phase": "paused",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 1,
+    "timeMs": 1792549153202,
+    "detail": {
+      "captureArmed": true,
+      "captureError": null,
+      "captureState": "reading",
+      "message": "좌석 범위 끝 · 예매창 화면 읽는 중",
+      "pendingActionId": null,
+      "phase": "paused",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 1,
+    "timeMs": 1792549153221,
+    "detail": {
+      "captureArmed": true,
+      "captureError": null,
+      "captureState": "reading",
+      "message": "좌석 범위 끝 · 좌표 저장 중",
+      "pendingActionId": null,
+      "phase": "paused",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 1,
+    "timeMs": 1792549153230,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "captured",
+      "message": "좌석 범위 끝 지정 완료 · (2057, 1728) · #FFFFFF",
+      "pendingActionId": null,
+      "phase": "paused",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 1,
+    "timeMs": 1792549164074,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "중지했습니다.",
+      "pendingActionId": null,
+      "phase": "stopped",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 1,
+    "timeMs": 1792549165818,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "연결한 예매창으로 전환 중",
+      "pendingActionId": null,
+      "phase": "idle",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "started",
+    "runId": 2,
+    "timeMs": 1792549165880,
+    "detail": {
+      "deadlineMs": null,
+      "effectiveOptions": {
+        "automaticRefresh": false,
+        "cancellationNavigation": "none",
+        "hasRefreshTarget": false,
+        "regionPriority": true
+      },
+      "phase": "entry"
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 2,
+    "timeMs": 1792549165884,
+    "detail": {
+      "action": {
+        "purpose": "legacy_entry",
+        "target": {
+          "point": {
+            "x": 2116.0,
+            "y": 727.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 1,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549165884,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "지정된 날짜·회차·다음 좌표 클릭 중",
+      "pendingActionId": null,
+      "phase": "entry",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 2,
+    "timeMs": 1792549165989,
+    "detail": {
+      "action": {
+        "purpose": "legacy_entry",
+        "target": {
+          "point": {
+            "x": 2185.0,
+            "y": 1194.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 2,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 2,
+    "timeMs": 1792549166100,
+    "detail": {
+      "action": {
+        "purpose": "legacy_entry",
+        "target": {
+          "point": {
+            "x": 2366.0,
+            "y": 1376.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 3,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549166204,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "등록된 진입 버튼 처리 끝 · NOL 캡챠 첫 문자 입력에 기준 색을 저장합니다",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549166683,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 판단 · 첫 문자 입력 대기 · 완료했다면 F9",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549172674,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 판단 · 첫 입력 기준 저장됨 · 배경 색 변화 대기",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549175473,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 판단 · 왼쪽 아래 배경 색 변화 확인 중",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549175595,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 배경 색 변화 감지 · 구역 탐색 시작",
+      "pendingActionId": null,
+      "phase": "region",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 2,
+    "timeMs": 1792549175613,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 21,
+          "g": 168,
+          "r": 29
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "region",
+        "roi": {
+          "height": 35.0,
+          "width": 1303.0,
+          "x": 328.0,
+          "y": 616.0
+        },
+        "source": "region_map",
+        "stats": {
+          "accepted_count": 1,
+          "components_found": 1,
+          "matching_pixels": 3815,
+          "rejected_too_large": 0,
+          "rejected_too_small": 0
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 3411
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 2,
+    "timeMs": 1792549175626,
+    "detail": {
+      "action": {
+        "purpose": "region:pixel:470:616",
+        "target": {
+          "point": {
+            "x": 524.0,
+            "y": 633.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 7,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549175626,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549175640,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "Enter·구역 클릭 뒤 새 화면 대기 · 계속 확인 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 2,
+    "timeMs": 1792549175657,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 1,
+          "components_found": 3,
+          "matching_pixels": 131,
+          "rejected_too_large": 0,
+          "rejected_too_small": 2
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 3413
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549175658,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 2,
+    "timeMs": 1792549175683,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 5,
+          "components_found": 34,
+          "matching_pixels": 1034,
+          "rejected_too_large": 0,
+          "rejected_too_small": 29
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 3416
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549175683,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 2,
+    "timeMs": 1792549175705,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 1,
+          "components_found": 23,
+          "matching_pixels": 37,
+          "rejected_too_large": 0,
+          "rejected_too_small": 22
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 3418
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549175706,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 2,
+    "timeMs": 1792549175722,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 7,
+          "components_found": 7,
+          "matching_pixels": 2252,
+          "rejected_too_large": 0,
+          "rejected_too_small": 0
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 3420
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549175722,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 2,
+    "timeMs": 1792549175738,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 3,
+          "components_found": 3,
+          "matching_pixels": 1131,
+          "rejected_too_large": 0,
+          "rejected_too_small": 0
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 3421
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549175739,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 2,
+    "timeMs": 1792549175754,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 2,
+          "components_found": 2,
+          "matching_pixels": 1093,
+          "rejected_too_large": 0,
+          "rejected_too_small": 0
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 3423
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549175754,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 2,
+    "timeMs": 1792549175770,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 0,
+          "components_found": 0,
+          "matching_pixels": 0,
+          "rejected_too_large": 0,
+          "rejected_too_small": 0
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 3425
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549175771,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 2,
+    "timeMs": 1792549175789,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 0,
+          "components_found": 10,
+          "matching_pixels": 10,
+          "rejected_too_large": 0,
+          "rejected_too_small": 10
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 3427
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549175789,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 2,
+    "timeMs": 1792549175803,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 0,
+          "components_found": 0,
+          "matching_pixels": 0,
+          "rejected_too_large": 0,
+          "rejected_too_small": 0
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 3429
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549175804,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 2,
+    "timeMs": 1792549175948,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 5,
+          "components_found": 65,
+          "matching_pixels": 1665,
+          "rejected_too_large": 0,
+          "rejected_too_small": 60
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 3434
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549175948,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 2,
+    "timeMs": 1792549176444,
+    "detail": {
+      "action": {
+        "purpose": "seat:pixel:313:875",
+        "target": {
+          "point": {
+            "x": 322.0,
+            "y": 885.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 10,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549176444,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "1 / 1석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549176467,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "1 / 1석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 2,
+    "timeMs": 1792549176559,
+    "detail": {
+      "action": {
+        "target": {
+          "point": {
+            "x": 2607.0,
+            "y": 1654.0
+          },
+          "type": "point"
+        },
+        "type": "complete_selection"
+      },
+      "actionId": 13,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549176561,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "완료 버튼 클릭 전달 · 실행 종료",
+      "pendingActionId": null,
+      "phase": "completed",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549203919,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "키보드 수신 검사 중 · 연결한 예매창의 입력칸에 문자를 입력하세요 · F4로 중지",
+      "pendingActionId": null,
+      "phase": "completed",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549204931,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "키보드 수신 검사 중 · 연결한 예매창의 입력칸에 문자를 입력하세요 · F4로 중지",
+      "pendingActionId": null,
+      "phase": "completed",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549205922,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "키보드 수신 검사 중 · 연결한 예매창의 입력칸에 문자를 입력하세요 · F4로 중지",
+      "pendingActionId": null,
+      "phase": "completed",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549206932,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "키보드 수신 검사 중 · 연결한 예매창의 입력칸에 문자를 입력하세요 · F4로 중지",
+      "pendingActionId": null,
+      "phase": "completed",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549207930,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "키보드 수신 검사 중 · 연결한 예매창의 입력칸에 문자를 입력하세요 · F4로 중지",
+      "pendingActionId": null,
+      "phase": "completed",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549208922,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "키보드 수신 검사 중 · 연결한 예매창의 입력칸에 문자를 입력하세요 · F4로 중지",
+      "pendingActionId": null,
+      "phase": "completed",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549209215,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "키보드 수신 검사를 중지했습니다",
+      "pendingActionId": null,
+      "phase": "completed",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 2,
+    "timeMs": 1792549211964,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "연결한 예매창으로 전환 중",
+      "pendingActionId": null,
+      "phase": "idle",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "started",
+    "runId": 3,
+    "timeMs": 1792549212019,
+    "detail": {
+      "deadlineMs": null,
+      "effectiveOptions": {
+        "automaticRefresh": false,
+        "cancellationNavigation": "none",
+        "hasRefreshTarget": false,
+        "regionPriority": true
+      },
+      "phase": "entry"
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 3,
+    "timeMs": 1792549212026,
+    "detail": {
+      "action": {
+        "purpose": "legacy_entry",
+        "target": {
+          "point": {
+            "x": 2116.0,
+            "y": 727.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 1,
+      "delivered": false,
+      "error": "[target_occluded] 지정 위치가 Integrated Macro 창에 가려져 있습니다 (창 126204, 레이어 0). 해당 창을 옮긴 뒤 다시 시작하세요."
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549212027,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "예매창 복귀 대기 · 클릭 보류 · 확인되면 자동 재개",
+      "pendingActionId": null,
+      "phase": "paused",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 3,
+    "timeMs": 1792549212315,
+    "detail": {
+      "action": {
+        "purpose": "legacy_entry",
+        "target": {
+          "point": {
+            "x": 2116.0,
+            "y": 727.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 3,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549212316,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "지정된 날짜·회차·다음 좌표 클릭 중",
+      "pendingActionId": null,
+      "phase": "entry",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 3,
+    "timeMs": 1792549212423,
+    "detail": {
+      "action": {
+        "purpose": "legacy_entry",
+        "target": {
+          "point": {
+            "x": 2185.0,
+            "y": 1194.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 4,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 3,
+    "timeMs": 1792549212531,
+    "detail": {
+      "action": {
+        "purpose": "legacy_entry",
+        "target": {
+          "point": {
+            "x": 2366.0,
+            "y": 1376.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 5,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549212632,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "등록된 진입 버튼 처리 끝 · NOL 캡챠 첫 문자 입력에 기준 색을 저장합니다",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549212773,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 판단 · 첫 문자 입력 대기 · 완료했다면 F9",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549218760,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 판단 · 첫 입력 기준 저장됨 · 배경 색 변화 대기",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549221006,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 판단 · 왼쪽 아래 배경 색 변화 확인 중",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549221124,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 배경 색 변화 감지 · 구역 탐색 시작",
+      "pendingActionId": null,
+      "phase": "region",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 3,
+    "timeMs": 1792549221141,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 21,
+          "g": 168,
+          "r": 29
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "region",
+        "roi": {
+          "height": 35.0,
+          "width": 1303.0,
+          "x": 328.0,
+          "y": 616.0
+        },
+        "source": "region_map",
+        "stats": {
+          "accepted_count": 1,
+          "components_found": 1,
+          "matching_pixels": 3815,
+          "rejected_too_large": 0,
+          "rejected_too_small": 0
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 5700
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 3,
+    "timeMs": 1792549221150,
+    "detail": {
+      "action": {
+        "purpose": "region:pixel:470:616",
+        "target": {
+          "point": {
+            "x": 524.0,
+            "y": 633.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 9,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549221150,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 3,
+    "timeMs": 1792549221168,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 1,
+          "components_found": 3,
+          "matching_pixels": 131,
+          "rejected_too_large": 0,
+          "rejected_too_small": 2
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 5702
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549221168,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 3,
+    "timeMs": 1792549221208,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 3,
+          "components_found": 4,
+          "matching_pixels": 364,
+          "rejected_too_large": 0,
+          "rejected_too_small": 1
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 5706
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549221209,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 3,
+    "timeMs": 1792549221224,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 3,
+          "components_found": 24,
+          "matching_pixels": 279,
+          "rejected_too_large": 0,
+          "rejected_too_small": 21
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 5708
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549221224,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 3,
+    "timeMs": 1792549221240,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 1,
+          "components_found": 1,
+          "matching_pixels": 273,
+          "rejected_too_large": 0,
+          "rejected_too_small": 0
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 5710
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549221241,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 3,
+    "timeMs": 1792549221256,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 0,
+          "components_found": 0,
+          "matching_pixels": 0,
+          "rejected_too_large": 0,
+          "rejected_too_small": 0
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 5712
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549221257,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 3,
+    "timeMs": 1792549221273,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 2,
+          "components_found": 2,
+          "matching_pixels": 1157,
+          "rejected_too_large": 0,
+          "rejected_too_small": 0
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 5713
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549221274,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 3,
+    "timeMs": 1792549221288,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 0,
+          "components_found": 0,
+          "matching_pixels": 0,
+          "rejected_too_large": 0,
+          "rejected_too_small": 0
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 5715
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549221289,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 3,
+    "timeMs": 1792549221307,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 0,
+          "components_found": 6,
+          "matching_pixels": 6,
+          "rejected_too_large": 0,
+          "rejected_too_small": 6
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 5717
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549221308,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 3,
+    "timeMs": 1792549221323,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 0,
+          "components_found": 0,
+          "matching_pixels": 0,
+          "rejected_too_large": 0,
+          "rejected_too_small": 0
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 5719
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549221325,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 3,
+    "timeMs": 1792549221566,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 4,
+          "components_found": 52,
+          "matching_pixels": 1332,
+          "rejected_too_large": 0,
+          "rejected_too_small": 48
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 5724
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549221566,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 3,
+    "timeMs": 1792549221956,
+    "detail": {
+      "action": {
+        "purpose": "seat:pixel:97:911",
+        "target": {
+          "point": {
+            "x": 106.0,
+            "y": 921.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 12,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549221956,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "1 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549221962,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "1 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549221978,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "1 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 3,
+    "timeMs": 1792549222058,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 4,
+          "components_found": 57,
+          "matching_pixels": 1021,
+          "rejected_too_large": 0,
+          "rejected_too_small": 53
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 5766
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 3,
+    "timeMs": 1792549222061,
+    "detail": {
+      "action": {
+        "purpose": "seat:pixel:122:919",
+        "target": {
+          "point": {
+            "x": 122.0,
+            "y": 920.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 15,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549222061,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "2 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549222083,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "2 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 3,
+    "timeMs": 1792549222134,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 4,
+          "components_found": 52,
+          "matching_pixels": 1332,
+          "rejected_too_large": 0,
+          "rejected_too_small": 48
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 5771
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549222134,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "2 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 3,
+    "timeMs": 1792549222172,
+    "detail": {
+      "action": {
+        "purpose": "seat:pixel:133:1091",
+        "target": {
+          "point": {
+            "x": 142.0,
+            "y": 1101.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 18,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549222173,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "3 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549222188,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "3 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 3,
+    "timeMs": 1792549222243,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 4,
+          "components_found": 57,
+          "matching_pixels": 1021,
+          "rejected_too_large": 0,
+          "rejected_too_small": 53
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 5778
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549222243,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "3 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 3,
+    "timeMs": 1792549222277,
+    "detail": {
+      "action": {
+        "target": {
+          "point": {
+            "x": 2607.0,
+            "y": 1654.0
+          },
+          "type": "point"
+        },
+        "type": "complete_selection"
+      },
+      "actionId": 21,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549222277,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "완료 버튼 클릭 전달 · 실행 종료",
+      "pendingActionId": null,
+      "phase": "completed",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 3,
+    "timeMs": 1792549234737,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "연결한 예매창으로 전환 중",
+      "pendingActionId": null,
+      "phase": "idle",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "started",
+    "runId": 4,
+    "timeMs": 1792549234852,
+    "detail": {
+      "deadlineMs": null,
+      "effectiveOptions": {
+        "automaticRefresh": false,
+        "cancellationNavigation": "none",
+        "hasRefreshTarget": false,
+        "regionPriority": true
+      },
+      "phase": "entry"
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 4,
+    "timeMs": 1792549234871,
+    "detail": {
+      "action": {
+        "purpose": "legacy_entry",
+        "target": {
+          "point": {
+            "x": 2116.0,
+            "y": 727.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 1,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 4,
+    "timeMs": 1792549234872,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "지정된 날짜·회차·다음 좌표 클릭 중",
+      "pendingActionId": null,
+      "phase": "entry",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 4,
+    "timeMs": 1792549234978,
+    "detail": {
+      "action": {
+        "purpose": "legacy_entry",
+        "target": {
+          "point": {
+            "x": 2185.0,
+            "y": 1194.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 2,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 4,
+    "timeMs": 1792549235082,
+    "detail": {
+      "action": {
+        "purpose": "legacy_entry",
+        "target": {
+          "point": {
+            "x": 2366.0,
+            "y": 1376.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 3,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 4,
+    "timeMs": 1792549235184,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "등록된 진입 버튼 처리 끝 · NOL 캡챠 첫 문자 입력에 기준 색을 저장합니다",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 4,
+    "timeMs": 1792549235666,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 판단 · 첫 문자 입력 대기 · 완료했다면 F9",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 4,
+    "timeMs": 1792549242064,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 판단 · 첫 입력 기준 저장됨 · 배경 색 변화 대기",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 4,
+    "timeMs": 1792549246095,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "예매창 복귀 대기 · 클릭 보류 · 확인되면 자동 재개",
+      "pendingActionId": null,
+      "phase": "paused",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 4,
+    "timeMs": 1792549247175,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 판단 · 첫 입력 기준 저장됨 · 배경 색 변화 대기",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 4,
+    "timeMs": 1792549248443,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 판단 · 왼쪽 아래 배경 색 변화 확인 중",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 4,
+    "timeMs": 1792549248572,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 배경 색 변화 감지 · 구역 탐색 시작",
+      "pendingActionId": null,
+      "phase": "region",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 4,
+    "timeMs": 1792549248587,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 21,
+          "g": 168,
+          "r": 29
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "region",
+        "roi": {
+          "height": 35.0,
+          "width": 1303.0,
+          "x": 328.0,
+          "y": 616.0
+        },
+        "source": "region_map",
+        "stats": {
+          "accepted_count": 0,
+          "components_found": 0,
+          "matching_pixels": 0,
+          "rejected_too_large": 0,
+          "rejected_too_small": 0
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 7122
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 4,
+    "timeMs": 1792549248587,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "지정한 구역 색상과 확인된 무대 위치를 기다리는 중",
+      "pendingActionId": null,
+      "phase": "region",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 4,
+    "timeMs": 1792549251268,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "예매창 복귀 대기 · 클릭 보류 · 확인되면 자동 재개",
+      "pendingActionId": null,
+      "phase": "paused",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 4,
+    "timeMs": 1792549270820,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "중지했습니다.",
+      "pendingActionId": null,
+      "phase": "stopped",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 4,
+    "timeMs": 1792549279700,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "연결한 예매창으로 전환 중",
+      "pendingActionId": null,
+      "phase": "idle",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "started",
+    "runId": 5,
+    "timeMs": 1792549279756,
+    "detail": {
+      "deadlineMs": null,
+      "effectiveOptions": {
+        "automaticRefresh": false,
+        "cancellationNavigation": "none",
+        "hasRefreshTarget": false,
+        "regionPriority": true
+      },
+      "phase": "entry"
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 5,
+    "timeMs": 1792549279768,
+    "detail": {
+      "action": {
+        "purpose": "legacy_entry",
+        "target": {
+          "point": {
+            "x": 2116.0,
+            "y": 727.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 1,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549279768,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "지정된 날짜·회차·다음 좌표 클릭 중",
+      "pendingActionId": null,
+      "phase": "entry",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 5,
+    "timeMs": 1792549280276,
+    "detail": {
+      "action": {
+        "purpose": "legacy_entry",
+        "target": {
+          "point": {
+            "x": 2185.0,
+            "y": 1194.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 2,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 5,
+    "timeMs": 1792549280794,
+    "detail": {
+      "action": {
+        "purpose": "legacy_entry",
+        "target": {
+          "point": {
+            "x": 2366.0,
+            "y": 1376.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 3,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549281297,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "등록된 진입 버튼 처리 끝 · NOL 캡챠 첫 문자 입력에 기준 색을 저장합니다",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549281327,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 판단 · 첫 문자 입력 대기 · 완료했다면 F9",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549287363,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 판단 · 첫 입력 기준 저장됨 · 배경 색 변화 대기",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549289646,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 판단 · 왼쪽 아래 배경 색 변화 확인 중",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549289762,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 배경 색 변화 감지 · 구역 탐색 시작",
+      "pendingActionId": null,
+      "phase": "region",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 5,
+    "timeMs": 1792549289776,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 21,
+          "g": 168,
+          "r": 29
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "region",
+        "roi": {
+          "height": 35.0,
+          "width": 1303.0,
+          "x": 328.0,
+          "y": 616.0
+        },
+        "source": "region_map",
+        "stats": {
+          "accepted_count": 1,
+          "components_found": 1,
+          "matching_pixels": 3815,
+          "rejected_too_large": 0,
+          "rejected_too_small": 0
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 8375
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 5,
+    "timeMs": 1792549289793,
+    "detail": {
+      "action": {
+        "purpose": "region:pixel:470:616",
+        "target": {
+          "point": {
+            "x": 524.0,
+            "y": 633.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 7,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549289793,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549289804,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "Enter·구역 클릭 뒤 새 화면 대기 · 계속 확인 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 5,
+    "timeMs": 1792549289827,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 1,
+          "components_found": 3,
+          "matching_pixels": 131,
+          "rejected_too_large": 0,
+          "rejected_too_small": 2
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 8377
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549289828,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 5,
+    "timeMs": 1792549289862,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 2,
+          "components_found": 3,
+          "matching_pixels": 313,
+          "rejected_too_large": 0,
+          "rejected_too_small": 1
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 8381
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549289863,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 5,
+    "timeMs": 1792549289879,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 2,
+          "components_found": 40,
+          "matching_pixels": 460,
+          "rejected_too_large": 0,
+          "rejected_too_small": 38
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 8383
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549289879,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 5,
+    "timeMs": 1792549289894,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 0,
+          "components_found": 1,
+          "matching_pixels": 1,
+          "rejected_too_large": 0,
+          "rejected_too_small": 1
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 8385
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549289895,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 5,
+    "timeMs": 1792549289911,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 0,
+          "components_found": 0,
+          "matching_pixels": 0,
+          "rejected_too_large": 0,
+          "rejected_too_small": 0
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 8387
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549289911,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 5,
+    "timeMs": 1792549289941,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 1,
+          "components_found": 1,
+          "matching_pixels": 460,
+          "rejected_too_large": 0,
+          "rejected_too_small": 0
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 8390
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549289942,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 5,
+    "timeMs": 1792549289958,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 0,
+          "components_found": 6,
+          "matching_pixels": 6,
+          "rejected_too_large": 0,
+          "rejected_too_small": 6
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 8392
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549289959,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 5,
+    "timeMs": 1792549289974,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 3,
+          "components_found": 13,
+          "matching_pixels": 1697,
+          "rejected_too_large": 0,
+          "rejected_too_small": 10
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 8394
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549289975,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 5,
+    "timeMs": 1792549289990,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 0,
+          "components_found": 0,
+          "matching_pixels": 0,
+          "rejected_too_large": 0,
+          "rejected_too_small": 0
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 8396
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549289990,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549290312,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "현재 선택 가능한 좌석 없음 · 같은 구역에서 계속 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 5,
+    "timeMs": 1792549291274,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 4,
+          "components_found": 52,
+          "matching_pixels": 1332,
+          "rejected_too_large": 0,
+          "rejected_too_small": 48
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 8464
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 5,
+    "timeMs": 1792549291281,
+    "detail": {
+      "action": {
+        "purpose": "seat:pixel:97:911",
+        "target": {
+          "point": {
+            "x": 106.0,
+            "y": 921.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 14,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549291281,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "1 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549291300,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "1 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 5,
+    "timeMs": 1792549291382,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 4,
+          "components_found": 57,
+          "matching_pixels": 1021,
+          "rejected_too_large": 0,
+          "rejected_too_small": 53
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 8476
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549291382,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "1 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549291749,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "1 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 5,
+    "timeMs": 1792549291787,
+    "detail": {
+      "action": {
+        "purpose": "seat:pixel:122:919",
+        "target": {
+          "point": {
+            "x": 122.0,
+            "y": 920.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 17,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549291788,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "2 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549291795,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "2 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549291827,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "2 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 5,
+    "timeMs": 1792549291878,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 4,
+          "components_found": 52,
+          "matching_pixels": 1332,
+          "rejected_too_large": 0,
+          "rejected_too_small": 48
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 8487
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549291879,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "2 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 5,
+    "timeMs": 1792549292297,
+    "detail": {
+      "action": {
+        "purpose": "seat:pixel:133:1091",
+        "target": {
+          "point": {
+            "x": 142.0,
+            "y": 1101.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 20,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549292298,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "3 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549292318,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "3 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 5,
+    "timeMs": 1792549292394,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 4,
+          "components_found": 57,
+          "matching_pixels": 1021,
+          "rejected_too_large": 0,
+          "rejected_too_small": 53
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 8530
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549292394,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "3 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 5,
+    "timeMs": 1792549292805,
+    "detail": {
+      "action": {
+        "target": {
+          "point": {
+            "x": 2607.0,
+            "y": 1654.0
+          },
+          "type": "point"
+        },
+        "type": "complete_selection"
+      },
+      "actionId": 23,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549292807,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "완료 버튼 클릭 전달 · 실행 종료",
+      "pendingActionId": null,
+      "phase": "completed",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 5,
+    "timeMs": 1792549312885,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "연결한 예매창으로 전환 중",
+      "pendingActionId": null,
+      "phase": "idle",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "started",
+    "runId": 6,
+    "timeMs": 1792549312939,
+    "detail": {
+      "deadlineMs": null,
+      "effectiveOptions": {
+        "automaticRefresh": false,
+        "cancellationNavigation": "none",
+        "hasRefreshTarget": false,
+        "regionPriority": true
+      },
+      "phase": "entry"
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 6,
+    "timeMs": 1792549313070,
+    "detail": {
+      "action": {
+        "purpose": "legacy_entry",
+        "target": {
+          "point": {
+            "x": 2116.0,
+            "y": 727.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 1,
+      "delivered": false,
+      "error": "[target_hit_test_unavailable] 지정 위치의 실제 창을 확인하지 못했습니다. Dock·메뉴를 닫고 예매창 위에서 다시 F8을 누르세요. 계속되면 앱의 손쉬운 사용 권한을 확인하세요."
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549313071,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "예매창 복귀 대기 · 클릭 보류 · 확인되면 자동 재개",
+      "pendingActionId": null,
+      "phase": "paused",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 6,
+    "timeMs": 1792549313358,
+    "detail": {
+      "action": {
+        "purpose": "legacy_entry",
+        "target": {
+          "point": {
+            "x": 2116.0,
+            "y": 727.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 3,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549313359,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "지정된 날짜·회차·다음 좌표 클릭 중",
+      "pendingActionId": null,
+      "phase": "entry",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 6,
+    "timeMs": 1792549313866,
+    "detail": {
+      "action": {
+        "purpose": "legacy_entry",
+        "target": {
+          "point": {
+            "x": 2185.0,
+            "y": 1194.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 4,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 6,
+    "timeMs": 1792549314379,
+    "detail": {
+      "action": {
+        "purpose": "legacy_entry",
+        "target": {
+          "point": {
+            "x": 2366.0,
+            "y": 1376.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 5,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549314883,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "등록된 진입 버튼 처리 끝 · NOL 캡챠 첫 문자 입력에 기준 색을 저장합니다",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549314898,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 판단 · 첫 문자 입력 대기 · 완료했다면 F9",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549320958,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 판단 · 첫 입력 수신 · 기준 화면 읽는 중",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549320976,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 판단 · 첫 입력 기준 저장됨 · 배경 색 변화 대기",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549323761,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 판단 · 왼쪽 아래 배경 색 변화 확인 중",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549323892,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 배경 색 변화 감지 · 구역 탐색 시작",
+      "pendingActionId": null,
+      "phase": "region",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 6,
+    "timeMs": 1792549323905,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 21,
+          "g": 168,
+          "r": 29
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "region",
+        "roi": {
+          "height": 35.0,
+          "width": 1303.0,
+          "x": 328.0,
+          "y": 616.0
+        },
+        "source": "region_map",
+        "stats": {
+          "accepted_count": 1,
+          "components_found": 1,
+          "matching_pixels": 3815,
+          "rejected_too_large": 0,
+          "rejected_too_small": 0
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 10457
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 6,
+    "timeMs": 1792549323917,
+    "detail": {
+      "action": {
+        "purpose": "region:pixel:470:616",
+        "target": {
+          "point": {
+            "x": 524.0,
+            "y": 633.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 9,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549323917,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 6,
+    "timeMs": 1792549323940,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 1,
+          "components_found": 3,
+          "matching_pixels": 131,
+          "rejected_too_large": 0,
+          "rejected_too_small": 2
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 10460
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549323941,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 6,
+    "timeMs": 1792549323961,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 5,
+          "components_found": 6,
+          "matching_pixels": 758,
+          "rejected_too_large": 0,
+          "rejected_too_small": 1
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 10463
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549323962,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 6,
+    "timeMs": 1792549323979,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 8,
+          "components_found": 27,
+          "matching_pixels": 1031,
+          "rejected_too_large": 0,
+          "rejected_too_small": 19
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 10465
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549323980,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 6,
+    "timeMs": 1792549323994,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 4,
+          "components_found": 34,
+          "matching_pixels": 267,
+          "rejected_too_large": 0,
+          "rejected_too_small": 30
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 10467
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549323994,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 6,
+    "timeMs": 1792549324015,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 1,
+          "components_found": 1,
+          "matching_pixels": 306,
+          "rejected_too_large": 0,
+          "rejected_too_small": 0
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 10468
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549324016,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 6,
+    "timeMs": 1792549324033,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 1,
+          "components_found": 1,
+          "matching_pixels": 386,
+          "rejected_too_large": 0,
+          "rejected_too_small": 0
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 10470
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549324033,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 6,
+    "timeMs": 1792549324048,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 0,
+          "components_found": 2,
+          "matching_pixels": 2,
+          "rejected_too_large": 0,
+          "rejected_too_small": 2
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 10472
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549324049,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 6,
+    "timeMs": 1792549324064,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 0,
+          "components_found": 0,
+          "matching_pixels": 0,
+          "rejected_too_large": 0,
+          "rejected_too_small": 0
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 10473
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549324065,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 6,
+    "timeMs": 1792549324082,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 0,
+          "components_found": 9,
+          "matching_pixels": 9,
+          "rejected_too_large": 0,
+          "rejected_too_small": 9
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 10475
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549324083,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 6,
+    "timeMs": 1792549324097,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 0,
+          "components_found": 0,
+          "matching_pixels": 0,
+          "rejected_too_large": 0,
+          "rejected_too_small": 0
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 10477
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549324097,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 6,
+    "timeMs": 1792549324331,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 4,
+          "components_found": 52,
+          "matching_pixels": 1332,
+          "rejected_too_large": 0,
+          "rejected_too_small": 48
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 10483
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549324332,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 6,
+    "timeMs": 1792549324422,
+    "detail": {
+      "action": {
+        "purpose": "seat:pixel:97:911",
+        "target": {
+          "point": {
+            "x": 106.0,
+            "y": 921.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 12,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549324422,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "1 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549324430,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "1 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549324448,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "1 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 6,
+    "timeMs": 1792549324509,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 4,
+          "components_found": 57,
+          "matching_pixels": 1021,
+          "rejected_too_large": 0,
+          "rejected_too_small": 53
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 10490
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549324509,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "1 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 6,
+    "timeMs": 1792549324931,
+    "detail": {
+      "action": {
+        "purpose": "seat:pixel:122:919",
+        "target": {
+          "point": {
+            "x": 122.0,
+            "y": 920.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 15,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549324931,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "2 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549324948,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "2 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 6,
+    "timeMs": 1792549325042,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 4,
+          "components_found": 52,
+          "matching_pixels": 1332,
+          "rejected_too_large": 0,
+          "rejected_too_small": 48
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 10526
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549325042,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "2 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 6,
+    "timeMs": 1792549325441,
+    "detail": {
+      "action": {
+        "purpose": "seat:pixel:133:1091",
+        "target": {
+          "point": {
+            "x": 142.0,
+            "y": 1101.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 18,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549325443,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "3 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549325456,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "3 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549325474,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "3 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 6,
+    "timeMs": 1792549325540,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 4,
+          "components_found": 57,
+          "matching_pixels": 1021,
+          "rejected_too_large": 0,
+          "rejected_too_small": 53
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 10539
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549325541,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "3 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549325871,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "3 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 6,
+    "timeMs": 1792549325962,
+    "detail": {
+      "action": {
+        "target": {
+          "point": {
+            "x": 2607.0,
+            "y": 1654.0
+          },
+          "type": "point"
+        },
+        "type": "complete_selection"
+      },
+      "actionId": 21,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549325962,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "완료 버튼 클릭 전달 · 실행 종료",
+      "pendingActionId": null,
+      "phase": "completed",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549386668,
+    "detail": {
+      "captureArmed": true,
+      "captureError": null,
+      "captureState": "armed",
+      "message": "날짜 버튼 · 예매창의 대상 위에서 F8",
+      "pendingActionId": null,
+      "phase": "idle",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549394490,
+    "detail": {
+      "captureArmed": true,
+      "captureError": null,
+      "captureState": "armed",
+      "message": "날짜 버튼 · 예매창의 대상 위에서 F8",
+      "pendingActionId": null,
+      "phase": "idle",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549398365,
+    "detail": {
+      "captureArmed": true,
+      "captureError": null,
+      "captureState": "reading",
+      "message": "F8 수신 · 날짜 버튼 읽는 중",
+      "pendingActionId": null,
+      "phase": "idle",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549398366,
+    "detail": {
+      "captureArmed": true,
+      "captureError": null,
+      "captureState": "reading",
+      "message": "날짜 버튼 · 예매창 화면 읽는 중",
+      "pendingActionId": null,
+      "phase": "idle",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549398389,
+    "detail": {
+      "captureArmed": true,
+      "captureError": null,
+      "captureState": "reading",
+      "message": "날짜 버튼 · 좌표 저장 중",
+      "pendingActionId": null,
+      "phase": "idle",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549398396,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "captured",
+      "message": "날짜 버튼 지정 완료 · (2662, 903) · #FFFFFF",
+      "pendingActionId": null,
+      "phase": "idle",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549403785,
+    "detail": {
+      "captureArmed": true,
+      "captureError": null,
+      "captureState": "armed",
+      "message": "회차 버튼 · 예매창의 대상 위에서 F8",
+      "pendingActionId": null,
+      "phase": "idle",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549406162,
+    "detail": {
+      "captureArmed": true,
+      "captureError": null,
+      "captureState": "reading",
+      "message": "F8 수신 · 회차 버튼 읽는 중",
+      "pendingActionId": null,
+      "phase": "idle",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549406164,
+    "detail": {
+      "captureArmed": true,
+      "captureError": null,
+      "captureState": "reading",
+      "message": "회차 버튼 · 예매창 화면 읽는 중",
+      "pendingActionId": null,
+      "phase": "idle",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549406208,
+    "detail": {
+      "captureArmed": true,
+      "captureError": null,
+      "captureState": "reading",
+      "message": "회차 버튼 · 좌표 저장 중",
+      "pendingActionId": null,
+      "phase": "idle",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549406214,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "captured",
+      "message": "회차 버튼 지정 완료 · (2217, 1254) · #4153FF",
+      "pendingActionId": null,
+      "phase": "idle",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549409905,
+    "detail": {
+      "captureArmed": true,
+      "captureError": null,
+      "captureState": "armed",
+      "message": "다음 버튼 · 예매창의 대상 위에서 F8",
+      "pendingActionId": null,
+      "phase": "idle",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549412220,
+    "detail": {
+      "captureArmed": true,
+      "captureError": null,
+      "captureState": "reading",
+      "message": "F8 수신 · 다음 버튼 읽는 중",
+      "pendingActionId": null,
+      "phase": "idle",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549412222,
+    "detail": {
+      "captureArmed": true,
+      "captureError": null,
+      "captureState": "reading",
+      "message": "다음 버튼 · 예매창 화면 읽는 중",
+      "pendingActionId": null,
+      "phase": "idle",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549412251,
+    "detail": {
+      "captureArmed": true,
+      "captureError": null,
+      "captureState": "reading",
+      "message": "다음 버튼 · 좌표 저장 중",
+      "pendingActionId": null,
+      "phase": "idle",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549412258,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "captured",
+      "message": "다음 버튼 지정 완료 · (2304, 1503) · #4153FF",
+      "pendingActionId": null,
+      "phase": "idle",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 6,
+    "timeMs": 1792549416274,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "captured",
+      "message": "연결한 예매창으로 전환 중",
+      "pendingActionId": null,
+      "phase": "idle",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "started",
+    "runId": 7,
+    "timeMs": 1792549416377,
+    "detail": {
+      "deadlineMs": null,
+      "effectiveOptions": {
+        "automaticRefresh": false,
+        "cancellationNavigation": "none",
+        "hasRefreshTarget": false,
+        "regionPriority": true
+      },
+      "phase": "entry"
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 7,
+    "timeMs": 1792549416380,
+    "detail": {
+      "action": {
+        "purpose": "legacy_entry",
+        "target": {
+          "point": {
+            "x": 2662.0,
+            "y": 903.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 1,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549416381,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "지정된 날짜·회차·다음 좌표 클릭 중",
+      "pendingActionId": null,
+      "phase": "entry",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 7,
+    "timeMs": 1792549416891,
+    "detail": {
+      "action": {
+        "purpose": "legacy_entry",
+        "target": {
+          "point": {
+            "x": 2217.0,
+            "y": 1254.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 2,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 7,
+    "timeMs": 1792549417399,
+    "detail": {
+      "action": {
+        "purpose": "legacy_entry",
+        "target": {
+          "point": {
+            "x": 2304.0,
+            "y": 1503.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 3,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549417907,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "등록된 진입 버튼 처리 끝 · NOL 캡챠 첫 문자 입력에 기준 색을 저장합니다",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549417939,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 판단 · 첫 문자 입력 대기 · 완료했다면 F9",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549423962,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 판단 · 첫 입력 기준 저장됨 · 배경 색 변화 대기",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549434016,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 판단 · 왼쪽 아래 배경 색 변화 확인 중",
+      "pendingActionId": null,
+      "phase": "captcha",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549434135,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "NOL 캡챠 배경 색 변화 감지 · 구역 탐색 시작",
+      "pendingActionId": null,
+      "phase": "region",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 7,
+    "timeMs": 1792549434147,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 21,
+          "g": 168,
+          "r": 29
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "region",
+        "roi": {
+          "height": 35.0,
+          "width": 1303.0,
+          "x": 328.0,
+          "y": 616.0
+        },
+        "source": "region_map",
+        "stats": {
+          "accepted_count": 2,
+          "components_found": 2,
+          "matching_pixels": 1418,
+          "rejected_too_large": 0,
+          "rejected_too_small": 0
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 13949
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 7,
+    "timeMs": 1792549434160,
+    "detail": {
+      "action": {
+        "purpose": "region:pixel:425:616",
+        "target": {
+          "point": {
+            "x": 443.0,
+            "y": 625.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 7,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549434160,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 7,
+    "timeMs": 1792549434188,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 139,
+          "components_found": 930,
+          "matching_pixels": 2297,
+          "rejected_too_large": 0,
+          "rejected_too_small": 791
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 13951
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549434189,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 7,
+    "timeMs": 1792549434442,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 0,
+          "components_found": 0,
+          "matching_pixels": 0,
+          "rejected_too_large": 0,
+          "rejected_too_small": 0
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 13970
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549434442,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "구역 클릭 전달됨 · 새 화면에서 좌석 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549434665,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "현재 선택 가능한 좌석 없음 · 같은 구역에서 계속 탐색 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 7,
+    "timeMs": 1792549439562,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 0,
+          "components_found": 0,
+          "matching_pixels": 0,
+          "rejected_too_large": 0,
+          "rejected_too_small": 0
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 14002
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 7,
+    "timeMs": 1792549440414,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 139,
+          "components_found": 930,
+          "matching_pixels": 2297,
+          "rejected_too_large": 0,
+          "rejected_too_small": 791
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 14006
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 7,
+    "timeMs": 1792549440417,
+    "detail": {
+      "action": {
+        "purpose": "seat:pixel:425:610",
+        "target": {
+          "point": {
+            "x": 442.0,
+            "y": 610.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 49,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549440417,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "1 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549440443,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "1 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549440567,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "1 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549440601,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "1 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "visual_dialog_suspected",
+    "runId": 7,
+    "timeMs": 1792549440614,
+    "detail": {
+      "actionId": 49,
+      "centralChangedBasisPoints": 2307,
+      "changedBasisPoints": 2041,
+      "sequence": 14022,
+      "surroundingDarkenedBasisPoints": 517,
+      "trigger": "central_change"
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 7,
+    "timeMs": 1792549440622,
+    "detail": {
+      "action": {
+        "key": "escape",
+        "purpose": "dismiss_known_seat_conflict",
+        "type": "key"
+      },
+      "actionId": 52,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549440624,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "안내창 후보 처리됨 · 화면 복귀를 감지하면 자동으로 탐색합니다",
+      "pendingActionId": null,
+      "phase": "conflict",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549440649,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "안내창 후보 처리됨 · 화면 복귀를 감지하면 자동으로 탐색합니다",
+      "pendingActionId": null,
+      "phase": "conflict",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549440697,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "안내창 후보 처리됨 · 화면 복귀를 감지하면 자동으로 탐색합니다",
+      "pendingActionId": null,
+      "phase": "conflict",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549441959,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "안내창 후보 처리됨 · 화면 복귀를 감지하면 자동으로 탐색합니다",
+      "pendingActionId": null,
+      "phase": "conflict",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "visual_dialog_restored",
+    "runId": 7,
+    "timeMs": 1792549441972,
+    "detail": {
+      "sequence": 14045
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549441972,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "좌석 화면을 읽고 후보를 찾는 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 7,
+    "timeMs": 1792549441987,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 139,
+          "components_found": 930,
+          "matching_pixels": 2297,
+          "rejected_too_large": 0,
+          "rejected_too_small": 791
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 14046
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 7,
+    "timeMs": 1792549441996,
+    "detail": {
+      "action": {
+        "purpose": "seat:pixel:715:610",
+        "target": {
+          "point": {
+            "x": 732.0,
+            "y": 610.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 55,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549441997,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "1 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549442012,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "1 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 7,
+    "timeMs": 1792549442504,
+    "detail": {
+      "action": {
+        "purpose": "seat:pixel:423:612",
+        "target": {
+          "point": {
+            "x": 423.0,
+            "y": 625.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 58,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549442506,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "2 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549442517,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "2 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549442543,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "2 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 7,
+    "timeMs": 1792549443017,
+    "detail": {
+      "action": {
+        "purpose": "seat:pixel:752:612",
+        "target": {
+          "point": {
+            "x": 752.0,
+            "y": 627.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 61,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549443019,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "3 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549443051,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "3 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549443174,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "3 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549443214,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "3 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "visual_dialog_suspected",
+    "runId": 7,
+    "timeMs": 1792549443224,
+    "detail": {
+      "actionId": 61,
+      "centralChangedBasisPoints": 8096,
+      "changedBasisPoints": 7604,
+      "sequence": 14072,
+      "surroundingDarkenedBasisPoints": 58,
+      "trigger": "central_change"
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 7,
+    "timeMs": 1792549443228,
+    "detail": {
+      "action": {
+        "key": "escape",
+        "purpose": "dismiss_known_seat_conflict",
+        "type": "key"
+      },
+      "actionId": 64,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549443228,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "안내창 후보 처리됨 · 화면 복귀를 감지하면 자동으로 탐색합니다",
+      "pendingActionId": null,
+      "phase": "conflict",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549443268,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "안내창 후보 처리됨 · 화면 복귀를 감지하면 자동으로 탐색합니다",
+      "pendingActionId": null,
+      "phase": "conflict",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549443371,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "안내창 후보 처리됨 · 화면 복귀를 감지하면 자동으로 탐색합니다",
+      "pendingActionId": null,
+      "phase": "conflict",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549446131,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "안내창 후보 처리됨 · 화면 복귀를 감지하면 자동으로 탐색합니다",
+      "pendingActionId": null,
+      "phase": "conflict",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "visual_dialog_restored",
+    "runId": 7,
+    "timeMs": 1792549446146,
+    "detail": {
+      "sequence": 14092
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549446146,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "좌석 화면을 읽고 후보를 찾는 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 7,
+    "timeMs": 1792549446163,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 139,
+          "components_found": 930,
+          "matching_pixels": 2297,
+          "rejected_too_large": 0,
+          "rejected_too_small": 791
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 14093
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 7,
+    "timeMs": 1792549446169,
+    "detail": {
+      "action": {
+        "purpose": "seat:pixel:741:637",
+        "target": {
+          "point": {
+            "x": 742.0,
+            "y": 637.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 67,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549446170,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "3 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549446202,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "3 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549446337,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "3 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "visual_dialog_suspected",
+    "runId": 7,
+    "timeMs": 1792549446368,
+    "detail": {
+      "actionId": 67,
+      "centralChangedBasisPoints": 8096,
+      "changedBasisPoints": 7607,
+      "sequence": 14112,
+      "surroundingDarkenedBasisPoints": 58,
+      "trigger": "central_change"
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 7,
+    "timeMs": 1792549446369,
+    "detail": {
+      "action": {
+        "key": "escape",
+        "purpose": "dismiss_known_seat_conflict",
+        "type": "key"
+      },
+      "actionId": 70,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549446370,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "안내창 후보 처리됨 · 화면 복귀를 감지하면 자동으로 탐색합니다",
+      "pendingActionId": null,
+      "phase": "conflict",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549446406,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "안내창 후보 처리됨 · 화면 복귀를 감지하면 자동으로 탐색합니다",
+      "pendingActionId": null,
+      "phase": "conflict",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549446560,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "안내창 후보 처리됨 · 화면 복귀를 감지하면 자동으로 탐색합니다",
+      "pendingActionId": null,
+      "phase": "conflict",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549449165,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "안내창 후보 처리됨 · 화면 복귀를 감지하면 자동으로 탐색합니다",
+      "pendingActionId": null,
+      "phase": "conflict",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549449707,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "안내창 후보 처리됨 · 화면 복귀를 감지하면 자동으로 탐색합니다",
+      "pendingActionId": null,
+      "phase": "conflict",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549450459,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "안내창 후보 처리됨 · 화면 복귀를 감지하면 자동으로 탐색합니다",
+      "pendingActionId": null,
+      "phase": "conflict",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549450491,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "안내창 후보 처리됨 · 화면 복귀를 감지하면 자동으로 탐색합니다",
+      "pendingActionId": null,
+      "phase": "conflict",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549450594,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "안내창 후보 처리됨 · 화면 복귀를 감지하면 자동으로 탐색합니다",
+      "pendingActionId": null,
+      "phase": "conflict",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549450615,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "안내창 후보 처리됨 · 화면 복귀를 감지하면 자동으로 탐색합니다",
+      "pendingActionId": null,
+      "phase": "conflict",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549450634,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "안내창 후보 처리됨 · 화면 복귀를 감지하면 자동으로 탐색합니다",
+      "pendingActionId": null,
+      "phase": "conflict",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549450748,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "안내창 후보 처리됨 · 화면 복귀를 감지하면 자동으로 탐색합니다",
+      "pendingActionId": null,
+      "phase": "conflict",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549450757,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "안내창 후보 처리됨 · 화면 복귀를 감지하면 자동으로 탐색합니다",
+      "pendingActionId": null,
+      "phase": "conflict",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549450768,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "안내창 후보 처리됨 · 화면 복귀를 감지하면 자동으로 탐색합니다",
+      "pendingActionId": null,
+      "phase": "conflict",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549453344,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "예매창 복귀 대기 · 클릭 보류 · 확인되면 자동 재개",
+      "pendingActionId": null,
+      "phase": "paused",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549463097,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "안내창 후보 처리됨 · 화면 복귀를 감지하면 자동으로 탐색합니다",
+      "pendingActionId": null,
+      "phase": "conflict",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549464380,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "안내창 후보 처리됨 · 화면 복귀를 감지하면 자동으로 탐색합니다",
+      "pendingActionId": null,
+      "phase": "conflict",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549464433,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "안내창 후보 처리됨 · 화면 복귀를 감지하면 자동으로 탐색합니다",
+      "pendingActionId": null,
+      "phase": "conflict",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "visual_dialog_restored",
+    "runId": 7,
+    "timeMs": 1792549464460,
+    "detail": {
+      "sequence": 14631
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549464461,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "좌석 화면을 읽고 후보를 찾는 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 7,
+    "timeMs": 1792549464476,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 139,
+          "components_found": 930,
+          "matching_pixels": 2297,
+          "rejected_too_large": 0,
+          "rejected_too_small": 791
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 14631
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 7,
+    "timeMs": 1792549464483,
+    "detail": {
+      "action": {
+        "purpose": "seat:pixel:713:638",
+        "target": {
+          "point": {
+            "x": 713.0,
+            "y": 641.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 74,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549464483,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "3 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549464503,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "3 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549464704,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "3 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "visual_dialog_suspected",
+    "runId": 7,
+    "timeMs": 1792549464740,
+    "detail": {
+      "actionId": 74,
+      "centralChangedBasisPoints": 2307,
+      "changedBasisPoints": 2011,
+      "sequence": 14644,
+      "surroundingDarkenedBasisPoints": 497,
+      "trigger": "central_change"
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 7,
+    "timeMs": 1792549464741,
+    "detail": {
+      "action": {
+        "key": "escape",
+        "purpose": "dismiss_known_seat_conflict",
+        "type": "key"
+      },
+      "actionId": 77,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549464742,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "안내창 후보 처리됨 · 화면 복귀를 감지하면 자동으로 탐색합니다",
+      "pendingActionId": null,
+      "phase": "conflict",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549466428,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "안내창 후보 처리됨 · 화면 복귀를 감지하면 자동으로 탐색합니다",
+      "pendingActionId": null,
+      "phase": "conflict",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "visual_dialog_restored",
+    "runId": 7,
+    "timeMs": 1792549466440,
+    "detail": {
+      "sequence": 14683
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549466440,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "좌석 화면을 읽고 후보를 찾는 중",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "vision_scan",
+    "runId": 7,
+    "timeMs": 1792549466455,
+    "detail": {
+      "diagnostic": {
+        "awaitingRefreshImage": false,
+        "color": {
+          "b": 180,
+          "g": 224,
+          "r": 185
+        },
+        "frame": {
+          "height": 1780,
+          "scaleX": 2.0,
+          "scaleY": 2.0,
+          "width": 3024
+        },
+        "phase": "seats",
+        "roi": {
+          "height": 1308.0,
+          "width": 2057.0,
+          "x": 0.0,
+          "y": 420.0
+        },
+        "source": "global",
+        "stats": {
+          "accepted_count": 139,
+          "components_found": 930,
+          "matching_pixels": 2297,
+          "rejected_too_large": 0,
+          "rejected_too_small": 791
+        },
+        "tolerance": 12
+      },
+      "frameSequence": 14684
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 7,
+    "timeMs": 1792549466463,
+    "detail": {
+      "action": {
+        "purpose": "seat:pixel:750:644",
+        "target": {
+          "point": {
+            "x": 751.0,
+            "y": 644.0
+          },
+          "type": "point"
+        },
+        "type": "click"
+      },
+      "actionId": 80,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549466463,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "3 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549466491,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "3 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549466576,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "3 / 3석 선택 추정 · 클릭 전달 후 계속 진행",
+      "pendingActionId": null,
+      "phase": "seats",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "visual_dialog_suspected",
+    "runId": 7,
+    "timeMs": 1792549466587,
+    "detail": {
+      "actionId": 80,
+      "centralChangedBasisPoints": 2307,
+      "changedBasisPoints": 2011,
+      "sequence": 14695,
+      "surroundingDarkenedBasisPoints": 497,
+      "trigger": "central_change"
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "input",
+    "runId": 7,
+    "timeMs": 1792549466588,
+    "detail": {
+      "action": {
+        "key": "escape",
+        "purpose": "dismiss_known_seat_conflict",
+        "type": "key"
+      },
+      "actionId": 83,
+      "delivered": true,
+      "error": ""
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549466589,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "안내창 후보 처리됨 · 화면 복귀를 감지하면 자동으로 탐색합니다",
+      "pendingActionId": null,
+      "phase": "conflict",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549468450,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "예매창 복귀 대기 · 클릭 보류 · 확인되면 자동 재개",
+      "pendingActionId": null,
+      "phase": "paused",
+      "waitingForSeatArea": false
+    }
+  },
+  {
+    "appVersion": "0.5.9",
+    "kind": "state",
+    "runId": 7,
+    "timeMs": 1792549469494,
+    "detail": {
+      "captureArmed": false,
+      "captureError": null,
+      "captureState": "idle",
+      "message": "중지했습니다.",
+      "pendingActionId": null,
+      "phase": "stopped",
+      "waitingForSeatArea": false
+    }
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "cases": 130,
+  "allRgbaBytesMatch": true,
+  "manifestMetadataOrderOrNotesNotByteIdentical": true,
+  "note": "Fixture raw pixels are exactly reproducible with system CoreText on this OS/font installation; no production template read."
+}

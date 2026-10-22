@@ -1,0 +1,18 @@
+{
+  "../AGENTS.md": {
+    "sha256": "916ca869400ec78ecc76cab04d9b9af51f23543d2d92010471330200457e2db5",
+    "unchanged": true
+  },
+  "AGENTS.md": {
+    "sha256": "afef8f4c6854c485ead4b4ecf2389c5271d690ef1360ff0fbfa14e19bf305707",
+    "unchanged": true
+  },
+  "../Integrated-Macro-macOS-v0.5.9.zip": {
+    "sha256": "b0a65809cb6824667d0ec57b85370fafc3d5500ba10a87b9ca46c547a442f1c6",
+    "unchanged": true
+  },
+  "../Integrated-Macro-macOS-v0.5.9/Integrated Macro.app/Contents/MacOS/integrated-macro": {
+    "sha256": "714d951bed862af5ccde9d73f1c6d66c14b8eb793086fb197e071e7636d14988",
+    "unchanged": true
+  }
+}

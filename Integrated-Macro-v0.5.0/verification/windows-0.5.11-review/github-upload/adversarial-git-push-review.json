@@ -1,0 +1,53 @@
+{
+  "scope": "Independent read-only inspection of the new local Git repository, its HEAD/index/worktree, and preparation/network reports. No external push or authentication performed by reviewer.",
+  "repository": "/Users/inrjin/Documents/機械人間/Integrated-Macro-Windows-v0.5.11-Git-Push",
+  "branch": "windows-build-0.5.11",
+  "head": "bec162eac85af46019e714e0b3d9153cd338a4e9",
+  "commitCount": 1,
+  "author": "Codex <codex@local.invalid>",
+  "committer": "Codex <codex@local.invalid>",
+  "remote": "https://github.com/inrjin/macro.git",
+  "files": {
+    ".github/workflows/build-windows.yml": {
+      "sha256": "56a28fddd11d06314ee9a8127fdbd123842e4d89d68323ea8057830f8761e9e3",
+      "gitBlob": "9144ad11ed3d54c5964316248c183bfd1bcf8a8f",
+      "mode": "100644"
+    },
+    "Integrated-Macro-Windows-v0.5.11-Build-Kit.zip": {
+      "sha256": "d0e5ed8616f2bdb1e49fd86497d3e2cd557cd460d2cca7c1c10b5777bf36357e",
+      "gitBlob": "09a4b3c8d9bd4a28b33e1f5a98e00c7903f9a796",
+      "mode": "100644"
+    }
+  },
+  "checks": {
+    "headIndexAndWorktreeBytesAllMatchReviewedInputs": true,
+    "exactlyTwoTrackedAndWorkingFilesExcludingGit": true,
+    "cleanWorkingTree": true,
+    "noLocalUserOrCredentialConfigKeys": true,
+    "remoteContainsNoCredential": true,
+    "authorMetadataDoesNotGrantRepositoryAuthentication": true,
+    "newBranchDoesNotRequireReplacingExistingMain": true,
+    "workflowPushHasNoBranchRestriction": true
+  },
+  "parentNetworkEvidence": {
+    "path": "git-network-check.json",
+    "exitCode": 128,
+    "result": "Could not resolve host: github.com; no remote refs read.",
+    "remotePushPerformed": false
+  },
+  "guidanceLimits": [
+    "A future user-side push requires authentication authorized for the private repository and workflow update.",
+    "credential.helper= disables the helper list for that command; it does not prove that an independent askpass program will never retain input.",
+    "GitHub HTTPS Git authentication does not accept an account password; no token should be sent through the conversation or embedded in a remote URL.",
+    "No force push is necessary for the new branch; remote branch/policy conflicts should fail rather than be overwritten.",
+    "Local init and commit do not change the Codex GitHub connection or establish Windows build success."
+  ],
+  "references": [
+    "https://git-scm.com/docs/gitcredentials",
+    "https://docs.github.com/en/get-started/git-basics/about-remote-repositories"
+  ],
+  "issues": [],
+  "reviewerRepositoryChanges": false,
+  "reviewerExternalWrites": false,
+  "windowsExecution": false
+}

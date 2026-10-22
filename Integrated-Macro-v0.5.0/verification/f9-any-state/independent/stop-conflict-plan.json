@@ -1,0 +1,88 @@
+{
+  "status": "design-only; parent classified blocker, production and tests frozen while current build finishes",
+  "trigger": "known unresolved conflict -> F4/Stop -> F9 in same bound window",
+  "sourceFinding": "Command::Stop resets visual_recovery/restart_context; Engine Stop clears current and sets Stopped while unresolved conflict was not observed closed. F9 then chooses Seats/Region instead of conflict handling.",
+  "notEstablished": "No actual site image/OS click reproduction or assertion that every popup still exposes a valid seat candidate.",
+  "cases": [
+    {
+      "route": "visual-delivered-attempt",
+      "escapeDelivery": "queued",
+      "required": [
+        "Stop emits no physical input",
+        "queued Escape is explicitly cancelled before any checkpoint copy",
+        "F9 preserves known conflict identity in same bound context",
+        "queued/failed Escape may retry once; delivered Escape never replays",
+        "old ACK cannot own retry",
+        "fresh dialog-closed observation releases next independent seat; failed footprint remains excluded"
+      ]
+    },
+    {
+      "route": "visual-delivered-attempt",
+      "escapeDelivery": "failed",
+      "required": [
+        "Stop emits no physical input",
+        "queued Escape is explicitly cancelled before any checkpoint copy",
+        "F9 preserves known conflict identity in same bound context",
+        "queued/failed Escape may retry once; delivered Escape never replays",
+        "old ACK cannot own retry",
+        "fresh dialog-closed observation releases next independent seat; failed footprint remains excluded"
+      ]
+    },
+    {
+      "route": "visual-delivered-attempt",
+      "escapeDelivery": "delivered",
+      "required": [
+        "Stop emits no physical input",
+        "queued Escape is explicitly cancelled before any checkpoint copy",
+        "F9 preserves known conflict identity in same bound context",
+        "queued/failed Escape may retry once; delivered Escape never replays",
+        "old ACK cannot own retry",
+        "fresh dialog-closed observation releases next independent seat; failed footprint remains excluded"
+      ]
+    },
+    {
+      "route": "legacy-confirmed-current",
+      "escapeDelivery": "queued",
+      "required": [
+        "Stop emits no physical input",
+        "queued Escape is explicitly cancelled before any checkpoint copy",
+        "F9 preserves known conflict identity in same bound context",
+        "queued/failed Escape may retry once; delivered Escape never replays",
+        "old ACK cannot own retry",
+        "fresh dialog-closed observation releases next independent seat; failed footprint remains excluded"
+      ]
+    },
+    {
+      "route": "legacy-confirmed-current",
+      "escapeDelivery": "failed",
+      "required": [
+        "Stop emits no physical input",
+        "queued Escape is explicitly cancelled before any checkpoint copy",
+        "F9 preserves known conflict identity in same bound context",
+        "queued/failed Escape may retry once; delivered Escape never replays",
+        "old ACK cannot own retry",
+        "fresh dialog-closed observation releases next independent seat; failed footprint remains excluded"
+      ]
+    },
+    {
+      "route": "legacy-confirmed-current",
+      "escapeDelivery": "delivered",
+      "required": [
+        "Stop emits no physical input",
+        "queued Escape is explicitly cancelled before any checkpoint copy",
+        "F9 preserves known conflict identity in same bound context",
+        "queued/failed Escape may retry once; delivered Escape never replays",
+        "old ACK cannot own retry",
+        "fresh dialog-closed observation releases next independent seat; failed footprint remains excluded"
+      ]
+    }
+  ],
+  "controls": [
+    "ordinary Stopped without known incident keeps current F9 behavior",
+    "F1 starts fresh admission and does not inherit dialog checkpoint",
+    "different Bind window ID or PID clears checkpoint/visual incident/history",
+    "newer F4 still defeats an older F9 epoch",
+    "no baseline/incident retention for every old watch; preserve only known unresolved conflict"
+  ],
+  "testBoundary": "If implementation lives in runtime, test its actual shared checkpoint helper plus Engine; do not reproduce the helper in independent tests and call that Worker verification."
+}

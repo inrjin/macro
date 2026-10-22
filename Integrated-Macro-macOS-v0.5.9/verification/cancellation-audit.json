@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-21",
+  "sourceVersion": "0.5.8",
+  "scope": "cancellation focused multi-agent source audit",
+  "teamSize": 4,
+  "reviewRounds": [
+    "independent reproduction",
+    "minimal fixes",
+    "cross review with counterexamples",
+    "frozen source full regression"
+  ],
+  "results": {
+    "javascript": {
+      "passed": 141,
+      "failed": 0,
+      "log": "cancellation-audit-js.log"
+    },
+    "rust": {
+      "passed": 245,
+      "failed": 0,
+      "log": "cancellation-audit-rust.log"
+    },
+    "totalTests": 386,
+    "productionDomStartCombinations": 32,
+    "standaloneEngineChecks": "cancellation-audit-engine/README.md"
+  },
+  "fixed": [
+    "two-region UI falls back to prior arrow navigation",
+    "inactive refresh option prevents legacy navigation",
+    "normal region-priority option redirects cancellation flow",
+    "pending F8 loses other region unsaved color when array grows",
+    "legacy two-region coordinates lost or misreported across mode changes"
+  ],
+  "unresolved": [
+    "timed legacy navigation may reuse old-region cached pixels; a naive strict freshness fence stalls static maps"
+  ],
+  "preservedPolicies": [
+    "saved preferences remain unchanged by execution scoping",
+    "later search-pass failed-candidate retries remain enabled under existing policy",
+    "enhanced legacy region confirmation remains unchanged"
+  ],
+  "changedFiles": [
+    "src-tauri/src/runtime.rs",
+    "ui/app.js",
+    "ui/index.html",
+    "ui/model.js",
+    "ui/profile-sync.js",
+    "ui/tests/cancellation-audit.test.js",
+    "ui/tests/model.test.js",
+    "ui/tests/run-cancellation-audit-dom.mjs"
+  ],
+  "sourceManifest": "cancellation-audit-source-freeze.json",
+  "preservation": "cancellation-audit-preservation.json",
+  "releaseBuild": false,
+  "applicationLaunched": false,
+  "liveOsInput": false,
+  "liveSiteTest": false,
+  "windowsRuntimeVerified": false,
+  "report": "cancellation-audit.md"
+}

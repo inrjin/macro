@@ -1,0 +1,13 @@
+{
+  "productionFiles": {
+    "crates/macro-core/src/selection_count.rs": "058f6729e806128470c1024e3b6ee0ef5918f62ae2381678700b65b42be58100",
+    "crates/macro-core/src/selection_count_layout.rs": "386de039c740adc1c29de32b717783ac08f3bb02fd076235990850fb4976810d",
+    "crates/macro-core/src/selection_count_assets/templates.json": "52ce816c2e10dadeb681ac796da6af1689f4aacd00e6d2fc6e11484d51989cee",
+    "crates/macro-core/src/selection_count_assets/empty-negative.json": "eff7d4668bed09ccd7e8fba82b8fc052000ac3ed30e0d729f91e5cef79486a4c"
+  },
+  "delta": {
+    "before": "                for dy in -1..=1 { for dx in -2..=2 {",
+    "after": "                let radius=if cfg!(feature=\"heading_only\") && label!=\"heading\" {1}else{2};\n                for dy in -1..=1 { for dx in -radius..=radius {"
+  },
+  "scope": "New snapshot includes negative-only textline defense and identical-row dedup. Feature-gated radius change only."
+}

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>통합 매크로 · 입력 확인</title>
+  <style>
+    :root{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;color:#243a37;background:#f2f6f4;font-size:15px}
+    *{box-sizing:border-box}body{margin:0;padding:35px 25px}main{max-width:1040px;margin:auto}header{margin-bottom:25px}.tag{font-size:12px;font-weight:650;color:#50816b;letter-spacing:.08em}h1{font-size:29px;letter-spacing:-.8px;margin:9px 0}header p{font-size:14px;color:#6c8277;line-height:1.7;margin:0}.layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:23px}.card{background:#fff;border:1px solid #dce6df;border-radius:15px;padding:26px}h2{font-size:16px;margin:0 0 18px}.button-area{display:flex;justify-content:center;padding:18px 0 28px}#booking-test{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;min-height:118px;width:100%;max-width:360px;border:0;border-radius:13px;background:#7651dc;color:#fff;font:inherit;cursor:pointer;box-shadow:0 8px 20px #7651dc24}#booking-test strong{font-size:25px;letter-spacing:-.5px}#booking-test span{font-size:12px;opacity:.85}#booking-test:focus-visible{outline:4px solid #ab92ef;outline-offset:5px}.counter{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #e6ece8;border-bottom:1px solid #e6ece8;padding:19px 0;margin-bottom:18px}.counter span{font-size:13px;color:#71847b}#click-count{font-size:37px;line-height:1;font-weight:700;color:#385b49;font-variant-numeric:tabular-nums}dl{margin:0}dt{font-size:12px;color:#788d81;margin-top:16px}dd{margin:7px 0 0;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:12px;line-height:1.6;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}.note{font-size:12px;color:#809086;line-height:1.75;margin:20px 0 0}ol{padding-left:21px;margin:0}li{padding-left:5px;margin:0 0 18px;line-height:1.8;font-size:13px}li:last-child{margin-bottom:0}kbd{display:inline-block;font-family:inherit;font-size:11px;line-height:1.5;border:1px solid #d7e1da;border-radius:4px;background:#f6f8f6;padding:1px 5px;color:#49705b}.reset{margin-top:20px;border:1px solid #dbe5de;border-radius:7px;background:#fff;color:#697f71;padding:9px 13px;font:inherit;font-size:12px;cursor:pointer}.reset:focus-visible{outline:3px solid #9bc6ae;outline-offset:3px}.status{font-size:12px;line-height:1.7;color:#537c62;margin:16px 0 0;min-height:21px}footer{font-size:11px;color:#8a9b90;line-height:1.8;margin-top:20px}@media(max-width:750px){body{padding:24px 17px}.layout{grid-template-columns:1fr}.card{padding:22px}h1{font-size:25px}}
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <span class="tag">LOCAL INPUT CHECK</span>
+      <h1>F8 지정과 예약 클릭 확인</h1>
+      <p>실제 예매 대신 이 페이지의 버튼으로 위치 지정과 예약 시작을 확인하세요.</p>
+    </header>
+    <div class="layout">
+      <section class="card" aria-labelledby="target-heading">
+        <h2 id="target-heading">이 버튼 위에서 F8로 지정하세요</h2>
+        <div class="button-area">
+          <button type="button" id="booking-test"><strong>예약 테스트</strong><span>클릭 횟수와 시각 기록</span></button>
+        </div>
+        <div class="counter"><span>클릭 횟수</span><output id="click-count" aria-live="polite">0</output></div>
+        <dl>
+          <dt>첫 클릭 처리 시각</dt><dd id="first-click">아직 클릭하지 않았습니다.</dd>
+          <dt>마지막 클릭 처리 시각</dt><dd id="last-click">아직 클릭하지 않았습니다.</dd>
+          <dt>이 컴퓨터의 시간대</dt><dd id="timezone"></dd>
+        </dl>
+        <p class="note">시각은 브라우저가 클릭을 처리한 순간을 밀리초까지 기록합니다. 날짜·시각 뒤의 UTC 차이도 함께 확인하세요.</p>
+        <button type="button" class="reset" id="reset">기록 초기화</button>
+        <p class="status" id="result" role="status">F8로 위치를 지정하는 동안에는 클릭 횟수가 그대로여야 합니다.</p>
+      </section>
+      <section class="card" aria-labelledby="steps-heading">
+        <h2 id="steps-heading">확인 순서</h2>
+        <ol>
+          <li>이 파일을 <strong>Google Chrome</strong>으로 열고, Chrome 창을 앞에 둔 상태에서 <kbd>F7</kbd>을 눌러 연결합니다.</li>
+          <li>앱의 <strong>예매 준비 → 판매 시작 예매 버튼 → F8로 지정</strong>을 누릅니다. Chrome의 보라색 <strong>예약 테스트</strong> 버튼 위에 마우스를 놓고 <kbd>F8</kbd>을 누릅니다.</li>
+          <li>앱에서 <strong>예약 시작</strong>을 켜고, 판매 시작 시각을 이 컴퓨터의 시간으로 <strong>약 30초 뒤</strong>로 설정합니다. <strong>서버 시간 보정 사용</strong>은 끕니다.</li>
+          <li>앱에서 <strong>일반 예매</strong> 모드를 선택하고 <strong>일반 예매 시작</strong>을 누릅니다. 연결한 Chrome 창이 앞으로 나오는지 확인하고 예약 시각까지 기다립니다. 단축키로 검사할 때는 Chrome 창을 앞에 둔 뒤 <kbd>F1</kbd>을 누르세요. F1도 현재 화면의 예약·옵션 설정을 저장해 일반 예매로 시작합니다. 좌석 바로 탐색 검사는 공통 좌석 영역을 지정한 뒤 <kbd>F5</kbd>를 사용합니다. 이때 예약·진입 단계와 브라우저 새로고침은 실행하지 않습니다.</li>
+          <li>클릭 횟수 <strong>1회</strong>와 기록된 시각, 앱의 예매 진입 대기를 확인한 뒤 <kbd>F4</kbd>로 중지합니다.</li>
+        </ol>
+        <p class="note">Mac에서 기능 키가 밝기·미디어 조절로 동작하면 <kbd>Fn</kbd>과 함께 누르세요. 버튼을 직접 클릭해도 횟수가 올라갑니다. 다시 시험할 때는 기록 초기화를 누르세요.</p>
+      </section>
+    </div>
+    <footer>이 페이지는 파일 안의 코드만 사용합니다. 외부 서버에 연결하거나 실제 예매·결제를 진행하지 않습니다. 페이지를 새로 열거나 새로고침하면 기록이 초기화됩니다.</footer>
+  </main>
+  <script>
+    (() => {
+      const countOutput = document.getElementById('click-count');
+      const firstOutput = document.getElementById('first-click');
+      const lastOutput = document.getElementById('last-click');
+      const result = document.getElementById('result');
+      let count = 0;
+
+      const pad = (number, digits = 2) => String(number).padStart(digits, '0');
+      function timestamp(date) {
+        const offset = -date.getTimezoneOffset();
+        const sign = offset >= 0 ? '+' : '-';
+        const zone = `${sign}${pad(Math.floor(Math.abs(offset) / 60))}:${pad(Math.abs(offset) % 60)}`;
+        return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())} `
+          + `${pad(date.getHours())}:${pad(date.getMinutes())}:${pad(date.getSeconds())}.${pad(date.getMilliseconds(), 3)} UTC${zone}`;
+      }
+
+      document.getElementById('timezone').textContent = Intl.DateTimeFormat().resolvedOptions().timeZone || '브라우저의 현지 시간대';
+      document.getElementById('booking-test').addEventListener('click', () => {
+        const at = new Date();
+        const formatted = timestamp(at);
+        count += 1;
+        countOutput.value = String(count);
+        countOutput.textContent = String(count);
+        if (count === 1) firstOutput.textContent = formatted;
+        lastOutput.textContent = formatted;
+        firstOutput.dataset.iso ||= at.toISOString();
+        lastOutput.dataset.iso = at.toISOString();
+        result.textContent = `${count}회 클릭을 확인했습니다. 앱의 진입 대기를 확인한 뒤 F4로 중지하세요.`;
+      });
+
+      document.getElementById('reset').addEventListener('click', () => {
+        count = 0;
+        countOutput.value = '0';
+        countOutput.textContent = '0';
+        firstOutput.textContent = '아직 클릭하지 않았습니다.';
+        lastOutput.textContent = '아직 클릭하지 않았습니다.';
+        delete firstOutput.dataset.iso;
+        delete lastOutput.dataset.iso;
+        result.textContent = '기록을 초기화했습니다. F8 위치 지정만으로는 클릭 횟수가 늘어나지 않습니다.';
+      });
+    })();
+  </script>
+</body>
+</html>

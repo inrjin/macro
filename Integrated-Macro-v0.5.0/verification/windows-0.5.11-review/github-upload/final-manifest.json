@@ -1,0 +1,21 @@
+{
+  "status": "One-time browser-upload preparation pack reviewed; actual Windows deployment still pending user upload and GitHub Actions execution",
+  "archiveSHA256": "2dbaf3e0b86d5add9ceea1f6666f3884b843843593862ffc9f9406f4a6bb9df8",
+  "archiveBytes": 2540006,
+  "fileCount": 3,
+  "codeAndArtifactIndependentReviews": true,
+  "privateRepositoryLookup": "Current connector returned NOT_FOUND; no private repository access established",
+  "originalBuildKitUnchanged": true,
+  "accountAuthenticationOrConnectionChanged": false,
+  "remoteWritesOrBuildRun": false,
+  "actualWindowsBuildPerformed": false,
+  "evidenceSHA256": {
+    "workflow.yml.txt": "56a28fddd11d06314ee9a8127fdbd123842e4d89d68323ea8057830f8761e9e3",
+    "UPLOAD-GUIDE.md": "14a71beb91d5ec96414cc9d3af6e239328400acfb13004d741f3ff03f06de9b1",
+    "upload-pack-receipt.json": "02a125f8ca95f181067fac383da54b02fa45c21c7fcd3b838b53aec6f85ed5fd",
+    "independent-review.json": "2b2f875a0d25093720ad4dfcd6fb628db71b35c33f0dc927f60fef3f2be4fd3b",
+    "adversarial-workflow-review.json": "96eb029c98ecf53e1ffe2c0f90cdd0748ea85cb115bd781177adbb3f3e1cfef8",
+    "independent-upload-pack-review.json": "1c4750f924b07c54d732fa31d9f90fa7af7c496e87cf88c9ef79cc07d7e3b21a",
+    "adversarial-upload-pack-review.json": "602ecf9dba7e78cf4ecb6785ea4930b4ecd9adbc0c03986afb2f5855ea9d996e"
+  }
+}

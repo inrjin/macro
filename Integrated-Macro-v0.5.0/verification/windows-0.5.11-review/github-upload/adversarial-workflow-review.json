@@ -1,0 +1,51 @@
+{
+  "scope": "Independent read-only review of two repository inputs plus local guide; no GitHub write or Windows execution.",
+  "decision": "No blocking issue in reviewed upload workflow and guide; remote build readiness is conditional on actual GitHub Actions execution.",
+  "inputs": {
+    "Integrated-Macro-Windows-v0.5.11-Build-Kit.zip": {
+      "sha256": "d0e5ed8616f2bdb1e49fd86497d3e2cd557cd460d2cca7c1c10b5777bf36357e",
+      "bytes": 3078639
+    },
+    "workflow.yml.txt": {
+      "sha256": "56a28fddd11d06314ee9a8127fdbd123842e4d89d68323ea8057830f8761e9e3",
+      "bytes": 2673
+    },
+    "UPLOAD-GUIDE.md": {
+      "sha256": "14a71beb91d5ec96414cc9d3af6e239328400acfb13004d741f3ff03f06de9b1",
+      "bytes": 2819
+    }
+  },
+  "archive": {
+    "files": 577,
+    "crcFailure": null,
+    "roots": [
+      "Integrated-Macro-Windows-v0.5.11-Build-Kit"
+    ],
+    "unsafePathsOrSymlinks": [],
+    "duplicateEntries": 0,
+    "windowsCaseCollisions": 0
+  },
+  "staticChecks": [
+    "Pinned released ZIP SHA-256 must match before Expand-Archive or executing kit code.",
+    "The reviewed fixed ZIP has exactly one expected root and no unsafe, duplicate, case-colliding or symlink entries.",
+    "Extraction requires an absent dedicated runner.temp destination and the expected Build-Windows.cmd.",
+    "The called CMD and PowerShell bytes match the previously reviewed final scripts; no source or script mutations occur in the wrapper.",
+    "Workflow permissions are contents:read, triggers are push paths and workflow_dispatch, and execution does not publish a GitHub release.",
+    "The immutable ZIP is uploaded first; the text is committed as .github/workflows/build-windows.yml, not uploaded as a root .txt file.",
+    "Node 24 setup and stable Windows MSVC target precede the shared CMD native-tools initialization and locked build/test path.",
+    "Only finalized artifacts plus report/build log are uploaded; candidate-artifacts and work-source are excluded.",
+    "Guide distinguishes a build kit from a Windows executable, an Actions success from actual installation/live interaction, and private repository ownership from current connector access.",
+    "No PAT/password, public-repository conversion, shared-account authentication change, or remote action is requested by the guide."
+  ],
+  "limitations": [
+    "PowerShell/CMD and this workflow have not been executed on a Windows runner.",
+    "GitHub Actions availability, quotas, repository policy and dependency downloads can still block the build.",
+    "The current connector cannot be assumed to read the user-created private repository or monitor its jobs; the guide uses the user browser.",
+    "A generated installer would still require Windows installation, WebView2, capture, hotkey and input validation.",
+    "Exact ZIP integrity is reviewed; dependency/action versions and remote toolchain installation are not made immutable by the source ZIP."
+  ],
+  "sourceOrSettingsChanged": false,
+  "remoteWritePerformed": false,
+  "windowsBuildExecuted": false,
+  "issues": []
+}

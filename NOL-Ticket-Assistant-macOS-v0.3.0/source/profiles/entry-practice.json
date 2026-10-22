@@ -1,0 +1,40 @@
+{
+  "mode": "dom",
+  "candidateSelector": ".seat:not(.rejected)",
+  "successSelector": "#success",
+  "successText": "연습: 좌석 선택 성공",
+  "alertText": "연습: 이미 선택된 좌석입니다.",
+  "conflictSelector": "#conflictText",
+  "conflictText": "연습: 이미 선택된 좌석입니다.",
+  "dismiss": {
+    "selector": "#dismiss"
+  },
+  "maxAttempts": 100,
+  "timeoutMs": 4000,
+  "after": [
+    {
+      "selector": "#after1"
+    },
+    {
+      "selector": "#after2"
+    }
+  ],
+  "entrance": {
+    "enabled": true,
+    "name": "A 구역",
+    "blockedSelector": "#human-check",
+    "readySelector": "#regions",
+    "region": {
+      "selector": "#region-a",
+      "relative": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "text": "A 구역",
+      "kind": "element"
+    },
+    "mapReadySelector": "#mapWrap[data-region=\"A\"][data-loaded=\"true\"]",
+    "timeoutMs": 180000,
+    "mapTimeoutMs": 10000
+  }
+}

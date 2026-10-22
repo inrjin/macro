@@ -1,0 +1,19 @@
+
+running 14 tests
+test removing_the_dim_overlay_alone_cannot_complete_while_heading_remains ... ok
+test modal_moving_or_growing_after_an_error_is_still_visible ... ok
+test initially_closed_screen_never_reports_a_dismissal ... ok
+test missing_title_with_dim_surround_or_a_partial_fade_cannot_complete ... ok
+test dismissal_requires_new_pixels_and_a_successful_stable_native_poll_interval ... ok
+test plain_rectangle_and_unrelated_title_never_arm ... ok
+test typing_wrong_answer_challenge_change_and_button_color_are_ignored ... ok
+test returning_panel_cancels_pending_close_and_restarts_stability ... ok
+test resize_invalid_capture_and_reset_discard_old_presence ... ok
+test fixed_heading_arms_at_multiple_scales_and_positions ... ok
+test stale_capture_during_closing_breaks_the_stability_interval ... ok
+test visual_dismissal_drives_the_engine_once_then_empty_seat_search_continues ... ok
+test stale_sequences_timestamps_or_repeated_poll_time_cannot_complete ... ok
+test interruption_retracts_pending_or_undelivered_dismissal_but_keeps_presence ... ok
+
+test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.28s
+

@@ -1,0 +1,13 @@
+{
+  "productionFiles": {
+    "crates/macro-core/src/selection_count.rs": "09f13e093b841eabe00103e95ad58a76eebb6fdb696095b16e5dae6e303bf8ae",
+    "crates/macro-core/src/selection_count_layout.rs": "386de039c740adc1c29de32b717783ac08f3bb02fd076235990850fb4976810d",
+    "crates/macro-core/src/selection_count_assets/templates.json": "52ce816c2e10dadeb681ac796da6af1689f4aacd00e6d2fc6e11484d51989cee",
+    "crates/macro-core/src/selection_count_assets/empty-negative.json": "eff7d4668bed09ccd7e8fba82b8fc052000ac3ed30e0d729f91e5cef79486a4c"
+  },
+  "delta": {
+    "before": "                for dy in -1..=1 { for dx in -2..=2 {",
+    "after": "                let radius=if cfg!(feature=\"heading_only\") && label!=\"heading\" {1}else{2};\n                for dy in -1..=1 { for dx in -radius..=radius {"
+  },
+  "scope": "Snapshot with negative-only full subruns/exact pattern memo and identical-row dedup; latest neighbor/dense tests included. Feature-gated radius change only."
+}

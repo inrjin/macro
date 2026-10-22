@@ -1,0 +1,5 @@
+{
+  "source": "src-tauri/src/runtime.rs",
+  "sha256": "1a9fb11c6a8a28a44ceda8f4708c68fe6dd9c62abc5fa0a20865e93cf2ff4768",
+  "matchesCancellationAuditFreeze": true
+}

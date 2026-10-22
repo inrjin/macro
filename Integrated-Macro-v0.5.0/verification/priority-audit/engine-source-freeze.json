@@ -1,0 +1,21 @@
+{
+  "productionEngineChanged": false,
+  "sourceSha256": {
+    "crates/macro-core/tests/priority_audit.rs": "e2d2d4777b3a733ae0f10521520c4292bd7dcad28d5951d3480b3f4726c1d2f3",
+    "verification/priority-audit/p1-engine/priority_audit.rs": "e2d2d4777b3a733ae0f10521520c4292bd7dcad28d5951d3480b3f4726c1d2f3",
+    "verification/priority-audit/p2-engine/visual_path.rs": "da657d101bab33fec62760b77f0e69f3f0ea156c54a6d600dabef0f0bcfaf2a2",
+    "verification/priority-audit/p7-engine/interruptions.rs": "bdfc47f3d5048ab424b084e6f69c76055dcce56214d0cbd5e67376b3fff889f0"
+  },
+  "engineSha256": "16150aa81efbcab50b8c55dcdf65836845efad8fa6ff41e131b66f16bcfda7a0",
+  "results": {
+    "p1CargoTests": 3,
+    "p2StandaloneScenarios": 3,
+    "p7StandaloneScenarios": 13
+  },
+  "limitations": [
+    "synthetic RGBA only",
+    "no OS/native input or browser rendering",
+    "runtime dispatch ordering modeled; full Worker loop not instantiated",
+    "P1/P2 limitations reproduced, not fixed"
+  ]
+}

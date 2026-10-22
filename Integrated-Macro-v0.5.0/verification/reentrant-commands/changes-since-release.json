@@ -1,0 +1,34 @@
+{
+  "baseline": "release-baseline.json",
+  "current": "source-before-final-checks.json",
+  "modified": [
+    "README.md",
+    "crates/macro-core/src/engine.rs",
+    "crates/macro-core/src/model.rs",
+    "crates/macro-core/tests/engine.rs",
+    "src-tauri/src/main.rs",
+    "src-tauri/src/runtime.rs",
+    "ui/app.js",
+    "ui/index.html",
+    "ui/model.js",
+    "ui/overlay.js",
+    "ui/tests/model.test.js",
+    "ui/tests/run-continuous-flow-dom.mjs",
+    "ui/tests/run-profile-race-dom.mjs",
+    "ui/tests/run-recovery-dom.mjs",
+    "ui/tests/run-start-dom.mjs",
+    "ui/tests/run-start-shortcut-dom.mjs",
+    "ui/tests/start-integration.test.js"
+  ],
+  "createdByThisTask": [
+    "crates/macro-core/tests/reentrant_commands_review.rs",
+    "src-tauri/src/reentrant_runtime_tests.rs",
+    "ui/tests/reentrant-review.test.js",
+    "ui/tests/run-reentrant-review-dom.mjs"
+  ],
+  "removedFromInventory": [],
+  "additionalInventoryFiles": [
+    ".github/workflows/desktop.yml"
+  ],
+  "note": "The final inventory also includes the preexisting hidden .github workflow, which was omitted from the release baseline. Do not treat its inventory addition as a task-created or modified file."
+}

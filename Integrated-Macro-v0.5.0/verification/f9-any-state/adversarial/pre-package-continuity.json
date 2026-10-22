@@ -1,0 +1,12 @@
+{
+  "recordedAt": "2026-10-21T15:33:34.208345+00:00",
+  "protectedFiles": 22,
+  "protectedDifferences": [],
+  "versionCheckpointFiles": 9,
+  "laterDifferences": [
+    "ui/index.html"
+  ],
+  "laterDifferenceExplanation": "ui/index.html help text was separately updated for any-state F9 after the version-only checkpoint; package metadata/lockfiles must otherwise match.",
+  "identifier": "dev.integrated-macro.desktop",
+  "versionDiffSHA256": "afadce01083b50df62319d5b84d815d3caec7413b5b65b1b18ab945dc155a0e9"
+}
